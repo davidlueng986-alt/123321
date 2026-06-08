@@ -1,36 +1,300 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FinSight AI — AI Financial Assistant for SMEs
 
-## Getting Started
+> Production-grade SaaS financial intelligence platform powered by GPT-4o, Next.js 15, and PostgreSQL.
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://typescriptlang.org)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)](https://postgresql.org)
+[![Clerk](https://img.shields.io/badge/Auth-Clerk-purple)](https://clerk.com)
+[![OpenAI](https://img.shields.io/badge/AI-GPT--4o-green)](https://openai.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Features
+
+### Core Modules
+| Module | Description |
+|--------|-------------|
+| **Financial Dashboard** | Real-time revenue, expenses, profit, invoice metrics |
+| **Invoice Management** | Create, send, track, record payments |
+| **Expense Tracking** | Manual entry, CSV import, categorization |
+| **Transaction Ledger** | Full double-entry transaction history |
+| **Bank Statement Analyzer** | Upload PDF/CSV, extract & categorize transactions |
+| **AI Financial Assistant** | RAG-based chatbot with real financial data context |
+| **AI Insights Engine** | Auto-detected anomalies, risks, opportunities |
+| **Cash Flow Forecasting** | Deterministic 3-month linear trend forecasts |
+| **Financial Reports** | P&L, Expense Summary, Revenue Trends (PDF/Excel) |
+| **Settings & Security** | RBAC, audit logs, MFA, organization management |
+
+### Critical Design Principle
+> **AI NEVER calculates financial values.** All calculations are deterministic and performed by the backend using Prisma queries. AI only generates explanations, insights, and narratives based on the pre-calculated data.
+
+---
+
+## 🏗️ Architecture
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    Next.js 15 App Router                 │
+├──────────────────────┬──────────────────────────────────┤
+│   Frontend (RSC)     │        API Routes                 │
+│  - Dashboard         │  - /api/dashboard                 │
+│  - Invoices          │  - /api/invoices                  │
+│  - Expenses          │  - /api/expenses                  │
+│  - AI Assistant      │  - /api/ai/chat (SSE streaming)   │
+│  - Cash Flow         │  - /api/cash-flow                 │
+│  - Reports           │  - /api/reports                   │
+│  - Insights          │  - /api/insights                  │
+└──────────────────────┴──────────────────────────────────┘
+           │                          │
+    Clerk Auth                  Prisma ORM
+           │                          │
+    PostgreSQL DB              OpenAI GPT-4o
+           │                          │
+    Qdrant Vector DB         RAG Pipeline
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### RAG Pipeline
+```
+User Question
+→ Intent Classification (GPT-4o-mini)
+→ Data Retrieval (Prisma queries = REAL numbers)
+→ Context Assembly
+→ OpenAI GPT-4o Response Generation
+→ Streaming SSE to Frontend
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📋 Tech Stack
 
-## Learn More
+**Frontend**
+- Next.js 15 (App Router, RSC, Streaming)
+- TypeScript 5
+- Tailwind CSS + ShadCN UI components
+- Recharts (interactive financial charts)
+- React Query (server state management)
+- Zustand (client state)
 
-To learn more about Next.js, take a look at the following resources:
+**Backend**
+- Next.js API Routes
+- Prisma ORM with PostgreSQL
+- Zod validation (all inputs)
+- Rate limiting (in-memory, Redis-ready)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**AI**
+- OpenAI GPT-4o (assistant responses)
+- OpenAI text-embedding-3-small (embeddings)
+- RAG architecture for financial context
+- Qdrant vector database
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Auth & Security**
+- Clerk Authentication (OAuth, MFA, RBAC)
+- OWASP Top 10 compliant
+- CSRF protection in middleware
+- SQL injection prevention (Prisma parameterized queries)
+- Complete audit logging
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🗄️ Database Schema
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+Organizations ──┬── OrganizationMembers ── Users
+                ├── Clients
+                ├── Vendors
+                ├── Categories
+                ├── Transactions ── Categories
+                ├── Invoices ─────┬── InvoiceItems
+                │                 └── Payments
+                ├── Expenses ── Categories
+                ├── BankStatements ── Transactions
+                ├── Reports
+                ├── AIChats ── AIChatMessages
+                ├── Insights
+                ├── CashFlowForecasts
+                ├── Notifications
+                ├── AuditLogs
+                └── Anomalies
+```
+
+---
+
+## 🔒 Security Implementation
+
+| Security Layer | Implementation |
+|----------------|---------------|
+| Authentication | Clerk JWT + MFA |
+| Authorization | RBAC (Admin/Accountant/Employee/Viewer) |
+| CSRF Protection | Origin/Host validation in middleware |
+| Rate Limiting | Per-IP sliding window (100 req/min default) |
+| Input Validation | Zod schemas on all API endpoints |
+| SQL Injection | Prisma ORM parameterized queries |
+| XSS Prevention | Next.js built-in + CSP headers |
+| Audit Logging | All CRUD operations logged with user/IP |
+| Sensitive Data | Prisma field-level encryption ready |
+| File Upload | Type validation, size limits, S3 signed URLs |
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 20+
+- PostgreSQL 16+
+- OpenAI API key
+- Clerk account
+
+### 1. Clone & Install
+```bash
+git clone https://github.com/YOUR_USERNAME/finsight-ai.git
+cd finsight-ai
+npm install
+```
+
+### 2. Environment Setup
+```bash
+cp .env.example .env.local
+# Fill in your API keys
+```
+
+### 3. Database Setup
+```bash
+# Apply schema
+npx prisma migrate dev --name init
+
+# Generate client
+npx prisma generate
+```
+
+### 4. Run Development
+```bash
+npm run dev
+# Open http://localhost:3000
+```
+
+### 5. Docker (Full Stack)
+```bash
+docker-compose up -d
+```
+
+---
+
+## 📁 Folder Structure
+
+```
+finsight-ai/
+├── src/
+│   ├── app/
+│   │   ├── (auth)/          # Sign in/up pages (Clerk)
+│   │   ├── (dashboard)/     # All protected dashboard pages
+│   │   │   ├── dashboard/   # Main financial dashboard
+│   │   │   ├── invoices/    # Invoice management
+│   │   │   ├── expenses/    # Expense tracking
+│   │   │   ├── transactions/# Transaction ledger
+│   │   │   ├── ai-assistant/# AI chatbot interface
+│   │   │   ├── cash-flow/   # Cash flow & forecasting
+│   │   │   ├── insights/    # AI insights engine
+│   │   │   ├── reports/     # Financial reports
+│   │   │   ├── bank-statements/ # Bank statement analyzer
+│   │   │   └── settings/    # Account & org settings
+│   │   └── api/             # All API routes
+│   ├── components/
+│   │   ├── ui/              # ShadCN UI components
+│   │   ├── charts/          # Recharts wrappers
+│   │   ├── dashboard/       # Dashboard-specific components
+│   │   ├── layout/          # Sidebar, Header
+│   │   └── shared/          # Providers, theme
+│   ├── lib/
+│   │   ├── prisma.ts        # Database client
+│   │   ├── auth.ts          # Auth helpers & audit logging
+│   │   ├── openai.ts        # AI integration & RAG
+│   │   ├── financial-calculations.ts  # ALL financial math
+│   │   ├── validations.ts   # Zod schemas
+│   │   ├── rate-limit.ts    # API rate limiting
+│   │   └── utils.ts         # Utilities & formatters
+│   ├── middleware.ts         # Auth & security middleware
+│   └── types/               # TypeScript types
+├── prisma/
+│   └── schema.prisma        # Complete DB schema
+├── docker-compose.yml       # Full stack Docker setup
+├── Dockerfile               # Production container
+└── .env.example             # Environment template
+```
+
+---
+
+## 📊 API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/health` | Health check |
+| GET | `/api/dashboard` | Dashboard metrics |
+| GET | `/api/dashboard/trends` | Monthly trends |
+| GET | `/api/dashboard/categories` | Expense categories |
+| GET/POST | `/api/invoices` | List/create invoices |
+| GET/PATCH/DELETE | `/api/invoices/[id]` | Invoice operations |
+| GET/POST | `/api/expenses` | List/create expenses |
+| GET/POST | `/api/transactions` | List/create transactions |
+| POST | `/api/ai/chat` | AI chat (SSE streaming) |
+| GET | `/api/ai/chat` | Chat history |
+| GET | `/api/cash-flow` | Historical + forecasts |
+| GET/POST | `/api/reports` | Report management |
+| GET | `/api/insights` | AI insights |
+
+---
+
+## 🚢 Deployment
+
+### Vercel (Frontend)
+```bash
+vercel deploy --prod
+```
+
+### Environment Variables (Production)
+Set all variables from `.env.example` in your deployment platform.
+
+### Database Migration (Production)
+```bash
+npx prisma migrate deploy
+```
+
+---
+
+## 🧪 Testing Strategy
+
+- **Unit Tests**: Financial calculation functions (Jest)
+- **Integration Tests**: API routes with Prisma mocks
+- **E2E Tests**: Playwright for critical user flows
+- **Security Tests**: OWASP ZAP scanning
+- **Load Tests**: k6 for API performance
+
+---
+
+## 📈 Performance
+
+- Server-side rendering for initial dashboard load
+- React Query caching (60s stale time)
+- Optimized Prisma queries with proper indexes
+- Streaming AI responses (SSE)
+- Image optimization via Next.js
+- Lazy loading of chart components
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make changes with tests
+4. Submit a PR
+
+---
+
+## 📄 License
+
+MIT License — see LICENSE file.
+
+---
+
+**Built with ❤️ for SMEs worldwide**
