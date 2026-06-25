@@ -45,3 +45,4 @@ coverage/
 # Misc
 *.backup
 *.bak
+core

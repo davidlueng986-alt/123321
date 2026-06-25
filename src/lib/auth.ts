@@ -1,31 +1,26 @@
-import { auth, currentUser } from "@clerk/nextjs/server"
 import { prisma } from "./prisma"
+import { getAuth } from "./server-auth"
 import { UserRole } from "@prisma/client"
 
 // ─── Get Current User with DB data ──────────────────────────
 export async function getCurrentUser() {
-  const { userId } = await auth()
+  const { userId } = await getAuth()
   if (!userId) return null
 
-  const clerkUser = await currentUser()
-  if (!clerkUser) return null
+  // In demo mode, return a demo user object
+  const isDemoMode = process.env.NEXT_PUBLIC_DEMO_MODE === "true"
 
-  // Upsert user in our database
   const user = await prisma.user.upsert({
     where: { clerkId: userId },
     update: {
-      email: clerkUser.emailAddresses[0]?.emailAddress ?? "",
-      firstName: clerkUser.firstName ?? "",
-      lastName: clerkUser.lastName ?? "",
-      imageUrl: clerkUser.imageUrl,
       lastLoginAt: new Date(),
     },
     create: {
       clerkId: userId,
-      email: clerkUser.emailAddresses[0]?.emailAddress ?? "",
-      firstName: clerkUser.firstName ?? "",
-      lastName: clerkUser.lastName ?? "",
-      imageUrl: clerkUser.imageUrl,
+      email: isDemoMode ? "demo@finsight.ai" : "user@example.com",
+      firstName: isDemoMode ? "Demo" : "User",
+      lastName: isDemoMode ? "User" : "",
+      imageUrl: null,
     },
     include: {
       memberships: {
@@ -41,7 +36,7 @@ export async function getCurrentUser() {
 
 // ─── Get Current Organization ────────────────────────────────
 export async function getCurrentOrganization(orgId?: string) {
-  const { userId, orgId: clerkOrgId } = await auth()
+  const { userId, orgId: clerkOrgId } = await getAuth()
   if (!userId) return null
 
   const targetOrgId = orgId ?? clerkOrgId
@@ -75,7 +70,7 @@ export async function checkPermission(
 
 // ─── Require Auth ────────────────────────────────────────────
 export async function requireAuth() {
-  const { userId } = await auth()
+  const { userId } = await getAuth()
   if (!userId) {
     throw new Error("Unauthorized: Authentication required")
   }
@@ -84,7 +79,7 @@ export async function requireAuth() {
 
 // ─── Require Organization ────────────────────────────────────
 export async function requireOrganization() {
-  const { userId, orgId } = await auth()
+  const { userId, orgId } = await getAuth()
   if (!userId) throw new Error("Unauthorized: Authentication required")
   if (!orgId) throw new Error("No organization selected")
 

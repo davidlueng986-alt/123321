@@ -1,4 +1,4 @@
-import { auth } from "@clerk/nextjs/server"
+import { getAuth } from "@/lib/server-auth"
 import { NextRequest } from "next/server"
 import { prisma } from "@/lib/prisma"
 import { apiSuccess, apiError, rateLimit } from "@/lib/rate-limit"
@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
   if (rateLimitResponse) return rateLimitResponse
 
   try {
-    const { userId, orgId } = await auth()
+    const { userId, orgId } = await getAuth()
     if (!userId) return apiError("Unauthorized", 401)
 
     const org = await getOrg(userId, orgId ?? null)
@@ -84,7 +84,7 @@ export async function POST(request: NextRequest) {
   if (rateLimitResponse) return rateLimitResponse
 
   try {
-    const { userId, orgId } = await auth()
+    const { userId, orgId } = await getAuth()
     if (!userId) return apiError("Unauthorized", 401)
 
     const org = await getOrg(userId, orgId ?? null)

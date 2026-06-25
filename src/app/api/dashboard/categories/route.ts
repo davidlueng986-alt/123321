@@ -1,11 +1,11 @@
-import { auth } from "@clerk/nextjs/server"
+import { getAuth } from "@/lib/server-auth"
 import { prisma } from "@/lib/prisma"
 import { apiSuccess, apiError } from "@/lib/rate-limit"
 import { getExpensesByCategory } from "@/lib/financial-calculations"
 
 export async function GET() {
   try {
-    const { userId, orgId } = await auth()
+    const { userId, orgId } = await getAuth()
     if (!userId) return apiError("Unauthorized", 401)
 
     const org = orgId

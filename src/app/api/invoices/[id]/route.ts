@@ -1,4 +1,4 @@
-import { auth } from "@clerk/nextjs/server"
+import { getAuth } from "@/lib/server-auth"
 import { NextRequest } from "next/server"
 import { prisma } from "@/lib/prisma"
 import { apiSuccess, apiError } from "@/lib/rate-limit"
@@ -10,7 +10,7 @@ type RouteParams = { params: Promise<{ id: string }> }
 // GET /api/invoices/[id]
 export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
-    const { userId, orgId } = await auth()
+    const { userId, orgId } = await getAuth()
     if (!userId) return apiError("Unauthorized", 401)
     const { id } = await params
 
@@ -40,7 +40,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 // PATCH /api/invoices/[id]
 export async function PATCH(request: NextRequest, { params }: RouteParams) {
   try {
-    const { userId, orgId } = await auth()
+    const { userId, orgId } = await getAuth()
     if (!userId) return apiError("Unauthorized", 401)
     const { id } = await params
 
@@ -131,7 +131,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
 // DELETE /api/invoices/[id]
 export async function DELETE(request: NextRequest, { params }: RouteParams) {
   try {
-    const { userId, orgId } = await auth()
+    const { userId, orgId } = await getAuth()
     if (!userId) return apiError("Unauthorized", 401)
     const { id } = await params
 

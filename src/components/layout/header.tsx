@@ -1,11 +1,18 @@
 "use client"
 
-import { UserButton, OrganizationSwitcher } from "@clerk/nextjs"
-import { Bell, Search, Moon, Sun, Menu } from "lucide-react"
+import { Bell, Search, Moon, Sun, User, LogOut } from "lucide-react"
 import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useState } from "react"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 interface HeaderProps {
   title?: string
@@ -43,6 +50,12 @@ export function Header({ title, description }: HeaderProps) {
 
       {/* Actions */}
       <div className="flex items-center gap-2">
+        {/* Demo Mode Badge */}
+        <span className="hidden md:inline-flex items-center gap-1.5 text-xs bg-amber-100 text-amber-700 border border-amber-200 rounded-full px-2.5 py-1 font-medium">
+          <span className="h-1.5 w-1.5 rounded-full bg-amber-500 animate-pulse" />
+          Demo Mode
+        </span>
+
         {/* Search */}
         {!searchOpen && (
           <Button
@@ -72,27 +85,32 @@ export function Header({ title, description }: HeaderProps) {
           <span className="absolute top-1 right-1 h-2 w-2 bg-red-500 rounded-full" />
         </Button>
 
-        {/* Organization Switcher */}
-        <div className="hidden md:block">
-          <OrganizationSwitcher
-            hidePersonal
-            appearance={{
-              elements: {
-                organizationSwitcherTrigger: "border rounded-md px-3 py-1.5 text-sm h-8",
-              },
-            }}
-          />
-        </div>
-
-        {/* User Button */}
-        <UserButton
-          afterSignOutUrl="/sign-in"
-          appearance={{
-            elements: {
-              avatarBox: "h-8 w-8",
-            },
-          }}
-        />
+        {/* User Menu */}
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full bg-primary/10">
+              <User className="h-4 w-4 text-primary" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-56">
+            <DropdownMenuLabel>
+              <div className="flex flex-col">
+                <span className="font-medium">Demo User</span>
+                <span className="text-xs text-muted-foreground font-normal">demo@finsight.ai</span>
+              </div>
+            </DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem className="text-muted-foreground cursor-not-allowed">
+              <User className="mr-2 h-4 w-4" />
+              My Account
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem className="text-muted-foreground cursor-not-allowed">
+              <LogOut className="mr-2 h-4 w-4" />
+              Sign Out
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </header>
   )

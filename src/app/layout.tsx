@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
-import { ClerkProvider } from "@clerk/nextjs"
 import { ThemeProvider } from "@/components/shared/theme-provider"
 import { QueryProvider } from "@/components/shared/query-provider"
 import { Toaster } from "sonner"
@@ -65,34 +64,25 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider
-      appearance={{
-        variables: {
-          colorPrimary: "#3b82f6",
-          colorBackground: "#ffffff",
-        },
-      }}
-    >
-      <html lang="en" suppressHydrationWarning className={inter.variable}>
-        <body className={`${inter.className} antialiased`}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <QueryProvider>
-              {children}
-              <Toaster
-                position="top-right"
-                richColors
-                expand
-                visibleToasts={3}
-              />
-            </QueryProvider>
-          </ThemeProvider>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en" suppressHydrationWarning className={inter.variable}>
+      <body className={`${inter.className} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <QueryProvider>
+            {children}
+            <Toaster
+              position="top-right"
+              richColors
+              expand
+              visibleToasts={3}
+            />
+          </QueryProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   )
 }

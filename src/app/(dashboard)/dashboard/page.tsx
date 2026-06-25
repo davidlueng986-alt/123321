@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import { auth } from "@clerk/nextjs/server"
+import { getAuth } from "@/lib/server-auth"
 import { redirect } from "next/navigation"
 import { DashboardContent } from "./dashboard-content"
 
@@ -8,7 +8,7 @@ export const metadata = {
 }
 
 export default async function DashboardPage() {
-  const { userId } = await auth()
+  const { userId } = await getAuth()
   if (!userId) redirect("/sign-in")
 
   return (
