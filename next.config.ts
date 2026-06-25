@@ -15,6 +15,8 @@ const nextConfig: NextConfig = {
     ],
   },
   serverExternalPackages: ["@prisma/client", "prisma"],
+  // Disable Turbopack for daemon-compatible operation
+  turbopack: undefined,
 }
 
 export default nextConfig
