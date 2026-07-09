@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma"
 import { apiSuccess, apiError } from "@/lib/rate-limit"
 import { updateInvoiceSchema, recordPaymentSchema } from "@/lib/validations"
 import { logAuditEvent } from "@/lib/auth"
+import { invalidateFinancialCache } from "@/lib/invalidate-financial-cache"
 
 type RouteParams = { params: Promise<{ id: string }> }
 
@@ -89,6 +90,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
         }),
       ])
 
+      await invalidateFinancialCache()
       return apiSuccess({ payment, invoice: updatedInvoice })
     }
 
@@ -98,6 +100,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
         where: { id },
         data: { status: "SENT", sentAt: new Date() },
       })
+      await invalidateFinancialCache()
       return apiSuccess(updated)
     }
 
@@ -121,6 +124,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
       resourceId: id,
     })
 
+    await invalidateFinancialCache()
     return apiSuccess(updated)
   } catch (error) {
     console.error("Invoice PATCH error:", error)
@@ -152,6 +156,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
 
     await prisma.invoice.delete({ where: { id } })
 
+    await invalidateFinancialCache()
     return apiSuccess({ deleted: true })
   } catch (error) {
     return apiError("Failed to delete invoice", 500)

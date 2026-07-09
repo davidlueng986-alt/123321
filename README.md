@@ -80,7 +80,8 @@ User Question
 - Next.js API Routes
 - Prisma ORM with PostgreSQL
 - Zod validation (all inputs)
-- Rate limiting (in-memory, Redis-ready)
+- Rate limiting via Redis when `REDIS_URL` is set (in-process fallback otherwise)
+- Redis-backed dashboard metrics cache with version invalidation on writes
 
 **AI**
 - OpenAI GPT-4o (assistant responses)
@@ -147,7 +148,7 @@ Organizations ──┬── OrganizationMembers ── Users
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/YOUR_USERNAME/finsight-ai.git
+git clone https://github.com/imchine/FinTech-Solution.git
 cd finsight-ai
 npm install
 ```
@@ -177,6 +178,24 @@ npm run dev
 ```bash
 docker-compose up -d
 ```
+
+### Redis (optional)
+
+Redis is optional but recommended for production and multi-instance deployments.
+
+```bash
+docker compose up -d redis
+# set in .env.local:
+REDIS_URL=redis://localhost:6379
+```
+
+When `REDIS_URL` is set:
+
+- **Rate limiting** — shared across API routes (`/api/transactions`, `/api/invoices`, `/api/ai/chat`, etc.)
+- **Dashboard cache** — metrics cached for 2 minutes; invalidated when transactions, expenses, or invoices change
+- **Health check** — `GET /api/health` reports whether Redis is configured
+
+Without Redis, rate limits and dashboard metrics use in-process behaviour only.
 
 ---
 

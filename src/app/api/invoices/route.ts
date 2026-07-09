@@ -4,13 +4,14 @@ import { prisma } from "@/lib/prisma"
 import { apiSuccess, apiError, rateLimit } from "@/lib/rate-limit"
 import { createInvoiceSchema, paginationSchema } from "@/lib/validations"
 import { logAuditEvent } from "@/lib/auth"
+import { invalidateFinancialCache } from "@/lib/invalidate-financial-cache"
 import { Decimal } from "@prisma/client/runtime/library"
 
 const checkRateLimit = rateLimit({ limit: 60, windowMs: 60000 })
 
 // GET /api/invoices - List invoices
 export async function GET(request: NextRequest) {
-  const rateLimitResponse = checkRateLimit(request)
+  const rateLimitResponse = await checkRateLimit(request)
   if (rateLimitResponse) return rateLimitResponse
 
   try {
@@ -86,7 +87,7 @@ export async function GET(request: NextRequest) {
 
 // POST /api/invoices - Create invoice
 export async function POST(request: NextRequest) {
-  const rateLimitResponse = checkRateLimit(request)
+  const rateLimitResponse = await checkRateLimit(request)
   if (rateLimitResponse) return rateLimitResponse
 
   try {
@@ -169,6 +170,7 @@ export async function POST(request: NextRequest) {
       ipAddress: request.headers.get("x-forwarded-for") ?? undefined,
     })
 
+    await invalidateFinancialCache()
     return apiSuccess(invoice, 201)
   } catch (error) {
     console.error("Invoice POST error:", error)

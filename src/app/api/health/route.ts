@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server"
 
+import { getRedisStatus } from "@/lib/redis/client"
+
 export async function GET() {
   return NextResponse.json({
     status: "ok",
@@ -7,5 +9,6 @@ export async function GET() {
     version: "1.0.0",
     timestamp: new Date().toISOString(),
     environment: process.env.NODE_ENV,
+    redis: getRedisStatus(),
   })
 }

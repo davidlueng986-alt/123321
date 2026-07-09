@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma"
 import { apiSuccess, apiError, rateLimit } from "@/lib/rate-limit"
 import { createExpenseSchema, paginationSchema } from "@/lib/validations"
 import { logAuditEvent } from "@/lib/auth"
+import { invalidateFinancialCache } from "@/lib/invalidate-financial-cache"
 
 const checkRateLimit = rateLimit({ limit: 60, windowMs: 60000 })
 
@@ -15,7 +16,7 @@ async function getOrg(userId: string, orgId: string | null) {
 
 // GET /api/expenses
 export async function GET(request: NextRequest) {
-  const rateLimitResponse = checkRateLimit(request)
+  const rateLimitResponse = await checkRateLimit(request)
   if (rateLimitResponse) return rateLimitResponse
 
   try {
@@ -80,7 +81,7 @@ export async function GET(request: NextRequest) {
 
 // POST /api/expenses
 export async function POST(request: NextRequest) {
-  const rateLimitResponse = checkRateLimit(request)
+  const rateLimitResponse = await checkRateLimit(request)
   if (rateLimitResponse) return rateLimitResponse
 
   try {
@@ -136,6 +137,7 @@ export async function POST(request: NextRequest) {
       newValues: { amount: data.amount, description: data.description },
     })
 
+    await invalidateFinancialCache()
     return apiSuccess(expense, 201)
   } catch (error) {
     console.error("Expense POST error:", error)

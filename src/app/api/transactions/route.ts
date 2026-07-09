@@ -3,6 +3,7 @@ import { NextRequest } from "next/server"
 import { prisma } from "@/lib/prisma"
 import { apiSuccess, apiError, rateLimit } from "@/lib/rate-limit"
 import { createTransactionSchema, paginationSchema } from "@/lib/validations"
+import { invalidateFinancialCache } from "@/lib/invalidate-financial-cache"
 
 const checkRateLimit = rateLimit({ limit: 100, windowMs: 60000 })
 
@@ -13,7 +14,7 @@ async function getOrg(userId: string, orgId: string | null) {
 }
 
 export async function GET(request: NextRequest) {
-  const rateLimitResponse = checkRateLimit(request)
+  const rateLimitResponse = await checkRateLimit(request)
   if (rateLimitResponse) return rateLimitResponse
 
   try {
@@ -84,7 +85,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const rateLimitResponse = checkRateLimit(request)
+  const rateLimitResponse = await checkRateLimit(request)
   if (rateLimitResponse) return rateLimitResponse
 
   try {
@@ -111,6 +112,7 @@ export async function POST(request: NextRequest) {
       include: { category: true },
     })
 
+    await invalidateFinancialCache()
     return apiSuccess(transaction, 201)
   } catch (error) {
     return apiError("Failed to create transaction", 500)

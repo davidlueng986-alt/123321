@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from "next/server"
 
-// In-memory rate limiter (use Redis in production)
+import { getRedis } from "@/lib/redis/client"
+
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>()
 
-const CLEANUP_INTERVAL = 60 * 1000 // 1 minute
+const CLEANUP_INTERVAL = 60 * 1000
 
-// Cleanup expired entries
 setInterval(() => {
   const now = Date.now()
   for (const [key, value] of rateLimitMap.entries()) {
@@ -20,28 +20,67 @@ export interface RateLimitConfig {
   windowMs?: number
 }
 
-export function rateLimit(config: RateLimitConfig = {}) {
-  const limit = config.limit ?? parseInt(process.env.RATE_LIMIT_REQUESTS ?? "100")
-  const windowMs = config.windowMs ?? parseInt(process.env.RATE_LIMIT_WINDOW_MS ?? "60000")
+function checkInMemoryRateLimit(
+  key: string,
+  limit: number,
+  windowMs: number,
+): NextResponse | null {
+  const now = Date.now()
+  const current = rateLimitMap.get(key)
 
-  return function checkRateLimit(request: NextRequest): NextResponse | null {
-    const ip =
-      request.headers.get("x-forwarded-for")?.split(",")[0] ??
-      request.headers.get("x-real-ip") ??
-      "unknown"
+  if (!current || now > current.resetTime) {
+    rateLimitMap.set(key, { count: 1, resetTime: now + windowMs })
+    return null
+  }
 
-    const key = `${ip}:${request.nextUrl.pathname}`
-    const now = Date.now()
+  if (current.count >= limit) {
+    const retryAfter = Math.ceil((current.resetTime - now) / 1000)
+    return NextResponse.json(
+      {
+        error: "Too many requests",
+        message: `Rate limit exceeded. Try again in ${retryAfter} seconds.`,
+        retryAfter,
+      },
+      {
+        status: 429,
+        headers: {
+          "X-RateLimit-Limit": limit.toString(),
+          "X-RateLimit-Remaining": "0",
+          "X-RateLimit-Reset": current.resetTime.toString(),
+          "Retry-After": retryAfter.toString(),
+        },
+      },
+    )
+  }
 
-    const current = rateLimitMap.get(key)
+  current.count++
+  return null
+}
 
-    if (!current || now > current.resetTime) {
-      rateLimitMap.set(key, { count: 1, resetTime: now + windowMs })
-      return null
+async function checkRedisRateLimit(
+  key: string,
+  limit: number,
+  windowMs: number,
+): Promise<NextResponse | null> {
+  const redis = getRedis()
+  if (!redis) {
+    return checkInMemoryRateLimit(key, limit, windowMs)
+  }
+
+  const redisKey = `finsight:ratelimit:${key}`
+  const windowSec = Math.max(1, Math.ceil(windowMs / 1000))
+
+  try {
+    const count = await redis.incr(redisKey)
+    if (count === 1) {
+      await redis.expire(redisKey, windowSec)
     }
 
-    if (current.count >= limit) {
-      const retryAfter = Math.ceil((current.resetTime - now) / 1000)
+    const ttlMs = await redis.pttl(redisKey)
+    const resetTime = ttlMs > 0 ? Date.now() + ttlMs : Date.now() + windowMs
+
+    if (count > limit) {
+      const retryAfter = Math.ceil((resetTime - Date.now()) / 1000)
       return NextResponse.json(
         {
           error: "Too many requests",
@@ -53,19 +92,35 @@ export function rateLimit(config: RateLimitConfig = {}) {
           headers: {
             "X-RateLimit-Limit": limit.toString(),
             "X-RateLimit-Remaining": "0",
-            "X-RateLimit-Reset": current.resetTime.toString(),
+            "X-RateLimit-Reset": resetTime.toString(),
             "Retry-After": retryAfter.toString(),
           },
-        }
+        },
       )
     }
 
-    current.count++
     return null
+  } catch (err) {
+    console.error("[finsight][redis] rate limit failed:", err)
+    return checkInMemoryRateLimit(key, limit, windowMs)
   }
 }
 
-// ─── API Response Helpers ────────────────────────────────────
+export function rateLimit(config: RateLimitConfig = {}) {
+  const limit = config.limit ?? parseInt(process.env.RATE_LIMIT_REQUESTS ?? "100")
+  const windowMs = config.windowMs ?? parseInt(process.env.RATE_LIMIT_WINDOW_MS ?? "60000")
+
+  return async function checkRateLimit(request: NextRequest): Promise<NextResponse | null> {
+    const ip =
+      request.headers.get("x-forwarded-for")?.split(",")[0] ??
+      request.headers.get("x-real-ip") ??
+      "unknown"
+
+    const key = `${ip}:${request.nextUrl.pathname}`
+    return checkRedisRateLimit(key, limit, windowMs)
+  }
+}
+
 export function apiSuccess<T>(data: T, status = 200) {
   return NextResponse.json({ success: true, data }, { status })
 }
@@ -77,11 +132,10 @@ export function apiError(message: string, status = 400, details?: unknown) {
       error: message,
       details: process.env.NODE_ENV === "development" ? details : undefined,
     },
-    { status }
+    { status },
   )
 }
 
-// ─── Security Headers ────────────────────────────────────────
 export function addSecurityHeaders(response: NextResponse): NextResponse {
   response.headers.set("X-Content-Type-Options", "nosniff")
   response.headers.set("X-Frame-Options", "DENY")
@@ -89,7 +143,7 @@ export function addSecurityHeaders(response: NextResponse): NextResponse {
   response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin")
   response.headers.set(
     "Permissions-Policy",
-    "camera=(), microphone=(), geolocation=()"
+    "camera=(), microphone=(), geolocation=()",
   )
   return response
 }

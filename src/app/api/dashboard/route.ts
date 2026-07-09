@@ -3,12 +3,17 @@ import { NextRequest } from "next/server"
 import { prisma } from "@/lib/prisma"
 import { apiSuccess, apiError, rateLimit } from "@/lib/rate-limit"
 import { getDashboardMetrics } from "@/lib/financial-calculations"
+import {
+  buildCacheKey,
+  getFinanceVersionToken,
+  getOrSetJson,
+} from "@/lib/redis/cache"
 
 const checkRateLimit = rateLimit({ limit: 60, windowMs: 60000 })
 
 export async function GET(request: NextRequest) {
   // Rate limiting
-  const rateLimitResponse = checkRateLimit(request)
+  const rateLimitResponse = await checkRateLimit(request)
   if (rateLimitResponse) return rateLimitResponse
 
   try {
@@ -64,7 +69,11 @@ export async function GET(request: NextRequest) {
       }
     }
 
-    const metrics = await getDashboardMetrics(organization.id)
+    const versionToken = await getFinanceVersionToken()
+    const cacheKey = buildCacheKey("dashboard-metrics", [organization.id], versionToken)
+    const metrics = await getOrSetJson(cacheKey, 120, () =>
+      getDashboardMetrics(organization.id),
+    )
 
     return apiSuccess(metrics)
   } catch (error) {
