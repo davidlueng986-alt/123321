@@ -12,7 +12,7 @@
   "current_hypothesis": "H12-DIVERSE-A-STRUCTURED-MATE-SEARCH",
   "last_experiment": "MOLS10-E011",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
-  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41336699274",
+  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41338474918",
   "last_verified_results": [
     "Egan–Wanless near-triple pair overlays 100/100/91 (not solution)",
     "E002 published pair (A,B): 14 exact common transversals, 12 unsupported cells, max disjoint 7 => UNSAT_FIXED_PAIR_CERTIFIED",
@@ -61,6 +61,13 @@
   ],
   "last_run_date": "2026-11-02",
   "limitations": "Global 3-MOLS(10) remains OPEN. E008/E010 are exact conditional OPTIMALITY for particular fixed Egan pairs; E009 is conditional UPPER BOUND 77 for Parker pair, not attained. E011 has Latin first-square variants but no verified new orthogonal mate, tiny-budget searches UNKNOWN. Novelty relative to literature not yet established.",
-  "last_ci_result": "SUCCESS: 28 tests in 9.733s on Python 3.12; all exact witness and restricted-neighborhood regressions passed",
-  "external_status_review": "2026-11-02: no credible full solution located; Bright-Keita-Stevens 2026 and TheoremDB status remain OPEN; external ProofAtlas notes not independently proven."
+  "last_ci_result": "SUCCESS: 40 tests in 14.662s (Python 3.12, 2026-11-02, exact dual certificate replay and first-square trade regression)",
+  "external_status_review": "2026-11-02: no credible full solution located; Bright-Keita-Stevens 2026 and TheoremDB status remain OPEN; external ProofAtlas notes not independently proven.",
+  "current_math_result": {
+    "egan_fixed_A_C_optimum": 91,
+    "egan_fixed_A_B_optimum": 91,
+    "parker_fixed_A_B_upper_bound": 77,
+    "original_question": "OPEN",
+    "conditional_scope_only": true
+  }
 }
