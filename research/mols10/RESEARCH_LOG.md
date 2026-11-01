@@ -82,3 +82,13 @@ E013: Tested necessary one-transversal compatibility support for original Egan A
 E014: For each fixed orthogonal pair A,B, searched smallest B-symbol subset S such that a cell x is absent from all A-transversals using each B-symbol in S at most once. Exact minimal sizes: Egan A/B **6**, Egan A/C **5**, Parker A/B **3**, traded A/B index12 **5**, index20 **5**. Parker's three-symbol witness is S={7,8,9}, x=(7,7) zero-based. All smaller S subsets exhaustively tested; all five blocking witnesses independently replayed by 3,628,800 permutations each, 0 eligible A-transversals through blocked cells. E014_symbol_obstruction.py, test_E012_E014.py, CI https://github.com/davidlueng986-alt/123321/actions/runs/41338759633 (success).
 
 Full exact numbers, proof scope, failures, code, sources, uncertainty and next experiment: E012_E014_REPORT.md. **Next E015:** use multi-B-symbol collision-mask coverage as a sound pruning oracle in partial B exact-cover construction; positive control GF(4), then bounded changed-A search targeting >=10 joint transversals with full support. These results are conditional on explicit pairs; unrestricted 3-MOLS(10) remains OPEN.
+
+## MOLS10-E015 | 2026-11-01 18:55 UTC | sound partial-B-class exact-once pruning
+
+Mathematical lemma: if a partial orthogonal mate B has selected A-transversal symbol classes T_1,...,T_k, every hypothetical C-symbol class U must meet each T_i in exactly one cell. Maintain the bitset intersection of Compat(T_i) over all A-transversals U. If no such U covers some cell, reject the B prefix soundly. This is necessary only; passing the filter is not a solution.
+
+Exact exhaustive minimal B-class blockers (stronger than E014 at-most-once criterion): Egan A/B k=3 (18/120 blocking subsets), Egan A/C k=3 (18/120), Parker A/B k=2 (3/45), traded pair12 k=3 (73/120), traded pair20 k=2 (2/45). Five blocked-cell witnesses independently verified by 10! permutations each. GF(4) known positive triple passes every partial-prefix filter (k=0..4). Code E015_partial_mate_prune.py; test_E015_partial_mate_prune.py.
+
+Bounded search, seed0, four seconds per new A: trade12 UNKNOWN after 4194 nodes (3193 pruned); trade20 UNKNOWN after 4313 (3327 pruned); trade30 UNKNOWN after 4672 (3650 pruned). No full-support pair found. No UNSAT or 3-MOLS claim. Details E015_REPORT.md; CI https://github.com/davidlueng986-alt/123321/actions/runs/41339094814.
+
+Next E016: optimize candidate-list lookup and branching, benchmark pruning versus unpruned on matched seeds, then broader bounded scan for changed-A orthogonal pairs with complete common-transversal coverage. Global problem OPEN.
