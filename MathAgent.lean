@@ -1,1 +1,3 @@
-import MathAgent.Examples
+module
+
+public import MathAgent.Examples
