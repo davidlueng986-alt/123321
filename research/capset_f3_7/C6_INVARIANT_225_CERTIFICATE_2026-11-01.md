@@ -1,6 +1,6 @@
 # CAP-004B — exact optimum in the 240-invariant C6 orbit family (2026-11-01 UTC)
 
-**Status:** VERIFIED COMPUTATION on local independent Python arithmetic; GitHub Actions verification required for full branch-level CI status. **Not** a new global bound on r_3(7).
+**Status:** VERIFIED COMPUTATION on independent local Python arithmetic and successful GitHub Actions run https://github.com/davidlueng986-alt/123321/actions/runs/41338916833. **Not** a new global bound on r_3(7).
 
 ## The restricted theorem
 
