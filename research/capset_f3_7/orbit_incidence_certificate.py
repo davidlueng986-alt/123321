@@ -10,10 +10,10 @@ so any nonempty B from that orbit alone strictly DECREASES cap size.
 No linear-programming/heuristic assumptions: integers only.
 """
 from collections import Counter
-from symmetry_isolation_certificate import A, G, act, ORBITS, sec
+from symmetry_isolation_certificate import A, G, act, orbits, sec
 
 records=[]
-for representative, orbit_size, s in sorted(ORBITS,key=lambda o:(o[2],o[1])):
+for representative, orbit_size, s in sorted(orbits,key=lambda o:(o[2],o[1])):
     orbit={act(representative,g) for g in G}
     assert len(orbit)==orbit_size
     incident=Counter()
