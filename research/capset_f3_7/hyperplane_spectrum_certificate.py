@@ -72,5 +72,22 @@ def audit():
     assert s["largest_slice"]==112
     return s
 
+def audit_8d():
+    from edel496_reproduction import construct
+    A=construct()
+    s=spectrum(A)
+    assert s["n"]==8 and s["size"]==496
+    assert s["projective_directions"]==3280
+    assert s["parseval_lhs"]==269980240
+    assert s["slice_types"]==17
+    assert s["histogram"]["236-236-24"]==2
+    return s
+
 if __name__=="__main__":
-    print(json.dumps(audit(),indent=2,sort_keys=True))
+    import argparse
+    p=argparse.ArgumentParser()
+    p.add_argument("--include-8d",action="store_true")
+    args=p.parse_args()
+    print("DIMENSION 7",json.dumps(audit(),indent=2,sort_keys=True))
+    if args.include_8d:
+        print("DIMENSION 8",json.dumps(audit_8d(),indent=2,sort_keys=True))
