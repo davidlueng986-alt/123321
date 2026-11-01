@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-01",
-  "current_hypothesis": "CAP-004D proved the derived order-60 subgroup of even120 has exactly the same 21 orbits on F3^6, so the restricted optimum remains 236. No order-40 subgroup of even120 exists. An explicit order-24 subgroup has 45 orbits, making naive 2^45 DP infeasible; prioritize hypergraph pruning or non-invariant affine twists.",
-  "next_experiment": "CAP-004E: bound the number of cap-valid orbit unions for an explicit order-24 subgroup using conflict-hypergraph propagation / branch-and-bound before any 3-slice exact optimization; alternatively 27-block affine twisting with exact cross-shadow.",
-  "last_run_id": "CAP-004D-2026-11-01-derived60-orbit-equivalence",
-  "last_run_result": "VERIFIED_FINITE_GROUP_PROOF_CI_GREEN",
+  "current_hypothesis": "Order-24 subgroup has 45 F3^6 orbits, 11,434 cap-valid single-slice orbit masks; exact search excludes >236 for every 24-invariant 7D cap with at least two slices >=104 (10,440 pairs). Remaining order-24 caps with fewer high slices or non-invariant affine twists may still reach 237; need shadow-based branch-and-bound with strict CPU gate.",
+  "next_experiment": "CAP-004F: exact shadow-bound/branch-and-bound for all 65,373,895 order-24 single-slice mask pairs, pruning via slice weight, cross-shadow memoization and maximal permitted third-slice search; bounded CPU. Or switch to 27-block non-invariant affine twisting.",
+  "last_run_id": "CAP-004E-2026-11-01-order24-high-slice",
+  "last_run_result": "VERIFIED_LOCAL_RESTRICTED_HIGH_SLICE_THEOREM_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -34,7 +34,8 @@
     "CAP-003C",
     "CAP-004B",
     "CAP-004C",
-    "CAP-004D"
+    "CAP-004D",
+    "CAP-004E"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
   "baseline_secant_audit": {
@@ -56,7 +57,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-01T21:01:00Z",
+  "last_updated_utc": "2026-11-01T21:03:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -200,6 +201,32 @@
     "script": "research/capset_f3_7/c6_subgroup_lattice_certificate.py",
     "report": "research/capset_f3_7/C6_SUBGROUP_60_24_CERTIFICATE_2026-11-01.md",
     "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41349642936",
+    "global_bound_improved": false
+  },
+  "c6_order24_high_slice_audit": {
+    "subgroup_order": 24,
+    "orbit_count": 45,
+    "within_slice_forbidden_orbit_masks": 3556,
+    "individually_invalid_orbits": 12,
+    "exact_single_slice_valid_masks": 11434,
+    "recursive_nodes": 87862,
+    "high_slice_threshold": 104,
+    "high_slice_masks": 144,
+    "unordered_high_slice_pairs_exhausted": 10440,
+    "restricted_optimum": 236,
+    "scope": "At least two of three slices have >=104 points; order-24 invariant only",
+    "witness_slice_sizes": [
+      112,
+      112,
+      12
+    ],
+    "independent_direct_checker_passed": true,
+    "remaining_full_pair_space": 65373895,
+    "full_order24_optimum": "UNKNOWN",
+    "status": "VERIFIED_LOCAL_COMPUTATION_CI_PENDING",
+    "script": "research/capset_f3_7/c6_order24_high_slice_exact.py",
+    "report": "research/capset_f3_7/C6_ORDER24_HIGH_SLICE_236_CERTIFICATE_2026-11-01.md",
+    "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41349990526",
     "global_bound_improved": false
   }
 }
