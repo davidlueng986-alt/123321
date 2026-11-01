@@ -43,6 +43,8 @@ jobs:
         run: python research/capset_f3_7/c6_invariant_exact_optimum.py
       - name: Certify exact order-120 invariant 7D optimum 236 (restricted theorem)
         run: python research/capset_f3_7/c6_even120_invariant_exact_optimum.py
+      - name: Certify derived-60 orbit equivalence and order-24 subgroup complexity
+        run: python research/capset_f3_7/c6_subgroup_lattice_certificate.py
       - name: Check all 1920 signed-relative complementary 112-cap pairs
         run: python research/capset_f3_7/complement_112_signed_shadow_certificate.py
       - name: Run deterministic sample and recheck artifact
