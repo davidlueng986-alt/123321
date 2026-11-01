@@ -8,7 +8,14 @@
     100,
     91
   ],
-  "next_action": "Implement exact third-square extension encoding",
+  "next_action": "Benchmark independent third-square extension constraints using the published order-10 orthogonal pair A,B with a strict node/time budget; log SAT/UNSAT_FIXED_PAIR/UNKNOWN separately. Then add a solver-grade CP-SAT/SAT encoding and compare against this regression baseline.",
   "current_hypothesis": "H1",
-  "last_experiment": "E000"
+  "last_experiment": "MOLS10-E001",
+  "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
+  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41333555421",
+  "last_verified_results": [
+    "Egan-Wanless near-triple overlays 100/100/91 (non-solution)",
+    "Order-3 fixed orthogonal pair has no third mate (exhaustive fixed-pair search)",
+    "Order-4 GF(4) fixed pair has a third mate (16/16/16)"
+  ]
 }
