@@ -57,6 +57,10 @@ def validate_signed(a, d, certificate):
     assert min_slack == certificate["asserted_min_constraint_slack"]
     assert tight == certificate["asserted_tight_transversal_count"]
     assert upper == certificate["asserted_upper_bound"]
+    if "attaining_index" in certificate:
+        # The replay wrapper separately validates the attaining square's
+        # Latin property, A-orthogonality, and actual D-overlay.
+        assert certificate["attaining_overlay"] == upper
 
     return {"verified":True,"order":n,"denominator":q,
             "weight_sum_numerators":weight_sum,
@@ -72,7 +76,18 @@ def replay(path):
     cert = json.loads(path.read_text())
     squares = json.loads((path.parent / Path(cert["source"]).name).read_text())["squares"]
     a,d = [squares[k] for k in cert["fixed_indices"]]
-    return validate_signed(a,d,cert)
+    output = validate_signed(a,d,cert)
+    if "attaining_index" in cert:
+        candidate = squares[cert["attaining_index"]]
+        n = len(a)
+        if not is_latin(candidate) or pair_count(a,candidate) != n*n:
+            raise AssertionError("claimed attainer is not Latin and orthogonal to A")
+        actual = pair_count(d,candidate)
+        if actual != output["global_integer_upper_bound_for_fixed_pair"]:
+            raise AssertionError("claimed attainer does not reach the dual bound")
+        output["attaining_score"] = actual
+        output["optimality_proven"] = True
+    return output
 
 
 if __name__ == "__main__":
