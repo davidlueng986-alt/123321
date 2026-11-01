@@ -1,0 +1,140 @@
+{
+  "schema": "MOLS10-signed-rational-dual-v1",
+  "source": "research/mols10/near_triple.json",
+  "fixed_indices": [
+    0,
+    1
+  ],
+  "description": "For fixed Egan A,B every A-transversal T satisfies sum z_ij(T) <= 2*(10-|distinct B-symbols in T|); sum_all z=18. Therefore arbitrary Latin Cprime orthogonal to A has <= floor(100-18/2)=91 B,Cprime distinct pairs. Published C attains 91.",
+  "denominator": 2,
+  "weight_numerators": [
+    [
+      -2,
+      -1,
+      2,
+      -1,
+      4,
+      3,
+      -1,
+      3,
+      0,
+      3
+    ],
+    [
+      2,
+      -2,
+      -1,
+      4,
+      0,
+      -2,
+      -2,
+      2,
+      0,
+      4
+    ],
+    [
+      -2,
+      -2,
+      -2,
+      2,
+      -1,
+      -2,
+      -2,
+      3,
+      -1,
+      0
+    ],
+    [
+      1,
+      3,
+      4,
+      -2,
+      2,
+      -1,
+      -1,
+      2,
+      -2,
+      0
+    ],
+    [
+      1,
+      -2,
+      -2,
+      -2,
+      -1,
+      -2,
+      -2,
+      3,
+      -2,
+      -2
+    ],
+    [
+      -1,
+      1,
+      -2,
+      -2,
+      -2,
+      4,
+      -2,
+      -1,
+      3,
+      0
+    ],
+    [
+      4,
+      -2,
+      -2,
+      -2,
+      0,
+      -2,
+      4,
+      4,
+      -2,
+      2
+    ],
+    [
+      -2,
+      2,
+      -2,
+      -1,
+      -1,
+      -2,
+      -2,
+      -2,
+      -2,
+      4
+    ],
+    [
+      1,
+      -2,
+      3,
+      -2,
+      0,
+      3,
+      4,
+      1,
+      -2,
+      4
+    ],
+    [
+      1,
+      -1,
+      -1,
+      -2,
+      4,
+      2,
+      -1,
+      2,
+      4,
+      3
+    ]
+  ],
+  "asserted_weight_sum": 18,
+  "asserted_A_transversal_count": 1080,
+  "asserted_min_constraint_slack": 0,
+  "asserted_tight_transversal_count": 61,
+  "asserted_upper_bound": 91,
+  "attaining_index": 2,
+  "attaining_overlay": 91,
+  "scope": "fixed Egan A,B; optimized arbitrary Cprime orthogonal to A; not unrestricted 3-MOLS(10)"
+}
