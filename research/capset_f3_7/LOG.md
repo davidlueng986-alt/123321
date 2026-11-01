@@ -7,3 +7,11 @@ Hypothesis CAP-001: recover 236-point construction from primary literature and r
 Completed: created dedicated branch and operating protocol. Not completed: substantive search or novel proof.
 Next: establish deterministic checker and provenance-preserved published baseline; then test one controlled candidate search methodology.
 
+
+## 2026-11-02 | CI calibration run 41333612331 | VERIFIED COMPUTATION
+- GitHub Actions: https://github.com/davidlueng986-alt/123321/actions/runs/41333612331
+- 5 exact verifier unit tests passed.
+- Command: python research/capset_f3_7/search_baseline.py --seed 7 --rounds 2 --out /tmp/capset_candidate.txt ; python research/capset_f3_7/verify_capset.py /tmp/capset_candidate.txt
+- Scores: 135 on first round, 136 on second; exact arithmetic checker: VERIFIED cap dimension=7 size=136.
+- Interpretation: purely a calibration result, substantially below the external 236-point record. Artifact was temporary on GitHub runner and not retained, so a future source commit is needed for durable witness replay. The fixed seed and implementation support regeneration.
+- Next: CAP-001 reproduce known 236-point baseline and inspect construction before spending search compute.
