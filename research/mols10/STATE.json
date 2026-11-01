@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "E019: introduce sound B/C symmetry breaking and independently certified SAT/MILP for Parker fixed-A; avoid repeating 8-second HiGHS UNKNOWN without changes; import diverse Myrvold remaining-eight cases. No unrestricted claim.",
-  "current_hypothesis": "H19-SYMMETRY-BREAK-COMPACT-EXACT-MILP-AND-DIVERSIFY",
-  "last_experiment": "MOLS10-E018",
+  "next_action": "E020: implement lazy depth-3 support cut separation (23,296 novel rooted Parker cuts proved in E019); add sound B/C symmetry breaking and GF4/order6 controls; bounded Parker comparison; diversify to Myrvold eight residual patterns. Preserve UNKNOWN and global OPEN.",
+  "current_hypothesis": "H20-LAZY-DEPTH3-SUPPORT-CUTS",
+  "last_experiment": "MOLS10-E019",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41354224282",
   "last_verified_results": [
@@ -46,7 +46,9 @@
     "E018: Parker A has 1104 transversals and 236104 disjoint unordered pairs; 226 pairs lack full-cell compatible-C support, yielding 452 valid pair cuts. All 1104 single transversals pass cell-support.",
     "E018: Parker exact MILP 2208 binaries / 2408 rows (873976 nonzeros) HiGHS 8s UNKNOWN; with 452 pair cuts 2860 rows (874880 nonzeros) also UNKNOWN. NOT an independent Parker exclusion certificate.",
     "E018: independent stdlib 10! permutation enumeration reproduces Parker 1104 A-transversals, 236104 disjoint pairs, 226 blocked pairs; local unittest PASSED (5.323s), CI run pending.",
-    "E018: GitHub Actions 41354224282 completed SUCCESS for independent pair-support regression test; does not certify order10 MILP UNSAT."
+    "E018: GitHub Actions 41354224282 completed SUCCESS for independent pair-support regression test; does not certify order10 MILP UNSAT.",
+    "E019: Parker A 1104 transversals; exhaustive 39528 disjoint triples containing index0, 29973 C-cell-support blockers, including 23296 new depth-3 blockers where every pair passes; independent 10! permutation replay local 2 tests PASS.",
+    "E019: deterministic 20000 depth-2-surviving pair + disjoint third samples, 10140 depth-3 blocked, 9860 survive; nonuniform sample, no global inference."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -79,13 +81,16 @@
     "research/mols10/test_E017_replay.py",
     "research/mols10/E018_compact_milp.py",
     "research/mols10/E018_RESULTS.json",
-    "research/mols10/test_E018_pair_support.py"
+    "research/mols10/test_E018_pair_support.py",
+    "research/mols10/E019_depth_support.py",
+    "research/mols10/E019_RESULTS.json",
+    "research/mols10/test_E019_depth_support.py"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-01T21:51:00Z",
+  "last_run_utc": "2026-11-01T22:47:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -96,12 +101,13 @@
     "research/mols10/E015_REPORT.md",
     "research/mols10/E016_REPORT.md",
     "research/mols10/E017_REPORT.md",
-    "research/mols10/E018_REPORT.md"
+    "research/mols10/E018_REPORT.md",
+    "research/mols10/E019_REPORT.md"
   ],
   "last_run_date": "2026-11-01",
-  "limitations": "Global 3-MOLS(10) OPEN. E018 new exact MILP independently formulated and controls pass, but Parker A baseline and paircuts both HiGHS UNKNOWN after 8-second solver limits; no SAT/DRAT/FRAT certificate. E017 DFS fixed-A claims remain not independently certified by E018. No global symmetry coverage or 100/100/100 witness.",
+  "limitations": "Global 3-MOLS(10) OPEN. E019 depth-3 obstruction counts exact only for Parker rooted index-0 slice; sampled triples not uniform; independent local replay passes, GitHub CI not yet verified. E018 Parker MILP remains UNKNOWN; no 100/100/100 witness or unrestricted certificate.",
   "last_ci_result": "E018 independent stdlib test_E018_pair_support.py (10! permutation enumeration, Parker 1104/236104/226) PASSED in GitHub Actions run 41354224282 on commit cf04320fa928a876866eef1825f8f69d63c76682; E018 SciPy MILP itself only tested locally (workflow lacks SciPy).",
-  "external_status_review": "2026-11-01 21:47 UTC: EJC Bright–Keita–Stevens (2026-02-13), arXiv Barnoff–Bright 2605.02132v2 (2026-07-04), targeted web/arXiv check; no independently verifiable unrestricted resolution located.",
+  "external_status_review": "2026-11-01 ~22:47 UTC: fresh web/arXiv check; Bright–Keita–Stevens EJC 33(1) P1.30 (2026) and Barnoff–Bright arXiv:2605.02132; no independently verifiable complete unrestricted solution found.",
   "current_math_result": {
     "egan_fixed_A_C_optimum": 91,
     "egan_fixed_A_B_optimum": 91,
@@ -113,6 +119,9 @@
     "parker_original_A_no_triple": "COMPUTATIONAL_EXHAUSTIVE_FIXED_A_E017",
     "parker_single_trade_variants_no_triple_tested": 12,
     "egan_disjoint_two_trade_variants_no_triple_tested": 4,
-    "e017_new_fixed_A_exclusions": 17
+    "e017_new_fixed_A_exclusions": 17,
+    "e019_rooted_depth3_disjoint_triples": 39528,
+    "e019_rooted_depth3_blocked": 29973,
+    "e019_rooted_novel_cuts": 23296
   }
 }
