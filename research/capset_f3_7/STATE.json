@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "Coordinated >=16-deletion and >=17-insertion remodelling may succeed only with large structural changes, requiring restricted candidate ILP/SAT and symmetry reductions",
-  "next_experiment": "CAP-002C",
-  "last_run_id": "cap-002-paircover-2026-11-02",
-  "last_run_result": "EXHAUSTIVE_1902225_PAIRS_MIN_VERTEX_COVER_16_CI_PASS",
+  "current_hypothesis": "Novel >=237 witness likely requires coordinated changes spanning >=5 large coordinate fibers or structurally different 6D slices. Apply independent C6 orbit templates and 27-block twisting, not only 236 neighborhood swaps.",
+  "next_experiment": "CAP-004: multi-fiber CP-SAT/affine-twist and C6 orbit-based structural search",
+  "last_run_id": "CAP-003D-2026-11-02-campaign001-cross-audit-and-fiber-search",
+  "last_run_result": "MULTIPLE_VERIFIED_CERTIFICATES;_16_FIBER_MIP_OPTIMA_236;_FIVE_FIBER_237_INCONCLUSIVE",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -27,7 +27,11 @@
   "best_verified_size_is_research_record": false,
   "completed_experiments": [
     "CAP-001",
-    "CAP-002A"
+    "CAP-002A",
+    "CAP-002C",
+    "CAP-003A",
+    "CAP-003B",
+    "CAP-003C"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
   "baseline_secant_audit": {
@@ -48,5 +52,52 @@
     "independent_milp_all_passed": true
   },
   "local_reconstruction_lower_bound_deletions": 16,
-  "local_reconstruction_lower_bound_insertions_for_improvement": 17
+  "local_reconstruction_lower_bound_insertions_for_improvement": 17,
+  "last_updated_utc": "2026-11-02",
+  "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
+  "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
+  "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
+  "ci_full_reconstruction": "https://github.com/davidlueng986-alt/123321/actions/runs/41338120217",
+  "ci_spectrum_8d": "https://github.com/davidlueng986-alt/123321/actions/runs/41337974694",
+  "ci_dual_116": "https://github.com/davidlueng986-alt/123321/actions/runs/41337166017",
+  "orbit_research": {
+    "verified_symmetry_subgroup_size": 3840,
+    "outsider_orbits": 14,
+    "min16_pair_orbits": 3,
+    "deleted_le_16_cannot_improve_relative_to_classical236": true,
+    "source": "symmetry_isolation_certificate.py"
+  },
+  "fractional_dual": {
+    "candidate_set_sizes_certified_no_enlargement": [
+      48,
+      71,
+      116
+    ],
+    "uses_exact_integer_checker": true,
+    "scope_only_restricted_external_candidate_pools": true
+  },
+  "cross_agent_reproductions": {
+    "n7_size236": true,
+    "n8_size496": true,
+    "n7_parseval_sum": 20445388,
+    "n8_parseval_sum": 269980240,
+    "n7_projective_normals": 1093,
+    "n8_projective_normals": 3280,
+    "unverified_source_claims": [
+      "C6 magic basis 240-group witness not accessible",
+      "252-point admissible set and 480D lift not independently replayed"
+    ]
+  },
+  "coordinate_fiber_experiments": {
+    "all_coordinate_5d_fibers_checked": 189,
+    "zero_unblocked_external": 165,
+    "one_unblocked_external": 24,
+    "aligned_disjoint_fibers": 9,
+    "three_fiber_models_optimal_at_236": 8,
+    "four_fiber_models_optimal_at_236": 8,
+    "five_fiber_model_status": "INCONCLUSIVE_TIME_LIMIT",
+    "five_fiber_variables": 653,
+    "five_fiber_constraints": 34900,
+    "five_fiber_limit_seconds": 12
+  }
 }
