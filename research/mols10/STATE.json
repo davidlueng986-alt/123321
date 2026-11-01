@@ -1,0 +1,14 @@
+{
+  "schema": "mols10-v1",
+  "problem": "3 mutually orthogonal Latin squares of order 10",
+  "status": "open",
+  "last_review": "2026-11-02",
+  "baseline": [
+    100,
+    100,
+    91
+  ],
+  "next_action": "Implement exact third-square extension encoding",
+  "current_hypothesis": "H1",
+  "last_experiment": "E000"
+}
