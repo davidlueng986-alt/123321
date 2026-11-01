@@ -12,7 +12,7 @@
   "current_hypothesis": "H20-LAZY-DEPTH3-SUPPORT-CUTS",
   "last_experiment": "MOLS10-E019",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
-  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41354224282",
+  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41359030343",
   "last_verified_results": [
     "Egan–Wanless near-triple pair overlays 100/100/91 (not solution)",
     "E002 published pair (A,B): 14 exact common transversals, 12 unsupported cells, max disjoint 7 => UNSAT_FIXED_PAIR_CERTIFIED",
@@ -105,8 +105,8 @@
     "research/mols10/E019_REPORT.md"
   ],
   "last_run_date": "2026-11-01",
-  "limitations": "Global 3-MOLS(10) OPEN. E019 depth-3 obstruction counts exact only for Parker rooted index-0 slice; sampled triples not uniform; independent local replay passes, GitHub CI not yet verified. E018 Parker MILP remains UNKNOWN; no 100/100/100 witness or unrestricted certificate.",
-  "last_ci_result": "E018 independent stdlib test_E018_pair_support.py (10! permutation enumeration, Parker 1104/236104/226) PASSED in GitHub Actions run 41354224282 on commit cf04320fa928a876866eef1825f8f69d63c76682; E018 SciPy MILP itself only tested locally (workflow lacks SciPy).",
+  "limitations": "Global 3-MOLS(10) OPEN. E019 depth-3 obstruction counts exact only for Parker rooted index-0 slice; sampled triples not uniform; independent local replay passes, GitHub CI SUCCESS for E019 regression tests. E018 Parker MILP remains UNKNOWN; no 100/100/100 witness or unrestricted certificate.",
+  "last_ci_result": "E019 independent stdlib 10! permutation replay and rooted 39528/29973/23296 regression tests PASS in GitHub Actions run 41359030343 (workflow success 2026-11-01T22:50:11Z); this does not certify unrestricted 3-MOLS(10).",
   "external_status_review": "2026-11-01 ~22:47 UTC: fresh web/arXiv check; Bright–Keita–Stevens EJC 33(1) P1.30 (2026) and Barnoff–Bright arXiv:2605.02132; no independently verifiable complete unrestricted solution found.",
   "current_math_result": {
     "egan_fixed_A_C_optimum": 91,
