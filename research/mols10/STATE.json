@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "E018: independent SAT/CP-SAT or MILP certificate for Parker A and Parker trade65 fixed-first-square exclusions; checkpointable per-case replay and source hashes; acquire genuinely diverse published first squares outside Egan/Parker trade neighborhoods; preserve UNKNOWN budgets.",
-  "current_hypothesis": "H18-VERIFY-PARKER-FIXED-A-EXCLUSION-WITH-INDEPENDENT-SAT-AND-DIVERSIFY",
-  "last_experiment": "MOLS10-E017",
+  "next_action": "E019: introduce sound B/C symmetry breaking and independently certified SAT/MILP for Parker fixed-A; avoid repeating 8-second HiGHS UNKNOWN without changes; import diverse Myrvold remaining-eight cases. No unrestricted claim.",
+  "current_hypothesis": "H19-SYMMETRY-BREAK-COMPACT-EXACT-MILP-AND-DIVERSIFY",
+  "last_experiment": "MOLS10-E018",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41349306193",
   "last_verified_results": [
@@ -41,7 +41,10 @@
     "E017: independent n! permutation enumeration and separately implemented exact-cover support DFS reproduced E016 Egan A 24875/18407 and Egan trade12 17377/13324 nodes/prunes; no timeouts for these cases.",
     "E017: Parker historical first square A (1104 A-transversals) exhaustively excluded from any 3-MOLS(10) triple under fixed-A algorithm: 49199 DFS nodes, 37286 support prunes. This is stronger than fixed Parker A/B exclusion, NOT unrestricted.",
     "E017: 12 Parker one-trade first squares + 4 distinct labeled Egan disjoint-two-trade first squares exhaustively excluded; total 17 new fixed-A inputs, 534187 DFS nodes, 407293 support prunes. Parker trade65: 1272 transversals, 186150 nodes/140325 prunes. Isotopy novelty not established.",
-    "E017: positive GF(4) order-four Latin triple independently verified 16/16/16; Parker A and Parker trade65 seed1 replays match seed17 exhaustive counts; GitHub Actions verify unit tests succeeded."
+    "E017: positive GF(4) order-four Latin triple independently verified 16/16/16; Parker A and Parker trade65 seed1 replays match seed17 exhaustive counts; GitHub Actions verify unit tests succeeded.",
+    "E018: independently formulated exact fixed-A 3-MOLS binary MILP using two A-transversal partitions and cross-intersection constraints; GF4 positive 16/16/16, order6 32-transversal negative solver-complete UNSAT.",
+    "E018: Parker A has 1104 transversals and 236104 disjoint unordered pairs; 226 pairs lack full-cell compatible-C support, yielding 452 valid pair cuts. All 1104 single transversals pass cell-support.",
+    "E018: Parker exact MILP 2208 binaries / 2408 rows (873976 nonzeros) HiGHS 8s UNKNOWN; with 452 pair cuts 2860 rows (874880 nonzeros) also UNKNOWN. NOT an independent Parker exclusion certificate."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -71,13 +74,15 @@
     "research/mols10/test_E016_bitset_search.py",
     "research/mols10/E017_replay.py",
     "research/mols10/E017_RESULTS.json",
-    "research/mols10/test_E017_replay.py"
+    "research/mols10/test_E017_replay.py",
+    "research/mols10/E018_compact_milp.py",
+    "research/mols10/E018_RESULTS.json"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-01T20:56:00Z",
+  "last_run_utc": "2026-11-01T21:51:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -87,12 +92,13 @@
     "research/mols10/E012_E014_REPORT.md",
     "research/mols10/E015_REPORT.md",
     "research/mols10/E016_REPORT.md",
-    "research/mols10/E017_REPORT.md"
+    "research/mols10/E017_REPORT.md",
+    "research/mols10/E018_REPORT.md"
   ],
   "last_run_date": "2026-11-01",
-  "limitations": "Global 3-MOLS(10) OPEN. E017 independently replayed two E016 fixed-A results and added 17 labeled fixed-A exhaustive exclusions (Parker A, 12 Parker trades, 4 Egan two-trades), NOT unrestricted; no SAT/DRAT certificate or full paratopy classification. Two long monolithic batch runs exceeded outer timeout; individual 17 cases completed. No 100/100/100 witness.",
-  "last_ci_result": "E017 test-containing commit e99782c8f511e09bf17f24d8bd7940e272978b3e: GitHub Actions run 41349306193 completed SUCCESS; verify job and unit tests succeeded.",
-  "external_status_review": "2026-11-01 20:50 UTC: Bright–Keita–Stevens EJC 2026-02-13 and Barnoff–Bright arXiv:2605.02132v2 (2026-07-04) checked; targeted new arXiv/web search; no independently verifiable unrestricted 3-MOLS(10) resolution located.",
+  "limitations": "Global 3-MOLS(10) OPEN. E018 new exact MILP independently formulated and controls pass, but Parker A baseline and paircuts both HiGHS UNKNOWN after 8-second solver limits; no SAT/DRAT/FRAT certificate. E017 DFS fixed-A claims remain not independently certified by E018. No global symmetry coverage or 100/100/100 witness.",
+  "last_ci_result": "E017 GitHub Actions run 41349306193 SUCCESS; E018 local GF4 and order6 controls pass; E018 GitHub CI not yet verified.",
+  "external_status_review": "2026-11-01 21:47 UTC: EJC Bright–Keita–Stevens (2026-02-13), arXiv Barnoff–Bright 2605.02132v2 (2026-07-04), targeted web/arXiv check; no independently verifiable unrestricted resolution located.",
   "current_math_result": {
     "egan_fixed_A_C_optimum": 91,
     "egan_fixed_A_B_optimum": 91,
