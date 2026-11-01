@@ -33,3 +33,22 @@ Pair (A,C), input SHA256 6db5f6f5d6e1bb0743c6a9e59eeb633ac0490f8a001975083065a4f
 Both results independently replayed locally; GitHub CI: https://github.com/davidlueng986-alt/123321/actions/runs/41334010585 — success, including published-pair regression tests. Certificate with all 21 permutations: E002_FIXED_PAIR_CERTIFICATES.md. Code: transversals.py, test_transversals.py.
 Research impact: **conditional negative results only**; these are NOT evidence that arbitrary 3-MOLS(10) cannot exist and not claimed novel. Crucially, the prior next action (bounded search on the published pair) is now superseded by a complete exact certificate, avoiding wasted SAT compute.
 Next action E003: obtain genuinely different order-10 orthogonal pair instances (e.g. original author's Myrvold-MOLS repository https://github.com/curtisbright/Myrvold-MOLS and associated solutions/data), verify provenance, screen common-transversal count and coverage; prioritize pairs with >=10 transversals and full cell coverage. For high-transversal pairs (>20), use a scalable exact-cover/SAT packing backend and preserve UNKNOWN on timeouts. Do not rerun A/B or A/C except for regression.
+
+
+## MOLS10-E003 | 2026-11-02 | Historical Parker pair exact certificate
+Read the published Bose–Shrikhande–Parker example in P. W. M. John, p.114 (https://sites.ualberta.ca/~dwiens/stat568/misc%20resources/PWJohn.pdf). Input `parker_pair.json`: Latin pair verified 100/100; canonical pair SHA256 1fea184b868434e5ecc9d9acb27061d0429850b5bc3e257ff31158a7bd632dfe. All 10! permutations and independent bitmask DFS found ZERO common transversals; row-prefix profile [1,10,70,329,1046,1983,2233,1471,318,21,0], with every 9-row prefix blocked at row 10. Thus this fixed pair has no third mate, NOT a general solution. Scripts: parker_frontier.py, exact_cover.py and tests. Full evidence: E003_E005_REPORT.md.
+
+## MOLS10-E004 | 2026-11-02 | 200 reproducible seeded mates
+Fix published Egan A (1080 single-A transversals). Seeded exact-cover produced valid mates for all 200 seeds (0..199), yielding 91 distinct first-row-normalized B arrays. Distribution of joint A/B transversal counts among those 91: {0:37,1:28,2:6,3:13,4:3,6:3,14:1}; NONE covers every cell. The lone count-14 mate (seed 14) equals the published normalized Egan B. These are biased heuristic samples, not an exhaustive search. Code: sample_mates.py; E003_E005_REPORT.md.
+
+## MOLS10-E005 | 2026-11-02 | All two-symbol component flips for three pairs
+Egan A/B: zero nontrivial two-symbol trades. Egan A/C: three proper swaps, each with only 1 common transversal. Parker A/B: three proper swaps, each with 0. Restricted neighborhood only. Code: two_symbol_trades.py and unit tests.
+
+## MOLS10-E006 | 2026-11-02 | Exact k-symbol re-partition neighborhoods
+For selected B-symbol classes, enumerate all A-transversal repartitions of their cells. No per-support cap reached. Egan A/B: k3 0 alternatives; k4 3 supports/6 neighbors, best 4 transversals; k5 18 supports/36 neighbors, best 4 (starting pair 14). Egan A/C: k3 24/24 best1; k4 84/93 best3; k5 162/237 best3. Parker A/B: k3 22/26 best0; k4 70/98 best0. Restricted support only; no universal conclusion. Code: k_symbol_trades.py and tests. Full data: E006_E007_REPORT.md.
+
+## MOLS10-E007 | 2026-11-02 | Parker-A budget-controlled mate sampling
+Parker A has 1104 single-square transversals. Twelve seeds (0..11) under 20,000 nodes / 0.5 seconds each: 11 UNKNOWN_BUDGET, seed 8 SAT and independently verified, but its A/B pair has zero joint transversals. A separate prior 40-seed experiment timed out: UNKNOWN, not UNSAT. See E006_E007_REPORT.md.
+
+## Research decision after E007
+Status still OPEN according to the 2026 peer-reviewed Bright–Keita–Stevens restricted SAT paper (https://www.combinatorics.org/ojs/index.php/eljc/article/view/v33i1p30). Avoid rerunning Egan A/B for <=5-symbol trades. Next E008: change first square A, create structured/coverage-guided candidate search, and invest expensive exact cover only in pairs with >=10 joint transversals AND full support. Distinguish deterministic certificate vs heuristic sample vs timeout.
