@@ -11,9 +11,9 @@
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-01",
   "current_hypothesis": "CAP-005A LOCAL EXACT: no improvement by editing <=4 of 27 first-three-coordinate F3^4 fibers. Max outsiders 0,1,4,6; any outsider forces >=10 original deletions. CAP-004G CI GREEN; no global bound.",
-  "next_experiment": "Confirm CAP-005A CI. Test >=5 released 4D fibers or occupancy-changing non-invariant 27-block templates; pure translations cannot increase cardinality. Separately pursue global certified upper bounds.",
+  "next_experiment": "Use exact SAT/MILP to test the eight 5-fiber release sets with 22 admissible outsiders, under all 7D line constraints and original deletion variables; certify UNSAT or independently verify >=237 witness. No global inference from necessary-only gate.",
   "last_run_id": "CAP-005A-2026-11-01-27fiber-barrier",
-  "last_run_result": "LOCAL_EXACT_FOUR_FIBER_NO_IMPROVEMENT_CI_PENDING",
+  "last_run_result": "FOUR_FIBER_CI_GREEN_FIVE_FIBER_GATE_EXPLORATORY",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -61,7 +61,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-01T23:54:00Z",
+  "last_updated_utc": "2026-11-01T23:59:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -291,10 +291,18 @@
       6
     ],
     "min_original_deletions_if_any_outsider": 10,
-    "status": "LOCAL_EXACT_CI_PENDING",
+    "status": "VERIFIED_COMPUTATION_CI_GREEN",
     "script": "research/capset_f3_7/cap005_27_fiber_barrier.py",
     "report": "research/capset_f3_7/CAP005_27_FIBER_BARRIER_2026-11-01.md",
     "global_bound_improved": false,
-    "novelty_established": false
+    "novelty_established": false,
+    "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41364610380",
+    "five_fiber_pilot": {
+      "release_sets": 80730,
+      "max_admissible_outsiders": 22,
+      "sets_attaining_max": 8,
+      "scope": "Necessary-only secant-cover gate, not feasible cap or upper bound",
+      "status": "LOCAL_EXACT_CI_PENDING"
+    }
   }
 }

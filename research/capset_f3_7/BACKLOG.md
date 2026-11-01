@@ -1,3 +1,8 @@
+## CAP-005B five-fiber pilot (2026-11-01 23:59 UTC)
+- CAP-005A [CI GREEN run 41364610380] Rigorous <=4-fiber no-improvement theorem confirmed.
+- CAP-005B [LOCAL EXACT NECESSARY GATE; CI PENDING] All 80,730 five-fiber releases examined; 8 admit 22 outsiders, so simple secant/deletion bound no longer excludes improvement. This is not a feasible 237 construction. Replay --max-k 5; prioritize these 8 for exact SAT/MILP with full triple constraints and independent witness verification.
+- META-AUDIT: 4-fiber gate is a theorem; 5-fiber gate only candidate filtering. Avoid extrapolating from the former.
+
 ## CAP-005A update (2026-11-01 23:54 UTC)
 - CAP-004G [CI GREEN] Full order24 invariant exact optimum=236 confirmed in run 41359681030; stop duplicate SAT exploration for discovery.
 - CAP-005A [LOCAL EXACT / CI PENDING] All 20,853 release sets of <=4 first-three-coordinate F3^4 fibers: max admissible outsiders 0/1/4/6 for k=1/2/3/4. Since any outsider forces >=10 original deletions, cannot improve 236 inside <=4 such fibers. This is a restricted reconstruction barrier, NOT a global bound. See cap005_27_fiber_barrier.py and CAP005_27_FIBER_BARRIER_2026-11-01.md.

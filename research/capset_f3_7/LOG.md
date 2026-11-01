@@ -123,3 +123,9 @@ Status: VERIFIED COMPUTATION, not a novel record.
 - Every outsider requires >=10 deletions from the original cap, so no replacement confined to <=4 fibers can improve 236. This is NOT global r3(7) progress; literature novelty unverified.
 - Scratch run deterministic CPU ~2.6 s, no seed, GPU, paid compute, or optimizer. Code cap005_27_fiber_barrier.py, test_cap005_27_fiber_barrier.py; report CAP005_27_FIBER_BARRIER_2026-11-01.md. CI pending for this commit.
 - Meta-audit: pure translations of fixed fiber patterns preserve 236 size. Pivot to >=5 released fibers or occupancy-changing non-invariant templates; keep global upper bound research distinct.
+
+## 2026-11-01 | CAP-005A CI + CAP-005B k=5 necessary gate | GREEN / LOCAL PILOT
+- CAP-005A GitHub Actions https://github.com/davidlueng986-alt/123321/actions/runs/41364610380 SUCCESS, including new independent direct mod-3 fixture and exhaustive <=4-fiber unittest.
+- Bounded CPU-only exploratory extension: 80,730 five-fiber release sets. Necessary-only outsider counts histogram {0:44392,1:25872,2:5384,3:344,4:1434,5:1576,6:1136,7:152,9:128,10:152,11:32,12:16,13:32,14:40,15:16,18:8,20:8,22:8}. Eight sets permit 22 outsiders; so the <=4 simple obstruction does NOT extend to five fibers by the same argument.
+- Reproduction after this commit: python research/capset_f3_7/cap005_27_fiber_barrier.py --max-k 5. Local scratch ~7.4s including setup. CI for k5 extension pending. No witness >=237, no global upper bound.
+- Next: test the eight maximizers with exact MILP/SAT including deletions and all triple constraints; timeouts inconclusive. Do not equate necessary candidate pool with a feasible cap.
