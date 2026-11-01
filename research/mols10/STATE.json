@@ -12,7 +12,7 @@
   "current_hypothesis": "H1-NEW-A+H2-COVERAGE-GUIDED",
   "last_experiment": "MOLS10-E007",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
-  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334010585",
+  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41336699274",
   "last_verified_results": [
     "Egan–Wanless near-triple pair overlays 100/100/91 (not solution)",
     "E002 published pair (A,B): 14 exact common transversals, 12 unsupported cells, max disjoint 7 => UNSAT_FIXED_PAIR_CERTIFIED",
@@ -45,8 +45,10 @@
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
-    "research/mols10/E006_E007_REPORT.md"
+    "research/mols10/E006_E007_REPORT.md",
+    "research/mols10/E006_E007_RESULTS.json"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "Conditional fixed-pair obstruction / restricted trade enumerations / biased heuristic samples only. Global existence of three MOLS(10) NOT settled. Parker 40-seed aborted and 11 small-budget seeds are UNKNOWN, not UNSAT."
+  "limitations": "Conditional fixed-pair obstruction / restricted trade enumerations / biased heuristic samples only. Global existence of three MOLS(10) NOT settled. Parker 40-seed aborted and 11 small-budget seeds are UNKNOWN, not UNSAT.",
+  "last_ci_result": "SUCCESS: 28 tests in 9.733s on Python 3.12; all exact witness and restricted-neighborhood regressions passed"
 }
