@@ -1,319 +1,53 @@
-# FinSight AI — AI Financial Assistant for SMEs
+# Math Agent — Lean 4 proof verifier
 
-> Production-grade SaaS financial intelligence platform powered by GPT-4o, Next.js 15, and PostgreSQL.
+This is a ready-to-run **Lean 4 + Mathlib** formal verification workspace for a mathematics agent swarm.
 
-[![Next.js](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://typescriptlang.org)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)](https://postgresql.org)
-[![Clerk](https://img.shields.io/badge/Auth-Clerk-purple)](https://clerk.com)
-[![OpenAI](https://img.shields.io/badge/AI-GPT--4o-green)](https://openai.com)
+**Hosting note:** This workspace is currently on the isolated public branch `math-agent-lean-verifier` of the public GitHub repository `davidlueng986-alt/123321`, not on its default branch. Existing `main` is unchanged. The files can be moved to a dedicated public repository later.
 
----
+## What it does
 
-## 🚀 Features
+- Pins **Lean 4 v4.35.0** and **Mathlib v4.35.0** to avoid version mismatch.
+- Installs Lean and Lake on GitHub-hosted Ubuntu runners.
+- Downloads Mathlib and its compiled cache.
+- Builds the `MathAgent` module. A green build means Lean accepted the example proofs.
+- Rejects common proof holes and local axiom/unsafe declarations. This policy is a source-text guard, not a complete proof audit of every imported dependency.
 
-### Core Modules
-| Module | Description |
-|--------|-------------|
-| **Financial Dashboard** | Real-time revenue, expenses, profit, invoice metrics |
-| **Invoice Management** | Create, send, track, record payments |
-| **Expense Tracking** | Manual entry, CSV import, categorization |
-| **Transaction Ledger** | Full double-entry transaction history |
-| **Bank Statement Analyzer** | Upload PDF/CSV, extract & categorize transactions |
-| **AI Financial Assistant** | RAG-based chatbot with real financial data context |
-| **AI Insights Engine** | Auto-detected anomalies, risks, opportunities |
-| **Cash Flow Forecasting** | Deterministic 3-month linear trend forecasts |
-| **Financial Reports** | P&L, Expense Summary, Revenue Trends (PDF/Excel) |
-| **Settings & Security** | RBAC, audit logs, MFA, organization management |
+## Add a theorem
 
-### Critical Design Principle
-> **AI NEVER calculates financial values.** All calculations are deterministic and performed by the backend using Prisma queries. AI only generates explanations, insights, and narratives based on the pre-calculated data.
+Create `MathAgent/MyConjecture.lean`:
 
----
+```lean
+import Mathlib
 
-## 🏗️ Architecture
+namespace MathAgent
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                    Next.js 15 App Router                 │
-├──────────────────────┬──────────────────────────────────┤
-│   Frontend (RSC)     │        API Routes                 │
-│  - Dashboard         │  - /api/dashboard                 │
-│  - Invoices          │  - /api/invoices                  │
-│  - Expenses          │  - /api/expenses                  │
-│  - AI Assistant      │  - /api/ai/chat (SSE streaming)   │
-│  - Cash Flow         │  - /api/cash-flow                 │
-│  - Reports           │  - /api/reports                   │
-│  - Insights          │  - /api/insights                  │
-└──────────────────────┴──────────────────────────────────┘
-           │                          │
-    Clerk Auth                  Prisma ORM
-           │                          │
-    PostgreSQL DB              OpenAI GPT-4o
-           │                          │
-    Qdrant Vector DB         RAG Pipeline
+theorem sample_identity (a b : ℤ) :
+    (a + b) ^ 2 = a ^ 2 + 2 * a * b + b ^ 2 := by
+  ring
+
+end MathAgent
 ```
 
-### RAG Pipeline
-```
-User Question
-→ Intent Classification (GPT-4o-mini)
-→ Data Retrieval (Prisma queries = REAL numbers)
-→ Context Assembly
-→ OpenAI GPT-4o Response Generation
-→ Streaming SSE to Frontend
-```
+Then add `import MathAgent.MyConjecture` to `MathAgent.lean`. Push the branch and watch **Actions → Lean 4 / Mathlib proof verification**.
 
----
-
-## 📋 Tech Stack
-
-**Frontend**
-- Next.js 15 (App Router, RSC, Streaming)
-- TypeScript 5
-- Tailwind CSS + ShadCN UI components
-- Recharts (interactive financial charts)
-- React Query (server state management)
-- Zustand (client state)
-
-**Backend**
-- Next.js API Routes
-- Prisma ORM with PostgreSQL
-- Zod validation (all inputs)
-- Rate limiting via Redis when `REDIS_URL` is set (in-process fallback otherwise)
-- Redis-backed dashboard metrics cache with version invalidation on writes
-
-**AI**
-- OpenAI GPT-4o (assistant responses)
-- OpenAI text-embedding-3-small (embeddings)
-- RAG architecture for financial context
-- Qdrant vector database
-
-**Auth & Security**
-- Clerk Authentication (OAuth, MFA, RBAC)
-- OWASP Top 10 compliant
-- CSRF protection in middleware
-- SQL injection prevention (Prisma parameterized queries)
-- Complete audit logging
-
----
-
-## 🗄️ Database Schema
-
-```
-Organizations ──┬── OrganizationMembers ── Users
-                ├── Clients
-                ├── Vendors
-                ├── Categories
-                ├── Transactions ── Categories
-                ├── Invoices ─────┬── InvoiceItems
-                │                 └── Payments
-                ├── Expenses ── Categories
-                ├── BankStatements ── Transactions
-                ├── Reports
-                ├── AIChats ── AIChatMessages
-                ├── Insights
-                ├── CashFlowForecasts
-                ├── Notifications
-                ├── AuditLogs
-                └── Anomalies
-```
-
----
-
-## 🔒 Security Implementation
-
-| Security Layer | Implementation |
-|----------------|---------------|
-| Authentication | Clerk JWT + MFA |
-| Authorization | RBAC (Admin/Accountant/Employee/Viewer) |
-| CSRF Protection | Origin/Host validation in middleware |
-| Rate Limiting | Per-IP sliding window (100 req/min default) |
-| Input Validation | Zod schemas on all API endpoints |
-| SQL Injection | Prisma ORM parameterized queries |
-| XSS Prevention | Next.js built-in + CSP headers |
-| Audit Logging | All CRUD operations logged with user/IP |
-| Sensitive Data | Prisma field-level encryption ready |
-| File Upload | Type validation, size limits, S3 signed URLs |
-
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Node.js 20+
-- PostgreSQL 16+
-- OpenAI API key
-- Clerk account
-
-### 1. Clone & Install
-```bash
-git clone https://github.com/imchine/FinTech-Solution.git
-cd finsight-ai
-npm install
-```
-
-### 2. Environment Setup
-```bash
-cp .env.example .env.local
-# Fill in your API keys
-```
-
-### 3. Database Setup
-```bash
-# Apply schema
-npx prisma migrate dev --name init
-
-# Generate client
-npx prisma generate
-```
-
-### 4. Run Development
-```bash
-npm run dev
-# Open http://localhost:3000
-```
-
-### 5. Docker (Full Stack)
-```bash
-docker-compose up -d
-```
-
-### Redis (optional)
-
-Redis is optional but recommended for production and multi-instance deployments.
+## Run locally
 
 ```bash
-docker compose up -d redis
-# set in .env.local:
-REDIS_URL=redis://localhost:6379
+git clone --branch math-agent-lean-verifier https://github.com/davidlueng986-alt/123321.git math-agent-lean-verifier
+cd math-agent-lean-verifier
+lake update
+lake exe cache get
+lake build --wfail
 ```
 
-When `REDIS_URL` is set:
+`elan` (the Lean toolchain manager) is required. CI installs it automatically.
 
-- **Rate limiting** — shared across API routes (`/api/transactions`, `/api/invoices`, `/api/ai/chat`, etc.)
-- **Dashboard cache** — metrics cached for 2 minutes; invalidated when transactions, expenses, or invoices change
-- **Health check** — `GET /api/health` reports whether Redis is configured
+## Agent integration
 
-Without Redis, rate limits and dashboard metrics use in-process behaviour only.
+`hypothesis → candidate .lean file → GitHub commit → Actions CI → compiler diagnostics → revised proof → repeat`
 
----
+Use the GitHub Actions run and job logs to diagnose proof errors. **Do not report a theorem as verified until a relevant build succeeds.**
 
-## 📁 Folder Structure
+## Security
 
-```
-finsight-ai/
-├── src/
-│   ├── app/
-│   │   ├── (auth)/          # Sign in/up pages (Clerk)
-│   │   ├── (dashboard)/     # All protected dashboard pages
-│   │   │   ├── dashboard/   # Main financial dashboard
-│   │   │   ├── invoices/    # Invoice management
-│   │   │   ├── expenses/    # Expense tracking
-│   │   │   ├── transactions/# Transaction ledger
-│   │   │   ├── ai-assistant/# AI chatbot interface
-│   │   │   ├── cash-flow/   # Cash flow & forecasting
-│   │   │   ├── insights/    # AI insights engine
-│   │   │   ├── reports/     # Financial reports
-│   │   │   ├── bank-statements/ # Bank statement analyzer
-│   │   │   └── settings/    # Account & org settings
-│   │   └── api/             # All API routes
-│   ├── components/
-│   │   ├── ui/              # ShadCN UI components
-│   │   ├── charts/          # Recharts wrappers
-│   │   ├── dashboard/       # Dashboard-specific components
-│   │   ├── layout/          # Sidebar, Header
-│   │   └── shared/          # Providers, theme
-│   ├── lib/
-│   │   ├── prisma.ts        # Database client
-│   │   ├── auth.ts          # Auth helpers & audit logging
-│   │   ├── openai.ts        # AI integration & RAG
-│   │   ├── financial-calculations.ts  # ALL financial math
-│   │   ├── validations.ts   # Zod schemas
-│   │   ├── rate-limit.ts    # API rate limiting
-│   │   └── utils.ts         # Utilities & formatters
-│   ├── middleware.ts         # Auth & security middleware
-│   └── types/               # TypeScript types
-├── prisma/
-│   └── schema.prisma        # Complete DB schema
-├── docker-compose.yml       # Full stack Docker setup
-├── Dockerfile               # Production container
-└── .env.example             # Environment template
-```
-
----
-
-## 📊 API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/health` | Health check |
-| GET | `/api/dashboard` | Dashboard metrics |
-| GET | `/api/dashboard/trends` | Monthly trends |
-| GET | `/api/dashboard/categories` | Expense categories |
-| GET/POST | `/api/invoices` | List/create invoices |
-| GET/PATCH/DELETE | `/api/invoices/[id]` | Invoice operations |
-| GET/POST | `/api/expenses` | List/create expenses |
-| GET/POST | `/api/transactions` | List/create transactions |
-| POST | `/api/ai/chat` | AI chat (SSE streaming) |
-| GET | `/api/ai/chat` | Chat history |
-| GET | `/api/cash-flow` | Historical + forecasts |
-| GET/POST | `/api/reports` | Report management |
-| GET | `/api/insights` | AI insights |
-
----
-
-## 🚢 Deployment
-
-### Vercel (Frontend)
-```bash
-vercel deploy --prod
-```
-
-### Environment Variables (Production)
-Set all variables from `.env.example` in your deployment platform.
-
-### Database Migration (Production)
-```bash
-npx prisma migrate deploy
-```
-
----
-
-## 🧪 Testing Strategy
-
-- **Unit Tests**: Financial calculation functions (Jest)
-- **Integration Tests**: API routes with Prisma mocks
-- **E2E Tests**: Playwright for critical user flows
-- **Security Tests**: OWASP ZAP scanning
-- **Load Tests**: k6 for API performance
-
----
-
-## 📈 Performance
-
-- Server-side rendering for initial dashboard load
-- React Query caching (60s stale time)
-- Optimized Prisma queries with proper indexes
-- Streaming AI responses (SSE)
-- Image optimization via Next.js
-- Lazy loading of chart components
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make changes with tests
-4. Submit a PR
-
----
-
-## 📄 License
-
-MIT License — see LICENSE file.
-
----
-
-**Built with ❤️ for SMEs worldwide**
+No secrets or model API keys are needed for proof checking. The workflow grants only `contents: read` and has a 45-minute job timeout. Avoid running arbitrary generated shell commands as part of proof submission. Source-level keyword checks are an additional precaution; Lean's kernel, not the keyword scanner, determines whether an elaborated proof term type checks.

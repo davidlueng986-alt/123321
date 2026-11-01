@@ -1,0 +1,59 @@
+name: Lean 4 / Mathlib proof verification
+
+on:
+  push:
+    branches: [math-agent-lean-verifier]
+    paths:
+      - "**/*.lean"
+      - "lean-toolchain"
+      - "lakefile.toml"
+      - ".github/workflows/lean-verifier.yml"
+  pull_request:
+    branches: [math-agent-lean-verifier]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      LEAN_NUM_THREADS: "2"
+    steps:
+      - name: Checkout proof repository
+        uses: actions/checkout@v4
+
+      - name: Reject proof holes and local axioms
+        shell: bash
+        run: |
+          if grep -RInE '(^|[^[:alnum:]_])(sorry|sorryAx|admit|axiom|constant|unsafe)([^[:alnum:]_]|$)' --include='*.lean' MathAgent.lean MathAgent/; then
+            echo "::error::Proof holes, unproved axioms, or unsafe declarations are not allowed in submitted sources."
+            exit 1
+          fi
+
+      - name: Install Lean 4 and Lake
+        uses: leanprover/lean-action@v1
+        with:
+          auto-config: false
+          build: false
+          test: false
+          use-mathlib-cache: false
+          use-github-cache: false
+
+      - name: Cache build artifacts
+        uses: actions/cache@v4
+        with:
+          path: .lake
+          key: lean-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lakefile.toml') }}-v1
+          restore-keys: |
+            lean-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lakefile.toml') }}-
+
+      - name: Resolve Mathlib and restore Mathlib build cache
+        run: |
+          lake update
+          lake exe cache get
+
+      - name: Kernel-check all Lean proofs
+        run: lake build --wfail
