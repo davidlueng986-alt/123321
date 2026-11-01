@@ -8,11 +8,11 @@
     100,
     91
   ],
-  "next_action": "E017: independently audit E016 fixed-first-square exhaustive exclusions using structurally different SAT/exact-cover and independent transversal enumeration; generate new diverse first Latin squares beyond Egan one-trade neighborhood; bounded tests with UNKNOWN budget, seek verified 100/100/100 triple.",
-  "current_hypothesis": "H17-INDEPENDENT-FIXED-A-EXCLUSION-AUDIT-AND-DIVERSE-A",
-  "last_experiment": "MOLS10-E016",
+  "next_action": "E018: independent SAT/CP-SAT or MILP certificate for Parker A and Parker trade65 fixed-first-square exclusions; checkpointable per-case replay and source hashes; acquire genuinely diverse published first squares outside Egan/Parker trade neighborhoods; preserve UNKNOWN budgets.",
+  "current_hypothesis": "H18-VERIFY-PARKER-FIXED-A-EXCLUSION-WITH-INDEPENDENT-SAT-AND-DIVERSIFY",
+  "last_experiment": "MOLS10-E017",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
-  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41343858420",
+  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41349306193",
   "last_verified_results": [
     "Egan–Wanless near-triple pair overlays 100/100/91 (not solution)",
     "E002 published pair (A,B): 14 exact common transversals, 12 unsupported cells, max disjoint 7 => UNSAT_FIXED_PAIR_CERTIFIED",
@@ -37,7 +37,11 @@
     "E015: coverage-directed bitset pruning rejected 3193/4194, 3327/4313, 3650/4672 explored DFS prefixes for changed A indices 12/20/30, respectively, in 4-second bounded runs; all three UNKNOWN_BUDGET, no full-support pair found.",
     "E016: exact full DFS of all B partitions with sound exact-once partial C-support pruning excludes triple containing the ORIGINAL published Egan first square A (1080 A-transversals; 24875 nodes, 18407 prunes), conditional fixed-first-square result.",
     "E016: all 48 proper one-trade variants of Egan A independently exhausted (825696 nodes, 635258 support prunes), no viable full-support B partition; total original+48 = 850571 nodes; no budget exhaustion; does NOT exclude arbitrary first Latin squares.",
-    "E016: matched slow vs fast six 1200-node DFS experiments, identical nodes/prunes, ~21-26x DFS-only speed; GF4 order4 positive control SAT_SUPPORT_ONLY. Independent proof certificate not yet produced."
+    "E016: matched slow vs fast six 1200-node DFS experiments, identical nodes/prunes, ~21-26x DFS-only speed; GF4 order4 positive control SAT_SUPPORT_ONLY. Independent proof certificate not yet produced.",
+    "E017: independent n! permutation enumeration and separately implemented exact-cover support DFS reproduced E016 Egan A 24875/18407 and Egan trade12 17377/13324 nodes/prunes; no timeouts for these cases.",
+    "E017: Parker historical first square A (1104 A-transversals) exhaustively excluded from any 3-MOLS(10) triple under fixed-A algorithm: 49199 DFS nodes, 37286 support prunes. This is stronger than fixed Parker A/B exclusion, NOT unrestricted.",
+    "E017: 12 Parker one-trade first squares + 4 distinct labeled Egan disjoint-two-trade first squares exhaustively excluded; total 17 new fixed-A inputs, 534187 DFS nodes, 407293 support prunes. Parker trade65: 1272 transversals, 186150 nodes/140325 prunes. Isotopy novelty not established.",
+    "E017: positive GF(4) order-four Latin triple independently verified 16/16/16; Parker A and Parker trade65 seed1 replays match seed17 exhaustive counts; GitHub Actions verify unit tests succeeded."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -64,13 +68,16 @@
     "research/mols10/test_E015_partial_mate_prune.py",
     "research/mols10/E016_bitset_search.py",
     "research/mols10/E016_RESULTS.json",
-    "research/mols10/test_E016_bitset_search.py"
+    "research/mols10/test_E016_bitset_search.py",
+    "research/mols10/E017_replay.py",
+    "research/mols10/E017_RESULTS.json",
+    "research/mols10/test_E017_replay.py"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-01T19:51:32Z",
+  "last_run_utc": "2026-11-01T20:56:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -79,12 +86,13 @@
     "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
     "research/mols10/E012_E014_REPORT.md",
     "research/mols10/E015_REPORT.md",
-    "research/mols10/E016_REPORT.md"
+    "research/mols10/E016_REPORT.md",
+    "research/mols10/E017_REPORT.md"
   ],
   "last_run_date": "2026-11-01",
-  "limitations": "Global 3-MOLS(10) OPEN. E016 exact exclusions apply only to the original Egan first square A and 48 one-trade variants; not all Latin squares. Exhaustive algorithm is source-replayable but independent proof-certificate audit is pending. No 100/100/100 witness.",
-  "last_ci_result": "E016 test-containing commit 567b85e1b3d10024eae81481723a35fc100bd256: GitHub Actions run 41343858420 completed success, verify job 'Unit tests including the known near-triple' success. Subsequent report/state runs may still be in progress.",
-  "external_status_review": "2026-11-01 19:48 UTC: Bright–Keita–Stevens EJC 2026 (2026-02-13) and Barnoff–Bright arXiv:2605.02132v2 (2026-07-04) checked, plus fresh November 1 search; no independently checkable unrestricted solution located.",
+  "limitations": "Global 3-MOLS(10) OPEN. E017 independently replayed two E016 fixed-A results and added 17 labeled fixed-A exhaustive exclusions (Parker A, 12 Parker trades, 4 Egan two-trades), NOT unrestricted; no SAT/DRAT certificate or full paratopy classification. Two long monolithic batch runs exceeded outer timeout; individual 17 cases completed. No 100/100/100 witness.",
+  "last_ci_result": "E017 test-containing commit e99782c8f511e09bf17f24d8bd7940e272978b3e: GitHub Actions run 41349306193 completed SUCCESS; verify job and unit tests succeeded.",
+  "external_status_review": "2026-11-01 20:50 UTC: Bright–Keita–Stevens EJC 2026-02-13 and Barnoff–Bright arXiv:2605.02132v2 (2026-07-04) checked; targeted new arXiv/web search; no independently verifiable unrestricted 3-MOLS(10) resolution located.",
   "current_math_result": {
     "egan_fixed_A_C_optimum": 91,
     "egan_fixed_A_B_optimum": 91,
@@ -92,6 +100,10 @@
     "original_question": "OPEN",
     "conditional_scope_only": true,
     "egan_original_A_no_triple": "COMPUTATIONAL_EXHAUSTIVE_FIXED_A",
-    "egan_one_trade_variants_no_triple": 48
+    "egan_one_trade_variants_no_triple": 48,
+    "parker_original_A_no_triple": "COMPUTATIONAL_EXHAUSTIVE_FIXED_A_E017",
+    "parker_single_trade_variants_no_triple_tested": 12,
+    "egan_disjoint_two_trade_variants_no_triple_tested": 4,
+    "e017_new_fixed_A_exclusions": 17
   }
 }
