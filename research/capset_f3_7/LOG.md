@@ -68,3 +68,6 @@ Status: VERIFIED COMPUTATION, not a novel record.
 - Recent preexisting concurrent branch commits also independently excluded >236 in 1,920 signed images of complementary 112-cap pairs (CI 41339098901), and checked related Hill 112-cap pairs (CI 41339111555); do not confuse with this subgroup theorem.
 - **Scope:** exact optimum in ONE order-120-invariant family only. No >=237 witness, no stronger global upper bound, no proof of r3(7). Novelty relative to external literature not established. Literature status cross-check: Thackeray arXiv:2206.09804 (288 claim); Versluis 2017 (291); public status still open.
 - Meta-audit: reducing symmetry from 240 to 120 raises restricted optimum from 225 to 236, but this 120 group still cannot reach 237. Next CAP-004D: proper subgroups of 120 or 27-block affine twists; bound model size before CPU search. Do not spend time on full-240 or even-120 invariant families again.
+
+## 2026-11-01 19:55 UTC | CAP-004C CI confirmation | VERIFIED COMPUTATION
+- GitHub Actions run https://github.com/davidlueng986-alt/123321/actions/runs/41344134381 completed SUCCESS at commit 6d103c4b2c8cb46f98db99604f42062c04b7c3d7, including new exact order-120 orbit script in the branch-specific workflow. This upgrades CAP-004C from local verified / CI pending to CI GREEN. The exact theorem remains restricted; global r3(7) remains OPEN.
