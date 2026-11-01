@@ -6,14 +6,14 @@
   "external_lower_bound": 236,
   "external_published_upper_bound": 291,
   "external_preprint_upper_bound": 288,
-  "verified_local_best": 136,
-  "verified_candidate_path": null,
+  "verified_local_best": 236,
+  "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "Reproduce known 236-point construction and verify",
-  "next_experiment": "CAP-001",
-  "last_run_id": "bootstrap-ci-41333612331",
-  "last_run_result": "CI_PASS_5_TESTS_SAMPLE_136",
+  "current_hypothesis": "Any improvement around 236 witness requires a coordinated deletion of >=10 original points; find a replacement strategy that recovers 236 then improves it",
+  "next_experiment": "CAP-002B",
+  "last_run_id": "cap-001-reconstruction-2026-11-02",
+  "last_run_result": "PASS_236_REPRODUCED_SATURATION_MIN_SECANTS_10_CROSS_SLICE_11",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -23,6 +23,19 @@
   ],
   "automation_id": "6ae77c6ed4f4819191afec5f9b63437a",
   "automation_schedule": "FREQ=HOURLY",
-  "best_verified_size": 136,
-  "best_verified_size_is_research_record": false
+  "best_verified_size": 236,
+  "best_verified_size_is_research_record": false,
+  "completed_experiments": [
+    "CAP-001"
+  ],
+  "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
+  "baseline_secant_audit": {
+    "external_points": 1951,
+    "all_blocked": true,
+    "min_secants": 10,
+    "max_secants": 56,
+    "third_slice_possible_with_first_224_fixed": 12,
+    "third_slice_min_cross_secants_for_other_points": 11
+  },
+  "evidence_report_path": "research/capset_f3_7/RESULTS_2026-11-02.md"
 }
