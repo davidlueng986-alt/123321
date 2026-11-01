@@ -56,3 +56,28 @@ python3 sample_mates.py --samples 200 --seed-start 0 --output sampling_report.js
 The complete k-symbol scan has strict scope: **fixed A, fixed B, chosen symbol support**, no per-support solution cap reached in reported cases. A positive candidate is never accepted without the independent exact Latin-and-three-overlay verifier. A budget-exhausted search is **UNKNOWN**, not UNSAT.
 
 **Next E008:** Find genuinely different first Latin squares and coverage-directed candidate generation, favoring pairs with >=10 joint common transversals and full 100-cell support before expensive partition search.
+
+
+## IMPORTANT — E008-E011 exact results and E012 handoff (2026-11-02)
+
+**3-MOLS(10) remains OPEN.** Two published Egan near-triple fixed-pair directions have now been completely optimized in the conditional sense:
+- **E008:** Fix A,C. ANY Latin B' orthogonal to A yields at most **91** distinct B',C symbol pairs. A nine-cell deletion set proves the bound exactly; published B attains it.
+- **E010:** Fix A,B. ANY Latin C' orthogonal to A yields at most **91** B,C' pairs. A denominator-2 exact signed dual proves it; published C attains it.
+- **E009:** Fix historical Parker A,B. Any Latin C' orthogonal to A yields at most **77** distinct B,C' pairs. Signed integer-matrix proof, *only an upper bound* (attainability unknown).
+- **E011:** 48 alternate first Latin squares constructed via row-column 2-symbol Latin trades. Transversal counts differ from Egan A, so they are not paratopic to A. None remains orthogonal to the published B/C. Small-budget mate search UNKNOWN; no no-mate proof.
+
+**Complete mathematical reasoning and strict proof scopes:** `E008_E011_OPTIMALITY_PROOFS.md`.
+
+Certificate files: `E008_DUAL_CERTIFICATE.json`, `E009_PARKER_DUAL_CERTIFICATE.json`, `E009_PARKER_WEIGHTED77.json`, `E010_EGAN_AB_WEIGHTED91.json`. Standard-library exact replay: `dual_certificates.py`, `signed_dual.py`; regression: `test_dual_certificates.py`, `test_signed_dual.py`, `test_first_square_trades.py`.
+
+```bash
+cd research/mols10
+python -m unittest discover -p 'test_*.py' -v
+python dual_certificates.py E008_DUAL_CERTIFICATE.json --independent
+python signed_dual.py E009_PARKER_WEIGHTED77.json
+python signed_dual.py E010_EGAN_AB_WEIGHTED91.json
+```
+
+**Next E012:** Stop trying to repair the published near-triple by changing only one square. Search genuinely different first-square structures and orthogonal mates, screen for >=10 common transversals and full 100-cell coverage, then certify exact packing or retain UNKNOWN. Compare against recent SAT/CP literature before novelty claims.
+
+The discovery optimizer used local SciPy/HiGHS but all *proof replay* above uses exact integer arithmetic without numerical optimization packages.
