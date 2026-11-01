@@ -12,7 +12,7 @@
   "current_hypothesis": "H21-INDEPENDENT-UNARY-CERTIFICATION-AND-DIVERSITY",
   "last_experiment": "MOLS10-E020",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
-  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41359030343",
+  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
     "Egan–Wanless near-triple pair overlays 100/100/91 (not solution)",
     "E002 published pair (A,B): 14 exact common transversals, 12 unsupported cells, max disjoint 7 => UNSAT_FIXED_PAIR_CERTIFIED",
@@ -113,7 +113,7 @@
   ],
   "last_run_date": "2026-11-01",
   "limitations": "Global 3-MOLS(10) OPEN. E020 1076/1104 exhaustive unary exclusions and 13-cell uncovered certificate concern only Parker A. Independent 10! enumerator and six independent MILP spot checks, but no external proof certificate for all 1104 roots; GF4 positive control. No global 100/100/100 witness or unrestricted nonexistence proof.",
-  "last_ci_result": "E020 GitHub Actions regression status pending; local full 1104-root exact-cover and independent 10! permutation replay passed.",
+  "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
   "external_status_review": "2026-11-01 ~23:45 UTC: primary EJC 2026-02-13 and arXiv 2605.02132v2 2026-07-04 checked with fresh November 1 searches; no independently verifiable unrestricted solution found.",
   "current_math_result": {
     "egan_fixed_A_C_optimum": 91,
