@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-01",
-  "current_hypothesis": "CAP-004F CI GREEN: exact full order-24-invariant 237-decision CNF generated (135 primary, 30,106 auxiliaries, 149,028 clauses, SHA256 recorded); known 236 witness replayed with independent direct arithmetic and CNF assignment. SAT/UNSAT UNKNOWN, no restricted or global upper bound improvement.",
-  "next_experiment": "Check CAP-004F CNF CI counts and independent 236-model replay; then bounded CPU SAT with verifiable UNSAT proof or 237 witness. Parallel: non-invariant 27-block affine twists.",
-  "last_run_id": "CAP-004F-2026-11-01-order24-sat-encoding",
-  "last_run_result": "EXACT_ORDER24_SAT_ENCODING_CI_GREEN_DECISION_OPEN",
+  "current_hypothesis": "CAP-004G LOCAL EXACT: full specified order-24-invariant optimum=236 via exhaustive 3,424,629 eligible slice-mask pairs; all 65,373,895 unordered pairs covered by proven weight gate. CI pending; no >=237 or global bound. Pivot to non-invariant 27-block affine twists.",
+  "next_experiment": "Confirm CAP-004G GitHub CI; independently audit full-order24 bitset certificate or SAT cross-check if needed. Prioritize non-order24-invariant 27-block affine twisting / smaller symmetry, and separately certified global upper-bound constraints.",
+  "last_run_id": "CAP-004G-2026-11-01-order24-full-exact",
+  "last_run_result": "LOCAL_EXACT_ORDER24_INVARIANT_OPTIMUM_236_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -36,7 +36,8 @@
     "CAP-004C",
     "CAP-004D",
     "CAP-004E",
-    "CAP-004F-ENCODING"
+    "CAP-004F-ENCODING",
+    "CAP-004G-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
   "baseline_secant_audit": {
@@ -58,7 +59,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-01T22:00:00Z",
+  "last_updated_utc": "2026-11-01T22:49:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -248,5 +249,28 @@
     "known236_witness_verified": true,
     "known236_model_target236_satisfies_all_clauses": true,
     "target237_known236_witness_fails_objective_only": true
+  },
+  "c6_order24_full_exact": {
+    "scope": "Entire specific order-24 subgroup invariant family in F3^7",
+    "optimum": 236,
+    "status": "LOCAL_EXACT_COMPUTATION_CI_PENDING",
+    "group_order": 24,
+    "orbit_count": 45,
+    "valid_single_slice_masks": 11434,
+    "all_unordered_pairs_covered": 65373895,
+    "pairs_visited_with_weight_gate": 3436063,
+    "pairs_checked_exactly": 3424629,
+    "objective_target": 237,
+    "target_237_feasible": false,
+    "witness_236_direct_arithmetic_verified": true,
+    "cpu_seconds_checker_local": 14,
+    "random_seed": null,
+    "gpu_used": false,
+    "data_generator": "research/capset_f3_7/c6_order24_full_exact_data.py",
+    "checker_cpp": "research/capset_f3_7/c6_order24_full_exact.cpp",
+    "ci_test": "research/capset_f3_7/test_c6_order24_full_exact.py",
+    "report": "research/capset_f3_7/C6_ORDER24_FULL_EXACT_236_CERTIFICATE_2026-11-01.md",
+    "global_bound_improved": false,
+    "external_novelty_established": false
   }
 }
