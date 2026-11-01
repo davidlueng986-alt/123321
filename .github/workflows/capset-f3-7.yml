@@ -25,3 +25,10 @@ jobs:
         run: |
           python research/capset_f3_7/search_baseline.py --seed 7 --rounds 2 --out /tmp/capset_candidate.txt
           python research/capset_f3_7/verify_capset.py /tmp/capset_candidate.txt
+      - name: Reproduce and verify original 236-point construction
+        run: |
+          python research/capset_f3_7/generate_calderbank_fishburn.py --out /tmp/calderbank_fishburn_236.txt
+          cmp research/capset_f3_7/candidates/calderbank_fishburn_236.txt /tmp/calderbank_fishburn_236.txt
+          python research/capset_f3_7/verify_capset.py /tmp/calderbank_fishburn_236.txt
+      - name: Check complete-cap saturation and replacement barrier
+        run: python research/capset_f3_7/analyze_secants.py research/capset_f3_7/candidates/calderbank_fishburn_236.txt
