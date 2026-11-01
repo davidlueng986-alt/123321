@@ -17,6 +17,8 @@ This is a ready-to-run **Lean 4 + Mathlib** formal verification workspace for a 
 Create `MathAgent/MyConjecture.lean`:
 
 ```lean
+module
+
 import Mathlib
 
 namespace MathAgent
@@ -28,7 +30,7 @@ theorem sample_identity (a b : ℤ) :
 end MathAgent
 ```
 
-Then add `import MathAgent.MyConjecture` to `MathAgent.lean`. Push the branch and watch **Actions → Lean 4 / Mathlib proof verification**.
+Then add `public import MathAgent.MyConjecture` to `MathAgent.lean`. Push the branch and watch **Actions → Lean 4 / Mathlib proof verification**.
 
 ## Run locally
 
