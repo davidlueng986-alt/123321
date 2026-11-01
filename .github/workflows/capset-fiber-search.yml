@@ -1,0 +1,31 @@
+name: Cap Set 27-block Reconstruction Search
+
+on:
+  push:
+    branches: ["research/capset-f3-7"]
+    paths:
+      - "research/capset_f3_7/fiber_reconstruction_milp.py"
+      - "research/capset_f3_7/fiber_saturation_certificate.py"
+      - ".github/workflows/capset-fiber-search.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-fiber-milp:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install reproducible CPU MILP packages
+        run: pip install 'numpy>=2.0,<3' 'scipy>=1.15,<2'
+      - name: Verify affine-fiber enumeration without optimizer
+        run: python research/capset_f3_7/fiber_saturation_certificate.py
+      - name: Solve top eight triple-fiber reconstructions
+        run: python research/capset_f3_7/fiber_reconstruction_milp.py --fibers 3 --top 8 --time-limit 10
+      - name: Solve top eight four-fiber reconstructions
+        run: python research/capset_f3_7/fiber_reconstruction_milp.py --fibers 4 --top 8 --time-limit 10
