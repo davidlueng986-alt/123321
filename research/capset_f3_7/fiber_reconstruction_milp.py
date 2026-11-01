@@ -20,7 +20,7 @@ import time
 from collections import defaultdict
 import numpy as np
 from scipy.optimize import milp,Bounds,LinearConstraint
-from scipy.sparse import coo_matrix
+from scipy.sparse import coo_matrix, vstack, csr_matrix
 from generate_calderbank_fishburn import construction
 from verify_capset import verify
 
@@ -33,7 +33,7 @@ for i,x in enumerate(AA):
         z=tuple((-p-q)%3 for p,q in zip(x,y))
         sec[z].append((x,y))
 
-def solve(combination,limit=10.0):
+def solve(combination,limit=10.0,goal_total=None):
     released=set(combination)
     frozen={p for p in A if p[1:3] not in released}
     incumbent=A-frozen
@@ -55,15 +55,22 @@ def solve(combination,limit=10.0):
                 for u in tri:rows.append(len(upper));cols.append(u);data.append(1)
                 upper.append(2)
     matrix=coo_matrix((data,(rows,cols)),shape=(len(upper),len(pool))).tocsr()
+    lower_bounds=[-np.inf]*len(upper)
+    if goal_total is not None:
+        # A candidate must exceed the best published size to be a milestone.
+        requested_released_count=goal_total-len(frozen)
+        matrix=vstack([matrix,csr_matrix(np.ones((1,len(pool))))]).tocsr()
+        lower_bounds.append(requested_released_count)
+        upper.append(np.inf)
     tic=time.monotonic()
     res=milp(-np.ones(len(pool)),integrality=np.ones(len(pool)),
        bounds=Bounds(np.zeros(len(pool)),np.ones(len(pool))),
-       constraints=LinearConstraint(matrix,-np.inf,upper),
+       constraints=LinearConstraint(matrix,lower_bounds,upper),
        options={"time_limit":limit,"mip_rel_gap":0.0})
     report={"fibers":[list(p) for p in combination],"incumbent_released":len(incumbent),
       "new_exterior_candidates":len(outsiders),
       "binary_variables":len(pool),"constraints":len(upper),
-      "runtime_s":round(time.monotonic()-tic,4),
+      "runtime_s":round(time.monotonic()-tic,4),"target_total":goal_total,
       "proven_optimal":bool(res.success),"solver_message":res.message,
       "root_objective_upper_bound":float(-res.mip_dual_bound) if res.mip_dual_bound is not None else None}
     if res.x is not None:
@@ -78,7 +85,7 @@ def solve(combination,limit=10.0):
             assert round(-res.fun)==len(selection)
     return report
 
-def run(k,limit,top):
+def run(k,limit,top,goal_total=None):
     classes=list(itertools.product(range(3),repeat=2))
     candidates=[]
     for comb in itertools.combinations(classes,k):
@@ -90,7 +97,7 @@ def run(k,limit,top):
     candidates.sort(key=lambda t:(-t[0],t[1]))
     all_results=[]
     for avail,comb in candidates[:top]:
-        r=solve(comb,limit);all_results.append(r)
+        r=solve(comb,limit,goal_total);all_results.append(r)
         print(json.dumps(r,sort_keys=True),flush=True)
         if r.get("verified_cap_size",0)>236:
             raise RuntimeError("Candidate exceeds 236: preserve witness + independently audit immediately.")
@@ -98,12 +105,13 @@ def run(k,limit,top):
 
 if __name__=="__main__":
     p=argparse.ArgumentParser()
-    p.add_argument("--fibers",type=int,choices=[3,4],default=3)
+    p.add_argument("--fibers",type=int,choices=[3,4,5],default=3)
     p.add_argument("--top",type=int,default=8)
     p.add_argument("--time-limit",type=float,default=10.)
+    p.add_argument("--target-total",type=int,default=None)
     args=p.parse_args()
-    results=run(args.fibers,args.time_limit,args.top)
+    results=run(args.fibers,args.time_limit,args.top,args.target_total)
     # These represent known 236-cap optimum only in the specified neighborhoods.
-    if args.fibers in (3,4) and args.top==8:
+    if args.fibers in (3,4) and args.top==8 and args.target_total is None:
         assert all(r["proven_optimal"] and r["verified_cap_size"]==236 for r in results)
     print("SUBPROBLEM AUDIT COMPLETE",len(results),"restricted MILP problems")
