@@ -14,6 +14,13 @@
 - CAP-003D [INCONCLUSIVE] First bounded k=5 MILP (653 binary vars, 34,900 constraints, 12 sec) for target total ≥237 timed out. No proof or witness. Larger neighborhoods demand structural reductions, not blind timeout increases.
 - CAP-003E [DONE] Read Research Log 001, inspect Campaign 001 v2.0 report, reconcile verified and unverified claims. See AUDIT_CAMPAIGN_001_2026-11-02.md. Other agent's referenced executable solver and JSON witnesses were not found in the Drive experiment folder.
 
+## CAP-004B update (2026-11-01 UTC)
+- CAP-004B [DONE / VERIFIED COMPUTATION] Exact finite enumeration proves the maximum cap size in F3^7 **invariant under the full order-240 signed-permutation group** is 225. Counts: 13 orbits, 22 admissible single-slice orbit masks, all 253 mask pairs checked; independent 225-point arithmetic verifier; CI https://github.com/davidlueng986-alt/123321/actions/runs/41338916833. This is **not** a global r3(7) upper bound.
+- CAP-004C [P0] Search proper subgroups of the verified 240 group (index 2/3/5 where they exist), calculate orbit decompositions, estimate SAT/MILP complexity, then run a bounded exact model. Do not repeat full-group orbit-union search.
+- CAP-005B [P0] Test 27-block twisted constructions with controlled symmetry breaking and exact cross-shadow checks. A >=237 candidate needs a full explicit 7D witness and independent checker.
+- META-AUDIT: Full 240 symmetry is provably too restrictive (225 < already known 236). The original unrestricted 236-neighborhood search also faces a >=16-removal barrier; focus on *structural* symmetry breaking rather than simply increasing CPU timeouts.
+- Novelty classification: restricted theorem appears new to this branch, **not established as new in the mathematical literature**. Maintain global status OPEN and verified best 236.
+
 ## Next research decisions
 
 - CAP-004 [P0] Independently reconstruct Campaign 001's 112-cap Paley Conference magic basis and C6 order-240 group orbits, if source code/witness can be obtained; verify their actual orbit sizes and that candidate cross-sum shadows are exact. Do not infer a new 237 result from 225/236 known caps.
