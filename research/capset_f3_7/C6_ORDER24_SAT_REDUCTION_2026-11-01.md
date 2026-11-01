@@ -15,3 +15,12 @@ The 236-point order-120-invariant witness is also order-24-invariant. The script
 
 ## Decision / meta-audit
 The 65,373,895-pair direct enumeration can be replaced by a compact orbit SAT instance with 135 primary variables plus deterministic threshold auxiliaries. Next inspect variable/constraint counts and run a bounded CPU SAT feasibility test if an available solver supports verifiable certificates. If SAT, independently check the 7D point set; if UNSAT, obtain and replay a proof certificate before claiming a restricted upper bound. Keep non-invariant 27-block twists and global upper-bound work alive. External novelty not established; CNF reductions are standard.
+
+## CI-confirmed results (2026-11-01 22:00 UTC)
+- CI SUCCESS: https://github.com/davidlueng986-alt/123321/actions/runs/41354696903 (commit d4bcab974cd5703119c7671afe868ac202846863).
+- 3,556 distinct within-slice forbidden orbit sets, 20,313 ordered cross-slice orbit triples, 30,981 structural clauses.
+- Target 236: 30,121 variables, 148,549 clauses. Known 236 witness passes independent arithmetic checker and satisfies all clauses.
+- Target 237: 30,241 variables (135 primary + 30,106 auxiliaries), 149,028 clauses. Known 236 witness violates ONLY the final objective clause, as expected. **SAT/UNSAT not decided.**
+- Deterministic DIMACS SHA256: `322eba0828cbfdd9809074bf579d7fdae70b25695bdfef4592c76203f4eb34a6`.
+- CI artifact (30-day retention): https://github.com/davidlueng986-alt/123321/actions/runs/41354696903/artifacts/13102867770 . Re-generate after expiration using the commands above.
+- Fresh literature check (2026-11-01): Versluis (2017) reports 291; Thackeray (2022, arXiv:2206.09804) claims no 289-point 7D caps; Grace/Voloch (2026) discusses small complete caps, not a new 7D maximum. No novelty claim.

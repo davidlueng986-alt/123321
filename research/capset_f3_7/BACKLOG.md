@@ -1,5 +1,5 @@
 ## CAP-004F update (2026-11-01 21:56 UTC)
-- CAP-004F-ENCODING [COMMITTED / CI PENDING] Exact 135-primary-variable SAT reduction for **all** order-24-invariant F3^7 caps. Within-slice forbidden sets (3556) and cross-slice orbit triples; exact weighted cardinality >=237 via Tseitin DP. Deterministic CNF artifact generated in CI. Existing 236 model replayed by independent direct arithmetic checker. No SAT/UNSAT decision yet; no restricted or global upper bound established. See `c6_order24_sat_encoding.py` and `C6_ORDER24_SAT_REDUCTION_2026-11-01.md`.
+- CAP-004F-ENCODING [DONE / CI GREEN] Exact 135-primary-variable SAT reduction for **all** order-24-invariant F3^7 caps. Within-slice forbidden sets (3556) and cross-slice orbit triples; exact weighted cardinality >=237 via Tseitin DP. Deterministic CNF artifact generated in CI. Existing 236 model replayed by independent direct arithmetic checker. No SAT/UNSAT decision yet; no restricted or global upper bound established. See `c6_order24_sat_encoding.py` and `C6_ORDER24_SAT_REDUCTION_2026-11-01.md`.
 - CAP-004G [P0] After CI, bounded CPU SAT attempt. If UNSAT, generate and independently check LRAT/DRAT certificate; if SAT, independently check all 7D points and check literature novelty. Solver timeout is inconclusive. Preserve CNF checksum and solver commands.
 - CAP-005B [P0] Parallel non-invariant 27-block twists: full order-24 symmetry may still be too restrictive to reach >236.
 - META-AUDIT: Encoding exactness is not solution of the decision problem. All global claims remain OPEN.
@@ -70,3 +70,6 @@ CAP-005 [P1/TODO] Investigate certified upper-bound constraints and published 28
 CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; require green CI and statement audit.
 
 (Superseded by structured backlog above.)
+
+## CAP-004F CI confirmation (2026-11-01 22:00 UTC)
+- CI https://github.com/davidlueng986-alt/123321/actions/runs/41354696903 SUCCESS. Exact target-237 CNF: 30,241 vars / 149,028 clauses; 20,313 cross orbit triples; SHA256 322eba0828cbfdd9809074bf579d7fdae70b25695bdfef4592c76203f4eb34a6. 236 witness replay PASS. SAT status UNKNOWN; next bounded CPU SAT with proof production, not naive claim of UNSAT.
