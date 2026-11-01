@@ -1,0 +1,32 @@
+name: Cap Set exact pair-replacement audit
+
+on:
+  push:
+    branches: ["research/capset-f3-7"]
+    paths:
+      - "research/capset_f3_7/analyze_pair_replacement.py"
+      - "research/capset_f3_7/audit_pair_milp_spotcheck.py"
+      - "research/capset_f3_7/generate_calderbank_fishburn.py"
+      - ".github/workflows/capset-pair-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  full-cpu-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: "research/capset_f3_7/requirements-audit.txt"
+      - name: Install exact integer CPU analysis and independent MILP checker
+        run: python -m pip install -r research/capset_f3_7/requirements-audit.txt
+      - name: Exhaustive all 1,902,225 outsider pairs
+        run: python research/capset_f3_7/analyze_pair_replacement.py
+      - name: Independent integer-programming validation of key and seeded cases
+        run: python research/capset_f3_7/audit_pair_milp_spotcheck.py
