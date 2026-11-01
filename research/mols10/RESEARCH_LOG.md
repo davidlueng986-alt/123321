@@ -70,3 +70,15 @@ Generate exact row/column connected-component flips within each symbol pair of E
 ## Research conclusion / next step E012
 These mathematically exact certificates were discovered using SciPy/HiGHS LP/MILP locally but have standalone standard-library integer-only replayers in GitHub; independent Github Actions regression is the canonical audit. Not claiming external mathematical novelty without literature comparison.
 Immediate actions: prior-art check weighted transversal bounds, then replace expensive near-triple one-square-fix optimization with new A and B candidate search; use structural SAT/CP-SAT with appropriate normalizations and bounded UNKNOWN; filter for >=10 joint common transversals with full cell coverage before proof-grade full packing. Full argument and reproducibility: E008_E011_OPTIMALITY_PROOFS.md. Global 3-MOLS(10) remains OPEN.
+
+## MOLS10-E012–E014 | 2026-11-01 18:52 UTC | new A, bounded MILP, exact local obstructions
+
+Primary literature checked: https://www.combinatorics.org/ojs/index.php/eljc/article/view/v33i1p30 ; https://arxiv.org/abs/2605.02132 ; https://arxiv.org/abs/2509.09633 (v3 Aug 2026). No verified unrestricted resolution located; global status OPEN.
+
+E012: SciPy/HiGHS binary 100-cell exact cover on changed first squares (E011). Trade indices 12 and 20 both produced explicit independently validated Latin+orthogonal pairs, 904 A-transversals each. Both have **zero common transversals** by independent full 10! enumeration; therefore neither fixed pair extends. Trade indices 30/40/47 each UNKNOWN at 6-second MILP limit. Third-square attempt for trade12 UNKNOWN at 12s; trade20 gave a verified but suboptimal **100/100/69** near-triple at 12s (solver gap ~0.10145). See E012_WITNESSES.json and E012_milp_traded_A.py.
+
+E013: Tested necessary one-transversal compatibility support for original Egan A + all 48 first-A trades. **0 of 49 A** yielded any excluded A-transversal; 7.1s bounded exact scan. This filter is empirically vacuous here; preserve as negative evidence, do not repeat unchanged. E013_compatibility_screen.py.
+
+E014: For each fixed orthogonal pair A,B, searched smallest B-symbol subset S such that a cell x is absent from all A-transversals using each B-symbol in S at most once. Exact minimal sizes: Egan A/B **6**, Egan A/C **5**, Parker A/B **3**, traded A/B index12 **5**, index20 **5**. Parker's three-symbol witness is S={7,8,9}, x=(7,7) zero-based. All smaller S subsets exhaustively tested; all five blocking witnesses independently replayed by 3,628,800 permutations each, 0 eligible A-transversals through blocked cells. E014_symbol_obstruction.py, test_E012_E014.py, CI https://github.com/davidlueng986-alt/123321/actions/runs/41338759633 (success).
+
+Full exact numbers, proof scope, failures, code, sources, uncertainty and next experiment: E012_E014_REPORT.md. **Next E015:** use multi-B-symbol collision-mask coverage as a sound pruning oracle in partial B exact-cover construction; positive control GF(4), then bounded changed-A search targeting >=10 joint transversals with full support. These results are conditional on explicit pairs; unrestricted 3-MOLS(10) remains OPEN.
