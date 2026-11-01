@@ -32,3 +32,27 @@ H4: Novel structural lemmas with explicit restricted hypotheses and independentl
 Primary sources: https://www.combinatorics.org/ojs/index.php/eljc/article/view/v33i1p30 ;
 https://doi.org/10.1090/mcom/3010 ;
 https://theoremdb.org/statements/P2534/
+
+
+## Current frontier and artifacts (updated after E007)
+
+The fully open 3-MOLS(10) problem has **not** been settled. The research agent has advanced beyond the old pair-search baseline:
+
+- `E003_E005_REPORT.md` and `E003_E005_RESULTS.json`: third historically published orthogonal pair (Parker), zero common transversals certified; exact-cover extension code; 200-seed Egan-A screening; two-symbol trades.
+- `E006_E007_REPORT.md` and `E006_E007_RESULTS.json`: exact k-symbol repartitions, plus Parker-A bounded candidate search with explicit UNKNOWN statuses.
+- `parker_pair.json` and `parker_frontier.py`: independently reproduced historical pair and compact 21-frontier obstruction.
+- `exact_cover.py`, `sample_mates.py`, `two_symbol_trades.py`, `k_symbol_trades.py`: reproducible solvers and restricted-structure experiments.
+- `STATE.json`: authoritative machine-readable next action. Read this and the current research log **before** allocating compute. Do not rerun Egan A/B <=5-symbol trade experiments.
+
+### Full regression
+
+```bash
+cd research/mols10
+python3 -m unittest discover -p 'test_*.py' -v
+python3 parker_frontier.py
+python3 sample_mates.py --samples 200 --seed-start 0 --output sampling_report.json
+```
+
+The complete k-symbol scan has strict scope: **fixed A, fixed B, chosen symbol support**, no per-support solution cap reached in reported cases. A positive candidate is never accepted without the independent exact Latin-and-three-overlay verifier. A budget-exhausted search is **UNKNOWN**, not UNSAT.
+
+**Next E008:** Find genuinely different first Latin squares and coverage-directed candidate generation, favoring pairs with >=10 joint common transversals and full 100-cell support before expensive partition search.
