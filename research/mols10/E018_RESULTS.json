@@ -1,0 +1,122 @@
+{
+  "schema": "MOLS10-E018-independent-MILP-v1",
+  "timestamp_utc": "2026-11-01T21:50:36Z",
+  "status": "OPEN",
+  "scope": "Fixed Parker A only; no unrestricted resolution",
+  "input": {
+    "path": "research/mols10/parker_pair.json",
+    "A_sha256": "1694eda37452b6709d8f8d77d8dfcddae08e18c6a94e4aabc102bec6323c1c77"
+  },
+  "code": {
+    "path": "research/mols10/E018_compact_milp.py",
+    "local_sha256": "65b879abdbf62f2a1d652d93ee3a324e843bdcd96cf9a18f829a7e71637fb224",
+    "method": "Two independent exact covers of A-transversals, cross-compatibility n*x_i <= sum_{j:|Ti∩Tj|=1}y_j and symmetric; optional valid pair-support cuts."
+  },
+  "pair_support": {
+    "transversals": 1104,
+    "one_class_all_cells_supported": 1104,
+    "disjoint_pairs": 236104,
+    "compatible_C_cell_support": 235878,
+    "unsupported_C_cell_support": 226,
+    "cut_rows_for_two_sides": 452,
+    "example_bad_pair_transversal_indices": [
+      0,
+      111
+    ],
+    "note": "All pairs exhaustively counted; indices refer to DFS enumeration order in E018_compact_milp.py."
+  },
+  "runs": [
+    {
+      "case": "GF4 positive",
+      "cmd": "OPENBLAS_NUM_THREADS=1 python E018_compact_milp.py --case gf4 --seconds 6",
+      "n": 4,
+      "transversals": 8,
+      "vars": 16,
+      "rows": 48,
+      "nonzeros": 144,
+      "highs_status": 0,
+      "result": "SAT",
+      "replay": "3 Latin squares, all three overlays 16/16/16 independently checked",
+      "total_seconds": 0.013
+    },
+    {
+      "case": "order6 traded cyclic negative",
+      "cmd": "OPENBLAS_NUM_THREADS=1 python E018_compact_milp.py --case order6 --seconds 5",
+      "n": 6,
+      "transversals": 32,
+      "vars": 64,
+      "rows": 136,
+      "nonzeros": 880,
+      "highs_status": 2,
+      "result": "UNSAT_FIXED_A_SOLVER_COMPLETE",
+      "total_seconds": 0.006
+    },
+    {
+      "case": "Parker A baseline",
+      "cmd": "OPENBLAS_NUM_THREADS=1 python E018_compact_milp.py --case parker --seconds 8",
+      "n": 10,
+      "transversals": 1104,
+      "vars": 2208,
+      "rows": 2408,
+      "nonzeros": 873976,
+      "highs_status": 1,
+      "result": "UNKNOWN_TIME_LIMIT",
+      "primal": "none",
+      "model_setup_seconds": 0.852,
+      "total_seconds": 11.205
+    },
+    {
+      "case": "Parker A with 226 two-class cuts each side",
+      "cmd": "OPENBLAS_NUM_THREADS=1 python E018_compact_milp.py --case parker --seconds 8 --paircuts",
+      "n": 10,
+      "transversals": 1104,
+      "vars": 2208,
+      "rows": 2860,
+      "nonzeros": 874880,
+      "highs_status": 1,
+      "result": "UNKNOWN_TIME_LIMIT",
+      "primal": "none",
+      "model_setup_seconds": 3.411,
+      "total_seconds": 14.984
+    },
+    {
+      "case": "order6 negative with paircuts",
+      "cmd": "OPENBLAS_NUM_THREADS=1 python E018_compact_milp.py --case order6 --seconds 5 --paircuts",
+      "n": 6,
+      "transversals": 32,
+      "vars": 64,
+      "rows": 544,
+      "nonzeros": 1696,
+      "highs_status": 2,
+      "result": "UNSAT_FIXED_A_SOLVER_COMPLETE",
+      "total_seconds": 0.013
+    }
+  ],
+  "failed_attempts": [
+    "Initial n=6 cyclic case had zero transversals and exposed a zero-variable scipy.milp input error; fixed by m==0 early UNSAT guard.",
+    "During paircuts implementation a local shadowed coo_matrix import caused UnboundLocalError; fixed before the reported runs.",
+    "Parker baseline and paircuts reached 8-second solver limit; neither yields UNSAT or a witness."
+  ],
+  "environment": {
+    "python": "3.13",
+    "scipy": "1.17.0",
+    "numpy": "2.3.5",
+    "solver": "SciPy milp / HiGHS",
+    "threads_env": "OPENBLAS_NUM_THREADS=1",
+    "cpu_only": true
+  },
+  "literature": [
+    {
+      "title": "Bright Keita Stevens 2026 EJC",
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v33i1p30",
+      "date": "2026-02-13"
+    },
+    {
+      "title": "Barnoff Bright 2026 arXiv",
+      "url": "https://arxiv.org/abs/2605.02132",
+      "date": "2026-07-04 v2"
+    }
+  ],
+  "next_action": "Validate the exact MILP against another solver or certificate-producing SAT backend, introduce sound symmetry breaking, and obtain genuinely distinct published first squares; do not infer UNSAT from HiGHS status=1.",
+  "uncertainty": "E017 exhaustive fixed-A Parker claim not independently certified by this MILP run; exact MILP formulation and controls validated, but order-10 solver returns UNKNOWN."
+}
