@@ -1,0 +1,34 @@
+name: MOLS10 exact witness regression checks
+
+on:
+  push:
+    branches: [math-agent-mols10]
+    paths:
+      - "research/mols10/**"
+      - ".github/workflows/mols10-ci.yml"
+  pull_request:
+    branches: [math-agent-mols10]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests including the known near-triple
+        working-directory: research/mols10
+        run: python -m unittest -v test_verify.py
+      - name: Verify diagnostic baseline is NOT a complete solution
+        working-directory: research/mols10
+        run: |
+          python verify.py near_triple.json --diagnostic > diagnostic.json
+          python -c 'import json; d=json.load(open("diagnostic.json")); assert [q["unique"] for q in d["overlays"]]==[100,100,91]; assert not d["valid_mols_witness"]'
