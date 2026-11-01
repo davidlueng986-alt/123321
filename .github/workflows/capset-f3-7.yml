@@ -27,6 +27,8 @@ jobs:
         run: python research/capset_f3_7/orbit_incidence_certificate.py
       - name: Check rational dual proof certificate (no optimizer)
         run: python research/capset_f3_7/rational_dual_48_certificate.py
+      - name: Verify rational dual certificate over 71 outsider points
+        run: python research/capset_f3_7/rational_dual_71_certificate.py
       - name: Run deterministic sample and recheck artifact
         run: |
           python research/capset_f3_7/search_baseline.py --seed 7 --rounds 2 --out /tmp/capset_candidate.txt
