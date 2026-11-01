@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "E020: implement lazy depth-3 support cut separation (23,296 novel rooted Parker cuts proved in E019); add sound B/C symmetry breaking and GF4/order6 controls; bounded Parker comparison; diversify to Myrvold eight residual patterns. Preserve UNKNOWN and global OPEN.",
-  "current_hypothesis": "H20-LAZY-DEPTH3-SUPPORT-CUTS",
-  "last_experiment": "MOLS10-E019",
+  "next_action": "E021: independently certify all 1076 Parker unary exact-cover UNSAT roots (SAT/DRAT or separate exact-cover), classify 28 surviving roots under autotopisms, and import Myrvold residual-eight first squares; no duplicate Parker E017 DFS.",
+  "current_hypothesis": "H21-INDEPENDENT-UNARY-CERTIFICATION-AND-DIVERSITY",
+  "last_experiment": "MOLS10-E020",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41359030343",
   "last_verified_results": [
@@ -48,7 +48,9 @@
     "E018: independent stdlib 10! permutation enumeration reproduces Parker 1104 A-transversals, 236104 disjoint pairs, 226 blocked pairs; local unittest PASSED (5.323s), CI run pending.",
     "E018: GitHub Actions 41354224282 completed SUCCESS for independent pair-support regression test; does not certify order10 MILP UNSAT.",
     "E019: Parker A 1104 transversals; exhaustive 39528 disjoint triples containing index0, 29973 C-cell-support blockers, including 23296 new depth-3 blockers where every pair passes; independent 10! permutation replay local 2 tests PASS.",
-    "E019: deterministic 20000 depth-2-surviving pair + disjoint third samples, 10140 depth-3 blocked, 9860 survive; nonuniform sample, no global inference."
+    "E019: deterministic 20000 depth-2-surviving pair + disjoint third samples, 10140 depth-3 blocked, 9860 survive; nonuniform sample, no global inference.",
+    "E020: Parker fixed A has 1104 A-transversals; independent exact-cover C-mate feasibility for each B class: 1076 exhaustive unary UNSAT, 28 SAT, 0 UNKNOWN; 1371185 DFS nodes in ~9.155 s; 13 cells uncovered by all 28 surviving classes, hence excludes triple with this specified Parker A only.",
+    "E020: independent 10! permutation enumerator exactly reproduces 1104 transversals; HiGHS MILP root0/109/250 INFEASIBLE and root26/29/55 FEASIBLE with replay; GF4 8/8 unary SAT positive control. Full 1104-root independent MILP certificate NOT yet available."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -84,13 +86,17 @@
     "research/mols10/test_E018_pair_support.py",
     "research/mols10/E019_depth_support.py",
     "research/mols10/E019_RESULTS.json",
-    "research/mols10/test_E019_depth_support.py"
+    "research/mols10/test_E019_depth_support.py",
+    "research/mols10/E020_unary_exact_cover.py",
+    "research/mols10/test_E020_unary_exact_cover.py",
+    "research/mols10/E020_milp_replay.py",
+    "research/mols10/E020_RESULTS.json"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-01T22:47:00Z",
+  "last_run_utc": "2026-11-01T23:45:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -102,12 +108,13 @@
     "research/mols10/E016_REPORT.md",
     "research/mols10/E017_REPORT.md",
     "research/mols10/E018_REPORT.md",
-    "research/mols10/E019_REPORT.md"
+    "research/mols10/E019_REPORT.md",
+    "research/mols10/E020_REPORT.md"
   ],
   "last_run_date": "2026-11-01",
-  "limitations": "Global 3-MOLS(10) OPEN. E019 depth-3 obstruction counts exact only for Parker rooted index-0 slice; sampled triples not uniform; independent local replay passes, GitHub CI SUCCESS for E019 regression tests. E018 Parker MILP remains UNKNOWN; no 100/100/100 witness or unrestricted certificate.",
-  "last_ci_result": "E019 independent stdlib 10! permutation replay and rooted 39528/29973/23296 regression tests PASS in GitHub Actions run 41359030343 (workflow success 2026-11-01T22:50:11Z); this does not certify unrestricted 3-MOLS(10).",
-  "external_status_review": "2026-11-01 ~22:47 UTC: fresh web/arXiv check; Bright–Keita–Stevens EJC 33(1) P1.30 (2026) and Barnoff–Bright arXiv:2605.02132; no independently verifiable complete unrestricted solution found.",
+  "limitations": "Global 3-MOLS(10) OPEN. E020 1076/1104 exhaustive unary exclusions and 13-cell uncovered certificate concern only Parker A. Independent 10! enumerator and six independent MILP spot checks, but no external proof certificate for all 1104 roots; GF4 positive control. No global 100/100/100 witness or unrestricted nonexistence proof.",
+  "last_ci_result": "E020 GitHub Actions regression status pending; local full 1104-root exact-cover and independent 10! permutation replay passed.",
+  "external_status_review": "2026-11-01 ~23:45 UTC: primary EJC 2026-02-13 and arXiv 2605.02132v2 2026-07-04 checked with fresh November 1 searches; no independently verifiable unrestricted solution found.",
   "current_math_result": {
     "egan_fixed_A_C_optimum": 91,
     "egan_fixed_A_B_optimum": 91,
@@ -122,6 +129,9 @@
     "e017_new_fixed_A_exclusions": 17,
     "e019_rooted_depth3_disjoint_triples": 39528,
     "e019_rooted_depth3_blocked": 29973,
-    "e019_rooted_novel_cuts": 23296
+    "e019_rooted_novel_cuts": 23296,
+    "e020_parker_unary_unsat_roots": 1076,
+    "e020_parker_unary_sat_roots": 28,
+    "e020_parker_uncovered_cells": 13
   }
 }
