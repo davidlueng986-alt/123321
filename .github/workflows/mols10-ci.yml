@@ -26,7 +26,7 @@ jobs:
           python-version: "3.12"
       - name: Unit tests including the known near-triple
         working-directory: research/mols10
-        run: python -m unittest -v test_verify.py
+        run: python -m unittest discover -p 'test_*.py' -v
       - name: Verify diagnostic baseline is NOT a complete solution
         working-directory: research/mols10
         run: |
