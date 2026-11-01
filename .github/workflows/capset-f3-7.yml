@@ -25,6 +25,8 @@ jobs:
         run: python research/capset_f3_7/symmetry_isolation_certificate.py
       - name: Certify six orbit-wise incidence obstructions
         run: python research/capset_f3_7/orbit_incidence_certificate.py
+      - name: Check rational dual proof certificate (no optimizer)
+        run: python research/capset_f3_7/rational_dual_48_certificate.py
       - name: Run deterministic sample and recheck artifact
         run: |
           python research/capset_f3_7/search_baseline.py --seed 7 --rounds 2 --out /tmp/capset_candidate.txt
