@@ -6,6 +6,7 @@ on:
     paths:
       - "research/capset_f3_7/analyze_pair_replacement.py"
       - "research/capset_f3_7/audit_pair_milp_spotcheck.py"
+      - "research/capset_f3_7/reconstruction_milp.py"
       - "research/capset_f3_7/generate_calderbank_fishburn.py"
       - ".github/workflows/capset-pair-audit.yml"
   workflow_dispatch:
@@ -30,3 +31,5 @@ jobs:
         run: python research/capset_f3_7/analyze_pair_replacement.py
       - name: Independent integer-programming validation of key and seeded cases
         run: python research/capset_f3_7/audit_pair_milp_spotcheck.py
+      - name: Solve restricted reconstruction MILP and reverify resulting cap
+        run: python research/capset_f3_7/reconstruction_milp.py --max-secants 10 --min-additions 1 --time-limit 25
