@@ -2,6 +2,12 @@
 
 **Exact problem:** determine r3(7). External lower 236; accepted stated upper 291, preprint states 288; investigate each primary source again before announcing any novelty. Current independently verified best construction 236. A 237 construction is only a partial breakthrough.
 
+## CAP-004E update (2026-11-01 21:03 UTC)
+- CAP-004E [DONE / LOCAL EXACT ENUMERATION, CI PENDING] Explicit order-24 subgroup: 45 orbits, 3,556 internal forbidden orbit masks, 12 individually forbidden orbits, 87,862 recursive nodes, 11,434 cap-valid single-slice masks. Exactly 144 masks have size >=104 (48×112, 96×104). Exhaustive 10,440 unordered high-slice pairs yield restricted optimum **236** (112+112+12), independent direct arithmetic checker PASS. Script: `c6_order24_high_slice_exact.py`; report: `C6_ORDER24_HIGH_SLICE_236_CERTIFICATE_2026-11-01.md`. Does NOT exclude 237 in remaining order-24-invariant families.
+- CAP-004F [P0] Full order-24 orbit search: 65,373,895 unordered valid-mask pairs before safe bounds. Build fast cross-shadow bounds, memoized max allowed third-slice weight and symmetry reductions; impose bounded CPU gate. Seek exact optimum only with complete coverage and certificate; timeouts inconclusive.
+- CAP-005B [P0] Non-invariant 27-block affine twisting remains viable and may bypass all symmetry restrictions.
+- META-AUDIT: 2^45 raw mask DP is unnecessary (11,434 valid masks after propagation); naive 65M pair enumeration is still excessive. Existing 10,440 high-slice pair exclusion is a proper restricted theorem, not global r3(7) progress.
+
 ## CAP-004D update (2026-11-01 21:00 UTC)
 - CAP-004D [DONE / LOCAL EXACT CERTIFICATE; CI STATUS RECHECK] Derived subgroup of even120 has order 60, is perfect, and has EXACTLY THE SAME 21 F3^6 orbits as even120. Consequently its invariant 7D optimum is the already-certified 236. E has no order-40 subgroup (index-three coset-action proof). An explicit order-24 subgroup has 45 orbits (1×1,6×4,8×4,12×16,24×20), with 33 individually cap-valid orbits. See `c6_subgroup_lattice_certificate.py` and `C6_SUBGROUP_60_24_CERTIFICATE_2026-11-01.md`.
 - CAP-004E [P0] For the explicit order-24 subgroup, build orbit-conflict hypergraph, count cap-valid slice masks using pruning, and set a strict CPU/complexity gate before cross-slice DP/SAT. Do NOT attempt raw 2^45 subset DP.
