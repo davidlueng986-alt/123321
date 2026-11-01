@@ -13,7 +13,7 @@
   "current_hypothesis": "The 240-symmetry family has optimum 225; its canonical index-two even-permutation subgroup (order 120) has exact optimum 236. A 237 cap must break this 120 subgroup or lie outside its invariant template. Explore smaller subgroup orbit models or 27-block affine twists.",
   "next_experiment": "CAP-004D: classify tractable proper subgroups of the verified even120 group, prioritize group orders 60/40/24; exact orbit constraints and cross-shadows with explicit complexity gates; also test 27-block twists.",
   "last_run_id": "CAP-004C-2026-11-01-even120-invariant-exact",
-  "last_run_result": "LOCAL_VERIFIED_RESTRICTED_THEOREM_EVEN120_OPTIMUM_236_CI_PENDING",
+  "last_run_result": "VERIFIED_RESTRICTED_THEOREM_EVEN120_OPTIMUM_236_CI_GREEN",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -169,9 +169,10 @@
       112,
       12
     ],
-    "status": "VERIFIED_LOCAL_COMPUTATION_CI_PENDING_RESTRICTED_ONLY",
+    "status": "VERIFIED_COMPUTATION_CI_GREEN_RESTRICTED_ONLY",
     "global_bound_improved": false,
     "script": "research/capset_f3_7/c6_even120_invariant_exact_optimum.py",
-    "report": "research/capset_f3_7/C6_EVEN120_236_CERTIFICATE_2026-11-01.md"
+    "report": "research/capset_f3_7/C6_EVEN120_236_CERTIFICATE_2026-11-01.md",
+    "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41344134381"
   }
 }
