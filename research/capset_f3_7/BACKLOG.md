@@ -2,6 +2,12 @@
 
 **Exact problem:** determine r3(7). External lower 236; accepted stated upper 291, preprint states 288; investigate each primary source again before announcing any novelty. Current independently verified best construction 236. A 237 construction is only a partial breakthrough.
 
+## CAP-004D update (2026-11-01 21:00 UTC)
+- CAP-004D [DONE / LOCAL EXACT CERTIFICATE; CI STATUS RECHECK] Derived subgroup of even120 has order 60, is perfect, and has EXACTLY THE SAME 21 F3^6 orbits as even120. Consequently its invariant 7D optimum is the already-certified 236. E has no order-40 subgroup (index-three coset-action proof). An explicit order-24 subgroup has 45 orbits (1×1,6×4,8×4,12×16,24×20), with 33 individually cap-valid orbits. See `c6_subgroup_lattice_certificate.py` and `C6_SUBGROUP_60_24_CERTIFICATE_2026-11-01.md`.
+- CAP-004E [P0] For the explicit order-24 subgroup, build orbit-conflict hypergraph, count cap-valid slice masks using pruning, and set a strict CPU/complexity gate before cross-slice DP/SAT. Do NOT attempt raw 2^45 subset DP.
+- CAP-005B [P0] Non-invariant 27-block affine twists and exact shadow feasibility remain parallel, since no subgroup-invariant family yet exceeds 236.
+- META-AUDIT: Discard order-60 orbit search (same family as 120), discard nonexistent order-40 subgroup. The next meaningful symmetry relaxation is order24 or other genuinely orbit-refining subgroup. No >=237, no global bound, no novelty claim.
+
 ## CAP-004C update (2026-11-01 19:53 UTC)
 - CAP-004C [DONE / VERIFIED COMPUTATION, CI GREEN] The canonical index-two even-permutation subgroup of the Paley 240-group has order 120 and 21 F3^6 orbits. Exact orbit-mask enumeration gives **restricted optimum 236** (174 valid masks, 15,225 unordered pairs with 7,598 safely evaluated; witness 112+112+12). Script: `c6_even120_invariant_exact_optimum.py`; report: `C6_EVEN120_236_CERTIFICATE_2026-11-01.md`. Independent direct checker PASS; CI https://github.com/davidlueng986-alt/123321/actions/runs/41344134381 SUCCESS. Not a global bound.
 - CAP-004D [P0] Explore proper subgroups of this order-120 group, particularly order 60/40/24, but first compute orbit counts and SAT/DP feasibility. The 120-invariant family is exhausted; do not repeat it.
