@@ -14,3 +14,9 @@ Propose a precise new lemma for a defined subclass, check prior literature, then
 
 ## Portfolio policy
 Do not rerun unsuccessful seeds without a changed hypothesis. Prefer short, falsifiable, reproducible experiments. Distinguish observations, working conjectures, conditional theorems and fully verified proofs.
+
+
+## E002 evidence / H1 refinement (2026-11-01)
+For fixed pair X,Y, n disjoint common transversals are necessary and sufficient for a third mate. The Egan–Wanless pairs (A,B) and (A,C) are now fully ruled out by complete exact enumeration (14 transversals / max packing 7, and 7 / max packing 1, respectively). These conditional obstructions do not settle the general problem.
+New H1-SCREENING: sample genuinely distinct published orthogonal pairs; measure (1) transversal count, (2) cell coverage, (3) exact/approximate maximum packing. Necessary but not sufficient cheap filters are count >= 10 and all 100 cells covered. Once these pass, solve the disjoint-transversal exact-cover problem using a scalable backend. Verify each candidate with verify.py.
+Source lead: https://github.com/curtisbright/Myrvold-MOLS . Avoid exhaustive search on the already eliminated Egan–Wanless pair. Check novelty before claiming a new theorem.
