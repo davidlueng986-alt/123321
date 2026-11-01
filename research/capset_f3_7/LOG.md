@@ -92,3 +92,10 @@ Status: VERIFIED COMPUTATION, not a novel record.
 
 ## 2026-11-01 21:05 UTC | CAP-004E CI confirmation | VERIFIED COMPUTATION / CI GREEN
 - GitHub Actions https://github.com/davidlueng986-alt/123321/actions/runs/41349990526 completed SUCCESS at commit b707e064080257e6f03d07c9517fea630475a6b5. It executes `c6_order24_high_slice_exact.py` (11,434 valid masks, 10,440 exact high-slice pairs, optimum 236) plus the independent 7D verifier and all earlier branch checks. The theorem is restricted to order-24-invariant caps with at least two slices >=104; no global r3(7) upper bound.
+
+## 2026-11-01 21:56 UTC | CAP-004F exact order-24 SAT encoding | COMMITTED; CI PENDING
+- Continued from CAP-004E (10,440 high-slice pairs CI green). Full 24-group search was still open (65,373,895 pairs); no extrapolation from high-slice theorem.
+- Derived a bijective exact CNF encoding for **all** 24-invariant 7D caps: 3×45=135 primary orbit variables; within-slice line conflicts and cross-slice 0/1/2 orbit triples, with a weighted threshold >=237 via Tseitin DP. This covers low-slice families missed by CAP-004E. SAT/UNSAT has NOT been decided.
+- Added deterministic stdlib CNF generator, direct mod-3 verification of the known 236 witness, clause evaluation for target 236 (all satisfied) and 237 (only target objective fails), and GitHub CI artifact export. No GPU, no solver, no randomness. Commands: `python research/capset_f3_7/c6_order24_sat_encoding.py --target 236`; `python research/capset_f3_7/c6_order24_sat_encoding.py --target 237 --out /tmp/capset_order24_target237.cnf`.
+- CI pending at commit time; any failed CI must be debugged before accepting the encoding. No >=237 witness, no restricted UNSAT certificate, no global bound improvement. Novelty not established; exact SAT encoding is a standard reduction.
+- Meta-audit: SAT may replace 65M Python pair checks, but a solver's UNSAT return alone is insufficient: require independently replayed proof. Keep non-invariant affine twists and global upper-bound research alive.

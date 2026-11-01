@@ -47,6 +47,16 @@ jobs:
         run: python research/capset_f3_7/c6_subgroup_lattice_certificate.py
       - name: Certify exact order-24 high-slice restricted optimum 236
         run: python research/capset_f3_7/c6_order24_high_slice_exact.py
+      - name: Verify exact 24-invariant orbit SAT reduction (236 SAT witness; 237 decision open)
+        run: |
+          python research/capset_f3_7/c6_order24_sat_encoding.py --target 236
+          python research/capset_f3_7/c6_order24_sat_encoding.py --target 237 --out /tmp/capset_order24_target237.cnf
+      - name: Preserve deterministic 237-target CNF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: capset-order24-target237-cnf
+          path: /tmp/capset_order24_target237.cnf
+          retention-days: 30
       - name: Check all 1920 signed-relative complementary 112-cap pairs
         run: python research/capset_f3_7/complement_112_signed_shadow_certificate.py
       - name: Run deterministic sample and recheck artifact

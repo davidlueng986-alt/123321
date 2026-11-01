@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-01",
-  "current_hypothesis": "Order-24 subgroup has 45 F3^6 orbits, 11,434 cap-valid single-slice orbit masks; exact search excludes >236 for every 24-invariant 7D cap with at least two slices >=104 (10,440 pairs). Remaining order-24 caps with fewer high slices or non-invariant affine twists may still reach 237; need shadow-based branch-and-bound with strict CPU gate.",
-  "next_experiment": "CAP-004F: exact shadow-bound/branch-and-bound for all 65,373,895 order-24 single-slice mask pairs, pruning via slice weight, cross-shadow memoization and maximal permitted third-slice search; bounded CPU. Or switch to 27-block non-invariant affine twisting.",
-  "last_run_id": "CAP-004E-2026-11-01-order24-high-slice",
-  "last_run_result": "VERIFIED_RESTRICTED_HIGH_SLICE_THEOREM_CI_GREEN",
+  "current_hypothesis": "CAP-004F: all 24-invariant caps admit an exact 135-primary-variable SAT reduction with complete within-slice and cross-slice line constraints, plus weighted cardinality >=237. Await CI; SAT/UNSAT status unknown. Prior high-slice exclusion remains valid; no global bound.",
+  "next_experiment": "Check CAP-004F CNF CI counts and independent 236-model replay; then bounded CPU SAT with verifiable UNSAT proof or 237 witness. Parallel: non-invariant 27-block affine twists.",
+  "last_run_id": "CAP-004F-2026-11-01-order24-sat-encoding",
+  "last_run_result": "EXACT_SAT_REDUCTION_COMMITTED_CI_PENDING_NO_SOLVER",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -35,7 +35,8 @@
     "CAP-004B",
     "CAP-004C",
     "CAP-004D",
-    "CAP-004E"
+    "CAP-004E",
+    "CAP-004F-ENCODING"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
   "baseline_secant_audit": {
@@ -57,7 +58,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-01T21:05:00Z",
+  "last_updated_utc": "2026-11-01T21:56:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -227,6 +228,15 @@
     "script": "research/capset_f3_7/c6_order24_high_slice_exact.py",
     "report": "research/capset_f3_7/C6_ORDER24_HIGH_SLICE_236_CERTIFICATE_2026-11-01.md",
     "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41349990526",
+    "global_bound_improved": false
+  },
+  "c6_order24_sat_reduction": {
+    "script": "research/capset_f3_7/c6_order24_sat_encoding.py",
+    "report": "research/capset_f3_7/C6_ORDER24_SAT_REDUCTION_2026-11-01.md",
+    "primary_variables": 135,
+    "within_forbidden_orbit_sets": 3556,
+    "objective_target": 237,
+    "status": "CI_PENDING_NO_SAT_OR_UNSAT_CLAIM",
     "global_bound_improved": false
   }
 }
