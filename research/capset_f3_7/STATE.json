@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "Novel >=237 witness likely requires coordinated changes spanning >=5 large coordinate fibers or structurally different 6D slices. Apply independent C6 orbit templates and 27-block twisting, not only 236 neighborhood swaps.",
-  "next_experiment": "CAP-004: multi-fiber CP-SAT/affine-twist and C6 orbit-based structural search",
-  "last_run_id": "CAP-003D-2026-11-02-campaign001-cross-audit-and-fiber-search",
-  "last_run_result": "MULTIPLE_VERIFIED_CERTIFICATES;_16_FIBER_MIP_OPTIMA_236;_FIVE_FIBER_237_INCONCLUSIVE",
+  "current_hypothesis": "Any >=237 cap must break the order-240 signed-permutation symmetry of the known C6 magic-basis 112-cap; investigate proper subgroup invariance and 27-block twisting, rather than full-240-invariant orbit unions.",
+  "next_experiment": "CAP-004C: classify proper subgroups (index 2,3,5 where available), orbit structures and bounded exact 7D cap search; use cross-shadow pruning and independent arithmetic verification.",
+  "last_run_id": "CAP-004B-2026-11-01-240-invariant-exact-enumeration",
+  "last_run_result": "VERIFIED_RESTRICTED_THEOREM_C6_240_INVARIANT_OPTIMUM_225_CI_GREEN",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -53,7 +53,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02",
+  "last_updated_utc": "2026-11-01T18:54:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -99,5 +99,30 @@
     "five_fiber_variables": 653,
     "five_fiber_constraints": 34900,
     "five_fiber_limit_seconds": 12
+  },
+  "c6_invariant_restricted_optimum": {
+    "group_order": 240,
+    "dimension": 7,
+    "optimum_with_full_group_invariance": 225,
+    "orbit_count": 13,
+    "valid_single_slice_orbit_unions": 22,
+    "exhaustive_unordered_pairs": 253,
+    "within_slice_orbit_line_classes": 247,
+    "cross_slice_ordered_orbit_line_classes": 1195,
+    "witness_slice_sizes": [
+      112,
+      112,
+      1
+    ],
+    "witness_masks": [
+      530,
+      3200,
+      1
+    ],
+    "status": "VERIFIED_COMPUTATION_RESTRICTED_ONLY",
+    "global_bound_improved": false,
+    "script": "research/capset_f3_7/c6_invariant_exact_optimum.py",
+    "report": "research/capset_f3_7/C6_INVARIANT_225_CERTIFICATE_2026-11-01.md",
+    "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41338916833"
   }
 }
