@@ -1,16 +1,16 @@
 {
   "schema": "mols10-v1",
   "problem": "3 mutually orthogonal Latin squares of order 10",
-  "status": "open",
-  "last_review": "2026-11-01",
+  "status": "OPEN",
+  "last_review": "2026-11-02",
   "baseline": [
     100,
     100,
     91
   ],
-  "next_action": "E003: obtain DIFFERENT published orthogonal pairs from Curtis Bright et al Myrvold-MOLS/Delisle-MOLS original resources, validate matrices, enumerate transversals and cell support. Prefer >=10 common transversals and complete cell support. For >20 transversals use scalable exact-cover/SAT; UNKNOWN on timeout. Never re-search published Egan–Wanless A/B or A/C.",
-  "current_hypothesis": "H1-SCREENING",
-  "last_experiment": "MOLS10-E002",
+  "next_action": "E008: do NOT repeat Egan A/B <=5-symbol trades; generate genuinely different first Latin squares A, seek orthogonal mates B with >=10 common transversals AND complete 100-cell support, compare bounded exact-cover/SAT search, and log UNKNOWN timeouts. Re-audit external solution status first.",
+  "current_hypothesis": "H1-NEW-A+H2-COVERAGE-GUIDED",
+  "last_experiment": "MOLS10-E007",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334010585",
   "last_verified_results": [
@@ -18,16 +18,35 @@
     "E002 published pair (A,B): 14 exact common transversals, 12 unsupported cells, max disjoint 7 => UNSAT_FIXED_PAIR_CERTIFIED",
     "E002 published pair (A,C): 7 exact common transversals, 36 unsupported cells, max disjoint 1 => UNSAT_FIXED_PAIR_CERTIFIED",
     "All 10! permutations cross-checked by independent bitmask DFS; no heuristic or timeout",
-    "2026 literature search found no confirmed general solution"
+    "2026 literature search found no confirmed general solution",
+    "E003 Parker historical pair verified Latin+orthogonal 100/100 with 0 common transversals (full 10! independent DFS), 21 dead depth-9 partials",
+    "E003 exact-cover backend verifies fixed-pair UNSAT for Parker, Egan A/B and A/C; GF4 positive control",
+    "E004 Egan A 200 deterministic seeds: 91 distinct normalized mates, 0 passed joint-transversal full-cell-support screen; seed 14 is known Egan B",
+    "E005 Egan A/B no proper two-symbol component flips; Egan A/C and Parker A/B each have 3",
+    "E006 Egan A/B 3-symbol 0 alternative supports; 4-symbol 6 neighbors max 4 transversals; 5-symbol 36 neighbors max 4",
+    "E007 Parker A 12 seeds: 11 UNKNOWN_BUDGET and seed 8 verified mate with 0 joint transversals"
   ],
-  "certificate_path": "research/mols10/E002_FIXED_PAIR_CERTIFICATES.md",
+  "certificate_path": "research/mols10/E003_E005_REPORT.md",
   "code_paths": [
     "research/mols10/transversals.py",
-    "research/mols10/test_transversals.py"
+    "research/mols10/test_transversals.py",
+    "research/mols10/exact_cover.py",
+    "research/mols10/parker_pair.json",
+    "research/mols10/parker_frontier.py",
+    "research/mols10/sample_mates.py",
+    "research/mols10/two_symbol_trades.py",
+    "research/mols10/k_symbol_trades.py"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-01T17:53:40Z"
+  "last_run_utc": "2026-11-01T17:53:40Z",
+  "research_reports": [
+    "research/mols10/E003_E005_REPORT.md",
+    "research/mols10/E003_E005_RESULTS.json",
+    "research/mols10/E006_E007_REPORT.md"
+  ],
+  "last_run_date": "2026-11-02",
+  "limitations": "Conditional fixed-pair obstruction / restricted trade enumerations / biased heuristic samples only. Global existence of three MOLS(10) NOT settled. Parker 40-seed aborted and 11 small-budget seeds are UNKNOWN, not UNSAT."
 }
