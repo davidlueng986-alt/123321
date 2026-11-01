@@ -1,0 +1,27 @@
+name: Cap Set F3-7 Verifier
+
+on:
+  push:
+    branches: ["research/capset-f3-7"]
+    paths:
+      - "research/capset_f3_7/**"
+      - ".github/workflows/capset-f3-7.yml"
+  pull_request:
+    branches: ["research/capset-f3-7"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run exact verifier unit tests
+        run: python -m unittest discover -s research/capset_f3_7 -p 'test_*.py' -v
+      - name: Run deterministic sample and recheck artifact
+        run: |
+          python research/capset_f3_7/search_baseline.py --seed 7 --rounds 2 --out /tmp/capset_candidate.txt
+          python research/capset_f3_7/verify_capset.py /tmp/capset_candidate.txt
