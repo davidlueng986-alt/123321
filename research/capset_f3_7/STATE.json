@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "Any improvement around 236 witness requires a coordinated deletion of >=10 original points; find a replacement strategy that recovers 236 then improves it",
-  "next_experiment": "CAP-002B",
-  "last_run_id": "cap-001-reconstruction-2026-11-02",
-  "last_run_result": "PASS_236_REPRODUCED_SATURATION_MIN_SECANTS_10_CROSS_SLICE_11",
+  "current_hypothesis": "Coordinated >=16-deletion and >=17-insertion remodelling may succeed only with large structural changes, requiring restricted candidate ILP/SAT and symmetry reductions",
+  "next_experiment": "CAP-002C",
+  "last_run_id": "cap-002-paircover-2026-11-02",
+  "last_run_result": "EXHAUSTIVE_1902225_PAIRS_MIN_VERTEX_COVER_16_CI_PASS",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -26,7 +26,8 @@
   "best_verified_size": 236,
   "best_verified_size_is_research_record": false,
   "completed_experiments": [
-    "CAP-001"
+    "CAP-001",
+    "CAP-002A"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
   "baseline_secant_audit": {
@@ -37,5 +38,15 @@
     "third_slice_possible_with_first_224_fixed": 12,
     "third_slice_min_cross_secants_for_other_points": 11
   },
-  "evidence_report_path": "research/capset_f3_7/RESULTS_2026-11-02.md"
+  "evidence_report_path": "research/capset_f3_7/RESULTS_2026-11-02.md",
+  "pair_replacement_audit": {
+    "all_external_pairs": 1902225,
+    "min_original_removals_for_any_two_new_points": 16,
+    "pairs_attaining_min": 888,
+    "full_ci_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334968239",
+    "independent_milp_checks": 101,
+    "independent_milp_all_passed": true
+  },
+  "local_reconstruction_lower_bound_deletions": 16,
+  "local_reconstruction_lower_bound_insertions_for_improvement": 17
 }
