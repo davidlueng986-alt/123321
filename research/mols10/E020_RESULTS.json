@@ -1,0 +1,118 @@
+{
+  "schema": "MOLS10-E020-unary-summary-v1",
+  "timestamp_utc": "2026-11-01T23:45:00Z",
+  "input": "PARKER_A embedded in E020_unary_exact_cover.py",
+  "input_sha256": "1694eda37452b6709d8f8d77d8dfcddae08e18c6a94e4aabc102bec6323c1c77",
+  "transversals": 1104,
+  "roots_tested": 1104,
+  "statuses": {
+    "SAT": 28,
+    "UNSAT_EXHAUSTIVE": 1076,
+    "UNKNOWN_BUDGET": 0
+  },
+  "surviving_roots": [
+    26,
+    29,
+    50,
+    55,
+    165,
+    167,
+    195,
+    202,
+    380,
+    395,
+    438,
+    453,
+    512,
+    531,
+    547,
+    563,
+    577,
+    643,
+    663,
+    727,
+    844,
+    850,
+    853,
+    915,
+    924,
+    950,
+    963,
+    1060
+  ],
+  "uncovered_cells": [
+    2,
+    13,
+    24,
+    35,
+    46,
+    50,
+    61,
+    77,
+    78,
+    79,
+    88,
+    97,
+    98
+  ],
+  "total_nodes": 1371185,
+  "sat_nodes": 11509,
+  "unsat_nodes": 1359676,
+  "max_nodes_per_root": 4853,
+  "local_seconds": 9.155,
+  "per_root_budget_seconds": 0.25,
+  "per_root_node_budget": 100000,
+  "independent_10_factorial_enumerator": {
+    "transversals": 1104,
+    "identical_lexicographic_masks": true,
+    "seconds": 2.54
+  },
+  "independent_scipy_highs_spot_checks": [
+    {
+      "root": 0,
+      "status": "INFEASIBLE",
+      "seconds": 2.605,
+      "allowed": 392
+    },
+    {
+      "root": 26,
+      "status": "FEASIBLE",
+      "seconds": 1.007,
+      "allowed": 398,
+      "independent_replay": true
+    },
+    {
+      "root": 29,
+      "status": "FEASIBLE",
+      "seconds": 3.1,
+      "allowed": 406,
+      "independent_replay": true
+    },
+    {
+      "root": 55,
+      "status": "FEASIBLE",
+      "seconds": 1.302,
+      "allowed": 398,
+      "independent_replay": true
+    },
+    {
+      "root": 109,
+      "status": "INFEASIBLE",
+      "seconds": 2.899,
+      "allowed": 425
+    },
+    {
+      "root": 250,
+      "status": "INFEASIBLE",
+      "seconds": 2.94,
+      "allowed": 400
+    }
+  ],
+  "gf4_positive_control": {
+    "transversals": 8,
+    "roots_sat": 8,
+    "roots_unsat": 0
+  },
+  "conclusion": "For the specified Parker A, any triple would require B-symbol transversals among 28 roots, but those 28 fail to cover 13 cells. This is a conditional fixed-A exclusion only.",
+  "limitation": "Full per-root 1104-case trace is generated locally by code but this compact checked-in JSON only records the summary. Independent MILP spot-checks cover six roots, not all 1104. No unrestricted certificate."
+}
