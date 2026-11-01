@@ -2,20 +2,32 @@
   "schema": "mols10-v1",
   "problem": "3 mutually orthogonal Latin squares of order 10",
   "status": "open",
-  "last_review": "2026-11-02",
+  "last_review": "2026-11-01",
   "baseline": [
     100,
     100,
     91
   ],
-  "next_action": "Benchmark independent third-square extension constraints using the published order-10 orthogonal pair A,B with a strict node/time budget; log SAT/UNSAT_FIXED_PAIR/UNKNOWN separately. Then add a solver-grade CP-SAT/SAT encoding and compare against this regression baseline.",
-  "current_hypothesis": "H1",
-  "last_experiment": "MOLS10-E001",
+  "next_action": "E003: obtain DIFFERENT published orthogonal pairs from Curtis Bright et al Myrvold-MOLS/Delisle-MOLS original resources, validate matrices, enumerate transversals and cell support. Prefer >=10 common transversals and complete cell support. For >20 transversals use scalable exact-cover/SAT; UNKNOWN on timeout. Never re-search published Egan–Wanless A/B or A/C.",
+  "current_hypothesis": "H1-SCREENING",
+  "last_experiment": "MOLS10-E002",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
-  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41333555421",
+  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334010585",
   "last_verified_results": [
-    "Egan-Wanless near-triple overlays 100/100/91 (non-solution)",
-    "Order-3 fixed orthogonal pair has no third mate (exhaustive fixed-pair search)",
-    "Order-4 GF(4) fixed pair has a third mate (16/16/16)"
-  ]
+    "Egan–Wanless near-triple pair overlays 100/100/91 (not solution)",
+    "E002 published pair (A,B): 14 exact common transversals, 12 unsupported cells, max disjoint 7 => UNSAT_FIXED_PAIR_CERTIFIED",
+    "E002 published pair (A,C): 7 exact common transversals, 36 unsupported cells, max disjoint 1 => UNSAT_FIXED_PAIR_CERTIFIED",
+    "All 10! permutations cross-checked by independent bitmask DFS; no heuristic or timeout",
+    "2026 literature search found no confirmed general solution"
+  ],
+  "certificate_path": "research/mols10/E002_FIXED_PAIR_CERTIFICATES.md",
+  "code_paths": [
+    "research/mols10/transversals.py",
+    "research/mols10/test_transversals.py"
+  ],
+  "external_data_leads": [
+    "https://github.com/curtisbright/Myrvold-MOLS",
+    "https://github.com/curtisbright/Delisle-MOLS"
+  ],
+  "last_run_utc": "2026-11-01T17:53:40Z"
 }
