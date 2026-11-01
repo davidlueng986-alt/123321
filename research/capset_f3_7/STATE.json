@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-01",
-  "current_hypothesis": "The 240-symmetry family has optimum 225; its canonical index-two even-permutation subgroup (order 120) has exact optimum 236. A 237 cap must break this 120 subgroup or lie outside its invariant template. Explore smaller subgroup orbit models or 27-block affine twists.",
-  "next_experiment": "CAP-004D: classify tractable proper subgroups of the verified even120 group, prioritize group orders 60/40/24; exact orbit constraints and cross-shadows with explicit complexity gates; also test 27-block twists.",
-  "last_run_id": "CAP-004C-2026-11-01-even120-invariant-exact",
-  "last_run_result": "VERIFIED_RESTRICTED_THEOREM_EVEN120_OPTIMUM_236_CI_GREEN",
+  "current_hypothesis": "CAP-004D proved the derived order-60 subgroup of even120 has exactly the same 21 orbits on F3^6, so the restricted optimum remains 236. No order-40 subgroup of even120 exists. An explicit order-24 subgroup has 45 orbits, making naive 2^45 DP infeasible; prioritize hypergraph pruning or non-invariant affine twists.",
+  "next_experiment": "CAP-004E: bound the number of cap-valid orbit unions for an explicit order-24 subgroup using conflict-hypergraph propagation / branch-and-bound before any 3-slice exact optimization; alternatively 27-block affine twisting with exact cross-shadow.",
+  "last_run_id": "CAP-004D-2026-11-01-derived60-orbit-equivalence",
+  "last_run_result": "VERIFIED_LOCAL_FINITE_GROUP_PROOF_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -33,7 +33,8 @@
     "CAP-003B",
     "CAP-003C",
     "CAP-004B",
-    "CAP-004C"
+    "CAP-004C",
+    "CAP-004D"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
   "baseline_secant_audit": {
@@ -55,7 +56,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-01T19:53:00Z",
+  "last_updated_utc": "2026-11-01T21:00:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -174,5 +175,31 @@
     "script": "research/capset_f3_7/c6_even120_invariant_exact_optimum.py",
     "report": "research/capset_f3_7/C6_EVEN120_236_CERTIFICATE_2026-11-01.md",
     "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41344134381"
+  },
+  "c6_subgroup_lattice_audit": {
+    "even120_order": 120,
+    "derived_subgroup_order": 60,
+    "derived_is_perfect": true,
+    "center_order": 2,
+    "order_60_orbits_identical_to_120": true,
+    "order_60_orbit_count": 21,
+    "order_60_restricted_optimum_inherited": 236,
+    "order_40_subgroup_exists": false,
+    "order_24_subgroup_exists": true,
+    "order_24_orbit_count": 45,
+    "order_24_orbit_size_histogram": {
+      "1": 1,
+      "6": 4,
+      "8": 4,
+      "12": 16,
+      "24": 20
+    },
+    "order_24_individually_cap_valid_orbits": 33,
+    "order_24_optimum": "NOT_COMPUTED",
+    "status": "VERIFIED_LOCAL_COMPUTATION_CI_PENDING",
+    "script": "research/capset_f3_7/c6_subgroup_lattice_certificate.py",
+    "report": "research/capset_f3_7/C6_SUBGROUP_60_24_CERTIFICATE_2026-11-01.md",
+    "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41349642936",
+    "global_bound_improved": false
   }
 }
