@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "E008: do NOT repeat Egan A/B <=5-symbol trades; generate genuinely different first Latin squares A, seek orthogonal mates B with >=10 common transversals AND complete 100-cell support, compare bounded exact-cover/SAT search, and log UNKNOWN timeouts. Re-audit external solution status first.",
-  "current_hypothesis": "H1-NEW-A+H2-COVERAGE-GUIDED",
-  "last_experiment": "MOLS10-E007",
+  "next_action": "E012: first audit prior art for Egan near-triple fixed-pair optimality. Then seek orthogonal mates for 48 E011 first-square Latin-trade variants using a bounded structured SAT/CP-SAT or MILP solver with verified normalization; report timeout UNKNOWN. Prioritize common transversal >=10 and full cell support. Do not rerun improving B with Egan A,C fixed or C with A,B fixed: both proven global optima=91 by exact certificates.",
+  "current_hypothesis": "H12-DIVERSE-A-STRUCTURED-MATE-SEARCH",
+  "last_experiment": "MOLS10-E011",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41336699274",
   "last_verified_results": [
@@ -24,9 +24,13 @@
     "E004 Egan A 200 deterministic seeds: 91 distinct normalized mates, 0 passed joint-transversal full-cell-support screen; seed 14 is known Egan B",
     "E005 Egan A/B no proper two-symbol component flips; Egan A/C and Parker A/B each have 3",
     "E006 Egan A/B 3-symbol 0 alternative supports; 4-symbol 6 neighbors max 4 transversals; 5-symbol 36 neighbors max 4",
-    "E007 Parker A 12 seeds: 11 UNKNOWN_BUDGET and seed 8 verified mate with 0 joint transversals"
+    "E007 Parker A 12 seeds: 11 UNKNOWN_BUDGET and seed 8 verified mate with 0 joint transversals",
+    "E008: exact 9-cell deletion dual, 1080 independently cross-checked A-transversals, proves global optimum 91 for Egan fixed (A,C) varying orthogonal Bprime.",
+    "E009: exact signed rational half-integer dual, sum 45/2 and 1104 transversals, proves Parker fixed A,B overlay with any A-orthogonal Cprime <=77; attainability NOT proved.",
+    "E010: exact signed rational half-integer dual, sum 18/2 and 1080 transversals, proves global optimum 91 for Egan fixed (A,B) varying orthogonal Cprime.",
+    "E011: 48 proper two-symbol first-A Latin trades; transversal counts 840..1000 vs original 1080, so nonparatopic to original A; none remain orthogonal to published B/C. 12 bounded mate attempts UNKNOWN; no nonexistence claim"
   ],
-  "certificate_path": "research/mols10/E003_E005_REPORT.md",
+  "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
     "research/mols10/transversals.py",
     "research/mols10/test_transversals.py",
@@ -35,7 +39,13 @@
     "research/mols10/parker_frontier.py",
     "research/mols10/sample_mates.py",
     "research/mols10/two_symbol_trades.py",
-    "research/mols10/k_symbol_trades.py"
+    "research/mols10/k_symbol_trades.py",
+    "research/mols10/dual_certificates.py",
+    "research/mols10/signed_dual.py",
+    "research/mols10/first_square_trades.py",
+    "research/mols10/E008_DUAL_CERTIFICATE.json",
+    "research/mols10/E009_PARKER_WEIGHTED77.json",
+    "research/mols10/E010_EGAN_AB_WEIGHTED91.json"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
@@ -46,9 +56,11 @@
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
     "research/mols10/E006_E007_REPORT.md",
-    "research/mols10/E006_E007_RESULTS.json"
+    "research/mols10/E006_E007_RESULTS.json",
+    "research/mols10/E008_E011_OPTIMALITY_PROOFS.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "Conditional fixed-pair obstruction / restricted trade enumerations / biased heuristic samples only. Global existence of three MOLS(10) NOT settled. Parker 40-seed aborted and 11 small-budget seeds are UNKNOWN, not UNSAT.",
-  "last_ci_result": "SUCCESS: 28 tests in 9.733s on Python 3.12; all exact witness and restricted-neighborhood regressions passed"
+  "limitations": "Global 3-MOLS(10) remains OPEN. E008/E010 are exact conditional OPTIMALITY for particular fixed Egan pairs; E009 is conditional UPPER BOUND 77 for Parker pair, not attained. E011 has Latin first-square variants but no verified new orthogonal mate, tiny-budget searches UNKNOWN. Novelty relative to literature not yet established.",
+  "last_ci_result": "SUCCESS: 28 tests in 9.733s on Python 3.12; all exact witness and restricted-neighborhood regressions passed",
+  "external_status_review": "2026-11-02: no credible full solution located; Bright-Keita-Stevens 2026 and TheoremDB status remain OPEN; external ProofAtlas notes not independently proven."
 }
