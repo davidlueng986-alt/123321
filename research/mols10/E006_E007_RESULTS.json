@@ -1,0 +1,117 @@
+{
+  "schema": "mols10-research-experiments-v1",
+  "date": "2026-11-02",
+  "global_status": "OPEN",
+  "source_code": [
+    "k_symbol_trades.py",
+    "sample_mates.py",
+    "verify.py"
+  ],
+  "E006": {
+    "scope": "fixed-pair k-symbol support re-partitions; complete only where solution caps not hit",
+    "per_support_solution_cap": 1000,
+    "experiments": [
+      {
+        "pair": "Egan A/B",
+        "k": 3,
+        "supports": 120,
+        "alternative_supports": 0,
+        "verified_neighbors": 0
+      },
+      {
+        "pair": "Egan A/B",
+        "k": 4,
+        "supports": 210,
+        "alternative_supports": 3,
+        "verified_neighbors": 6,
+        "best_joint_transversal_count": 4
+      },
+      {
+        "pair": "Egan A/B",
+        "k": 5,
+        "supports": 252,
+        "alternative_supports": 18,
+        "verified_neighbors": 36,
+        "best_joint_transversal_count": 4
+      },
+      {
+        "pair": "Egan A/C",
+        "k": 3,
+        "supports": 120,
+        "alternative_supports": 24,
+        "verified_neighbors": 24,
+        "best_joint_transversal_count": 1
+      },
+      {
+        "pair": "Egan A/C",
+        "k": 4,
+        "supports": 210,
+        "alternative_supports": 84,
+        "verified_neighbors": 93,
+        "best_joint_transversal_count": 3
+      },
+      {
+        "pair": "Egan A/C",
+        "k": 5,
+        "supports": 252,
+        "alternative_supports": 162,
+        "verified_neighbors": 237,
+        "best_joint_transversal_count": 3
+      },
+      {
+        "pair": "Parker A/B",
+        "k": 3,
+        "supports": 120,
+        "alternative_supports": 22,
+        "verified_neighbors": 26,
+        "best_joint_transversal_count": 0
+      },
+      {
+        "pair": "Parker A/B",
+        "k": 4,
+        "supports": 210,
+        "alternative_supports": 70,
+        "verified_neighbors": 98,
+        "best_joint_transversal_count": 0
+      }
+    ]
+  },
+  "E007": {
+    "fixed_first_square": "Bose–Shrikhande–Parker A",
+    "single_square_transversal_count": 1104,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "node_budget_per_seed": 20000,
+    "wall_seconds_per_seed": 0.5,
+    "observed_statuses": [
+      "UNKNOWN_BUDGET",
+      "UNKNOWN_BUDGET",
+      "UNKNOWN_BUDGET",
+      "UNKNOWN_BUDGET",
+      "UNKNOWN_BUDGET",
+      "UNKNOWN_BUDGET",
+      "UNKNOWN_BUDGET",
+      "UNKNOWN_BUDGET",
+      "SAT_EXACT",
+      "UNKNOWN_BUDGET",
+      "UNKNOWN_BUDGET",
+      "UNKNOWN_BUDGET"
+    ],
+    "seed8_nodes": 303,
+    "seed8_valid_orthogonal_mate": true,
+    "seed8_common_transversals": 0,
+    "scope": "biased bounded sample, hardware-dependent timeout outcomes; no global nonexistence"
+  }
+}
