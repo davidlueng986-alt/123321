@@ -9,11 +9,11 @@
   "verified_local_best": 236,
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
-  "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "Any >=237 cap must break the order-240 signed-permutation symmetry of the known C6 magic-basis 112-cap; investigate proper subgroup invariance and 27-block twisting, rather than full-240-invariant orbit unions.",
-  "next_experiment": "CAP-004C: classify proper subgroups (index 2,3,5 where available), orbit structures and bounded exact 7D cap search; use cross-shadow pruning and independent arithmetic verification.",
-  "last_run_id": "CAP-004B-2026-11-01-240-invariant-exact-enumeration",
-  "last_run_result": "VERIFIED_RESTRICTED_THEOREM_C6_240_INVARIANT_OPTIMUM_225_CI_GREEN",
+  "source_recheck_date": "2026-11-01",
+  "current_hypothesis": "The 240-symmetry family has optimum 225; its canonical index-two even-permutation subgroup (order 120) has exact optimum 236. A 237 cap must break this 120 subgroup or lie outside its invariant template. Explore smaller subgroup orbit models or 27-block affine twists.",
+  "next_experiment": "CAP-004D: classify tractable proper subgroups of the verified even120 group, prioritize group orders 60/40/24; exact orbit constraints and cross-shadows with explicit complexity gates; also test 27-block twists.",
+  "last_run_id": "CAP-004C-2026-11-01-even120-invariant-exact",
+  "last_run_result": "LOCAL_VERIFIED_RESTRICTED_THEOREM_EVEN120_OPTIMUM_236_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -31,7 +31,9 @@
     "CAP-002C",
     "CAP-003A",
     "CAP-003B",
-    "CAP-003C"
+    "CAP-003C",
+    "CAP-004B",
+    "CAP-004C"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
   "baseline_secant_audit": {
@@ -53,7 +55,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-01T18:54:00Z",
+  "last_updated_utc": "2026-11-01T19:53:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -124,5 +126,52 @@
     "script": "research/capset_f3_7/c6_invariant_exact_optimum.py",
     "report": "research/capset_f3_7/C6_INVARIANT_225_CERTIFICATE_2026-11-01.md",
     "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41338916833"
+  },
+  "c6_even120_invariant_restricted_optimum": {
+    "subgroup_order": 120,
+    "orbit_count": 21,
+    "orbit_sizes": [
+      1,
+      12,
+      30,
+      30,
+      60,
+      20,
+      20,
+      60,
+      30,
+      60,
+      30,
+      60,
+      60,
+      60,
+      60,
+      60,
+      12,
+      20,
+      20,
+      12,
+      12
+    ],
+    "valid_single_slice_masks": 174,
+    "within_slice_orbit_line_classes": 780,
+    "cross_slice_ordered_orbit_line_classes": 4089,
+    "all_unordered_pairs": 15225,
+    "pairs_evaluated_after_safe_bound": 7598,
+    "optimum": 236,
+    "witness_masks": [
+      462848,
+      344128,
+      1048576
+    ],
+    "witness_slice_sizes": [
+      112,
+      112,
+      12
+    ],
+    "status": "VERIFIED_LOCAL_COMPUTATION_CI_PENDING_RESTRICTED_ONLY",
+    "global_bound_improved": false,
+    "script": "research/capset_f3_7/c6_even120_invariant_exact_optimum.py",
+    "report": "research/capset_f3_7/C6_EVEN120_236_CERTIFICATE_2026-11-01.md"
   }
 }
