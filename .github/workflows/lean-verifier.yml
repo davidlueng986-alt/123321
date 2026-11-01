@@ -33,27 +33,21 @@ jobs:
             exit 1
           fi
 
-      - name: Install Lean 4 and Lake
+      - name: Bootstrap elan and Lean for dependency resolution
+        shell: bash
+        run: |
+          curl --fail --silent --show-error --location https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Create Lake dependency manifest
+        run: lake update
+
+      - name: Compile and kernel-check with Lean and Mathlib
         uses: leanprover/lean-action@v1
         with:
           auto-config: false
-          build: false
+          build: true
+          build-args: "--wfail"
           test: false
-          use-mathlib-cache: false
-          use-github-cache: false
-
-      - name: Cache build artifacts
-        uses: actions/cache@v4
-        with:
-          path: .lake
-          key: lean-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lakefile.toml') }}-v1
-          restore-keys: |
-            lean-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lakefile.toml') }}-
-
-      - name: Resolve Mathlib and restore Mathlib build cache
-        run: |
-          lake update
-          lake exe cache get
-
-      - name: Kernel-check all Lean proofs
-        run: lake build --wfail
+          use-mathlib-cache: true
+          use-github-cache: true
