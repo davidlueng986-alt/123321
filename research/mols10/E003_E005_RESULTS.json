@@ -1,0 +1,93 @@
+{
+  "schema": "mols10-experiments-v1",
+  "research_date": "2026-11-02",
+  "global_problem_status": "OPEN",
+  "experiments": [
+    {
+      "id": "E003",
+      "name": "Bose–Shrikhande–Parker pair certificate",
+      "source_url": "https://sites.ualberta.ca/~dwiens/stat568/misc%20resources/PWJohn.pdf",
+      "pair_sha256": "1fea184b868434e5ecc9d9acb27061d0429850b5bc3e257ff31158a7bd632dfe",
+      "orthogonal_pair": true,
+      "common_transversals": 0,
+      "frontier_profile": [
+        1,
+        10,
+        70,
+        329,
+        1046,
+        1983,
+        2233,
+        1471,
+        318,
+        21,
+        0
+      ],
+      "last_row_candidates": 21,
+      "extension_status": "UNSAT_FIXED_PAIR_CERTIFIED",
+      "scope": "fixed pair only"
+    },
+    {
+      "id": "E004",
+      "name": "Egan A seeded orthogonal-mate sampling",
+      "sampling_start": 0,
+      "sampling_stop_exclusive": 200,
+      "seeds_attempted": 200,
+      "single_A_transversals": 1080,
+      "sat_mates": 200,
+      "distinct_first_row_normalized_mates": 91,
+      "common_transversal_count_histogram": {
+        "0": 37,
+        "1": 28,
+        "2": 6,
+        "3": 13,
+        "4": 3,
+        "6": 3,
+        "14": 1
+      },
+      "passing_necessary_coverage_screen": 0,
+      "best_seed": 14,
+      "best_seed_same_as_published_egan_B": true,
+      "scope": "biased heuristic sample only"
+    },
+    {
+      "id": "E005",
+      "name": "Two-symbol component-flip screening",
+      "symbol_pairs_per_instance": 45,
+      "results": [
+        {
+          "pair": "Egan A/B",
+          "nontrivial_component_flips": 0
+        },
+        {
+          "pair": "Egan A/C",
+          "nontrivial_component_flips": 3,
+          "flipped_counts": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "pair": "Parker A/B",
+          "nontrivial_component_flips": 3,
+          "flipped_counts": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "scope": "exhaustive two-symbol component-flip neighborhood, not full Latin trade space"
+    }
+  ],
+  "blocked": [
+    {
+      "name": "Parker-A naive 40-seed sampling",
+      "status": "UNKNOWN_TIMEOUT",
+      "note": "Tool execution budget exceeded, no conclusion"
+    }
+  ],
+  "next_action": "E006: k=3 symbol re-coloring trades of known mates; E007: new fixed A with bounded sample; only proceed to exact-cover if >=10 common transversals and full 100 cell coverage.",
+  "report": "research/mols10/E003_E005_REPORT.md"
+}
