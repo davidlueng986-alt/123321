@@ -44,7 +44,8 @@
     "E017: positive GF(4) order-four Latin triple independently verified 16/16/16; Parker A and Parker trade65 seed1 replays match seed17 exhaustive counts; GitHub Actions verify unit tests succeeded.",
     "E018: independently formulated exact fixed-A 3-MOLS binary MILP using two A-transversal partitions and cross-intersection constraints; GF4 positive 16/16/16, order6 32-transversal negative solver-complete UNSAT.",
     "E018: Parker A has 1104 transversals and 236104 disjoint unordered pairs; 226 pairs lack full-cell compatible-C support, yielding 452 valid pair cuts. All 1104 single transversals pass cell-support.",
-    "E018: Parker exact MILP 2208 binaries / 2408 rows (873976 nonzeros) HiGHS 8s UNKNOWN; with 452 pair cuts 2860 rows (874880 nonzeros) also UNKNOWN. NOT an independent Parker exclusion certificate."
+    "E018: Parker exact MILP 2208 binaries / 2408 rows (873976 nonzeros) HiGHS 8s UNKNOWN; with 452 pair cuts 2860 rows (874880 nonzeros) also UNKNOWN. NOT an independent Parker exclusion certificate.",
+    "E018: independent stdlib 10! permutation enumeration reproduces Parker 1104 A-transversals, 236104 disjoint pairs, 226 blocked pairs; local unittest PASSED (5.323s), CI run pending."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -76,7 +77,8 @@
     "research/mols10/E017_RESULTS.json",
     "research/mols10/test_E017_replay.py",
     "research/mols10/E018_compact_milp.py",
-    "research/mols10/E018_RESULTS.json"
+    "research/mols10/E018_RESULTS.json",
+    "research/mols10/test_E018_pair_support.py"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
@@ -97,7 +99,7 @@
   ],
   "last_run_date": "2026-11-01",
   "limitations": "Global 3-MOLS(10) OPEN. E018 new exact MILP independently formulated and controls pass, but Parker A baseline and paircuts both HiGHS UNKNOWN after 8-second solver limits; no SAT/DRAT/FRAT certificate. E017 DFS fixed-A claims remain not independently certified by E018. No global symmetry coverage or 100/100/100 witness.",
-  "last_ci_result": "E017 GitHub Actions run 41349306193 SUCCESS; E018 local GF4 and order6 controls pass; E018 GitHub CI not yet verified.",
+  "last_ci_result": "E018 test_E018_pair_support.py added at commit cf04320fa928a876866eef1825f8f69d63c76682; local unittest PASS; CI for this commit pending. E018 exact SciPy MILP not covered by GitHub workflow (no SciPy installation).",
   "external_status_review": "2026-11-01 21:47 UTC: EJC Bright–Keita–Stevens (2026-02-13), arXiv Barnoff–Bright 2605.02132v2 (2026-07-04), targeted web/arXiv check; no independently verifiable unrestricted resolution located.",
   "current_math_result": {
     "egan_fixed_A_C_optimum": 91,
