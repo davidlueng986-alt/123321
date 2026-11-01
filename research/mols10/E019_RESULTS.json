@@ -1,0 +1,109 @@
+{
+  "schema": "MOLS10-E019-depth3-v1",
+  "input_sha256": "1694eda37452b6709d8f8d77d8dfcddae08e18c6a94e4aabc102bec6323c1c77",
+  "transversals": 1104,
+  "disjoint_pairs": 236104,
+  "pair_support_blocked": 226,
+  "pair_surviving": 235878,
+  "blocked_pair_examples": [
+    [
+      0,
+      111,
+      99
+    ],
+    [
+      0,
+      118,
+      99
+    ],
+    [
+      0,
+      131,
+      78
+    ],
+    [
+      0,
+      132,
+      98
+    ]
+  ],
+  "rooted_at": 0,
+  "root_disjoint_triples": 39528,
+  "root_blocked_triples": 29973,
+  "root_new_depth3_blocked": 23296,
+  "root_new_witness": [
+    0,
+    109,
+    250,
+    41
+  ],
+  "seed": 19,
+  "sample": 20000,
+  "triples_attempted": 20000,
+  "triples_blocked": 10140,
+  "triples_survived": 9860,
+  "blocked_triple_examples": [
+    [
+      672,
+      984,
+      1035,
+      19
+    ],
+    [
+      124,
+      430,
+      844,
+      36
+    ],
+    [
+      227,
+      363,
+      1046,
+      51
+    ],
+    [
+      91,
+      107,
+      1054,
+      13
+    ],
+    [
+      212,
+      352,
+      691,
+      83
+    ],
+    [
+      764,
+      845,
+      219,
+      0
+    ],
+    [
+      653,
+      861,
+      441,
+      69
+    ],
+    [
+      126,
+      508,
+      261,
+      1
+    ],
+    [
+      388,
+      1029,
+      806,
+      88
+    ],
+    [
+      259,
+      940,
+      98,
+      47
+    ]
+  ],
+  "elapsed_seconds": 2.983,
+  "status": "BOUNDED_SUPPORT_AUDIT_NOT_GLOBAL_PROOF"
+}
