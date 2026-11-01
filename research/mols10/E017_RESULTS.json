@@ -1,0 +1,192 @@
+{
+  "schema": "MOLS10-E017-fixed-A-v1",
+  "timestamp_utc": "2026-11-01T20:54:37Z",
+  "code": "E017_replay.py",
+  "code_sha256_local": "87bf8cc8597944d99b44de762bf31d125077c0d7bdc1bc5b35e744ce46733f96",
+  "scope": "Only named fixed first squares; no unrestricted 3-MOLS(10) resolution",
+  "inputs": {
+    "Egan_A_sha256": "965a201951eb261b3ec9c8575163e8d7a6f70e384fd90699a77bc59a1b0ebc33",
+    "Parker_A_sha256": "1694eda37452b6709d8f8d77d8dfcddae08e18c6a94e4aabc102bec6323c1c77"
+  },
+  "new_exclusions": {
+    "Parker_A": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "1694eda37452b6709d8f8d77d8dfcddae08e18c6a94e4aabc102bec6323c1c77",
+      "transversals": 1104,
+      "nodes": 49199,
+      "pruned_support": 37286,
+      "dead_end": 161,
+      "seed": 17
+    },
+    "Egan_two_trade_0_0_1": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "2e00f2241a22629b3c1793546576878943b4aa3a1bac1c3501a9a36454dcb0f0",
+      "transversals": 948,
+      "nodes": 18284,
+      "pruned_support": 13956,
+      "dead_end": 150,
+      "seed": 17
+    },
+    "Egan_two_trade_1_0_20": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "9dbd0481872326aa0539ddd8d900837b7dbd6e2c770173c9b9e129bca6a64e60",
+      "transversals": 864,
+      "nodes": 17155,
+      "pruned_support": 13211,
+      "dead_end": 124,
+      "seed": 17
+    },
+    "Egan_two_trade_2_0_21": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "810b7c2c99b1363711f9db21d48f7369404a1baff8bf73d4b17950af0d351d5e",
+      "transversals": 836,
+      "nodes": 12000,
+      "pruned_support": 9447,
+      "dead_end": 88,
+      "seed": 17
+    },
+    "Egan_two_trade_3_0_22": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "43154818c82d51c0e1d8900d0af31f0d4abbd5fe638a5004aa59edaed7c3aebf",
+      "transversals": 780,
+      "nodes": 10317,
+      "pruned_support": 8285,
+      "dead_end": 75,
+      "seed": 17
+    },
+    "Parker_trade_0": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "5e12140bb41b52bbc05c0295fbe9b4b529538dc2209426c7264c6befb9041ba4",
+      "transversals": 912,
+      "nodes": 26154,
+      "pruned_support": 20036,
+      "dead_end": 155,
+      "seed": 17
+    },
+    "Parker_trade_1": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "edb8b446d48d4d959be6062f21e66e00ed08d3901e3901d0fcaf999740ecf5e3",
+      "transversals": 844,
+      "nodes": 12813,
+      "pruned_support": 10210,
+      "dead_end": 52,
+      "seed": 17
+    },
+    "Parker_trade_2": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "3e57f6862860d034a99b28869297f2a595fc7395f1fb4493037fa36e07535d13",
+      "transversals": 904,
+      "nodes": 22913,
+      "pruned_support": 17436,
+      "dead_end": 159,
+      "seed": 17
+    },
+    "Parker_trade_3": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "ca09ccd4a6dafaa13d364cfb982a64dcbd462847b4fb4241da2ce49133dd7220",
+      "transversals": 904,
+      "nodes": 22958,
+      "pruned_support": 17476,
+      "dead_end": 144,
+      "seed": 17
+    },
+    "Parker_trade_10": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "c85802ea202dec27c25829e8aa5a219a01d70db0db9a62feef3d597d6aeb518f",
+      "transversals": 912,
+      "nodes": 22299,
+      "pruned_support": 17089,
+      "dead_end": 155,
+      "seed": 17
+    },
+    "Parker_trade_15": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "82be435579f082d1233fbe9bb0abe93a3c1af2776aaa8340bdd87ff08d06d825",
+      "transversals": 904,
+      "nodes": 22953,
+      "pruned_support": 17452,
+      "dead_end": 157,
+      "seed": 17
+    },
+    "Parker_trade_20": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "f37fe7c609f41626d52fb720dfb48ab1e4ca0cb4f02b1e00096070804decf5e9",
+      "transversals": 912,
+      "nodes": 24829,
+      "pruned_support": 19008,
+      "dead_end": 213,
+      "seed": 17
+    },
+    "Parker_trade_30": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "6d99799ed09017d4debe7481e3b8f506dcb5f1d3c80bede534a16e50145ccaba",
+      "transversals": 888,
+      "nodes": 21147,
+      "pruned_support": 16087,
+      "dead_end": 175,
+      "seed": 17
+    },
+    "Parker_trade_40": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "7a2a6dcebcd9eeaed259b0f20effc4e81d7a6fd1ded0c69704ef73af6dd3db85",
+      "transversals": 864,
+      "nodes": 17795,
+      "pruned_support": 13909,
+      "dead_end": 114,
+      "seed": 17
+    },
+    "Parker_trade_50": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "20b6a78d8ab3d216f8b9f1570b4938203d6dd467bb6d4200c9816715edf2859c",
+      "transversals": 912,
+      "nodes": 26089,
+      "pruned_support": 20010,
+      "dead_end": 159,
+      "seed": 17
+    },
+    "Parker_trade_60": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "2eeed8cc9adaee9d422abd1886ea901194984299e06aff7fad340c01739edf72",
+      "transversals": 888,
+      "nodes": 21132,
+      "pruned_support": 16070,
+      "dead_end": 158,
+      "seed": 17
+    },
+    "Parker_trade_65": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "sha256": "617ba6d4120f7d935b219bedee01b500289158c0e60e8dce3db92526670038bb",
+      "transversals": 1272,
+      "nodes": 186150,
+      "pruned_support": 140325,
+      "dead_end": 333,
+      "seed": 17
+    }
+  },
+  "audit_replays": {
+    "Egan_A": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "transversals": 1080,
+      "nodes": 24875,
+      "pruned_support": 18407
+    },
+    "Egan_trade12": {
+      "status": "UNSAT_FIXED_A_EXHAUSTIVE",
+      "transversals": 904,
+      "nodes": 17377,
+      "pruned_support": 13324
+    }
+  },
+  "controls": {
+    "GF4_order4": "LATIN+3_OVERLAYS_16_16_16_VERIFIED; SAT_SUPPORT_ONLY",
+    "Parker_A_seed1": "UNSAT_FIXED_A_EXHAUSTIVE; same nodes/prunes",
+    "Parker_trade65_seed1": "UNSAT_FIXED_A_EXHAUSTIVE; same nodes/prunes"
+  },
+  "counts": {
+    "new_fixed_A": 17,
+    "independent_E016_replays": 2,
+    "Egan_disjoint_two_trade_unique_labeled": 774,
+    "Parker_single_trade_count": 66
+  },
+  "limitations": "No independent SAT/DRAT/FRAT certificate; algorithm independently implemented but uses same exact-once necessary lemma. Isotopy/paratopy novelty not established for every labeled new A. No 100/100/100 triple."
+}
