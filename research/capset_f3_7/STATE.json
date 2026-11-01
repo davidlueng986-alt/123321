@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "problem_id": "CAPSET-F3-7",
+  "status": "OPEN",
+  "goal": "Determine exact r_3(7) for cap sets in F_3^7",
+  "external_lower_bound": 236,
+  "external_published_upper_bound": 291,
+  "external_preprint_upper_bound": 288,
+  "verified_local_best": null,
+  "verified_candidate_path": null,
+  "exact_optimum_proven": false,
+  "source_recheck_date": "2026-11-02",
+  "current_hypothesis": "Reproduce known 236-point construction and verify",
+  "next_experiment": "CAP-001",
+  "last_run_id": "bootstrap-2026-11-02",
+  "last_run_result": "INITIALIZATION_ONLY",
+  "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
+  "branch": "research/capset-f3-7",
+  "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
+  "sources": [
+    "https://cairn-commons.com/problems/cap-sets-dim-7",
+    "https://zerothesis.com/challenges/cap-sets"
+  ]
+}
