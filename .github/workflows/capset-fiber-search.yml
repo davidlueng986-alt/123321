@@ -29,3 +29,5 @@ jobs:
         run: python research/capset_f3_7/fiber_reconstruction_milp.py --fibers 3 --top 8 --time-limit 10
       - name: Solve top eight four-fiber reconstructions
         run: python research/capset_f3_7/fiber_reconstruction_milp.py --fibers 4 --top 8 --time-limit 10
+      - name: Exploratory five-fiber 237-point feasibility (timeout is inconclusive)
+        run: python research/capset_f3_7/fiber_reconstruction_milp.py --fibers 5 --top 1 --target-total 237 --time-limit 12
