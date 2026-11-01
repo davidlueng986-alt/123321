@@ -39,6 +39,8 @@ jobs:
         run: python research/capset_f3_7/paley_magic_basis_240_certificate.py
       - name: Audit all signed-permutation relative shadow templates
         run: python research/capset_f3_7/magic_signed_relative_shadow_certificate.py
+      - name: Certify exact 240-invariant 7D optimum (restricted theorem)
+        run: python research/capset_f3_7/c6_invariant_exact_optimum.py
       - name: Run deterministic sample and recheck artifact
         run: |
           python research/capset_f3_7/search_baseline.py --seed 7 --rounds 2 --out /tmp/capset_candidate.txt
