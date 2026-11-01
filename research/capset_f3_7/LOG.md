@@ -114,3 +114,12 @@ Status: VERIFIED COMPUTATION, not a novel record.
 - Known 236-point order-120 witness is also order-24 invariant; direct mod-3 coordinate verifier PASS. Therefore **restricted exact optimum =236**. This is NOT a global r3(7) upper bound and NOT a new 237 construction.
 - Durable scripts: c6_order24_full_exact_data.py, c6_order24_full_exact.cpp, test_c6_order24_full_exact.py; report C6_ORDER24_FULL_EXACT_236_CERTIFICATE_2026-11-01.md. CI push triggered, confirmation pending; do not claim CI GREEN until checked.
 - Falsified strategy: solving the CAP-004F order-24 SAT instance is no longer needed to decide this restricted family (it can serve as independent proof audit). Pivot CAP-005B toward genuinely non-invariant 27-block affine twists, smaller symmetry and certified global upper bounds. Literature novelty not established; global exact r3(7) remains OPEN. External 236/291 status page (2026-10-03) and Thackeray 288 preprint rechecked.
+
+## 2026-11-01 | CAP-005A | exact 27-fiber reconstruction barrier | LOCAL CPU PASS, CI PENDING
+- Prior CAP-004G GitHub Actions 41359681030 is SUCCESS; its complete order24 restricted optimum=236 is CI green.
+- Independently replayed known 236 cap via exact mod-3 checker; 1951 outsiders, 10..56 original secants per outsider.
+- Exhaustively enumerated 27+351+2925+17550=20853 choices of <=4 released coordinate F3^4 fibers (indexed by first three coordinates). Outsider admissibility requires each original secant to touch a released fiber.
+- Complete histograms k1 {0:27}; k2 {0:335,1:16}; k3 {0:2501,1:408,2:8,4:8}; k4 {0:12510,1:4320,2:408,4:160,5:96,6:56}. Max outsiders 0,1,4,6.
+- Every outsider requires >=10 deletions from the original cap, so no replacement confined to <=4 fibers can improve 236. This is NOT global r3(7) progress; literature novelty unverified.
+- Scratch run deterministic CPU ~2.6 s, no seed, GPU, paid compute, or optimizer. Code cap005_27_fiber_barrier.py, test_cap005_27_fiber_barrier.py; report CAP005_27_FIBER_BARRIER_2026-11-01.md. CI pending for this commit.
+- Meta-audit: pure translations of fixed fiber patterns preserve 236 size. Pivot to >=5 released fibers or occupancy-changing non-invariant templates; keep global upper bound research distinct.

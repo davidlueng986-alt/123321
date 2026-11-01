@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-01",
-  "current_hypothesis": "CAP-004G LOCAL EXACT: full specified order-24-invariant optimum=236 via exhaustive 3,424,629 eligible slice-mask pairs; all 65,373,895 unordered pairs covered by proven weight gate. CI pending; no >=237 or global bound. Pivot to non-invariant 27-block affine twists.",
-  "next_experiment": "Confirm CAP-004G GitHub CI; independently audit full-order24 bitset certificate or SAT cross-check if needed. Prioritize non-order24-invariant 27-block affine twisting / smaller symmetry, and separately certified global upper-bound constraints.",
-  "last_run_id": "CAP-004G-2026-11-01-order24-full-exact",
-  "last_run_result": "LOCAL_EXACT_ORDER24_INVARIANT_OPTIMUM_236_CI_PENDING",
+  "current_hypothesis": "CAP-005A LOCAL EXACT: no improvement by editing <=4 of 27 first-three-coordinate F3^4 fibers. Max outsiders 0,1,4,6; any outsider forces >=10 original deletions. CAP-004G CI GREEN; no global bound.",
+  "next_experiment": "Confirm CAP-005A CI. Test >=5 released 4D fibers or occupancy-changing non-invariant 27-block templates; pure translations cannot increase cardinality. Separately pursue global certified upper bounds.",
+  "last_run_id": "CAP-005A-2026-11-01-27fiber-barrier",
+  "last_run_result": "LOCAL_EXACT_FOUR_FIBER_NO_IMPROVEMENT_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -37,7 +37,9 @@
     "CAP-004D",
     "CAP-004E",
     "CAP-004F-ENCODING",
-    "CAP-004G-LOCAL"
+    "CAP-004G-LOCAL",
+    "CAP-004G-CI",
+    "CAP-005A-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
   "baseline_secant_audit": {
@@ -59,7 +61,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-01T22:49:00Z",
+  "last_updated_utc": "2026-11-01T23:54:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -253,7 +255,7 @@
   "c6_order24_full_exact": {
     "scope": "Entire specific order-24 subgroup invariant family in F3^7",
     "optimum": 236,
-    "status": "LOCAL_EXACT_COMPUTATION_CI_PENDING",
+    "status": "VERIFIED_COMPUTATION_CI_GREEN_RESTRICTED_ONLY",
     "group_order": 24,
     "orbit_count": 45,
     "valid_single_slice_masks": 11434,
@@ -271,6 +273,28 @@
     "ci_test": "research/capset_f3_7/test_c6_order24_full_exact.py",
     "report": "research/capset_f3_7/C6_ORDER24_FULL_EXACT_236_CERTIFICATE_2026-11-01.md",
     "global_bound_improved": false,
-    "external_novelty_established": false
+    "external_novelty_established": false,
+    "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41359681030"
+  },
+  "cap005_27_fiber_barrier": {
+    "scope": "First-three-coordinate F3^4 fibers, at most four released",
+    "released_fiber_counts": [
+      27,
+      351,
+      2925,
+      17550
+    ],
+    "max_admissible_outsiders": [
+      0,
+      1,
+      4,
+      6
+    ],
+    "min_original_deletions_if_any_outsider": 10,
+    "status": "LOCAL_EXACT_CI_PENDING",
+    "script": "research/capset_f3_7/cap005_27_fiber_barrier.py",
+    "report": "research/capset_f3_7/CAP005_27_FIBER_BARRIER_2026-11-01.md",
+    "global_bound_improved": false,
+    "novelty_established": false
   }
 }

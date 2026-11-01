@@ -1,3 +1,10 @@
+## CAP-005A update (2026-11-01 23:54 UTC)
+- CAP-004G [CI GREEN] Full order24 invariant exact optimum=236 confirmed in run 41359681030; stop duplicate SAT exploration for discovery.
+- CAP-005A [LOCAL EXACT / CI PENDING] All 20,853 release sets of <=4 first-three-coordinate F3^4 fibers: max admissible outsiders 0/1/4/6 for k=1/2/3/4. Since any outsider forces >=10 original deletions, cannot improve 236 inside <=4 such fibers. This is a restricted reconstruction barrier, NOT a global bound. See cap005_27_fiber_barrier.py and CAP005_27_FIBER_BARRIER_2026-11-01.md.
+- CAP-005B [P0] Non-invariant occupancy-changing 27-block template, or exact >=5-fiber release constraints. Pure per-block translations preserve size and cannot produce 237.
+- CAP-007 [P1] Independently certify a global upper bound. Published status 291; preprint 288 not independently reviewed.
+- META-AUDIT: Avoid repeating symmetry-restricted searches and translation-only moves. Literature novelty still unverified; exact global r3(7) remains OPEN.
+
 ## CAP-004G update (2026-11-01 22:49 UTC)
 - CAP-004G [LOCAL EXACT COMPUTATION / CI PENDING] Exhaustive full order-24-invariant 237 decision: 11,434 cap-valid slice masks, 65,373,895 unordered pairs covered; 3,424,629 pairs pass rigorous ordered-slice weight gate and are checked with exact cross-shadow bitsets. No >=237 cap; existing 236 witness independently direct-verified. **Full order-24-invariant optimum=236**, not a global r3(7) upper bound. Scripts: c6_order24_full_exact_data.py, c6_order24_full_exact.cpp, test_c6_order24_full_exact.py. Report: C6_ORDER24_FULL_EXACT_236_CERTIFICATE_2026-11-01.md. Recheck branch CI before marking GREEN.
 - CAP-004F-SAT [DEPRIORITIZED] Existing 237-target CNF remains undecided by SAT solver, but its restricted decision is now settled by a separate exhaustive combinatorial computation; optional SAT UNSAT proof only for independent audit, not discovery.
