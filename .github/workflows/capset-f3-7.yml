@@ -37,6 +37,8 @@ jobs:
         run: python research/capset_f3_7/fiber_saturation_certificate.py
       - name: Independently reconstruct C6 Paley magic basis and order-240 group
         run: python research/capset_f3_7/paley_magic_basis_240_certificate.py
+      - name: Audit all signed-permutation relative shadow templates
+        run: python research/capset_f3_7/magic_signed_relative_shadow_certificate.py
       - name: Run deterministic sample and recheck artifact
         run: |
           python research/capset_f3_7/search_baseline.py --seed 7 --rounds 2 --out /tmp/capset_candidate.txt
