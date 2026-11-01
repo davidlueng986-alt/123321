@@ -21,3 +21,15 @@ Small-order verification:
 GitHub CI: https://github.com/davidlueng986-alt/123321/actions/runs/41333555421 — success after regression suite including the small-order extension tests.
 Caveat: no general 3-MOLS(10) result claimed; fixed-pair UNSAT does not prove the unrestricted problem.
 Next: benchmark published A,B order 10 under bounded resources, then build and benchmark a proper SAT/CP-SAT formulation, keeping exact input hashes and proof status.
+
+
+## MOLS10-E002 | 2026-11-01 09:53 PST (2026-11-01 17:53 UTC) | Complete common-transversal obstruction for two fixed pairs
+Status check: 3-MOLS(10) still OPEN. Primary 2026 Bright–Keita–Stevens publication: https://www.combinatorics.org/ojs/index.php/eljc/article/view/v33i1p30 ; latest relevant 2026 arXiv work https://arxiv.org/abs/2605.02132 concerns orthogonal pairs and SAT improvements, not a complete triple. No reliable later full solution found in this run.
+Source input: first three Egan–Wanless matrices from https://users.monash.edu.au/~iwanless/data/MOLS/neartripleMOLS10.txt , verified against original text.
+New exact equivalence (for fixed pair X,Y): a third Latin square Z orthogonal to both is equivalent to a partition of all n² cells into n pairwise-disjoint common transversals (each meets all rows, columns, X-symbols and Y-symbols once).
+Experiment: enumerated ALL 10! row-column permutations, requiring both X and Y symbol uniqueness; independently cross-checked complete results using a separate bitmask DFS, then exhaustively enumerated disjoint transversal subsets. No timeouts/heuristic UNSAT.
+Pair (A,B), input SHA256 47f9bad62f68b317ff0fc8ae72278b07355ceac64a502e2af0030473d0c405c2: EXACTLY 14 common transversals, 12 cells in none, maximum disjoint packing 7. Thus this particular orthogonal pair has no third mate.
+Pair (A,C), input SHA256 6db5f6f5d6e1bb0743c6a9e59eeb633ac0490f8a001975083065a4f2b2b79018: EXACTLY 7 common transversals, 36 unsupported cells, maximum disjoint packing 1. Thus this particular orthogonal pair has no third mate.
+Both results independently replayed locally; GitHub CI: https://github.com/davidlueng986-alt/123321/actions/runs/41334010585 — success, including published-pair regression tests. Certificate with all 21 permutations: E002_FIXED_PAIR_CERTIFICATES.md. Code: transversals.py, test_transversals.py.
+Research impact: **conditional negative results only**; these are NOT evidence that arbitrary 3-MOLS(10) cannot exist and not claimed novel. Crucially, the prior next action (bounded search on the published pair) is now superseded by a complete exact certificate, avoiding wasted SAT compute.
+Next action E003: obtain genuinely different order-10 orthogonal pair instances (e.g. original author's Myrvold-MOLS repository https://github.com/curtisbright/Myrvold-MOLS and associated solutions/data), verify provenance, screen common-transversal count and coverage; prioritize pairs with >=10 transversals and full cell coverage. For high-transversal pairs (>20), use a scalable exact-cover/SAT packing backend and preserve UNKNOWN on timeouts. Do not rerun A/B or A/C except for regression.
