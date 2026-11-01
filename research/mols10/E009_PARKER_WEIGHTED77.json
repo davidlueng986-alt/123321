@@ -1,0 +1,138 @@
+{
+  "schema": "MOLS10-signed-rational-dual-v1",
+  "source": "research/mols10/parker_pair.json",
+  "fixed_indices": [
+    0,
+    1
+  ],
+  "description": "For every A-transversal T, sum z_ij over cells T <= 2*(10-|distinct B symbols in T|), with sum_all z_ij=45. Arbitrary C orthogonal to A therefore has at most floor(100-45/2)=77 distinct B,C pairs.",
+  "denominator": 2,
+  "weight_numerators": [
+    [
+      -2,
+      -2,
+      -2,
+      -1,
+      1,
+      -2,
+      -2,
+      2,
+      -2,
+      1
+    ],
+    [
+      -2,
+      -2,
+      0,
+      -1,
+      4,
+      -2,
+      0,
+      3,
+      0,
+      1
+    ],
+    [
+      0,
+      -1,
+      1,
+      -1,
+      4,
+      1,
+      0,
+      4,
+      0,
+      3
+    ],
+    [
+      -1,
+      0,
+      0,
+      0,
+      4,
+      0,
+      2,
+      3,
+      1,
+      2
+    ],
+    [
+      1,
+      -2,
+      1,
+      -1,
+      4,
+      -1,
+      1,
+      4,
+      1,
+      3
+    ],
+    [
+      0,
+      2,
+      1,
+      1,
+      4,
+      1,
+      2,
+      4,
+      2,
+      4
+    ],
+    [
+      0,
+      0,
+      2,
+      -2,
+      4,
+      -1,
+      0,
+      4,
+      1,
+      3
+    ],
+    [
+      -2,
+      -1,
+      0,
+      -1,
+      3,
+      -2,
+      0,
+      3,
+      -2,
+      -2
+    ],
+    [
+      -1,
+      -1,
+      0,
+      -1,
+      2,
+      -1,
+      -1,
+      4,
+      0,
+      2
+    ],
+    [
+      -2,
+      -2,
+      -2,
+      -2,
+      1,
+      -2,
+      -1,
+      1,
+      0,
+      -2
+    ]
+  ],
+  "asserted_weight_sum": 45,
+  "asserted_A_transversal_count": 1104,
+  "asserted_min_constraint_slack": 0,
+  "asserted_tight_transversal_count": 267,
+  "asserted_upper_bound": 77,
+  "scope": "Parker A,B fixed; only conditional upper bound, not claim of attaining 77 or solving open problem"
+}
