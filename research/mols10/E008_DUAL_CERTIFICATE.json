@@ -1,0 +1,67 @@
+{
+  "schema": "MOLS10-combinatorial-dual-certificate-v1",
+  "problem": "For the fixed Egan-Wanless A and C, optimize distinct (Bprime,C) ordered pairs over all Latin Bprime orthogonal to A",
+  "source": "research/mols10/near_triple.json",
+  "fixed_indices": [
+    0,
+    2
+  ],
+  "attaining_index": 1,
+  "removed_cells_zero_based": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      6,
+      0
+    ],
+    [
+      9,
+      0
+    ]
+  ],
+  "asserted_A_transversal_count": 1080,
+  "asserted_constraint_min_slack": 0,
+  "asserted_tight_count": 30,
+  "asserted_slack_histogram": {
+    "0": 30,
+    "1": 80,
+    "2": 234,
+    "3": 303,
+    "4": 212,
+    "5": 137,
+    "6": 55,
+    "7": 20,
+    "8": 6,
+    "9": 3
+  },
+  "asserted_upper_bound": 91,
+  "attaining_overlay": 91,
+  "status": "EXACT_CONDITIONAL_OPTIMALITY",
+  "scope": "A and C are fixed. Bprime varies over all Latin squares orthogonal to A. This does NOT solve unrestricted 3-MOLS(10)."
+}
