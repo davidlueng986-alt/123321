@@ -32,7 +32,7 @@ jobs:
       - name: Verify exact dual for seeded 116 outsider candidate pool
         run: python research/capset_f3_7/rational_dual_116_certificate.py
       - name: Audit 1093 hyperplane normals and Parseval identity
-        run: python research/capset_f3_7/hyperplane_spectrum_certificate.py
+        run: python research/capset_f3_7/hyperplane_spectrum_certificate.py --include-8d
       - name: Classify all 189 coordinate 5D fibers and 27-block combinations
         run: python research/capset_f3_7/fiber_saturation_certificate.py
       - name: Run deterministic sample and recheck artifact
