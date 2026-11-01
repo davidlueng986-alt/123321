@@ -12,7 +12,7 @@
   "current_hypothesis": "H17-INDEPENDENT-FIXED-A-EXCLUSION-AUDIT-AND-DIVERSE-A",
   "last_experiment": "MOLS10-E016",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
-  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41339094814",
+  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41343858420",
   "last_verified_results": [
     "Egan–Wanless near-triple pair overlays 100/100/91 (not solution)",
     "E002 published pair (A,B): 14 exact common transversals, 12 unsupported cells, max disjoint 7 => UNSAT_FIXED_PAIR_CERTIFIED",
@@ -83,7 +83,7 @@
   ],
   "last_run_date": "2026-11-01",
   "limitations": "Global 3-MOLS(10) OPEN. E016 exact exclusions apply only to the original Egan first square A and 48 one-trade variants; not all Latin squares. Exhaustive algorithm is source-replayable but independent proof-certificate audit is pending. No 100/100/100 witness.",
-  "last_ci_result": "E016 code and tests committed; CI run result not yet independently confirmed. Local GF4 and selected fixed-A tests passed; complete 49-case run in local environment.",
+  "last_ci_result": "E016 test-containing commit 567b85e1b3d10024eae81481723a35fc100bd256: GitHub Actions run 41343858420 completed success, verify job 'Unit tests including the known near-triple' success. Subsequent report/state runs may still be in progress.",
   "external_status_review": "2026-11-01 19:48 UTC: Bright–Keita–Stevens EJC 2026 (2026-02-13) and Barnoff–Bright arXiv:2605.02132v2 (2026-07-04) checked, plus fresh November 1 search; no independently checkable unrestricted solution located.",
   "current_math_result": {
     "egan_fixed_A_C_optimum": 91,
