@@ -2,15 +2,15 @@
   "schema": "mols10-v1",
   "problem": "3 mutually orthogonal Latin squares of order 10",
   "status": "OPEN",
-  "last_review": "2026-11-02",
+  "last_review": "2026-11-01",
   "baseline": [
     100,
     100,
     91
   ],
-  "next_action": "E016: benchmark and optimize exact-once partial B-class compatibility bitset pruning (precomputed per-cell candidate lists, cache, C-support-aware branching) against matched unpruned DFS; scan changed-A variants with strict budgets and UNKNOWN statuses, seek >=10 common transversals and 100-cell support; if found, independently run third-square exact cover and full 100/100/100 verifier.",
-  "current_hypothesis": "H16-COVERAGE-DIRECTED-PARTIAL-EXACT-COVER",
-  "last_experiment": "MOLS10-E015",
+  "next_action": "E017: independently audit E016 fixed-first-square exhaustive exclusions using structurally different SAT/exact-cover and independent transversal enumeration; generate new diverse first Latin squares beyond Egan one-trade neighborhood; bounded tests with UNKNOWN budget, seek verified 100/100/100 triple.",
+  "current_hypothesis": "H17-INDEPENDENT-FIXED-A-EXCLUSION-AUDIT-AND-DIVERSE-A",
+  "last_experiment": "MOLS10-E016",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41339094814",
   "last_verified_results": [
@@ -34,7 +34,10 @@
     "E013: one-transversal compatibility screen tested original Egan A plus 48 trades; excludes zero transversals in all 49 A; rejected as vacuous.",
     "E014: exact minimum B-symbol blocking subsets: Egan AB=6, Egan AC=5, Parker AB=3, trade12=5, trade20=5; five explicit blocked-cell witnesses independently replayed by full 10! permutations.",
     "E015: stronger EXACTLY-ONCE partial B-symbol-class obstruction minimum sizes Egan AB=3, Egan AC=3, Parker AB=2, trade12=3, trade20=2; independent full 10! replay of blocked-cell examples; GF4 positive control passes.",
-    "E015: coverage-directed bitset pruning rejected 3193/4194, 3327/4313, 3650/4672 explored DFS prefixes for changed A indices 12/20/30, respectively, in 4-second bounded runs; all three UNKNOWN_BUDGET, no full-support pair found."
+    "E015: coverage-directed bitset pruning rejected 3193/4194, 3327/4313, 3650/4672 explored DFS prefixes for changed A indices 12/20/30, respectively, in 4-second bounded runs; all three UNKNOWN_BUDGET, no full-support pair found.",
+    "E016: exact full DFS of all B partitions with sound exact-once partial C-support pruning excludes triple containing the ORIGINAL published Egan first square A (1080 A-transversals; 24875 nodes, 18407 prunes), conditional fixed-first-square result.",
+    "E016: all 48 proper one-trade variants of Egan A independently exhausted (825696 nodes, 635258 support prunes), no viable full-support B partition; total original+48 = 850571 nodes; no budget exhaustion; does NOT exclude arbitrary first Latin squares.",
+    "E016: matched slow vs fast six 1200-node DFS experiments, identical nodes/prunes, ~21-26x DFS-only speed; GF4 order4 positive control SAT_SUPPORT_ONLY. Independent proof certificate not yet produced."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -58,13 +61,16 @@
     "research/mols10/E014_symbol_obstruction.py",
     "research/mols10/test_E012_E014.py",
     "research/mols10/E015_partial_mate_prune.py",
-    "research/mols10/test_E015_partial_mate_prune.py"
+    "research/mols10/test_E015_partial_mate_prune.py",
+    "research/mols10/E016_bitset_search.py",
+    "research/mols10/E016_RESULTS.json",
+    "research/mols10/test_E016_bitset_search.py"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-01T18:55:00Z",
+  "last_run_utc": "2026-11-01T19:51:32Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -72,17 +78,20 @@
     "research/mols10/E006_E007_RESULTS.json",
     "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
     "research/mols10/E012_E014_REPORT.md",
-    "research/mols10/E015_REPORT.md"
+    "research/mols10/E015_REPORT.md",
+    "research/mols10/E016_REPORT.md"
   ],
-  "last_run_date": "2026-11-02",
-  "limitations": "Global 3-MOLS(10) OPEN. E015 is an exact necessary partial-prefix prune, not sufficient. All three 4-second changed-A searches UNKNOWN; no new full-support orthogonal pair. Exact minimum blockers concern five fixed pairs only.",
-  "last_ci_result": "E015 GF4 positive-control and minimum-obstruction tests completed successfully at job step level; full workflow run 41339094814 may still be finalizing.",
-  "external_status_review": "2026-11-01T18:52Z: primary Bright–Keita–Stevens 2026 EJC, arXiv:2503.10504v2, arXiv:2509.09633v3 (2026-08), Barnoff–Bright arXiv:2605.02132 reviewed; no independently checkable full 3-MOLS(10) resolution located.",
+  "last_run_date": "2026-11-01",
+  "limitations": "Global 3-MOLS(10) OPEN. E016 exact exclusions apply only to the original Egan first square A and 48 one-trade variants; not all Latin squares. Exhaustive algorithm is source-replayable but independent proof-certificate audit is pending. No 100/100/100 witness.",
+  "last_ci_result": "E016 code and tests committed; CI run result not yet independently confirmed. Local GF4 and selected fixed-A tests passed; complete 49-case run in local environment.",
+  "external_status_review": "2026-11-01 19:48 UTC: Bright–Keita–Stevens EJC 2026 (2026-02-13) and Barnoff–Bright arXiv:2605.02132v2 (2026-07-04) checked, plus fresh November 1 search; no independently checkable unrestricted solution located.",
   "current_math_result": {
     "egan_fixed_A_C_optimum": 91,
     "egan_fixed_A_B_optimum": 91,
     "parker_fixed_A_B_upper_bound": 77,
     "original_question": "OPEN",
-    "conditional_scope_only": true
+    "conditional_scope_only": true,
+    "egan_original_A_no_triple": "COMPUTATIONAL_EXHAUSTIVE_FIXED_A",
+    "egan_one_trade_variants_no_triple": 48
   }
 }
