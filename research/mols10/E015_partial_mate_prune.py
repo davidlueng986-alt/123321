@@ -95,6 +95,39 @@ def bounded_search(a,seed=0,seconds=4.0,max_nodes=100000):
             "elapsed_seconds":round(time.monotonic()-start,3),
             "witness":witness}
 
+
+def minimum_exact_once(a,b):
+    """Exact min number of fixed B-symbol classes blocking some cell.
+
+    Enumerates ALL subsets of size < k, not a heuristic. Every candidate
+    C-symbol class must meet each fixed B-symbol class exactly once.
+    """
+    import itertools
+    from math import comb
+    n=len(a)
+    assert all(q["orthogonal"] for q in analyze([a,b],n))
+    trans,masks,by_cell,compatibility=setup(a)
+    ids=[]
+    for symbol in range(n):
+        p=tuple(next(j for j in range(n) if b[i][j]==symbol)
+                for i in range(n))
+        ids.append(trans.index(p))
+    counts={}
+    for k in range(n+1):
+        found=[]
+        for subset in itertools.combinations(range(n),k):
+            good,blocked,count=check_partial(
+                by_cell,compatibility,[ids[s] for s in subset])
+            if not good:
+                found.append({"symbols":list(subset),
+                              "first_blocked_cell":[blocked[0]//n,blocked[0]%n],
+                              "remaining_transversals":count})
+        counts[str(k)]={"tested":comb(n,k),"blocking":len(found)}
+        if found:
+            return {"minimum":k,"counts":counts,
+                    "first_certificate":found[0]}
+    return {"minimum":None,"counts":counts}
+
 if __name__=="__main__":
     parser=argparse.ArgumentParser()
     parser.add_argument("--seconds",type=float,default=4.0)
