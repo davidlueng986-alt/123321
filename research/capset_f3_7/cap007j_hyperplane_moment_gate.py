@@ -106,7 +106,11 @@ def main():
     args = p.parse_args()
     result = gate_237()
     if args.witness:
-        pts = [tuple(int(x) for x in line.strip()) for line in args.witness.read_text().splitlines() if line.strip()]
+        raw = [line.strip() for line in args.witness.read_text().splitlines() if line.strip()]
+        if raw and raw[0].startswith('n:'):
+            assert raw.pop(0) == 'n: 7'
+        assert all(len(s) == 7 and set(s) <= {'0','1','2'} for s in raw)
+        pts = [tuple(map(int, s)) for s in raw]
         assert len(pts) == 236 and is_cap(pts)
         measured = measured_moments(pts,7)
         assert measured[:2] == predicted_moments(7,len(pts))
