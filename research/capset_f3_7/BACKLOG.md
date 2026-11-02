@@ -174,3 +174,7 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 
 ## CAP-005L CI final (2026-11-02 08:52 UTC)
 - [DONE / CI GREEN / RESTRICTED ONLY] https://github.com/davidlueng986-alt/123321/actions/runs/41415696843 verifies all 37 exact N=17 conflict certificates and their 576 seven-fiber neighborhoods, independently checking F3 arithmetic and symmetry. Artifact https://github.com/davidlueng986-alt/123321/actions/runs/41415696843/artifacts/13128405069. Seven-fiber exclusions 863482/888030; 24548 unresolved, 1628 orbits. Next N=18..24 matching/clique and global/nonlocal work; no global bound or witness.
+
+## CAP-005M (2026-11-02T09:57:58.759Z)
+- [LOCAL JS EXACT / CI PENDING] 500 N18..32 seven-fiber symmetry orbits, 7,440 neighborhoods, carry explicit vertex-disjoint fixed-point pair-conflict matchings. Expected 870,922 excluded / 17,108 unresolved. Confirm independent Python CI before promotion. See CAP005_K7_MATCHING_CERTIFICATE_2026-11-02.md.
+- [P0] Outsider-triple and odd-cycle/deletion-cover cuts for remaining low-N orbits; [P0] independent global certified upper bounds and nonlocal cap constructions. Fixed partition cannot settle r3(7). No novelty assertion.

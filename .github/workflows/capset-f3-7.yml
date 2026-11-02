@@ -184,3 +184,14 @@ jobs:
           name: capset-k7-n17-conflict-37
           path: /tmp/cap005_l_k7_n17.json
           retention-days: 30
+
+      - name: CAP-005M generate and independently verify 500 seven-fiber matching certificates
+        run: |
+          python research/capset_f3_7/cap005_m_k7_matching_generator.py /tmp/cap005_k7_symmetry.json --out /tmp/cap005_m_k7_matching.json
+          python research/capset_f3_7/cap005_m_k7_matching_check.py /tmp/cap005_m_k7_matching.json /tmp/cap005_k7_symmetry.json
+      - name: Archive CAP-005M exact seven-fiber pair-conflict certificates
+        uses: actions/upload-artifact@v4
+        with:
+          name: capset-k7-matching-500
+          path: /tmp/cap005_m_k7_matching.json
+          retention-days: 30
