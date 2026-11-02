@@ -244,3 +244,9 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 ## CAP-007J3 induced-edge energy (2026-11-02T11:12:52.892Z)
 - [EXACT COROLLARY] For centered maximal112 first slice S and any second subset T, cross-additive energy is 20m²+92m−38 e_G(T) in SRG(729,112,1,20). For maximal112 T, e_G(T)=1120−19k/2. Use this to design cap-specific graph/SDP cuts; the identity alone cannot prove third-slice<=12.
 - [P0] Combine induced SRG subgraph edge count with outsider support, third-slice cap compatibility, and exact proof-logged conditional search; cover all slice-size profiles and the no-112-hyperplane branch.
+
+## CAP-007K multiplicity audit (2026-11-02T11:14:36.835Z)
+- [LOCAL EXACT / CI PENDING] Enumerated 3812 pair-alignment matrices; 121 12-hole alignments all have minimum positive cross representation 11, giving one-sided deletion-resilience <=10 points in this restricted family. Novelty not claimed.
+- [P0] Derive general cap-specific constraints on r(z)=1_S*1_T, low-multiplicity tails, phase-sensitive Fourier and cap(H) rather than only holes or total energy; test 112+111+14 and 111+111+15 profiles.
+- [P0] Rigorously cover relative GL6 by automorphism double cosets; unenumerated alignment families remain OPEN.
+- [P0] Keep separate global no-112-hyperplane search, as all 112-conditioned facts cannot exclude it.

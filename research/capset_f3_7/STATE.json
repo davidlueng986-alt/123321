@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-007J3: for any 112-cap S (after unique centering) and arbitrary T subset F3^6, cross additive energy E(S,T)=20m^2+92m-38e_G(T), where G is Cayley SRG(729,112,1,20). Combine exact graph-edge constraints with cap-specific bounds and convolution support.",
-  "next_experiment": "Confirm CAP-007J2 CI. Exploit 112-cap SRG parameters and general spectral energy formula in proof-producing conditional 112-hyperplane SAT, reduce arbitrary two-112 alignments by stabilizer double-coset enumeration; maintain global all-slices<=111 branch.",
-  "last_run_id": "CAP-007J3-LOCAL-2026-11-02",
-  "last_run_result": "UNIVERSAL_STRONGLY_REGULAR_GRAPH_EDGE_ENERGY_IDENTITY_EXACT_DIRECT_SIX_SAMPLE_CHECKS",
+  "current_hypothesis": "Cross-slice blocking multiplicity r(z), not just hole count or spectra, controls deletion resilience. 121 tested 112+112 alignments with 12 holes have minimum positive r(z)=11; conditional restricted only.",
+  "next_experiment": "Confirm CAP-007K CI, then derive globally valid slice multiplicity bounds for 112+111, 111+111 and no-112 hyperplane branch; do not assume restricted GL6 sample is exhaustive.",
+  "last_run_id": "CAP-007K-MULTIPLICITY-2026-11-02",
+  "last_run_result": "LOCAL_INDEPENDENT_JS_3812_EXACT_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -70,7 +70,8 @@
     "CAP-007I-LOCAL",
     "CAP-007J-LOCAL",
     "CAP-007J2-LOCAL",
-    "CAP-007J3-LOCAL"
+    "CAP-007J3-LOCAL",
+    "CAP-007K-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41415696843",
   "baseline_secant_audit": {
@@ -92,7 +93,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T11:12:52.892Z",
+  "last_updated_utc": "2026-11-02T11:14:36.835Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -860,5 +861,14 @@
     "status": "EXACT_ALGEBRAIC_COROLLARY_AND_DIRECT_ARITHMETIC_SAMPLES",
     "novelty_established": false,
     "global_bound_improved": false
+  },
+  "cap007k_cross_slice_multiplicity": {
+    "tested_matrices": 3812,
+    "holes12_matrices": 121,
+    "minimum_positive_rep_in_holes12": 11,
+    "one_sided_second_slice_deletion_resilience": 10,
+    "global_bound_improved": false,
+    "ci_status": "PENDING",
+    "report": "research/capset_f3_7/CAP007K_BLOCKING_MULTIPLICITY_2026-11-02.md"
   }
 }
