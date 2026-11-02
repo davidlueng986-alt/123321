@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "E022: bounded Egan pair-root C exact-cover pilot (two disjoint B-symbol classes, each C class intersects both once); assess coverage and pruning; alternatively import source-verified Myrvold eight residual cases. Preserve UNKNOWN and avoid duplicate E020 unary replay.",
-  "current_hypothesis": "H22-EGAN-PAIR-ROOT-EXACT-COVER-OR-MYRVOLD-DIVERSITY",
-  "last_experiment": "MOLS10-E021",
+  "next_action": "E023: retrieve eight Myrvold residual pair-pattern examples from primary-source supplementary material, independently validate exact arrays and test third-square fixed-pair exact-cover; avoid repeating Egan/Parker fixed-A searches. Consider certificate-producing SAT for E022.",
+  "current_hypothesis": "H23-MYRVOLD-EIGHT-THIRD-SQUARE-EXTENSION-OR-CERTIFIED-SAT",
+  "last_experiment": "MOLS10-E022",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -53,7 +53,9 @@
     "E020: independent 10! permutation enumerator exactly reproduces 1104 transversals; HiGHS MILP root0/109/250 INFEASIBLE and root26/29/55 FEASIBLE with replay; GF4 8/8 unary SAT positive control. Full 1104-root independent MILP certificate NOT yet available.",
     "E021: independent 10! permutation + memoized remaining-cell Algorithm X confirms Parker A unary 1076 UNSAT/28 SAT/0 UNKNOWN and 13 uncovered cells (fixed-A only); 1369521 nodes.",
     "E021: Egan published A unary screen 966 UNSAT/114 SAT/0 UNKNOWN; SAT roots cover all 100 cells, so this unary obstruction does not exclude Egan A (negative result).",
-    "E021: GF4 16/16/16 positive control and 8/8 unary roots SAT; initial list-filtering timeout and CLI TypeError preserved in E021_REPORT.md."
+    "E021: GF4 16/16/16 positive control and 8/8 unary roots SAT; initial list-filtering timeout and CLI TypeError preserved in E021_REPORT.md.",
+    "E022: Egan fixed A, 1080 transversals; 114 unary-surviving roots; 1647 disjoint survivor pairs; pair-root C exact cover 45 SAT / 1602 exhaustive UNSAT / 0 UNKNOWN, independent SciPy/HiGHS MILP confirms all 1647. All pairs have full cell support, so support-only pruning is vacuous here.",
+    "E022: 45 pair-SAT roots involve only 14 B-transversals whose union misses 12 cells [1,2,3,18,29,37,44,55,66,70,80,90]; independently verified fixed-Egan-A conditional exclusion; no unrestricted result."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -117,7 +119,7 @@
   "last_run_date": "2026-11-01",
   "limitations": "Global 3-MOLS(10) OPEN. E020 1076/1104 exhaustive unary exclusions and 13-cell uncovered certificate concern only Parker A. Independent 10! enumerator and six independent MILP spot checks, but no external proof certificate for all 1104 roots; GF4 positive control. No global 100/100/100 witness or unrestricted nonexistence proof.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
-  "external_status_review": "2026-11-01 ~23:45 UTC: primary EJC 2026-02-13 and arXiv 2605.02132v2 2026-07-04 checked with fresh November 1 searches; no independently verifiable unrestricted solution found.",
+  "external_status_review": "2026-11-02 ~01:48 UTC: fresh primary EJC 2026-02-13 and arXiv 2605.02132v2 (2026-07-04) / 2509.09633 reviewed; no independently verifiable unrestricted 3-MOLS(10) solution found; search absence not proof.",
   "current_math_result": {
     "egan_fixed_A_C_optimum": 91,
     "egan_fixed_A_B_optimum": 91,
@@ -135,7 +137,14 @@
     "e019_rooted_novel_cuts": 23296,
     "e020_parker_unary_unsat_roots": 1076,
     "e020_parker_unary_sat_roots": 28,
-    "e020_parker_uncovered_cells": 13
+    "e020_parker_uncovered_cells": 13,
+    "e022_egan_pair_root_disjoint_cases": 1647,
+    "e022_egan_pair_root_sat": 45,
+    "e022_egan_pair_root_unsat": 1602,
+    "e022_egan_pair_root_unknown": 0,
+    "e022_egan_pair_root_supported_B_roots": 14,
+    "e022_egan_pair_root_uncovered_cells": 12
   },
-  "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md"
+  "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
+  "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md"
 }
