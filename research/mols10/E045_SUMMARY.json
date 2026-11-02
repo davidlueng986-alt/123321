@@ -1,0 +1,45 @@
+{
+  "experiment": "E045-LP-GUIDED-K4-EXACT-FARKAS",
+  "timestamp_utc": "2026-11-02T20:58:41Z",
+  "problem_status": "OPEN",
+  "global_orbits_excluded": 0,
+  "global_orbits_total": 162959,
+  "guided": {
+    "parents": 48,
+    "valid_distinct_prefixes": 574,
+    "lp_infeasible_certified": 544,
+    "exact_zero_support": 30,
+    "lp_feasible": 0,
+    "unknown": 0,
+    "residual_placements_verified": 232513
+  },
+  "matched_random_control": {
+    "parents": 48,
+    "attempts": 576,
+    "numerical_lp_infeasible": 501,
+    "exact_zero_support": 75,
+    "lp_feasible": 0
+  },
+  "gf9_prolongation_pilot": {
+    "attempts": 200000,
+    "valid_k4": 0,
+    "status": "FAILED_RANDOM_SEARCH_NOT_PROOF"
+  },
+  "verification": {
+    "verified": 574,
+    "dual": 544,
+    "zero": 30,
+    "total_candidates": 232513,
+    "distinct": 574,
+    "mutation_rejected": true,
+    "status": "PASS"
+  },
+  "bundle_sha256": "ef323379084290153e73de60ea87127251a6286345e0e72f0da8028394e4593c",
+  "limitations": [
+    "Fixed k4 prefixes only, no global symmetry orbit excluded",
+    "LP-guided samples correlated within 48 parents",
+    "Random control LP infeasible numerical only",
+    "GF9 200000 random swap failures not a theorem",
+    "No full 100/100/100 or unrestricted proof"
+  ]
+}
