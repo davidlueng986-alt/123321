@@ -8,11 +8,11 @@
     100,
     91
   ],
-  "next_action": "Prioritize genuinely different k4 search moves (two disjoint swaps, joint fourth-row LP phase-I minimization, or nonlocal row rewrites) and a symmetry-complete 12-cycle-type/162959-orbit proof-producing SAT strategy. Test a bounded disjoint set, preserve exact certificates; stop sampling the same local failure basin if no LP-feasible k4 emerges.",
-  "current_hypothesis": "E046: 179550 one-swap local moves from 570 exact-certified E045 k4 prefixes; 7428 valid, 6850 full six-class resource support, 578 zero-support. Old source certificates transfer to only 343/7428. A bounded 131-neighbor phase-I LP probe (71 source cases, masks 1 and 7) found 131 new exact integer dual obstructions; 0 LP-feasible. This suggests local resource support and old-dual invalidation are weak predictors of actual LP feasibility; no global orbit excluded.",
-  "last_experiment": "MOLS10-E046-LOCAL-TRADE-EXACT-LP-131",
+  "next_action": "Do NOT repeat exhausted E047 two-disjoint-swap basin. Prioritize fundamentally different k4 moves (joint fourth-row LP phase-I or three-row rewrites) and a symmetry-complete proof-producing SAT strategy with explicit 162959-orbit coverage; independently replay any complete candidate.",
+  "current_hypothesis": "E047 exhaustive 2-disjoint-swap fourth-row neighborhoods on 8 fixed E045 local k4 prefixes: 246960 proposals, 479 valid distinct 40/40/40 partial triples, 79 exact zero-support + 400 integer Farkas duals. Independent Node.js exact replay checked 192078 legal placements and all 479 certificates; remote GitHub Actions SUCCESS, full evidence commit b40863306ac3c62ca9cff6276caaaa63ad4f063d. Restricted local theorem only; 0/162959 global orbits excluded.",
+  "last_experiment": "MOLS10-E047-EXHAUSTIVE-2-DISJOINT-SWAPS-479",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
-  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41531858521",
+  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41541210306",
   "last_verified_results": [
     "E041: independent integer-only 22-cell seven-demand Farkas certificate PASS; 22 singleton witnesses; 100 random isotopies exact PASS; no global orbit excluded.",
     "E042: 1548/1548 exact 4-row motif-embedding checks independently reproduced, only 3 source-self hits, 1545 negatives, zero marginal pruning beyond E039 LP; 0/162959 full orbits excluded.",
@@ -22,7 +22,8 @@
     "E045: 574/574 valid fixed k4 prefixes exact certified (544 integer Farkas duals, 30 zero-support), 232513 legal placements checked by independent Node.js; mutation rejection PASS. Matched 48-parent randomized controls 75/576 zero-support vs guided 30/574, zero LP-feasible both; 0/162959 full orbits.",
     "E045 REMOTE: GitHub Actions independently regenerated 570 guided fixed k4 prefixes, 532 exact duals +38 zero-support, 231303 candidates, 570/570 exact JS PASS; persisted full data in commit ea4f14b861f58652481cfbb82b8954d626aed74a. Local separate 574 exact cases PASS.",
     "E046: 570 exact E045 sources independently replayed; 179550 fourth-row two-column masked swaps (7 masks x45 x570), 7428 valid; 578 zero-support, 6850 full-support, only 343 source certificates transfer. Independent bitmask replay agrees on all 7 masks; 2992090 legal residual placements checked.",
-    "E046 REMOTE: 131 new unique fixed-k4-neighbor prefixes from 71 sources; 131 exact integer Farkas duals, 52920 candidates independently checked, 131 mutation rejections; 124 original duals and 7 original zero-support obstructions invalid on neighbors. CI run 41531858521 SUCCESS; evidence commit 9de3abb68b81bf7e37703d1ec842d3c0708fc24e. No full orbit excluded."
+    "E046 REMOTE: 131 new unique fixed-k4-neighbor prefixes from 71 sources; 131 exact integer Farkas duals, 52920 candidates independently checked, 131 mutation rejections; 124 original duals and 7 original zero-support obstructions invalid on neighbors. CI run 41531858521 SUCCESS; evidence commit 9de3abb68b81bf7e37703d1ec842d3c0708fc24e. No full orbit excluded.",
+    "E047 REMOTE: 246960 two-disjoint-swap proposals from 8 exact fixed k4 prefixes, 479 distinct valid, 79 exact zero-support and 400 integer Farkas duals, independent JS exact 479/479 PASS, 192078 placements, mutation rejected. CI SUCCESS 41541210306; full data commit b40863306ac3c62ca9cff6276caaaa63ad4f063d. Restricted local result; no full orbit excluded."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -116,13 +117,17 @@
     "research/mols10/E046_phase1_verify.js",
     "research/mols10/E046_phase1_audit.js",
     "research/mols10/E046_TRADE_RESULTS.json",
-    "research/mols10/E046_PHASE1_RESULTS.json"
+    "research/mols10/E046_PHASE1_RESULTS.json",
+    "research/mols10/E047_SOURCES.json",
+    "research/mols10/E047_reproduce.py",
+    "research/mols10/E047_replay.js",
+    "research/mols10/E047_REGENERATED.json"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T21:50:38.455Z",
+  "last_run_utc": "2026-11-02T22:55:33Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -149,13 +154,14 @@
     "research/mols10/E036_REPORT.md",
     "research/mols10/E044_REPORT.md",
     "research/mols10/E045_REPORT.md",
-    "research/mols10/E046_REPORT.md"
+    "research/mols10/E046_REPORT.md",
+    "research/mols10/E047_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "E046 is bounded fixed-prefix local search only: 570 correlated E045 sources, 179550 proposals, 7428 valid, and 131 selected phase-I LP probes. All 131 exact nonextensions are local, no full symmetry orbit excluded. Full support and invalidation of old Farkas dual do not imply LP feasibility. The 131 selection is deterministic biased (first valid full-support swap under masks 1,7 from every 8th source). Other 7297 valid neighbors not individually phase-I certified.",
-  "last_ci_result": "E046 GitHub Actions CPU-only run 41531858521 SUCCESS. 179550 move replay; independent bitmask 7/7 masks PASS; 131/131 exact duals, 52920 candidate placements; 131 mutations rejected; 131 unique, no overlap with 570 original ordered prefixes. Evidence commit 9de3abb68b81bf7e37703d1ec842d3c0708fc24e.",
-  "external_status_review": "2026-11-02 21:45 UTC: checked primary Bright–Keita–Stevens EJC 33(1) #P1.30 (2026-02-13), Barnoff–Bright arXiv:2605.02132v2 (2026-07-04), and fresh 2026-11-02 arXiv/web searches. No independently checkable unrestricted resolution found; absence of hits not proof.",
-  "current_math_result": "GLOBAL OPEN, 0/162959 complete normalized orbits excluded. E046 independently verified 131 new distinct fixed-k4-neighbor nonextensions (131 exact integer Farkas certificates, 52920 candidate placements) after 179550 local move audit. No 100/100/100 or unrestricted proof.",
+  "limitations": "E047 exhausts only 246960 prescribed two-disjoint-column-pair fourth-row proposals for 8 correlated E045 LOCAL sources, not all k4 prefixes or symmetry orbits. 479 valid moves exact-certified, 0 LP-feasible. The original local E045 574-case data differs from remote E045 570-case data; E047_SOURCES.json includes exact 8 inputs. No global inference. Local ZIP upload to Drive failed BLOCKED_FILE_REFERENCE; remote full regenerated evidence is on GitHub.",
+  "last_ci_result": "E047 GitHub Actions run 41541210306 SUCCESS; 246960 proposals, 479 valid, 400 integer Farkas duals +79 zero-support, 192078 legal placements, independent JS PASS, mutation rejected; full regenerated certificates persisted commit b40863306ac3c62ca9cff6276caaaa63ad4f063d.",
+  "external_status_review": "2026-11-02 22:49 UTC: checked Bright–Keita–Stevens EJC 33(1) #P1.30 (2026-02-13), Barnoff–Bright arXiv:2605.02132v2 (2026-07-04), targeted recent web/arXiv search. No independently verifiable unrestricted resolution found; absence of hits not proof.",
+  "current_math_result": "GLOBAL OPEN; 0/162959 normalized orbits excluded. E047 proves no valid two-disjoint-swap neighbor of 8 specified fixed k4 prefixes extends; 479 exact certificates (400 integer Farkas, 79 zero support), independently verified locally and remotely. No complete 100/100/100 or unrestricted proof.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -215,5 +221,9 @@
   "e045_remote_results": "570 exact fixed-prefix certificates (532 integer dual, 38 zero-support), independent replay PASS, 231303 legal placements; different from local 574 exact cases due solver/runtime.",
   "e046_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E046_REPORT.md",
   "e046_evidence_commit": "9de3abb68b81bf7e37703d1ec842d3c0708fc24e",
-  "e046_ci_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41531858521"
+  "e046_ci_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41531858521",
+  "e047_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E047_REPORT.md",
+  "e047_remote_commit": "b40863306ac3c62ca9cff6276caaaa63ad4f063d",
+  "e047_ci_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41541210306",
+  "e047_evidence_sha256": "52268e86f2a864cb0a6301a972c3d1c7c96bc9060bf431c9948c307227859b76"
 }
