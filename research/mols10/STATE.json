@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "E027: source SAT encoding with blocking clauses for NEW residual-family orthogonal pair, or two-sided larger OA trades. Do not repeat one-sided k<=5 changes around E024 six examples. Verify Latin, 100 overlay, then common transversals and exact cover; strictly bound GPU/CPU.",
-  "current_hypothesis": "H27-NEW-SAT-PAIR-OUTSIDE-LOW-SYMBOL-TRADE-NEIGHBORHOOD",
-  "last_experiment": "MOLS10-E026-ONE-SIDED-3-5-SYMBOL-TRADE-EXCLUSION",
+  "next_action": "E028: replay SX/UU fixed-Q complete mate enumeration, then generate genuinely new Q from published SAT encoding / nonisotopic orthogonal pairs; audit source, independent exact cover and full 100/100/100 if any candidate. Avoid repeated low-symbol trades.",
+  "current_hypothesis": "H28-NEW-Q-OUTSIDE-PUBLISHED-SIX-FIXED-Q-EXCLUSIONS",
+  "last_experiment": "MOLS10-E027-EXHAUSTIVE-FIXED-Q-ORTHOGONAL-MATE-ENUMERATION",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -63,7 +63,8 @@
     "E025: exhaustive proper two-symbol component-flip neighborhoods of six specific Appendix pairs: 1446 single-square flips and 87704 coupled flips; none orthogonal. Both Python and independent JavaScript enumeration agree. WW four best double-flip pairs only 98/100, other five max 96/100; no new pair, let alone triple.",
     "E025: bounded one-extra-flip pilot on best double-flip candidates: 96768 trials, zero orthogonal; WW expanded all 96 double candidates with >=96 overlay, 26184 third-flip trials, zero orthogonal. These follow-up sets overlap. Not family-wide, not unrestricted.",
     "E025 independent JS replay persisted and executed directly from committed source: 87704 coupled tests and six maxima/counts exactly match Python; commit 5fc7252b6199144c2154309e47d28b2040dc8704.",
-    "E026: all 3492 one-sided 3/4/5-symbol fixed-pair recoloring MILP instances solver-complete UNSAT, zero UNKNOWN; independent exact 3-color DFS 720 k3 cases only original normalized solutions; GF9 nontrivial positive control SAT; WW k6 pilot 7 UNKNOWN + 1 UNSAT."
+    "E026: all 3492 one-sided 3/4/5-symbol fixed-pair recoloring MILP instances solver-complete UNSAT, zero UNKNOWN; independent exact 3-color DFS 720 k3 cases only original normalized solutions; GF9 nontrivial positive control SAT; WW k6 pilot 7 UNKNOWN + 1 UNSAT.",
+    "E027: exhaustive fixed-Q orthogonal-mate partitions for six published Q: UW3 UX2 VX2 WW1 WX1 XX3 (total12), six additional genuine orthogonal mates; all pairs have <=1 common transversal, so all six specific Q excluded from any triple. Two independent exact-cover algorithms agree on ALL 12 matrices, not just counts; bitset DFS 273559 nodes, independent DLX complete. No family-wide or global conclusion."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -123,7 +124,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T05:47:17Z",
+  "last_run_utc": "2026-11-02T06:53:43Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -139,16 +140,18 @@
     "research/mols10/E020_REPORT.md",
     "research/mols10/E023_REPORT.md",
     "research/mols10/E025_REPORT.md",
-    "research/mols10/E026_REPORT.md"
+    "research/mols10/E026_REPORT.md",
+    "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E027_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "No 100/100/100 witness and no unrestricted proof/certificate. E026 excludes only one-sided recoloring of <=5 selected original symbol classes in SIX fixed published pairs, not other members of Myrvold families or simultaneous changes. k6 pilot 7 UNKNOWN, full sweep timed out; no SAT/DRAT/FRAT certificates. E026 local CPU tests completed; CI not yet verified.",
+  "limitations": "E027 fixed-Q exhaustive for six specific source matrices only; no full Myrvold family or unrestricted symmetry coverage, no 100/100/100 witness, no DRAT/FRAT certificate. HiGHS 12s UNKNOWN and naive row0-first timeout preserved. Local independent replay successful; E027 CI not confirmed.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
-  "external_status_review": "2026-11-02 ~05:44 UTC: checked Bright–Keita–Stevens EJC 2026-02-13 and arXiv:2503.10504, Barnoff–Bright arXiv:2605.02132v2 2026-07-04, and targeted new-resolution searches; no independently checkable unrestricted solution found. Search absence not proof.",
-  "current_math_result": "E026: Six specific published pairs UW/UX/VX/WW/WX/XX, fixed Q, exhaustive one-sided Z-symbol recolorings of any 3,4,5 original symbol classes (720+1260+1512=3492 HiGHS solver-complete INFEASIBLE after row0 normalization + original-exclusion), 0 UNKNOWN; independent 3-color DFS confirms 720 k3 cases have only original normalized coloring. GF9 positive control has a genuine 18-cell nontrivial k3 trade with overlay81. WW k6 8-instance pilot: 1 infeasible, 7 time-limited UNKNOWN; full k6 sweep timed out. Restricted negative only, global OPEN.",
+  "external_status_review": "2026-11-02 06:53 UTC targeted search: no independently verifiable unrestricted 3-MOLS(10) resolution found. BKS EJC 2026-02-13 and arXiv 2503.10504v2 remain restricted; Barnoff-Bright arXiv 2605.02132 is orthogonal-pair research. Search absence is not proof.",
+  "current_math_result": "E027: all Q-orthogonal mates exhaustively enumerated for each of six specific EJC Appendix Q: UW3, UX2, VX2, WW1, WX1, XX3 (12 total normalized mates, 6 new relative to published). Every mate/Q has <=1 common transversal; hence each of these SIX SPECIFIC fixed Q cannot appear in 3-MOLS(10). Not entire families or unrestricted.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
   "e025_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E025_REPORT.md",
-  "e026_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E026_REPORT.md"
+  "e026_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E026_REPORT.md",
+  "e027_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E027_REPORT.md"
 }
