@@ -1,0 +1,165 @@
+{
+  "experiment": "E026",
+  "timestamp_utc": "2026-11-02T05:46:17Z",
+  "status": "RESTRICTED_EXCLUSION_ONLY",
+  "source": "Bright-Keita-Stevens 2026 EJC Appendix, P,Q from E024_appendix_six_replay.py",
+  "method": "Fix Q, change only k original Z-symbol classes, all other Z entries fixed. MILP exact cell/row/column/Q-fiber constraints, row0 symbol normalization and original-excluding no-good.",
+  "cases": {
+    "UW": {
+      "k3": {
+        "instances": 120,
+        "solver_complete_infeasible": 120,
+        "unknown": 0,
+        "dfs_nodes": 166,
+        "dfs_normalized_solutions": 120,
+        "dfs_nontrivial": 0
+      },
+      "k4": {
+        "instances": 210,
+        "solver_complete_infeasible": 210,
+        "unknown": 0
+      },
+      "k5": {
+        "instances": 252,
+        "solver_complete_infeasible": 252,
+        "unknown": 0
+      }
+    },
+    "UX": {
+      "k3": {
+        "instances": 120,
+        "solver_complete_infeasible": 120,
+        "unknown": 0,
+        "dfs_nodes": 168,
+        "dfs_normalized_solutions": 120,
+        "dfs_nontrivial": 0
+      },
+      "k4": {
+        "instances": 210,
+        "solver_complete_infeasible": 210,
+        "unknown": 0
+      },
+      "k5": {
+        "instances": 252,
+        "solver_complete_infeasible": 252,
+        "unknown": 0
+      }
+    },
+    "VX": {
+      "k3": {
+        "instances": 120,
+        "solver_complete_infeasible": 120,
+        "unknown": 0,
+        "dfs_nodes": 190,
+        "dfs_normalized_solutions": 120,
+        "dfs_nontrivial": 0
+      },
+      "k4": {
+        "instances": 210,
+        "solver_complete_infeasible": 210,
+        "unknown": 0
+      },
+      "k5": {
+        "instances": 252,
+        "solver_complete_infeasible": 252,
+        "unknown": 0
+      }
+    },
+    "WW": {
+      "k3": {
+        "instances": 120,
+        "solver_complete_infeasible": 120,
+        "unknown": 0,
+        "dfs_nodes": 176,
+        "dfs_normalized_solutions": 120,
+        "dfs_nontrivial": 0
+      },
+      "k4": {
+        "instances": 210,
+        "solver_complete_infeasible": 210,
+        "unknown": 0
+      },
+      "k5": {
+        "instances": 252,
+        "solver_complete_infeasible": 252,
+        "unknown": 0
+      }
+    },
+    "WX": {
+      "k3": {
+        "instances": 120,
+        "solver_complete_infeasible": 120,
+        "unknown": 0,
+        "dfs_nodes": 172,
+        "dfs_normalized_solutions": 120,
+        "dfs_nontrivial": 0
+      },
+      "k4": {
+        "instances": 210,
+        "solver_complete_infeasible": 210,
+        "unknown": 0
+      },
+      "k5": {
+        "instances": 252,
+        "solver_complete_infeasible": 252,
+        "unknown": 0
+      }
+    },
+    "XX": {
+      "k3": {
+        "instances": 120,
+        "solver_complete_infeasible": 120,
+        "unknown": 0,
+        "dfs_nodes": 176,
+        "dfs_normalized_solutions": 120,
+        "dfs_nontrivial": 0
+      },
+      "k4": {
+        "instances": 210,
+        "solver_complete_infeasible": 210,
+        "unknown": 0
+      },
+      "k5": {
+        "instances": 252,
+        "solver_complete_infeasible": 252,
+        "unknown": 0
+      }
+    }
+  },
+  "totals": {
+    "milp_instances": 3492,
+    "milp_infeasible": 3492,
+    "milp_sat": 0,
+    "milp_unknown": 0,
+    "independent_dfs_k3_instances": 720,
+    "independent_dfs_nodes": 1048
+  },
+  "positive_control": {
+    "field": "GF9",
+    "n": 9,
+    "k": 3,
+    "status": "SAT",
+    "changed_cells": 18,
+    "overlay": 81,
+    "witness_rows": [
+      "012345678",
+      "201453786",
+      "120534867",
+      "345678201",
+      "453786120",
+      "534867012",
+      "678120345",
+      "786012453",
+      "867201534"
+    ]
+  },
+  "failed_experiments": {
+    "k6_full_WW": "outer execution timeout; not counted as UNSAT",
+    "k6_first_8_WW_0_5s": {
+      "infeasible": 1,
+      "unknown_time_limit": 7,
+      "combinations_tested": 8
+    }
+  },
+  "uncertainty": "Not an unrestricted theorem, no third square, no certificate, six fixed pairs only. k>=6 not exhaustively decided."
+}
