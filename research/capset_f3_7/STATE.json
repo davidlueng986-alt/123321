@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-005K local exact symmetry quotient: 25124 seven-fiber necessary survivors form 1665 orbits under verified order-16 affine stabilizer (orbit sizes 4:3, 8:185, 16:1477). Single N=198 orbit. Independently recomputed in JS; new GitHub CI pending. No additional neighborhoods excluded, no >=237 cap or global upper-bound improvement.",
-  "next_experiment": "Confirm CAP-005K independent arithmetic checker CI; use 37 N=17 seven-fiber orbits for exact conflict/deletion-cover exclusion; maintain nonlocal constructions and certified global bounds in parallel.",
-  "last_run_id": "CAP-005K-LOCAL-2026-11-02-k7-symmetry-quotient",
-  "last_run_result": "LOCAL_EXACT_SYMMETRY_QUOTIENT_1665_ORBITS_CI_PENDING_NECESSARY_ONLY",
+  "current_hypothesis": "CAP-005K CI GREEN: verified order-16 affine stabilizer quotients all 25124 seven-fiber necessary survivors into 1665 exact orbits (sizes 4:3,8:185,16:1477); independent F3 checker recomputes N on all representatives and verifies coverage; no new exclusions or global bound.",
+  "next_experiment": "CAP-005L: certified pair-conflict/deletion-cover gates on 37 N=17 orbit representatives (576 neighborhoods), then moderate-N LP duals; global upper bound and nonlocal constructions in parallel.",
+  "last_run_id": "CAP-005K-CI-2026-11-02-k7-symmetry-1665",
+  "last_run_result": "VERIFIED_EXACT_SYMMETRY_QUOTIENT_CI_GREEN_NECESSARY_ONLY",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -56,9 +56,10 @@
     "CAP-005I-CI",
     "CAP-005J-LOCAL",
     "CAP-005J-CI",
-    "CAP-005K-LOCAL"
+    "CAP-005K-LOCAL",
+    "CAP-005K-CI"
   ],
-  "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41392035320",
+  "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41402684579",
   "baseline_secant_audit": {
     "external_points": 1951,
     "all_blocked": true,
@@ -78,7 +79,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T06:52:09.370Z",
+  "last_updated_utc": "2026-11-02T06:55:36.061Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -497,13 +498,15 @@
     "max_N": 198,
     "max_N_orbits": 1,
     "N17_orbits": 37,
-    "status": "LOCAL_EXACT_JS_CHECKED_CI_PENDING",
+    "status": "VERIFIED_EXACT_SYMMETRY_QUOTIENT_CI_GREEN_NECESSARY_ONLY",
     "global_bound_improved": false,
     "novelty_established": false,
     "gpu_used": false,
     "seed": null,
     "generator": "research/capset_f3_7/cap005_k7_symmetry_quotient.py",
     "independent_checker": "research/capset_f3_7/cap005_k7_symmetry_check.py",
-    "report": "research/capset_f3_7/CAP005_K7_SYMMETRY_QUOTIENT_2026-11-02.md"
+    "report": "research/capset_f3_7/CAP005_K7_SYMMETRY_QUOTIENT_2026-11-02.md",
+    "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41402684579",
+    "artifact": "https://github.com/davidlueng986-alt/123321/actions/runs/41402684579/artifacts/13122077145"
   }
 }
