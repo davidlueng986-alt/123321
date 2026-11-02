@@ -8,15 +8,16 @@
     100,
     91
   ],
-  "next_action": "Benchmark exact isotopy-aware E041 22-cell and E040 21-cell nogoods against E039 projected LP on disjoint branches, with per-node walltime and exact matching checks. Independently verify rational LP primals for 65 E041 deletion-feasible samples if claiming minimality. Continue full orbit-complete proof search.",
-  "current_hypothesis": "Test whether isotopy-aware early forbidden-pattern nogoods (E040 21-cell and new E041 9-column 22-cell) provide marginal branch pruning beyond six-class LP; if not prioritize unrestricted proof-producing 12-type/162959-orbit search.",
-  "last_experiment": "MOLS10-E041-NEW-NONISOTOPIC-22-CELL-EXACT-DUAL",
+  "next_action": "Prioritize unrestricted 12-cycle-type/162959-orbit proof-producing search. On a bounded disjoint sample seek legal k4 prefixes passing full six-class LP (counterexample to biased all-infeasible observations), or derive cheap sound invariant filters before testing new forbidden patterns. Separately seek exact rational primal witnesses for E041's 65 numerically LP-feasible deletion cases. No full-orbit exclusion from fixed-prefix UNSAT.",
+  "current_hypothesis": "E042 falsified useful marginal pruning by three existing 21/22-cell isotopy nogoods on the 516 known k4 prefixes; avoid adding expensive pattern matching without faster prefilters or new pattern families.",
+  "last_experiment": "MOLS10-E042-EXACT-ISOTOPY-NOGOOD-MARGINAL-BENCHMARK",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
     "E039: 516/516 exact fixed k4 projection certificates verified independently; disjoint inputs 360 E037+156 E036; resource-class supports 1:63 2:35 3:358 4:60; 0 complete orbits excluded.",
     "E039: two exact five-demand sparse duals; public case independently checked; n5/n7/n11 105 positive projected LP controls PASS.",
-    "E041: independent integer-only 22-cell seven-demand Farkas certificate PASS; 22 singleton witnesses; 100 random isotopies exact PASS; no global orbit excluded."
+    "E041: independent integer-only 22-cell seven-demand Farkas certificate PASS; 22 singleton witnesses; 100 random isotopies exact PASS; no global orbit excluded.",
+    "E042: 1548/1548 exact 4-row motif-embedding checks independently reproduced, only 3 source-self hits, 1545 negatives, zero marginal pruning beyond E039 LP; 0/162959 full orbits excluded."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -101,7 +102,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T16:52:00Z",
+  "last_run_utc": "2026-11-02T17:54:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -128,10 +129,10 @@
     "research/mols10/E036_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "E041 22-cell exact certificate is restricted, not a full orbit exclusion. 65 numerical LP-feasible deletions lack exact rational primal certificates. E040 23-cell fixed-dual minimality does not imply all-dual minimality. Global 3-MOLS(10) still OPEN; 0/162959 full orbits excluded. E041 local ZIP clean-replayed; Google Drive binary ZIP upload not yet confirmed.",
+  "limitations": "E042 sample is 516 previously LP-infeasible fixed four-row prefixes; exact embedding tested only row/column/symbol isotopies plus square permutation, not all paratopies; no full orbit excluded. Initial monolithic run timed out, replaced by five complete batches. Three numerical LP primal rationalizations failed exact checks; 65 E041 numerical feasible deletions still lack exact rational primal certificates. E042 local ZIP clean-tested, no persistent Drive binary upload claimed.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
-  "external_status_review": "2026-11-02 ~16:49 UTC: checked primary EJC Bright–Keita–Stevens 2026-02-13 and arXiv Barnoff–Bright 2605.02132v2 revised 2026-07-04; targeted searches found no independently checkable unrestricted solution (absence of hits is not proof).",
-  "current_math_result": "GLOBAL OPEN: 0/162959 full orbits excluded; no 100/100/100. E041 exact new 22-cell forbidden pattern from E040 23-cell core after deleting cell index 27; 7 integer dual weights, uncovered RHS +1, 2596 residual candidates max weight 0, 293 positive placements blocked, 22 singleton witnesses, independent JS PASS plus 100 random isotopies (1,000,000 exact placement checks). Distinct from E040 22-cell core by 9 vs 10 occupied columns. LP audit 66 deletions: 65 numerically feasible (NOT exact primal certified), one infeasible and exactly certified. This is a restricted theorem, not a full orbit exclusion.",
+  "external_status_review": "2026-11-02 ~17:45 UTC: primary EJC Bright–Keita–Stevens 2026-02-13 and arXiv Barnoff–Bright 2605.02132v2 revised 2026-07-04 rechecked; targeted searches found no independently verifiable unrestricted 3-MOLS(10) solution (absence of hits not proof).",
+  "current_math_result": "GLOBAL OPEN: 0/162959 full orbits excluded. E042 exact isotopy-aware embedding benchmark: 3 existing E040/E041 21/22-cell forbidden patterns tested against 516 distinct legal k4 prefixes (360 E037 +156 E036), 1548 exact checks under 4! row and 3! square permutations, all injective column and symbol relabelings; only 3 hits, each its own original source prefix (indices 92,93,94); 1545 nonmatches, zero UNKNOWN, zero marginal pruning beyond E039 LP. Independently reimplemented and replayed 1548 checks in five bounded batches (2447321 DFS nodes). All global conclusions remain UNKNOWN.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -175,5 +176,8 @@
   "e040_archive_status": "Local ZIP /mnt/data/E040_MOLS10_RESEARCH_BUNDLE.zip clean SHA256 replay; Drive binary upload attempted and FAILED CONTAINER_SESSION_EXPIRED; public GitHub has exact certificate, verifier, report.",
   "e041_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E041_REPORT.md",
   "e041_certificate_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E041_NEW_22_SPARSE_CERTIFICATE.json",
-  "e041_verifier_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E041_verify.js"
+  "e041_verifier_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E041_verify.js",
+  "e042_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E042_REPORT.md",
+  "e042_replay_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E042_replay.py",
+  "e042_results_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E042_RESULTS.json"
 }
