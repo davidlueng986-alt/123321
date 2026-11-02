@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "Solve unrestricted 3-MOLS(10): target globally justified E033 12 cycle / 162959 orbit search with proof-carrying 15-projection Hall + column-aware LP/ILP pruning, seek a genuine k4 LP-feasible prefix or an ALL-k4 universal exact obstruction; independent verify any 100/100/100 witness immediately. Never infer global proof from samples.",
-  "current_hypothesis": "Universal four-row column-aware LP obstruction? (UNPROVEN; 360 nonuniform samples over 12 canonical f types all infeasible according to numerical solver). More directly target full 100/100/100 or exhaustive globally certified proof.",
-  "last_experiment": "MOLS10-E037-15-RESOURCE-HALL-ALL-12-CYCLE-TYPES",
+  "next_action": "Integrate exact triadic forcing into symmetry-complete E033 12-cycle/162959-orbit row-extension solver, with Hall15 and proof-carrying integer Farkas/LP/ILP; search specifically for a valid k4 LP-feasible prefix (falsifies sampled barrier) or prove universal k4 obstruction with justified exhaustive coverage. Independently replay any full 100/100/100 witness.",
+  "current_hypothesis": "Universal k4 column-aware LP obstruction? Still UNPROVEN. E038 exactly certifies 360 sampled k4 failures and discovers cheap triadic hypergraph cuts; 360 corresponding k3 prefixes LP-feasible numerically. Need full symmetry-complete search or a k4 LP-feasible counterexample.",
+  "last_experiment": "MOLS10-E038-360-EXACT-FARKAS-AND-TRIADIC-FORCING",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -158,7 +158,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T13:15:08Z",
+  "last_run_utc": "2026-11-02T14:00:26Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -185,10 +185,10 @@
     "research/mols10/E036_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "No full 100/100/100 witness or unrestricted certificate, hence no ETA. E037 sample bias; 317 LP statuses numerical only, neither exact Farkas certified nor unrestricted. LP guided long optimization timed out at 200s and produced no counted result. 0/162959 globally certified orbit exclusions.",
+  "limitations": "All E038 360 are nonuniform sampled fixed prefixes. 317 exact Farkas certificates are valid ONLY for these prefixes; 43 zero-support likewise. No global orbit UNSAT, no unrestricted proof, no verified full triple, no ETA. Sparse-all MILP timed out; k3 primal feasibility only numerical.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
   "external_status_review": "2026-11-02 ~12:47 UTC: targeted primary review Bright–Keita–Stevens EJC 2026-02-13/arXiv2503.10504v2; Barnoff–Bright arXiv2605.02132v2 (2026-07-04); no independently verified unrestricted solution found.",
-  "current_math_result": "GLOBAL OPEN: 0/162959 two-row orbit representatives globally ruled out, no verified 100/100/100. E037 proves sound 15 resource-pair Hall projections for any fixed partial 3-MOLS (six resource classes P_AB,P_AC,P_BC,C_A,C_B,C_C). In 1000 k4 nonuniform f=2^5 samples, prior 6-projection Hall excluded 155, all 15 excluded 179 (+24); 1000 k3 passed. Independent 2-left/1-right Hall certificate passed; mutation rejected. In 360 sampled k4 prefixes spread equally across 12 legal f types, 43 exact zero support, 317 numerical LP infeasible; 57 rejected by old Hall6 vs 65 by Hall15 (+8), independent pure Python matcher agrees on all 360. These are not exhaustive orbit coverage or exact LP certificates.",
+  "current_math_result": "GLOBAL OPEN: 0/162959 normalized (f,g) orbits globally excluded, no 100/100/100 witness. E038 upgraded E037's 360 sampled fixed k4 prefixes to 317 independent exact integer Farkas certificates + 43 exact zero-support witnesses (360/360 JS PASS); 360/360 corresponding k3 prefixes numerical LP-feasible. New sound triadic resource-forcing cut d1+d2<=d3 detected 59/317 nonzero-support failures, 51 beyond E037 all-15 Hall; combined Hall15+triads 116/360 vs Hall15 65/360 on SAME biased samples. Independent JS PASS 59/59 and mutation rejected; n5/7/11 prime affine positive controls PASS. 12 cycle-type representative sparse integer certificates of size 3-9, independent JS PASS; 12 standalone GitHub witnesses. A full all-317 sparse MILP minimization timed out with no completed aggregate result; preserved as failed attempt. None of these exclude an entire orbit or prove global nonexistence.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -217,5 +217,9 @@
   "e035_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E035_REPORT.md",
   "e036_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E036_REPORT.md",
   "e037_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E037_REPORT.md",
-  "e037_bundle_drive_url": "https://drive.google.com/file/d/1cMfISpjIlibPYySk0jfoDhD7-96j3ghA/view"
+  "e037_bundle_drive_url": "https://drive.google.com/file/d/1cMfISpjIlibPYySk0jfoDhD7-96j3ghA/view",
+  "e038_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E038_REPORT.md",
+  "e038_bundle_drive_url": "https://drive.google.com/file/d/1O40oOCu5JEFdDpAk5416YJHqQVbkRplC/view",
+  "e038_public_12": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E038_PUBLIC_12_CERTIFICATES.json",
+  "e038_sha256": "2a470b6ad366acc430def383461826b03bb01d03b8bc8b14cb415d8b5a876127"
 }
