@@ -9,7 +9,7 @@ from scipy.sparse import coo_matrix
 def make(I):
  P=((0,1),(0,2),(1,2))
  return all(len({(S[a][r][c],S[b][r][c]) for r in I for c in range(10)})==10*len(I) for a,b in P)
-D=json.load(open('/mnt/data/E034_near_six_inputs.json'));S=D['squares'];P=((0,1),(0,2),(1,2))
+D=json.load(open(str(__import__('pathlib').Path(__file__).with_name('near_triple.json'))));S=D['squares'];P=((0,1),(0,2),(1,2))
 
 def validate(Q):
  n=len(Q[0]);assert len(Q)==3 and all(len(x)==n for x in Q)
@@ -64,4 +64,4 @@ if __name__=='__main__':
   print(I,z['status'],z['vars'],z['wall_s'],'nodes',z['nodes'],flush=True)
   if z['status']=='SAT' or len(out)>=arg.max:break
  print('SUMMARY',collections.Counter(x['status'] for x in out),'wall',round(time.monotonic()-start,3),flush=True)
- json.dump({'source':'near_triple.json','seconds_per_instance':arg.seconds,'results':out},open('/mnt/data/E034_DIRECT_COMPLETION_RESULTS.json','w'),indent=2)
+ json.dump({'source':'near_triple.json','seconds_per_instance':arg.seconds,'results':out},open(str(__import__('pathlib').Path(__file__).with_name('E034_DIRECT_COMPLETION_RESULTS.json')),'w'),indent=2)
