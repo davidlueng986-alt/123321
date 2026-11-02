@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "E034: stream 162959 proven-symmetry (A row1,B row1) orbit representatives into direct 5-net SAT/CP-SAT assumptions; independently audit normalization/orbit coverage; evaluate row2/3 residual triangle/LP/integral cuts per orbit; use proof-producing solver and matched walltime, never infer unrestricted UNSAT from bounded runs.",
-  "current_hypothesis": "H33-GLOBAL-ROW1-CYCLE-CONJUGACY-AND-CENTRALIZER-QUOTIENT",
-  "last_experiment": "MOLS10-E033-12-CYCLE-TYPES-162959-CENTRALIZER-ORBITS-BURNSIDE-INDEPENDENT",
+  "next_action": "Highest priority: solve unrestricted 3-MOLS(10), not count code. Implement proof-producing CDCL/CP-SAT over complete 12 f classes / 162959 justified (f,g) orbits from E033, with column-aware residual triangle propagation and resumable frontier coverage; produce independently checkable UNSAT certificates or find SAT witness and replay every Latin row/column and overlays [100,100,100]. On verified resolution immediately write attributed full report+artifacts to GitHub and Google Drive, notify user, and disable hourly automation.",
+  "current_hypothesis": "Direct complete 5-net construction/negative proof with globally justified first-row orbit coverage and column-aware residual triangle propagation",
+  "last_experiment": "MOLS10-E034-GLOBAL-12-CYCLES-COLUMNAWARE-NEARTRIPLE-39-RESTRICTED-FIXED4-UNSAT",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -145,7 +145,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T10:57:00Z",
+  "last_run_utc": "2026-11-02T11:52:35Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -170,10 +170,10 @@
     "research/mols10/E033_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "No order-10 100/100/100 witness or unrestricted proof. 12 rational dual certificates exclude only 12 specific five-row prefixes. No CDCL solver was available for the 33k-variable CNF. Order6/order10 direct searches UNKNOWN_BUDGET. Multi-seed benchmark outer timed out; Hall pilot slowed. E031 CNF semantic controls pass n4/n5 but no external SAT proof.",
+  "limitations": "OPEN. No unrestricted proof or verified order10 triple. 39 near-triple four-row exclusions are a single C++ exhaustive solver with limited independent semantic/prune checks, not externally replayed proof certificates; changing labels/parastrophy beyond fixed displayed near-triple not covered. Twelve global f cycle type runs all UNKNOWN_BUDGET, zero exhaustive global class coverage. The source C++ is in the Drive zip; GitHub full source upload was blocked and empty placeholders were deleted.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
   "external_status_review": "2026-11-02 ~10:20 UTC: checked BKS EJC 2026/arXiv2503.10504, Barnoff–Bright arXiv2605.02132, Keita 2026 PhD thesis, Gill–Wanless arXiv2204.10996; no independently checkable unrestricted claim found. Absence not proof.",
-  "current_math_result": "E031: direct triple row solver n4 SAT 16/16/16, n5 SAT 25/25/25, n2/n3 exhaustive UNSAT, n6/n10 UNKNOWN_BUDGET. Generated exact full OA(100,5,10,2) CNF: 33,000 vars/101,795 clauses/240,150 literals; solver not executed. Derived residual triangle-support and fractional exact-cover necessary conditions. 12 order-10 five-row prefixes passed support but each failed LP; recovered 12 exact rational dual certificates with positive sums 3–14, independently Node.js integer-replayed 12/12. All conditional fixed-prefix exclusions, no full solution.",
+  "current_math_result": "E034: new C++ direct 3-MOLS rowwise solver positive n4/n5, exhaustive n6 negative. Strong sound column-aware residual triangle/unit/integer cover prunes. Unrestricted n10: 12 canonical f cycle types each 20m nodes -> all UNKNOWN; four deeper types 25-second UNKNOWN. Exhaustive single-solver repairs of all 39 distinct valid four-row subsets from displayed Egan-Wanless neartriple each UNSAT; controls and partial matrices independently checked, six root obstructions independently checked, one representative confirmed by weaker TC pruning. This does NOT classify unrestricted triples and is NOT an independently proof-certified global theorem. No 100/100/100 witness.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -196,5 +196,7 @@
       "name": "E033_MOLS10_RESEARCH_BUNDLE.zip",
       "drive_file_id": "1Iuu5jqUeKH1UEmK3X7DsyKufdMUO3bsz"
     }
-  ]
+  ],
+  "e034_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E034_REPORT.md",
+  "e034_drive_bundle": "https://drive.google.com/file/d/1rEuR0rz2m1YfLxVrTx91tqCZxPK5TOfb/view"
 }
