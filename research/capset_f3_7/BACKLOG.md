@@ -1,3 +1,8 @@
+## CAP-005E CI confirmation (2026-11-02 01:58 UTC)
+- [DONE / CI GREEN https://github.com/davidlueng986-alt/123321/actions/runs/41374998772] Independent C++17 exact pair-cover and full six-fiber pair-aware necessary census passed; 294,394 excluded, 1,616 unresolved.
+- [P0] Seek independently checkable UNSAT certificates for 1,616 surviving neighborhoods; avoid unverified MILP infeasibility claims.
+- [P1] Nonlocal 27-block occupancy-changing constructions and globally valid upper bounds. The global problem remains OPEN.
+
 ## CAP-005E pair-removal gate (2026-11-02 01:51 UTC)
 - [LOCAL EXACT / CI PENDING] Independently recomputed CAP-002A 16-removal minimum over all 1,902,225 outsider pairs with new C++17 arithmetic/DSU verifier; 888 pairs attain 16.
 - [LOCAL EXACT / CI PENDING] Applied >=17 insertions necessary for improvement to full CAP-005D six-fiber histogram: **294,394 / 296,010** release sets rigorously excluded, **1,616** unresolved; 5,516 additional exclusions (77.34% of previous unresolved).

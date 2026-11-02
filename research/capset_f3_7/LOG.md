@@ -160,3 +160,8 @@ Status: VERIFIED COMPUTATION, not a novel record.
 - Proof: any improvement adding >=2 outsiders must delete >=16 originals; <=16 insertions cannot increase 236. A single outsider forces >=10 deletions. N(T)>=17 is necessary only, not sufficient.
 - Code: cap005_pair_cover_independent.cpp, cap005_k6_pair_gate.py; report CAP005_K6_PAIR_GATE_2026-11-02.md. CI pending; no >=237 witness, no global upper bound, novelty not established.
 - Meta-audit: CAP-005D neglected an already-certified stronger pair lemma. Focus on 1,616 surviving neighborhoods and certified UNSAT proofs, while separately exploring nonlocal constructions and global upper bounds. The previous three MILP infeasible reports remain noncertifying.
+
+## 2026-11-02T01:58:46Z | CAP-005E CI confirmation | SUCCESS
+- GitHub Actions https://github.com/davidlueng986-alt/123321/actions/runs/41374998772 completed SUCCESS at commit f8c888b2aad43e148a63eb76c26d0fa93947daec.
+- CI independently compiled and ran C++17 arithmetic/DSU pair-cover audit (1,902,225 pairs, minimum removals 16, exactly 888 minimizers), then re-ran full six-fiber Python histogram and pair-removal gate (294,394 exclusions; 1,616 unresolved). Artifact upload step succeeded.
+- Scope: restricted to edits within six fixed coordinate 4D fibers around classical 236. No >=237 construction, no global upper bound, no literature novelty claim. Keep automation active.

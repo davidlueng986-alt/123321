@@ -13,7 +13,7 @@
   "current_hypothesis": "CAP-005E combines independently verified >=16 original deletions for any outsider pair with CAP-005D exact six-fiber necessary census: 294394/296010 six-fiber release sets rigorously cannot improve 236; 1616 remain unresolved.",
   "next_experiment": "Confirm CAP-005E CI, then certify infeasibility or construct witnesses for 1616 surviving six-fiber neighborhoods; pursue nonlocal constructions and independently auditable global upper bounds.",
   "last_run_id": "CAP-005E-2026-11-02-k6-pair-removal-gate",
-  "last_run_result": "LOCAL_EXACT_PAIR_RECHECK_AND_K6_GATE_CI_PENDING",
+  "last_run_result": "EXACT_K6_PAIR_GATE_CI_GREEN",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -45,7 +45,8 @@
     "CAP-005C-CI",
     "CAP-005D-LOCAL",
     "CAP-005D-CI",
-    "CAP-005E-LOCAL"
+    "CAP-005E-LOCAL",
+    "CAP-005E-CI"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
   "baseline_secant_audit": {
@@ -67,7 +68,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T01:51:49Z",
+  "last_updated_utc": "2026-11-02T01:58:46Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -356,11 +357,12 @@
       "min_original_removals": 16,
       "pairs_attaining_min": 888
     },
-    "status": "LOCAL_EXACT_CI_PENDING",
+    "status": "VERIFIED_EXACT_COMPUTATION_CI_GREEN_RESTRICTED_ONLY",
     "global_bound_improved": false,
     "novelty_established": false,
     "script": "research/capset_f3_7/cap005_k6_pair_gate.py",
     "pair_checker": "research/capset_f3_7/cap005_pair_cover_independent.cpp",
-    "report": "research/capset_f3_7/CAP005_K6_PAIR_GATE_2026-11-02.md"
+    "report": "research/capset_f3_7/CAP005_K6_PAIR_GATE_2026-11-02.md",
+    "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41374998772"
   }
 }
