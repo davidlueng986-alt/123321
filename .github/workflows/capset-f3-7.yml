@@ -98,5 +98,17 @@ jobs:
           name: capset-k6-pair-removal-gate
           path: /tmp/cap005_k6_pair_gate.json
           retention-days: 30
+      - name: Generate 680 exact six-fiber conflict clique certificates
+        run: python research/capset_f3_7/cap005_k6_clique_cover_certificate.py --out /tmp/cap005_k6_clique_cover.json
+      - name: Independently verify 680 clique certificates by direct mod-3 arithmetic
+        run: |
+          python research/capset_f3_7/cap005_k6_clique_cover_check.py /tmp/cap005_k6_clique_cover.json
+          echo "12bf1b9787390691072e6b627afaf73fa44fcab3db13c35479d004fa57bb830f  /tmp/cap005_k6_clique_cover.json" | sha256sum --check
+      - name: Archive 680 six-fiber clique certificates (restricted theorem only)
+        uses: actions/upload-artifact@v4
+        with:
+          name: capset-k6-clique-cover-680
+          path: /tmp/cap005_k6_clique_cover.json
+          retention-days: 30
       - name: Check complete-cap saturation and replacement barrier
         run: python research/capset_f3_7/analyze_secants.py research/capset_f3_7/candidates/calderbank_fishburn_236.txt

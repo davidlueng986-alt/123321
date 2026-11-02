@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-005E combines independently verified >=16 original deletions for any outsider pair with CAP-005D exact six-fiber necessary census: 294394/296010 six-fiber release sets rigorously cannot improve 236; 1616 remain unresolved.",
-  "next_experiment": "Confirm CAP-005E CI, then certify infeasibility or construct witnesses for 1616 surviving six-fiber neighborhoods; pursue nonlocal constructions and independently auditable global upper bounds.",
-  "last_run_id": "CAP-005E-2026-11-02-k6-pair-removal-gate",
-  "last_run_result": "EXACT_K6_PAIR_GATE_CI_GREEN",
+  "current_hypothesis": "CAP-005F exact clique partition certificates exclude 680 additional six-fiber edits (295074/296010 total); 936 remain unresolved. Restricted only, global r3(7) OPEN.",
+  "next_experiment": "Confirm CAP-005F CI, then investigate 936 surviving six-fiber neighborhoods via outsider-triple conflicts and exact deletion-cover certificates; pursue nonlocal constructions and independently audited global bounds.",
+  "last_run_id": "CAP-005F-2026-11-02-k6-clique-cover",
+  "last_run_result": "EXACT_K6_CLIQUE_COVER_LOCAL_PASS_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -46,7 +46,8 @@
     "CAP-005D-LOCAL",
     "CAP-005D-CI",
     "CAP-005E-LOCAL",
-    "CAP-005E-CI"
+    "CAP-005E-CI",
+    "CAP-005F-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
   "baseline_secant_audit": {
@@ -68,7 +69,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T01:58:46Z",
+  "last_updated_utc": "2026-11-02T02:54:35Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -364,5 +365,22 @@
     "pair_checker": "research/capset_f3_7/cap005_pair_cover_independent.cpp",
     "report": "research/capset_f3_7/CAP005_K6_PAIR_GATE_2026-11-02.md",
     "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41374998772"
+  },
+  "cap005_k6_clique_cover": {
+    "scope": "Fixed 236 baseline, exactly six first-three-coordinate 4D fibers",
+    "previous_excluded": 294394,
+    "additional_excluded": 680,
+    "total_excluded": 295074,
+    "unresolved": 936,
+    "certificate_method": "<=16 clique partition of fixed-original-point pair conflict graph; independent exact arithmetic checker",
+    "generator": "research/capset_f3_7/cap005_k6_clique_cover_certificate.py",
+    "independent_checker": "research/capset_f3_7/cap005_k6_clique_cover_check.py",
+    "report": "research/capset_f3_7/CAP005_K6_CLIQUE_COVER_CERTIFICATE_2026-11-02.md",
+    "local_certificate_sha256": "12bf1b9787390691072e6b627afaf73fa44fcab3db13c35479d004fa57bb830f",
+    "status": "LOCAL_EXACT_CHECKER_PASS_CI_PENDING",
+    "global_bound_improved": false,
+    "novelty_established": false,
+    "gpu_used": false,
+    "random_seed": null
   }
 }

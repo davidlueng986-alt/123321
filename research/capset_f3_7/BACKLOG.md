@@ -1,3 +1,9 @@
+## CAP-005F fixed-original-point conflict clique certificates (2026-11-02 02:54 UTC)
+- [LOCAL EXACT / CI PENDING] 680 of CAP-005E's 1,616 surviving six-fiber edits have a verifiable partition of all eligible outsiders into <=16 cliques of pairwise incompatibility. Independently replayed exact mod-3 certificate; 295,074 / 296,010 excluded in total; 936 unresolved. Certificate generator + independent checker + CI artifact added.
+- [P0] Confirm GitHub CI and archived 680-clique JSON SHA256 12bf1b9787390691072e6b627afaf73fa44fcab3db13c35479d004fa57bb830f; do not claim CI success prematurely.
+- [P0] For 936 survivors, test outsider triple hypergraph constraints and exact rational deletion-cover inequalities; require verifiable proof certificates or verified witnesses.
+- [P1] Parallel nonlocal constructions and certified global upper bounds. Restricted local barriers cannot determine r3(7). Novelty unverified.
+
 ## CAP-005E CI confirmation (2026-11-02 01:58 UTC)
 - [DONE / CI GREEN https://github.com/davidlueng986-alt/123321/actions/runs/41374998772] Independent C++17 exact pair-cover and full six-fiber pair-aware necessary census passed; 294,394 excluded, 1,616 unresolved.
 - [P0] Seek independently checkable UNSAT certificates for 1,616 surviving neighborhoods; avoid unverified MILP infeasibility claims.
