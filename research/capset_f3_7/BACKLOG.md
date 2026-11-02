@@ -1,3 +1,7 @@
+## CAP-005F CI confirmation (2026-11-02 02:59 UTC)
+- [DONE / CI GREEN https://github.com/davidlueng986-alt/123321/actions/runs/41380252670] 680 exact independently checked clique certificates archived: https://github.com/davidlueng986-alt/123321/actions/runs/41380252670/artifacts/13113456508; 295,074 / 296,010 six-fiber edits excluded, 936 unresolved. JSON SHA256 12bf1b9787390691072e6b627afaf73fa44fcab3db13c35479d004fa57bb830f.
+- [P0] 936 survivors: exact outsider-triple hypergraph constraints / deletion-cover certificates, and nonlocal constructions; do not infer a global bound from restricted local searches.
+
 ## CAP-005F fixed-original-point conflict clique certificates (2026-11-02 02:54 UTC)
 - [LOCAL EXACT / CI PENDING] 680 of CAP-005E's 1,616 surviving six-fiber edits have a verifiable partition of all eligible outsiders into <=16 cliques of pairwise incompatibility. Independently replayed exact mod-3 certificate; 295,074 / 296,010 excluded in total; 936 unresolved. Certificate generator + independent checker + CI artifact added.
 - [P0] Confirm GitHub CI and archived 680-clique JSON SHA256 12bf1b9787390691072e6b627afaf73fa44fcab3db13c35479d004fa57bb830f; do not claim CI success prematurely.
