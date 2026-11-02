@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "Highest priority: solve unrestricted 3-MOLS(10), not count code. Implement proof-producing CDCL/CP-SAT over complete 12 f classes / 162959 justified (f,g) orbits from E033, with column-aware residual triangle propagation and resumable frontier coverage; produce independently checkable UNSAT certificates or find SAT witness and replay every Latin row/column and overlays [100,100,100]. On verified resolution immediately write attributed full report+artifacts to GitHub and Google Drive, notify user, and disable hourly automation.",
-  "current_hypothesis": "Direct complete 5-net construction/negative proof with globally justified first-row orbit coverage and column-aware residual triangle propagation",
-  "last_experiment": "MOLS10-E034-GLOBAL-12-CYCLES-COLUMNAWARE-NEARTRIPLE-39-RESTRICTED-FIXED4-UNSAT",
+  "next_action": "E035: prioritize unrestricted E033 12-cycle/162959 justified orbit frontier. Build proof-producing direct OA(100,5,10,2) SAT/CP-SAT with full cell/row/column/pair dual cuts, independent proof replay, and exhaustive coverage ledger. E034C exactly excludes all 39 four-row anchors of specified near-triple only; do not extrapolate. Verify any 100/100/100 candidate immediately.",
+  "current_hypothesis": "H034C-FULL-CELL-ROW-COLUMN-PAIR-DUAL-CUTS-FOR-GLOBAL-ORBIT-FRONTIER",
+  "last_experiment": "MOLS10-E034C-39-FOUR-ROW-EXACT-INTEGER-FARKAS-INDEPENDENT",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -70,7 +70,8 @@
     "E030: direct triple-partition exact-cover code and first-principles audit committed; runtime baseline not yet independently replayed, no order-10 result.",
     "E031: 12 independent exact rational residual-triangle Farkas duals on 12 fixed order-10 five-row prefixes; standalone JS rechecks 12/12; all local not unrestricted.",
     "E032: 15 fixed k4 residual triangle LP-integrality-gap states independently replayed; seed131 index34 deletion-minimal 87-edge integral UNSAT core; all fixed-prefix only. Full source/results bundle uploaded to Google Drive Math Agent.",
-    "E033: globally sound row1 conjugacy reduction: n10 148329 normalized A second-row derangements collapse to 12 canonical cycle types; centralizer action on B row1 yields 162959 orbits from 65239993856 labeled (f,g) pairs. Two independent exact orbit BFS and Burnside/permanent algorithms agree for all 12; 400 randomized positive controls PASS; n10 12x120001-node runs UNKNOWN_BUDGET."
+    "E033: globally sound row1 conjugacy reduction: n10 148329 normalized A second-row derangements collapse to 12 canonical cycle types; centralizer action on B row1 yields 162959 orbits from 65239993856 labeled (f,g) pairs. Two independent exact orbit BFS and Burnside/permanent algorithms agree for all 12; 400 randomized positive controls PASS; n10 12x120001-node runs UNKNOWN_BUDGET.",
+    "E034C: all 210 four-row subsets of specified Egan-Wanless near-triple independently enumerated; 39 pairwise valid and 171 immediately invalid; all 39 valid anchors independently excluded by 600-row exact integer Farkas certificates; 94,572 candidate columns checked in standalone Node.js; min positive dual sum 8475, max candidate sum -7. Conditional only: any aligned repair must replace >=7 complete rows; global 3-MOLS(10) OPEN. Exact certificate commit f6697583f078169896914b8b8e755eaa845d9cdf, independent verifier commit 4e429c7de39b2ec8e24fc8e32c5b007509324a3d, report commit 4da2ac120018e6f166675909f1e61ae0d42d3fd1."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
