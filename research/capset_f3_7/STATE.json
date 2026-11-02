@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-006C known FunSearch 512-cap in n8 has maximum 7D affine hyperplane section only208 across all3280 directions; 24 projection directions x12 greedy trials reach at most157 locally. Simple dimension-lowering transfer not promising; global 237 SAT and more sophisticated constructions remain priority.",
-  "next_experiment": "Confirm CAP-006C CI on copied Apache2 source; stronger nonlocal generator evolution beyond hyperplane sections/greedy projections, plus global proof-logged SAT structural cuts and classify near-extremal 6D sections.",
-  "last_run_id": "CAP-006C-LOCAL-2026-11-02",
-  "last_run_result": "LOCAL_JS_ALL_3280_HYPERPLANE_DIRECTIONS_MAX208_AND_288_GREEDY_PROJECTION_BEST157_CI_PENDING",
+  "current_hypothesis": "CAP-007H global-meaningful conditional 237 CNF: fix a maximal 112-cap hyperplane (unique affine class by Potechin 2008). Exact two-other-slice model has 175958 variables,606095 clauses (including 81648 cross-slice fixed-point conflicts). SAT status unknown. Solving UNSAT would exclude all 237 caps with an extremal hyperplane, not arbitrary caps.",
+  "next_experiment": "Proof-logged SAT/UNSAT test of CAP-007H conditional 112-slice CNF; add independently checked valid no-112-hyperplane cut to global CNF only IF conditional UNSAT is certified; investigate caps without large hyperplanes simultaneously.",
+  "last_run_id": "CAP-007H-LOCAL-2026-11-02",
+  "last_run_result": "LOCAL_112_SLICE_ANCHORED_237_CNF_GENERATED_TESTS_PASS_SAT_UNKNOWN_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -65,7 +65,8 @@
     "CAP-005M-CI",
     "CAP-007G-LOCAL",
     "CAP-006B-PILOT",
-    "CAP-006C-LOCAL"
+    "CAP-006C-LOCAL",
+    "CAP-007H-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41415696843",
   "baseline_secant_audit": {
@@ -87,7 +88,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T10:45:29.601Z",
+  "last_updated_utc": "2026-11-02T10:49:06.157Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -654,6 +655,22 @@
     "best_greedy_projected_cap": 157,
     "status": "LOCAL_JS_EXACT_SOURCE_CI_PENDING",
     "is_new_cap": false,
+    "global_bound_improved": false
+  },
+  "cap007h_anchor112": {
+    "scope": "any 7D cap with 112-point 6D hyperplane, given Potechin uniqueness theorem",
+    "fixed_points": 112,
+    "external_vars": 1458,
+    "external_target": 125,
+    "within_6d_line_clauses": 176904,
+    "cross_edge_clauses": 81648,
+    "total_vars": 175958,
+    "total_clauses": 606095,
+    "local_sha256": "93faf29af90fb4b33ae68e08d889e02d0d5a43565afabf9f5878772738f4f830",
+    "known236_anchor_target236_satisfied": true,
+    "known236_anchor_target237_satisfied": false,
+    "SAT_UNSAT": "UNKNOWN",
+    "status": "LOCAL_REPLAY_PASS_REPO_CI_PENDING",
     "global_bound_improved": false
   }
 }

@@ -209,3 +209,8 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [LOW PRIORITY] Naive 8D hyperplane slicing or greedy quotient projection without reconstruction (observed too weak).
 - [P0] CAP-006C2: general parametric admissible-set / generating-function search in n7 from independent starting families, certify every witness; full 237 target retained.
 - [P0] CAP-007H: proof-logged global SAT with cross-slice structure rather than count-only quotas.
+
+## CAP-007H anchored global subfamily (2026-11-02T10:49:06.157Z)
+- [LOCAL CNF REPLAY / CI PENDING] Potechin affine uniqueness of maximal 112-cap in F3^6 permits a globally meaningful conditional model: any 7D cap with a 112-point hyperplane. Target237 CNF: 175958 vars,606095 clauses (176904 intra-slice cap clauses +81648 fixed-slice cross conflicts + sequential>=125 counter). Known236 112+112+12 assignment passes target236 and fails237; SAT status UNKNOWN. Reproducible 11MB CNF local SHA256 93faf29af90fb4b33ae68e08d889e02d0d5a43565afabf9f5878772738f4f830.
+- [P0] Run certified/proof-logged SAT/UNSAT on anchored branch, then independent proof checker. If UNSAT, add sound conditional no-112 hyperplane cut to GLOBAL solver; do not claim r3(7)=236.
+- [P0] Model cap configurations with all 6D hyperplane slices <=111; no argument yet that 237 caps must have 112 slice. Avoid unsupported assumption.
