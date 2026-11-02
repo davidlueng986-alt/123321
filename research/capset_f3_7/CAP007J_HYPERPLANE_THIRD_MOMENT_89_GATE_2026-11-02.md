@@ -1,6 +1,6 @@
 # CAP-007J — A globally valid 89-point hyperplane-section gate (2026-11-02 10:54 UTC)
 
-**Status:** rigorous elementary proof with exact-integer executable audit; independent direct 236-point regression performed in JavaScript; Python CI **PENDING** at initial commit. **Not** a construction, not an improvement of the numerical bound on r3(7), and **not** a literature-priority claim.
+**Status:** rigorous elementary proof with exact-integer executable audit; independent direct 236-point regression performed in JavaScript; base theorem Python CI **GREEN** at run 41432934273; integer histogram addition awaiting follow-up CI. **Not** a construction, not an improvement of the numerical bound on r3(7), and **not** a literature-priority claim.
 
 ## Statement and scope
 
@@ -36,7 +36,14 @@ Independent exhaustive integer confirmation enumerated all **75** unordered trip
 
 ### Sharpness of this particular relaxation
 
-The second/third-moment equations alone cannot force a 90-point slice. A **formal fractional distribution**, NOT a cap construction, supported on (59,89,89), (74,74,89), (79,79,79) with weights 91324/409875, 19829/409875, 99574/136625 exactly matches the two centered moments (and total mass one). Thus improving 89 using this approach requires additional constraints beyond just these two global moment equalities.
+The second/third-moment equations **even with integer multiplicities** cannot force a 90-point slice: the following purely formal histogram has 1093 directions, every slice <=89, and exactly reproduces both moments:
+
+- 238 directions of profile (59,89,89)
+- 267 directions of profile (76,78,83)
+- 65 directions of profile (76,79,82)
+- 523 directions of profile (77,80,80)
+
+Exact checks: counts sum to 1093, centered variance sum 154050, centered cubic sum -1421526. This is **NOT** a cap construction or a realizable hyperplane system; it proves only that these two aggregate moment equations plus integer histogram counts do not exclude max89. A rational three-profile convex model also exists, but the integer histogram is stronger. Any improvement to >=90 needs additional geometric consistency constraints.
 
 ## Reproducibility / independent checks
 
@@ -48,7 +55,7 @@ Source: cap007j_hyperplane_moment_gate.py (stdlib, no randomness or optimizer); 
 
 Local scratch Python: 3 tests PASS, the repository-fixture test skipped because that fixture was not present in the isolated scratch runtime; CI should execute all four with the repository fixture. Independently, a separate JavaScript arithmetic checker fetched the exact 236-point witness from GitHub (blob bb75562499071945a07273e439a892c55a8d6b9f), confirmed 236 distinct points and zero collinear triples across all 27,730 unordered pairs, and explicitly accumulated all 1093 directions: S2=20,445,388; S3=1,631,114,708; maximum slice 112. Both moments exactly matched the independent combinatorial formulas. This 236 check is a regression, not a new construction.
 
-No GPU, paid compute, SAT solver, or random seed. The mathematical proof is self-contained and independently auditable without executing software. CI status must be checked before labelling CI-GREEN.
+No GPU, paid compute, SAT solver, or random seed. The mathematical proof is self-contained and independently auditable without executing software. The first CI after adding the 236 regression test failed on the fixture header 'n: 7' (run 41432756301); parsing was corrected in commit 205e3ded1eaacbd83e094f95cf979a81b3bf2afd. Full branch CI then passed at https://github.com/davidlueng986-alt/123321/actions/runs/41432934273. The newly added integer histogram is separately exact-checked in JavaScript; await follow-up CI before marking that new test GREEN.
 
 ## Research implications and meta-audit
 

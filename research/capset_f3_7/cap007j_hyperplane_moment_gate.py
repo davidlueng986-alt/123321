@@ -86,6 +86,12 @@ def gate_237():
                for i,p in enumerate(profiles)) == Fraction(variance_sum,normals)
     assert sum(Fraction(*weights[i])*sum((x-center)**3 for x in p)
                for i,p in enumerate(profiles)) == Fraction(centered_cubic_sum,normals)
+    histogram = [((59,89,89),238), ((76,78,83),267),
+                 ((76,79,82),65), ((77,80,80),523)]
+    assert sum(c for _,c in histogram) == normals
+    assert sum(c*sum((x-center)**2 for x in p) for p,c in histogram) == variance_sum
+    assert sum(c*sum((x-center)**3 for x in p) for p,c in histogram) == centered_cubic_sum
+    assert all(max(p) <= 89 for p,_ in histogram)
     return {'scope':'any 237-point cap in F3^7',
             'normal_directions':normals,'pair_normal_directions':pairs,
             'noncollinear_triple_normal_directions':triples,
@@ -97,7 +103,8 @@ def gate_237():
             'sorted_profiles_checked':checked,
             'conclusion':'Every 237-cap has an affine 6D hyperplane containing >=89 points.',
             'does_not_prove_237_exists':True,
-            'moment_relaxation_cannot_force_90':True}
+            'moment_relaxation_cannot_force_90':True,
+            'integer_89_histogram_moment_feasible':True}
 
 
 def main():

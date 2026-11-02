@@ -716,12 +716,50 @@
     "script": "research/capset_f3_7/cap007j_hyperplane_moment_gate.py",
     "test": "research/capset_f3_7/test_cap007j_hyperplane_moment_gate.py",
     "report": "research/capset_f3_7/CAP007J_HYPERPLANE_THIRD_MOMENT_89_GATE_2026-11-02.md",
-    "status": "EXACT_ELEMENTARY_PROOF_LOCAL_PYTHON_PASS_JS_236_AUDIT_PASS_CI_PENDING",
+    "status": "EXACT_PROOF_BASE_THEOREM_CI_GREEN_INTEGER_HISTOGRAM_EXACT_JS_PASS_FOLLOWUP_CI_PENDING",
     "global_numeric_upper_bound_improved": false,
     "lower_bound_improved": false,
     "novelty_established": false,
     "seed": null,
     "gpu_used": false,
-    "independent_review_status": "not independently peer-reviewed; proof self-contained"
+    "independent_review_status": "not independently peer-reviewed; proof self-contained",
+    "integer_89_histogram": [
+      {
+        "profile": [
+          59,
+          89,
+          89
+        ],
+        "count": 238
+      },
+      {
+        "profile": [
+          76,
+          78,
+          83
+        ],
+        "count": 267
+      },
+      {
+        "profile": [
+          76,
+          79,
+          82
+        ],
+        "count": 65
+      },
+      {
+        "profile": [
+          77,
+          80,
+          80
+        ],
+        "count": 523
+      }
+    ],
+    "integer_histogram_exact_js_verified": true,
+    "first_ci_failed": "https://github.com/davidlueng986-alt/123321/actions/runs/41432756301",
+    "first_ci_failure": "witness header n: 7 not parsed; repaired",
+    "ci_green_base_theorem": "https://github.com/davidlueng986-alt/123321/actions/runs/41432934273"
   }
 }

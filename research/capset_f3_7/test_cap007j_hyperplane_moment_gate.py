@@ -9,6 +9,7 @@ class HyperplaneMomentGate(unittest.TestCase):
         r=gate_237()
         self.assertEqual(r['required_exact_value'],-35076)
         self.assertEqual(r['sorted_profiles_checked'],75)
+        self.assertTrue(r['integer_89_histogram_moment_feasible'])
     def test_normal_counts_and_9_cap_direct_moments(self):
         # Anisotropic quadratic graph in F3^3; 9 points, no 3-collinear.
         cap=[(x,y,(x*x+y*y)%3) for x in range(3) for y in range(3)]
