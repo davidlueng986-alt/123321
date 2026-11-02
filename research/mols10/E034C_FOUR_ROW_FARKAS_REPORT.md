@@ -4,7 +4,7 @@
 
 ## Precisely proved statement
 
-Let S be the exact Egan–Wanless three-square near-triple in `near_triple.json`, with pair overlays 100/100/91. No full 3-MOLS(10) triple can agree with S on four complete common rows in the given symbols and columns (a common permutation of rows is harmless). Hence any such aligned repair must change **at least seven entire rows**. This does not exclude a triple with unrelated symbols/columns or arbitrary first square.
+Let S be the exact Egan–Wanless three-square near-triple in `near_triple.json`, with pair overlays 100/100/91. No full 3-MOLS(10) triple can agree with S on four complete common rows in the given symbols and columns (a common permutation of rows is harmless). Hence any such aligned repair must alter at least one entry in **at least seven distinct row indices**. This does not exclude a triple with unrelated symbols/columns or arbitrary first square.
 
 Of 210 choices of four source rows, 171 already repeat a symbol pair and cannot be part of any orthogonal triple; 39 are locally valid. For each valid I, form the exact 600-row 0/1 incidence matrix A_I of **every** allowed assignment (future row r, column c, symbols a,b,d). Candidate assignments respect the three squares' existing column symbols and all previously used AB,AC,BC symbol pairs. The 600 exact-once constraints comprise 60 cell positions, 180 future row/square/symbol, 180 column/square/missing-symbol, and 180 remaining ordered-pair constraints. Every genuine completion produces x>=0 with A_I x=1.
 
