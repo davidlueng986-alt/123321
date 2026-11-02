@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-025: CAP-017B symbolic Fourier/common-tangent premise passed independent derivation and 4374 direct checks, but CAP-019 <=287 remains provisional pending independent Thackeray 110-completion computer-classification referee. Balanced/no-111 and >=237 construction branches remain open.",
-  "next_experiment": "Independently reproduce Thackeray 110-cap completion computational dependency, then proof-logged anchored111 SAT and balanced/no-111 global work; check final CAP025 CI.",
-  "last_run_id": "CAP-025-FOURIER-COMMON-TANGENT-REFEREE-2026-11-02",
-  "last_run_result": "SIX_PAIR_EXACT_FOURIER_CONVOLUTION_PASS_CI_PENDING_NO_NEW_GLOBAL_BOUND",
+  "current_hypothesis": "CAP-026: Any hypothetical 285-point cap with every affine 6D section<=109 has nonzero barycenter and anisotropic rank-2 quadratic form on its 6D kernel. Exact formal moment+rank2 negative control survives; no new global bound. CAP-019 <=287 remains provisional pending independent Thackeray 110-cap classification referee.",
+  "next_experiment": "Confirm final CAP-026 GitHub CI; independently replay Thackeray 110-completion computation; pursue actual codim2 incidence and proof-logged anchored111 SAT, balanced/no-111 and >=237 witness search.",
+  "last_run_id": "CAP-026-285-QUADRATIC-RIGIDITY-2026-11-02",
+  "last_run_result": "UNCONDITIONAL_285_MAX109_NONZERO_BARYCENTER_ANISOTROPIC_RANK2_NECESSARY_ONLY_LOCAL_4_4_PASS_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -97,7 +97,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T20:00:00Z",
+  "last_updated_utc": "2026-11-02T20:55:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1277,5 +1277,38 @@
     "novelty_established": false,
     "global_bound_improved": false,
     "github_ci": "PENDING"
-  }
+  },
+  "cap026_285_quadratic_rigidity": {
+    "report": "research/capset_f3_7/CAP026_285_QUADRATIC_RIGIDITY_2026-11-02.md",
+    "verifier": "research/capset_f3_7/test_cap026_285_quadratic_rigidity.py",
+    "hypothesis": "285-point cap, every affine 6D section <=109",
+    "theorem": "Barycenter nonzero; Q=-sum_x (u.x)^2 on barycenter-orthogonal 6D kernel has anisotropic rank2",
+    "exact_spectrum": [
+      40,
+      162,
+      162
+    ],
+    "type1_directions": 729,
+    "admissible_profiles": 169,
+    "exact_global_moments": {
+      "directions": 1093,
+      "S2": 29773665,
+      "S3": 2860326405
+    },
+    "dual_numerators": {
+      "n1_lower_times_1176": 153900,
+      "n2_lower_times_1176": 702828,
+      "n0_upper_times_78": 6378
+    },
+    "local_tests": "PASS_4_OF_4_0.044S",
+    "github_ci": "PENDING",
+    "independently_checked_quadric_rank_sign_cases": 28,
+    "independently_checked_known_236_pairs": 27730,
+    "formal_negative_control": "EXISTS_NOT_A_CAP",
+    "global_upper_improved": false,
+    "novelty": "NOT_ESTABLISHED",
+    "gpu_used": false,
+    "random_seed": null
+  },
+  "cap025_ci_final": "https://github.com/davidlueng986-alt/123321/actions/runs/41514324725"
 }
