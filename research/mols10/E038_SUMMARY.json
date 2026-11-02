@@ -1,0 +1,41 @@
+{
+  "timestamp_utc": "2026-11-02T13:58:00Z",
+  "experiment": "E038",
+  "status": "OPEN",
+  "global_orbits": 162959,
+  "globally_excluded_orbits": 0,
+  "full_100_100_100_witness": false,
+  "fixed_prefix_samples": 360,
+  "exact_Farkas_certificates": 317,
+  "exact_zero_support_certificates": 43,
+  "independent_exact_verification": "360/360 PASS",
+  "k3_LP_numerical_feasible": 360,
+  "triads": {
+    "tested": 317,
+    "no_triad": 258,
+    "triad_found": 59,
+    "triad_beyond_Hall15": 51
+  },
+  "Hall15_old_rejections": 65,
+  "combined_Hall15_and_triad_rejections": 116,
+  "sparse_12_cycle_support_sizes": [
+    5,
+    7,
+    7,
+    5,
+    7,
+    9,
+    7,
+    7,
+    7,
+    7,
+    5,
+    3
+  ],
+  "sparse_12_independent": "PASS",
+  "triad_59_independent": "PASS",
+  "positive_controls": "n5/n7/n11 k2/k3/k4 PASS",
+  "failed_experiment": "all-317 sparse MILP interrupted before complete output; no aggregate counted",
+  "next_action": "Integrate triadic cut in exhaustive symmetry-complete 12-type /162959-orbit proof-producing search; seek k4 LP feasible counterexample or unrestricted proof",
+  "scope": "ONLY fixed sampled prefixes, no unrestricted resolution"
+}
