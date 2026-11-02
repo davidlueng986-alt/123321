@@ -1,0 +1,86 @@
+{
+  "experiment": "E048",
+  "date_utc": "2026-11-02",
+  "global_status": "OPEN",
+  "global_orbits_excluded": 0,
+  "global_orbits_reported": 162959,
+  "local": {
+    "E044": 512,
+    "E045_local": 574,
+    "E047": 479,
+    "E047_sources": 8,
+    "records": 1573,
+    "duplicate_records": 8,
+    "distinct_prefixes": 1565,
+    "row_permutation_proposals": 901440,
+    "valid": 1565,
+    "nonidentity": 0,
+    "python_crosscheck": {
+      "prefixes": 128,
+      "proposals": 73728,
+      "valid": 128,
+      "nonidentity": 0
+    }
+  },
+  "remote": {
+    "E044": 512,
+    "E045_remote": 570,
+    "E047_regenerated": 479,
+    "E047_sources": 8,
+    "records": 1569,
+    "distinct_prefixes": 1569,
+    "row_permutation_proposals": 903744,
+    "valid": 1569,
+    "nonidentity": 0,
+    "run_success_with_prior_pipeline_caveat": "https://github.com/davidlueng986-alt/123321/actions/runs/41548987628",
+    "corrected_strict_pipefail_run": "https://github.com/davidlueng986-alt/123321/actions/runs/41549028462"
+  },
+  "intercalates": {
+    "source_count": 8,
+    "original_intercalates": 60,
+    "by_source": {
+      "0": 15,
+      "70": 3,
+      "140": 6,
+      "210": 8,
+      "280": 4,
+      "350": 6,
+      "420": 11,
+      "490": 7
+    },
+    "subsets_1_to_4": 2895,
+    "valid_by_size": [
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "valid_witness": {
+      "source": "0",
+      "square": 1,
+      "rows": [
+        0,
+        1
+      ],
+      "columns": [
+        1,
+        4
+      ],
+      "legal_residual_candidates": 416,
+      "zero_support_resource_id": 595,
+      "resource": [
+        "C",
+        2,
+        9,
+        5
+      ]
+    }
+  },
+  "positive_controls_affine": {
+    "5": 6,
+    "7": 18,
+    "11": 105
+  },
+  "limitations": "Finite static trade neighborhood and correlated prefixes; no symmetry-complete theorem. Early CI missing pipefail masked assertion failure, corrected. Local E045 574 differs from remote E045 570."
+}
