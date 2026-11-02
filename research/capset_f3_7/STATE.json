@@ -11,9 +11,9 @@
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
   "current_hypothesis": "CAP-026: Any hypothetical 285-point cap with every affine 6D section<=109 has nonzero barycenter and anisotropic rank-2 quadratic form on its 6D kernel. Exact formal moment+rank2 negative control survives; no new global bound. CAP-019 <=287 remains provisional pending independent Thackeray 110-cap classification referee.",
-  "next_experiment": "Confirm final CAP-026 GitHub CI; independently replay Thackeray 110-completion computation; pursue actual codim2 incidence and proof-logged anchored111 SAT, balanced/no-111 and >=237 witness search.",
-  "last_run_id": "CAP-026-285-QUADRATIC-RIGIDITY-2026-11-02",
-  "last_run_result": "UNCONDITIONAL_285_QUADRATIC_RANK2_NECESSARY_ONLY_LOCAL_PASS_INDEPENDENT_GITHUB_236_CHECK_PASS_CI_PENDING",
+  "next_experiment": "Point-level 3D fiber compatibility and remaining 1053 directional constraints; independent Thackeray 110-completion referee",
+  "last_run_id": "CAP-027-RADICAL-RADON-2026-11-02",
+  "last_run_result": "RANK15_AND_130_GRIDS_EXACT_285_COUNT_ONLY_NEGATIVE_CONTROL_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -97,7 +97,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T20:55:00Z",
+  "last_updated_utc": "2026-11-02T21:48:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1311,5 +1311,47 @@
     "random_seed": null,
     "witness_integration_audit": "Two valid 236-cap coordinate realizations differ; both independently verified, no literal-equality assumption. Correction 6d9e3531."
   },
-  "cap025_ci_final": "https://github.com/davidlueng986-alt/123321/actions/runs/41514324725"
+  "cap025_ci_final": "https://github.com/davidlueng986-alt/123321/actions/runs/41514324725",
+  "cap027_radical_radon": {
+    "date_utc": "2026-11-02",
+    "status": "LOCAL_PYTHON_6_OF_6_AND_INDEPENDENT_NODE_PASS_CI_PENDING",
+    "scope": "conditional M285 max109 CAP026 rank2 anisotropic radical; count-only negative control",
+    "radical_dim": 4,
+    "radical_projective_normals": 40,
+    "affine_6d_sections": 120,
+    "radon_rank_k2_k3_k4": [
+      6,
+      10,
+      15
+    ],
+    "radon_kernel_dim_k4": 66,
+    "codim2_normal_planes": 130,
+    "affine_5d_cells": 1170,
+    "fiber_model_total": 285,
+    "fiber_histogram": {
+      "3": 63,
+      "4": 7,
+      "6": 9,
+      "7": 2
+    },
+    "six_dim_range": [
+      84,
+      108
+    ],
+    "five_dim_range": [
+      27,
+      45
+    ],
+    "actual_cap_witness": false,
+    "global_bound_improved": false,
+    "novelty": "NOT_ESTABLISHED",
+    "report": "research/capset_f3_7/CAP027_RADICAL_RADON_RANK_AND_285_NEGATIVE_CONTROL_2026-11-02.md",
+    "test": "research/capset_f3_7/test_cap027_radical_radon.py",
+    "independent_js": "research/capset_f3_7/cap027_radon_independent.js",
+    "certificate": "research/capset_f3_7/CAP027_radical_radon_certificate.json",
+    "cap026_prior_ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41524558297",
+    "gpu": false,
+    "paid_compute": false,
+    "seed": null
+  }
 }

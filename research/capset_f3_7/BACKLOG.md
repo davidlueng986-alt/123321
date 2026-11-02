@@ -355,3 +355,11 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0] To improve global upper/lower bounds, impose genuine codimension-two affine incidence, per-direction quadratic FORM geometry (not just rank histogram), and proof-logged anchored111/110 SAT; balanced/no-111 branch remains open.
 - [P1] Explore whether anisotropic rank2 Q can be excluded by joint 5D-subspace incidence, or provide an actual realizable direction assignment satisfying all 5D compatibility. Avoid presenting formal integer profiles as caps.
 - [NOVELTY] No external priority established; current global numerical bounds unchanged and exact r3(7) OPEN.
+
+## CAP-027 — radical affine Radon p-rank and count-only falsification (2026-11-02 ~21:48 UTC)
+- [LOCAL EXACT PASS / CI PENDING] Conditional on CAP026 hypothetical M285 max109 rank2 anisotropic Q: its Q0 normals are exactly PG(W), W a 4D radical; all 120 affine 6D W-slices divisible3. Exact F3 affine Radon ranks k2,k3,k4 =6,10,15, so 120×81 radical matrix has nullity66. All 130 codim2 3×3 grids must have affine-linear residues mod3. Source/test/report/certificate CAP027.
+- [FALSIFIED] Full 81-fiber nonnegative integer model of total285 with every fiber≤7, all 120 W-slices≤108 divisible3, all 1170 affine 5D cells≤45, all 130 grid congruences passes. Not a cap; remaining 1053 normals and cross-fiber 3AP absent. Do NOT claim these count-only constraints exclude M285, or that each fiber is 0 mod3.
+- [P0] Confirm GitHub Actions CI at exact final CAP027 commit; check independent Node test, avoid green claims before completion.
+- [P0 GEOMETRY] Replace 81-fiber count-only model by point-level 3D cap assignments with cross-fiber collinearity and remaining rank2/Type1 normals. Use proof-logged SAT/CP-SAT and independently checked UNSAT proof if attempting global bounds.
+- [P0 REFEREE] Thackeray 2022 computational 110-completion and CAP019 <=287 remain provisional; preserve balanced/no-111 and ≥237 construction branches.
+- [NOVELTY] Affine incidence p-ranks are classical; literature priority for CAP027 not established. Exact r3(7) OPEN.

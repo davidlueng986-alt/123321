@@ -1,0 +1,43 @@
+{
+  "id": "CAP-027",
+  "date_utc": "2026-11-02",
+  "scope": "Hypothetical M285 max109 rank2-anisotropic Q radical; 81-fiber count-only relaxation",
+  "radon_ranks": {
+    "k2": 6,
+    "k3": 10,
+    "k4": 15
+  },
+  "normal_subspace_dimension": 4,
+  "normal_projective_directions": 40,
+  "normal_2planes": 130,
+  "affine_6d_sections": 120,
+  "affine_5d_sections": 1170,
+  "fiber_total": 285,
+  "fiber_histogram": {
+    "3": 63,
+    "4": 7,
+    "6": 9,
+    "7": 2
+  },
+  "six_dim_range": [
+    84,
+    108
+  ],
+  "five_dim_range": [
+    27,
+    45
+  ],
+  "deterministic_fiber_formula": "f(t)=3+1[t0=t1=0]+3*1[t=P[7i mod81],i=0..10]; P=lexicographic F3^4",
+  "seed": null,
+  "random": false,
+  "gpu": false,
+  "paid_compute": false,
+  "cap_witness": false,
+  "global_bound_improved": false,
+  "novelty": "NOT_ESTABLISHED",
+  "tests": "Python 6/6 locally, independent Node JS passed; GitHub CI pending",
+  "commands": [
+    "python -m unittest discover -s research/capset_f3_7 -p 'test_cap027_radical_radon.py' -v",
+    "node research/capset_f3_7/cap027_radon_independent.js"
+  ]
+}
