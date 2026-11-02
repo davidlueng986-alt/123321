@@ -20,7 +20,10 @@ class HyperplaneMomentGate(unittest.TestCase):
         f=Path(__file__).resolve().parent / "candidates" / "calderbank_fishburn_236.txt"
         if not f.exists():
             self.skipTest("Repository fixture unavailable in local scratch workspace")
-        pts=[tuple(map(int,line.strip())) for line in f.read_text().splitlines() if line.strip()]
+        raw=[line.strip() for line in f.read_text().splitlines() if line.strip()]
+        self.assertEqual(raw.pop(0),'n: 7')
+        self.assertTrue(all(len(s)==7 and set(s)<={'0','1','2'} for s in raw))
+        pts=[tuple(map(int,s)) for s in raw]
         self.assertEqual(len(pts),236)
         self.assertTrue(is_cap(pts))
         self.assertEqual(measured_moments(pts,7),(20445388,1631114708,112))
