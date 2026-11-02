@@ -1,0 +1,33 @@
+{
+  "run": "E044",
+  "utc": "2026-11-02T19:53:17Z",
+  "status": "OPEN",
+  "seed": 20261102,
+  "prefixes": 512,
+  "exact_integer_dual": 471,
+  "exact_zero_support": 41,
+  "verified_candidates": 200094,
+  "k3_numerical_feasible": 512,
+  "k3_max_residual": 9.700018566149993e-13,
+  "raw_overlap_E036_2340": 0,
+  "first_square_cycle_types": {
+    "10": 145,
+    "2+2+2+4": 9,
+    "2+2+3+3": 13,
+    "2+2+6": 34,
+    "2+3+5": 43,
+    "2+4+4": 15,
+    "2+8": 86,
+    "3+3+4": 25,
+    "3+7": 58,
+    "4+6": 58,
+    "5+5": 26
+  },
+  "complete_orbits_excluded": 0,
+  "orbits_total": 162959,
+  "sha256": {
+    "results": "a3321997c8ac90bf802366a9f6de769dbedac11b22d78c27265ec0644ecd480d",
+    "certificates": "be75a0786f265a1b5d06853d5a07a8dd22022d344584b3acc9a8176c2e385f01",
+    "k3": "33122658c28a7080a7e5bb7bf49d1bb5cc3e7a390f72f2c81ba6a07ea8c2f3ce"
+  }
+}
