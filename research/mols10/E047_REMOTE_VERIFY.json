@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "proposals": 246960,
+  "valid": 479,
+  "dual": 400,
+  "zero": 79,
+  "legal_placements": 192078,
+  "mutation_rejected": true
+}
