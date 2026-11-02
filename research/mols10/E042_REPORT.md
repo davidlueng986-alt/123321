@@ -39,3 +39,6 @@ Input SHA256:
 Put `E037_ALL_CYCLES.json`, `E036_WITNESSES.json`, `E040_EXACT_MINIMAL_CORES.json`, `E041_NEW_22_SPARSE_CERTIFICATE.json` next to `E042_replay.py`. Run `python E042_replay.py 0 100`, then offsets 100,200,300 with length 100 and 400 with length 116; expect only [92,E040_22], [93,E040_21], [94,E041_22]. Independently run `node E041_verify.js E041_NEW_22_SPARSE_CERTIFICATE.json`.
 
 **Next:** deprioritize expensive 21/22-cell isotopy nogood matching on similar random k4 prefixes; seek sound cheaper invariant filters or a genuine LP-feasible four-row counterexample, but direct most budget to unrestricted 12-cycle-type/162,959-orbit proof-producing search. For any complete candidate, replay all 3 Latin and all 3 overlay 100/100/100 constraints independently. No claim of a global theorem or publication novelty.
+
+## Bundle finalization addendum
+The final downloadable E042 ZIP also includes E042_README.md. Final SHA256: `9dc68c2700cd5d9a052d17910e679550c436a44a819836ba762f9a88bcd2f583` (supersedes the earlier pre-README ZIP digest). ZIP integrity verified. Persistent Google Drive binary upload not attempted in E042; journal text write succeeded.
