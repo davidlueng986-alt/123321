@@ -51,3 +51,9 @@ The self-contained Drive ZIP contains the E037 sample inputs, E035 residual mode
 
 ## Next highest-value action
 Integrate triadic forcing after zero-support and Hall15 in the **globally symmetry-complete** E033 row-extension search; use exact Farkas certificates for deeper branches. Then either (a) find a genuine k4 LP-feasible prefix and pursue 10 rows, or (b) prove **all** normalized first-two-row orbit extensions impossible with independently verified coverage. Prioritize mathematical generalization of 3/5/7-weight motifs and search for counterexamples, not more biased k4 sampling. Verify any 100/100/100 triple independently before announcing resolution.
+
+## Verified archive and public replay links
+- Drive full E038 bundle: https://drive.google.com/file/d/1O40oOCu5JEFdDpAk5416YJHqQVbkRplC/view
+- Standalone 12 sparse certificates: https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E038_PUBLIC_12_CERTIFICATES.json
+- Standalone 12-case independent Node verifier: https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E038_verify_public_12.js
+- Full 360 exact certificates and 59 triad witnesses are in the Drive bundle; the 12 public sparse witnesses are a **subset**, not a global certificate.
