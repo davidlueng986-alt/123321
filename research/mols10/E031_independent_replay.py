@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Independent direct checker: Latin/overlay, partial constraints, and CNF model replay."""
 import json,sys,hashlib
-sys.path.insert(0,'/mnt/data')
+from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parent))
 from E031_rowwise_5net import solve
 from E031_direct_cnf import make,normalize,from_squares
 
@@ -44,7 +45,7 @@ for n in (2,3,4,5):
 # Separate LATIN-only negative case: duplicate the same order-10 Latin square
 # from a complete public E027 fixed-Q mate listing; duplication destroys all
 # pairwise orthogonality without violating a single Latin row or column.
-q10=json.load(open('/mnt/data/E027_RESULTS.json'))['UW']['solutions'][0]['mate']
+q10=[[(r+c)%10 for c in range(10)] for r in range(10)]
 M=make(10); Z=normalize([q10,q10,q10])
 fails=from_squares(M,Z)
 assert len(fails)>0
@@ -58,5 +59,5 @@ for seed in (0,1,2):
         out['partial'].append({'seed':seed,'hall':hall,'status':d['status'],'nodes':d['nodes'],
           'deepest_completed_row':d['deepest_completed_row'],'verification':v,
           'hall_prunes':d['hall_prunes'],'seconds':d['seconds']})
-open('/mnt/data/E031_REPLAY_RESULTS.json','w').write(json.dumps(out,indent=2))
+open(Path(__file__).resolve().parent / 'E031_REPLAY_RESULTS.json','w').write(json.dumps(out,indent=2))
 print(json.dumps(out,indent=2))
