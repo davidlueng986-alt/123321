@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-005I CI GREEN: independently checked exact rational odd-cycle duals and 16-group orbit quotient prove the entire fixed 236-cap <=6 of 27 4D-fiber reconstruction family has optimum 236. This is NOT a global upper bound; exact r3(7) OPEN.",
-  "next_experiment": "Change search family. Seek nonlocal >=7-fiber occupancy-changing constructions, alternative affine partitions/baselines, and globally valid certified upper bounds; do not repeat proven <=6-fiber neighborhood.",
-  "last_run_id": "CAP-005I-2026-11-02-k6-oddcycle-duals",
-  "last_run_result": "VERIFIED_EXACT_ALL_296010_SIX_FIBER_EDITS_CI_GREEN_RESTRICTED_ONLY",
+  "current_hypothesis": "CAP-005J independent exact CPU censuses: among all C(27,7)=888030 seven-fiber edits of the fixed 236 cap, 862906 cannot improve by the >=17-outsider necessary gate; 25124 remain unresolved, max individually admissible outsiders 198 in 8 neighborhoods. Not a 237 witness or global upper bound. CI pending.",
+  "next_experiment": "Confirm CAP-005J CI; quotient 25124 surviving seven-fiber neighborhoods by verified affine stabilizer; pursue certifiable duals for manageable cases and nonlocal constructions/global upper bound in parallel.",
+  "last_run_id": "CAP-005J-2026-11-02-k7-necessary-gate",
+  "last_run_result": "VERIFIED_LOCAL_TWO_INDEPENDENT_EXACT_K7_NECESSARY_GATE_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -53,7 +53,8 @@
     "CAP-005H-LOCAL",
     "CAP-005H-CI",
     "CAP-005I-LOCAL",
-    "CAP-005I-CI"
+    "CAP-005I-CI",
+    "CAP-005J-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41392035320",
   "baseline_secant_audit": {
@@ -75,7 +76,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T05:10:00Z",
+  "last_updated_utc": "2026-11-02T05:57:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -453,5 +454,31 @@
     "seed": null,
     "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41392035320",
     "artifact": "https://github.com/davidlueng986-alt/123321/actions/runs/41392035320/artifacts/13118250395"
+  },
+  "cap005_k7_necessary_gate": {
+    "scope": "Fixed classical 236 cap; exactly seven of first-three-coordinate 27 four-dimensional fibers released",
+    "release_sets": 888030,
+    "excluded_by_pair16_outsider_gate": 862906,
+    "unresolved": 25124,
+    "maximum_individually_admissible_outsiders": 198,
+    "maximum_groups": 8,
+    "total_outsider_incidence": 2946160,
+    "histogram_bins": 98,
+    "status": "VERIFIED_LOCAL_TWO_INDEPENDENT_FULL_CENSUSES_CI_PENDING_NECESSARY_ONLY",
+    "proof_scope": "Any improvement requires >=17 outsiders; N(T)<=16 excludes improvement",
+    "scripts": [
+      "research/capset_f3_7/cap005_j_k7_gate_incidence.py",
+      "research/capset_f3_7/cap005_j_k7_gate_direct.cpp",
+      "research/capset_f3_7/cap005_j_compare.py"
+    ],
+    "report": "research/capset_f3_7/CAP005_K7_NECESSARY_GATE_2026-11-02.md",
+    "global_bound_improved": false,
+    "novelty_established": false,
+    "seed": null,
+    "gpu_used": false,
+    "local_cpu_seconds": {
+      "python_incidence": 5.45,
+      "cpp_direct": 0.57
+    }
   }
 }

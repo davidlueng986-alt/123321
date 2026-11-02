@@ -148,3 +148,18 @@ jobs:
           retention-days: 30
       - name: Check complete-cap saturation and replacement barrier
         run: python research/capset_f3_7/analyze_secants.py research/capset_f3_7/candidates/calderbank_fishburn_236.txt
+
+      - name: CAP-005J two independent exact seven-fiber necessary censuses (CPU only)
+        run: |
+          python research/capset_f3_7/cap005_j_k7_gate_incidence.py --out /tmp/cap005_j_k7_incidence.json
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic research/capset_f3_7/cap005_j_k7_gate_direct.cpp -o /tmp/cap005_j_direct
+          /tmp/cap005_j_direct research/capset_f3_7/candidates/calderbank_fishburn_236.txt > /tmp/cap005_j_k7_direct.json
+          python research/capset_f3_7/cap005_j_compare.py /tmp/cap005_j_k7_incidence.json /tmp/cap005_j_k7_direct.json
+      - name: Archive CAP-005J full seven-fiber census histograms (necessary only)
+        uses: actions/upload-artifact@v4
+        with:
+          name: capset-k7-necessary-gate-independent
+          path: |
+            /tmp/cap005_j_k7_incidence.json
+            /tmp/cap005_j_k7_direct.json
+          retention-days: 30
