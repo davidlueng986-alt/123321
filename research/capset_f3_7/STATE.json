@@ -1052,12 +1052,16 @@
     "paid_compute_used": false,
     "novelty_established": false,
     "global_bound_improved": false,
-    "github_ci": "PENDING",
+    "github_ci": "UNIT_TEST_STEP_SUCCESS_FULL_WORKFLOW_IN_PROGRESS",
     "dependencies": [
       "Potechin 2008 uniqueness of maximal112",
       "CAP017B Fourier and tangent proof",
       "Thackeray 2022 110-completion ONLY when applying to arbitrary110 slices"
     ],
-    "unresolved": "Exact r3(7) OPEN; CAP019 287 candidate remains referee-pending"
+    "unresolved": "Exact r3(7) OPEN; CAP019 287 candidate remains referee-pending",
+    "github_ci_first_run_id": 41467100660,
+    "github_ci_latest_test_run_id": 41467493910,
+    "fourier_duality_direct_full_set_test": "PASS_H_EQUALS_PROJECTIVE_HIGH_DUAL_AND_SHEAR_CONTRAGREDIENT",
+    "local_test_result_latest": "PASS_5_OF_5_0.141S"
   }
 }
