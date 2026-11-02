@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-023: canonical 111 anchor exact SAT reduction with 1458 external variables and 80,919 cross-layer binary constraints; 287-target CNF SAT/UNSAT UNKNOWN. All four 111 fingerprint profiles admit explicit 3x3 count-only 287 countermodels; aggregate/grid relaxations insufficient. CAP-019 <=287 remains conditional pending hostile referee.",
-  "next_experiment": "Evaluate exact CAP-024 pointwise pair cuts against anchored111 SAT/CP-SAT, keep proof logging and audit CAP019/017B; pursue balanced/no-111 global branch.",
-  "last_run_id": "CAP-024-ANCHORED111-CODEGREE-2026-11-02",
-  "last_run_result": "EXACT_CODEGREE_CAUCHY_CUT_LOCAL_PASS_CI_PENDING_NO_NEW_GLOBAL_BOUND",
+  "current_hypothesis": "CAP-025: CAP-017B symbolic Fourier/common-tangent premise passed independent derivation and 4374 direct checks, but CAP-019 <=287 remains provisional pending independent Thackeray 110-completion computer-classification referee. Balanced/no-111 and >=237 construction branches remain open.",
+  "next_experiment": "Independently reproduce Thackeray 110-cap completion computational dependency, then proof-logged anchored111 SAT and balanced/no-111 global work; check final CAP025 CI.",
+  "last_run_id": "CAP-025-FOURIER-COMMON-TANGENT-REFEREE-2026-11-02",
+  "last_run_result": "SIX_PAIR_EXACT_FOURIER_CONVOLUTION_PASS_CI_PENDING_NO_NEW_GLOBAL_BOUND",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -97,7 +97,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T19:00:00Z",
+  "last_updated_utc": "2026-11-02T20:00:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1233,5 +1233,49 @@
     "novelty": "NOT_ESTABLISHED",
     "global_bound_improved": false,
     "conditional_normalization": true
+  },
+  "cap025_fourier_common_tangent_referee": {
+    "status": "V8_EXACT_PASS_GITHUB_CI_PENDING",
+    "report": "research/capset_f3_7/CAP025_FOURIER_COMMON_TANGENT_REFEREE_2026-11-02.md",
+    "code": "research/capset_f3_7/cap025_fourier_referee.js",
+    "ci_test": "research/capset_f3_7/test_cap025_fourier_referee.py",
+    "projective_directions_per_cap": 364,
+    "convolution_checks": 4374,
+    "pair_mstar": [
+      56,
+      16,
+      18,
+      17,
+      16,
+      10
+    ],
+    "pair_intersections": [
+      112,
+      32,
+      36,
+      34,
+      32,
+      20
+    ],
+    "pair_holes": [
+      0,
+      12,
+      0,
+      0,
+      12,
+      0
+    ],
+    "identical_dual_deletions_verified": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "theorem_scope": "Symbolic Fourier inversion and common-tangent double count independently reviewed; Potechin uniqueness and Thackeray 110-completion external dependencies remain.",
+    "candidate_upper_287_promoted": false,
+    "novelty_established": false,
+    "global_bound_improved": false,
+    "github_ci": "PENDING"
   }
 }
