@@ -191,3 +191,6 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P1] CAP-006C: parameterized constructor/priority-function evolution (FunSearch/X-evolve precedents) from scratch without the classical 236 seed. n7 record requires direct >=237 witness verification.
 - [DEPRIORITIZED] Existing k7 exclusions: only pursue if they reveal transferable global inequalities or an actual 237 witness; score global progress separately from percentage of fixed neighborhoods excluded. Check CAP-005M CI before marking its pending 7,440 exclusions as proven.
 - [NOVELTY OPEN] Do not claim these projection observations are new in literature. Exact r3(7) remains OPEN.
+
+## CAP-005M CI final (2026-11-02T10:08:15.552Z) — merged after concurrent CAP-006A
+- [DONE / CI GREEN / RESTRICTED ONLY] https://github.com/davidlueng986-alt/123321/actions/runs/41425618301 verified 524 exact pair-conflict matching certificates; 7,792 additional seven-fiber neighborhoods excluded. Cumulative 871,274/888,030; 16,756 remain in 1,104 orbits. Artifact https://github.com/davidlueng986-alt/123321/actions/runs/41425618301/artifacts/13132211988 . Earlier greedy CI failure preserved. Keep CAP-006A partition-adaptive/global direction prioritized; no global r3(7) bound.

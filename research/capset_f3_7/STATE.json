@@ -61,7 +61,8 @@
     "CAP-005L-LOCAL",
     "CAP-005L-CI",
     "CAP-005M-LOCAL",
-    "CAP-006A-LOCAL"
+    "CAP-006A-LOCAL",
+    "CAP-005M-CI"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41415696843",
   "baseline_secant_audit": {
@@ -83,7 +84,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T10:07:35.245Z",
+  "last_updated_utc": "2026-11-02T10:08:15.552Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -534,28 +535,29 @@
     "artifact": "https://github.com/davidlueng986-alt/123321/actions/runs/41415696843/artifacts/13128405069"
   },
   "cap005_k7_matching": {
-    "scope": "fixed 236 cap, exactly seven 4D fibers",
+    "scope": "fixed classical 236 cap, exactly seven first-three-coordinate F3^4 fibers",
     "previous_excluded": 863482,
-    "new_excluded": 7440,
-    "total_excluded": 870922,
-    "remaining": 17108,
-    "certified_orbits": 500,
-    "remaining_orbits": 1128,
+    "additional_excluded": 7792,
+    "total_excluded": 871274,
+    "unresolved": 16756,
+    "certified_orbits": 524,
+    "remaining_orbits": 1104,
     "N_range": [
       18,
       32
     ],
-    "status": "GREEDY_CI_FAILED_BLOSSOM_CORRECTION_PENDING_CI",
+    "method": "Edmonds blossom matching; independent exact F3 arithmetic checker for each pair, outsider eligibility and orbit coverage",
+    "status": "VERIFIED_EXACT_MATCHING_CERTIFICATES_CI_GREEN_RESTRICTED_ONLY",
+    "generator": "research/capset_f3_7/cap005_m_k7_matching_generator.py",
+    "checker": "research/capset_f3_7/cap005_m_k7_matching_check.py",
+    "report": "research/capset_f3_7/CAP005_K7_MATCHING_CERTIFICATE_2026-11-02.md",
+    "first_failed_ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41424961849",
+    "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41425618301",
+    "artifact": "https://github.com/davidlueng986-alt/123321/actions/runs/41425618301/artifacts/13132211988",
     "global_bound_improved": false,
     "novelty_established": false,
-    "gpu_used": false,
     "seed": null,
-    "report": "research/capset_f3_7/CAP005_K7_MATCHING_CERTIFICATE_2026-11-02.md",
-    "first_ci_failure_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41424961849",
-    "first_ci_observed": {
-      "orbits": 494,
-      "neighborhoods": 7352
-    }
+    "gpu_used": false
   },
   "cap006_projection_audit": {
     "scope": "fixed 236 cap occupancy only; not global bound",
