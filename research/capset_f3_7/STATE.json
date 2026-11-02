@@ -11,9 +11,9 @@
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
   "current_hypothesis": "CAP-010A: every 110/111 six-dimensional cap extends uniquely to canonical maximal112 (published Thackeray 110 extension + Potechin 112 uniqueness + exact 10-secants covering); sound global conditional overlap cuts k>=30 for 112+111+14, k>=28 for 112+110+15. CI pending; no global bound.",
-  "next_experiment": "Confirm CAP-010A CI, then exploit sound unique 110/111 completions to symmetry-reduce all 112+111+14 / 112+110+15 cases, including k=30 and k=28; keep all hyperplanes<=111 global branch.",
-  "last_run_id": "CAP-010A-UNIQUE-110-111-COMPLETION-2026-11-02",
-  "last_run_result": "INDEPENDENT_JS_EXACT_ALL_6216_PAIRS_PYTHON_CI_PENDING",
+  "next_experiment": "Fix CAP-011A signed quadratic form + independently certified rank/PSD for CAP-010B; replay CAP-010C and CAP-008C; then global 5D incidence and no-112-hyperplane SAT.",
+  "last_run_id": "CAP-013-CROSS-AGENT-INTEGRATION-AUDIT-2026-11-02",
+  "last_run_result": "INDEPENDENT_EXACT_ARITHMETIC_VALIDATED_CAP011B_CORRECTED_CAP011A_SIGN_GAP_CAP010B_EXACT_PROOF_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -94,7 +94,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T11:54:27Z",
+  "last_updated_utc": "2026-11-02T12:48:29Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -885,9 +885,28 @@
     ],
     "global_112_111_14_k_min": 30,
     "global_112_110_15_k_min": 28,
-    "python_ci": "PENDING",
+    "python_ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41440753830",
     "novelty": "UNVERIFIED",
     "global_bound_improved": false,
     "report": "research/capset_f3_7/CAP010A_UNIQUE_COMPLETION_2026-11-02.md"
+  },
+  "cap013_cross_agent_audit": {
+    "date_utc": "2026-11-02",
+    "status": "INDEPENDENT_ARITHMETIC_AUDIT_DONE_SOURCE_CORRECTIONS_PENDING",
+    "report": "research/capset_f3_7/CAP013_CROSS_AGENT_AUDIT_2026-11-02.md",
+    "cap010a_ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41440753830",
+    "cap011a_sign_error": "CONFIRMED_ORIGINAL_v4_JSON_FALSE_FOR_7D236_8D496_8D512",
+    "cap011a_corrected_residue_formula": "r_majority(d) == -sum_{y in centered cap} (d.y)^2 mod 3",
+    "cap010b_spectral_certificate": "NOT_EXACT_AS_DELIVERED_FLOAT64_SVD_AND_EIGVALSH_USED",
+    "cap011b_moments_237": [
+      23572731,
+      639439983,
+      17775438687
+    ],
+    "cap011b_89_section_subslice_min": 33,
+    "cap011c_matching_lemma": "MATHEMATICALLY_VERIFIED",
+    "cap010c_alignment_census": "PENDING_INDEPENDENT_REPLAY",
+    "novelty": "NOT_ESTABLISHED",
+    "global_r3_7_bound_improved": false
   }
 }
