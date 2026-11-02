@@ -37,10 +37,12 @@ A full WW k=6 exploratory sweep exceeded the outer execution budget and was **no
 cd research/mols10
 python E026_symbol_support_milp.py
 python E026_independent_3color.py
+python E026_GF9_positive.py
 ```
 Input source: [E024_appendix_six_replay.py](https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E024_appendix_six_replay.py). Code commits:
 - [MILP + GF9 positive control](https://github.com/davidlueng986-alt/123321/commit/3094adde0c9b5647150aa63ec5f872cdbdac88e7)
 - [Independent 3-color DFS](https://github.com/davidlueng986-alt/123321/commit/1b396707e0ef362be0e223c5956dd89dcc2926c6)
+- [Independent GF9 positive-control DFS](https://github.com/davidlueng986-alt/123321/commit/2264ecf62206645bcd151ac131c1188af1bca93e)
 - [Summary results + failures](https://github.com/davidlueng986-alt/123321/commit/fb9ec4c9772c40b8f824905df825c5070669f7f1)
 
 ## Specific next action E027
