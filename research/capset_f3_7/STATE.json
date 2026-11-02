@@ -11,9 +11,9 @@
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
   "current_hypothesis": "CAP-014-PSD exact restricted 425/576 spectral certificate for classical 112+112 slices; no global 237 exclusion. CAP-011A sign bug still open in Drive source; global no-112 hyperplane branch remains unaddressed.",
-  "next_experiment": "Confirm CAP-015S imported CI; independently replay GO6/GL6 v5 claims; prioritize no-112-hyperplane global proof-logged branch.",
-  "last_run_id": "CAP-015S-EXTERNAL-V5-SYNC-2026-11-02",
-  "last_run_result": "V5_IMPORTED_MINIMAL_FIX_EXACT_8017_DIRECTION_LOCAL_PASS_CI_PENDING",
+  "next_experiment": "Hostile independent mathematical referee of CAP-017B and Thackeray/CAP010A completion, validate v6 287 proof end-to-end; confirm CI and literature novelty.",
+  "last_run_id": "CAP-019-INDEPENDENT-287-UPPER-BOUND-AUDIT-2026-11-02",
+  "last_run_result": "CANDIDATE_GLOBAL_UPPER_287_EXACT_28_CASE_CERTIFICATE_PASS_REFEREE_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -95,7 +95,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T13:08:00Z",
+  "last_updated_utc": "2026-11-02T14:00:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -971,5 +971,48 @@
     "cap014_exact_psd_prior_ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41449380778",
     "novelty": "NOT_ESTABLISHED",
     "global_bound_improved": false
+  },
+  "cap019_independent_upper_287_audit": {
+    "status": "EXACT_INTEGER_CERTIFICATE_PASS_THEOREM_REFEREE_PENDING",
+    "candidate_global_upper_bound": 287,
+    "previous_preprint_upper_bound": 288,
+    "lower_bound": 236,
+    "exact_r3_7": "OPEN",
+    "source_v6_py_drive": "https://drive.google.com/file/d/1GHVpOykFyXQYoS509BHV90GQyBBcJzxm/view",
+    "source_v6_json_drive": "https://drive.google.com/file/d/1W0oD_x_j9nlB98U6oDkFUOcouEMD1Mz3/view",
+    "source_v6_py_sha256": "d269e26909fc89c533387a17cf8a07461f8fbf75b581986ff19e11343cfa4f3f",
+    "report": "research/capset_f3_7/CAP019_INDEPENDENT_287_UPPER_BOUND_AUDIT_2026-11-02.md",
+    "exact_verifier": "research/capset_f3_7/test_cap019_287_upper_bound_certificate.py",
+    "certificate_json": "research/capset_f3_7/CAP019_287_upper_bound_certificate.json",
+    "local_python_ci_equivalent": "PASS_2_OF_2_0.078S",
+    "local_expanded_independent_audit": "PASS_6_OF_6_0.067S",
+    "github_ci_imported_test": {
+      "id": 41457871388,
+      "status": "in_progress",
+      "conclusion": null
+    },
+    "checked_profiles": {
+      "288": 211,
+      "289": 202,
+      "290": 194,
+      "291": 186
+    },
+    "quadratic_rank_cases": 28,
+    "min_quadratic_lower": 4704966,
+    "required_m288_delta_sum": 4557600,
+    "corrected_m288_variance_budget": 182304,
+    "v6_invalid_slope": 3016,
+    "corrected_type0_residue0_slope": 214,
+    "corrected_type1_incremental_slope": 77,
+    "dependencies": [
+      "Potechin 2008 maximal112 uniqueness",
+      "Thackeray 2022 preprint 110-cap completion",
+      "CAP-010A secant stability for 111 completion",
+      "CAP-017B common tangent Fourier and double count"
+    ],
+    "theorem_referee_required": true,
+    "novelty_priority": "NOT_ESTABLISHED",
+    "gpu_used": false,
+    "seed": "none"
   }
 }
