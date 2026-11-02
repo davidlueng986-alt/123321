@@ -1,0 +1,366 @@
+{
+  "experiment": "E041",
+  "timestamp_utc": "2026-11-02T16:51:35Z",
+  "global_status": "OPEN",
+  "model": "Six-resource-class fractional exact-cover LP (SciPy HiGHS), 600 resources before fixed-cell removal",
+  "scope": "NUMERICAL_EXPLORATION_EXCEPT_EXACT_22_CELL_CERTIFICATE",
+  "records": [
+    {
+      "motif": 0,
+      "removed_cell": -1,
+      "lp_status": "NUMERICAL_INFEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 2,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 3,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 4,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 6,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 9,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 11,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 13,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 16,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 17,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 18,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 19,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 20,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 22,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 26,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 27,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 28,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 31,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 32,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 33,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 35,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 0,
+      "removed_cell": 37,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": -1,
+      "lp_status": "NUMERICAL_INFEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 0,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 1,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 5,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 6,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 7,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 9,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 11,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 14,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 15,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 17,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 19,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 20,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 21,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 24,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 25,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 27,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 28,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 32,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 33,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 36,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 37,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 1,
+      "removed_cell": 38,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": -1,
+      "lp_status": "NUMERICAL_INFEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 0,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 1,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 4,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 6,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 8,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 9,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 10,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 14,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 17,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 18,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 19,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 20,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 21,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 22,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 24,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 27,
+      "lp_status": "NUMERICAL_INFEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 29,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 30,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 32,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 35,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 37,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 38,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    },
+    {
+      "motif": 2,
+      "removed_cell": 39,
+      "lp_status": "NUMERICAL_FEASIBLE"
+    }
+  ],
+  "summary": {
+    "original_core_controls": 3,
+    "one_cell_deletions": 66,
+    "numerical_feasible_deletions": 65,
+    "numerical_infeasible_deletions": 1,
+    "exact_certified_infeasible_deletion": {
+      "motif": 2,
+      "cell": 27,
+      "certificate": "E041_NEW_22_SPARSE_CERTIFICATE.json"
+    }
+  },
+  "caveat": "Numerical feasible LPs have not been independently reconstructed as exact rational primal witnesses. Infeasible E040 original controls already had exact certificates."
+}
