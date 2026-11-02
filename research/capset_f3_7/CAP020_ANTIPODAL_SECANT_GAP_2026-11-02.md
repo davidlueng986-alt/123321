@@ -19,7 +19,7 @@ Let H ⊂ F_3^n be a cap with H=-H and 0∉H. For any nonzero z, let E_z be the 
 **Corollary (antipodal deletion cost).** Let H'⊂F_3^n be a second cap with H'=-H'. If z∈H'\H, z≠0, then D=H\H' must hit each E_z edge. Because D=-D and no two E_z endpoints belong to the same antipodal orbit, D contains at least |E_z| entire antipodal orbits, hence **|H\H'| ≥ 2|E_z|**. The factor 2 is essential: a naive unstructured deletion bound only gives |H\H'|≥|E_z|.
 
 ## 2. Exact canonical 112-cap certificate
-The known centered canonical 112-cap H⊂F_3^6 is built from the 10 cyclic 3-subsets of a 2-(6,3,2) design (48 ternary weight-3 points) plus the 32 even-parity full-support sign vectors (32? In fact 10×8=80 weight-3 + 32 full-support = 112). The standalone script independently verifies size112, no 3AP, H=-H, 0∉H, and counts every one of the 6216 unordered pairs.
+The known centered canonical 112-cap H⊂F_3^6 is built from the 10 cyclic 3-subsets of a 2-(6,3,2) design (10×8=80 ternary weight-3 points) plus the 32 even-parity full-support sign vectors, totaling 112. The standalone script independently verifies size112, no 3AP, H=-H, 0∉H, and counts every one of the 6216 unordered pairs.
 
 Exact secant histogram over all 729 points z:
 - z∈H (112 points): 0 distinct-point secants (the convolution has one diagonal representation);
