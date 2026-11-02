@@ -35,10 +35,10 @@ class CrossAgentAuditTests(unittest.TestCase):
         self.assertNotEqual(a,q)
     def test_cap011b_global_moments(self):
         self.assertEqual(codim2_moments(),(23572731,639439983,17775438687))
-    def test_cap011b_89_slice_subslice_gate(self):
+    def test_cap011b_89_91_92_93plus_subslice_gates(self):
         # If all codimension-1 slices <= cap, maximize sum of squares
         # independently per direction, then compare to forced exact sum.
-        for s,upper in [(89,32),(91,33),(92,33),(93,33)]:
+        for s,upper in [(89,32),(91,33),(92,33), *[(k,34) for k in range(93,103)]]:
             possibilities=[(a,b,s-a-b) for a in range(upper+1)
                            for b in range(upper+1) if 0<=s-a-b<=upper]
             worst=max(sum(x*x for x in t) for t in possibilities)
