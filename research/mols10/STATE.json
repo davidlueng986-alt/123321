@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "E030: generate and verify new nonisotopic order-10 fixed Q via SAT/constraint search with justified symmetry coverage; avoid the eight BKS Appendix Q and Egan B,C already completely excluded. For every orthogonal pair validate Latin+100/100, common transversals and cell support, then third-square exact cover if viable.",
-  "current_hypothesis": "H30-GENERATE-NEW-NONISOTOPIC-Q-WITH-SAT",
-  "last_experiment": "MOLS10-E029-EGAN-BC-COMPLETE-FIXED-Q-MATE-ENUMERATION",
+  "next_action": "Execute and independently validate E030_direct_partition.py on n=2,3,4; implement incremental compatibility and Hall/LP cuts, then bounded order-10 search. No global claim.",
+  "current_hypothesis": "H30A-DIRECT-TRIPLE-PARTITIONS",
+  "last_experiment": "E030-FIRST-PRINCIPLES-DIRECT-PARTITION-PROTOTYPE",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -66,7 +66,8 @@
     "E026: all 3492 one-sided 3/4/5-symbol fixed-pair recoloring MILP instances solver-complete UNSAT, zero UNKNOWN; independent exact 3-color DFS 720 k3 cases only original normalized solutions; GF9 nontrivial positive control SAT; WW k6 pilot 7 UNKNOWN + 1 UNSAT.",
     "E027: exhaustive fixed-Q orthogonal-mate partitions for six published Q: UW3 UX2 VX2 WW1 WX1 XX3 (total12), six additional genuine orthogonal mates; all pairs have <=1 common transversal, so all six specific Q excluded from any triple. Two independent exact-cover algorithms agree on ALL 12 matrices, not just counts; bitset DFS 273559 nodes, independent DLX complete. No family-wide or global conclusion.",
     "E028: SX Q has 864 transversals and exactly 2 normalized orthogonal mates; UU Q has 816 and exactly 1; all 3 mates have 0 common transversals. Two exact-cover implementations agree on all matrices; 10,886,400 independent permutation tests. These two fixed Q excluded, not whole families.",
-    "E029: Egan B fixed Q has exactly 5 normalized orthogonal mates (932 Q-transversals), Egan C has exactly 4 (864 Q-transversals). Independent exact-cover implementations agree on all nine matrices. All nine are 100/100 pairs; common-transversal counts B [0,14,2,0,0], C [0,0,7,0], verified by 32,659,200 C++ full permutations. Both SPECIFIC Q excluded from any triple, not unrestricted."
+    "E029: Egan B fixed Q has exactly 5 normalized orthogonal mates (932 Q-transversals), Egan C has exactly 4 (864 Q-transversals). Independent exact-cover implementations agree on all nine matrices. All nine are 100/100 pairs; common-transversal counts B [0,14,2,0,0], C [0,0,7,0], verified by 32,659,200 C++ full permutations. Both SPECIFIC Q excluded from any triple, not unrestricted.",
+    "E030: direct triple-partition exact-cover code and first-principles audit committed; runtime baseline not yet independently replayed, no order-10 result."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
