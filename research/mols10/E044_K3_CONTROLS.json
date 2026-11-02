@@ -1,0 +1,3080 @@
+{
+  "counts": {
+    "NUMERIC_FEASIBLE": 512
+  },
+  "elapsed_s": 17.87,
+  "cases": [
+    {
+      "index": 0,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1021,
+      "error": 2.9665159217984183e-13
+    },
+    {
+      "index": 1,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 2.2648549702353193e-13
+    },
+    {
+      "index": 2,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 1.638689184346731e-13
+    },
+    {
+      "index": 3,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1007,
+      "error": 1.8074430840897548e-13
+    },
+    {
+      "index": 4,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 7.66053886991358e-14
+    },
+    {
+      "index": 5,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 1.8807178037150152e-13
+    },
+    {
+      "index": 6,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1030,
+      "error": 1.1113332476497817e-13
+    },
+    {
+      "index": 7,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 7.283063041541027e-14
+    },
+    {
+      "index": 8,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 1.0502709812953981e-13
+    },
+    {
+      "index": 9,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 2.2493118478905672e-13
+    },
+    {
+      "index": 10,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 1.659783421814609e-13
+    },
+    {
+      "index": 11,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1028,
+      "error": 3.341771304121721e-13
+    },
+    {
+      "index": 12,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1035,
+      "error": 1.142419492339286e-13
+    },
+    {
+      "index": 13,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 8.859579736508749e-14
+    },
+    {
+      "index": 14,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1036,
+      "error": 7.30526750203353e-14
+    },
+    {
+      "index": 15,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 1.2456702336294256e-13
+    },
+    {
+      "index": 16,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 1.0791367799356522e-13
+    },
+    {
+      "index": 17,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 9.769962616701378e-14
+    },
+    {
+      "index": 18,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1027,
+      "error": 1.312283615106935e-13
+    },
+    {
+      "index": 19,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 9.980904991380157e-14
+    },
+    {
+      "index": 20,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1034,
+      "error": 7.354117315117037e-13
+    },
+    {
+      "index": 21,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1028,
+      "error": 1.8918200339612667e-13
+    },
+    {
+      "index": 22,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 7.016609515630989e-14
+    },
+    {
+      "index": 23,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 9.725553695716371e-14
+    },
+    {
+      "index": 24,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1021,
+      "error": 1.0613732115416497e-13
+    },
+    {
+      "index": 25,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1027,
+      "error": 7.860379014346108e-14
+    },
+    {
+      "index": 26,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1040,
+      "error": 6.183942247162122e-14
+    },
+    {
+      "index": 27,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1033,
+      "error": 8.482103908136196e-14
+    },
+    {
+      "index": 28,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1021,
+      "error": 1.5187850976872141e-13
+    },
+    {
+      "index": 29,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1025,
+      "error": 3.553823901825126e-13
+    },
+    {
+      "index": 30,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 1.6076029396572267e-13
+    },
+    {
+      "index": 31,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1012,
+      "error": 1.1213252548714081e-13
+    },
+    {
+      "index": 32,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1027,
+      "error": 3.1397107136399427e-13
+    },
+    {
+      "index": 33,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1037,
+      "error": 4.2865710980777294e-13
+    },
+    {
+      "index": 34,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 4.269917752708352e-13
+    },
+    {
+      "index": 35,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 5.639932965095795e-14
+    },
+    {
+      "index": 36,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1016,
+      "error": 1.199040866595169e-13
+    },
+    {
+      "index": 37,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1032,
+      "error": 1.7608137170554983e-13
+    },
+    {
+      "index": 38,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1006,
+      "error": 7.616129948928574e-14
+    },
+    {
+      "index": 39,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1027,
+      "error": 1.0302869668521453e-13
+    },
+    {
+      "index": 40,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 2.2648549702353193e-13
+    },
+    {
+      "index": 41,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1042,
+      "error": 1.865174681370263e-13
+    },
+    {
+      "index": 42,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 1.3533618670180658e-13
+    },
+    {
+      "index": 43,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 1.028066520802895e-13
+    },
+    {
+      "index": 44,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1002,
+      "error": 4.529709940470639e-14
+    },
+    {
+      "index": 45,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1021,
+      "error": 1.2589929099249275e-13
+    },
+    {
+      "index": 46,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1008,
+      "error": 9.792167077193881e-14
+    },
+    {
+      "index": 47,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 6.550315845288424e-14
+    },
+    {
+      "index": 48,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1025,
+      "error": 8.72635297355373e-14
+    },
+    {
+      "index": 49,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 2.5290880500961066e-13
+    },
+    {
+      "index": 50,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 1.4932499681208355e-13
+    },
+    {
+      "index": 51,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1030,
+      "error": 1.6542323066914832e-13
+    },
+    {
+      "index": 52,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 987,
+      "error": 1.5942802633617248e-13
+    },
+    {
+      "index": 53,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 1.6076029396572267e-13
+    },
+    {
+      "index": 54,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 1.765254609153999e-13
+    },
+    {
+      "index": 55,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 999,
+      "error": 1.4921397450962104e-13
+    },
+    {
+      "index": 56,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1031,
+      "error": 1.1723955140041653e-13
+    },
+    {
+      "index": 57,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1012,
+      "error": 9.64783808399261e-14
+    },
+    {
+      "index": 58,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 998,
+      "error": 3.2107649872159527e-13
+    },
+    {
+      "index": 59,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 1.0036416142611415e-13
+    },
+    {
+      "index": 60,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1005,
+      "error": 1.8784973576657649e-13
+    },
+    {
+      "index": 61,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1001,
+      "error": 6.039613253960852e-14
+    },
+    {
+      "index": 62,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 1.9961809982760315e-13
+    },
+    {
+      "index": 63,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1012,
+      "error": 1.1168843627729075e-13
+    },
+    {
+      "index": 64,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 1.1224354778960333e-13
+    },
+    {
+      "index": 65,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1020,
+      "error": 2.502442697505103e-13
+    },
+    {
+      "index": 66,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 2.581268532253489e-13
+    },
+    {
+      "index": 67,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1030,
+      "error": 1.567634910770721e-13
+    },
+    {
+      "index": 68,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 1.580957587066223e-13
+    },
+    {
+      "index": 69,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1047,
+      "error": 9.43689570931383e-14
+    },
+    {
+      "index": 70,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 1.3722356584366935e-13
+    },
+    {
+      "index": 71,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 1.4099832412739488e-13
+    },
+    {
+      "index": 72,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 1.8895995879120164e-13
+    },
+    {
+      "index": 73,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1009,
+      "error": 9.325873406851315e-14
+    },
+    {
+      "index": 74,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1021,
+      "error": 4.907185768843192e-14
+    },
+    {
+      "index": 75,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1009,
+      "error": 1.3367085216486885e-13
+    },
+    {
+      "index": 76,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1012,
+      "error": 2.651212582804874e-13
+    },
+    {
+      "index": 77,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1006,
+      "error": 3.632649736573512e-13
+    },
+    {
+      "index": 78,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1030,
+      "error": 1.0436096431476471e-13
+    },
+    {
+      "index": 79,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1027,
+      "error": 3.2718272535703363e-13
+    },
+    {
+      "index": 80,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1008,
+      "error": 8.659739592076221e-14
+    },
+    {
+      "index": 81,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1000,
+      "error": 1.149080830487037e-13
+    },
+    {
+      "index": 82,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 1.212363542890671e-13
+    },
+    {
+      "index": 83,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 1.9206858326015208e-13
+    },
+    {
+      "index": 84,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1004,
+      "error": 5.1958437552457326e-14
+    },
+    {
+      "index": 85,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 995,
+      "error": 2.9887203822909214e-13
+    },
+    {
+      "index": 86,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 1.2612133559741778e-13
+    },
+    {
+      "index": 87,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 2.913225216616411e-13
+    },
+    {
+      "index": 88,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 1.0702549957386509e-13
+    },
+    {
+      "index": 89,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 1.0724754417879012e-13
+    },
+    {
+      "index": 90,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 8.348877145181177e-14
+    },
+    {
+      "index": 91,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1012,
+      "error": 9.103828801926284e-14
+    },
+    {
+      "index": 92,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 3.148592497836944e-13
+    },
+    {
+      "index": 93,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1031,
+      "error": 3.0664359940146824e-13
+    },
+    {
+      "index": 94,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 1.6631140908884845e-13
+    },
+    {
+      "index": 95,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1034,
+      "error": 8.926193117986259e-14
+    },
+    {
+      "index": 96,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 5.440092820663267e-14
+    },
+    {
+      "index": 97,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 1.3455903058456897e-13
+    },
+    {
+      "index": 98,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1038,
+      "error": 2.384759056894836e-13
+    },
+    {
+      "index": 99,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 6.972200594645983e-14
+    },
+    {
+      "index": 100,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1008,
+      "error": 1.3344880755994382e-13
+    },
+    {
+      "index": 101,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 2.324807013565078e-13
+    },
+    {
+      "index": 102,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 1.3200551762793111e-13
+    },
+    {
+      "index": 103,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1012,
+      "error": 8.948397578478762e-14
+    },
+    {
+      "index": 104,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 8.970602038971265e-14
+    },
+    {
+      "index": 105,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1031,
+      "error": 4.7628567756419216e-14
+    },
+    {
+      "index": 106,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 7.260858581048524e-14
+    },
+    {
+      "index": 107,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 1.9673151996357774e-13
+    },
+    {
+      "index": 108,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1040,
+      "error": 1.234568003383174e-13
+    },
+    {
+      "index": 109,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1000,
+      "error": 7.904787935331115e-14
+    },
+    {
+      "index": 110,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 2.2248869413488137e-13
+    },
+    {
+      "index": 111,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 1.5187850976872141e-13
+    },
+    {
+      "index": 112,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1021,
+      "error": 1.751931932858497e-13
+    },
+    {
+      "index": 113,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 1.120215031846783e-13
+    },
+    {
+      "index": 114,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 1.1723955140041653e-13
+    },
+    {
+      "index": 115,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 6.672440377997191e-14
+    },
+    {
+      "index": 116,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 8.681944052568724e-14
+    },
+    {
+      "index": 117,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 2.6068036618198676e-13
+    },
+    {
+      "index": 118,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1035,
+      "error": 1.325606291402437e-13
+    },
+    {
+      "index": 119,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 1.48991929904696e-13
+    },
+    {
+      "index": 120,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 1.780797731498751e-13
+    },
+    {
+      "index": 121,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1010,
+      "error": 9.725553695716371e-14
+    },
+    {
+      "index": 122,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1025,
+      "error": 2.913225216616411e-13
+    },
+    {
+      "index": 123,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 1.9029222642075183e-13
+    },
+    {
+      "index": 124,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1009,
+      "error": 1.2501111257279263e-13
+    },
+    {
+      "index": 125,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1041,
+      "error": 1.0169642905566434e-13
+    },
+    {
+      "index": 126,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 9.392486788328824e-14
+    },
+    {
+      "index": 127,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1004,
+      "error": 8.515410598874951e-14
+    },
+    {
+      "index": 128,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 1.9229062786507711e-13
+    },
+    {
+      "index": 129,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 1.8252066524837574e-13
+    },
+    {
+      "index": 130,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 1.254552017826427e-13
+    },
+    {
+      "index": 131,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1027,
+      "error": 6.59472476627343e-14
+    },
+    {
+      "index": 132,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 1.021405182655144e-13
+    },
+    {
+      "index": 133,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 4.085620730620576e-14
+    },
+    {
+      "index": 134,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 1.1901590823981678e-13
+    },
+    {
+      "index": 135,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1032,
+      "error": 6.23945339839338e-14
+    },
+    {
+      "index": 136,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1005,
+      "error": 2.438049762076844e-13
+    },
+    {
+      "index": 137,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 7.37188088351104e-14
+    },
+    {
+      "index": 138,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 3.6548541970660153e-13
+    },
+    {
+      "index": 139,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 999,
+      "error": 2.149391775674303e-13
+    },
+    {
+      "index": 140,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 2.2226664952995634e-13
+    },
+    {
+      "index": 141,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 1.5409895581797173e-13
+    },
+    {
+      "index": 142,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 7.882583474838611e-14
+    },
+    {
+      "index": 143,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1008,
+      "error": 8.282263763703668e-14
+    },
+    {
+      "index": 144,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1035,
+      "error": 7.105427357601002e-14
+    },
+    {
+      "index": 145,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1033,
+      "error": 1.6009416015094757e-13
+    },
+    {
+      "index": 146,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 8.22675261247241e-14
+    },
+    {
+      "index": 147,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 1.0258460747536446e-13
+    },
+    {
+      "index": 148,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1033,
+      "error": 4.1389114358025836e-13
+    },
+    {
+      "index": 149,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 998,
+      "error": 1.0536016503692736e-13
+    },
+    {
+      "index": 150,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1016,
+      "error": 2.5712765250318625e-13
+    },
+    {
+      "index": 151,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 3.26405569239796e-14
+    },
+    {
+      "index": 152,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1039,
+      "error": 1.6231460620019789e-13
+    },
+    {
+      "index": 153,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 3.985700658404312e-13
+    },
+    {
+      "index": 154,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 1.603162047558726e-13
+    },
+    {
+      "index": 155,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 1.3788969965844444e-13
+    },
+    {
+      "index": 156,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1020,
+      "error": 1.3278267374516872e-13
+    },
+    {
+      "index": 157,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 1.8762769116165146e-13
+    },
+    {
+      "index": 158,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 1.247890679678676e-13
+    },
+    {
+      "index": 159,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 1.9539925233402755e-13
+    },
+    {
+      "index": 160,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 2.1316282072803006e-13
+    },
+    {
+      "index": 161,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 1.3855583347321954e-13
+    },
+    {
+      "index": 162,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1003,
+      "error": 8.548717289613705e-14
+    },
+    {
+      "index": 163,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 8.237854842718662e-14
+    },
+    {
+      "index": 164,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 7.51620987671231e-14
+    },
+    {
+      "index": 165,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 7.105427357601002e-14
+    },
+    {
+      "index": 166,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 1.5010215292932116e-13
+    },
+    {
+      "index": 167,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 5.773159728050814e-14
+    },
+    {
+      "index": 168,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 1.0125233984581428e-13
+    },
+    {
+      "index": 169,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 3.576028362317629e-13
+    },
+    {
+      "index": 170,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1030,
+      "error": 2.7189361873070084e-13
+    },
+    {
+      "index": 171,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 1.2612133559741778e-13
+    },
+    {
+      "index": 172,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1006,
+      "error": 3.1463720517876936e-13
+    },
+    {
+      "index": 173,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1037,
+      "error": 1.3589129821411916e-13
+    },
+    {
+      "index": 174,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1010,
+      "error": 9.015010959956271e-14
+    },
+    {
+      "index": 175,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1044,
+      "error": 1.6608936448392342e-13
+    },
+    {
+      "index": 176,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 9.85878045867139e-14
+    },
+    {
+      "index": 177,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 1.3034018309099338e-13
+    },
+    {
+      "index": 178,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1008,
+      "error": 9.658940314238862e-14
+    },
+    {
+      "index": 179,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 2.76667577736589e-13
+    },
+    {
+      "index": 180,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 998,
+      "error": 1.9895196601282805e-13
+    },
+    {
+      "index": 181,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1028,
+      "error": 7.793765632868599e-14
+    },
+    {
+      "index": 182,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1032,
+      "error": 6.261657858885883e-14
+    },
+    {
+      "index": 183,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 2.8987923172962837e-13
+    },
+    {
+      "index": 184,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 1.283417816466681e-13
+    },
+    {
+      "index": 185,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1031,
+      "error": 1.4477308241112041e-13
+    },
+    {
+      "index": 186,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1000,
+      "error": 8.615330671091215e-14
+    },
+    {
+      "index": 187,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 998,
+      "error": 6.705747068735946e-14
+    },
+    {
+      "index": 188,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1016,
+      "error": 2.673417043297377e-13
+    },
+    {
+      "index": 189,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1009,
+      "error": 1.6053824936079764e-13
+    },
+    {
+      "index": 190,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1034,
+      "error": 1.9317880628477724e-13
+    },
+    {
+      "index": 191,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1028,
+      "error": 3.346212196220222e-13
+    },
+    {
+      "index": 192,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 6.94999613415348e-14
+    },
+    {
+      "index": 193,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1025,
+      "error": 1.3922196728799463e-13
+    },
+    {
+      "index": 194,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1006,
+      "error": 9.303668946358812e-14
+    },
+    {
+      "index": 195,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 1.2356782264077992e-13
+    },
+    {
+      "index": 196,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 8.959499808725013e-14
+    },
+    {
+      "index": 197,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1009,
+      "error": 4.0034642267983145e-13
+    },
+    {
+      "index": 198,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1003,
+      "error": 1.687538997430238e-13
+    },
+    {
+      "index": 199,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1009,
+      "error": 2.2160051571518125e-13
+    },
+    {
+      "index": 200,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 1.1057821325266559e-13
+    },
+    {
+      "index": 201,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1006,
+      "error": 1.532107773982716e-13
+    },
+    {
+      "index": 202,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1008,
+      "error": 1.1057821325266559e-13
+    },
+    {
+      "index": 203,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1025,
+      "error": 1.794120407794253e-13
+    },
+    {
+      "index": 204,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 2.412514632510465e-13
+    },
+    {
+      "index": 205,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1009,
+      "error": 2.1094237467877974e-13
+    },
+    {
+      "index": 206,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 9.192646643896296e-14
+    },
+    {
+      "index": 207,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1036,
+      "error": 6.572520305780927e-14
+    },
+    {
+      "index": 208,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 1.9118040484045196e-13
+    },
+    {
+      "index": 209,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 3.852473895449293e-13
+    },
+    {
+      "index": 210,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 2.55351295663786e-13
+    },
+    {
+      "index": 211,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1028,
+      "error": 9.14823772291129e-14
+    },
+    {
+      "index": 212,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 1.8618440122963875e-13
+    },
+    {
+      "index": 213,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 1.1712852909795402e-13
+    },
+    {
+      "index": 214,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 1.4066525722000733e-13
+    },
+    {
+      "index": 215,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1035,
+      "error": 1.4299672557172016e-13
+    },
+    {
+      "index": 216,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 8.837375276016246e-14
+    },
+    {
+      "index": 217,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1039,
+      "error": 1.729727472365994e-13
+    },
+    {
+      "index": 218,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 7.815970093361102e-14
+    },
+    {
+      "index": 219,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1035,
+      "error": 7.327471962526033e-14
+    },
+    {
+      "index": 220,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 6.503686478254167e-13
+    },
+    {
+      "index": 221,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 2.509104035652854e-13
+    },
+    {
+      "index": 222,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 1.2079226507921703e-13
+    },
+    {
+      "index": 223,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1031,
+      "error": 1.7341683644644945e-13
+    },
+    {
+      "index": 224,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 1.5476508963274682e-13
+    },
+    {
+      "index": 225,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1021,
+      "error": 1.1213252548714081e-13
+    },
+    {
+      "index": 226,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 1.5754064719430971e-13
+    },
+    {
+      "index": 227,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1025,
+      "error": 1.780797731498751e-13
+    },
+    {
+      "index": 228,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 7.016609515630989e-14
+    },
+    {
+      "index": 229,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1006,
+      "error": 1.6620038678638593e-13
+    },
+    {
+      "index": 230,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 1.4366285938649526e-13
+    },
+    {
+      "index": 231,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1027,
+      "error": 1.667554982986985e-13
+    },
+    {
+      "index": 232,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 1.27675647831893e-13
+    },
+    {
+      "index": 233,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1034,
+      "error": 1.3034018309099338e-13
+    },
+    {
+      "index": 234,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1003,
+      "error": 5.762057497804562e-14
+    },
+    {
+      "index": 235,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 7.538414337204813e-14
+    },
+    {
+      "index": 236,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 994,
+      "error": 2.2160051571518125e-13
+    },
+    {
+      "index": 237,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 5.040412531798211e-14
+    },
+    {
+      "index": 238,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1031,
+      "error": 1.5121237595394632e-13
+    },
+    {
+      "index": 239,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 1.609823385706477e-13
+    },
+    {
+      "index": 240,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 1.141309269314661e-13
+    },
+    {
+      "index": 241,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 1.8984813721090177e-13
+    },
+    {
+      "index": 242,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 989,
+      "error": 1.1168843627729075e-13
+    },
+    {
+      "index": 243,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 3.339550858072471e-13
+    },
+    {
+      "index": 244,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1053,
+      "error": 1.361133428190442e-13
+    },
+    {
+      "index": 245,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1007,
+      "error": 1.751931932858497e-13
+    },
+    {
+      "index": 246,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 9.059419880941277e-14
+    },
+    {
+      "index": 247,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 3.2818192607919627e-13
+    },
+    {
+      "index": 248,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1045,
+      "error": 1.8762769116165146e-13
+    },
+    {
+      "index": 249,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 1.5831780331154732e-13
+    },
+    {
+      "index": 250,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1012,
+      "error": 8.304468224196171e-14
+    },
+    {
+      "index": 251,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1035,
+      "error": 7.049916206369744e-14
+    },
+    {
+      "index": 252,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 4.3520742565306136e-14
+    },
+    {
+      "index": 253,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1028,
+      "error": 1.3555823130673161e-13
+    },
+    {
+      "index": 254,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1000,
+      "error": 1.1257661469699087e-13
+    },
+    {
+      "index": 255,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1003,
+      "error": 1.1501910535116622e-13
+    },
+    {
+      "index": 256,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1000,
+      "error": 1.0835776720341528e-13
+    },
+    {
+      "index": 257,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1006,
+      "error": 2.2448709557920665e-13
+    },
+    {
+      "index": 258,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 997,
+      "error": 8.837375276016246e-14
+    },
+    {
+      "index": 259,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1028,
+      "error": 4.696243394164412e-14
+    },
+    {
+      "index": 260,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1034,
+      "error": 6.794564910705958e-14
+    },
+    {
+      "index": 261,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 1.361133428190442e-13
+    },
+    {
+      "index": 262,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1020,
+      "error": 1.4299672557172016e-13
+    },
+    {
+      "index": 263,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 9.992007221626409e-14
+    },
+    {
+      "index": 264,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1030,
+      "error": 5.084821452783217e-14
+    },
+    {
+      "index": 265,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1010,
+      "error": 1.0302869668521453e-13
+    },
+    {
+      "index": 266,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 7.72715225139109e-14
+    },
+    {
+      "index": 267,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1025,
+      "error": 1.4055423491754482e-13
+    },
+    {
+      "index": 268,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 1.1757261830780408e-13
+    },
+    {
+      "index": 269,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 1.9473311851925246e-13
+    },
+    {
+      "index": 270,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 1.8052226380405045e-13
+    },
+    {
+      "index": 271,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 1.3855583347321954e-13
+    },
+    {
+      "index": 272,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1016,
+      "error": 7.560618797697316e-14
+    },
+    {
+      "index": 273,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 1.1690648449302898e-13
+    },
+    {
+      "index": 274,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1031,
+      "error": 1.0857981180834031e-13
+    },
+    {
+      "index": 275,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1042,
+      "error": 8.038014698286133e-14
+    },
+    {
+      "index": 276,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1016,
+      "error": 7.394085344003543e-14
+    },
+    {
+      "index": 277,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 995,
+      "error": 7.460698725481052e-14
+    },
+    {
+      "index": 278,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 8.038014698286133e-14
+    },
+    {
+      "index": 279,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 3.2096547641913276e-13
+    },
+    {
+      "index": 280,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 1.0147438445073931e-13
+    },
+    {
+      "index": 281,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1027,
+      "error": 1.496580637194711e-13
+    },
+    {
+      "index": 282,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1016,
+      "error": 6.872280522429719e-14
+    },
+    {
+      "index": 283,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 1.546540673302843e-13
+    },
+    {
+      "index": 284,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 1.0014211682118912e-13
+    },
+    {
+      "index": 285,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1001,
+      "error": 2.2115642650533118e-13
+    },
+    {
+      "index": 286,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 7.416289804496046e-14
+    },
+    {
+      "index": 287,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1032,
+      "error": 1.305622276959184e-13
+    },
+    {
+      "index": 288,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1010,
+      "error": 1.5776269179923474e-13
+    },
+    {
+      "index": 289,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1030,
+      "error": 2.1227464230832993e-13
+    },
+    {
+      "index": 290,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 6.838973831690964e-14
+    },
+    {
+      "index": 291,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 7.771561172376096e-14
+    },
+    {
+      "index": 292,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 1.1168843627729075e-13
+    },
+    {
+      "index": 293,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1008,
+      "error": 1.3877787807814457e-13
+    },
+    {
+      "index": 294,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 993,
+      "error": 9.237055564881302e-14
+    },
+    {
+      "index": 295,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 998,
+      "error": 5.750955267558311e-14
+    },
+    {
+      "index": 296,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 1.341149413747189e-13
+    },
+    {
+      "index": 297,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 3.2174263253637037e-13
+    },
+    {
+      "index": 298,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1030,
+      "error": 1.0658141036401503e-13
+    },
+    {
+      "index": 299,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1006,
+      "error": 8.215650382226158e-14
+    },
+    {
+      "index": 300,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1035,
+      "error": 2.1738166822160565e-13
+    },
+    {
+      "index": 301,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1012,
+      "error": 8.060219158778636e-14
+    },
+    {
+      "index": 302,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 3.907985046680551e-14
+    },
+    {
+      "index": 303,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1035,
+      "error": 1.723066134218243e-13
+    },
+    {
+      "index": 304,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1051,
+      "error": 3.164135620181696e-13
+    },
+    {
+      "index": 305,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 1.3944401189291966e-13
+    },
+    {
+      "index": 306,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 1.4344081478157023e-13
+    },
+    {
+      "index": 307,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 1.1302070390684094e-13
+    },
+    {
+      "index": 308,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 1.1657341758564144e-13
+    },
+    {
+      "index": 309,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1005,
+      "error": 1.4366285938649526e-13
+    },
+    {
+      "index": 310,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1009,
+      "error": 1.454392162258955e-13
+    },
+    {
+      "index": 311,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 1.305622276959184e-13
+    },
+    {
+      "index": 312,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 994,
+      "error": 1.4521717162097048e-13
+    },
+    {
+      "index": 313,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 1.2434497875801753e-13
+    },
+    {
+      "index": 314,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 8.926193117986259e-14
+    },
+    {
+      "index": 315,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 9.625633623500107e-14
+    },
+    {
+      "index": 316,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1009,
+      "error": 1.1146639167236572e-13
+    },
+    {
+      "index": 317,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 3.6481928589182644e-13
+    },
+    {
+      "index": 318,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 999,
+      "error": 5.2513549064769904e-14
+    },
+    {
+      "index": 319,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 2.084998840246044e-13
+    },
+    {
+      "index": 320,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1010,
+      "error": 1.0158540675320182e-13
+    },
+    {
+      "index": 321,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1020,
+      "error": 1.3744561044859438e-13
+    },
+    {
+      "index": 322,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 3.5216274341109965e-13
+    },
+    {
+      "index": 323,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1006,
+      "error": 1.6053824936079764e-13
+    },
+    {
+      "index": 324,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 1.2656542480726785e-13
+    },
+    {
+      "index": 325,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 8.948397578478762e-14
+    },
+    {
+      "index": 326,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1030,
+      "error": 2.7633451082920146e-13
+    },
+    {
+      "index": 327,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 3.019806626980426e-13
+    },
+    {
+      "index": 328,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1020,
+      "error": 1.3589129821411916e-13
+    },
+    {
+      "index": 329,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1021,
+      "error": 1.8385293287792592e-13
+    },
+    {
+      "index": 330,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 1.2523315717771766e-13
+    },
+    {
+      "index": 331,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 1.318944953254686e-13
+    },
+    {
+      "index": 332,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1032,
+      "error": 7.172040739078511e-14
+    },
+    {
+      "index": 333,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 4.1300296516055823e-14
+    },
+    {
+      "index": 334,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1009,
+      "error": 2.9198865547641617e-13
+    },
+    {
+      "index": 335,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 1.0969003483296547e-13
+    },
+    {
+      "index": 336,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 7.238654120556021e-14
+    },
+    {
+      "index": 337,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 998,
+      "error": 7.482903185973555e-14
+    },
+    {
+      "index": 338,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 4.247713292215849e-13
+    },
+    {
+      "index": 339,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1009,
+      "error": 6.150635556423367e-14
+    },
+    {
+      "index": 340,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 995,
+      "error": 1.8340884366807586e-13
+    },
+    {
+      "index": 341,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1016,
+      "error": 2.517985819849855e-13
+    },
+    {
+      "index": 342,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1000,
+      "error": 3.488320743372242e-13
+    },
+    {
+      "index": 343,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 1.7141843500212417e-13
+    },
+    {
+      "index": 344,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1016,
+      "error": 8.126832540256146e-14
+    },
+    {
+      "index": 345,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 1.1812772982011666e-13
+    },
+    {
+      "index": 346,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1036,
+      "error": 2.240430063693566e-13
+    },
+    {
+      "index": 347,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 1.9473311851925246e-13
+    },
+    {
+      "index": 348,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1006,
+      "error": 1.3988810110276972e-13
+    },
+    {
+      "index": 349,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1032,
+      "error": 7.30526750203353e-14
+    },
+    {
+      "index": 350,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 998,
+      "error": 1.2567724638756772e-13
+    },
+    {
+      "index": 351,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 2.4513724383723456e-13
+    },
+    {
+      "index": 352,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 5.686562332130052e-13
+    },
+    {
+      "index": 353,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1030,
+      "error": 9.015010959956271e-14
+    },
+    {
+      "index": 354,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1031,
+      "error": 2.078337502098293e-13
+    },
+    {
+      "index": 355,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1009,
+      "error": 1.1035616864774056e-13
+    },
+    {
+      "index": 356,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1036,
+      "error": 1.4144241333724494e-13
+    },
+    {
+      "index": 357,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1035,
+      "error": 7.260858581048524e-14
+    },
+    {
+      "index": 358,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1025,
+      "error": 1.4066525722000733e-13
+    },
+    {
+      "index": 359,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1041,
+      "error": 7.704947790898586e-14
+    },
+    {
+      "index": 360,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 1.6964207816272392e-13
+    },
+    {
+      "index": 361,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 8.37108160567368e-14
+    },
+    {
+      "index": 362,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 1.8895995879120164e-13
+    },
+    {
+      "index": 363,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1012,
+      "error": 2.0694557179012918e-13
+    },
+    {
+      "index": 364,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 9.392486788328824e-14
+    },
+    {
+      "index": 365,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1000,
+      "error": 1.425526363618701e-13
+    },
+    {
+      "index": 366,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 9.43689570931383e-14
+    },
+    {
+      "index": 367,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1009,
+      "error": 1.836308882730009e-13
+    },
+    {
+      "index": 368,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1002,
+      "error": 1.5143442055887135e-13
+    },
+    {
+      "index": 369,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1031,
+      "error": 8.08242361927114e-14
+    },
+    {
+      "index": 370,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 1.163513729807164e-13
+    },
+    {
+      "index": 371,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1003,
+      "error": 2.2737367544323206e-13
+    },
+    {
+      "index": 372,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 9.903189379656396e-14
+    },
+    {
+      "index": 373,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1034,
+      "error": 6.705747068735946e-14
+    },
+    {
+      "index": 374,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 1.5876189252139739e-13
+    },
+    {
+      "index": 375,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1033,
+      "error": 2.142730437526552e-13
+    },
+    {
+      "index": 376,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1033,
+      "error": 8.615330671091215e-14
+    },
+    {
+      "index": 377,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 9.43689570931383e-14
+    },
+    {
+      "index": 378,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 1.021405182655144e-13
+    },
+    {
+      "index": 379,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1012,
+      "error": 2.4913404672588513e-13
+    },
+    {
+      "index": 380,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1007,
+      "error": 1.7474910407599964e-13
+    },
+    {
+      "index": 381,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 8.348877145181177e-14
+    },
+    {
+      "index": 382,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1037,
+      "error": 2.0983215165415459e-13
+    },
+    {
+      "index": 383,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 9.769962616701378e-14
+    },
+    {
+      "index": 384,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 8.748557434046234e-14
+    },
+    {
+      "index": 385,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1015,
+      "error": 1.3100631690576847e-13
+    },
+    {
+      "index": 386,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1025,
+      "error": 3.5071945347908695e-13
+    },
+    {
+      "index": 387,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1008,
+      "error": 1.0147438445073931e-13
+    },
+    {
+      "index": 388,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 1.3233858453531866e-13
+    },
+    {
+      "index": 389,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 9.303668946358812e-14
+    },
+    {
+      "index": 390,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 7.72715225139109e-14
+    },
+    {
+      "index": 391,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1012,
+      "error": 4.085620730620576e-13
+    },
+    {
+      "index": 392,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 1.6475709685437323e-13
+    },
+    {
+      "index": 393,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1045,
+      "error": 1.7075230118734908e-13
+    },
+    {
+      "index": 394,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1021,
+      "error": 1.0691447727140257e-13
+    },
+    {
+      "index": 395,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1020,
+      "error": 4.5075054799781356e-14
+    },
+    {
+      "index": 396,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 1.1501910535116622e-13
+    },
+    {
+      "index": 397,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 1.1102230246251565e-13
+    },
+    {
+      "index": 398,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1021,
+      "error": 8.548717289613705e-14
+    },
+    {
+      "index": 399,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1016,
+      "error": 8.79296635503124e-14
+    },
+    {
+      "index": 400,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1004,
+      "error": 1.5587531265737198e-13
+    },
+    {
+      "index": 401,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1010,
+      "error": 8.193445921733655e-14
+    },
+    {
+      "index": 402,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1025,
+      "error": 1.4876988529977098e-13
+    },
+    {
+      "index": 403,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1025,
+      "error": 1.4077627952246985e-13
+    },
+    {
+      "index": 404,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 2.1438406605511773e-13
+    },
+    {
+      "index": 405,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1032,
+      "error": 3.128608483393691e-13
+    },
+    {
+      "index": 406,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1016,
+      "error": 3.064215547965432e-13
+    },
+    {
+      "index": 407,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 9.14823772291129e-14
+    },
+    {
+      "index": 408,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 1.7252865802674933e-13
+    },
+    {
+      "index": 409,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 3.2529534621517087e-13
+    },
+    {
+      "index": 410,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 2.7255975254547593e-13
+    },
+    {
+      "index": 411,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1034,
+      "error": 4.241051954068098e-14
+    },
+    {
+      "index": 412,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1047,
+      "error": 2.4491519923230953e-13
+    },
+    {
+      "index": 413,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1008,
+      "error": 6.122879980807738e-13
+    },
+    {
+      "index": 414,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 3.752553823233029e-14
+    },
+    {
+      "index": 415,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1021,
+      "error": 9.037215420448774e-14
+    },
+    {
+      "index": 416,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1035,
+      "error": 1.8629542353210127e-13
+    },
+    {
+      "index": 417,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1008,
+      "error": 6.128431095930864e-14
+    },
+    {
+      "index": 418,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 1.8829382497642655e-13
+    },
+    {
+      "index": 419,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1028,
+      "error": 1.2589929099249275e-13
+    },
+    {
+      "index": 420,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1008,
+      "error": 1.4632739464559563e-13
+    },
+    {
+      "index": 421,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 2.013944566670034e-13
+    },
+    {
+      "index": 422,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1006,
+      "error": 7.283063041541027e-14
+    },
+    {
+      "index": 423,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 3.3639757646142243e-13
+    },
+    {
+      "index": 424,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 1.0680345496894006e-13
+    },
+    {
+      "index": 425,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1046,
+      "error": 1.8118839761882555e-13
+    },
+    {
+      "index": 426,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1036,
+      "error": 1.8074430840897548e-13
+    },
+    {
+      "index": 427,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 4.5852210917018965e-14
+    },
+    {
+      "index": 428,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1025,
+      "error": 1.9095836023552692e-13
+    },
+    {
+      "index": 429,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1010,
+      "error": 1.8895995879120164e-13
+    },
+    {
+      "index": 430,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 1.2789769243681803e-13
+    },
+    {
+      "index": 431,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 1.4566126083082054e-13
+    },
+    {
+      "index": 432,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1040,
+      "error": 7.216449660063518e-14
+    },
+    {
+      "index": 433,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1031,
+      "error": 1.7008616737257398e-13
+    },
+    {
+      "index": 434,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1016,
+      "error": 1.8074430840897548e-13
+    },
+    {
+      "index": 435,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1006,
+      "error": 1.680877659282487e-13
+    },
+    {
+      "index": 436,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 1.645350522494482e-13
+    },
+    {
+      "index": 437,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 1.745270594710746e-13
+    },
+    {
+      "index": 438,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 1.0391687510491465e-13
+    },
+    {
+      "index": 439,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 1.602051824534101e-13
+    },
+    {
+      "index": 440,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 1.3078427230084344e-13
+    },
+    {
+      "index": 441,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 1.8274270985330077e-13
+    },
+    {
+      "index": 442,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1021,
+      "error": 2.1316282072803006e-13
+    },
+    {
+      "index": 443,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 1.6575629757653587e-13
+    },
+    {
+      "index": 444,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 7.149836278586008e-14
+    },
+    {
+      "index": 445,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 1.3444800828210646e-13
+    },
+    {
+      "index": 446,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 3.419486915845482e-14
+    },
+    {
+      "index": 447,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 8.548717289613705e-14
+    },
+    {
+      "index": 448,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1014,
+      "error": 2.609024107869118e-13
+    },
+    {
+      "index": 449,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1016,
+      "error": 1.4632739464559563e-13
+    },
+    {
+      "index": 450,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 7.904787935331115e-14
+    },
+    {
+      "index": 451,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1034,
+      "error": 8.748557434046234e-14
+    },
+    {
+      "index": 452,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1027,
+      "error": 6.961098364399732e-14
+    },
+    {
+      "index": 453,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 1.4765966227514582e-13
+    },
+    {
+      "index": 454,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1035,
+      "error": 2.533528942194607e-13
+    },
+    {
+      "index": 455,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1042,
+      "error": 9.103828801926284e-14
+    },
+    {
+      "index": 456,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1042,
+      "error": 2.440270208126094e-13
+    },
+    {
+      "index": 457,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1021,
+      "error": 4.39648317751562e-14
+    },
+    {
+      "index": 458,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1020,
+      "error": 1.942890293094024e-13
+    },
+    {
+      "index": 459,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1031,
+      "error": 2.7633451082920146e-13
+    },
+    {
+      "index": 460,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 7.704947790898586e-14
+    },
+    {
+      "index": 461,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1039,
+      "error": 1.1435297153639112e-13
+    },
+    {
+      "index": 462,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1009,
+      "error": 6.084022174945858e-14
+    },
+    {
+      "index": 463,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1027,
+      "error": 1.433297924791077e-13
+    },
+    {
+      "index": 464,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1008,
+      "error": 1.4099832412739488e-13
+    },
+    {
+      "index": 465,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 1.7430501486614958e-13
+    },
+    {
+      "index": 466,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1025,
+      "error": 4.169997680492088e-13
+    },
+    {
+      "index": 467,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 1.0591527654923993e-13
+    },
+    {
+      "index": 468,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 1.0347278589506459e-13
+    },
+    {
+      "index": 469,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 8.304468224196171e-14
+    },
+    {
+      "index": 470,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 2.0738966099997924e-13
+    },
+    {
+      "index": 471,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1001,
+      "error": 7.238654120556021e-14
+    },
+    {
+      "index": 472,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1021,
+      "error": 1.0591527654923993e-13
+    },
+    {
+      "index": 473,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 7.926992395823618e-14
+    },
+    {
+      "index": 474,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1033,
+      "error": 1.7141843500212417e-13
+    },
+    {
+      "index": 475,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 1.0635936575909e-13
+    },
+    {
+      "index": 476,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1020,
+      "error": 2.446931546273845e-13
+    },
+    {
+      "index": 477,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 2.289279876777073e-13
+    },
+    {
+      "index": 478,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1007,
+      "error": 1.389999226830696e-13
+    },
+    {
+      "index": 479,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1035,
+      "error": 3.3306690738754696e-13
+    },
+    {
+      "index": 480,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 3.539391002504999e-13
+    },
+    {
+      "index": 481,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1031,
+      "error": 4.2521541843143495e-13
+    },
+    {
+      "index": 482,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 4.001243780749064e-13
+    },
+    {
+      "index": 483,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 1.653122083666858e-13
+    },
+    {
+      "index": 484,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1010,
+      "error": 5.040412531798211e-14
+    },
+    {
+      "index": 485,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1034,
+      "error": 2.0516921495072893e-13
+    },
+    {
+      "index": 486,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1026,
+      "error": 1.4732659536775827e-13
+    },
+    {
+      "index": 487,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 1.0880185641326534e-13
+    },
+    {
+      "index": 488,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1012,
+      "error": 6.20503648463e-13
+    },
+    {
+      "index": 489,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1028,
+      "error": 1.7319479184152442e-13
+    },
+    {
+      "index": 490,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1022,
+      "error": 1.8851586958135158e-13
+    },
+    {
+      "index": 491,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1025,
+      "error": 1.5543122344752192e-13
+    },
+    {
+      "index": 492,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1029,
+      "error": 2.2737367544323206e-13
+    },
+    {
+      "index": 493,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1032,
+      "error": 1.3156142841808105e-13
+    },
+    {
+      "index": 494,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1034,
+      "error": 1.5432100042289676e-13
+    },
+    {
+      "index": 495,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1008,
+      "error": 1.6497914145929826e-13
+    },
+    {
+      "index": 496,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1016,
+      "error": 1.1302070390684094e-13
+    },
+    {
+      "index": 497,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1019,
+      "error": 2.865485626557529e-13
+    },
+    {
+      "index": 498,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1009,
+      "error": 2.0250467969162855e-13
+    },
+    {
+      "index": 499,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1028,
+      "error": 6.772360450213455e-14
+    },
+    {
+      "index": 500,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1011,
+      "error": 5.595524044110789e-14
+    },
+    {
+      "index": 501,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 2.6201263381153694e-13
+    },
+    {
+      "index": 502,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1004,
+      "error": 1.3278267374516872e-13
+    },
+    {
+      "index": 503,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1023,
+      "error": 1.7852386235972517e-13
+    },
+    {
+      "index": 504,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 3.5149660959632456e-13
+    },
+    {
+      "index": 505,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1020,
+      "error": 2.866595849582154e-13
+    },
+    {
+      "index": 506,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1003,
+      "error": 1.0802470029602773e-13
+    },
+    {
+      "index": 507,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1018,
+      "error": 2.1871393585115584e-13
+    },
+    {
+      "index": 508,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1017,
+      "error": 2.6856294965682537e-13
+    },
+    {
+      "index": 509,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1024,
+      "error": 6.701306176637445e-13
+    },
+    {
+      "index": 510,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1013,
+      "error": 1.3289369604763124e-13
+    },
+    {
+      "index": 511,
+      "status": "NUMERIC_FEASIBLE",
+      "variables": 1005,
+      "error": 1.2390088954816747e-13
+    }
+  ]
+}
