@@ -38,6 +38,9 @@ python E025_coupled_trades.py
 Code: https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E025_coupled_trades.py (commit https://github.com/davidlueng986-alt/123321/commit/e2eb2c51956d743c69a536bc0bd7a1bd96144501).  
 Summary: https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E025_SUMMARY.json (commit https://github.com/davidlueng986-alt/123321/commit/1d484050ad92189bc2802f0f4f796d0750b53731).
 
+
+Independent JS replay: https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E025_independent_replay.js (commit https://github.com/davidlueng986-alt/123321/commit/5fc7252b6199144c2154309e47d28b2040dc8704). Run with `node E025_independent_replay.js` to independently re-enumerate all 87,704 double flips; the bounded third-flip pilots are in the Python implementation.
+
 ## Failure modes / limitations / next action
 No independent SAT proof certificate; instead exhaustive enumeration over a *small explicitly defined* local move class. A local `git ls-remote` attempt failed DNS resolution; GitHub connector reads and writes succeeded. No randomness or GPU. The source examples' isotopy/paratopy classes were not exhaustively classified. The constrained trade route failed to produce a new pair, so **E026 should not repeat the same neighborhood**. Highest-value next step: obtain a *new* WW residual-pattern SAT model from the authors' published encoding with a blocking clause against the original witness, or use a larger multi-symbol orthogonal-array trade neighborhood with strict independent Latin+orthogonality replay; then compute common transversals, 100-cell support, and exact-cover third-square feasibility.
 
