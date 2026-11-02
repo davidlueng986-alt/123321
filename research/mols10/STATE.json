@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "E029: generate genuinely different order-10 Q using published SAT encoding or independent orthogonal-pair generation; validate 100/100 pair, common transversals and if warranted third-square exact cover. Avoid revisiting eight published fixed-Q matrices.",
-  "current_hypothesis": "H29-NEW-NONISOTOPIC-Q-VIA-SAT-ENCODING",
-  "last_experiment": "MOLS10-E028-SX-UU-COMPLETE-FIXED-Q-MATE-ENUMERATION",
+  "next_action": "E030: generate and verify new nonisotopic order-10 fixed Q via SAT/constraint search with justified symmetry coverage; avoid the eight BKS Appendix Q and Egan B,C already completely excluded. For every orthogonal pair validate Latin+100/100, common transversals and cell support, then third-square exact cover if viable.",
+  "current_hypothesis": "H30-GENERATE-NEW-NONISOTOPIC-Q-WITH-SAT",
+  "last_experiment": "MOLS10-E029-EGAN-BC-COMPLETE-FIXED-Q-MATE-ENUMERATION",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -65,7 +65,8 @@
     "E025 independent JS replay persisted and executed directly from committed source: 87704 coupled tests and six maxima/counts exactly match Python; commit 5fc7252b6199144c2154309e47d28b2040dc8704.",
     "E026: all 3492 one-sided 3/4/5-symbol fixed-pair recoloring MILP instances solver-complete UNSAT, zero UNKNOWN; independent exact 3-color DFS 720 k3 cases only original normalized solutions; GF9 nontrivial positive control SAT; WW k6 pilot 7 UNKNOWN + 1 UNSAT.",
     "E027: exhaustive fixed-Q orthogonal-mate partitions for six published Q: UW3 UX2 VX2 WW1 WX1 XX3 (total12), six additional genuine orthogonal mates; all pairs have <=1 common transversal, so all six specific Q excluded from any triple. Two independent exact-cover algorithms agree on ALL 12 matrices, not just counts; bitset DFS 273559 nodes, independent DLX complete. No family-wide or global conclusion.",
-    "E028: SX Q has 864 transversals and exactly 2 normalized orthogonal mates; UU Q has 816 and exactly 1; all 3 mates have 0 common transversals. Two exact-cover implementations agree on all matrices; 10,886,400 independent permutation tests. These two fixed Q excluded, not whole families."
+    "E028: SX Q has 864 transversals and exactly 2 normalized orthogonal mates; UU Q has 816 and exactly 1; all 3 mates have 0 common transversals. Two exact-cover implementations agree on all matrices; 10,886,400 independent permutation tests. These two fixed Q excluded, not whole families.",
+    "E029: Egan B fixed Q has exactly 5 normalized orthogonal mates (932 Q-transversals), Egan C has exactly 4 (864 Q-transversals). Independent exact-cover implementations agree on all nine matrices. All nine are 100/100 pairs; common-transversal counts B [0,14,2,0,0], C [0,0,7,0], verified by 32,659,200 C++ full permutations. Both SPECIFIC Q excluded from any triple, not unrestricted."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -119,13 +120,14 @@
     "research/mols10/E026_symbol_support_milp.py",
     "research/mols10/E026_independent_3color.py",
     "research/mols10/E026_RESULTS.json",
-    "research/mols10/E026_GF9_positive.py"
+    "research/mols10/E026_GF9_positive.py",
+    "research/mols10/E029_Egan_BC_fixed_Q.py"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T06:53:43Z",
+  "last_run_utc": "2026-11-02T09:04:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -142,18 +144,20 @@
     "research/mols10/E023_REPORT.md",
     "research/mols10/E025_REPORT.md",
     "research/mols10/E026_REPORT.md",
-    "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E027_REPORT.md"
+    "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E027_REPORT.md",
+    "research/mols10/E029_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "E028 only SX/UU exact published fixed Q; two independent exact-cover algorithms and 10! permutation replay; no all-family symmetry coverage, no DRAT/FRAT certificate, no 100/100/100 witness. Local git DNS failure and initial quoting SyntaxError preserved in E028 report. E028 GitHub CI not claimed.",
+  "limitations": "No 100/100/100 witness, unrestricted nonexistence proof, global symmetry classification, SAT proof certificate or family-wide exclusion. E029 fixed-Q B/C only. Isotopy inequivalence of B/C vs BKS Q untested. GitHub CI for E029 not claimed.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
-  "external_status_review": "2026-11-02 08:09 UTC targeted web search: no independently checkable unrestricted 3-MOLS(10) resolution found. Bright–Keita–Stevens EJC 2026-02-13 and Barnoff–Bright arXiv 2605.02132 are not unrestricted solutions. Search absence is not proof.",
-  "current_math_result": "E028: SX fixed Q has exactly 2 normalized orthogonal mates (one additional), UU fixed Q has exactly 1; 864 and 816 Q-transversals respectively; all 3 mates have 0 common transversals (independent full 10! replay). Together with E027, all eight SPECIFIC BKS Appendix Q are fixed-Q excluded. No entire family/unrestricted conclusion.",
+  "external_status_review": "2026-11-02 ~09:04 UTC targeted literature search: no independently checkable unrestricted 3-MOLS(10) solution found. Primary BKS EJC 2026-02-13, arXiv 2503.10504v2 and Barnoff–Bright arXiv 2605.02132 remain restricted/pair results; search absence is not proof.",
+  "current_math_result": "E029: exact fixed Egan B has 932 transversals, exactly 5 normalized orthogonal mates (common counts 0,14,2,0,0); fixed Egan C has 864 transversals, exactly 4 mates (0,0,7,0). Both independent exact-cover algorithms agree on all 9 mate matrices; compiled C++ 32,659,200 full permutation tests independently reproduce common counts and supports. Neither SPECIFIC fixed Q extends to a triple. No unrestricted resolution.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
   "e025_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E025_REPORT.md",
   "e026_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E026_REPORT.md",
   "e027_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E027_REPORT.md",
-  "e028_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E028_REPORT.md"
+  "e028_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E028_REPORT.md",
+  "e029_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E029_REPORT.md"
 }
