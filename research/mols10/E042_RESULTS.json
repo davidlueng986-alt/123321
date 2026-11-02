@@ -1,0 +1,83 @@
+{
+  "experiment": "E042",
+  "timestamp_utc": "2026-11-02T18:00:00Z",
+  "status": "OPEN",
+  "scope": "Exact 4-row row/column/symbol isotopies plus square permutations, not all paratopies",
+  "source_prefixes": 516,
+  "source_E037": 360,
+  "source_E036": 156,
+  "motifs": [
+    "E040_21",
+    "E040_22",
+    "E041_22"
+  ],
+  "checks": 1548,
+  "positive_matches": [
+    [
+      92,
+      "E040_22"
+    ],
+    [
+      93,
+      "E040_21"
+    ],
+    [
+      94,
+      "E041_22"
+    ]
+  ],
+  "negative_matches": 1545,
+  "unknown": 0,
+  "additional_pruning_beyond_existing_E039_LP": 0,
+  "independent_replay": {
+    "method": "separate standard-library Python implementation",
+    "batches": [
+      [
+        0,
+        100
+      ],
+      [
+        100,
+        100
+      ],
+      [
+        200,
+        100
+      ],
+      [
+        300,
+        100
+      ],
+      [
+        400,
+        116
+      ]
+    ],
+    "total_nodes": 2447321,
+    "seconds": 126.23,
+    "match_counts": {
+      "E040_21": 1,
+      "E040_22": 1,
+      "E041_22": 1
+    }
+  },
+  "original_matcher_seconds": 111.398,
+  "positive_controls": {
+    "self_matches": "3/3",
+    "random_isotopies": "9/9",
+    "E041_exact_certificate": "PASS",
+    "E041_exact_isotopies": "100/100"
+  },
+  "input_sha256": {
+    "E037_ALL_CYCLES.json": "1963301e0e611a33a61522ac30c5a24237faad8432dd23c0ddc8215202ce36a7",
+    "E036_WITNESSES.json": "4b1a2abb7e2ddade1c898ae23a50b086af0dd3545265a92c37dddd326b0f9462",
+    "E040_EXACT_MINIMAL_CORES.json": "34fa47572145828b6fa25c2065fd51ba63ddb4d8d5d4db205ced4606c3e61c6c",
+    "E041_NEW_22_SPARSE_CERTIFICATE.json": "9b1fdc2d83ae73728ce9075d747e98ee03c0419a883fa9158b532be045646604"
+  },
+  "failures": [
+    "initial monolithic 516-prefix run timed out and was not counted",
+    "three rationalized E041 LP primal attempts did not verify exactly; no primal certificate claimed"
+  ],
+  "global_orbits_excluded": 0,
+  "total_global_orbits": 162959
+}
