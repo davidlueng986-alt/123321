@@ -1,4 +1,4 @@
-# E042 — Exact isotopy-aware forbidden-pattern nogood benchmark (2026-11-02 ~17:45–18:00 UTC)
+# E042 — Exact isotopy-aware forbidden-pattern nogood benchmark (2026-11-02 ~17:44–17:54 UTC)
 
 **GLOBAL STATUS: OPEN.** No verified 100/100/100 triple and no unrestricted nonexistence proof. **0/162,959 full normalized orbits excluded.**
 
