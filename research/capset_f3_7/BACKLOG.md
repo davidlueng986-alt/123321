@@ -257,3 +257,11 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0] Independently audit CAP-009A/B Drive-only stronger claims before GitHub promotion; spectral floating point bounds need rational certificates.
 - [P0] Keep all-hyperplanes<=111 global branch; this is untouched by 112-anchored theorems.
 - [NOVELTY] Classical (729,112,1,20) Games graph known in literature. Unique-completion corollary novelty unknown, no priority claim.
+
+
+## CAP-013 cross-agent integration audit (2026-11-02 12:48 UTC)
+- [P0 / CONFIRMED BUG] Fix CAP-011A source sign in Drive v4.0: Q must be -(centered.T @ centered) mod 3, then explicitly assert every cross-dimension verification flag TRUE. Original v4 JSON flags are false for 7D236, 8D496/512; do not falsely certify.
+- [P0 / PROOF GAP] CAP-010B: exact integer Gram but float SVD/eigvalsh still decides eigenvalue multiplicity/maximum. Require an exact PSD/rank certificate, independent verifier and green CI; numeric lambda=425/576 and derived deletion bound remain unpromoted until proof.
+- [P1 / EVIDENCE GAP] CAP-010C k28/30/32 across 3812 matrices: insist on standalone code/certificate and CI. CAP-008C B6 finite enumeration independently replay before promotion. Do not treat Drive-only CAP-012 self-audit as independent external confirmation.
+- [VERIFIED MATH] CAP-011B global codim2 first/second/third moments and 89->>=33 5D subslice gate rederived exactly; CAP-011C cross-slice matching proof valid. Use these for new global five-dimensional incidence constraints rather than further fixed-236 local optimization.
+- [P0 / GLOBAL] Preserve n7 target237 proof-logged SAT and all-hyperplanes<=111 branch. No >=237 witness or improved global bound.
