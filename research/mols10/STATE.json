@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "E026: Do not repeat E025 one/two-symbol component flip neighborhood. Seek NEW nonisotopic WW or other residual-pattern orthogonal pair via source SAT encoding + blocking clause, or larger multi-symbol orthogonal-array trade; independently verify Latin+100 overlay, count common transversals and test 10-way exact cover if necessary conditions pass.",
-  "current_hypothesis": "H26-DIVERSIFY-BEYOND-LOCAL-2-SYMBOL-TRADES",
-  "last_experiment": "MOLS10-E025-COUPLED-PROPER-TWO-SYMBOL-TRADES",
+  "next_action": "E027: source SAT encoding with blocking clauses for NEW residual-family orthogonal pair, or two-sided larger OA trades. Do not repeat one-sided k<=5 changes around E024 six examples. Verify Latin, 100 overlay, then common transversals and exact cover; strictly bound GPU/CPU.",
+  "current_hypothesis": "H27-NEW-SAT-PAIR-OUTSIDE-LOW-SYMBOL-TRADE-NEIGHBORHOOD",
+  "last_experiment": "MOLS10-E026-ONE-SIDED-3-5-SYMBOL-TRADE-EXCLUSION",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -62,7 +62,8 @@
     "E024: WW only common transversal row-to-column [9,4,7,2,8,6,0,5,3,1]; GF4 16/16/16 positive control; source PDF direct download DNS failure, used PDF page screenshots/text; no DRAT/FRAT certificate.",
     "E025: exhaustive proper two-symbol component-flip neighborhoods of six specific Appendix pairs: 1446 single-square flips and 87704 coupled flips; none orthogonal. Both Python and independent JavaScript enumeration agree. WW four best double-flip pairs only 98/100, other five max 96/100; no new pair, let alone triple.",
     "E025: bounded one-extra-flip pilot on best double-flip candidates: 96768 trials, zero orthogonal; WW expanded all 96 double candidates with >=96 overlay, 26184 third-flip trials, zero orthogonal. These follow-up sets overlap. Not family-wide, not unrestricted.",
-    "E025 independent JS replay persisted and executed directly from committed source: 87704 coupled tests and six maxima/counts exactly match Python; commit 5fc7252b6199144c2154309e47d28b2040dc8704."
+    "E025 independent JS replay persisted and executed directly from committed source: 87704 coupled tests and six maxima/counts exactly match Python; commit 5fc7252b6199144c2154309e47d28b2040dc8704.",
+    "E026: all 3492 one-sided 3/4/5-symbol fixed-pair recoloring MILP instances solver-complete UNSAT, zero UNKNOWN; independent exact 3-color DFS 720 k3 cases only original normalized solutions; GF9 nontrivial positive control SAT; WW k6 pilot 7 UNKNOWN + 1 UNSAT."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -112,13 +113,16 @@
     "research/mols10/E023_UU_pair_replay.py",
     "research/mols10/E023_UU_RESULTS.json",
     "research/mols10/E025_coupled_trades.py",
-    "research/mols10/E025_independent_replay.js"
+    "research/mols10/E025_independent_replay.js",
+    "research/mols10/E026_symbol_support_milp.py",
+    "research/mols10/E026_independent_3color.py",
+    "research/mols10/E026_RESULTS.json"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T04:47:09Z",
+  "last_run_utc": "2026-11-02T05:47:17Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -133,15 +137,17 @@
     "research/mols10/E019_REPORT.md",
     "research/mols10/E020_REPORT.md",
     "research/mols10/E023_REPORT.md",
-    "research/mols10/E025_REPORT.md"
+    "research/mols10/E025_REPORT.md",
+    "research/mols10/E026_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "Global 3-MOLS(10) OPEN. E023 source-published SX and UU are only TWO fixed-pair extension exclusions, each with 0 common transversals. No unrestricted coverage; other six Appendix examples not yet replayed. The VX/Z4 parity obstruction was already explicitly mentioned in the source paper (not novel). Local tests passed; E023 GitHub CI not yet verified.",
+  "limitations": "No 100/100/100 witness and no unrestricted proof/certificate. E026 excludes only one-sided recoloring of <=5 selected original symbol classes in SIX fixed published pairs, not other members of Myrvold families or simultaneous changes. k6 pilot 7 UNKNOWN, full sweep timed out; no SAT/DRAT/FRAT certificates. E026 local CPU tests completed; CI not yet verified.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
-  "external_status_review": "2026-11-02 ~02:47 UTC: checked Bright–Keita–Stevens EJC 2026-02-13, Barnoff–Bright arXiv:2605.02132v2 2026-07-04, and targeted fresh searches. No independently verifiable unrestricted solution found; search absence not proof.",
-  "current_math_result": "E025 exhaustive restricted negative: six published fixed pairs, 1446 proper single-square 2-symbol flips and 87704 coupled two-square flips, zero new orthogonal pairs; best WW 98/100 (four), others 96/100. Bounded extra third-flip pilots (96768 best-double trials, 26184 WW >=96 trials) found no repair. No global conclusion.",
+  "external_status_review": "2026-11-02 ~05:44 UTC: checked Bright–Keita–Stevens EJC 2026-02-13 and arXiv:2503.10504, Barnoff–Bright arXiv:2605.02132v2 2026-07-04, and targeted new-resolution searches; no independently checkable unrestricted solution found. Search absence not proof.",
+  "current_math_result": "E026: Six specific published pairs UW/UX/VX/WW/WX/XX, fixed Q, exhaustive one-sided Z-symbol recolorings of any 3,4,5 original symbol classes (720+1260+1512=3492 HiGHS solver-complete INFEASIBLE after row0 normalization + original-exclusion), 0 UNKNOWN; independent 3-color DFS confirms 720 k3 cases have only original normalized coloring. GF9 positive control has a genuine 18-cell nontrivial k3 trade with overlay81. WW k6 8-instance pilot: 1 infeasible, 7 time-limited UNKNOWN; full k6 sweep timed out. Restricted negative only, global OPEN.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
-  "e025_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E025_REPORT.md"
+  "e025_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E025_REPORT.md",
+  "e026_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E026_REPORT.md"
 }
