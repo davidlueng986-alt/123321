@@ -265,3 +265,10 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P1 / EVIDENCE GAP] CAP-010C k28/30/32 across 3812 matrices: insist on standalone code/certificate and CI. CAP-008C B6 finite enumeration independently replay before promotion. Do not treat Drive-only CAP-012 self-audit as independent external confirmation.
 - [VERIFIED MATH] CAP-011B global codim2 first/second/third moments and 89->>=33 5D subslice gate rederived exactly; CAP-011C cross-slice matching proof valid. Use these for new global five-dimensional incidence constraints rather than further fixed-236 local optimization.
 - [P0 / GLOBAL] Preserve n7 target237 proof-logged SAT and all-hyperplanes<=111 branch. No >=237 witness or improved global bound.
+
+## CAP-014-PSD exact spectral premise (2026-11-02 13:00 UTC)
+- [LOCAL EXACT PASS / CI PENDING] Repaired Drive CAP-010B's float-SVD/float-eigvalsh proof gap for the *fixed classical* 112+112 slices: pure-integer 111x111 PSD certificate via symmetric Bareiss (rank 107, nullity 4) and independent mod-1e9+7 rank 107. Exact lambda_perp=425/576, verified independent 236-cap checker. Formula d>=ceil(64512m/(576m+47600)), for deletions from second 112-slice while first is frozen. See CAP014_EXACT_PSD_425_OVER_576_2026-11-02.md, cap010b_exact_psd_certificate.py and test_cap010b_exact_psd_certificate.py. No global bound.
+- [P0] Confirm workflow https://github.com/davidlueng986-alt/123321/actions/runs/41449195256; if failure, investigate before promoting. GitHub unittest discovery includes the new test.
+- [P0] Independently fix CAP-011A negative sign in other agent's Drive source (do not overwrite source without coordination), and audit CAP-014A/B/C claims separately; CAP-014-PSD is a different, disambiguated GitHub experiment.
+- [P0 / GLOBAL] Focus 237-target all-hyperplanes<=111 branch, 5D incidence and proof-logged SAT. A restricted classical-pair spectral bound cannot prove exact r3(7).
+- [META] Exact proof-integrity now improved, but marginal global-search leverage is low; do not over-invest in local fixed-pair perturbations. No >=237 witness; novelty unverified.
