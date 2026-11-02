@@ -1,0 +1,26 @@
+name: MOLS10 E048 independent local-rigidity replay
+on:
+  push:
+    branches: [math-agent-mols10]
+    paths:
+      - 'research/mols10/E048_*'
+      - '.github/workflows/mols10-e048.yml'
+  workflow_dispatch:
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: math-agent-mols10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Exact 901440 alignment and 2895 intercalate proposals
+        run: node research/mols10/E048_local_rigidity.js | tee E048_CI_REPLAY.log
+      - name: Preserve log
+        uses: actions/upload-artifact@v4
+        with:
+          name: mols10-e048-replay
+          path: E048_CI_REPLAY.log
