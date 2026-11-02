@@ -122,6 +122,16 @@ jobs:
         run: |
           python research/capset_f3_7/cap005_k6_symmetry_quotient.py /tmp/cap005_k6_lp_duals.json --out /tmp/cap005_h_symmetry.json
           python research/capset_f3_7/cap005_k6_symmetry_rounding_check.py --duals /tmp/cap005_h_rounding_duals.json --certificate /tmp/cap005_k6_lp_duals.json
+      - name: Generate odd-cycle exact rational duals for all seven six-fiber orbits
+        run: OPENBLAS_NUM_THREADS=1 python research/capset_f3_7/cap005_i_oddcycle_dual_generator.py --out /tmp/cap005_i_oddcycle_duals.json
+      - name: Independently certify complete six-fiber restricted optimum 236
+        run: python research/capset_f3_7/cap005_i_oddcycle_dual_check.py /tmp/cap005_i_oddcycle_duals.json /tmp/cap005_k6_lp_duals.json
+      - name: Archive CAP-005I complete six-fiber exact dual certificates
+        uses: actions/upload-artifact@v4
+        with:
+          name: capset-k6-oddcycle-full-exact-236
+          path: /tmp/cap005_i_oddcycle_duals.json
+          retention-days: 30
       - name: Archive CAP-005H exact duals and symmetry quotient
         uses: actions/upload-artifact@v4
         with:

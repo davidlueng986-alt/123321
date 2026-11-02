@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-005H: 88 CAP-005G fractional LP survivors form seven orbits under a verified 16-element affine stabilizer of the 236 cap; two 16-element orbits excluded by exact rational dual objectives 137/2 and 206/3 < baseline 69. Total 295954/296010 excluded; 56 in five orbits remain. Local exact checker PASS; CI pending. Global r3(7) OPEN.",
-  "next_experiment": "Confirm CAP-005H CI, then seek independently checkable UNSAT/cutting-plane certificates for five remaining symmetry orbits (56 six-fiber cases). Seven short HiGHS infeasibility statuses are NON-CERTIFYING. Continue independent nonlocal constructions/global upper-bound research.",
-  "last_run_id": "CAP-005H-2026-11-02-k6-symmetry-rounding",
-  "last_run_result": "LOCAL_EXACT_32_NEW_EXCLUSIONS_CI_PENDING",
+  "current_hypothesis": "CAP-005I: exact rational duals using fixed-point conflict triangles and odd five-cycle inequalities prove all seven symmetry orbit representatives of the 88 CAP-005G survivors cannot improve the classical 236 cap. All 296010 six-fiber edits now locally certified optimum 236; new CI pending. This is RESTRICTED ONLY; global r3(7) OPEN.",
+  "next_experiment": "Confirm CAP-005I CI; then STOP repeating fixed first-three-coordinate <=6-fiber edits. Pivot to genuinely nonlocal 27-block constructions/alternative partitions and globally valid certified upper-bound inequalities. Keep r3(7) OPEN.",
+  "last_run_id": "CAP-005I-2026-11-02-k6-oddcycle-duals",
+  "last_run_result": "LOCAL_EXACT_ALL_296010_SIX_FIBER_EDITS_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -50,7 +50,9 @@
     "CAP-005F-LOCAL",
     "CAP-005F-CI",
     "CAP-005G-LOCAL",
-    "CAP-005H-LOCAL"
+    "CAP-005H-LOCAL",
+    "CAP-005H-CI",
+    "CAP-005I-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
   "baseline_secant_audit": {
@@ -72,7 +74,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T05:00:00Z",
+  "last_updated_utc": "2026-11-02T05:05:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -399,11 +401,12 @@
     "checker": "research/capset_f3_7/cap005_k6_lp_dual_check.py",
     "report": "research/capset_f3_7/CAP005_K6_RATIONAL_DUAL_CERTIFICATE_2026-11-02.md",
     "local_certificate_sha256": "0a49469949dca1e9a55e6cffab62306eec7a0e9f9e9bace17289e1e26bd4e7db",
-    "status": "LOCAL_EXACT_CHECK_PASS_CI_PENDING",
+    "status": "VERIFIED_EXACT_RATIONAL_CERTIFICATES_CI_GREEN",
     "global_bound_improved": false,
     "novelty_established": false,
     "seed": null,
-    "gpu_used": false
+    "gpu_used": false,
+    "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41386314239"
   },
   "cap005_k6_symmetry_rounding": {
     "scope": "Classical 236 cap, six of 27 first-three-coordinate 4D fibers",
@@ -423,10 +426,29 @@
       68,
       68
     ],
-    "status": "LOCAL_EXACT_RATIONAL_AND_SYMMETRY_PASS_CI_PENDING",
+    "status": "VERIFIED_EXACT_RATIONAL_AND_SYMMETRY_CI_GREEN",
     "global_bound_improved": false,
     "novelty_established": false,
     "script": "research/capset_f3_7/cap005_k6_symmetry_rounding_check.py",
-    "report": "research/capset_f3_7/CAP005_K6_SYMMETRY_ROUNDING_2026-11-02.md"
+    "report": "research/capset_f3_7/CAP005_K6_SYMMETRY_ROUNDING_2026-11-02.md",
+    "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41391589830"
+  },
+  "cap005_k6_oddcycle_full_exact": {
+    "scope": "All at most six first-three-coordinate 4D fiber edits of fixed classical 236 cap",
+    "total_six_fiber_subsets": 296010,
+    "previous_excluded": 295922,
+    "remaining_orbits_certified": 7,
+    "remaining_cases_certified": 88,
+    "total_excluded": 296010,
+    "restricted_optimum": 236,
+    "method": "Exact rational duals of pair/line/triangle/odd-five-cycle inequalities, independently checked; verified 16-element affine action",
+    "status": "LOCAL_EXACT_CHECK_PASS_CI_PENDING",
+    "generator": "research/capset_f3_7/cap005_i_oddcycle_dual_generator.py",
+    "checker": "research/capset_f3_7/cap005_i_oddcycle_dual_check.py",
+    "report": "research/capset_f3_7/CAP005_K6_ODDCYCLE_FULL_EXACT_236_2026-11-02.md",
+    "global_bound_improved": false,
+    "novelty_established": false,
+    "gpu_used": false,
+    "seed": null
   }
 }
