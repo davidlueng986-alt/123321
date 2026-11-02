@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-014-PSD exact restricted 425/576 spectral certificate for classical 112+112 slices; no global 237 exclusion. CAP-011A sign bug still open in Drive source; global no-112 hyperplane branch remains unaddressed.",
-  "next_experiment": "Use anchored-111 5D fingerprint to build 3x3 codim2 grid/cross-layer proof-logged SAT; hostile referee CAP017B/Thackeray; preserve balanced branch.",
-  "last_run_id": "CAP-022-NEARMAX-CODIM2-FINGERPRINTS-2026-11-02",
-  "last_run_result": "CANONICAL_112_111_110_FULL_DELETION_FINGERPRINTS_LOCAL_EXACT_CI_PENDING",
+  "current_hypothesis": "CAP-023: canonical 111 anchor exact SAT reduction with 1458 external variables and 80,919 cross-layer binary constraints; 287-target CNF SAT/UNSAT UNKNOWN. All four 111 fingerprint profiles admit explicit 3x3 count-only 287 countermodels; aggregate/grid relaxations insufficient. CAP-019 <=287 remains conditional pending hostile referee.",
+  "next_experiment": "Run proof-logged SAT on anchored111 subcases with 3x3 5D geometry/cross-layer constraints, verify Thackeray/CAP017B, and preserve global no-111 balanced branch plus 237 construction work.",
+  "last_run_id": "CAP-023-ANCHORED111-EXACT-CNF-2026-11-02",
+  "last_run_result": "EXACT_CNF_287_GENERATED_738782_CLAUSES_4_GRID_NEGATIVE_CONTROLS_6_LOCAL_TESTS_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -74,9 +74,10 @@
     "CAP-007K-LOCAL",
     "CAP-010A-LOCAL",
     "CAP-014-PSD-LOCAL",
-    "CAP-022-LOCAL"
+    "CAP-022-LOCAL",
+    "CAP-023-LOCAL"
   ],
-  "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41415696843",
+  "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41486369075",
   "baseline_secant_audit": {
     "external_points": 1951,
     "all_blocked": true,
@@ -96,7 +97,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02",
+  "last_updated_utc": "2026-11-02T18:00:26Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1170,13 +1171,45 @@
     },
     "local_python": "PASS_4_OF_4",
     "independent_javascript": "AGGREGATE_REPLAY_MATCH",
-    "ci": "PENDING",
+    "ci": "SUCCESS_41486369075",
     "novelty": "NOT_ESTABLISHED",
     "global_bound_improved": false,
     "dependencies": [
       "Potechin 2008 affine uniqueness",
       "Thackeray 2022 110 completion preprint",
       "CAP010A for 111 completion"
+    ]
+  },
+  "cap023_anchored111_exact_cnf": {
+    "code": "research/capset_f3_7/cap023_anchored111_exact_cnf.py",
+    "test": "research/capset_f3_7/test_cap023_anchored111_exact_cnf.py",
+    "report": "research/capset_f3_7/CAP023_ANCHORED111_SAT_AND_GRID_NEGATIVE_CONTROLS_2026-11-02.md",
+    "certificate": "research/capset_f3_7/CAP023_anchored111_certificate.json",
+    "anchor_size": 111,
+    "target": 287,
+    "external_target": 176,
+    "external_vars": 1458,
+    "cross_layer_edges": 80919,
+    "removed_perfect_matching_edges": 729,
+    "within_layer_line_clauses": 176904,
+    "auxiliary_vars": 241208,
+    "total_vars": 242666,
+    "total_clauses": 738782,
+    "cnf_bytes": 14504523,
+    "cnf_sha256": "22c3ab32e85ccd9bae9bb8ca68e7664564bc8371a4fc34fe25e0cdcf3392d5f0",
+    "source_sha256": "a4b2c0ef7d15aef6be85438abb9e8f849b55407e10f82e7b2231109bbb76fde7",
+    "independent_known236_235_check": "PASS",
+    "local_tests": "PASS_6_OF_6",
+    "independent_js_grid_checks": "PASS_4_OF_4",
+    "grid_count_only_287_countermodels": 4,
+    "sat_status": "UNKNOWN",
+    "ci": "PENDING",
+    "global_bound_improved": false,
+    "novelty": "NOT_ESTABLISHED",
+    "dependencies": [
+      "Potechin 2008 uniqueness",
+      "Thackeray 2022 110 completion preprint",
+      "CAP-010A 111 completion secant lemma"
     ]
   }
 }

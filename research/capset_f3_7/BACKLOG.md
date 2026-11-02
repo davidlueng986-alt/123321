@@ -321,3 +321,12 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0] Build anchored-111 3x3 codim2 grid constraints (all 9 cells <=45, all 12 grid lines <=112, exact row0 fingerprint), cross-layer 3AP constraints, and proof-logged SAT/ILP. Avoid treating aggregate-only histogram as geometric witness.
 - [P0] Continue hostile referee CAP017B and provisional <=287 theorem; preserve balanced/no-112 branch and separate ≥237 lower-bound construction work. No stronger bound, no >=237 witness, no exact r3(7).
 - [NOVELTY] No literature priority established; Thackeray 2022 already classifies 110 completion and stronger near-maximal geometry. Do not claim novel global result.
+
+
+## CAP-023 — anchored111 exact SAT / count-only grid negative controls (2026-11-02 18:00 UTC)
+- [DONE LOCAL EXACT / CI PENDING] Conditional anchored111 target287 CNF: 242666 variables, 738782 clauses; 14504523 bytes, SHA256 22c3ab32e85ccd9bae9bb8ca68e7664564bc8371a4fc34fe25e0cdcf3392d5f0. Generator, 6-case unittest, report and compact JSON certificate committed; no SAT/UNSAT decision or new bound. Existing CAP007H anchored112 and CAP023 anchored111 cross-graphs differ by exactly one 729-edge perfect matching.
+- [FALSIFIED] Every one of the four possible anchored111 5D fingerprints admits a 287-point formal 3x3 integer grid with external rows 88+88 and all other 6D lines <=109; these are NOT actual caps. Stop relying on 3x3 line/cell counts alone for exclusion; include pointwise cross-layer incidence, multi-direction consistency and proof-logged solver certificates.
+- [P0] Verify CAP023 GitHub CI on final branch commit, including independent known236/235 cap checks and exact CNF satisfying assignment. Re-run SHA256 on generated DIMACS if source changes.
+- [P0] Design symmetry-reduced anchored111/112 SAT proof search for M287 and target237 subcases; do NOT treat anchored111 as global for target237. Add codim2 geometry cuts only with independently proved soundness.
+- [P0 REFEREE] CAP017B common-tangent and Thackeray 2022 110 completion, CAP010A 111 completion and conditional CAP019 <=287 still require hostile mathematical audit.
+- [P0 GLOBAL] Balanced/no-111 section branch and lower-bound 237 construction remain unaddressed by this reduction. Keep exact r3(7) campaign active.

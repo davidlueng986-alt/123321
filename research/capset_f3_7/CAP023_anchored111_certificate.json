@@ -1,0 +1,197 @@
+{
+  "campaign": "CAPSET-F3-7",
+  "step": "CAP-023",
+  "date_utc": "2026-11-02T18:00:26Z",
+  "scope": "Canonical anchored 111; universal reduction conditional on 110/111 completion and 112 uniqueness",
+  "status": "EXACT_ENCODING_VERIFIED_SAT_UNKNOWN",
+  "random_seed": "NONE",
+  "known_witness": {
+    "original": 236,
+    "anchor111_removed": 235,
+    "independent_3AP_check": "PASS",
+    "all_235_target_cnf_clauses": "PASS"
+  },
+  "cross_edge_perfect_matching": {
+    "anchored112_edges": 81648,
+    "anchored111_edges": 80919,
+    "removed_edges": 729,
+    "left_vertices": 729,
+    "right_vertices": 729
+  },
+  "cnf_target287": {
+    "anchor": 111,
+    "target": 287,
+    "external_target": 176,
+    "external_variables": 1458,
+    "within_layer_line_clauses": 176904,
+    "cross_layer_binary_clauses": 80919,
+    "auxiliary_variables": 241208,
+    "counter_clauses": 480959,
+    "total_variables": 242666,
+    "total_clauses": 738782,
+    "cnf_bytes": 14504523,
+    "cnf_sha256": "22c3ab32e85ccd9bae9bb8ca68e7664564bc8371a4fc34fe25e0cdcf3392d5f0"
+  },
+  "grid_count_only_287_countermodels": [
+    {
+      "anchor_profile": [
+        39,
+        36,
+        36
+      ],
+      "grid": [
+        [
+          39,
+          36,
+          36
+        ],
+        [
+          34,
+          34,
+          20
+        ],
+        [
+          20,
+          39,
+          29
+        ]
+      ],
+      "other_line_sums": [
+        76,
+        85,
+        88,
+        88,
+        90,
+        93,
+        98,
+        99,
+        102,
+        109,
+        109
+      ]
+    },
+    {
+      "anchor_profile": [
+        40,
+        36,
+        35
+      ],
+      "grid": [
+        [
+          40,
+          36,
+          35
+        ],
+        [
+          34,
+          33,
+          21
+        ],
+        [
+          20,
+          40,
+          28
+        ]
+      ],
+      "other_line_sums": [
+        77,
+        84,
+        88,
+        88,
+        88,
+        94,
+        98,
+        101,
+        101,
+        109,
+        109
+      ]
+    },
+    {
+      "anchor_profile": [
+        45,
+        44,
+        22
+      ],
+      "grid": [
+        [
+          45,
+          44,
+          22
+        ],
+        [
+          38,
+          30,
+          20
+        ],
+        [
+          26,
+          35,
+          27
+        ]
+      ],
+      "other_line_sums": [
+        69,
+        78,
+        88,
+        88,
+        90,
+        95,
+        100,
+        102,
+        109,
+        109,
+        109
+      ]
+    },
+    {
+      "anchor_profile": [
+        45,
+        45,
+        21
+      ],
+      "grid": [
+        [
+          45,
+          45,
+          21
+        ],
+        [
+          36,
+          32,
+          20
+        ],
+        [
+          28,
+          32,
+          28
+        ]
+      ],
+      "other_line_sums": [
+        69,
+        81,
+        88,
+        88,
+        89,
+        93,
+        97,
+        105,
+        109,
+        109,
+        109
+      ]
+    }
+  ],
+  "independent_js_check": "PASS_4_OF_4",
+  "local_python_tests": "PASS_6_OF_6",
+  "gpu": false,
+  "paid_compute": false,
+  "new_ge237_witness": false,
+  "global_bound_improved": false,
+  "exact_optimum_proven": false,
+  "literature": [
+    "https://doi.org/10.1007/s10623-007-9132-z",
+    "https://arxiv.org/abs/2206.09804",
+    "https://cairn-commons.com/problems/cap-sets-dim-7"
+  ]
+}
