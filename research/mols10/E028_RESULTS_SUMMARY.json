@@ -1,0 +1,69 @@
+{
+  "iteration": "E028",
+  "timestamp_utc": "2026-11-02T08:09:18Z",
+  "global_status": "OPEN",
+  "source": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v33i1p30",
+  "scope": "Two SPECIFIC published SX and UU Q squares; exhaustive Q-orthogonal mates modulo mate symbol relabeling; not full Myrvold families.",
+  "method": "Exact-cover partition of Q transversals using bitset DFS and independently implemented mutable Algorithm X; independently check each resulting mate by all 10! permutations for common transversals.",
+  "inputs": [
+    "E023_SX_pair_replay.py",
+    "E023_UU_pair_replay.py"
+  ],
+  "code": "E028_SX_UU_fixed_Q.py",
+  "results": {
+    "SX": {
+      "q_sha256": "4395c594803efb29f388784b4cafa96b07729e17278ed50674bafe6bb7f5a4df",
+      "q_transversals": 864,
+      "normalized_mates": 2,
+      "new_mates": 1,
+      "bitset_nodes": 57110,
+      "independent_nodes": 34710,
+      "common_transversal_counts": [
+        0,
+        0
+      ],
+      "common_cell_support": [
+        0,
+        0
+      ],
+      "permutation_tests": 7257600
+    },
+    "UU": {
+      "q_sha256": "397714f132cc7b2ef237aadc925646e7396ad8e1ebd1e09c4ca3d571cfebda86",
+      "q_transversals": 816,
+      "normalized_mates": 1,
+      "new_mates": 0,
+      "bitset_nodes": 40048,
+      "independent_nodes": 24753,
+      "common_transversal_counts": [
+        0
+      ],
+      "common_cell_support": [
+        0
+      ],
+      "permutation_tests": 3628800
+    }
+  },
+  "totals": {
+    "q_transversals": 1680,
+    "normalized_mates": 3,
+    "new_mates": 1,
+    "bitset_nodes": 97158,
+    "independent_nodes": 59463,
+    "permutation_tests": 10886400
+  },
+  "checks": [
+    "Every source P,Q is Latin; derived Z is Latin and overlay Z/Q=100.",
+    "Published normalized Z recovered exactly once per fixed Q.",
+    "Both exact-cover algorithms agree on every normalized mate matrix, not merely counts.",
+    "Every mate Latin and 100/100 orthogonal to its Q.",
+    "Independent full 10! permutation checker reproduces zero common transversals for all three mates."
+  ],
+  "failures": [
+    "Direct git clone in local container failed DNS; connected GitHub fetch/write works.",
+    "Initial optional source-audit injection script had Python quoting SyntaxError; no result was accepted from it; corrected and reran complete independent and source-audit checks.",
+    "No unrestricted symmetry classification, SAT proof certificate, or 100/100/100 witness."
+  ],
+  "full_local_json_sha256": "3fd56d03efb475bfbbcc0cdeb330c5f78ac48beab0fc13a69a4293bd1dc67e2a",
+  "next_action": "Seek genuinely new nonisotopic order-10 Q from primary-source SAT encoding; validate pair, common transversals, exact-cover third-square if viable. Do not repeat the eight published fixed-Q searches."
+}
