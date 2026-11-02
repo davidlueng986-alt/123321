@@ -174,3 +174,13 @@ jobs:
           name: capset-k7-symmetry-1665-representatives
           path: /tmp/cap005_k7_symmetry.json
           retention-days: 30
+      - name: CAP-005L certify all 37 N17 seven-fiber symmetry orbits (CPU exact)
+        run: |
+          python research/capset_f3_7/cap005_l_k7_n17_generator.py /tmp/cap005_k7_symmetry.json --out /tmp/cap005_l_k7_n17.json
+          python research/capset_f3_7/cap005_l_k7_n17_check.py /tmp/cap005_l_k7_n17.json /tmp/cap005_k7_symmetry.json
+      - name: Archive CAP-005L 37 N17 conflict certificates (restricted only)
+        uses: actions/upload-artifact@v4
+        with:
+          name: capset-k7-n17-conflict-37
+          path: /tmp/cap005_l_k7_n17.json
+          retention-days: 30
