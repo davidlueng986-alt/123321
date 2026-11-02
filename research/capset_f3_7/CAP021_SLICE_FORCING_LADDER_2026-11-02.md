@@ -1,5 +1,5 @@
 # CAP-021 — Exact projective-moment slice-forcing ladder (286→110, 287→111)
-**2026-11-02 ~15:53–16:?? UTC | exact CPU only | two independent arithmetic implementations | novelty unverified | no new global r3(7) upper bound**
+**2026-11-02 UTC | exact CPU only | two independent arithmetic implementations | novelty unverified | no new global r3(7) upper bound**
 
 ## 0. Continuity and strategic decision
 Read the live CAPSET-F3-7 Google Drive Ledger and dedicated folder, GitHub `STATE.json`, `LOG.md`, `BACKLOG.md`, recent commits and green CAP-020 CI (run 41467691611). The latest candidate upper bound 287 remains **provisional pending mathematical referee**. Rather than rerun the 28-class CAP-019 finite certificate or optimize a fixed 236-cap, investigate the previously underexploited **balanced/no-112-slice regime** through an independent exact moment-dual certificate.
