@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "E035: prioritize unrestricted E033 12-cycle/162959 justified orbit frontier. Build proof-producing direct OA(100,5,10,2) SAT/CP-SAT with full cell/row/column/pair dual cuts, independent proof replay, and exhaustive coverage ledger. E034C exactly excludes all 39 four-row anchors of specified near-triple only; do not extrapolate. Verify any 100/100/100 candidate immediately.",
-  "current_hypothesis": "H034C-FULL-CELL-ROW-COLUMN-PAIR-DUAL-CUTS-FOR-GLOBAL-ORBIT-FRONTIER",
-  "last_experiment": "MOLS10-E034C-39-FOUR-ROW-EXACT-INTEGER-FARKAS-INDEPENDENT",
+  "next_action": "ONLY GOAL: unrestricted solution. Use globally justified E033 12-cycle/162959 orbit coverage with sound column-aware Hall/LP/exact integer cuts and proof-carrying solver; separately target SAT 100/100/100 construction and independently verify any witness. No local fixed-prefix UNSAT implies unrestricted status.",
+  "current_hypothesis": "E035: stronger column-aware necessary constraints can reject misleading residual 40-triangle covers; seek globally sound coverage of E033 12-cycle / 162959 orbits",
+  "last_experiment": "MOLS10-E035-COLUMN-AWARE-EXACT-HALL-DUAL-AND-DIRECT-Z3-UNKNOWN",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -140,13 +140,19 @@
     "research/mols10/E031_TRIANGLE_SEARCH.jsonl",
     "research/mols10/E033_normalize.py",
     "research/mols10/E033_reproduce_orbits.py",
-    "research/mols10/E033_RESULTS.json"
+    "research/mols10/E033_RESULTS.json",
+    "research/mols10/E035_column_residual.py",
+    "research/mols10/E035_bipartite_hall.py",
+    "research/mols10/E035_verify_sparse_dual.js",
+    "research/mols10/E035_verify_hall.js",
+    "research/mols10/E035_z3_ctypes.py",
+    "research/mols10/E035_local_search.py"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T11:52:35Z",
+  "last_run_utc": "2026-11-02T12:15:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -168,13 +174,14 @@
     "research/mols10/E030_REPORT.md",
     "research/mols10/E031_REPORT.md",
     "research/mols10/E032_REPORT.md",
-    "research/mols10/E033_REPORT.md"
+    "research/mols10/E033_REPORT.md",
+    "research/mols10/E035_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "OPEN. No unrestricted proof or verified order10 triple. 39 near-triple four-row exclusions are a single C++ exhaustive solver with limited independent semantic/prune checks, not externally replayed proof certificates; changing labels/parastrophy beyond fixed displayed near-triple not covered. Twelve global f cycle type runs all UNKNOWN_BUDGET, zero exhaustive global class coverage. The source C++ is in the Drive zip; GitHub full source upload was blocked and empty placeholders were deleted.",
+  "limitations": "No order10 100/100/100 witness or complete unrestricted proof. E035 LP/dual/Hall results apply only to biased samples or specific 4/6-row prefixes; not global coverage. Z3 n6/n10 UNKNOWN at 15s; stochastic best 58.3095/60 is LP fractional bound, not a near-triple score. Full E035 bundle in Google Drive; branch report/scripts/summary committed.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
   "external_status_review": "2026-11-02 ~10:20 UTC: checked BKS EJC 2026/arXiv2503.10504, Barnoff–Bright arXiv2605.02132, Keita 2026 PhD thesis, Gill–Wanless arXiv2204.10996; no independently checkable unrestricted claim found. Absence not proof.",
-  "current_math_result": "E034: new C++ direct 3-MOLS rowwise solver positive n4/n5, exhaustive n6 negative. Strong sound column-aware residual triangle/unit/integer cover prunes. Unrestricted n10: 12 canonical f cycle types each 20m nodes -> all UNKNOWN; four deeper types 25-second UNKNOWN. Exhaustive single-solver repairs of all 39 distinct valid four-row subsets from displayed Egan-Wanless neartriple each UNSAT; controls and partial matrices independently checked, six root obstructions independently checked, one representative confirmed by weaker TC pruning. This does NOT classify unrestricted triples and is NOT an independently proof-certified global theorem. No 100/100/100 witness.",
+  "current_math_result": "GLOBAL OPEN. E035: E034 6-row candidate has 120 uncovered pair edges and a 40-triangle symbol-only integral cover but 78 column-aware exact-cover constraints with zero candidates (40 pair,38 col-symbol), hence fixed prefix excluded. 1600 biased 4-row samples: 1210 unit UNSAT, 390 column-aware LP infeasible; no global inference. Hall 4 column-symbol demands vs only 3 pair neighbors verified independently. Four sparse exact integer duals of size3,5,7,9 verified by independent Node.js. Z3 complete three-square CNF n4 SAT independently verified; n6,n10 15s UNKNOWN. Valid partial-row replacement search raised column-fractional packing 54.9958 to58.3095<60; no order10 witness.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -199,5 +206,6 @@
     }
   ],
   "e034_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E034_REPORT.md",
-  "e034_drive_bundle": "https://drive.google.com/file/d/1rEuR0rz2m1YfLxVrTx91tqCZxPK5TOfb/view"
+  "e034_drive_bundle": "https://drive.google.com/file/d/1rEuR0rz2m1YfLxVrTx91tqCZxPK5TOfb/view",
+  "e035_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E035_REPORT.md"
 }
