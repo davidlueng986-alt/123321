@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "E024: transcribe and independently validate remaining six published Myrvold Appendix TRPs UW, WW, VX, UX, WX, XX; derive Z=P^-1 Q, verify exact 100-pair orthogonality, enumerate common transversals with independent 10! replay, attempt third-square exact cover only if >=10 transversals with full cell coverage. No inference beyond each fixed pair.",
-  "current_hypothesis": "H24-REPLAY-SIX-REMAINING-PUBLISHED-MYRVOLD-APPENDIX-PAIRS",
-  "last_experiment": "MOLS10-E023-SX-UU-APPENDIX-REPLAY",
+  "next_action": "E025: diversify beyond the eight specific source Appendix pairs; generate distinct Myrvold residual-type orthogonal pairs, especially WW; verify isotopy and search for >=10 common transversals with all 100 cells supported, then exact-cover third square. Avoid claiming family-wide exclusions.",
+  "current_hypothesis": "H25-DIVERSIFY-MYRVOLD-PAIR-FAMILIES-TRIPLE-AWARE",
+  "last_experiment": "MOLS10-E024-SIX-APPENDIX-FIXED-PAIR-REPLAY",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -57,7 +57,9 @@
     "E022: Egan fixed A, 1080 transversals; 114 unary-surviving roots; 1647 disjoint survivor pairs; pair-root C exact cover 45 SAT / 1602 exhaustive UNSAT / 0 UNKNOWN, independent SciPy/HiGHS MILP confirms all 1647. All pairs have full cell support, so support-only pruning is vacuous here.",
     "E022: 45 pair-SAT roots involve only 14 B-transversals whose union misses 12 cells [1,2,3,18,29,37,44,55,66,70,80,90]; independently verified fixed-Egan-A conditional exclusion; no unrestricted result.",
     "E023: source-audited Myrvold 4x4 row-compatibility enumeration: Z4 k=1,2,3,4 counts 16/48/32/0 vs V4 16/48/32/8; parity proof rules out Z4 for any four-white row, hence VX Z4 branch. For V4 each compatible two-white partial has unique virtual four-white completion (48/48). This is local restricted-family preprocessing, not an order10 triple result.",
-    "E023: primary EJC 2026 Appendix SX and UU 10x10 transversal-representation pairs independently transcribed. For each, Z=P^-1 Q and Q are exactly Latin and orthogonal overlay100. Independent DFS and full 10! permutation replay find ZERO common transversals for BOTH fixed pairs; each specific pair cannot extend to a triple. Does not exclude either family or unrestricted problem."
+    "E023: primary EJC 2026 Appendix SX and UU 10x10 transversal-representation pairs independently transcribed. For each, Z=P^-1 Q and Q are exactly Latin and orthogonal overlay100. Independent DFS and full 10! permutation replay find ZERO common transversals for BOTH fixed pairs; each specific pair cannot extend to a triple. Does not exclude either family or unrestricted problem.",
+    "E024: primary-source Appendix UW, UX, VX, WW, WX, XX P,Q each Latin; Z=P^-1 Q Latin and orthogonal to Q (100/100); common transversals exactly 0,0,0,1,0,0 by independent bitmask DFS and exhaustive 10! enumeration of each fixed pair. All six UNSAT_FIXED_PAIR only; combined with E023 SX/UU all eight specific published pairs excluded; NOT family-wide or unrestricted.",
+    "E024: WW only common transversal row-to-column [9,4,7,2,8,6,0,5,3,1]; GF4 16/16/16 positive control; source PDF direct download DNS failure, used PDF page screenshots/text; no DRAT/FRAT certificate."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
