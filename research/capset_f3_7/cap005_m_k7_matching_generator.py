@@ -6,6 +6,64 @@ from cap005_k6_symmetry_quotient import read_cap,generate_group,image,fiber
 HERE=Path(__file__).resolve().parent
 def third(a,b): return tuple((-x-y)%3 for x,y in zip(a,b))
 def enc(p): return ''.join(map(str,p))
+def maximum_matching(n,edges):
+    """Exact cardinality matching in a general undirected graph (Edmonds blossom).
+    Output is a witness only; independent checker re-verifies each chosen edge.
+    """
+    adj=[[] for _ in range(n)]
+    for i,j,_ in edges:
+        adj[i].append(j);adj[j].append(i)
+    for neighbors in adj:neighbors.sort()
+    mate=[-1]*n
+    def augment(root):
+        base=list(range(n));parent=[-1]*n;used=[False]*n
+        used[root]=True;queue=[root]
+        def lca(a,b):
+            seen=[False]*n
+            while True:
+                a=base[a];seen[a]=True
+                if mate[a]==-1:break
+                a=parent[mate[a]]
+            while True:
+                b=base[b]
+                if seen[b]:return b
+                b=parent[mate[b]]
+        def mark(v,b,child,blossom):
+            while base[v]!=b:
+                blossom[base[v]]=True
+                blossom[base[mate[v]]]=True
+                parent[v]=child
+                child=mate[v]
+                v=parent[mate[v]]
+        for v in queue:
+            for u in adj[v]:
+                if base[v]==base[u] or mate[v]==u:continue
+                if u==root or (mate[u]!=-1 and parent[mate[u]]!=-1):
+                    b=lca(v,u);blossom=[False]*n
+                    mark(v,b,u,blossom);mark(u,b,v,blossom)
+                    for i in range(n):
+                        if blossom[base[i]]:
+                            base[i]=b
+                            if not used[i]:
+                                used[i]=True;queue.append(i)
+                elif parent[u]==-1:
+                    parent[u]=v
+                    if mate[u]==-1:
+                        cur=u
+                        while cur!=-1:
+                            pv=parent[cur]
+                            nxt=mate[pv] if pv!=-1 else -1
+                            mate[cur]=pv
+                            if pv!=-1:mate[pv]=cur
+                            cur=nxt
+                        return True
+                    used[mate[u]]=True
+                    queue.append(mate[u])
+        return False
+    for i in range(n):
+        if mate[i]==-1:augment(i)
+    return [(i,mate[i]) for i in range(n) if mate[i]>i]
+
 def generate(prior_path,cap_path):
     B=read_cap(cap_path); G=generate_group(B)
     prior=json.loads(prior_path.read_text())
@@ -26,28 +84,15 @@ def generate(prior_path,cap_path):
         fixed={p for p in B if fiber(p) not in R}
         edges=[(i,j,third(E[i],E[j])) for i,j in itertools.combinations(range(N),2)
                if third(E[i],E[j]) in fixed]
-        deg=[0]*N
-        for i,j,_ in edges:deg[i]+=1;deg[j]+=1
-        best=[]
-        for mode in range(5):
-            if mode==0:ordered=sorted(edges,key=lambda e:-(deg[e[0]]+deg[e[1]]))
-            elif mode==1:ordered=sorted(edges,key=lambda e:deg[e[0]]+deg[e[1]])
-            elif mode==2:ordered=sorted(edges,key=lambda e:-deg[e[0]])
-            elif mode==3:ordered=sorted(edges,key=lambda e:deg[e[0]])
-            else:ordered=sorted(edges,key=lambda e:e[0]+e[1])
-            used=set();matching=[]
-            for i,j,z in ordered:
-                if i not in used and j not in used:
-                    matching.append((i,j,z));used.update((i,j))
-            if len(matching)>len(best):best=matching
-        if len(best)<N-16:continue
+        matching=maximum_matching(N,edges)
+        if len(matching)<N-16:continue
         orbit={image(T,g) for g in G}
         assert len(orbit)==row['orbit_size']
         certs.append({'fibers':list(T),'N':N,'orbit_size':len(orbit),
-                      'matching':[[enc(E[i]),enc(E[j]),enc(z)] for i,j,z in best[:N-16]]})
+                      'matching':[[enc(E[i]),enc(E[j]),enc(third(E[i],E[j]))] for i,j in matching[:N-16]]})
         hist[str(N)]=hist.get(str(N),0)+1
     n=sum(r['orbit_size'] for r in certs)
-    assert len(certs)==500 and n==7440,(len(certs),n)
+    assert len(certs)>=500 and n>=7440,(len(certs),n)
     return {'scope':'fixed 236 cap; exactly seven first-three-coordinate 4D fibers',
             'previous_excluded':863482,'new_excluded':n,'total_excluded':863482+n,
             'remaining_neighborhoods':888030-863482-n,'new_orbits':len(certs),

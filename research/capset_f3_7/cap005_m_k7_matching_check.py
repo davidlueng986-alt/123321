@@ -37,10 +37,12 @@ def verify(cert_path,prior_path,cap_path):
     reps={tuple(r['fibers']):r for r in prior['representatives']}
     assert len(reps)==1665
     data=json.loads(cert_path.read_text())
-    assert (data['new_orbits'],data['new_excluded'],data['total_excluded'],
-            data['remaining_neighborhoods'],data['remaining_orbits'])==(500,7440,870922,17108,1128)
+    assert data['new_orbits']>=500 and data['new_excluded']>=7440
+    assert data['total_excluded']==863482+data['new_excluded']
+    assert data['remaining_neighborhoods']==888030-data['total_excluded']
+    assert data['remaining_orbits']==1628-data['new_orbits']
     assert data['previous_excluded']==863482 and data['N_range']==[18,32]
-    assert len(data['certificates'])==500
+    assert len(data['certificates'])==data['new_orbits']
     G=maps();covered=set();checked=set();hist={}
     for row in data['certificates']:
         T=tuple(row['fibers'])
@@ -63,11 +65,12 @@ def verify(cert_path,prior_path,cap_path):
         orbit={tuple(sorted(g[i] for i in T)) for g in G}
         assert len(orbit)==row['orbit_size'] and not orbit.intersection(covered)
         covered.update(orbit);hist[str(N)]=hist.get(str(N),0)+1
-    assert len(covered)==7440 and len(checked)==500
+    assert len(covered)==data['new_excluded'] and len(checked)==data['new_orbits']
     assert hist==data['N_orbit_histogram']
-    assert 862906+576+7440+17108==888030
-    return {'status':'PASS_INDEPENDENT_EXACT_F3_MATCHING','certificates':500,
-            'newly_excluded':7440,'total_excluded':870922,'unresolved':17108,
+    assert 862906+576+len(covered)+data['remaining_neighborhoods']==888030
+    return {'status':'PASS_INDEPENDENT_EXACT_F3_MATCHING','certificates':len(checked),
+            'newly_excluded':len(covered),'total_excluded':data['total_excluded'],
+            'unresolved':data['remaining_neighborhoods'],
             'global_bound_improved':False}
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('certificate',type=Path)

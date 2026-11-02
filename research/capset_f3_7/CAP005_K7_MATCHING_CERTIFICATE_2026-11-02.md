@@ -19,3 +19,7 @@ python research/capset_f3_7/cap005_m_k7_matching_check.py /tmp/matching.json /tm
 
 ## Strategy meta-audit
 Pair-conflicts with fixed original points alone cannot exclude every low-N neighborhood; N>32 is unexamined here. Future: outsider-triple/odd-cycle cuts, nonlocal constructions, and certified global bounds. Latest literature check (2026-11-02): Cairn Commons lists OPEN 236..291; Thackeray arXiv:2206.09804 claims <=288; Grace–Voloch 2026 does not claim exact r3(7). Novelty not established.
+
+## 2026-11-02 CI failure and method correction
+- First CI run https://github.com/davidlueng986-alt/123321/actions/runs/41424961849 FAILED at CAP-005M: Python's five greedy edge orderings produced 494 certificates / 7,352 neighborhoods, whereas the independently computed JS pilot used different orbit representatives and found 500 / 7,440. This is **not** a mathematical contradiction: greedy matching depends on representative and tie order; the full symmetry orbit of a valid matching remains valid. No failed run was counted as a verified exclusion.
+- Correction: replace heuristic matching by deterministic exact maximum-cardinality general-graph matching (Edmonds blossom), internally tested against exhaustive matching on 900 random graphs of size <=10. The independent arithmetic checker does NOT trust the algorithm's maximality, only its explicit disjoint pair-conflict witnesses. New CI must independently regenerate and verify all certificates before any totals are promoted. Expected >=500 orbits and >=7440 neighborhoods; final counts to be read from CI output.

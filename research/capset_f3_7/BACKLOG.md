@@ -178,3 +178,7 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 ## CAP-005M (2026-11-02T09:57:58.759Z)
 - [LOCAL JS EXACT / CI PENDING] 500 N18..32 seven-fiber symmetry orbits, 7,440 neighborhoods, carry explicit vertex-disjoint fixed-point pair-conflict matchings. Expected 870,922 excluded / 17,108 unresolved. Confirm independent Python CI before promotion. See CAP005_K7_MATCHING_CERTIFICATE_2026-11-02.md.
 - [P0] Outsider-triple and odd-cycle/deletion-cover cuts for remaining low-N orbits; [P0] independent global certified upper bounds and nonlocal cap constructions. Fixed partition cannot settle r3(7). No novelty assertion.
+
+## CAP-005M corrective update (2026-11-02T10:02:52.469Z)
+- [FAILED CI 41424961849] Greedy Python yielded 494 / 7352 instead of JS 500 / 7440 because canonical orbit representatives and greedy tie orders differ. Do not promote prior expected totals.
+- [FIX / CI PENDING] Exact blossom matching replaces heuristic; arithmetic checker verifies only concrete disjoint fixed-original-point conflicts. Require new CI GREEN and actual counts before final state. No global bound.
