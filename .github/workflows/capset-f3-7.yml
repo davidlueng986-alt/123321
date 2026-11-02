@@ -13,6 +13,12 @@ on:
 permissions:
   contents: read
 
+# Avoid rerunning the full CPU-heavy verifier for every successive ledger commit.
+# Only the newest commit on this dedicated research branch needs full CI.
+concurrency:
+  group: capset-f3-7-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   verify:
     runs-on: ubuntu-latest
