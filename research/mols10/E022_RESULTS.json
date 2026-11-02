@@ -1,0 +1,103 @@
+{
+  "schema": "MOLS10-E022-summary-v1",
+  "timestamp_utc": "2026-11-02T01:49:43Z",
+  "fixed_first_square": "Egan-Wanless published A",
+  "input_sha256": "965a201951eb261b3ec9c8575163e8d7a6f70e384fd90699a77bc59a1b0ebc33",
+  "first_A_transversals": 1080,
+  "unary_root_count": 1080,
+  "unary_sat": 114,
+  "unary_unsat_exhaustive": 966,
+  "unary_unknown": 0,
+  "disjoint_unary_pairs": 1647,
+  "complete_pair_root_DFS": {
+    "SAT": 45,
+    "UNSAT_EXHAUSTIVE": 1602,
+    "UNKNOWN_BUDGET": 0,
+    "cap_per_pair": 20000,
+    "max_nodes_per_pair": 78,
+    "total_nodes": 38318,
+    "elapsed_seconds": 9.881
+  },
+  "independent_full_MILP": {
+    "SAT": 45,
+    "INFEASIBLE": 1602,
+    "UNKNOWN": 0,
+    "all_1647_agree": true,
+    "elapsed_seconds": 12.178
+  },
+  "pairwise_C_class_cell_support": "100/100 for every one of 1647 pairs; support alone excludes none",
+  "SAT_pair_supported_B_roots": [
+    69,
+    88,
+    94,
+    106,
+    124,
+    125,
+    168,
+    197,
+    632,
+    696,
+    832,
+    873,
+    979,
+    1018
+  ],
+  "SAT_pair_supported_B_roots_uncovered_cells": [
+    1,
+    2,
+    3,
+    18,
+    29,
+    37,
+    44,
+    55,
+    66,
+    70,
+    80,
+    90
+  ],
+  "example_SAT_pair": {
+    "roots": [
+      69,
+      632
+    ],
+    "C_exact_cover_transversal_indices": [
+      826,
+      380,
+      714,
+      920,
+      0,
+      309,
+      446,
+      616,
+      993,
+      1029
+    ]
+  },
+  "example_UNSAT_pair": {
+    "roots": [
+      30,
+      714
+    ],
+    "status": "UNSAT_EXHAUSTIVE"
+  },
+  "all_45_SAT_witnesses_replayed": true,
+  "GF4_positive_control": "16/16/16; all six B-root pairs C-completable",
+  "result": "COMPUTATIONAL_EXHAUSTIVE_FIXED_EGAN_A_EXCLUSION; no unrestricted conclusion",
+  "failures": [
+    "100-pair bounded pilot all UNSAT; not extrapolated before complete run",
+    "All 1647 pairs passed cell-support screen; previous support-only obstruction was vacuous here"
+  ],
+  "limitations": [
+    "No DRAT/FRAT proof certificates",
+    "No unrestricted symmetry coverage",
+    "All 1647 MILP statuses are complete for fixed-A pair-root instances, not unrestricted problem",
+    "Research novelty relative to published literature unestablished"
+  ],
+  "reproduce": [
+    "python E022_replay.py --cap 20000 --out E022_REPLAY.json",
+    "python E022_independent_milp.py --input E022_REPLAY.json --all --output E022_MILP_REPLAY.json",
+    "python -m unittest -v test_E022_pair_exact_cover",
+    "python E022_positive_control.py"
+  ]
+}
