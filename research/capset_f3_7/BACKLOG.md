@@ -1,3 +1,7 @@
+## CAP-029 CI regression follow-up (2026-11-02 ~23:58 UTC)
+- [CI FAIL] 41549068067: repaired 19-point witness passes all six CAP-028 tests, but new extension-census regression test failed because check() asserts on invalid candidate instead of returning False. This is a test harness bug, not cap failure.
+- [LOCAL FIX] Add admissible() catching AssertionError for invalid additions. Check next CI on the exact new commit before declaring success.
+
 ## CAP-029 CI failure referee and exact 4D witness repair (2026-11-02 23:52 UTC)
 - [CRITICAL VERIFIED] CAP-028 CI 41542279551 **FAILED**: claimed W766 was 17 points (7,5,5), not 19 (7,6,6). Never promote failed CI as evidence.
 - [LOCAL EXACT PASS / NEW CI PENDING] Enumerated all 81 F3^4 points: five single additions, three compatible pairs, unique balanced (7,6,6) pair = (1,1,2,0)+(2,1,2,1). Independent direct 1080-line check validates repaired 19-point cap and all 12 local profiles.

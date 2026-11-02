@@ -70,8 +70,13 @@ class TestCAP028(unittest.TestCase):
   seed=W766[:-2]
   self.assertEqual([sum(x[0]==k for x in seed) for k in range(3)],[7,5,5])
   self.assertEqual(check(seed,4),17)
-  possible=[x for x in P if tuple(x) not in set(map(tuple,seed)) and check(seed+[x],4)==18]
-  pairs=[(a,b) for a,b in combinations(possible,2) if check(seed+[a,b],4)==19]
+  def admissible(points):
+   try:
+    return check(points,4)==len(points)
+   except AssertionError:
+    return False
+  possible=[x for x in P if tuple(x) not in set(map(tuple,seed)) and admissible(seed+[x])]
+  pairs=[(a,b) for a,b in combinations(possible,2) if admissible(seed+[a,b])]
   self.assertEqual(len(possible),5)
   self.assertEqual(len(pairs),3)
   balanced=[(a,b) for a,b in pairs if [sum(x[0]==k for x in seed+[a,b]) for k in range(3)]==[7,6,6]]
