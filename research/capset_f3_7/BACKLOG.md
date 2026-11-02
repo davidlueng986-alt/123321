@@ -194,3 +194,12 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 
 ## CAP-005M CI final (2026-11-02T10:08:15.552Z) — merged after concurrent CAP-006A
 - [DONE / CI GREEN / RESTRICTED ONLY] https://github.com/davidlueng986-alt/123321/actions/runs/41425618301 verified 524 exact pair-conflict matching certificates; 7,792 additional seven-fiber neighborhoods excluded. Cumulative 871,274/888,030; 16,756 remain in 1,104 orbits. Artifact https://github.com/davidlueng986-alt/123321/actions/runs/41425618301/artifacts/13132211988 . Earlier greedy CI failure preserved. Keep CAP-006A partition-adaptive/global direction prioritized; no global r3(7) bound.
+
+## CAP-007G/CAP-006B batched first-principles pivot (2026-11-02T10:41:11.123Z)
+- [LOCAL CODE + EXACT TESTS / CI PENDING] Globally exhaustive target237 SAT generator: 2187 point vars, 796797 line clauses, 490353 sequential counter aux, 1775353 clauses total with sound affine basis 8 fixed,28 forced zeros. DIMACS generated locally and SHA256 recorded. SAT status UNKNOWN, no UNSAT certificate.
+- [EXACT DIAGNOSTIC / CI PENDING] 27-fiber count-only LP/ILP relaxation optimal=333, witnessed and analytically upper-bounded via 39-plane incidence identity modulo9. Too weak compared to 291; never spend major cycles adding only slice-size quotas.
+- [LOCAL PILOT / CI PENDING] 320 matched deterministic 8-fiber release T across Q2884/2096/3186, max N(T)=124/2/45; no candidate >=237. Most promising original partition T=(0,1,5,6,8,11,18,19) exact MILP reports optimum236 and LP fractional110.5 for region of 85 baseline points. Solver status is NON-CERTIFYING until a separate exact proof.
+- [P0] CAP-007H global slice cross-sumset SAT/ILP cuts, conditional on genuine 5D/6D cap classification and validated statement equivalence. Avoid fixed 112+112+12.
+- [P0] CAP-006C independent, nonlocal, parameterized construction families + exact witness checks.
+- [P1] CAP-008B proof-logged SAT, affine frame symmetry and independent checker mutation tests; benchmark 4D/5D known optima before global claims.
+- [P2] Only pursue 8+fiber reconstruction if certificate strengths improve; raw N(T) large is meaningless due compatibility/integrality gap. Do not claim novelty or solve r3(7) prematurely.

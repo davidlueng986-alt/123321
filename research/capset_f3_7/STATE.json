@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-006A: fixed first-three-coordinate projection is nonrepresentative: 35 coordinate rank3 maps split into Q=2884 (15) vs Q=2290 (20); 512 deterministic full-rank sampled maps span Q=2096..3186. Partition-adaptive search and global bounds prioritized. CI pending.",
-  "next_experiment": "Confirm CAP-006A exact projection audit CI; benchmark matched-budget multi-fiber searches on inequivalent rank3 projections and establish globally exhaustive 6D-slice model. Independently confirm CAP-005M CI before accepting its new exclusions.",
-  "last_run_id": "CAP-006A-LOCAL-2026-11-02",
-  "last_run_result": "EXACT_JS_35_COORDINATE_512_SEEDED_PROJECTIONS_CI_PENDING",
+  "current_hypothesis": "CAP-007G: fully global n7 target237 492540-var 1775353-clause CNF; exact quotient count-only relaxation optimum333 (too weak), and 320 matched 8-fiber tests expose huge outsider-compatibility gaps. Prioritize proof-logged global structure and nonlocal generators.",
+  "next_experiment": "CAP-007H cross-slice convolution and proof-logged SAT cuts (no fixed 112+112+12 profile); CAP-006C independently generated nonlocal cap families; CAP-008B global symmetry/certificate audit.",
+  "last_run_id": "CAP-007G-CAP-006B-2026-11-02",
+  "last_run_result": "LOCAL_EXACT_CNF_GENERATED_N7_237_TESTS_PASS_QUOTIENT_RELAXATION_EXACT_333_PILOT_8FIBER_SOLVER_ONLY_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -62,7 +62,9 @@
     "CAP-005L-CI",
     "CAP-005M-LOCAL",
     "CAP-006A-LOCAL",
-    "CAP-005M-CI"
+    "CAP-005M-CI",
+    "CAP-007G-LOCAL",
+    "CAP-006B-PILOT"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41415696843",
   "baseline_secant_audit": {
@@ -84,7 +86,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T10:08:15.552Z",
+  "last_updated_utc": "2026-11-02T10:41:11.123Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -584,6 +586,58 @@
     "novelty_established": false,
     "report": "research/capset_f3_7/CAP006_FIRST_PRINCIPLES_AUDIT_2026-11-02.md",
     "script": "research/capset_f3_7/cap006_projection_audit.py",
+    "global_bound_improved": false
+  },
+  "cap007_global_sat": {
+    "target": 237,
+    "points": 2187,
+    "lines": 796797,
+    "aux_variables": 490353,
+    "total_variables": 492540,
+    "clauses": 1775353,
+    "affine_basis_fixed_ones": 8,
+    "forced_zeros": 28,
+    "cnf_sha256_local": "eddbfcdb6dd1380e59dcafd83cc701a058a8ee8acbae5073d3b4ddd03bc95d12",
+    "cnf_local_cpu_seconds": 5.236,
+    "known236_witness_satisfies_target236": true,
+    "known236_witness_fails_target237": true,
+    "sat_status": "UNKNOWN",
+    "status": "LOCAL_TESTED_REPO_CI_PENDING",
+    "script": "research/capset_f3_7/cap007_global_exact_model.py",
+    "global_bound_improved": false
+  },
+  "cap007_quotient_relaxation": {
+    "exact_counts_only_optimum": 333,
+    "solution_is_cap": false,
+    "inequalities": "27 fibers<=20; 117 quotient lines<=45; 39 quotient planes<=112",
+    "proof": "mod9 incidence identity excludes 334,335,336; explicit feasible occupancy333",
+    "status": "EXACT_INTEGER_MATH_LOCAL_CI_PENDING",
+    "global_bound_improved": false
+  },
+  "cap006b_partition_pilot": {
+    "sample_size": 320,
+    "seed": 20261102,
+    "released_fibers": 8,
+    "matrices_Q": [
+      2884,
+      2096,
+      3186
+    ],
+    "N_max": [
+      124,
+      2,
+      45
+    ],
+    "N_ge_17": [
+      37,
+      0,
+      19
+    ],
+    "solver_reported_best_8fiber_optimum": 236,
+    "solver_independent_optimum_certificate": false,
+    "lp_relaxation_region_upper": 110.5,
+    "actual_region_optimum_solver": 85,
+    "status": "EXPLORATORY_LOCAL_SEEDED_CI_PENDING",
     "global_bound_improved": false
   }
 }
