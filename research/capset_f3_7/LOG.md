@@ -136,3 +136,9 @@ Status: VERIFIED COMPUTATION, not a novel record.
 - Constructed exact 7D triple constraints for each of these 312 released sets with other 22 fibers frozen; SciPy HiGHS proposed LP dual multipliers. Converted every nonzero dual to Fraction denominator<=1000 and independently checked y,z>=0, A^T y+z>=1, and exact b^T y+sum(z)<=original released count. All 312 PASS locally (~20s CPU).
 - Therefore full restricted <=5-fiber optimum=236, **not** a global r3(7) upper bound. Source cap005_k5_rational_duals.py, report CAP005_K5_RATIONAL_DUAL_CERTIFICATE_2026-11-02.md. Command: python research/capset_f3_7/cap005_k5_rational_duals.py --out /tmp/cap005_k5_rational_duals.json (SciPy required). CI artifact of 312 rational duals pending.
 - No GPU, paid compute, randomness, >=237 witness, or global improvement. Novelty unverified. Meta-audit: k5 necessary-only gate looked inconclusive, but rational LP duals close it; move to >=6 or nonlocal/global strategies.
+
+## 2026-11-02 | CAP-005C CI confirmation — SUCCESS, 312 rational duals retained
+- GitHub Actions https://github.com/davidlueng986-alt/123321/actions/runs/41365141220 SUCCESS for commit 515e1e7d4585855d7a3d1a1cdcf660708e5b235d.
+- CPU-only workflow installed SciPy 1.16.3, recomputed all 80,730 five-fiber release sets and independently checked the exact Fraction dual inequalities for each of the 312 LP subproblems. No floating-point LP status is accepted as proof without exact dual verification.
+- Artifact of all 312 duals: https://github.com/davidlueng986-alt/123321/actions/runs/41365141220/artifacts/13107126157 (GitHub Actions retention 30 days). The generator and exact checker remain durable in source code after artifact expiry.
+- Restricted optimum 236 for <=5 coordinate 4D-fiber edits. No >=237 witness, no global upper bound improvement, no literature novelty claim. Continue campaign.

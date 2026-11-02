@@ -13,7 +13,7 @@
   "current_hypothesis": "CAP-005C LOCAL EXACT RATIONAL DUALS: all 80,730 five-fiber releases excluded from improving classical 236; 80,418 via 10-deletion outsider gate and 312 via exact-rational verified LP duals. Restricted only; CI pending.",
   "next_experiment": "Confirm CAP-005C CI and retain rational dual JSON artifact; then consider >=6 released fibers, non-coordinate/nonlocal occupancy-changing constructions, and independently certified global upper bounds.",
   "last_run_id": "CAP-005C-2026-11-01-k5-rational-duals",
-  "last_run_result": "LOCAL_EXACT_FIVE_FIBER_NO_IMPROVEMENT_CI_PENDING",
+  "last_run_result": "EXACT_FIVE_FIBER_RESTRICTED_OPTIMUM_236_CI_GREEN",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -41,7 +41,8 @@
     "CAP-004G-CI",
     "CAP-005A-LOCAL",
     "CAP-005B-CI",
-    "CAP-005C-LOCAL"
+    "CAP-005C-LOCAL",
+    "CAP-005C-CI"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
   "baseline_secant_audit": {
@@ -63,7 +64,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T00:02:00Z",
+  "last_updated_utc": "2026-11-02T00:06:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -314,10 +315,12 @@
     "elementary_exclusions": 80418,
     "exact_rational_duals": 312,
     "restricted_optimum": 236,
-    "status": "LOCAL_EXACT_RATIONAL_VERIFICATION_CI_PENDING",
+    "status": "VERIFIED_EXACT_RATIONAL_CERTIFICATE_CI_GREEN",
     "script": "research/capset_f3_7/cap005_k5_rational_duals.py",
     "report": "research/capset_f3_7/CAP005_K5_RATIONAL_DUAL_CERTIFICATE_2026-11-02.md",
     "global_bound_improved": false,
-    "novelty_established": false
+    "novelty_established": false,
+    "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41365141220",
+    "artifact": "https://github.com/davidlueng986-alt/123321/actions/runs/41365141220/artifacts/13107126157"
   }
 }

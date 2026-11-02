@@ -1,3 +1,7 @@
+## CAP-005C CI confirmation (2026-11-02 00:06 UTC)
+- CAP-005C [DONE / CI GREEN https://github.com/davidlueng986-alt/123321/actions/runs/41365141220] All <=5 coordinate 4D-fiber reconstructions rigorously excluded from improving 236. 312 exact-rational dual certificates archived in https://github.com/davidlueng986-alt/123321/actions/runs/41365141220/artifacts/13107126157. This is a local restricted theorem, not global.
+- Next CAP-005D [P0] At least six released 4D fibers, nonlocal occupancy-changing templates, or global structural inequalities; maintain rigorous certificates and independent checker.
+
 ## CAP-005C update (2026-11-02 00:02 UTC)
 - CAP-005B [CI GREEN run 41364749101] Five-fiber necessary-only gate exactly reproduced; it did not by itself exclude 237.
 - CAP-005C [LOCAL EXACT RATIONAL / CI PENDING] All 80,730 five-fiber edit neighborhoods excluded: 80,418 by <=9 outsiders vs >=10 deletions; 312 by independently rational-checked LP duals for full triple constraints. Restricted <=5-fiber optimum=236, not global. See cap005_k5_rational_duals.py and CAP005_K5_RATIONAL_DUAL_CERTIFICATE_2026-11-02.md; CI should publish 312 duals.
