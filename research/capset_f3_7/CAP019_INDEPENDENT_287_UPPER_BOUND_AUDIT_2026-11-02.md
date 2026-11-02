@@ -21,7 +21,7 @@ Complete two largest slices S₁′,S₂′ of sizes 112−d₁ and 112−d₂ t
 ```
 r(z) = 16 − 16·1[z=0] + 4·(1_S1(z)+1_S2(z)) + 3m(z) − m*
 ```
-where r(z)=#{(x,y)∈S₁×S₂:x+y=z}. This is an identity, not an assumption about an arbitrary orientation. For a point z in the third slice, absence of cross-slice triples after deleting d points implies r(z)≤d, since each deleted point removes at most one representation of any fixed z. For z≠0,
+where r(z)=#{(x,y)∈S₁×S₂:x+y=z}. This is an identity, not an assumption about an arbitrary orientation. For a point z in the third slice, absence of cross-slice triples after deleting d points implies r(z)≤d, since each deleted point removes at most one representation of any fixed z. **The exceptional z=0 must be treated separately:** r(0)=2m*. If 0≤m*≤2, then for z≠0, r(z)≥16−m*≥14>d, so at most z=0 can survive and c≤1. If 3≤m*≤55, r(0)=2m*>d and thus every surviving third-slice point is nonzero; for all such z,
 ```
 m(z) ≤ (m*−16+d)/3.
 ```
@@ -30,7 +30,7 @@ For each common high-frequency direction u, both completed 112-caps have slice c
 m* (c−44−d) ≤ c(m*−16+d)/3,
 c ≤ floor(3m*(44+d)/(2m*+16−d)).
 ```
-If m*=0, r(z)≥16 for z≠0 and at most the single z=0 can be unblocked when d≤4, so c≤1. **Important deleted-point edge case:** if m*=56, the centered caps coincide; their full convolution has r(z)=1 on the 112 cap points, r(z)=20 on the other 616 nonzero points and r(0)=112. Although r(z)>0 everywhere *before* deletion, deleting up to d≤4 points can free at most d of the 112 singleton-representation points (each is a unique diagonal pair), so c≤d. Merely saying the full convolution has no holes is insufficient when d>0. For 1≤m*≤55, the double-count inequality applies and gives the **universal conditional** bound
+For m*=0,1,2, the exceptional z=0 argument above yields c≤1. **Important deleted-point edge case:** if m*=56, the centered caps coincide; their full convolution has r(z)=1 on the 112 cap points, r(z)=20 on the other 616 nonzero points and r(0)=112. Although r(z)>0 everywhere *before* deletion, deleting up to d≤4 points can free at most d of the 112 singleton-representation points (each is a unique diagonal pair), so c≤d. Merely saying the full convolution has no holes is insufficient when d>0. For 3≤m*≤55, the double-count inequality applies and gives the **universal conditional** bound
 ```
 c ≤ floor(165*(44+d)/(126−d)),  d=0..4,
 values = [57,59,61,63,64].
