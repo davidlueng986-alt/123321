@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "E023: retrieve eight Myrvold residual pair-pattern examples from primary-source supplementary material, independently validate exact arrays and test third-square fixed-pair exact-cover; avoid repeating Egan/Parker fixed-A searches. Consider certificate-producing SAT for E022.",
-  "current_hypothesis": "H23-MYRVOLD-EIGHT-THIRD-SQUARE-EXTENSION-OR-CERTIFIED-SAT",
-  "last_experiment": "MOLS10-E022",
+  "next_action": "E024: obtain a source-verified decoded SAT orthogonal pair from one of Myrvold's eight residual types; independently convert/validate arrays, enumerate common transversals, and exact-cover test third-square extension. If pair generation blocked, certify VX Z4 UNSAT preprocessing; never claim global resolution.",
+  "current_hypothesis": "H24-MYRVOLD-RESIDUAL-EIGHT-SOURCE-VERIFIED-PAIR-EXTENSION",
+  "last_experiment": "MOLS10-E023",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -55,7 +55,8 @@
     "E021: Egan published A unary screen 966 UNSAT/114 SAT/0 UNKNOWN; SAT roots cover all 100 cells, so this unary obstruction does not exclude Egan A (negative result).",
     "E021: GF4 16/16/16 positive control and 8/8 unary roots SAT; initial list-filtering timeout and CLI TypeError preserved in E021_REPORT.md.",
     "E022: Egan fixed A, 1080 transversals; 114 unary-surviving roots; 1647 disjoint survivor pairs; pair-root C exact cover 45 SAT / 1602 exhaustive UNSAT / 0 UNKNOWN, independent SciPy/HiGHS MILP confirms all 1647. All pairs have full cell support, so support-only pruning is vacuous here.",
-    "E022: 45 pair-SAT roots involve only 14 B-transversals whose union misses 12 cells [1,2,3,18,29,37,44,55,66,70,80,90]; independently verified fixed-Egan-A conditional exclusion; no unrestricted result."
+    "E022: 45 pair-SAT roots involve only 14 B-transversals whose union misses 12 cells [1,2,3,18,29,37,44,55,66,70,80,90]; independently verified fixed-Egan-A conditional exclusion; no unrestricted result.",
+    "E023: source-audited Myrvold 4x4 row-compatibility enumeration: Z4 k=1,2,3,4 counts 16/48/32/0 vs V4 16/48/32/8; parity proof rules out Z4 for any four-white row, hence VX Z4 branch. For V4 each compatible two-white partial has unique virtual four-white completion (48/48). This is local restricted-family preprocessing, not an order10 triple result."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -95,13 +96,15 @@
     "research/mols10/E020_unary_exact_cover.py",
     "research/mols10/test_E020_unary_exact_cover.py",
     "research/mols10/E020_milp_replay.py",
-    "research/mols10/E020_RESULTS.json"
+    "research/mols10/E020_RESULTS.json",
+    "research/mols10/E023_subsquare_audit.py",
+    "research/mols10/E023_RESULTS.json"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-01T23:45:00Z",
+  "last_run_utc": "2026-11-02T02:49:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -114,12 +117,13 @@
     "research/mols10/E017_REPORT.md",
     "research/mols10/E018_REPORT.md",
     "research/mols10/E019_REPORT.md",
-    "research/mols10/E020_REPORT.md"
+    "research/mols10/E020_REPORT.md",
+    "research/mols10/E023_REPORT.md"
   ],
-  "last_run_date": "2026-11-01",
-  "limitations": "Global 3-MOLS(10) OPEN. E020 1076/1104 exhaustive unary exclusions and 13-cell uncovered certificate concern only Parker A. Independent 10! enumerator and six independent MILP spot checks, but no external proof certificate for all 1104 roots; GF4 positive control. No global 100/100/100 witness or unrestricted nonexistence proof.",
+  "last_run_date": "2026-11-02",
+  "limitations": "Global 3-MOLS(10) OPEN. E023 is a finite 4x4 local compatibility lemma for Myrvold residual types, NOT a SAT solve of a residual order10 pair, no 100/100/100 witness or unrestricted certificate. Source clone failed DNS but connected GitHub read succeeded. No CI yet for E023.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
-  "external_status_review": "2026-11-02 ~01:48 UTC: fresh primary EJC 2026-02-13 and arXiv 2605.02132v2 (2026-07-04) / 2509.09633 reviewed; no independently verifiable unrestricted 3-MOLS(10) solution found; search absence not proof.",
+  "external_status_review": "2026-11-02 ~02:47 UTC: checked Bright–Keita–Stevens EJC 2026-02-13, Barnoff–Bright arXiv:2605.02132v2 2026-07-04, and targeted fresh searches. No independently verifiable unrestricted solution found; search absence not proof.",
   "current_math_result": {
     "egan_fixed_A_C_optimum": 91,
     "egan_fixed_A_B_optimum": 91,
@@ -143,8 +147,11 @@
     "e022_egan_pair_root_unsat": 1602,
     "e022_egan_pair_root_unknown": 0,
     "e022_egan_pair_root_supported_B_roots": 14,
-    "e022_egan_pair_root_uncovered_cells": 12
+    "e022_egan_pair_root_uncovered_cells": 12,
+    "e023_vx_z4_local_obstruction": true,
+    "e023_v4_two_white_unique_completion": 48
   },
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
-  "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md"
+  "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
+  "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md"
 }
