@@ -1,0 +1,71 @@
+{
+  "iteration": "E029",
+  "timestamp_utc": "2026-11-02T09:04:00Z",
+  "status": "OPEN",
+  "scope": "Two SPECIFIC Egan-Wanless near-triple Q matrices B and C, not isotopy classes or unrestricted 3-MOLS(10).",
+  "input": "research/mols10/near_triple.json",
+  "method": "Complete exact-cover enumeration of Q-transversal partitions into ten classes modulo mate symbol relabeling, independently reproduced by mutable Algorithm X; independent full 10! common-transversal replay for all mates.",
+  "results": {
+    "B": {
+      "q_sha256": "e01307d9ed5e94c91312b3d287bee72cc6e407fde9a5ee66b6bc59465f3f8852",
+      "transversals": 932,
+      "normalized_mates": 5,
+      "bitset_nodes": 108830,
+      "independent_nodes": 64582,
+      "common_counts": [
+        0,
+        14,
+        2,
+        0,
+        0
+      ],
+      "common_support": [
+        0,
+        88,
+        19,
+        0,
+        0
+      ],
+      "published_A_recovered": 1
+    },
+    "C": {
+      "q_sha256": "76604806005b773c778935791625e8127677e6c13cf8ae57d57245bfd55eb59f",
+      "transversals": 864,
+      "normalized_mates": 4,
+      "bitset_nodes": 59173,
+      "independent_nodes": 36254,
+      "common_counts": [
+        0,
+        0,
+        7,
+        0
+      ],
+      "common_support": [
+        0,
+        0,
+        64,
+        0
+      ],
+      "published_A_recovered": 1
+    }
+  },
+  "totals": {
+    "mates": 9,
+    "independent_permutations_tested": 32659200,
+    "all_mates_verified_latin_orthogonal": true,
+    "all_common_transversal_counts_less_than_10": true,
+    "complete_fixed_Q": true
+  },
+  "evidence": {
+    "reproduce": "cd research/mols10 && python E029_Egan_BC_fixed_Q.py",
+    "local_primary_output_sha256": "bb64706bb4a1c99a3505662ad38811ea8379ace5784ccee66c4cdd06e75ab43f",
+    "local_independent_output_sha256": "b307ffec28f050325022221efbe2aef9d6afdbff750c41b1c6a52583d56926a9",
+    "local_cpp_permutation_output_sha256": "8dec2a57afa6d26173b63548bd6518d3afe4cc28181ca948a4b9aebc6ef55bb7",
+    "note": "Local pilot used self-contained Python primary/independent scripts and a separate compiled C++ full-permutation replay. The GitHub wrapper reuses existing committed E027/E028 independently implemented engines and reads canonical input."
+  },
+  "failures": [
+    "First attempt to generate C++ replay failed ModuleNotFoundError (missing /mnt/data in sys.path); no results accepted. Fixed import and reran all 9 mates successfully.",
+    "No SAT/DRAT proof, no isotopy classification, no unrestricted coverage, no triple."
+  ],
+  "next_action": "Generate nonisotopic new Q via SAT encoding / symmetry-blocking; avoid revisiting Egan B,C and eight published BKS Q. For each verified orthogonal pair, compute exact common transversals and cell support, and complete exact cover if >=10."
+}
