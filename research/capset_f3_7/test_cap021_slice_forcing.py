@@ -25,6 +25,16 @@ FORMAL_MODELS = {
           (96,96,95):896},
 }
 
+# A stronger negative control: a formal 287-direction histogram matching
+# BOTH global S2/S3 moments and the projective value counts of an actual
+# rank-2 quadratic form Q=x1^2+x2^2 on F3^7: (121,486,486).
+# It is NOT a point-set witness and need not satisfy per-direction geometry.
+GAUSSIAN_RANK2_MODEL = {
+    (112,109,66):33,(111,109,67):109,(100,95,92):3,
+    (98,98,91):13,(98,95,94):2,(97,96,94):344,
+    (97,95,95):468,(96,96,95):121,
+}
+
 def moments(m):
     """Projective-normal sums of 1, S2, S3 for an m-point cap in F3^7."""
     return (N,364*m*m+729*m,
@@ -82,6 +92,18 @@ class TestCAP021(unittest.TestCase):
         self.assertLess(82*s3(t)-22401*s2(t)+399662803,0)
         self.assertIn(t,list(profiles(287,110,False)))
         self.assertNotIn(t,list(profiles(287,110,True)))
+    def test_rank2_gaussian_aggregate_negative_control(self):
+        check_formal_model(287,GAUSSIAN_RANK2_MODEL,112)
+        q=[0,0,0]
+        for t,n in GAUSSIAN_RANK2_MODEL.items():
+            residue_counts=[sum(x%3==r for x in t) for r in range(3)]
+            self.assertEqual(sorted(residue_counts),[0,1,2])
+            q[residue_counts.index(2)]+=n
+            self.assertFalse(t[0]>=110 and t[1]>=110)
+        self.assertEqual(q,[121,486,486])
+        # Q=x1^2+x2^2: zero count 3^5, each nonzero value 4*3^5,
+        # projectivize by dividing nonzero vectors by 2.
+        self.assertEqual(((3**5-1)//2,2*3**5,2*3**5),tuple(q))
     def test_no_claim_below_286(self):
         self.assertEqual(max(t[0] for t in FORMAL_MODELS[285]),109)
 
