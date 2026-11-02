@@ -1,0 +1,99 @@
+{
+  "schema": "MOLS10-E021-summary-v1",
+  "timestamp_utc": "2026-11-02T00:53:33Z",
+  "source_inputs": [
+    "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E020_unary_exact_cover.py",
+    "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/near_triple.json"
+  ],
+  "independent_algorithm": "all n! permutations; MRV exact-cover over remaining cells; memoized failed remaining-cell states; independently computed overlap bitsets",
+  "node_cap_per_root": 200000,
+  "Parker_A": {
+    "sha256": "1694eda37452b6709d8f8d77d8dfcddae08e18c6a94e4aabc102bec6323c1c77",
+    "transversals": 1104,
+    "counts": {
+      "SAT": 28,
+      "UNSAT_EXHAUSTIVE": 1076,
+      "UNKNOWN_BUDGET": 0
+    },
+    "survivors": [
+      26,
+      29,
+      50,
+      55,
+      165,
+      167,
+      195,
+      202,
+      380,
+      395,
+      438,
+      453,
+      512,
+      531,
+      547,
+      563,
+      577,
+      643,
+      663,
+      727,
+      844,
+      850,
+      853,
+      915,
+      924,
+      950,
+      963,
+      1060
+    ],
+    "uncovered_cells": [
+      2,
+      13,
+      24,
+      35,
+      46,
+      50,
+      61,
+      77,
+      78,
+      79,
+      88,
+      97,
+      98
+    ],
+    "nodes": 1369521,
+    "memo_states": 1369241,
+    "max_nodes_per_root": 4853,
+    "elapsed_s": 14.89,
+    "agrees_with_E020": true,
+    "conclusion": "fixed-A exclusion only"
+  },
+  "Egan_A": {
+    "sha256": "965a201951eb261b3ec9c8575163e8d7a6f70e384fd90699a77bc59a1b0ebc33",
+    "transversals": 1080,
+    "counts": {
+      "SAT": 114,
+      "UNSAT_EXHAUSTIVE": 966,
+      "UNKNOWN_BUDGET": 0
+    },
+    "uncovered_cells": [],
+    "nodes": 690262,
+    "memo_states": 689122,
+    "max_nodes_per_root": 1380,
+    "elapsed_s": 9.601,
+    "conclusion": "unary coverage obstruction does not exclude Egan A; does not imply triple exists"
+  },
+  "GF4": {
+    "pairwise_overlays": [
+      16,
+      16,
+      16
+    ],
+    "unary_roots_SAT": 8,
+    "unary_roots_UNSAT": 0
+  },
+  "failures": [
+    "Initial independent implementation used per-node Python lists and exceeded 120-second wall limit; no UNSAT conclusion from timeout.",
+    "After generalizing n, CLI positional audit(args.cap) passed integer as square and raised TypeError; fixed to audit(cap=args.cap) and reran."
+  ],
+  "uncertainty": "No SAT/DRAT/FRAT proof certificate, no unrestricted symmetry coverage, no general 3-MOLS(10) resolution."
+}
