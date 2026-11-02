@@ -11,7 +11,7 @@
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
   "current_hypothesis": "CAP-014-PSD exact restricted 425/576 spectral certificate for classical 112+112 slices; no global 237 exclusion. CAP-011A sign bug still open in Drive source; global no-112 hyperplane branch remains unaddressed.",
-  "next_experiment": "Hostile referee CAP-017B/Thackeray; codim-2 incidence and Gaussian quadratic-residue constraints for 287 cap with 111 slice; prove full global bound or find witness.",
+  "next_experiment": "For hypothetical 287 with forced >=111 section, combine codim-2 geometry and per-direction quadratic form compatibility; aggregate S2/S3 plus rank2 spectrum has explicit false model; hostile referee CAP017B.",
   "last_run_id": "CAP-021-SLICE-FORCING-2026-11-02",
   "last_run_result": "GLOBAL_286_REQUIRES_110_SLICE_UNCONDITIONAL_287_REQUIRES_111_CONDITIONAL_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
@@ -1066,7 +1066,7 @@
   },
   "cap021_slice_forcing_ladder": {
     "date_utc": "2026-11-02",
-    "status": "LOCAL_STDLIB_5_OF_5_PASS_INDEPENDENT_JS_EXACT_PASS_GITHUB_CI_PENDING",
+    "status": "LOCAL_STDLIB_6_OF_6_PASS_INDEPENDENT_JS_EXACT_PASS_GITHUB_CI_PENDING",
     "scope": "Global hyperplane profile moments; not a new r3(7) upper bound",
     "unconditional_286_requires_section_at_least": 110,
     "conditional_287_requires_section_at_least": 111,
@@ -1116,7 +1116,7 @@
       "ambient_covered": 2187,
       "source_blob": "025a93713119d111db50b54b1d1238b97864c013"
     },
-    "local_python_tests": "PASS_5_OF_5_0.003S",
+    "local_python_tests": "PASS_6_OF_6_0.003S",
     "independent_javascript": "EXACT_PASS",
     "random_seed": null,
     "gpu_used": false,
@@ -1128,6 +1128,28 @@
     "literature_meta_audit": "Thackeray Proposition 4.1(a) c<=34 for 112+112; 4.1(b) c<=55 for total>=222, stronger than CAP020 numerical d<=2 bounds",
     "novelty": "NOT_ESTABLISHED",
     "global_bound_improved": false,
-    "exact_r3_7": "OPEN"
+    "exact_r3_7": "OPEN",
+    "gaussian_rank2_formal_countermodel": {
+      "M": 287,
+      "projective_Q_counts": [
+        121,
+        486,
+        486
+      ],
+      "rank": 2,
+      "global_moments": [
+        1093,
+        30191539,
+        2920545005
+      ],
+      "actual_cap": false,
+      "exactly_verified": true,
+      "scope": "aggregate moments and quadratic value spectrum only; per-direction geometry absent"
+    },
+    "ci_concurrency": {
+      "workflow": ".github/workflows/capset-f3-7.yml",
+      "cancel_superseded_runs": true,
+      "commit": "aa6256c8048232236b0dfe81c8af879bde8c3cac"
+    }
   }
 }
