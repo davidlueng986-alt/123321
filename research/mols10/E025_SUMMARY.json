@@ -1,0 +1,79 @@
+{
+  "experiment": "E025-coupled-proper-two-symbol-component-trades",
+  "date_utc": "2026-11-02",
+  "scope": "six specific published Appendix pairs, NOT all residual families",
+  "source": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v33i1p30",
+  "code": "E025_coupled_trades.py",
+  "inputs": "E024_appendix_six_replay.py RAW",
+  "method": "all nonempty proper subsets of connected row/column components for each pair of symbols, independently for both squares; exact overlay cardinality; one extra proper flip on best doubles and WW >=96 doubles",
+  "per_pair": {
+    "UW": {
+      "single_A": 118,
+      "single_B": 138,
+      "double": 16284,
+      "best": 96,
+      "best_count": 116,
+      "best_follow": 29280
+    },
+    "UX": {
+      "single_A": 108,
+      "single_B": 118,
+      "double": 12744,
+      "best": 96,
+      "best_count": 80,
+      "best_follow": 18088
+    },
+    "VX": {
+      "single_A": 126,
+      "single_B": 108,
+      "double": 13608,
+      "best": 96,
+      "best_count": 80,
+      "best_follow": 18592
+    },
+    "WW": {
+      "single_A": 154,
+      "single_B": 130,
+      "double": 20020,
+      "best": 98,
+      "best_count": 4,
+      "best_follow": 1144,
+      "high_threshold": 96,
+      "high_double": 96,
+      "high_follow": 26184
+    },
+    "WX": {
+      "single_A": 100,
+      "single_B": 100,
+      "double": 10000,
+      "best": 96,
+      "best_count": 68,
+      "best_follow": 14304
+    },
+    "XX": {
+      "single_A": 132,
+      "single_B": 114,
+      "double": 15048,
+      "best": 96,
+      "best_count": 64,
+      "best_follow": 15360
+    }
+  },
+  "totals": {
+    "proper_single_variants": 1446,
+    "double_combinations": 87704,
+    "orthogonal_single": 0,
+    "orthogonal_double": 0,
+    "extra_flips_on_best_doubles": 96768,
+    "orthogonal_extra_on_best": 0,
+    "WW_extra_on_double_ge96": 26184,
+    "orthogonal_WW_extra": 0
+  },
+  "replay": {
+    "independent_implementations": "JavaScript flat-array Uint8Array overlay and Python tuple-set overlay",
+    "python_execution": "complete; all asserted Latin and source overlay 100",
+    "random_seed": "none, exhaustive within precisely defined neighborhood"
+  },
+  "limits": "No complete search over arbitrary trades or all residual families; no triple witness or unrestricted nonexistence certificate; cannot infer global OPEN resolution",
+  "next": "move to SAT-based multi-symbol orthogonal-pair trades or regenerate fresh WW residual-family pair; test common transversals and 100-cell support"
+}
