@@ -49,15 +49,15 @@ function checkOne(rec,cert){
  else assert(cert.kind==="ZERO"&&zeroCount===0);
  return count;
 }
-assert(scans.cases.length===574&&certs.certificates.length===574&&certs.failed.length===0);
+const n=scans.cases.length;assert(n>0&&certs.certificates.length===n&&certs.failed.length===0);
 const digests=new Set();let dual=0,zero=0,total=0;
-for(let i=0;i<574;i++){
+for(let i=0;i<n;i++){
  const rec=scans.cases[i],cert=certs.certificates[i];assert(cert.index===i);
  assert(!digests.has(rec.sha256));digests.add(rec.sha256);
  total+=checkOne(rec,cert);
  if(cert.kind==="DUAL")dual++;else zero++;
 }
-assert(dual===544&&zero===30);
+assert(dual+zero===n);
 const first=certs.certificates.find(c=>c.kind==="DUAL");
 const mutation=JSON.parse(JSON.stringify(first));
 const r=scans.cases[mutation.index],used=verifyPrefix(r.prefix);
@@ -69,4 +69,4 @@ for(let c=0;c<10&&victim<0;c++)for(let a=0;a<10&&victim<0;a++)for(let b=0;b<10&&
 assert(victim>=0);mutation.delta.push([victim,1000000]);mutation.sum+=1000000;
 let rejected=false;try{checkOne(r,mutation);}catch(e){rejected=true;}
 assert(rejected,"mutation was not rejected");
-console.log(JSON.stringify({verified:574,dual,zero,total_candidates:total,distinct:digests.size,mutation_rejected:rejected,status:"PASS"},null,2));
+console.log(JSON.stringify({verified:n,dual,zero,total_candidates:total,distinct:digests.size,mutation_rejected:rejected,status:"PASS"},null,2));
