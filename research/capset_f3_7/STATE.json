@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-007I sampled 5922 distinct relative GL6 maps of two 112-cap slices: allowed third-slice holes histogram 5732 maps with0,127 with1,61 with4,2 with12; no transform with >=13 holes, so this narrow two-max-slice construction family cannot beat236 for these maps. Universal double-coset proof remains open.",
-  "next_experiment": "Independently CI-replay CAP-007I exact C++ 5922 transforms; investigate quotient/double cosets of GL6 against stabilizers of the unique 112 cap and conditional anchored112 237-SAT proof logging. Do not overgeneralize sampled maps.",
-  "last_run_id": "CAP-007I-LOCAL-2026-11-02",
-  "last_run_result": "LOCAL_CXX_EXACT_5922_TRANSFORMS_MAX12_HOLES_CI_PENDING",
+  "current_hypothesis": "CAP-007J: universal (conditional on Potechin 112-cap uniqueness) two-level Fourier spectrum powers 16/529 implies additive energy E(S,T)=218624+361k for any two 112-caps; relative two-elementary-GL transform family exactly 3812 orientations has max 12 third-slice eligible points, not global GL6.",
+  "next_experiment": "Confirm CI for CAP-007J; reduce arbitrary relative GL6(3) alignments using automorphism double cosets and stronger Fourier phase-sensitive inequalities; pursue the no-112-hyperplane global branch in parallel. Keep conditional CAP-007H proof-logged.",
+  "last_run_id": "CAP-007J-LOCAL-2026-11-02",
+  "last_run_result": "EXACT_3812_RELATIVE_112CAP_ALIGNMENTS_FOURIER_ENERGY_LEMMA_TESTS_PASS_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -67,7 +67,8 @@
     "CAP-006B-PILOT",
     "CAP-006C-LOCAL",
     "CAP-007H-LOCAL",
-    "CAP-007I-LOCAL"
+    "CAP-007I-LOCAL",
+    "CAP-007J-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41415696843",
   "baseline_secant_audit": {
@@ -89,7 +90,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T10:53:32.714Z",
+  "last_updated_utc": "2026-11-02T11:04:56.326Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -761,5 +762,32 @@
     "first_ci_failed": "https://github.com/davidlueng986-alt/123321/actions/runs/41432756301",
     "first_ci_failure": "witness header n: 7 not parsed; repaired",
     "ci_green_base_theorem": "https://github.com/davidlueng986-alt/123321/actions/runs/41432934273"
+  },
+  "cap007j_alignment": {
+    "scope": "two 112-point 6D slices, second relative to first by at most two elementary GL6 transformations; any affine translations",
+    "matrices": 3812,
+    "elementary_moves": 81,
+    "hole_histogram": {
+      "0": 3505,
+      "1": 126,
+      "4": 60,
+      "12": 121
+    },
+    "max_eligible_third": 12,
+    "translations_factored": 729,
+    "nonzero_Fourier_squared_magnitudes": {
+      "16": 616,
+      "529": 112
+    },
+    "energy_identity": "218624+361*k",
+    "global_conditional_lemma_reliance": "Potechin 2008 112-cap uniqueness",
+    "status": "LOCAL_EXACT_INTEGER_AND_CROSS_CHECK_PASS_CI_PENDING",
+    "global_bound_improved": false,
+    "candidate_237_found": false,
+    "report": "research/capset_f3_7/CAP007J_MAXIMAL_SLICE_ALIGNMENT_2026-11-02.md",
+    "script": "research/capset_f3_7/cap007j_112_alignment.py",
+    "seed": null,
+    "gpu_used": false,
+    "novelty_established": false
   }
 }

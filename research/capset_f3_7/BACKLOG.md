@@ -226,3 +226,11 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0] CAP-007J: rigorously reduce all relative GL6 transforms by stabilizer double cosets (if computationally tractable), or derive a universal additive/spectral restriction on H and cap(H).
 - [P0] Keep CAP-007H anchored 112-slice 237-SAT with proof logging; no SAT/UNSAT conclusion yet.
 - [P1] Test structurally different near-maximal six-dimensional slices 110,111 as conditional branches; Thackeray's classification provides mathematical constraints.
+
+## CAP-007J new globally conditional spectral structure (2026-11-02T11:04:56.326Z)
+- [LOCAL EXACT / CI PENDING] For any two 112-caps in F3^6, Potechin affine uniqueness + exact canonical Fourier audit yields two nonzero Fourier powers 529×112 and 16×616. Exact cross-additive energy E(S,T)=218624+361*k where k is heavy-spectrum intersection. Need phase-sensitive support cuts, as k alone does not determine the number of free third-slice points.
+- [VERIFIED LOCAL FINITE FAMILY] All 3812 distinct GL6 matrices of elementary-word-length<=2: exactly 3505/126/60/121 with 0/1/4/12 third-slice holes respectively; no13. Any 729 translations are redundant by affine covariance. This is a restricted maximum236, NOT a universal 112+112 theorem.
+- [P0] CAP-007K: compute automorphism group stabilizers and double-coset representatives for all relative 112-cap alignments. Exhaustive coverage or certified bound required before excluding 112+112+13 globally.
+- [P0] CAP-007L: derive stronger phase-sensitive Fourier/moment and exact set-support inequalities; test against k=32 giving holes 4 or12, and k=80 giving zero holes, counterexamples to naive overlap prediction.
+- [P0] CAP-007N: global target237 branch with every 6D affine hyperplane <=111. Proof of maximal-112-slice conditional case alone cannot resolve r3(7).
+- [P1] CAP-008: independently audit spectral lemma statement under published Potechin 2008 affine-uniqueness theorem, and checker metamorphic cases. Literature novelty not established.
