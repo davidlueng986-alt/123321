@@ -1,0 +1,144 @@
+{
+  "source": "https://github.com/curtisbright/Myrvold-MOLS/blob/master/verify.py",
+  "method": "exhaustive combinations of columns and injective symbols, independent row-witness replay",
+  "counts": {
+    "Z4": {
+      "1": {
+        "compatible_partial_rows": 16,
+        "total_partial_rows": 16
+      },
+      "2": {
+        "compatible_partial_rows": 48,
+        "total_partial_rows": 72
+      },
+      "3": {
+        "compatible_partial_rows": 32,
+        "total_partial_rows": 96
+      },
+      "4": {
+        "compatible_partial_rows": 0,
+        "total_partial_rows": 24
+      }
+    },
+    "V4": {
+      "1": {
+        "compatible_partial_rows": 16,
+        "total_partial_rows": 16
+      },
+      "2": {
+        "compatible_partial_rows": 48,
+        "total_partial_rows": 72
+      },
+      "3": {
+        "compatible_partial_rows": 32,
+        "total_partial_rows": 96
+      },
+      "4": {
+        "compatible_partial_rows": 8,
+        "total_partial_rows": 24
+      },
+      "extension_multiplicities": {
+        "1": {
+          "2": 16
+        },
+        "2": {
+          "1": 48
+        },
+        "3": {
+          "1": 32
+        },
+        "4": {
+          "1": 8
+        }
+      }
+    }
+  },
+  "full_compatible_permutations": {
+    "Z4": [],
+    "V4": [
+      [
+        0,
+        2,
+        3,
+        1
+      ],
+      [
+        0,
+        3,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        0,
+        3
+      ],
+      [
+        1,
+        3,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        1,
+        3
+      ],
+      [
+        2,
+        1,
+        3,
+        0
+      ],
+      [
+        3,
+        0,
+        2,
+        1
+      ],
+      [
+        3,
+        1,
+        0,
+        2
+      ]
+    ]
+  },
+  "residual_type_necessary_local_feasibility": {
+    "SX": {
+      "Z4_compatible": true,
+      "V4_compatible": true
+    },
+    "UX": {
+      "Z4_compatible": true,
+      "V4_compatible": true
+    },
+    "VX": {
+      "Z4_compatible": false,
+      "V4_compatible": true
+    },
+    "WX": {
+      "Z4_compatible": true,
+      "V4_compatible": true
+    },
+    "XX": {
+      "Z4_compatible": true,
+      "V4_compatible": true
+    },
+    "UU": {
+      "Z4_compatible": true,
+      "V4_compatible": true
+    },
+    "UW": {
+      "Z4_compatible": true,
+      "V4_compatible": true
+    },
+    "WW": {
+      "Z4_compatible": true,
+      "V4_compatible": true
+    }
+  },
+  "caution": "Local feasibility is not a global SAT witness; Z4 excluded for any row with four white entries."
+}
