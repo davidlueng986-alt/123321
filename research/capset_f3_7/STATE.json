@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-005I: exact rational duals using fixed-point conflict triangles and odd five-cycle inequalities prove all seven symmetry orbit representatives of the 88 CAP-005G survivors cannot improve the classical 236 cap. All 296010 six-fiber edits now locally certified optimum 236; new CI pending. This is RESTRICTED ONLY; global r3(7) OPEN.",
-  "next_experiment": "Confirm CAP-005I CI; then STOP repeating fixed first-three-coordinate <=6-fiber edits. Pivot to genuinely nonlocal 27-block constructions/alternative partitions and globally valid certified upper-bound inequalities. Keep r3(7) OPEN.",
+  "current_hypothesis": "CAP-005I CI GREEN: independently checked exact rational odd-cycle duals and 16-group orbit quotient prove the entire fixed 236-cap <=6 of 27 4D-fiber reconstruction family has optimum 236. This is NOT a global upper bound; exact r3(7) OPEN.",
+  "next_experiment": "Change search family. Seek nonlocal >=7-fiber occupancy-changing constructions, alternative affine partitions/baselines, and globally valid certified upper bounds; do not repeat proven <=6-fiber neighborhood.",
   "last_run_id": "CAP-005I-2026-11-02-k6-oddcycle-duals",
-  "last_run_result": "LOCAL_EXACT_ALL_296010_SIX_FIBER_EDITS_CI_PENDING",
+  "last_run_result": "VERIFIED_EXACT_ALL_296010_SIX_FIBER_EDITS_CI_GREEN_RESTRICTED_ONLY",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -52,9 +52,10 @@
     "CAP-005G-LOCAL",
     "CAP-005H-LOCAL",
     "CAP-005H-CI",
-    "CAP-005I-LOCAL"
+    "CAP-005I-LOCAL",
+    "CAP-005I-CI"
   ],
-  "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
+  "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41392035320",
   "baseline_secant_audit": {
     "external_points": 1951,
     "all_blocked": true,
@@ -74,7 +75,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T05:05:00Z",
+  "last_updated_utc": "2026-11-02T05:10:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -442,13 +443,15 @@
     "total_excluded": 296010,
     "restricted_optimum": 236,
     "method": "Exact rational duals of pair/line/triangle/odd-five-cycle inequalities, independently checked; verified 16-element affine action",
-    "status": "LOCAL_EXACT_CHECK_PASS_CI_PENDING",
+    "status": "VERIFIED_EXACT_RATIONAL_CERTIFICATES_CI_GREEN_RESTRICTED_ONLY",
     "generator": "research/capset_f3_7/cap005_i_oddcycle_dual_generator.py",
     "checker": "research/capset_f3_7/cap005_i_oddcycle_dual_check.py",
     "report": "research/capset_f3_7/CAP005_K6_ODDCYCLE_FULL_EXACT_236_2026-11-02.md",
     "global_bound_improved": false,
     "novelty_established": false,
     "gpu_used": false,
-    "seed": null
+    "seed": null,
+    "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41392035320",
+    "artifact": "https://github.com/davidlueng986-alt/123321/actions/runs/41392035320/artifacts/13118250395"
   }
 }
