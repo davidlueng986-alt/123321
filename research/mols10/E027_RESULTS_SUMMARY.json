@@ -1,0 +1,105 @@
+{
+  "iteration": "E027",
+  "timestamp_utc": "2026-11-02T06:53:43Z",
+  "status": "OPEN",
+  "scope": "For each of six published fixed Q squares, exhaustively enumerate all Q-orthogonal mates modulo relabeling of the mate symbols; no assertion about entire Myrvold family.",
+  "source": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v33i1p30",
+  "input": "research/mols10/E024_appendix_six_replay.py",
+  "method": "Enumerate all Q transversals; exact-cover partitions into 10 disjoint transversals. Independent mutable Algorithm X replay. Each mate is Latin and Q overlay has 100 distinct pairs. Enumerate all common transversals of each mate/Q pair.",
+  "results": {
+    "UW": {
+      "q_transversals": 848,
+      "bitset_nodes": 51243,
+      "independent_dlx_nodes": 30990,
+      "partitions": 3,
+      "new_mates": 2,
+      "common_transversal_counts": [
+        0,
+        0,
+        0
+      ],
+      "q_sha256": "677884eb2f8f0b23b7c6bb4f21915ca2ec9e0a3fe1528aa67e436053baa82514"
+    },
+    "UX": {
+      "q_transversals": 820,
+      "bitset_nodes": 43982,
+      "independent_dlx_nodes": 26767,
+      "partitions": 2,
+      "new_mates": 1,
+      "common_transversal_counts": [
+        0,
+        1
+      ],
+      "q_sha256": "283fa1a04c61f9bd015825ffc4a8077cbb362f63701f02905bbde15c2cd3c05b"
+    },
+    "VX": {
+      "q_transversals": 848,
+      "bitset_nodes": 48849,
+      "independent_dlx_nodes": 29520,
+      "partitions": 2,
+      "new_mates": 1,
+      "common_transversal_counts": [
+        0,
+        0
+      ],
+      "q_sha256": "ea127473c1c5183e53c6e9f7ec52c0719af92328af6bd0c2c1c9c2aaf569339a"
+    },
+    "WW": {
+      "q_transversals": 808,
+      "bitset_nodes": 41216,
+      "independent_dlx_nodes": 25004,
+      "partitions": 1,
+      "new_mates": 0,
+      "common_transversal_counts": [
+        1
+      ],
+      "q_sha256": "6e457dcd1916c364ac111f6bd09dad83ef2fdee81d2636b8473d615ed0fc8f27"
+    },
+    "WX": {
+      "q_transversals": 812,
+      "bitset_nodes": 42369,
+      "independent_dlx_nodes": 25813,
+      "partitions": 1,
+      "new_mates": 0,
+      "common_transversal_counts": [
+        0
+      ],
+      "q_sha256": "de5414a4c0d9bdb6d0ecd520ab6f006c1195250ee2a7058cd94e22c38951aa63"
+    },
+    "XX": {
+      "q_transversals": 812,
+      "bitset_nodes": 45900,
+      "independent_dlx_nodes": 28193,
+      "partitions": 3,
+      "new_mates": 2,
+      "common_transversal_counts": [
+        0,
+        0,
+        0
+      ],
+      "q_sha256": "d96898409004bac672094e20d4ece77d82a2643d851ecf509472a5c56ca3e237"
+    }
+  },
+  "totals": {
+    "transversals": 4948,
+    "bitset_nodes": 273559,
+    "partitions": 12,
+    "new_mates": 6
+  },
+  "checks": [
+    "All 12 normalized mate matrices are Latin and orthogonal to their fixed Q (100/100).",
+    "Two independent exact-cover implementations agree on the complete normalized matrix sets, not only counts.",
+    "All 12 pairs have at most one common transversal, so none can extend to three squares.",
+    "Exactly one original mate per fixed Q recovered."
+  ],
+  "failures": [
+    "HiGHS MILP 12-second time limits for WW,UW,UX,VX,WX: UNKNOWN, never counted as UNSAT.",
+    "Naive row-0-first Python enumeration exceeded outer timeout; replaced by independent mutable Algorithm X.",
+    "No DRAT/FRAT certificate, no full symmetry classification of other Q, no global conclusion."
+  ],
+  "next_action": "Independently cross-check remaining SX/UU fixed Q with same complete mate enumeration; then search genuinely new Q outside six examples and test third-square extendability. Avoid repeating low-symbol trade searches.",
+  "artifact_sha256_local": {
+    "full_bitset_json": "61a8249c96b8c19228c4b1f4e955f16b99b55e397f0c5e0c98e8219685078fcb",
+    "full_independent_json": "394a11733f398671034bef8dba7bb2ccf92844ccb494957b94ec96ba47a7194c"
+  }
+}
