@@ -30,7 +30,7 @@ For each common high-frequency direction u, both completed 112-caps have slice c
 m* (c−44−d) ≤ c(m*−16+d)/3,
 c ≤ floor(3m*(44+d)/(2m*+16−d)).
 ```
-If m*=0, r(z)>0 for every z≠0 (and at most one hole at z=0); if m*=56, the two centered 112-caps coincide by Fourier inversion, so r(z)>0 everywhere. Otherwise m*≤55 and d≤4, giving the **universal conditional** bound
+If m*=0, r(z)≥16 for z≠0 and at most the single z=0 can be unblocked when d≤4, so c≤1. **Important deleted-point edge case:** if m*=56, the centered caps coincide; their full convolution has r(z)=1 on the 112 cap points, r(z)=20 on the other 616 nonzero points and r(0)=112. Although r(z)>0 everywhere *before* deletion, deleting up to d≤4 points can free at most d of the 112 singleton-representation points (each is a unique diagonal pair), so c≤d. Merely saying the full convolution has no holes is insufficient when d>0. For 1≤m*≤55, the double-count inequality applies and gives the **universal conditional** bound
 ```
 c ≤ floor(165*(44+d)/(126−d)),  d=0..4,
 values = [57,59,61,63,64].
