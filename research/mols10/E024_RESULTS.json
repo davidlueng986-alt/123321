@@ -1,0 +1,77 @@
+{
+  "experiment": "E024",
+  "timestamp_utc": "2026-11-02T03:50:00Z",
+  "status": "OPEN",
+  "source": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v33i1p30/pdf/",
+  "source_pages": "printed pp.32-33; PDF page indices 31-32",
+  "method": "For each source TRP P,Q verify Latin; compute Z[r,c]=index t with P[t,c]=Q[r,c]; verify Z Latin and overlay(Z,Q)=100; count common transversals by bitmask DFS and independent exhaustive 10! permutations; fewer than 10 implies no third square for that fixed pair.",
+  "candidate_permutations_per_pair": 3628800,
+  "total_permutation_candidates": 21772800,
+  "cases": {
+    "UW": {
+      "source_latin": true,
+      "orthogonal_overlay": 100,
+      "dfs": 0,
+      "full_permutations": 0,
+      "supported_cells": 0,
+      "status": "UNSAT_FIXED_PAIR"
+    },
+    "UX": {
+      "source_latin": true,
+      "orthogonal_overlay": 100,
+      "dfs": 0,
+      "full_permutations": 0,
+      "supported_cells": 0,
+      "status": "UNSAT_FIXED_PAIR"
+    },
+    "VX": {
+      "source_latin": true,
+      "orthogonal_overlay": 100,
+      "dfs": 0,
+      "full_permutations": 0,
+      "supported_cells": 0,
+      "status": "UNSAT_FIXED_PAIR"
+    },
+    "WW": {
+      "source_latin": true,
+      "orthogonal_overlay": 100,
+      "dfs": 1,
+      "full_permutations": 1,
+      "supported_cells": 10,
+      "unique_transversal_column_per_row": [
+        9,
+        4,
+        7,
+        2,
+        8,
+        6,
+        0,
+        5,
+        3,
+        1
+      ],
+      "status": "UNSAT_FIXED_PAIR"
+    },
+    "WX": {
+      "source_latin": true,
+      "orthogonal_overlay": 100,
+      "dfs": 0,
+      "full_permutations": 0,
+      "supported_cells": 0,
+      "status": "UNSAT_FIXED_PAIR"
+    },
+    "XX": {
+      "source_latin": true,
+      "orthogonal_overlay": 100,
+      "dfs": 0,
+      "full_permutations": 0,
+      "supported_cells": 0,
+      "status": "UNSAT_FIXED_PAIR"
+    }
+  },
+  "independent_checks": "Both algorithms agree for all six, full 10! enumeration each. GF4 positive control 16/16/16 locally.",
+  "compute": "CPU only; six complete checks ~11.5 seconds total; no timeouts.",
+  "limitations": "These are six specific published pairs, not all pairs of each Myrvold type, not a restricted-class proof, and not a global resolution. No SAT certificate or unrestricted symmetry coverage.",
+  "failures": "Direct container PDF download failed due DNS; used web PDF text and rendered page images; manual transcription validated by independent Latin+overlay checks.",
+  "next_action": "Explore Myrvold residual families beyond the eight published examples; prioritize source-generated diverse pairs and triple-aware constraints, or certificate-producing SAT for a rigorously scoped family."
+}
