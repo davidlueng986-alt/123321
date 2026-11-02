@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-005F exact clique partition certificates exclude 680 additional six-fiber edits (295074/296010 total); 936 remain unresolved. Restricted only, global r3(7) OPEN.",
-  "next_experiment": "For 936 surviving six-fiber neighborhoods, seek exact outsider-triple and deletion-cover certificates; prioritize nonlocal constructions and independently auditable global upper bounds.",
-  "last_run_id": "CAP-005F-2026-11-02-k6-clique-cover",
-  "last_run_result": "EXACT_K6_CLIQUE_COVER_CI_GREEN",
+  "current_hypothesis": "CAP-005G: 848 independently checked exact-rational LP duals eliminate further six-fiber neighborhoods; 295922/296010 excluded, 88 unresolved. CI pending; local exact verifier PASS. Global r3(7) OPEN.",
+  "next_experiment": "Confirm CAP-005G GitHub CI and artifact, then attack 88 fractional-LP-gap six-fiber cases with certified cuts/UNSAT or nonlocal constructions; keep global upper-bound research active.",
+  "last_run_id": "CAP-005G-2026-11-02-k6-rational-dual",
+  "last_run_result": "LOCAL_EXACT_848_RATIONAL_DUAL_CERTIFICATES_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -48,7 +48,8 @@
     "CAP-005E-LOCAL",
     "CAP-005E-CI",
     "CAP-005F-LOCAL",
-    "CAP-005F-CI"
+    "CAP-005F-CI",
+    "CAP-005G-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
   "baseline_secant_audit": {
@@ -70,7 +71,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T02:59:00Z",
+  "last_updated_utc": "2026-11-02T03:58:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -385,5 +386,22 @@
     "random_seed": null,
     "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41380252670",
     "artifact": "https://github.com/davidlueng986-alt/123321/actions/runs/41380252670/artifacts/13113456508"
+  },
+  "cap005_k6_rational_duals": {
+    "scope": "Six fixed first-three-coordinate 4D fibers around classical 236",
+    "previous_excluded": 295074,
+    "additional_excluded": 848,
+    "total_excluded": 295922,
+    "unresolved": 88,
+    "method": "Exact rational LP dual certificates for cap line inequalities, independently checked by F3 arithmetic",
+    "generator": "research/capset_f3_7/cap005_k6_lp_dual_certificate.py",
+    "checker": "research/capset_f3_7/cap005_k6_lp_dual_check.py",
+    "report": "research/capset_f3_7/CAP005_K6_RATIONAL_DUAL_CERTIFICATE_2026-11-02.md",
+    "local_certificate_sha256": "0a49469949dca1e9a55e6cffab62306eec7a0e9f9e9bace17289e1e26bd4e7db",
+    "status": "LOCAL_EXACT_CHECK_PASS_CI_PENDING",
+    "global_bound_improved": false,
+    "novelty_established": false,
+    "seed": null,
+    "gpu_used": false
   }
 }
