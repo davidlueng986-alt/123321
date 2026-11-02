@@ -203,3 +203,9 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0] CAP-006C independent, nonlocal, parameterized construction families + exact witness checks.
 - [P1] CAP-008B proof-logged SAT, affine frame symmetry and independent checker mutation tests; benchmark 4D/5D known optima before global claims.
 - [P2] Only pursue 8+fiber reconstruction if certificate strengths improve; raw N(T) large is meaningless due compatibility/integrality gap. Do not claim novelty or solve r3(7) prematurely.
+
+## CAP-006C cross-dimensional construction transfer (2026-11-02T10:45:29.601Z)
+- [LOCAL EXACT SOURCE REPLAY / CI PENDING] Independent audit of public 512-point n8 FunSearch cap, 3280 hyperplane directions: largest affine n7 section=208 (8 directions); 24 direction ×12 greedy quotient projection tests best 157. NO lower-bound record; cannot infer optimality or defeat more sophisticated projections.
+- [LOW PRIORITY] Naive 8D hyperplane slicing or greedy quotient projection without reconstruction (observed too weak).
+- [P0] CAP-006C2: general parametric admissible-set / generating-function search in n7 from independent starting families, certify every witness; full 237 target retained.
+- [P0] CAP-007H: proof-logged global SAT with cross-slice structure rather than count-only quotas.
