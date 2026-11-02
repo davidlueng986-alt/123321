@@ -11,9 +11,9 @@
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
   "current_hypothesis": "CAP-014-PSD exact restricted 425/576 spectral certificate for classical 112+112 slices; no global 237 exclusion. CAP-011A sign bug still open in Drive source; global no-112 hyperplane branch remains unaddressed.",
-  "next_experiment": "Confirm CAP-014-PSD CI green; correct CAP-011A sign at source with independent replay; then global 89..111-slice 5D incidence/SAT and audit Drive CAP-014A/B/C separately.",
-  "last_run_id": "CAP-014-PSD-2026-11-02",
-  "last_run_result": "EXACT_INTEGER_PSD_RANK_107_NULLITY_4_FIXED_112_PAIR_LOCAL_PASS_CI_PENDING",
+  "next_experiment": "Confirm CAP-015S imported CI; independently replay GO6/GL6 v5 claims; prioritize no-112-hyperplane global proof-logged branch.",
+  "last_run_id": "CAP-015S-EXTERNAL-V5-SYNC-2026-11-02",
+  "last_run_result": "V5_IMPORTED_MINIMAL_FIX_EXACT_8017_DIRECTION_LOCAL_PASS_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -95,7 +95,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T13:00:42.605Z",
+  "last_updated_utc": "2026-11-02T13:08:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -943,5 +943,33 @@
     "report": "research/capset_f3_7/CAP014_EXACT_PSD_425_OVER_576_2026-11-02.md",
     "global_bound_improved": false,
     "novelty_established": false
+  },
+  "cap015s_external_v5_sync": {
+    "imported_source": "research/capset_f3_7/external_agent_v5/capset_swarm_v5_fixed.py",
+    "imported_evidence": "research/capset_f3_7/external_agent_v5/capset_swarm_v5_corrected_evidence.json",
+    "report": "research/capset_f3_7/CAP015S_EXTERNAL_AGENT_V5_SYNC_2026-11-02.md",
+    "test": "research/capset_f3_7/test_cap015_external_agent_v5_sync.py",
+    "source_drive_v5_py": "https://drive.google.com/file/d/1DpIvdoPFbw253UZ1Ko6LHC6I9KqG3Y45/view",
+    "source_drive_v5_json": "https://drive.google.com/file/d/1M9FSNowfaxI3jnxwQD0ODjYjpWCsw5oz/view",
+    "source_py_sha256": "28549c6306091b832c352a718845cecce67052e2f577a39b6ec49f185d724ea1",
+    "source_json_sha256": "f1619bb1fa4ef812e52415dda5af2e94d85f81027abb44d8da9a793b4a826f37",
+    "corrections": [
+      "CAP-011A sign plus assert",
+      "CAP-010B floating points labeled diagnostic only",
+      "CAP-012 fixed classical-pair PSD evidence scope",
+      "OR-Tools optional import and portable output path"
+    ],
+    "tested_cap_sizes": [
+      112,
+      236,
+      496,
+      512
+    ],
+    "signed_quadratic_projective_directions_checked": 8017,
+    "local_test_result": "PASS_4_OF_4_4.366S",
+    "github_ci": "PENDING",
+    "cap014_exact_psd_prior_ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41449380778",
+    "novelty": "NOT_ESTABLISHED",
+    "global_bound_improved": false
   }
 }
