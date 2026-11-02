@@ -2,15 +2,15 @@
   "schema": "mols10-v1",
   "problem": "3 mutually orthogonal Latin squares of order 10",
   "status": "OPEN",
-  "last_review": "2026-11-01",
+  "last_review": "2026-11-02",
   "baseline": [
     100,
     100,
     91
   ],
-  "next_action": "E021: independently certify all 1076 Parker unary exact-cover UNSAT roots (SAT/DRAT or separate exact-cover), classify 28 surviving roots under autotopisms, and import Myrvold residual-eight first squares; no duplicate Parker E017 DFS.",
-  "current_hypothesis": "H21-INDEPENDENT-UNARY-CERTIFICATION-AND-DIVERSITY",
-  "last_experiment": "MOLS10-E020",
+  "next_action": "E022: bounded Egan pair-root C exact-cover pilot (two disjoint B-symbol classes, each C class intersects both once); assess coverage and pruning; alternatively import source-verified Myrvold eight residual cases. Preserve UNKNOWN and avoid duplicate E020 unary replay.",
+  "current_hypothesis": "H22-EGAN-PAIR-ROOT-EXACT-COVER-OR-MYRVOLD-DIVERSITY",
+  "last_experiment": "MOLS10-E021",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -50,7 +50,10 @@
     "E019: Parker A 1104 transversals; exhaustive 39528 disjoint triples containing index0, 29973 C-cell-support blockers, including 23296 new depth-3 blockers where every pair passes; independent 10! permutation replay local 2 tests PASS.",
     "E019: deterministic 20000 depth-2-surviving pair + disjoint third samples, 10140 depth-3 blocked, 9860 survive; nonuniform sample, no global inference.",
     "E020: Parker fixed A has 1104 A-transversals; independent exact-cover C-mate feasibility for each B class: 1076 exhaustive unary UNSAT, 28 SAT, 0 UNKNOWN; 1371185 DFS nodes in ~9.155 s; 13 cells uncovered by all 28 surviving classes, hence excludes triple with this specified Parker A only.",
-    "E020: independent 10! permutation enumerator exactly reproduces 1104 transversals; HiGHS MILP root0/109/250 INFEASIBLE and root26/29/55 FEASIBLE with replay; GF4 8/8 unary SAT positive control. Full 1104-root independent MILP certificate NOT yet available."
+    "E020: independent 10! permutation enumerator exactly reproduces 1104 transversals; HiGHS MILP root0/109/250 INFEASIBLE and root26/29/55 FEASIBLE with replay; GF4 8/8 unary SAT positive control. Full 1104-root independent MILP certificate NOT yet available.",
+    "E021: independent 10! permutation + memoized remaining-cell Algorithm X confirms Parker A unary 1076 UNSAT/28 SAT/0 UNKNOWN and 13 uncovered cells (fixed-A only); 1369521 nodes.",
+    "E021: Egan published A unary screen 966 UNSAT/114 SAT/0 UNKNOWN; SAT roots cover all 100 cells, so this unary obstruction does not exclude Egan A (negative result).",
+    "E021: GF4 16/16/16 positive control and 8/8 unary roots SAT; initial list-filtering timeout and CLI TypeError preserved in E021_REPORT.md."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -133,5 +136,6 @@
     "e020_parker_unary_unsat_roots": 1076,
     "e020_parker_unary_sat_roots": 28,
     "e020_parker_uncovered_cells": 13
-  }
+  },
+  "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md"
 }
