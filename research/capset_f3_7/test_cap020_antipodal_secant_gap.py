@@ -66,6 +66,14 @@ def high_dual_directions(h):
     assert len(high)==56
     return high
 
+def projectivize(x):
+    assert any(x)
+    return x if next(t for t in x if t)!=2 else neg(x)
+
+def dual_shear(x):
+    # A^{-T} for A(x)=(x0+x1,x1,x2+x3,x3,x4,x5).
+    return (x[0],(x[1]-x[0])%3,x[2],(x[3]-x[2])%3,x[4],x[5])
+
 def improved_bounds():
     # If D1!=D2, 112-point centered symmetric caps have overlap <=92,
     # so their 56 projective high-frequency directions intersect in m<=46.
@@ -90,6 +98,8 @@ class CAP020(unittest.TestCase):
     def test_fourier_dual_shear_overlap(self):
         h=canonical();g={shear(x) for x in h}
         high_h=high_dual_directions(h);high_g=high_dual_directions(g)
+        self.assertEqual(high_h,{projectivize(x) for x in h})
+        self.assertEqual(high_g,{projectivize(dual_shear(x)) for x in h})
         self.assertEqual(len(high_h&high_g),20)
         self.assertEqual(len(h&g),40)
         self.assertLessEqual(2*len(high_h&high_g),92)
