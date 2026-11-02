@@ -122,7 +122,13 @@ def verify_known_236():
     if saved.exists():
         ls=saved.read_text().splitlines()
         assert ls[0].strip()=='n: 7'
-        assert {tuple(int(x) for x in s.strip()) for s in ls[1:] if s.strip()}==pts
+        raw=[tuple(int(x) for x in s.strip()) for s in ls[1:] if s.strip()]
+        assert len(raw)==len(set(raw))==236
+        saved_points=set(raw)
+        for x,y in combinations(sorted(saved_points),2):
+            assert tuple((-a-b)%3 for a,b in zip(x,y)) not in saved_points
+        # The committed 236 witness uses a different coordinate realization;
+        # do not incorrectly require equality to this independent construction.
     return len(pts)
 
 class TestCAP026(unittest.TestCase):
