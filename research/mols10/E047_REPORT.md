@@ -1,0 +1,23 @@
+# E047 — Exhaustive two-disjoint-swap fourth-row neighborhoods (eight fixed k4 sources)
+UTC 2026-11-02 22:49–22:53. **Global 3-MOLS(10) OPEN; 0/162,959 complete normalized orbits excluded.**
+
+## Context and primary sources
+Read living [Google Docs journal](https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit), STATE.json, E046 report and latest commits. Fresh November 2 web/arXiv search found no independently checkable unrestricted solution. Primary sources: Bright–Keita–Stevens, *EJC* 33(1) #P1.30 (2026-02-13), https://www.combinatorics.org/ojs/index.php/eljc/article/view/v33i1p30 ; Barnoff–Bright arXiv:2605.02132v2 (2026-07-04), https://arxiv.org/abs/2605.02132 . Absence of a search hit is not proof.
+
+## New falsifiable experiment
+E046 tested one-swap moves. E047 exhaustively tested **two disjoint unordered column pairs** in the fourth row with independently chosen nonempty masks of the three squares. Eight E045 **local 574-case** k4 prefixes at indices 0,70,140,210,280,350,420,490 were selected (NOT the different remote 570-case dataset). Each source has 630 disjoint column-pair combinations × 49 mask pairs = 30,870 proposals; **246,960 total**. Each proposal was checked for Latin rows/columns and all three 40/40/40 pairwise overlays.
+
+Exactly **479 valid moves** (per source 56,36,150,61,24,26,83,43); all 479 resulting ordered prefixes are distinct. A separately written Node.js exhaustive enumerator independently reproduced all counts and the exact set. The 479 prefixes have no exact overlap with the eight source prefixes.
+
+## Exact fixed-prefix nonextension evidence
+The full six-class residual LP has 360 remaining pair/column-symbol demands. Of 479 valid prefixes, **79 exact zero-support contradictions** and **400 numerical LP-infeasible** cases. All 400 numerical results were upgraded to **integer Farkas duals** with sum(y)>0 and each legal placement t satisfying score(y,t)<=0. A separate Node.js integer-only verifier independently rebuilt **192,078 legal residual placements**, checked all **479/479 exact certificates**, and rejected an intentionally corrupted dual. **0 LP-feasible, 0 UNKNOWN.** The initial 120-case pilot (15 zero support, 105 LP-infeasible) was superseded by the exhaustive 479-case local scan.
+
+This proves only the restricted finite-neighborhood statement: **none of these 479 valid two-disjoint-swap neighbors of the eight fixed prefixes extends to a full triple**. It does not rule out any complete symmetry orbit or prove a universal k4 obstruction. All eight sources are selected/correlated; no population inference. No 100/100/100 witness.
+
+## Reproducibility / artifacts
+Local self-contained ZIP contains: `E047_SOURCES.json` (all eight exact k4 inputs), `E047_two_swaps.py` (exhaustive generator + HiGHS screen), `E047_certify.py` (exact dual construction), `E047_verify.js` (independent integer replay), `E047_independent_scan.js` (independent exhaustive move enumeration), `E047_RESULTS.json`, `E047_CERTIFICATES.json`, test outputs and logs, plus `E035_column_residual.py`. Commands: `OPENBLAS_NUM_THREADS=1 python E047_two_swaps.py --limit 10000 --seconds 180`, `OPENBLAS_NUM_THREADS=1 python E047_certify.py`, `node E047_verify.js`, `node E047_independent_scan.js`. Clean ZIP extraction replay PASS. Full local result SHA256 `25cd69008797a305729a0ba0b105c011b140de78ac96774ad5fa8f545df0d3c3`; full certificate SHA256 `1aa5ed22fbee03a4f326383a109829350f871ae8824f4cb8ad440c0d98d5c5c9`; input SHA256 `b76e997c93bf315740c155af92088f9c837d74bab4c95bfdc866281dc22c6a67`.
+
+**Persistence caveat:** Full 479 certificate bytes and source code exist in the local conversation ZIP; do not claim they are on GitHub or Drive unless separately uploaded. Google Drive binary upload attempted and failed `BLOCKED_FILE_REFERENCE`. This report and journal are text records.
+
+## Next
+Stop repeating the exhausted two-disjoint-swap basin. Try joint k4 phase-I optimization / three-row rewrites and prioritize a symmetry-complete proof-producing SAT strategy with explicit coverage of all 162,959 normalized orbits. Verify any positive triple independently before changing status.
