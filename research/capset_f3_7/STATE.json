@@ -9,11 +9,11 @@
   "verified_local_best": 236,
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
-  "source_recheck_date": "2026-11-01",
-  "current_hypothesis": "CAP-005C LOCAL EXACT RATIONAL DUALS: all 80,730 five-fiber releases excluded from improving classical 236; 80,418 via 10-deletion outsider gate and 312 via exact-rational verified LP duals. Restricted only; CI pending.",
-  "next_experiment": "Confirm CAP-005C CI and retain rational dual JSON artifact; then consider >=6 released fibers, non-coordinate/nonlocal occupancy-changing constructions, and independently certified global upper bounds.",
-  "last_run_id": "CAP-005C-2026-11-01-k5-rational-duals",
-  "last_run_result": "EXACT_FIVE_FIBER_RESTRICTED_OPTIMUM_236_CI_GREEN",
+  "source_recheck_date": "2026-11-02",
+  "current_hypothesis": "CAP-005D exact necessary six-fiber secant matching gate: 288878 of 296010 neighborhoods excluded, 7132 unresolved. 92 outsider candidates in 16 groups are not mutually compatible witnesses; exploratory MILP infeasible on 3 but without certificates.",
+  "next_experiment": "Confirm CAP-005D CI; quotient 7132 surviving k6 release sets under verified fiber symmetries; produce independently checkable exact UNSAT certificates for top candidates; continue nonlocal constructions and global upper bound research.",
+  "last_run_id": "CAP-005D-2026-11-02-k6-secant-matching-gate",
+  "last_run_result": "EXACT_K6_NECESSARY_GATE_CENSUS_LOCAL_PASS_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -42,7 +42,8 @@
     "CAP-005A-LOCAL",
     "CAP-005B-CI",
     "CAP-005C-LOCAL",
-    "CAP-005C-CI"
+    "CAP-005C-CI",
+    "CAP-005D-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41334225851",
   "baseline_secant_audit": {
@@ -64,7 +65,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T00:06:00Z",
+  "last_updated_utc": "2026-11-02T00:53:46.828Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -322,5 +323,20 @@
     "novelty_established": false,
     "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41365141220",
     "artifact": "https://github.com/davidlueng986-alt/123321/actions/runs/41365141220/artifacts/13107126157"
+  },
+  "cap005_k6_secant_matching_gate": {
+    "scope": "Fixed first-three-coordinate six F3^4 fiber edits around classical 236",
+    "release_sets": 296010,
+    "elementary_exclusions": 288878,
+    "unresolved": 7132,
+    "max_individually_admissible_outsiders": 92,
+    "max_groups": 16,
+    "groups_with_at_least_20_admissible": 1072,
+    "status": "LOCAL_EXACT_NECESSARY_ONLY_CI_PENDING",
+    "script": "research/capset_f3_7/cap005_k6_secant_matching_gate.py",
+    "report": "research/capset_f3_7/CAP005_K6_SECANT_MATCHING_GATE_2026-11-02.md",
+    "milp_pilot_noncertifying": true,
+    "global_bound_improved": false,
+    "novelty_established": false
   }
 }

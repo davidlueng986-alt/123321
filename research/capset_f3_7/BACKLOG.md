@@ -103,3 +103,8 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 
 ## CAP-004F CI confirmation (2026-11-01 22:00 UTC)
 - CI https://github.com/davidlueng986-alt/123321/actions/runs/41354696903 SUCCESS. Exact target-237 CNF: 30,241 vars / 149,028 clauses; 20,313 cross orbit triples; SHA256 322eba0828cbfdd9809074bf579d7fdae70b25695bdfef4592c76203f4eb34a6. 236 witness replay PASS. SAT status UNKNOWN; next bounded CPU SAT with proof production, not naive claim of UNSAT.
+
+## CAP-005D update (2026-11-02T00:53:46.828Z)
+- CAP-005D [LOCAL EXACT PASS / CI PENDING] Complete six-fiber necessary-only secant matching census: 296,010 release sets; 288,878 have <=9 admissible outsiders and are rigorously excluded by existing 10-deletion gate; 7,132 remain unresolved; max 92 admissible outsiders (16 groups). k5 regression and independent uncompressed secant checks pass. Script/report in dedicated branch; not a global bound and not an all-six-fiber theorem.
+- CAP-005E [P0] Investigate 7,132 surviving six-fiber sets; first exploit affine-fiber symmetries to collapse equivalent cases. For representative 92-candidate groups, MILP says infeasible but is NON-CERTIFYING; produce independently checkable exact UNSAT/exhaustive certificate before any exclusion claim. High outsider counts are not cap witnesses.
+- CAP-005F [P0] Do not overfit to fixed coordinate fibers: pursue genuinely nonlocal asymmetric 27-block template changes that can alter occupancy, and certified global upper-bound methods in parallel. Maintain global OPEN and 236 verified lower bound.

@@ -78,5 +78,13 @@ jobs:
           name: capset-k5-rational-duals
           path: /tmp/cap005_k5_rational_duals.json
           retention-days: 30
+      - name: Preserve deterministic six-fiber necessary gate census
+        run: python research/capset_f3_7/cap005_k6_secant_matching_gate.py --out /tmp/cap005_k6_gate.json
+      - name: Archive six-fiber necessary gate JSON (not a global bound)
+        uses: actions/upload-artifact@v4
+        with:
+          name: capset-k6-necessary-gate
+          path: /tmp/cap005_k6_gate.json
+          retention-days: 30
       - name: Check complete-cap saturation and replacement barrier
         run: python research/capset_f3_7/analyze_secants.py research/capset_f3_7/candidates/calderbank_fishburn_236.txt
