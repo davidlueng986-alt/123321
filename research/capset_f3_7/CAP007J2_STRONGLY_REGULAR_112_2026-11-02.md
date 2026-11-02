@@ -51,3 +51,25 @@ Tests: exact full convolution for BOTH canonical 112 caps, all 729 ternary chara
 4. CAP-007N: solve or cut down global cases in which every six-dimensional hyperplane contains ≤111 cap points. None of the 112-anchored results address them.
 
 Do not mark the global cap-set problem solved without independently reviewed matching lower and upper bounds. Preserve failed experiments and continue research automation.
+
+## CAP-007J3 direct graph-edge form of arbitrary-second-slice energy (2026-11-02T11:12:52.892Z)
+
+A useful stronger *interpretation* of the displayed universal spectral identity follows without any Fourier calculation beyond the already independently verified regular partial difference set. Let G be the Cayley SRG(729,112,1,20) whose connection set is the centered maximal 112-cap S, let T be ANY subset with m points, and let e_G(T) count the unordered pairs of points in T adjacent in G. Because the difference-multiplicity in S is 112 at zero, 1 on S, 20 elsewhere, directly summing over ordered differences of T yields
+
+```
+E(S,T) = 112*m + 2*e_G(T) + 20*(m*(m-1)-2*e_G(T))
+       = 20*m*m + 92*m - 38*e_G(T).
+```
+
+**This exact identity applies to arbitrary T**, not only another maximal cap, and is useful for converting Fourier/sumset constraints into simple induced-subgraph edge constraints. Local exact direct integer tests using the standard S and T equal to the first m elements of the known second 112-cap give:
+
+| m | e_G(T) | E(S,T) |
+|---:|---:|---:|
+| 32 | 16 | 22,816 |
+| 80 | 400 | 120,160 |
+| 100 | 640 | 184,880 |
+| 110 | 784 | 222,328 |
+| 111 | 800 | 226,232 |
+| 112 | 816 | 230,176 |
+
+All E values match independently enumerated 112*m ordered sums and the Fourier formula. For T a maximal 112-cap, combining E=218624+361*k gives **2e_G(T)=2240-19*k** (k even). This is a discrete structural constraint; alone it does NOT bound the third-slice complement tightly enough to exclude 237. Next priority is graph+cap joint inequalities and phase-sensitive support, not optimizing E in isolation. Novelty unestablished.
