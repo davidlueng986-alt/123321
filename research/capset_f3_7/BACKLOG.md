@@ -272,3 +272,12 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0] Independently fix CAP-011A negative sign in other agent's Drive source (do not overwrite source without coordination), and audit CAP-014A/B/C claims separately; CAP-014-PSD is a different, disambiguated GitHub experiment.
 - [P0 / GLOBAL] Focus 237-target all-hyperplanes<=111 branch, 5D incidence and proof-logged SAT. A restricted classical-pair spectral bound cannot prove exact r3(7).
 - [META] Exact proof-integrity now improved, but marginal global-search leverage is low; do not over-invest in local fixed-pair perturbations. No >=237 witness; novelty unverified.
+
+
+## CAP-015S external-agent v5.0 synchronization (2026-11-02 13:08 UTC)
+- [DONE / LOCAL EXACT / CI PENDING] Original v5 source + complete evidence JSON from Drive copied into this dedicated GitHub branch; CAP-011A sign bug minimally fixed, 4 full witness cap checks + 8017 directions exact replay pass. No external agent source overwritten. See CAP015S_EXTERNAL_AGENT_V5_SYNC_2026-11-02.md and test_cap015_external_agent_v5_sync.py.
+- [P0] Confirm GitHub CI success for imported artifact regression; do not promote without green run. CAP-014 fixed-pair exact PSD already green at 41449380778.
+- [P0] Independently re-run Drive v5 CAP-013B 648-orbit GO6 group census and CAP-014C full 449064-pair DFS certificate; inspect mathematical completeness and subgroup/global scope before using to prune target237 branches.
+- [P0] Global all-hyperplanes<=111 (no 112-slice) branch, together with five-dimensional incidence constraints and proof-logged SAT remains essential for exact r3(7).
+- [P1] Check CAP-015A 12-class slice census (full 1093 directions) against independent witness arithmetic; preserve distinction cross-slice holes vs actual third-slice cap possibilities.
+- [NOVELTY] Do not present group/fourier identities as new without external literature verification; classical Games graph historical.
