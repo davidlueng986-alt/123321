@@ -19,5 +19,5 @@ for I in itertools.combinations(range(10),4):
  if not found:
   print('FAILED INTEGER ROUND',I,flush=True);out.append({'rows':list(I),'status':'UNKNOWN_RATIONAL'});continue
  print('EXACT',I,'scale',scale,'sum',int(w.sum()),'maxcol',int((A.T@w).max()),'sec',round(time.monotonic()-t0,2),flush=True)
-json.dump({'source':'near_triple.json','layout':'cell;row-square-symbol;column-square-missing-symbol;pair-type-remaining-pair','certificates':out},open('/mnt/data/E034_FOUR_ROW_EXACT_DUALS.json','w'),separators=(',',':'))
+json.dump({'source':'near_triple.json','layout':'cell;row-square-symbol;column-square-missing-symbol;pair-type-remaining-pair','certificates':out},open(str(__import__('pathlib').Path(__file__).with_name('E034_FOUR_ROW_EXACT_DUALS.json')),'w'),separators=(',',':'))
 print('SUMMARY',collections.Counter(x['status'] for x in out),'time',time.monotonic()-t0,flush=True)
