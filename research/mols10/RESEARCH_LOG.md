@@ -140,3 +140,13 @@ OPEN. Tested three existing E040/E041 exact 21/22-cell forbidden patterns under 
 - **Failed/incomplete:** Unbatched dual run interrupted after ~600; excluded from counts. Eight bounded shards covered all 2,184. No LP-feasible counterexample found in this *biased* sample. Complete ZIP SHA256 f24a39e547d62d7ec55b054a9c61127d6742835d23918d05d86485e15d8a4538 exists as local conversation attachment; Google Drive binary upload FAILED BLOCKED_FILE_REFERENCE, so no Drive ZIP claimed. Public GitHub includes report and generator/verifier but not full 2,184-case certificate data.
 - **Critical scope:** All 2,184 are conditional fixed-prefix exclusions. With E039 initial subsets, 2,340 tested prefixes from these 156 six-row witnesses are obstructed. This does NOT exclude even one complete symmetry orbit: 0/162,959. No 100/100/100 triple or unrestricted nonexistence proof.
 - **Next:** Search structurally different k4 prefixes passing full six-class LP; pursue proof-producing SAT with verified full symmetry coverage. Avoid repeating E036-derived biased sampling.
+
+
+## E044 — 2026-11-02 19:49–19:53 UTC — OPEN
+
+- **Literature:** Bright–Keita–Stevens, EJC 33(1) P1.30 (2026-02-13), https://www.combinatorics.org/ojs/index.php/eljc/article/view/v33i1p30 ; Barnoff–Bright arXiv:2605.02132v2 (2026-07-04), https://arxiv.org/abs/2605.02132 . No independently verified unrestricted solution found in targeted search.
+- **Objective:** Break E036/E043 sample-source bias: generate 512 new valid four-row partial triples using independent randomized derangements and bounded MRV row search (seed 20261102), spanning 11 of 12 first-square second-row cycle types. Raw ordered-prefix overlap with 2340 E036-derived samples = 0 (not a claim of isotopy inequivalence).
+- **Exact evidence:** 471 integer Farkas dual certificates plus 41 exact zero-support; independent Node.js verifier checks all 512 valid 40/40/40 prefixes and 200094 residual placements; 512/512 PASS, mutation rejected. k3 parents 512/512 NUMERICALLY LP-feasible (max residual 9.71e-13), not exact primal certificates.
+- **Failures/limits:** E041 deleted-cell integer pilot 8 cases × 4 s each timed out, UNKNOWN. No k4 LP-feasible prefix found among 512 nonuniform random samples. 0/162959 global symmetry orbits excluded; no full triple.
+- **Reproduce:** E044_disjoint_probe.py, E044_certify.py, E044_verify.js, E044_k3_controls.py; see E044_REPORT.md. Complete data+512 certificates are in local E044 ZIP SHA256 06be58a9171686fe617bf09a7c0161969eaf517ebfc3ca2e0d1851bc45e11997, not claimed persisted in GitHub/Drive.
+- **Next:** Target a k4 six-class LP-feasible counterexample with constraint-guided generation, or symmetry-complete proof-producing SAT with independently checked certificates.
