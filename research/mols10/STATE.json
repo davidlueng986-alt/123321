@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "ONLY GOAL: unrestricted solution. Use globally justified E033 12-cycle/162959 orbit coverage with sound column-aware Hall/LP/exact integer cuts and proof-carrying solver; separately target SAT 100/100/100 construction and independently verify any witness. No local fixed-prefix UNSAT implies unrestricted status.",
-  "current_hypothesis": "E035: stronger column-aware necessary constraints can reject misleading residual 40-triangle covers; seek globally sound coverage of E033 12-cycle / 162959 orbits",
-  "last_experiment": "MOLS10-E035-COLUMN-AWARE-EXACT-HALL-DUAL-AND-DIRECT-Z3-UNKNOWN",
+  "next_action": "Integrate sound column-aware Hall/LP/exact-cover lookahead into row6/7 search; avoid treating any fixed-prefix UNSAT as whole orbit UNSAT. Continue global E033 12 cycle types / 162959 orbit proof-producing search and independent full witness replay.",
+  "current_hypothesis": "E036: every legal g orbit for f cycle type 2^5 admits a six-row partial 3-MOLS; greedy fixed-prefix UNSAT is a misleading global prune. Sound Hall/LP/exact-cover lookahead needed before committing row6/7.",
+  "last_experiment": "MOLS10-E036-ALL-156-CENTRALIZER-ORBITS-SIX-ROW-WITNESSES-AND-K7-LOOKAHEAD",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -71,7 +71,9 @@
     "E031: 12 independent exact rational residual-triangle Farkas duals on 12 fixed order-10 five-row prefixes; standalone JS rechecks 12/12; all local not unrestricted.",
     "E032: 15 fixed k4 residual triangle LP-integrality-gap states independently replayed; seed131 index34 deletion-minimal 87-edge integral UNSAT core; all fixed-prefix only. Full source/results bundle uploaded to Google Drive Math Agent.",
     "E033: globally sound row1 conjugacy reduction: n10 148329 normalized A second-row derangements collapse to 12 canonical cycle types; centralizer action on B row1 yields 162959 orbits from 65239993856 labeled (f,g) pairs. Two independent exact orbit BFS and Burnside/permanent algorithms agree for all 12; 400 randomized positive controls PASS; n10 12x120001-node runs UNKNOWN_BUDGET.",
-    "E034C: all 210 four-row subsets of specified Egan-Wanless near-triple independently enumerated; 39 pairwise valid and 171 immediately invalid; all 39 valid anchors independently excluded by 600-row exact integer Farkas certificates; 94,572 candidate columns checked in standalone Node.js; min positive dual sum 8475, max candidate sum -7. Conditional only: any aligned repair must change at least one entry in >=7 distinct row indices; global 3-MOLS(10) OPEN. Exact certificate commit f6697583f078169896914b8b8e755eaa845d9cdf, independent verifier commit 4e429c7de39b2ec8e24fc8e32c5b007509324a3d, report commit 4da2ac120018e6f166675909f1e61ae0d42d3fd1."
+    "E034C: all 210 four-row subsets of specified Egan-Wanless near-triple independently enumerated; 39 pairwise valid and 171 immediately invalid; all 39 valid anchors independently excluded by 600-row exact integer Farkas certificates; 94,572 candidate columns checked in standalone Node.js; min positive dual sum 8475, max candidate sum -7. Conditional only: any aligned repair must change at least one entry in >=7 distinct row indices; global 3-MOLS(10) OPEN. Exact certificate commit f6697583f078169896914b8b8e755eaa845d9cdf, independent verifier commit 4e429c7de39b2ec8e24fc8e32c5b007509324a3d, report commit 4da2ac120018e6f166675909f1e61ae0d42d3fd1.",
+    "E036: all 156 centralizer g-orbits (440192 legal g) for canonical f type 2+2+2+2+2 have independently replayed six-row 3-square partial witnesses with Latin row/column and overlays 60/60/60; canonical witness SHA256 5b198704a6cd24cae9ba57b7f938ce121aba182df1fc78738d39ab92a2aff66f. Restricted constructive theorem only.",
+    "E036: fixed five-row prefixes with 3093 sixth-row choices: 2 seven-row SAT (70/70/70), 3091 exact seventh-row UNSAT for FIXED six-row prefixes; both seven-row witnesses have zero-support 8th-row obstruction (133/156 mandatory demands), independently checked. Not whole-orbit UNSAT."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -146,13 +148,17 @@
     "research/mols10/E035_verify_sparse_dual.js",
     "research/mols10/E035_verify_hall.js",
     "research/mols10/E035_z3_ctypes.py",
-    "research/mols10/E035_local_search.py"
+    "research/mols10/E035_local_search.py",
+    "research/mols10/E036_reproduce.py",
+    "research/mols10/E036_verify.js",
+    "research/mols10/E036_lookahead_reproduce.py",
+    "research/mols10/E036_verify_k7.js"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T12:15:00Z",
+  "last_run_utc": "2026-11-02T12:52:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -175,13 +181,14 @@
     "research/mols10/E031_REPORT.md",
     "research/mols10/E032_REPORT.md",
     "research/mols10/E033_REPORT.md",
-    "research/mols10/E035_REPORT.md"
+    "research/mols10/E035_REPORT.md",
+    "research/mols10/E036_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "No order10 100/100/100 witness or complete unrestricted proof. E035 LP/dual/Hall results apply only to biased samples or specific 4/6-row prefixes; not global coverage. Z3 n6/n10 UNKNOWN at 15s; stochastic best 58.3095/60 is LP fractional bound, not a near-triple score. Full E035 bundle in Google Drive; branch report/scripts/summary committed.",
+  "limitations": "E036 constructive theorem covers only f cycle type 2^5 and six rows, not full ten; 156 six-row witnesses do not imply a complete triple. 3091 k7 and two k8 obstructions are fixed-prefix only, not g-orbit exclusions. 50-restart exploratory batch interrupted; no complete output. No order10 100/100/100 witness or unrestricted proof.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
-  "external_status_review": "2026-11-02 ~10:20 UTC: checked BKS EJC 2026/arXiv2503.10504, Barnoff–Bright arXiv2605.02132, Keita 2026 PhD thesis, Gill–Wanless arXiv2204.10996; no independently checkable unrestricted claim found. Absence not proof.",
-  "current_math_result": "GLOBAL OPEN. E035: E034 6-row candidate has 120 uncovered pair edges and a 40-triangle symbol-only integral cover but 78 column-aware exact-cover constraints with zero candidates (40 pair,38 col-symbol), hence fixed prefix excluded. 1600 biased 4-row samples: 1210 unit UNSAT, 390 column-aware LP infeasible; no global inference. Hall 4 column-symbol demands vs only 3 pair neighbors verified independently. Four sparse exact integer duals of size3,5,7,9 verified by independent Node.js. Z3 complete three-square CNF n4 SAT independently verified; n6,n10 15s UNKNOWN. Valid partial-row replacement search raised column-fractional packing 54.9958 to58.3095<60; no order10 witness.",
+  "external_status_review": "2026-11-02 ~12:47 UTC: targeted primary review Bright–Keita–Stevens EJC 2026-02-13/arXiv2503.10504v2; Barnoff–Bright arXiv2605.02132v2 (2026-07-04); no independently verified unrestricted solution found.",
+  "current_math_result": "GLOBAL OPEN. E036 independently verified 156/156 canonical g orbit representatives for f=(01)(23)(45)(67)(89) have 6-row partial 3-MOLS with exact row/column Latin and 60/60/60 overlays. Independent JS enumerated all 440192 legal g and confirmed disjoint orbit coverage. Deterministic 156-witness SHA256 5b198704a6cd24cae9ba57b7f938ce121aba182df1fc78738d39ab92a2aff66f. Bounded fixed-prefix lookahead: 3093 row6 SAT, 3091 row7 exact fixed-prefix UNSAT, 2 row7 SAT (70/70/70), both row8 excluded by 133/156 zero-support demands. No 100/100/100 witness, no unrestricted negative certificate.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -207,5 +214,6 @@
   ],
   "e034_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E034_REPORT.md",
   "e034_drive_bundle": "https://drive.google.com/file/d/1rEuR0rz2m1YfLxVrTx91tqCZxPK5TOfb/view",
-  "e035_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E035_REPORT.md"
+  "e035_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E035_REPORT.md",
+  "e036_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E036_REPORT.md"
 }
