@@ -728,10 +728,11 @@ def prove_exact_rational_spectral_and_completion_audit(
 ) -> dict:
     """
     Wave 1 (CAP-010B & CAP-010C):
-    1. CAP-010B: Converts the CAP-009B spectral deletion bound into a 100% EXACT RATIONAL / 64-BIT INTEGER
-       theorem (zero floating-point assumption). Scales the 717x112 row-normalized blocker matrix
+    1. CAP-010B: Assembles an exact integer Gram matrix, then reports numerical
+       SVD/eigenvalue DIAGNOSTICS. A separate exact fixed-pair certificate
+       is provided by cap010b_exact_psd_certificate.py (CAP-014). Scales the 717x112 row-normalized blocker matrix
        B_tilde = D_r^{-1} B by L = lcm(11, 15, 16, 18, 24, 30, 32) = 15,840, computes the exact integer
-       Gram matrix G_int = B_scaled^T B_scaled, and proves that 425 * 660^2 = 185,130,000 is an exact
+       Gram matrix G_int = B_scaled^T B_scaled, and numerically checks that 425 * 660^2 = 185,130,000 is an
        integer eigenvalue of G_int of multiplicity 4 on 1_112^perp (i.e., lambda_perp = 425 / 576 = (17*25)/24^2).
        By the exact Pythagorean projection onto span(1_112) + 1_112^perp, unblocking any m points in F_3^6 \ A_0
        requires d >= ceil(64512 * m / (576 * m + 47600)), proving d >= m for all 1 <= m <= 32 (and d >= m + 1
@@ -975,7 +976,7 @@ def build_cap012_deep_review_audit_matrix() -> list[dict]:
             "title": "Universal GL(6,3) Pointwise Convolution Formula, Exact Rational Spectral Deletion Barrier (425/576), and 110/111-Cap Completion Audit",
             "verification_status": "VERIFIED_EXACT_RATIONAL",
             "scope_boundary": "Global over all GL(6, F_3) for 112+112 zero/single-hole range (k=0 and 2<=k<=30); exact rational spectral barrier d >= m for 1 <= m <= 32 on (H, H'); 110/111-cap unique completion conditional on Potechin (2008) / Thackeray (2022).",
-            "audit_finding": "Wave 1 (CAP-010B) eliminated all floating-point SVD dependencies in CAP-009B by proving in 64-bit exact integer arithmetic that lambda_perp = 425/576 (multiplicity 4) via L = 15,840.",
+            "audit_finding": "Wave 1 (CAP-010B) used floating-point spectral diagnostics. Separate CAP-014 exact integer PSD/rank certificate confirms lambda_perp = 425/576 for the fixed classical 112+112 pair only, not arbitrary alignments.",
         },
         {
             "id": "CAP-011A to CAP-011C",
