@@ -290,3 +290,11 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0] Confirm GitHub CI for new CAP-019 verifier; ensure all 28 cases and Fourier replay pass on branch. Obtain separate human/mathematical referee and priority literature review before external claim.
 - [P1] Formalize finite 211-triple/28-quadratic-class certificate in Lean (or a second independent implementation) and write standalone publication-grade proof.
 - [GLOBAL] If CAP-019 withstands review, exact r3(7) remains OPEN with 236<=r3(7)<=287; pivot to lower-bound improvements or stronger global upper-bound cuts. Do not stop automation without matching rigorous bounds.
+
+
+## CAP-020 — antipodal secant separation and refined tangent bound (2026-11-02)
+- [EXACT PROOF + LOCAL CPU 5/5 PASS / CI PENDING] General lemma: if H=-H is a cap, z!=0, then the endpoints of all secants through z are in distinct +/- orbits. Canonical centered112 has 10 secants at each of its 616 nonzero outsiders; a second centered112 cap replacing any point must delete >=20 original points. Hence distinct centered112 intersection <=92 and distinct dual high-direction overlap m*<=46. Report CAP020_ANTIPODAL_SECANT_GAP_2026-11-02.md; test_cap020_antipodal_secant_gap.py.
+- [REFINED CAP-017B] For completed 112-slice pairs with total deletion d=0..4, third-slice bounds sharpen [57,59,61,63,64] -> [56,58,59,61,63]; equal duals m*=56 special case c<=d. Confirm CI before promoting status. This does not change M>=287 allowed profile counts, and does not improve global 287 candidate.
+- [P0 REFEREE] Prove full CAP-017B as a standalone theorem (especially simultaneous affine centering, z=0 and m*=56, duality, 110/111 completion); independently inspect Thackeray 2022 Thm3.9 proof dependencies and machine-search steps. New 287 upper bound remains provisional.
+- [P0 GLOBAL] Balanced/no-112-slice regime dominates exact r3(7); derive new 5D codim-2 incidence / Fourier / proof-logged SAT constraints. Avoid over-investment in local 112 overlap improvements without a quantified global certificate gain.
+- [P1] Investigate whether antipodal deletion >=20 can be strengthened by *joint* constraints for all outsider points of second cap; proof must cover all GL6, not sample shears. Literature novelty not established.
