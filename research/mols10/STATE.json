@@ -61,7 +61,8 @@
     "E024: primary-source Appendix UW, UX, VX, WW, WX, XX P,Q each Latin; Z=P^-1 Q Latin and orthogonal to Q (100/100); common transversals exactly 0,0,0,1,0,0 by independent bitmask DFS and exhaustive 10! enumeration of each fixed pair. All six UNSAT_FIXED_PAIR only; combined with E023 SX/UU all eight specific published pairs excluded; NOT family-wide or unrestricted.",
     "E024: WW only common transversal row-to-column [9,4,7,2,8,6,0,5,3,1]; GF4 16/16/16 positive control; source PDF direct download DNS failure, used PDF page screenshots/text; no DRAT/FRAT certificate.",
     "E025: exhaustive proper two-symbol component-flip neighborhoods of six specific Appendix pairs: 1446 single-square flips and 87704 coupled flips; none orthogonal. Both Python and independent JavaScript enumeration agree. WW four best double-flip pairs only 98/100, other five max 96/100; no new pair, let alone triple.",
-    "E025: bounded one-extra-flip pilot on best double-flip candidates: 96768 trials, zero orthogonal; WW expanded all 96 double candidates with >=96 overlay, 26184 third-flip trials, zero orthogonal. These follow-up sets overlap. Not family-wide, not unrestricted."
+    "E025: bounded one-extra-flip pilot on best double-flip candidates: 96768 trials, zero orthogonal; WW expanded all 96 double candidates with >=96 overlay, 26184 third-flip trials, zero orthogonal. These follow-up sets overlap. Not family-wide, not unrestricted.",
+    "E025 independent JS replay persisted and executed directly from committed source: 87704 coupled tests and six maxima/counts exactly match Python; commit 5fc7252b6199144c2154309e47d28b2040dc8704."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -110,7 +111,8 @@
     "research/mols10/test_E023_SX_pair_replay.py",
     "research/mols10/E023_UU_pair_replay.py",
     "research/mols10/E023_UU_RESULTS.json",
-    "research/mols10/E025_coupled_trades.py"
+    "research/mols10/E025_coupled_trades.py",
+    "research/mols10/E025_independent_replay.js"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
