@@ -1,3 +1,10 @@
+## CAP-005C update (2026-11-02 00:02 UTC)
+- CAP-005B [CI GREEN run 41364749101] Five-fiber necessary-only gate exactly reproduced; it did not by itself exclude 237.
+- CAP-005C [LOCAL EXACT RATIONAL / CI PENDING] All 80,730 five-fiber edit neighborhoods excluded: 80,418 by <=9 outsiders vs >=10 deletions; 312 by independently rational-checked LP duals for full triple constraints. Restricted <=5-fiber optimum=236, not global. See cap005_k5_rational_duals.py and CAP005_K5_RATIONAL_DUAL_CERTIFICATE_2026-11-02.md; CI should publish 312 duals.
+- CAP-005D [P0] Explore >=6 fibers or genuinely non-coordinate/nonlocal occupancy-changing templates; do not repeat <=5 search.
+- CAP-007 [P1] Certified global upper bound remains essential; preprint 288 not independently audited.
+- META-AUDIT: Strong local rigidity does not determine r3(7). Novelty unverified.
+
 ## CAP-005B five-fiber pilot (2026-11-01 23:59 UTC)
 - CAP-005A [CI GREEN run 41364610380] Rigorous <=4-fiber no-improvement theorem confirmed.
 - CAP-005B [LOCAL EXACT NECESSARY GATE; CI PENDING] All 80,730 five-fiber releases examined; 8 admit 22 outsiders, so simple secant/deletion bound no longer excludes improvement. This is not a feasible 237 construction. Replay --max-k 5; prioritize these 8 for exact SAT/MILP with full triple constraints and independent witness verification.

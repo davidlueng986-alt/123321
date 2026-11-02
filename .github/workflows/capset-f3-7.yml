@@ -68,5 +68,15 @@ jobs:
           python research/capset_f3_7/generate_calderbank_fishburn.py --out /tmp/calderbank_fishburn_236.txt
           cmp research/capset_f3_7/candidates/calderbank_fishburn_236.txt /tmp/calderbank_fishburn_236.txt
           python research/capset_f3_7/verify_capset.py /tmp/calderbank_fishburn_236.txt
+      - name: Install CPU-only rational dual search dependency
+        run: python -m pip install --disable-pip-version-check scipy==1.16.3
+      - name: Certify all 312 five-fiber LP duals by exact fractions
+        run: python research/capset_f3_7/cap005_k5_rational_duals.py --out /tmp/cap005_k5_rational_duals.json
+      - name: Preserve all 312 rational dual certificates
+        uses: actions/upload-artifact@v4
+        with:
+          name: capset-k5-rational-duals
+          path: /tmp/cap005_k5_rational_duals.json
+          retention-days: 30
       - name: Check complete-cap saturation and replacement barrier
         run: python research/capset_f3_7/analyze_secants.py research/capset_f3_7/candidates/calderbank_fishburn_236.txt
