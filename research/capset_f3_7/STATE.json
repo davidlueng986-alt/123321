@@ -691,5 +691,37 @@
     "status": "LOCAL_CXX_EXACT_CI_PENDING",
     "scope": "tested relative transforms only, not GL6-exhaustive",
     "global_bound_improved": false
+  },
+  "cap007j_moment_gate": {
+    "scope": "ALL hypothetical 237-point caps in F3^7, not just a local/symmetry family",
+    "theorem": "Every 237-point cap has some affine 6D hyperplane section of size >=89",
+    "proof": "Exact 1093-direction second/third moments imply sum_v(W_v+9V_v)=-35076; each direction with all slices<=88 would have W_v+9V_v>=0",
+    "second_moment": 20618289,
+    "third_moment": 1651763205,
+    "centered_variance_total": 154050,
+    "centered_cubic_total": -1421526,
+    "contradiction": -35076,
+    "unordered_profiles_checked": 75,
+    "moment_relaxation_cannot_force_90": true,
+    "independent_js_236_witness": {
+      "source_blob_sha": "bb75562499071945a07273e439a892c55a8d6b9f",
+      "points": 236,
+      "distinct": true,
+      "invalid_pairs": 0,
+      "normal_directions": 1093,
+      "second_moment": 20445388,
+      "third_moment": 1631114708,
+      "max_slice": 112
+    },
+    "script": "research/capset_f3_7/cap007j_hyperplane_moment_gate.py",
+    "test": "research/capset_f3_7/test_cap007j_hyperplane_moment_gate.py",
+    "report": "research/capset_f3_7/CAP007J_HYPERPLANE_THIRD_MOMENT_89_GATE_2026-11-02.md",
+    "status": "EXACT_ELEMENTARY_PROOF_LOCAL_PYTHON_PASS_JS_236_AUDIT_PASS_CI_PENDING",
+    "global_numeric_upper_bound_improved": false,
+    "lower_bound_improved": false,
+    "novelty_established": false,
+    "seed": null,
+    "gpu_used": false,
+    "independent_review_status": "not independently peer-reviewed; proof self-contained"
   }
 }
