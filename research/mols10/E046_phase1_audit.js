@@ -29,7 +29,7 @@ for(const rec of data.cases){
  if(cert.kind==="ZERO"){
   const e=cert.demand,resource=e[0]==="P"?100*e[1]+10*e[2]+e[3]:300+100*e[1]+10*e[2]+e[3];
   // New case is full-support: the original zero-support demand cannot remain an obstruction.
-  assert(!usedNew[resource]);let supported=false;
+  if(usedNew[resource]){sourceZeroInvalid++;continue;}let supported=false;
   outer2:for(let c=0;c<10;c++)for(let a=0;a<10;a++)for(let b=0;b<10;b++)for(let z=0;z<10;z++){
    const q=R(c,a,b,z);if(q.some(e=>usedNew[e]))continue;if(q.includes(resource)){supported=true;break outer2;}
   }
