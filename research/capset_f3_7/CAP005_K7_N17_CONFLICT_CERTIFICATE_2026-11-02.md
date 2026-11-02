@@ -25,3 +25,7 @@ Independent JS cross-check performed before commit: enumerated all 2,946,160 sev
 ## Meta-audit / next experiment
 
 The seven-fiber local-search line can exclude neighborhoods but cannot certify global r3(7), even if completed. Next try N=18..24 representatives using matching/clique bounds, exact rational duals and deletion-cover certificates; cap CPU budgets. Reserve effort for nonlocal alternative partitions and certified global upper bounds. Novelty in literature unestablished; 2026-10-03 public tracker still lists 236 <= r3(7) <= 291, and Thackeray's 2022 arXiv:2206.09804 claims <=288 without independent project review. Do not claim exact r3(7).
+
+## CI verification (2026-11-02 08:52 UTC)
+
+GitHub Actions run https://github.com/davidlueng986-alt/123321/actions/runs/41415696843 completed **SUCCESS** at source commit 7f7a110768df27ccf76042c38317720b3c1421c6. Both generator and independent arithmetic checker passed for all 37 N=17 orbit representatives, covering 576 neighborhoods. Artifact (30-day retention): https://github.com/davidlueng986-alt/123321/actions/runs/41415696843/artifacts/13128405069. The claim remains restricted to the specified 236-point cap and seven-fiber modification family.
