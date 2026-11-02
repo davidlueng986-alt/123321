@@ -1,0 +1,100 @@
+{
+  "source_near_triple_overlays": [
+    100,
+    100,
+    91
+  ],
+  "valid_row_subset_counts": {
+    "4": 39,
+    "5": 9,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0
+  },
+  "all_39_four_row_inputs_latin_and_three_overlays_40": true,
+  "full_search_prefixes": 39,
+  "completed_unsat_reports": 39,
+  "near_search_nodes_total": 497846358,
+  "near_search_wall_summed": 173.3804,
+  "six_root_column_support_obstructions": [
+    {
+      "index": 9,
+      "rows": [
+        0,
+        1,
+        7,
+        8
+      ],
+      "unsupported_pair": null,
+      "column_aware_unit": "UNIT_UNSAT",
+      "candidate_triples": 198
+    },
+    {
+      "index": 16,
+      "rows": [
+        0,
+        2,
+        8,
+        9
+      ],
+      "unsupported_pair": null,
+      "column_aware_unit": "UNIT_UNSAT",
+      "candidate_triples": 198
+    },
+    {
+      "index": 21,
+      "rows": [
+        0,
+        3,
+        7,
+        9
+      ],
+      "unsupported_pair": null,
+      "column_aware_unit": "UNIT_UNSAT",
+      "candidate_triples": 198
+    },
+    {
+      "index": 23,
+      "rows": [
+        0,
+        4,
+        5,
+        7
+      ],
+      "unsupported_pair": null,
+      "column_aware_unit": "UNIT_UNSAT",
+      "candidate_triples": 192
+    },
+    {
+      "index": 24,
+      "rows": [
+        0,
+        4,
+        6,
+        9
+      ],
+      "unsupported_pair": null,
+      "column_aware_unit": "UNIT_UNSAT",
+      "candidate_triples": 192
+    },
+    {
+      "index": 26,
+      "rows": [
+        0,
+        5,
+        6,
+        8
+      ],
+      "unsupported_pair": null,
+      "column_aware_unit": "UNIT_UNSAT",
+      "candidate_triples": 192
+    }
+  ],
+  "global_cycle_classes_tested": 12,
+  "global_unknown": 12,
+  "global_solutions": 0,
+  "source_sha256": "33ba4751dca8dc59a3805e31aa5df839050892d2cc7341f37f63317a22902662",
+  "note": "Exhaustive search status derives from a single C++ implementation, not an independently certified full proof. The six zero-node prefix obstructions were independently checked."
+}
