@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-010A: every 110/111 six-dimensional cap extends uniquely to canonical maximal112 (published Thackeray 110 extension + Potechin 112 uniqueness + exact 10-secants covering); sound global conditional overlap cuts k>=30 for 112+111+14, k>=28 for 112+110+15. CI pending; no global bound.",
-  "next_experiment": "Fix CAP-011A signed quadratic form + independently certified rank/PSD for CAP-010B; replay CAP-010C and CAP-008C; then global 5D incidence and no-112-hyperplane SAT.",
-  "last_run_id": "CAP-013-CROSS-AGENT-INTEGRATION-AUDIT-2026-11-02",
-  "last_run_result": "INDEPENDENT_EXACT_ARITHMETIC_VALIDATED_CAP011B_CORRECTED_CAP011A_SIGN_GAP_CAP010B_EXACT_PROOF_PENDING",
+  "current_hypothesis": "CAP-014-PSD exact restricted 425/576 spectral certificate for classical 112+112 slices; no global 237 exclusion. CAP-011A sign bug still open in Drive source; global no-112 hyperplane branch remains unaddressed.",
+  "next_experiment": "Confirm CAP-014-PSD CI green; correct CAP-011A sign at source with independent replay; then global 89..111-slice 5D incidence/SAT and audit Drive CAP-014A/B/C separately.",
+  "last_run_id": "CAP-014-PSD-2026-11-02",
+  "last_run_result": "EXACT_INTEGER_PSD_RANK_107_NULLITY_4_FIXED_112_PAIR_LOCAL_PASS_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -72,7 +72,8 @@
     "CAP-007J2-LOCAL",
     "CAP-007J3-LOCAL",
     "CAP-007K-LOCAL",
-    "CAP-010A-LOCAL"
+    "CAP-010A-LOCAL",
+    "CAP-014-PSD-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41415696843",
   "baseline_secant_audit": {
@@ -94,7 +95,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T12:48:29Z",
+  "last_updated_utc": "2026-11-02T13:00:42.605Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -908,5 +909,39 @@
     "cap010c_alignment_census": "PENDING_INDEPENDENT_REPLAY",
     "novelty": "NOT_ESTABLISHED",
     "global_r3_7_bound_improved": false
+  },
+  "exact_psd_certificate": {
+    "id": "CAP-014-PSD",
+    "status": "LOCAL_EXACT_PASS_CI_PENDING",
+    "scope": "Fixed classical Calderbank-Fishburn 112+112 slices; first slice frozen; second-slice deletions only",
+    "blocked_rows": 717,
+    "holes": 12,
+    "degree_histogram": {
+      "11": 32,
+      "15": 192,
+      "16": 160,
+      "18": 240,
+      "24": 60,
+      "30": 32,
+      "32": 1
+    },
+    "integer_scale": 15840,
+    "scaled_lambda": 185130000,
+    "lambda_perp": "425/576",
+    "difference_matrix_rank": 107,
+    "difference_matrix_nullity": 4,
+    "exact_bareiss_symmetric_swaps": 88,
+    "independent_modular_rank_prime": 1000000007,
+    "independent_modular_rank": 107,
+    "integer_deletion_gate": "d >= ceil(64512*m/(576*m+47600))",
+    "m_1_to_29_requires_d_ge_m_plus_1": true,
+    "m_1_to_32_requires_d_ge_m": true,
+    "local_stdlib_test_pass": true,
+    "ci_run_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41449195256",
+    "script": "research/capset_f3_7/cap010b_exact_psd_certificate.py",
+    "test": "research/capset_f3_7/test_cap010b_exact_psd_certificate.py",
+    "report": "research/capset_f3_7/CAP014_EXACT_PSD_425_OVER_576_2026-11-02.md",
+    "global_bound_improved": false,
+    "novelty_established": false
   }
 }
