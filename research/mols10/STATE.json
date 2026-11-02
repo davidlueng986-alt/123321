@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "E024: obtain a source-verified decoded SAT orthogonal pair from one of Myrvold's eight residual types; independently convert/validate arrays, enumerate common transversals, and exact-cover test third-square extension. If pair generation blocked, certify VX Z4 UNSAT preprocessing; never claim global resolution.",
-  "current_hypothesis": "H24-MYRVOLD-RESIDUAL-EIGHT-SOURCE-VERIFIED-PAIR-EXTENSION",
-  "last_experiment": "MOLS10-E023",
+  "next_action": "E024: transcribe and independently validate remaining six published Myrvold Appendix TRPs UW, WW, VX, UX, WX, XX; derive Z=P^-1 Q, verify exact 100-pair orthogonality, enumerate common transversals with independent 10! replay, attempt third-square exact cover only if >=10 transversals with full cell coverage. No inference beyond each fixed pair.",
+  "current_hypothesis": "H24-REPLAY-SIX-REMAINING-PUBLISHED-MYRVOLD-APPENDIX-PAIRS",
+  "last_experiment": "MOLS10-E023-SX-UU-APPENDIX-REPLAY",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -56,7 +56,8 @@
     "E021: GF4 16/16/16 positive control and 8/8 unary roots SAT; initial list-filtering timeout and CLI TypeError preserved in E021_REPORT.md.",
     "E022: Egan fixed A, 1080 transversals; 114 unary-surviving roots; 1647 disjoint survivor pairs; pair-root C exact cover 45 SAT / 1602 exhaustive UNSAT / 0 UNKNOWN, independent SciPy/HiGHS MILP confirms all 1647. All pairs have full cell support, so support-only pruning is vacuous here.",
     "E022: 45 pair-SAT roots involve only 14 B-transversals whose union misses 12 cells [1,2,3,18,29,37,44,55,66,70,80,90]; independently verified fixed-Egan-A conditional exclusion; no unrestricted result.",
-    "E023: source-audited Myrvold 4x4 row-compatibility enumeration: Z4 k=1,2,3,4 counts 16/48/32/0 vs V4 16/48/32/8; parity proof rules out Z4 for any four-white row, hence VX Z4 branch. For V4 each compatible two-white partial has unique virtual four-white completion (48/48). This is local restricted-family preprocessing, not an order10 triple result."
+    "E023: source-audited Myrvold 4x4 row-compatibility enumeration: Z4 k=1,2,3,4 counts 16/48/32/0 vs V4 16/48/32/8; parity proof rules out Z4 for any four-white row, hence VX Z4 branch. For V4 each compatible two-white partial has unique virtual four-white completion (48/48). This is local restricted-family preprocessing, not an order10 triple result.",
+    "E023: primary EJC 2026 Appendix SX and UU 10x10 transversal-representation pairs independently transcribed. For each, Z=P^-1 Q and Q are exactly Latin and orthogonal overlay100. Independent DFS and full 10! permutation replay find ZERO common transversals for BOTH fixed pairs; each specific pair cannot extend to a triple. Does not exclude either family or unrestricted problem."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -98,13 +99,19 @@
     "research/mols10/E020_milp_replay.py",
     "research/mols10/E020_RESULTS.json",
     "research/mols10/E023_subsquare_audit.py",
-    "research/mols10/E023_RESULTS.json"
+    "research/mols10/E023_RESULTS.json",
+    "research/mols10/test_E023_subsquare_audit.py",
+    "research/mols10/E023_SX_pair_replay.py",
+    "research/mols10/E023_SX_RESULTS.json",
+    "research/mols10/test_E023_SX_pair_replay.py",
+    "research/mols10/E023_UU_pair_replay.py",
+    "research/mols10/E023_UU_RESULTS.json"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T02:49:00Z",
+  "last_run_utc": "2026-11-02T02:52:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -121,7 +128,7 @@
     "research/mols10/E023_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "Global 3-MOLS(10) OPEN. E023 is a finite 4x4 local compatibility lemma for Myrvold residual types, NOT a SAT solve of a residual order10 pair, no 100/100/100 witness or unrestricted certificate. Source clone failed DNS but connected GitHub read succeeded. No CI yet for E023.",
+  "limitations": "Global 3-MOLS(10) OPEN. E023 source-published SX and UU are only TWO fixed-pair extension exclusions, each with 0 common transversals. No unrestricted coverage; other six Appendix examples not yet replayed. The VX/Z4 parity obstruction was already explicitly mentioned in the source paper (not novel). Local tests passed; E023 GitHub CI not yet verified.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
   "external_status_review": "2026-11-02 ~02:47 UTC: checked Bright–Keita–Stevens EJC 2026-02-13, Barnoff–Bright arXiv:2605.02132v2 2026-07-04, and targeted fresh searches. No independently verifiable unrestricted solution found; search absence not proof.",
   "current_math_result": {
@@ -149,7 +156,10 @@
     "e022_egan_pair_root_supported_B_roots": 14,
     "e022_egan_pair_root_uncovered_cells": 12,
     "e023_vx_z4_local_obstruction": true,
-    "e023_v4_two_white_unique_completion": 48
+    "e023_v4_two_white_unique_completion": 48,
+    "e023_appendix_fixed_pair_SX_common_transversals": 0,
+    "e023_appendix_fixed_pair_UU_common_transversals": 0,
+    "e023_appendix_source_verified_pairs": 2
   },
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
