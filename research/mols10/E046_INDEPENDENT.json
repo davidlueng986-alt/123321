@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "source_cases": 570,
+  "results": {
+    "1": {
+      "valid": 1484,
+      "zero_support": 115,
+      "positive_support": 1369
+    },
+    "2": {
+      "valid": 1342,
+      "zero_support": 110,
+      "positive_support": 1232
+    },
+    "3": {
+      "valid": 612,
+      "zero_support": 51,
+      "positive_support": 561
+    },
+    "4": {
+      "valid": 1371,
+      "zero_support": 114,
+      "positive_support": 1257
+    },
+    "5": {
+      "valid": 626,
+      "zero_support": 46,
+      "positive_support": 580
+    },
+    "6": {
+      "valid": 651,
+      "zero_support": 48,
+      "positive_support": 603
+    },
+    "7": {
+      "valid": 1342,
+      "zero_support": 94,
+      "positive_support": 1248
+    }
+  }
+}
