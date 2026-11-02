@@ -110,5 +110,17 @@ jobs:
           name: capset-k6-clique-cover-680
           path: /tmp/cap005_k6_clique_cover.json
           retention-days: 30
+      - name: Generate 848 exact-rational six-fiber LP dual certificates (CPU)
+        run: OPENBLAS_NUM_THREADS=1 python research/capset_f3_7/cap005_k6_lp_dual_certificate.py --out /tmp/cap005_k6_lp_duals.json
+      - name: Independently verify 848 rational dual certificates against F3 arithmetic
+        run: |
+          python research/capset_f3_7/cap005_k6_lp_dual_check.py /tmp/cap005_k6_lp_duals.json --previous /tmp/cap005_k6_clique_cover.json
+          sha256sum /tmp/cap005_k6_lp_duals.json
+      - name: Archive 848 six-fiber rational dual certificates (restricted theorem only)
+        uses: actions/upload-artifact@v4
+        with:
+          name: capset-k6-rational-duals-848
+          path: /tmp/cap005_k6_lp_duals.json
+          retention-days: 30
       - name: Check complete-cap saturation and replacement barrier
         run: python research/capset_f3_7/analyze_secants.py research/capset_f3_7/candidates/calderbank_fishburn_236.txt
