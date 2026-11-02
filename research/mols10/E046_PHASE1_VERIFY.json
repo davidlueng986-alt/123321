@@ -1,0 +1,8 @@
+{
+  "cases": 131,
+  "exact_duals": 131,
+  "numerical_lp_feasible": 0,
+  "unknown": 0,
+  "placements": 52920,
+  "status": "PASS"
+}
