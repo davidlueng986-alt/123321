@@ -11,9 +11,9 @@
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
   "current_hypothesis": "CAP-014-PSD exact restricted 425/576 spectral certificate for classical 112+112 slices; no global 237 exclusion. CAP-011A sign bug still open in Drive source; global no-112 hyperplane branch remains unaddressed.",
-  "next_experiment": "Hostile independent mathematical referee of CAP-017B and Thackeray/CAP010A completion, validate v6 287 proof end-to-end; confirm CI and literature novelty.",
-  "last_run_id": "CAP-019-INDEPENDENT-287-UPPER-BOUND-AUDIT-2026-11-02",
-  "last_run_result": "CANDIDATE_GLOBAL_UPPER_287_EXACT_28_CASE_CERTIFICATE_PASS_REFEREE_PENDING",
+  "next_experiment": "Hostile independent theorem referee CAP-017B/110-completion; target balanced 5D codim2 incidence cuts (new CAP020 does not change M>=287 profile certificate).",
+  "last_run_id": "CAP-020-ANTIPODAL-SECANT-GAP-2026-11-02",
+  "last_run_result": "GENERAL_ANTIPODAL_SECANT_LEMMA_PROVED_CANONICAL_616_EXACT_REPLAY_PASS_TANGENT_REFINED_NO_GLOBAL_BOUND",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -95,7 +95,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T14:00:00Z",
+  "last_updated_utc": "2026-11-02T14:55:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1014,5 +1014,50 @@
     "novelty_priority": "NOT_ESTABLISHED",
     "gpu_used": false,
     "seed": "none"
+  },
+  "cap020_antipodal_secant_gap": {
+    "date_utc": "2026-11-02",
+    "status": "EXACT_ELEMENTARY_LEMMA_AND_LOCAL_STDLIB_PASS_CI_PENDING",
+    "report": "research/capset_f3_7/CAP020_ANTIPODAL_SECANT_GAP_2026-11-02.md",
+    "verifier": "research/capset_f3_7/test_cap020_antipodal_secant_gap.py",
+    "general_lemma": "For H=-H cap, z!=0, endpoints of secants x+y+z=0 belong to distinct antipodal orbits",
+    "canonical_112_secant_histogram": {
+      "0": 112,
+      "10": 616,
+      "56": 1
+    },
+    "canonical_112_nonzero_outside_secants": 10,
+    "antipodal_orbit_separation_for_all_616_outside_nonzero": true,
+    "distinct_centered_112_intersection_max": 92,
+    "dual_high_frequency_common_projective_directions_max_distinct": 46,
+    "previous_cap017b_d0_to_d4_bounds": [
+      57,
+      59,
+      61,
+      63,
+      64
+    ],
+    "refined_cap017b_d0_to_d4_bounds": [
+      56,
+      58,
+      59,
+      61,
+      63
+    ],
+    "profile_count_change_for_M_291_to_287": false,
+    "independent_cpu_tests": "PASS_5_OF_5_0.157S",
+    "independent_shear_test": "PASS",
+    "random_seed": "none",
+    "gpu_used": false,
+    "paid_compute_used": false,
+    "novelty_established": false,
+    "global_bound_improved": false,
+    "github_ci": "PENDING",
+    "dependencies": [
+      "Potechin 2008 uniqueness of maximal112",
+      "CAP017B Fourier and tangent proof",
+      "Thackeray 2022 110-completion ONLY when applying to arbitrary110 slices"
+    ],
+    "unresolved": "Exact r3(7) OPEN; CAP019 287 candidate remains referee-pending"
   }
 }
