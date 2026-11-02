@@ -308,3 +308,8 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0 REFEREE] Independently audit CAP017B/110-completion dependencies and the provisional CAP019 <=287 theorem before external publication; all finite dual checks passing does not replace theorem review.
 - [LITERATURE PRIORITY] Thackeray 2022 Proposition 4.1(a) already yields third section<=34 for 112+112; Proposition 4.1(b) yields <=55 for two sections totaling >=222. These dominate CAP020 numerical bounds for d=0,1,2; integrate them in future low-M profile enumeration and revise novelty narrative. No priority established for CAP021.
 - [KNOWN WITNESS] Existing 236-point cap independently rechecked (27730 pairs, zero 3AP, 2187/2187 coverage). No >=237 witness or stronger accepted bound; r3(7) remains OPEN.
+
+
+### CAP-021 rank-2 Gaussian relaxation countermodel and CI policy addendum (2026-11-02 UTC)
+- [FALSIFIED / EXACT] Aggregate global S2/S3 moments + projective Gaussian Q rank/sign spectrum **still cannot exclude 287**: exact 8-profile formal histogram matches rank2 Q=x1²+x2² value counts (121,486,486) and moments, with no CAP017B-forbidden profile. It is NOT a cap witness. Focus on actual per-direction 5D incidence/geometry, not more aggregate-only LP.
+- [CI HYGIENE] Dedicated branch workflow now has concurrency cancel-in-progress; check final GitHub Actions result after latest commit. Local CAP021 Python stdlib 6/6 PASS; independent JS exact.
