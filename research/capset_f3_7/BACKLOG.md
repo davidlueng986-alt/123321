@@ -281,3 +281,12 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0] Global all-hyperplanes<=111 (no 112-slice) branch, together with five-dimensional incidence constraints and proof-logged SAT remains essential for exact r3(7).
 - [P1] Check CAP-015A 12-class slice census (full 1093 directions) against independent witness arithmetic; preserve distinction cross-slice holes vs actual third-slice cap possibilities.
 - [NOVELTY] Do not present group/fourier identities as new without external literature verification; classical Games graph historical.
+
+
+## CAP-019 v6 upper-bound referee and exact-certificate priority (2026-11-02)
+- [NEW CANDIDATE / CPU EXACT / CI PENDING] Independent finite certificate excludes all 28 quadratic rank classes at M=288, giving candidate global upper r3(7)<=287, conditional on CAP-017B common-tangent lemma, CAP-010A 111 completion and Thackeray 110-cap theorem. See CAP019_INDEPENDENT_287_UPPER_BOUND_AUDIT_2026-11-02.md and test_cap019_287_upper_bound_certificate.py. Do not promote to accepted published bound before independent theorem referee.
+- [CONFIRMED ERROR / CORRECTED] Drive v6 rank0 variance 185664 and slope 3016 are invalid; correct budget182304, valid slopes214/77. Preserve original Drive v6 source; report correction in ledger.
+- [P0 CRITICAL] Independent hostile audit of CAP-017B Fourier inversion, simultaneous affine shear, common high-frequency tangent double count, especially m*=0 and m*=56 with d>0; independently prove 110/111 completion dependency and verify Thackeray 2022 theorem's proof not just abstract.
+- [P0] Confirm GitHub CI for new CAP-019 verifier; ensure all 28 cases and Fourier replay pass on branch. Obtain separate human/mathematical referee and priority literature review before external claim.
+- [P1] Formalize finite 211-triple/28-quadratic-class certificate in Lean (or a second independent implementation) and write standalone publication-grade proof.
+- [GLOBAL] If CAP-019 withstands review, exact r3(7) remains OPEN with 236<=r3(7)<=287; pivot to lower-bound improvements or stronger global upper-bound cuts. Do not stop automation without matching rigorous bounds.
