@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "Seek a structurally different four-row prefix passing six-class LP via constraint-guided dual-aware search, not further random greedy sampling. In parallel, symmetry-complete proof-producing SAT with independent replay; do not infer universal k4 obstruction from samples.",
-  "current_hypothesis": "E044 independent random derangement/MRV generator: 512 valid k4 partial triples spanning 11 first-square second-row derangement cycle types, 471 exact integer Farkas duals + 41 exact zero-support, independent Node verifier 512/512 and 200094 residual placements PASS; all 512 k3 parents numerically LP-feasible. This is a nonuniform fixed-prefix sample and does not exclude any complete orbit.",
-  "last_experiment": "MOLS10-E044-INDEPENDENT-RANDOM-K4-EXACT-FARKAS",
+  "next_action": "Optimize joint fourth-row and residual six-resource LP phase-I feasibility (not only support preservation), seeking one k4 LP-feasible prefix; in parallel unrestricted symmetry-complete proof-producing SAT with justified coverage and independent replay.",
+  "current_hypothesis": "E045 LP-guided fractional k3->k4 row rounding on 48 matched parents: 574 distinct valid fixed k4 prefixes, 544 exact integer Farkas certificates + 30 exact zero-support; independent JS 574/574 exact replay of 232513 candidates PASS. Matched random 576 k4: 75 zero-support vs guided 30/574, but neither approach found six-class LP-feasible k4. Nonuniform correlated samples; 0 full symmetry orbits excluded.",
+  "last_experiment": "MOLS10-E045-LP-GUIDED-K4-EXACT-DUAL",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41514534121",
   "last_verified_results": [
@@ -18,7 +18,8 @@
     "E042: 1548/1548 exact 4-row motif-embedding checks independently reproduced, only 3 source-self hits, 1545 negatives, zero marginal pruning beyond E039 LP; 0/162959 full orbits excluded.",
     "E043: 2184/2184 independently exact verified fixed-prefix nonextensions (2000 integer dual, 184 zero support), 870931 candidate placements, 370 affine positive controls; 0 global orbit exclusions.",
     "E044: 512 independently generated k4 fixed prefixes; 471 integer Farkas duals and 41 zero-support; independent Node.js exact replay of 200094 candidates 512/512 PASS, mutation rejected; 512 k3 parents numerical LP feasible; 0 full orbits excluded.",
-    "E044 remote independent GitHub Actions replay PASS attempt 2; full 512-case evidence committed 42dbc1ae9fd2a928c6f525d247dc820432b2d627."
+    "E044 remote independent GitHub Actions replay PASS attempt 2; full 512-case evidence committed 42dbc1ae9fd2a928c6f525d247dc820432b2d627.",
+    "E045: 574/574 valid fixed k4 prefixes exact certified (544 integer Farkas duals, 30 zero-support), 232513 legal placements checked by independent Node.js; mutation rejection PASS. Matched 48-parent randomized controls 75/576 zero-support vs guided 30/574, zero LP-feasible both; 0/162959 full orbits."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -101,13 +102,17 @@
     "research/mols10/E044_disjoint_probe.py",
     "research/mols10/E044_certify.py",
     "research/mols10/E044_verify.js",
-    "research/mols10/E044_k3_controls.py"
+    "research/mols10/E044_k3_controls.py",
+    "research/mols10/E045_guided.py",
+    "research/mols10/E045_certify.py",
+    "research/mols10/E045_verify.js",
+    "research/mols10/E045_random_control.py"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T19:53:17Z",
+  "last_run_utc": "2026-11-02T20:59:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -132,13 +137,14 @@
     "research/mols10/E033_REPORT.md",
     "research/mols10/E035_REPORT.md",
     "research/mols10/E036_REPORT.md",
-    "research/mols10/E044_REPORT.md"
+    "research/mols10/E044_REPORT.md",
+    "research/mols10/E045_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "E044 512 exact certificates are fixed-prefix only; nonuniform random sampling, 11/12 first-square cycle types, no entire orbit excluded. GitHub Actions independently regenerated and integer-replayed all 512, persisted full data in commit 42dbc1ae9fd2a928c6f525d247dc820432b2d627. Local ZIP also exists. Google Drive binary ZIP upload failed BLOCKED_FILE_REFERENCE, but Docs journal updated. k3 positive controls numerical only. E041 integer deletion pilot 8x4s timed out UNKNOWN.",
+  "limitations": "E045 is fixed-prefix only; 48 correlated k3 parents, 574 k4 guided samples and 576 matched random controls, no full orbit excluded. Random controls 501 LP-infeasible only numerical; 75 zero-support exact. GF9 200000 random prolongations yielded no valid k4 but not proof. Preliminary larger run and monolithic certificate run interrupted, incomplete outputs excluded. 574 exact certificates verified independently in local clean ZIP, full binary upload to Drive failed BLOCKED_FILE_REFERENCE; public GitHub has E045 source/report/summary but not all 574 certificate bytes unless separately committed.",
   "last_ci_result": "E044 GitHub Actions run 41514534121 attempt 2 SUCCESS; full independent Python/Node replay verified 512/512, 471 integer Farkas +41 zero-support, 200094 candidates, mutation rejected. Full regenerated E044_RESULTS.json/E044_CERTIFICATES.json/E044_K3_CONTROLS.json committed by Actions at 42dbc1ae9fd2a928c6f525d247dc820432b2d627. Attempt 1 failed because E035_column_residual.py was empty on GitHub; restored in 22296cab5d426beaa0e9c40fa90f426318409442; rerun passed.",
-  "external_status_review": "2026-11-02 19:49 UTC: checked Bright–Keita–Stevens EJC 33(1) #P1.30 (2026-02-13) and Barnoff–Bright arXiv:2605.02132v2 (2026-07-04); targeted web/arXiv search found no independently checkable unrestricted resolution.",
-  "current_math_result": "GLOBAL OPEN, 0/162959 complete orbits excluded. E044 512 new fixed k4 prefixes, raw ordered overlap 0 with E036-derived 2340, 471 exact duals and 41 exact zero-support, 512/512 integer replay. 512 k3 parents numerically LP feasible only. No 100/100/100.",
+  "external_status_review": "2026-11-02 20:52 UTC: checked Bright–Keita–Stevens EJC 33(1) #P1.30 (2026-02-13), Barnoff–Bright arXiv:2605.02132v2 (2026-07-04), targeted fresh arXiv/web search; no independently checkable unrestricted resolution found.",
+  "current_math_result": "GLOBAL OPEN, 0/162959 complete orbits excluded; E045 574 exact fixed-prefix obstructions with 544 duals and 30 zero-support, independent JS replay; no 100/100/100.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -189,5 +195,8 @@
   "e043_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E043_REPORT.md",
   "e043_generator_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E043_reproduce.py",
   "e043_verifier_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E043_verify_reproduced.js",
-  "e043_bundle_sha256": "f24a39e547d62d7ec55b054a9c61127d6742835d23918d05d86485e15d8a4538"
+  "e043_bundle_sha256": "f24a39e547d62d7ec55b054a9c61127d6742835d23918d05d86485e15d8a4538",
+  "e045_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E045_REPORT.md",
+  "e045_bundle_sha256": "ef323379084290153e73de60ea87127251a6286345e0e72f0da8028394e4593c",
+  "e045_archive_status": "Local clean ZIP verified, binary Google Drive upload attempted and failed BLOCKED_FILE_REFERENCE. GitHub source/report/summary committed; full 574 exact cert bytes remain in local bundle unless later uploaded."
 }
