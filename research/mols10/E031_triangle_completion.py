@@ -6,6 +6,7 @@ This deliberately IGNORES rows and columns; FEASIBLE is only necessary.
 Solver-complete INFEASIBLE excludes the fixed partial state, not n=10 globally.
 """
 import numpy as np, scipy.optimize as opt, scipy.sparse as sp
+from pathlib import Path
 P=((0,1),(0,2),(1,2))
 def analyse(S,n,mode='milp',max_seconds=2):
     k=len(S[0]);assert len(S)==3 and all(len(A)==k for A in S)
@@ -53,7 +54,7 @@ def analyse(S,n,mode='milp',max_seconds=2):
 
 if __name__=='__main__':
     import sys,json
-    sys.path.insert(0,'/mnt/data')
+    sys.path.insert(0,str(Path(__file__).resolve().parent))
     from E031_rowwise_5net import solve
     out=[]
     for n in (4,5,6,10):
