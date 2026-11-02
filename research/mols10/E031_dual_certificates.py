@@ -5,6 +5,7 @@ with sum_{e in E} w_e > 0 and sum_{e in each T} w_e <= 0 disproves
 any fractional exact cover A x=1, x>=0. Verified with exact fractions.
 """
 import json,sys
+from pathlib import Path
 from fractions import Fraction
 import numpy as np
 from scipy.optimize import linprog
@@ -64,9 +65,9 @@ def independently_replay(D):
     return {'exactly_verified':True,'triangles_checked':tested,'strictly_positive_dual_sum':str(total)}
 
 if __name__=='__main__':
-    x=[json.loads(z) for z in open('/mnt/data/E031_TRIANGLE_SEARCH.jsonl')][1]
+    x=[json.loads(z) for z in open(Path(__file__).resolve().parent / 'E031_TRIANGLE_SEARCH.jsonl')][1]
     out=[]
     for i,S in enumerate(x['triangle_survivor_samples']):
         z=certificate(S);z['sample_index']=i;z['independent_replay']=independently_replay(z)
         out.append(z);print(i,z['status'],z.get('dual_sum'),z.get('nonzero_weights'),flush=True)
-    open('/mnt/data/E031_DUAL_CERTIFICATES.json','w').write(json.dumps(out,indent=2))
+    open(Path(__file__).resolve().parent / 'E031_DUAL_CERTIFICATES.json','w').write(json.dumps(out,indent=2))
