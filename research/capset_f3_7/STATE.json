@@ -11,9 +11,9 @@
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
   "current_hypothesis": "CAP-026: Any hypothetical 285-point cap with every affine 6D section<=109 has nonzero barycenter and anisotropic rank-2 quadratic form on its 6D kernel. Exact formal moment+rank2 negative control survives; no new global bound. CAP-019 <=287 remains provisional pending independent Thackeray 110-cap classification referee.",
-  "next_experiment": "Simultaneous point-level shared 3D fibers across intersecting quotient lines, all nonradical Q directions, Thackeray 110 completion independent referee.",
-  "last_run_id": "CAP-028-4D-QUOTIENT-LINE-LIFTS-2026-11-02",
-  "last_run_result": "1080_LINE_BOUND_PASS_12_PROFILES_LOCALLY_LIFTABLE_285_COUNT_MODEL_SURVIVES_CI_PENDING",
+  "next_experiment": "Confirm CAP029 GitHub CI success; then tackle simultaneous shared-fiber point-level compatibility and independent 110-cap completion referee.",
+  "last_run_id": "CAP-029-4D-LIFT-CI-REFEREE-2026-11-02",
+  "last_run_result": "CAP028_CI_FAILED_17_NOT_19_WITNESS_REPAIRED_BY_TWO_EXACT_POINTS_LOCAL_CHECK_PASS_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -75,7 +75,8 @@
     "CAP-010A-LOCAL",
     "CAP-014-PSD-LOCAL",
     "CAP-022-LOCAL",
-    "CAP-023-LOCAL"
+    "CAP-023-LOCAL",
+    "CAP-029-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41486369075",
   "baseline_secant_audit": {
@@ -97,7 +98,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T22:56:00Z",
+  "last_updated_utc": "2026-11-02T23:52:46Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1384,5 +1385,29 @@
     "global_285_cap": false,
     "global_upper_bound_improved": false,
     "novelty": "NOT_ESTABLISHED"
+  },
+  "cap029_ci_audit": {
+    "previous_failed_run": "https://github.com/davidlueng986-alt/123321/actions/runs/41542279551",
+    "root_cause": "CAP028 W766 stored 17 points (7,5,5), despite 19 (7,6,6) claim; both Python and Node tests correctly failed",
+    "repaired_additions": [
+      [
+        1,
+        1,
+        2,
+        0
+      ],
+      [
+        2,
+        1,
+        2,
+        1
+      ]
+    ],
+    "seed_single_extensions": 5,
+    "seed_compatible_pairs": 3,
+    "seed_balanced_pairs": 1,
+    "local_exact_line_checker": "1080 4D affine lines; repaired 19 cap has zero triples",
+    "full_ci": "PENDING",
+    "global_bound_improved": false
   }
 }

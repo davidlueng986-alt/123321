@@ -7,7 +7,7 @@ from pathlib import Path
 P=tuple(product(range(3),repeat=4))
 N=tuple(u for u in P if any(u) and next(z for z in u if z)==1)
 W774=[[0,0,1,0],[0,0,1,2],[0,0,2,1],[0,1,0,1],[0,2,0,2],[0,2,1,2],[0,2,2,1],[1,0,1,0],[1,0,1,1],[1,0,2,2],[1,2,1,0],[1,2,1,2],[1,2,2,1],[1,2,2,2],[2,0,0,0],[2,0,2,1],[2,1,2,2],[2,2,0,1]]
-W766=[[0,0,0,1],[0,0,2,2],[0,1,0,1],[0,1,2,0],[0,1,2,1],[0,2,0,0],[0,2,2,2],[1,1,1,0],[1,1,1,2],[1,2,0,2],[1,2,1,0],[1,2,1,2],[2,1,1,0],[2,1,1,1],[2,2,0,0],[2,2,1,0],[2,2,1,1]]
+W766=[[0,0,0,1],[0,0,2,2],[0,1,0,1],[0,1,2,0],[0,1,2,1],[0,2,0,0],[0,2,2,2],[1,1,1,0],[1,1,1,2],[1,2,0,2],[1,2,1,0],[1,2,1,2],[2,1,1,0],[2,1,1,1],[2,2,0,0],[2,2,1,0],[2,2,1,1],[1,1,2,0],[2,1,2,1]]
 def check(points,n):
  p=[tuple(x) for x in points];s=set(p)
  assert len(s)==len(p) and all(len(x)==n and set(x)<={0,1,2} for x in p)
@@ -66,6 +66,17 @@ def known236():
  pts={(0,)+v for v in make(b0)}|{(1,)+v for v in make(b1)}|{(2,)+v for v in axes}
  return check(pts,7)
 class TestCAP028(unittest.TestCase):
+ def test_recovered_19_cap_extension_census(self):
+  seed=W766[:-2]
+  self.assertEqual([sum(x[0]==k for x in seed) for k in range(3)],[7,5,5])
+  self.assertEqual(check(seed,4),17)
+  possible=[x for x in P if tuple(x) not in set(map(tuple,seed)) and check(seed+[x],4)==18]
+  pairs=[(a,b) for a,b in combinations(possible,2) if check(seed+[a,b],4)==19]
+  self.assertEqual(len(possible),5)
+  self.assertEqual(len(pairs),3)
+  balanced=[(a,b) for a,b in pairs if [sum(x[0]==k for x in seed+[a,b]) for k in range(3)]==[7,6,6]]
+  self.assertEqual(balanced,[((1,1,2,0),(2,1,2,1))])
+  self.assertEqual(check(W766,4),19)
  def test_local_witnesses(self):
   self.assertEqual(check(W774,4),18);self.assertEqual(check(W766,4),19)
  def test_line_counts(self):

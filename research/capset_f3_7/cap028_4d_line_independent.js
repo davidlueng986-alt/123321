@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict';
-const A774=[[0,0,1,0],[0,0,1,2],[0,0,2,1],[0,1,0,1],[0,2,0,2],[0,2,1,2],[0,2,2,1],[1,0,1,0],[1,0,1,1],[1,0,2,2],[1,2,1,0],[1,2,1,2],[1,2,2,1],[1,2,2,2],[2,0,0,0],[2,0,2,1],[2,1,2,2],[2,2,0,1]],A766=[[0,0,0,1],[0,0,2,2],[0,1,0,1],[0,1,2,0],[0,1,2,1],[0,2,0,0],[0,2,2,2],[1,1,1,0],[1,1,1,2],[1,2,0,2],[1,2,1,0],[1,2,1,2],[2,1,1,0],[2,1,1,1],[2,2,0,0],[2,2,1,0],[2,2,1,1]];
+const A774=[[0,0,1,0],[0,0,1,2],[0,0,2,1],[0,1,0,1],[0,2,0,2],[0,2,1,2],[0,2,2,1],[1,0,1,0],[1,0,1,1],[1,0,2,2],[1,2,1,0],[1,2,1,2],[1,2,2,1],[1,2,2,2],[2,0,0,0],[2,0,2,1],[2,1,2,2],[2,2,0,1]],A766=[[0,0,0,1],[0,0,2,2],[0,1,0,1],[0,1,2,0],[0,1,2,1],[0,2,0,0],[0,2,2,2],[1,1,1,0],[1,1,1,2],[1,2,0,2],[1,2,1,0],[1,2,1,2],[2,1,1,0],[2,1,1,1],[2,2,0,0],[2,2,1,0],[2,2,1,1],[1,1,2,0],[2,1,2,1]];
 const enc=a=>a.reduce((s,x)=>3*s+x,0);
 const dec=i=>{let a=[];for(let j=0;j<4;j++){a.unshift(i%3);i=Math.floor(i/3);}return a;};
 const p=Array.from({length:81},(_,i)=>dec(i));
@@ -10,6 +10,17 @@ function verify(a){
   if(s.has(enc(a[i].map((x,k)=>(6-x-a[j][k])%3))))throw Error('3AP');
  return a.length;
 }
+// Independently replay the exact 17-point seed extension census.
+const seed=A766.slice(0,-2);
+const canExtend=(a)=>{try{verify(a);return true;}catch(_){return false;}};
+const single=p.filter(x=>!new Set(seed.map(enc)).has(enc(x))&&canExtend(seed.concat([x])));
+const pairs=[];
+for(let i=0;i<single.length;i++)for(let j=i+1;j<single.length;j++)
+ if(canExtend(seed.concat([single[i],single[j]])))pairs.push([single[i],single[j]]);
+const balanced=pairs.filter(([a,b])=>[0,1,2].every(k=>seed.concat([a,b]).filter(x=>x[0]===k).length===[7,6,6][k]));
+if(single.length!==5||pairs.length!==3||balanced.length!==1||
+ enc(balanced[0][0])!==enc([1,1,2,0])||enc(balanced[0][1])!==enc([2,1,2,1]))
+ throw Error('17-to-19 exact extension census');
 const ns=p.filter(x=>x.some(z=>z)&&x.find(z=>z)!==2);
 const chosen=new Set(Array.from({length:11},(_,i)=>7*i%81));
 const f=p.map((x,i)=>3+Number(x[0]===0&&x[1]===0)+3*Number(chosen.has(i)));

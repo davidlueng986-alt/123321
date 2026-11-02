@@ -1,3 +1,10 @@
+## CAP-029 CI failure referee and exact 4D witness repair (2026-11-02 23:52 UTC)
+- [CRITICAL VERIFIED] CAP-028 CI 41542279551 **FAILED**: claimed W766 was 17 points (7,5,5), not 19 (7,6,6). Never promote failed CI as evidence.
+- [LOCAL EXACT PASS / NEW CI PENDING] Enumerated all 81 F3^4 points: five single additions, three compatible pairs, unique balanced (7,6,6) pair = (1,1,2,0)+(2,1,2,1). Independent direct 1080-line check validates repaired 19-point cap and all 12 local profiles.
+- [P0] Check full CI for this exact CAP-029 commit; if red, inspect logs and repair before new mathematical claims.
+- [P1] Shared-fiber simultaneous 3AP compatibility, nonradical normal constraints, Thackeray 110-cap completion independent referee; continue balanced/no-111 and >=237 search.
+- [META] Local 4D liftability of every quotient line does NOT establish a global 285-point 7D cap; r3(7) OPEN. No priority/novelty claim.
+
 ## CAP-007J global 89-slice theorem (2026-11-02 10:56 UTC)
 - [EXACT ELEMENTARY PROOF / FULL CI GREEN run 41433674492] Every hypothetical 237-cap in F3^7 has an affine 6D hyperplane containing >=89 points. Exact 2nd/3rd moment contradiction -35,076 if all slices<=88; independent 236-witness JS moment replay; Python 9-cap regression and 75-profile exhaustive check. Proof/script/test: CAP007J_HYPERPLANE_THIRD_MOMENT_89_GATE_2026-11-02.md, cap007j_hyperplane_moment_gate.py, test_cap007j_hyperplane_moment_gate.py.
 - [P0] Confirm new CI with 236-point regression fixture; if failure, diagnose before promoting. CAP-007I is **separate** concurrent 5922-transform 112+112 additive-hole experiment, do not overwrite or conflate.

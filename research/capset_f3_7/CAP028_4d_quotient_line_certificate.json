@@ -214,6 +214,18 @@
       2,
       1,
       1
+    ],
+    [
+      1,
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      1,
+      2,
+      1
     ]
   ],
   "lines": 1080,
@@ -241,5 +253,30 @@
   "seed": null,
   "gpu": false,
   "paid_compute": false,
-  "discovery": "SciPy 1.17 HiGHS milp 81 binaries 1080 triple inequalities + 3 exact slice equalities; 7,7,5 timed out 12s inconclusive"
+  "discovery": "SciPy 1.17 HiGHS milp 81 binaries 1080 triple inequalities + 3 exact slice equalities; 7,7,5 timed out 12s inconclusive",
+  "cap029_erratum": {
+    "date_utc": "2026-11-02",
+    "prior_witness_766_size": 17,
+    "repaired_witness_766_size": 19,
+    "added_points": [
+      [
+        1,
+        1,
+        2,
+        0
+      ],
+      [
+        2,
+        1,
+        2,
+        1
+      ]
+    ],
+    "seed_single_point_extensions": 5,
+    "seed_compatible_two_point_extensions": 3,
+    "seed_extensions_with_7_6_6_profile": 1,
+    "local_python_exhaustive_verified": true,
+    "ci_status": "PENDING_NEW_COMMIT",
+    "scope": "4D local cap, not a 7D cap"
+  }
 }

@@ -59,3 +59,6 @@ Sources:
 - https://arxiv.org/abs/2206.09804 (Thackeray 2022 preprint).
 - https://onlinelibrary.wiley.com/doi/10.1002/jcd.70024 (Grace–Voloch, May 2026).
 - https://arxiv.org/abs/1302.4703 (Follett et al. AG(4,3) maximal caps).
+
+## CAP-029 erratum (2026-11-02 23:52 UTC; preserve original audit trail)
+GitHub Actions run 41542279551 **FAILED** (four CAP-028 tests failed/error). Root cause: W766 coordinates contained only **17 points with profile (7,5,5)**, although this report claimed a 19-point (7,6,6) witness. The prior local PASS claim was not reproduced by CI. Independent exhaustive extension of the original 17-point seed over all 81 ambient 4D points found exactly five valid single additions and three compatible two-point additions. The **unique pair restoring (7,6,6)** is (1,1,2,0) and (2,1,2,1). Direct checking of all 1,080 affine lines verifies the repaired 19-point cap; the 18-point (7,7,4) witness remains valid. The twelve local profile lifts are again supported by explicit witnesses, **subject to fresh CI**. This is not a global 7D cap or new upper bound. See CAP029_CI_FAILURE_4D_LIFT_REPAIR_2026-11-02.md. The original failed CI run is deliberately retained as evidence.
