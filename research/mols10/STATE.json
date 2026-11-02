@@ -116,7 +116,8 @@
     "research/mols10/E025_independent_replay.js",
     "research/mols10/E026_symbol_support_milp.py",
     "research/mols10/E026_independent_3color.py",
-    "research/mols10/E026_RESULTS.json"
+    "research/mols10/E026_RESULTS.json",
+    "research/mols10/E026_GF9_positive.py"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
