@@ -1,0 +1,225 @@
+{
+  "campaign": "CAPSET-F3-7",
+  "step": "CAP-021",
+  "date_utc": "2026-11-02",
+  "checker": "independent JavaScript exact integer arithmetic",
+  "random_seed": null,
+  "gpu_used": false,
+  "certificates": [
+    {
+      "M": 286,
+      "assumed_max_slice": 109,
+      "requires_CAP017B": false,
+      "profiles": 161,
+      "alpha": 40,
+      "beta": -10893,
+      "gamma": 193029098,
+      "min_delta": 0,
+      "zero_profiles": [
+        [
+          109,
+          109,
+          68
+        ],
+        [
+          96,
+          95,
+          95
+        ]
+      ],
+      "global_sum": -2468100,
+      "global_moments": [
+        1093,
+        29982238,
+        2890331158
+      ]
+    },
+    {
+      "M": 287,
+      "assumed_max_slice": 110,
+      "requires_CAP017B": true,
+      "profiles": 175,
+      "alpha": 82,
+      "beta": -22401,
+      "gamma": 399662803,
+      "min_delta": 0,
+      "zero_profiles": [
+        [
+          110,
+          109,
+          68
+        ],
+        [
+          96,
+          96,
+          95
+        ]
+      ],
+      "global_sum": -4531050,
+      "global_moments": [
+        1093,
+        30191539,
+        2920545005
+      ]
+    },
+    {
+      "M": 288,
+      "assumed_max_slice": 111,
+      "requires_CAP017B": true,
+      "profiles": 189,
+      "alpha": 589,
+      "beta": -161442,
+      "gamma": 2900219904,
+      "min_delta": 0,
+      "zero_profiles": [
+        [
+          111,
+          109,
+          68
+        ],
+        [
+          96,
+          96,
+          96
+        ]
+      ],
+      "global_sum": -29038176,
+      "global_moments": [
+        1093,
+        30401568,
+        2950968672
+      ]
+    }
+  ],
+  "formal_moment_countermodels": [
+    {
+      "M": 285,
+      "rows": [
+        [
+          [
+            109,
+            109,
+            67
+          ],
+          152
+        ],
+        [
+          [
+            101,
+            96,
+            88
+          ],
+          3
+        ],
+        [
+          [
+            98,
+            94,
+            93
+          ],
+          2
+        ],
+        [
+          [
+            96,
+            95,
+            94
+          ],
+          826
+        ],
+        [
+          [
+            95,
+            95,
+            95
+          ],
+          110
+        ]
+      ],
+      "max_slice": 109,
+      "moments": [
+        1093,
+        29773665,
+        2860326405
+      ],
+      "geometric_cap": false
+    },
+    {
+      "M": 287,
+      "rows": [
+        [
+          [
+            111,
+            109,
+            67
+          ],
+          140
+        ],
+        [
+          [
+            111,
+            96,
+            80
+          ],
+          2
+        ],
+        [
+          [
+            110,
+            109,
+            68
+          ],
+          6
+        ],
+        [
+          [
+            101,
+            94,
+            92
+          ],
+          1
+        ],
+        [
+          [
+            98,
+            95,
+            94
+          ],
+          47
+        ],
+        [
+          [
+            97,
+            97,
+            93
+          ],
+          1
+        ],
+        [
+          [
+            96,
+            96,
+            95
+          ],
+          896
+        ]
+      ],
+      "max_slice": 111,
+      "moments": [
+        1093,
+        30191539,
+        2920545005
+      ],
+      "geometric_cap": false
+    }
+  ],
+  "known_236_witness_independent_recheck": {
+    "source_blob_sha": "025a93713119d111db50b54b1d1238b97864c013",
+    "distinct_points": 236,
+    "pairs_checked": 27730,
+    "collinear_triples": 0,
+    "covered_ambient_points": 2187,
+    "complete": true
+  },
+  "scope": "286->110 unconditional; 287->111 conditional on CAP-017B and 110 completion; 288->112 conditional; no new global bound"
+}
