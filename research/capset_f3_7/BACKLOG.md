@@ -1,3 +1,9 @@
+## CAP-005E pair-removal gate (2026-11-02 01:51 UTC)
+- [LOCAL EXACT / CI PENDING] Independently recomputed CAP-002A 16-removal minimum over all 1,902,225 outsider pairs with new C++17 arithmetic/DSU verifier; 888 pairs attain 16.
+- [LOCAL EXACT / CI PENDING] Applied >=17 insertions necessary for improvement to full CAP-005D six-fiber histogram: **294,394 / 296,010** release sets rigorously excluded, **1,616** unresolved; 5,516 additional exclusions (77.34% of previous unresolved).
+- [P0] Certify >=237 UNSAT or reconstruct a witness in 1,616 survivors; prioritize low N=17..24 and high-N=92 classes using exact branch-and-bound, LRAT/DRAT or rational cutting planes. No MILP status without certificate counts.
+- [P1] Explore nonlocal occupancy-changing templates and rigorous global upper bound. Restricted local barriers cannot determine r3(7). Novelty not established.
+
 ## CAP-005C CI confirmation (2026-11-02 00:06 UTC)
 - CAP-005C [DONE / CI GREEN https://github.com/davidlueng986-alt/123321/actions/runs/41365141220] All <=5 coordinate 4D-fiber reconstructions rigorously excluded from improving 236. 312 exact-rational dual certificates archived in https://github.com/davidlueng986-alt/123321/actions/runs/41365141220/artifacts/13107126157. This is a local restricted theorem, not global.
 - Next CAP-005D [P0] At least six released 4D fibers, nonlocal occupancy-changing templates, or global structural inequalities; maintain rigorous certificates and independent checker.

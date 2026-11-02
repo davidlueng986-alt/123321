@@ -152,3 +152,11 @@ Status: VERIFIED COMPUTATION, not a novel record.
 
 ## 2026-11-02T00:56:16.447Z | CAP-005D CI confirmation | EXACT NECESSARY GATE CI GREEN
 - GitHub Actions https://github.com/davidlueng986-alt/123321/actions/runs/41369606221 SUCCESS at commit c88dde3cac38f75cad8c06068f844876cb2e1d91; exact verifier unit tests, full C(27,6) census, k5 regression, independent direct secant checks, and JSON artifact preservation all passed. Artifact https://github.com/davidlueng986-alt/123321/actions/runs/41369606221/artifacts/13109056258. Counts: 296010 sets, 288878 excluded by the existing ten-deletion gate, 7132 unresolved, maximum individually admissible 92 in 16 sets. Scope remains necessary-only for six specified fibers, not a full six-fiber optimum or global bound. The exploratory MILP statuses are not independently certified. r3(7) OPEN, no >=237 witness.
+
+## 2026-11-02T01:51:49Z | CAP-005E six-fiber pair-removal gate | LOCAL EXACT PASS; CI PENDING
+- Read dedicated GitHub STATE/LOG/BACKLOG, current Drive ledger and folder, latest CI (CAP-005D success 41369606221), and fresh literature. Continued from CAP-005D.
+- Reused CAP-002A exact pair-removal lemma, independently reimplemented in C++17: all 1,902,225 outsider pairs, minimum 16 baseline removals, 888 pairs attaining 16; direct 236-point mod-3 cap check. Local C++ compile/run PASS ~2.12s, deterministic CPU only.
+- CAP-005D six-fiber exact histogram re-evaluated locally: 294,394 of 296,010 release sets have <=16 individually admissible outsiders, so cannot improve 236; this adds 5,516 rigorous exclusions over the previous 288,878 <=9 gate. Only 1,616 remain unresolved (77.34% reduction). Local Python census ~20s, deterministic CPU.
+- Proof: any improvement adding >=2 outsiders must delete >=16 originals; <=16 insertions cannot increase 236. A single outsider forces >=10 deletions. N(T)>=17 is necessary only, not sufficient.
+- Code: cap005_pair_cover_independent.cpp, cap005_k6_pair_gate.py; report CAP005_K6_PAIR_GATE_2026-11-02.md. CI pending; no >=237 witness, no global upper bound, novelty not established.
+- Meta-audit: CAP-005D neglected an already-certified stronger pair lemma. Focus on 1,616 surviving neighborhoods and certified UNSAT proofs, while separately exploring nonlocal constructions and global upper bounds. The previous three MILP infeasible reports remain noncertifying.

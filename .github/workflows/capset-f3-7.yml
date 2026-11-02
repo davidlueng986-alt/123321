@@ -86,5 +86,17 @@ jobs:
           name: capset-k6-necessary-gate
           path: /tmp/cap005_k6_gate.json
           retention-days: 30
+      - name: Independently recompute all outsider-pair deletion minima (C++17)
+        run: |
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic research/capset_f3_7/cap005_pair_cover_independent.cpp -o /tmp/cap005_paircheck
+          /tmp/cap005_paircheck research/capset_f3_7/candidates/calderbank_fishburn_236.txt
+      - name: Certify pair-removal strengthened six-fiber necessary gate
+        run: python research/capset_f3_7/cap005_k6_pair_gate.py --out /tmp/cap005_k6_pair_gate.json
+      - name: Archive six-fiber pair-removal gate (restricted theorem only)
+        uses: actions/upload-artifact@v4
+        with:
+          name: capset-k6-pair-removal-gate
+          path: /tmp/cap005_k6_pair_gate.json
+          retention-days: 30
       - name: Check complete-cap saturation and replacement barrier
         run: python research/capset_f3_7/analyze_secants.py research/capset_f3_7/candidates/calderbank_fishburn_236.txt
