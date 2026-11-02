@@ -1,0 +1,146 @@
+{
+  "experiment": "E033",
+  "timestamp_utc": "2026-11-02T10:56:59Z",
+  "problem_status": "OPEN",
+  "method1": "centralizer generator orbit BFS",
+  "method2": "Burnside with equivariant cycle matching and exact permanent DP",
+  "full_orbit_crosschecked_all_types": true,
+  "cycle_types": [
+    {
+      "type": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "centralizer": 3840,
+      "allowed_g": 440192,
+      "orbits": 156,
+      "burnside_sum": 599040
+    },
+    {
+      "type": [
+        2,
+        2,
+        2,
+        4
+      ],
+      "centralizer": 192,
+      "allowed_g": 440032,
+      "orbits": 2368,
+      "burnside_sum": 454656
+    },
+    {
+      "type": [
+        2,
+        2,
+        3,
+        3
+      ],
+      "centralizer": 144,
+      "allowed_g": 439960,
+      "orbits": 3172,
+      "burnside_sum": 456768
+    },
+    {
+      "type": [
+        2,
+        2,
+        6
+      ],
+      "centralizer": 48,
+      "allowed_g": 439952,
+      "orbits": 9280,
+      "burnside_sum": 445440
+    },
+    {
+      "type": [
+        2,
+        3,
+        5
+      ],
+      "centralizer": 30,
+      "allowed_g": 439876,
+      "orbits": 14706,
+      "burnside_sum": 441180
+    },
+    {
+      "type": [
+        2,
+        4,
+        4
+      ],
+      "centralizer": 64,
+      "allowed_g": 439872,
+      "orbits": 6996,
+      "burnside_sum": 447744
+    },
+    {
+      "type": [
+        2,
+        8
+      ],
+      "centralizer": 16,
+      "allowed_g": 439872,
+      "orbits": 27576,
+      "burnside_sum": 441216
+    },
+    {
+      "type": [
+        3,
+        3,
+        4
+      ],
+      "centralizer": 72,
+      "allowed_g": 439796,
+      "orbits": 6214,
+      "burnside_sum": 447408
+    },
+    {
+      "type": [
+        3,
+        7
+      ],
+      "centralizer": 21,
+      "allowed_g": 439794,
+      "orbits": 21002,
+      "burnside_sum": 441042
+    },
+    {
+      "type": [
+        4,
+        6
+      ],
+      "centralizer": 24,
+      "allowed_g": 439792,
+      "orbits": 18412,
+      "burnside_sum": 441888
+    },
+    {
+      "type": [
+        5,
+        5
+      ],
+      "centralizer": 50,
+      "allowed_g": 439794,
+      "orbits": 8949,
+      "burnside_sum": 447450
+    },
+    {
+      "type": [
+        10
+      ],
+      "centralizer": 10,
+      "allowed_g": 439792,
+      "orbits": 44128,
+      "burnside_sum": 441280
+    }
+  ],
+  "sum_canonical_allowed_g": 5278724,
+  "sum_centralizer_orbits": 162959,
+  "raw_labeled_f_g": 65239993856,
+  "ratio": 400346.0616228622,
+  "n10_direct_solver": "12 cycle types x 120001 nodes all UNKNOWN_BUDGET",
+  "uncertainty": "Symmetry reduction covers possible row1 (A,B) configurations; no complete order10 triple, no unrestricted proof."
+}
