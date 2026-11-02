@@ -1,0 +1,350 @@
+{
+  "experiment": "CAP-019",
+  "date_utc": "2026-11-02",
+  "status": "exact integer finite certificate verified; global theorem conditional on published classification/110-completion and common-tangent lemma; independent referee pending",
+  "external_source_python": "https://drive.google.com/file/d/1GHVpOykFyXQYoS509BHV90GQyBBcJzxm/view",
+  "external_source_json": "https://drive.google.com/file/d/1W0oD_x_j9nlB98U6oDkFUOcouEMD1Mz3/view",
+  "v6_source_py_sha256": "d269e26909fc89c533387a17cf8a07461f8fbf75b581986ff19e11343cfa4f3f",
+  "M288": {
+    "projective_directions": 1093,
+    "variance_budget_corrected": 182304,
+    "delta_moment_sum": 4557600,
+    "minimum_rank_case_lower": 4704966,
+    "quadratic_cases_checked": 28
+  },
+  "M291_290_289": {
+    "moment_sums": {
+      "289": -20848032,
+      "290": -22713024,
+      "291": -3033966
+    }
+  },
+  "v6_error": {
+    "incorrect_variance_budget": 185664,
+    "incorrect_rank0_slope": 3016,
+    "counterexample_profile": [
+      111,
+      108,
+      69
+    ],
+    "profile_variance_excess": 1098,
+    "profile_delta": 235188,
+    "invalid_claimed_lower": 3311568,
+    "corrected_slope": 214
+  },
+  "quadratic_rank_cases": [
+    {
+      "centroid_case": 1,
+      "ambient_projective_dimension": 6,
+      "rank": 0,
+      "last_diagonal_coefficient": 1,
+      "N0": 1093,
+      "N1": 0,
+      "N2": 0,
+      "certified_delta_lower": 39013056,
+      "method": "S2 excess variance budget"
+    },
+    {
+      "centroid_case": 1,
+      "ambient_projective_dimension": 6,
+      "rank": 1,
+      "last_diagonal_coefficient": 1,
+      "N0": 364,
+      "N1": 729,
+      "N2": 0,
+      "certified_delta_lower": 9845550,
+      "method": "zero-delta type0 residue 1 costs >=1266 variance"
+    },
+    {
+      "centroid_case": 1,
+      "ambient_projective_dimension": 6,
+      "rank": 1,
+      "last_diagonal_coefficient": 2,
+      "N0": 364,
+      "N1": 0,
+      "N2": 729,
+      "certified_delta_lower": 14114898,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 1,
+      "ambient_projective_dimension": 6,
+      "rank": 2,
+      "last_diagonal_coefficient": 1,
+      "N0": 121,
+      "N1": 486,
+      "N2": 486,
+      "certified_delta_lower": 9409932,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 1,
+      "ambient_projective_dimension": 6,
+      "rank": 2,
+      "last_diagonal_coefficient": 2,
+      "N0": 607,
+      "N1": 243,
+      "N2": 243,
+      "certified_delta_lower": 4704966,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 1,
+      "ambient_projective_dimension": 6,
+      "rank": 3,
+      "last_diagonal_coefficient": 1,
+      "N0": 364,
+      "N1": 243,
+      "N2": 486,
+      "certified_delta_lower": 9409932,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 1,
+      "ambient_projective_dimension": 6,
+      "rank": 3,
+      "last_diagonal_coefficient": 2,
+      "N0": 364,
+      "N1": 486,
+      "N2": 243,
+      "certified_delta_lower": 4704966,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 1,
+      "ambient_projective_dimension": 6,
+      "rank": 4,
+      "last_diagonal_coefficient": 1,
+      "N0": 445,
+      "N1": 324,
+      "N2": 324,
+      "certified_delta_lower": 6273288,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 1,
+      "ambient_projective_dimension": 6,
+      "rank": 4,
+      "last_diagonal_coefficient": 2,
+      "N0": 283,
+      "N1": 405,
+      "N2": 405,
+      "certified_delta_lower": 7841610,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 1,
+      "ambient_projective_dimension": 6,
+      "rank": 5,
+      "last_diagonal_coefficient": 1,
+      "N0": 364,
+      "N1": 405,
+      "N2": 324,
+      "certified_delta_lower": 6273288,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 1,
+      "ambient_projective_dimension": 6,
+      "rank": 5,
+      "last_diagonal_coefficient": 2,
+      "N0": 364,
+      "N1": 324,
+      "N2": 405,
+      "certified_delta_lower": 7841610,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 1,
+      "ambient_projective_dimension": 6,
+      "rank": 6,
+      "last_diagonal_coefficient": 1,
+      "N0": 337,
+      "N1": 378,
+      "N2": 378,
+      "certified_delta_lower": 7318836,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 1,
+      "ambient_projective_dimension": 6,
+      "rank": 6,
+      "last_diagonal_coefficient": 2,
+      "N0": 391,
+      "N1": 351,
+      "N2": 351,
+      "certified_delta_lower": 6796062,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 1,
+      "ambient_projective_dimension": 6,
+      "rank": 7,
+      "last_diagonal_coefficient": 1,
+      "N0": 364,
+      "N1": 351,
+      "N2": 378,
+      "certified_delta_lower": 7318836,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 1,
+      "ambient_projective_dimension": 6,
+      "rank": 7,
+      "last_diagonal_coefficient": 2,
+      "N0": 364,
+      "N1": 378,
+      "N2": 351,
+      "certified_delta_lower": 6796062,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 2,
+      "ambient_projective_dimension": 5,
+      "rank": 0,
+      "last_diagonal_coefficient": 1,
+      "N0": 364,
+      "N1": 0,
+      "N2": 0,
+      "certified_delta_lower": 18322470,
+      "method": "S2 excess variance budget"
+    },
+    {
+      "centroid_case": 2,
+      "ambient_projective_dimension": 5,
+      "rank": 1,
+      "last_diagonal_coefficient": 1,
+      "N0": 121,
+      "N1": 243,
+      "N2": 0,
+      "certified_delta_lower": 6097158,
+      "method": "zero-delta type0 residue 1 costs >=1266 variance"
+    },
+    {
+      "centroid_case": 2,
+      "ambient_projective_dimension": 5,
+      "rank": 1,
+      "last_diagonal_coefficient": 2,
+      "N0": 121,
+      "N1": 0,
+      "N2": 243,
+      "certified_delta_lower": 9102294,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 2,
+      "ambient_projective_dimension": 5,
+      "rank": 2,
+      "last_diagonal_coefficient": 1,
+      "N0": 40,
+      "N1": 162,
+      "N2": 162,
+      "certified_delta_lower": 7533972,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 2,
+      "ambient_projective_dimension": 5,
+      "rank": 2,
+      "last_diagonal_coefficient": 2,
+      "N0": 202,
+      "N1": 81,
+      "N2": 81,
+      "certified_delta_lower": 5965650,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 2,
+      "ambient_projective_dimension": 5,
+      "rank": 3,
+      "last_diagonal_coefficient": 1,
+      "N0": 121,
+      "N1": 81,
+      "N2": 162,
+      "certified_delta_lower": 7533972,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 2,
+      "ambient_projective_dimension": 5,
+      "rank": 3,
+      "last_diagonal_coefficient": 2,
+      "N0": 121,
+      "N1": 162,
+      "N2": 81,
+      "certified_delta_lower": 5965650,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 2,
+      "ambient_projective_dimension": 5,
+      "rank": 4,
+      "last_diagonal_coefficient": 1,
+      "N0": 148,
+      "N1": 108,
+      "N2": 108,
+      "certified_delta_lower": 6488424,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 2,
+      "ambient_projective_dimension": 5,
+      "rank": 4,
+      "last_diagonal_coefficient": 2,
+      "N0": 94,
+      "N1": 135,
+      "N2": 135,
+      "certified_delta_lower": 7011198,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 2,
+      "ambient_projective_dimension": 5,
+      "rank": 5,
+      "last_diagonal_coefficient": 1,
+      "N0": 121,
+      "N1": 135,
+      "N2": 108,
+      "certified_delta_lower": 6488424,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 2,
+      "ambient_projective_dimension": 5,
+      "rank": 5,
+      "last_diagonal_coefficient": 2,
+      "N0": 121,
+      "N1": 108,
+      "N2": 135,
+      "certified_delta_lower": 7011198,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 2,
+      "ambient_projective_dimension": 5,
+      "rank": 6,
+      "last_diagonal_coefficient": 1,
+      "N0": 112,
+      "N1": 126,
+      "N2": 126,
+      "certified_delta_lower": 6836940,
+      "method": "type0 residue 2 floor"
+    },
+    {
+      "centroid_case": 2,
+      "ambient_projective_dimension": 5,
+      "rank": 6,
+      "last_diagonal_coefficient": 2,
+      "N0": 130,
+      "N1": 117,
+      "N2": 117,
+      "certified_delta_lower": 6662682,
+      "method": "type0 residue 2 floor"
+    }
+  ],
+  "verified_by": "independent pure Python test + separate JS dynamic programming finite-field spectrum",
+  "no_gpu": true,
+  "random_seed": "none",
+  "exact_r3_7": "OPEN",
+  "novelty": "not independently established"
+}
