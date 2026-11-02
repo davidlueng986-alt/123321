@@ -337,3 +337,11 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0 EXPERIMENT] Implement exact quadratic/pseudo-Boolean Cauchy pair cuts in anchored111 SAT/CP-SAT, measure solver node/relaxation impact with CPU bounded pilot; keep proof logging for UNSAT. Do not claim count-only grids excluded.
 - [P0 REFEREE] Continue hostile proof review of CAP-017B common-tangent, Thackeray 110 completion, CAP-019 candidate global <=287.
 - [P0 GLOBAL] Preserve balanced/no-111 and ≥237 witness branches; local anchored111 cuts alone cannot solve r3(7). Novelty not established.
+
+
+## CAP-025 — Fourier/common-tangent hostile referee (2026-11-02 ~20:00 UTC)
+- [EXACT JS V8 PASS / CI PENDING] Six independently transformed centered112 cap pairs: full 364-projective Fourier spectra, 4374 direct convolution identities, primal/dual intersection identity, and d=0..4 identical-dual deletion exceptions all passed. New JS + Python CI wrapper + standalone report committed. This is not exhaustive GL6 enumeration; universal proof is symbolic with Potechin classification.
+- [P0] Confirm CI green on the **final CAP-025 commit**, including Node invoked through Python unittest. No GPU or solver.
+- [P0 EXTERNAL REFEREE] Independently reproduce the classification/computer-assisted parts of Thackeray arXiv:2206.09804v1 Thm3.9 and its 5D dependencies before treating CAP019 ≤287 as independently established. Fourier premise appears consistent but finite tests alone are insufficient.
+- [P0] Separate proof-logged anchored111 SAT target287 and balanced/no-111 lower-bound237 branch; the new small-m* zero-hole corollary does not improve global M288 finite dual.
+- [NOVELTY] Thackeray Prop4.1 already dominates CAP017B coarse bounds at d=0,1,2. Neither small-overlap corollary nor 287 claim has verified priority.
