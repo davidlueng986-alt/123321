@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "Integrate sound column-aware Hall/LP/exact-cover lookahead into row6/7 search; avoid treating any fixed-prefix UNSAT as whole orbit UNSAT. Continue global E033 12 cycle types / 162959 orbit proof-producing search and independent full witness replay.",
-  "current_hypothesis": "E036: every legal g orbit for f cycle type 2^5 admits a six-row partial 3-MOLS; greedy fixed-prefix UNSAT is a misleading global prune. Sound Hall/LP/exact-cover lookahead needed before committing row6/7.",
-  "last_experiment": "MOLS10-E036-ALL-156-CENTRALIZER-ORBITS-SIX-ROW-WITNESSES-AND-K7-LOOKAHEAD",
+  "next_action": "Solve unrestricted 3-MOLS(10): target globally justified E033 12 cycle / 162959 orbit search with proof-carrying 15-projection Hall + column-aware LP/ILP pruning, seek a genuine k4 LP-feasible prefix or an ALL-k4 universal exact obstruction; independent verify any 100/100/100 witness immediately. Never infer global proof from samples.",
+  "current_hypothesis": "Universal four-row column-aware LP obstruction? (UNPROVEN; 360 nonuniform samples over 12 canonical f types all infeasible according to numerical solver). More directly target full 100/100/100 or exhaustive globally certified proof.",
+  "last_experiment": "MOLS10-E037-15-RESOURCE-HALL-ALL-12-CYCLE-TYPES",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -158,7 +158,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T12:52:00Z",
+  "last_run_utc": "2026-11-02T13:15:08Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -185,10 +185,10 @@
     "research/mols10/E036_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "E036 constructive theorem covers only f cycle type 2^5 and six rows, not full ten; 156 six-row witnesses do not imply a complete triple. 3091 k7 and two k8 obstructions are fixed-prefix only, not g-orbit exclusions. 50-restart exploratory batch interrupted; no complete output. No order10 100/100/100 witness or unrestricted proof.",
+  "limitations": "No full 100/100/100 witness or unrestricted certificate, hence no ETA. E037 sample bias; 317 LP statuses numerical only, neither exact Farkas certified nor unrestricted. LP guided long optimization timed out at 200s and produced no counted result. 0/162959 globally certified orbit exclusions.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
   "external_status_review": "2026-11-02 ~12:47 UTC: targeted primary review Bright–Keita–Stevens EJC 2026-02-13/arXiv2503.10504v2; Barnoff–Bright arXiv2605.02132v2 (2026-07-04); no independently verified unrestricted solution found.",
-  "current_math_result": "GLOBAL OPEN. E036 independently verified 156/156 canonical g orbit representatives for f=(01)(23)(45)(67)(89) have 6-row partial 3-MOLS with exact row/column Latin and 60/60/60 overlays. Independent JS enumerated all 440192 legal g and confirmed disjoint orbit coverage. Deterministic 156-witness SHA256 5b198704a6cd24cae9ba57b7f938ce121aba182df1fc78738d39ab92a2aff66f. Bounded fixed-prefix lookahead: 3093 row6 SAT, 3091 row7 exact fixed-prefix UNSAT, 2 row7 SAT (70/70/70), both row8 excluded by 133/156 zero-support demands. No 100/100/100 witness, no unrestricted negative certificate.",
+  "current_math_result": "GLOBAL OPEN: 0/162959 two-row orbit representatives globally ruled out, no verified 100/100/100. E037 proves sound 15 resource-pair Hall projections for any fixed partial 3-MOLS (six resource classes P_AB,P_AC,P_BC,C_A,C_B,C_C). In 1000 k4 nonuniform f=2^5 samples, prior 6-projection Hall excluded 155, all 15 excluded 179 (+24); 1000 k3 passed. Independent 2-left/1-right Hall certificate passed; mutation rejected. In 360 sampled k4 prefixes spread equally across 12 legal f types, 43 exact zero support, 317 numerical LP infeasible; 57 rejected by old Hall6 vs 65 by Hall15 (+8), independent pure Python matcher agrees on all 360. These are not exhaustive orbit coverage or exact LP certificates.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -215,5 +215,7 @@
   "e034_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E034_REPORT.md",
   "e034_drive_bundle": "https://drive.google.com/file/d/1rEuR0rz2m1YfLxVrTx91tqCZxPK5TOfb/view",
   "e035_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E035_REPORT.md",
-  "e036_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E036_REPORT.md"
+  "e036_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E036_REPORT.md",
+  "e037_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E037_REPORT.md",
+  "e037_bundle_drive_url": "https://drive.google.com/file/d/1cMfISpjIlibPYySk0jfoDhD7-96j3ghA/view"
 }
