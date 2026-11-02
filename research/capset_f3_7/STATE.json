@@ -13,7 +13,7 @@
   "current_hypothesis": "CAP-026: Any hypothetical 285-point cap with every affine 6D section<=109 has nonzero barycenter and anisotropic rank-2 quadratic form on its 6D kernel. Exact formal moment+rank2 negative control survives; no new global bound. CAP-019 <=287 remains provisional pending independent Thackeray 110-cap classification referee.",
   "next_experiment": "Confirm final CAP-026 GitHub CI; independently replay Thackeray 110-completion computation; pursue actual codim2 incidence and proof-logged anchored111 SAT, balanced/no-111 and >=237 witness search.",
   "last_run_id": "CAP-026-285-QUADRATIC-RIGIDITY-2026-11-02",
-  "last_run_result": "UNCONDITIONAL_285_MAX109_NONZERO_BARYCENTER_ANISOTROPIC_RANK2_NECESSARY_ONLY_LOCAL_4_4_PASS_CI_PENDING",
+  "last_run_result": "UNCONDITIONAL_285_QUADRATIC_RANK2_NECESSARY_ONLY_LOCAL_PASS_INDEPENDENT_GITHUB_236_CHECK_PASS_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -1301,14 +1301,15 @@
       "n0_upper_times_78": 6378
     },
     "local_tests": "PASS_4_OF_4_0.044S",
-    "github_ci": "PENDING",
+    "github_ci": "PENDING_AFTER_WITNESS_HARNESS_CORRECTION",
     "independently_checked_quadric_rank_sign_cases": 28,
     "independently_checked_known_236_pairs": 27730,
     "formal_negative_control": "EXISTS_NOT_A_CAP",
     "global_upper_improved": false,
     "novelty": "NOT_ESTABLISHED",
     "gpu_used": false,
-    "random_seed": null
+    "random_seed": null,
+    "witness_integration_audit": "Two valid 236-cap coordinate realizations differ; both independently verified, no literal-equality assumption. Correction 6d9e3531."
   },
   "cap025_ci_final": "https://github.com/davidlueng986-alt/123321/actions/runs/41514324725"
 }
