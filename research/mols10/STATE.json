@@ -8,16 +8,16 @@
     100,
     91
   ],
-  "next_action": "Find a legal four-row prefix passing full six-class LP via a genuinely disjoint, constraint-guided/randomized generator; do not extrapolate E036-derived 2340 prefixes to all 162959 normalized orbits. Parallel track: proof-producing unrestricted SAT with symmetry coverage and independently replayed certificates. Verify any 100/100/100 candidate immediately.",
-  "current_hypothesis": "E043: all 2184 noninitial four-row subsets of the 156 E036 six-row witnesses have exact six-class residual nonextension certificates (2000 Farkas duals, 184 zero support), independently replayed. This is strongly conditional; no orbit excluded. Seek a structurally different legal k4 LP-feasible prefix, not another biased E036-derived sample.",
-  "last_experiment": "MOLS10-E043-ALL-NONINITIAL-FOUR-ROW-SUBSETS-EXACT-FARKAS",
+  "next_action": "Seek a structurally different four-row prefix passing six-class LP via constraint-guided dual-aware search, not further random greedy sampling. In parallel, symmetry-complete proof-producing SAT with independent replay; do not infer universal k4 obstruction from samples.",
+  "current_hypothesis": "E044 independent random derangement/MRV generator: 512 valid k4 partial triples spanning 11 first-square second-row derangement cycle types, 471 exact integer Farkas duals + 41 exact zero-support, independent Node verifier 512/512 and 200094 residual placements PASS; all 512 k3 parents numerically LP-feasible. This is a nonuniform fixed-prefix sample and does not exclude any complete orbit.",
+  "last_experiment": "MOLS10-E044-INDEPENDENT-RANDOM-K4-EXACT-FARKAS",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
-    "E039: two exact five-demand sparse duals; public case independently checked; n5/n7/n11 105 positive projected LP controls PASS.",
     "E041: independent integer-only 22-cell seven-demand Farkas certificate PASS; 22 singleton witnesses; 100 random isotopies exact PASS; no global orbit excluded.",
     "E042: 1548/1548 exact 4-row motif-embedding checks independently reproduced, only 3 source-self hits, 1545 negatives, zero marginal pruning beyond E039 LP; 0/162959 full orbits excluded.",
-    "E043: 2184/2184 independently exact verified fixed-prefix nonextensions (2000 integer dual, 184 zero support), 870931 candidate placements, 370 affine positive controls; 0 global orbit exclusions."
+    "E043: 2184/2184 independently exact verified fixed-prefix nonextensions (2000 integer dual, 184 zero support), 870931 candidate placements, 370 affine positive controls; 0 global orbit exclusions.",
+    "E044: 512 independently generated k4 fixed prefixes; 471 integer Farkas duals and 41 zero-support; independent Node.js exact replay of 200094 candidates 512/512 PASS, mutation rejected; 512 k3 parents numerical LP feasible; 0 full orbits excluded."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -96,13 +96,17 @@
     "research/mols10/E036_reproduce.py",
     "research/mols10/E036_verify.js",
     "research/mols10/E036_lookahead_reproduce.py",
-    "research/mols10/E036_verify_k7.js"
+    "research/mols10/E036_verify_k7.js",
+    "research/mols10/E044_disjoint_probe.py",
+    "research/mols10/E044_certify.py",
+    "research/mols10/E044_verify.js",
+    "research/mols10/E044_k3_controls.py"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T18:54:16Z",
+  "last_run_utc": "2026-11-02T19:53:17Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -126,13 +130,14 @@
     "research/mols10/E032_REPORT.md",
     "research/mols10/E033_REPORT.md",
     "research/mols10/E035_REPORT.md",
-    "research/mols10/E036_REPORT.md"
+    "research/mols10/E036_REPORT.md",
+    "research/mols10/E044_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "E043's 2184 fixed prefixes all derived from the same 156 E036 six-row witnesses; sampling is biased and no entire symmetry orbit excluded. 2000 duals verified exactly, 184 zero-support. The complete 2184-case binary ZIP is local and downloadable, not persisted in GitHub or Google Drive: Drive binary upload blocked BLOCKED_FILE_REFERENCE. GitHub has report and reproducible generator/verifier; independent remote replay of newly committed generator is not yet established. Do not claim full certificate bytes in GitHub.",
+  "limitations": "E044 exact certificates exclude only 512 fixed prefixes; sampling nonuniform, 11/12 first-square cycle types represented, no entire orbit excluded. Full E044 512-case dataset and certificates are in a local downloadable ZIP, NOT yet uploaded to Drive/GitHub; GitHub has deterministic generator, exact dual producer, independent JS verifier, report and summary. k3 positive controls are numerical LP, not exact rational. E041 integer deletion-case pilot timed out 8x4s and is UNKNOWN.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
-  "external_status_review": "2026-11-02 18:50 UTC: checked EJC Bright–Keita–Stevens 2026-02-13 and arXiv Barnoff–Bright 2605.02132v2 2026-07-04; targeted fresh web/arXiv search found no independently verifiable unrestricted resolution (absence of hit not proof).",
-  "current_math_result": "GLOBAL OPEN; 0/162959 full orbits excluded. E043: 156 valid six-row partial triples, 14 new four-row subsets per witness = 2184 distinct ordered prefixes; 2000 exact integer Farkas duals and 184 exact zero-support contradictions. Independent JS rebuilt 870931 candidate placements and verified 2184/2184; max dual candidate score -6, minimum positive RHS +1; mutation rejected. 370/370 n5/n7/n11 affine exact positive controls. All fixed-prefix only; not a full 3-MOLS(10) solution or global proof.",
+  "external_status_review": "2026-11-02 19:49 UTC: checked Bright–Keita–Stevens EJC 33(1) #P1.30 (2026-02-13) and Barnoff–Bright arXiv:2605.02132v2 (2026-07-04); targeted web/arXiv search found no independently checkable unrestricted resolution.",
+  "current_math_result": "GLOBAL OPEN, 0/162959 complete orbits excluded. E044 512 new fixed k4 prefixes, raw ordered overlap 0 with E036-derived 2340, 471 exact duals and 41 exact zero-support, 512/512 integer replay. 512 k3 parents numerically LP feasible only. No 100/100/100.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
