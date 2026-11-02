@@ -1,3 +1,9 @@
+## CAP-005G rational LP duals (2026-11-02 03:58 UTC)
+- [LOCAL EXACT PASS / CI PENDING] 848 additional six-fiber neighborhoods have exact-rational LP dual certificates independently checked by mod-3 arithmetic. Cumulative restricted exclusions 295,922 / 296,010; 88 remain unresolved. Local artifact SHA256 0a49469949dca1e9a55e6cffab62306eec7a0e9f9e9bace17289e1e26bd4e7db (SciPy version may change certificate).
+- [P0] Confirm GitHub CI and 848-dual JSON artifact; on failure inspect checker/solver rather than counting exclusions.
+- [P0] Attack 88 positive LP-gap cases with exact rational cutting planes, outsider-triple and deletion-cover inequalities, certified SAT/UNSAT or independent >=237 witness. LP gap is not evidence of feasible cap.
+- [P1] Nonlocal occupancy-changing constructions and independently certifiable global upper bounds; local 6-fiber results cannot settle r3(7). Literature novelty unverified.
+
 ## CAP-005F CI confirmation (2026-11-02 02:59 UTC)
 - [DONE / CI GREEN https://github.com/davidlueng986-alt/123321/actions/runs/41380252670] 680 exact independently checked clique certificates archived: https://github.com/davidlueng986-alt/123321/actions/runs/41380252670/artifacts/13113456508; 295,074 / 296,010 six-fiber edits excluded, 936 unresolved. JSON SHA256 12bf1b9787390691072e6b627afaf73fa44fcab3db13c35479d004fa57bb830f.
 - [P0] 936 survivors: exact outsider-triple hypergraph constraints / deletion-cover certificates, and nonlocal constructions; do not infer a global bound from restricted local searches.
