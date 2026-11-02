@@ -116,6 +116,20 @@ jobs:
         run: |
           python research/capset_f3_7/cap005_k6_lp_dual_check.py /tmp/cap005_k6_lp_duals.json --previous /tmp/cap005_k6_clique_cover.json
           sha256sum /tmp/cap005_k6_lp_duals.json
+      - name: Generate two integer-rounding duals for six-fiber orbit representatives
+        run: OPENBLAS_NUM_THREADS=1 python research/capset_f3_7/cap005_h_rounding_dual_generator.py --out /tmp/cap005_h_rounding_duals.json
+      - name: Independently verify exact affine quotient and integer-rounded duals
+        run: |
+          python research/capset_f3_7/cap005_k6_symmetry_quotient.py /tmp/cap005_k6_lp_duals.json --out /tmp/cap005_h_symmetry.json
+          python research/capset_f3_7/cap005_k6_symmetry_rounding_check.py --duals /tmp/cap005_h_rounding_duals.json --certificate /tmp/cap005_k6_lp_duals.json
+      - name: Archive CAP-005H exact duals and symmetry quotient
+        uses: actions/upload-artifact@v4
+        with:
+          name: capset-k6-symmetry-rounding-32
+          path: |
+            /tmp/cap005_h_rounding_duals.json
+            /tmp/cap005_h_symmetry.json
+          retention-days: 30
       - name: Archive 848 six-fiber rational dual certificates (restricted theorem only)
         uses: actions/upload-artifact@v4
         with:
