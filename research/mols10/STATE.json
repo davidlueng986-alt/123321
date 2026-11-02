@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "Integrate exact 1->2->3->4 resource-class projection cuts as sound branch pruning into symmetry-complete E033 12-cycle/162959 (f,g)-orbit proof-producing search. Seek legal k4 prefix passing all four-class projections, then check full six-class LP and row extension; otherwise produce exhaustive global certificate with independently checked orbit coverage. Preserve negative parity and bounded search evidence; verify any 100/100/100 independently.",
-  "current_hypothesis": "Four-class projected exact-cover LP cuts reject all 516 sampled legal k4 prefixes but may fail on other k4 prefixes; actively seek a k4 prefix passing these projections (falsifies sampled barrier) while integrating cuts into globally exhaustive search.",
-  "last_experiment": "MOLS10-E039-516-EXACT-PROJECTED-FOUR-RESOURCE-CERTIFICATES",
+  "next_action": "Integrate E040 exact 21-cell forbidden pattern as symmetry-/isotopy-aware nogood and benchmark NEW branch cuts beyond existing E039 1–4-class projection hierarchy; if zero marginal gain, prioritize proof-producing global 12-cycle/162959-orbit search or explicit k4 LP-feasible prefix. Independently replay any full 100/100/100.",
+  "current_hypothesis": "Generalize E040 21-cell exact forbidden partial pattern under row/column/symbol isotopy into reusable nogoods, and measure incremental global search pruning beyond E039 projected LP; abandon if no new cuts.",
+  "last_experiment": "MOLS10-E040-EXACT-MINIMAL-21-22-23-CELL-FORBIDDEN-PARTIAL-PATTERNS",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -100,7 +100,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T15:12:00Z",
+  "last_run_utc": "2026-11-02T16:00:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -127,10 +127,10 @@
     "research/mols10/E036_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "No global solution/negative proof, 0 globally excluded orbits; 516 fixed-prefix samples are nonuniform and not exhaustive; no defensible ETA. Interrupted 120s packing scan and 1-4 hierarchy run are not counted. GF2/3/5 parity gave no new cuts.",
+  "limitations": "E040 unique minimum refers only to subsets of source 40 whole cells and one fixed dual. No unrestricted resolution or global orbit exclusion. Exploratory 46-case MILP statuses are not independently proof-certified. Google Drive binary ZIP upload blocked; journal write separately attempted.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
   "external_status_review": "2026-11-02 ~12:47 UTC: targeted primary review Bright–Keita–Stevens EJC 2026-02-13/arXiv2503.10504v2; Barnoff–Bright arXiv2605.02132v2 (2026-07-04); no independently verified unrestricted solution found.",
-  "current_math_result": "GLOBAL OPEN. 0/162959 complete (f,g) symmetry orbits excluded; no independently verified 100/100/100. E039: 516 distinct valid k4 fixed partial prefixes certified nonextendable by exact integer Farkas or zero-support using <=4 of 6 resource classes (1 class 63, 2 classes 35, 3 classes 358, 4 classes 60). E037 original 360 split 43+22+254+41; 244 additional beyond E038 Hall15+triadic cheap cuts (203 3-class, 41 4-class). E036 156 disjoint deterministic greedy prefixes split 20+13+104+19. Independent Node.js replay 516/516 PASS and mutation rejected; index audit PASS, n5/7/11 positive controls 105 projected LP PASS. Two exact five-demand (+3/-2) sparse Farkas motifs found, one standalone public witness independently rechecked. All are fixed-prefix exclusions, NOT orbit exclusions.",
+  "current_math_result": "GLOBAL OPEN: 0/162959 full (f,g) orbits excluded, no verified 100/100/100. E040 reduced three E039 40-cell fixed four-row obstructions to exact 21/22/23 fully specified whole-cell forbidden partial patterns using integer Farkas duals. Independent integer-only Node.js verified 3/3 residual contradictions: RHS +1, max candidate dual weight 0, allowed residual placements 2696/2449/2427. Exact unique minimum blocker for each FIXED dual among subsets of its source 40 cells certified by 21/22/23 singleton-conflict positive candidate witnesses (66 total). Exploratory 46-case sparse-dual hitting-set MILP scan found min 21; remaining 43 optimality statuses not independently certified. All are restricted patterns, not full orbit exclusions.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -167,5 +167,9 @@
   "e039_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E039_REPORT.md",
   "e039_public_five_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E039_PUBLIC_FIVE_DEMAND.json",
   "e039_verifier_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E039_verify_public_five.js",
-  "e039_archive_status": "Local self-contained E039 ZIP clean-extraction verified; persistent Drive binary upload attempted and failed CONTAINER_SESSION_EXPIRED. Do not claim uploaded. Google Docs journal update separate."
+  "e039_archive_status": "Local self-contained E039 ZIP clean-extraction verified; persistent Drive binary upload attempted and failed CONTAINER_SESSION_EXPIRED. Do not claim uploaded. Google Docs journal update separate.",
+  "e040_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E040_REPORT.md",
+  "e040_public_certificates_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E040_EXACT_MINIMAL_CORES.json",
+  "e040_public_verifier_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E040_verify_public.js",
+  "e040_archive_status": "Local ZIP /mnt/data/E040_MOLS10_RESEARCH_BUNDLE.zip clean SHA256 replay; Drive binary upload attempted and FAILED CONTAINER_SESSION_EXPIRED; public GitHub has exact certificate, verifier, report."
 }
