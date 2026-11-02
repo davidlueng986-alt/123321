@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: '22'
       - name: Exact 901440 alignment and 2895 intercalate proposals
-        run: node research/mols10/E048_local_rigidity.js | tee E048_CI_REPLAY.log
+        run: |\n          set -o pipefail\n          node research/mols10/E048_local_rigidity.js | tee E048_CI_REPLAY.log
       - name: Preserve log
         uses: actions/upload-artifact@v4
         with:
