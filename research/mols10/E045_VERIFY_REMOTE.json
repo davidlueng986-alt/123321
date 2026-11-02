@@ -1,0 +1,9 @@
+{
+  "verified": 570,
+  "dual": 532,
+  "zero": 38,
+  "total_candidates": 231303,
+  "distinct": 570,
+  "mutation_rejected": true,
+  "status": "PASS"
+}
