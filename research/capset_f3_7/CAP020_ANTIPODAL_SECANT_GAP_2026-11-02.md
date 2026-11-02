@@ -26,7 +26,7 @@ Exact secant histogram over all 729 points z:
 - z=0 (1 point): 56 distinct-point secants, each an antipodal pair; **the general lemma explicitly excludes z=0**;
 - z∉H∪{0} (616 points): exactly 10 secants each, with 20 endpoints in 20 distinct antipodal orbits.
 
-A non-orthogonal invertible shear x↦(x0+x1,x1,x2+x3,x3,x4,x5) independently reproduces the histogram and orbit separation. A direct 364-projective-direction signed Fourier check on H and the sheared cap confirms 56 high directions each and 20 common high directions for this test pair; the two primal 112-caps intersect in 40 points.
+A non-orthogonal invertible shear x↦(x0+x1,x1,x2+x3,x3,x4,x5) independently reproduces the histogram and orbit separation. A direct 364-projective-direction signed Fourier check on H and the sheared cap confirms 56 high directions each and 20 common high directions for this test pair; the two primal 112-caps intersect in 40 points. **The updated verifier additionally checks the entire high-direction sets**, not just their counts: D(H)=projectivization(H), and D(AH)=projectivization(A^{-T}H) for the shear. This establishes the needed finite Fourier self-duality premise for the canonical representative without relying on source-agent assertions.
 
 Since Potechin proves that every maximal112 cap is affinely equivalent to H, and 112≡1 mod3, its barycenter b=Σ_{x∈S}x is exactly its affine translation center. After subtracting b, every maximal112 cap is a linear image of H and is centrally symmetric, avoids zero and has the same 10 secants at every nonzero outsider.
 
