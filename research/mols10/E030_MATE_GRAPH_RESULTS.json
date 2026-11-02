@@ -1,0 +1,83 @@
+{
+  "iteration": "E030",
+  "scope": "10 specified fixed-Q matrices only; previously complete E027-E029 mate enumerations",
+  "method": "independent direct pairwise 100-cell overlay of normalized mates",
+  "total_mates": 24,
+  "total_mate_pairs": 25,
+  "total_orthogonal_mate_edges": 0,
+  "cases": {
+    "UW": {
+      "mates": 3,
+      "overlays": [
+        60,
+        68,
+        52
+      ]
+    },
+    "UX": {
+      "mates": 2,
+      "overlays": [
+        60
+      ]
+    },
+    "VX": {
+      "mates": 2,
+      "overlays": [
+        62
+      ]
+    },
+    "WW": {
+      "mates": 1,
+      "overlays": []
+    },
+    "WX": {
+      "mates": 1,
+      "overlays": []
+    },
+    "XX": {
+      "mates": 3,
+      "overlays": [
+        58,
+        61,
+        64
+      ]
+    },
+    "SX": {
+      "mates": 2,
+      "overlays": [
+        56
+      ]
+    },
+    "UU": {
+      "mates": 1,
+      "overlays": []
+    },
+    "Egan_B": {
+      "mates": 5,
+      "overlays": [
+        66,
+        58,
+        64,
+        64,
+        76,
+        66,
+        66,
+        58,
+        58,
+        64
+      ]
+    },
+    "Egan_C": {
+      "mates": 4,
+      "overlays": [
+        56,
+        60,
+        56,
+        60,
+        56,
+        60
+      ]
+    }
+  },
+  "notes": "No 100/100 mate edge among these finite Q; max observed 76. Does not exclude other Q or unrestricted triple. Replay script recomputes mates from source; local independent overlay audit used E027/E028/E029 full JSON artifacts."
+}
