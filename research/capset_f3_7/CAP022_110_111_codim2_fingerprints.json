@@ -1,0 +1,176 @@
+{
+  "campaign": "CAPSET-F3-7",
+  "step": "CAP-022",
+  "date_utc": "2026-11-02",
+  "scope": "Canonical H112 and all its one/two deletions; global 110/111 corollary conditional on Potechin 2008 + Thackeray 2022 and 111 extension argument CAP-010A",
+  "projective_normals": 364,
+  "verified_deletions": {
+    "one": 112,
+    "two_antipodal": 56,
+    "two_nonantipodal": 6160
+  },
+  "F112": [
+    [
+      [
+        40,
+        36,
+        36
+      ],
+      308
+    ],
+    [
+      [
+        45,
+        45,
+        22
+      ],
+      56
+    ]
+  ],
+  "F111": [
+    [
+      [
+        39,
+        36,
+        36
+      ],
+      110
+    ],
+    [
+      [
+        40,
+        36,
+        35
+      ],
+      198
+    ],
+    [
+      [
+        45,
+        44,
+        22
+      ],
+      45
+    ],
+    [
+      [
+        45,
+        45,
+        21
+      ],
+      11
+    ]
+  ],
+  "F110_antipodal": [
+    [
+      [
+        38,
+        36,
+        36
+      ],
+      110
+    ],
+    [
+      [
+        40,
+        35,
+        35
+      ],
+      198
+    ],
+    [
+      [
+        44,
+        44,
+        22
+      ],
+      45
+    ],
+    [
+      [
+        45,
+        45,
+        20
+      ],
+      11
+    ]
+  ],
+  "F110_nonantipodal": [
+    [
+      [
+        38,
+        36,
+        36
+      ],
+      38
+    ],
+    [
+      [
+        39,
+        36,
+        35
+      ],
+      144
+    ],
+    [
+      [
+        40,
+        35,
+        35
+      ],
+      63
+    ],
+    [
+      [
+        40,
+        36,
+        34
+      ],
+      63
+    ],
+    [
+      [
+        44,
+        44,
+        22
+      ],
+      18
+    ],
+    [
+      [
+        45,
+        43,
+        22
+      ],
+      18
+    ],
+    [
+      [
+        45,
+        44,
+        21
+      ],
+      18
+    ],
+    [
+      [
+        45,
+        45,
+        20
+      ],
+      2
+    ]
+  ],
+  "count_of_45_point_5D_cells": {
+    "size112": 112,
+    "size111": 67,
+    "size110_antipodal": 22,
+    "size110_nonantipodal": 40
+  },
+  "local_python_unittest": "PASS 4/4, CPU 1.96s",
+  "independent_javascript": "PASS: all 112 deletion aggregate counts, all 6216 pair aggregate spectra and 56/6160 split",
+  "random_seed": null,
+  "gpu_used": false,
+  "global_upper_bound_improved": false,
+  "novelty": "NOT_ESTABLISHED"
+}

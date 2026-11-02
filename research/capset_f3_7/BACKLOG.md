@@ -313,3 +313,11 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 ### CAP-021 rank-2 Gaussian relaxation countermodel and CI policy addendum (2026-11-02 UTC)
 - [FALSIFIED / EXACT] Aggregate global S2/S3 moments + projective Gaussian Q rank/sign spectrum **still cannot exclude 287**: exact 8-profile formal histogram matches rank2 Q=x1²+x2² value counts (121,486,486) and moments, with no CAP017B-forbidden profile. It is NOT a cap witness. Focus on actual per-direction 5D incidence/geometry, not more aggregate-only LP.
 - [CI HYGIENE] Dedicated branch workflow now has concurrency cancel-in-progress; check final GitHub Actions result after latest commit. Local CAP021 Python stdlib 6/6 PASS; independent JS exact.
+
+
+## CAP-022 — near-maximal 6D 5D-section fingerprints (2026-11-02 UTC)
+- [LOCAL EXACT / CI PENDING] All 112 one-point and 6216 two-point deletions of canonical 112-cap checked over all 364 projective normals, with independent JavaScript aggregate replay. 111 has unique spectrum: (39,36,36)x110, (40,36,35)x198, (45,44,22)x45, (45,45,21)x11. 110 has exactly two spectra for canonical completion: 56 antipodal vs6160 other deletions. Counts of 45-point 5D subflats distinguish them: 22 vs40. Report CAP022_110_111_CODIM2_FINGERPRINTS_2026-11-02.md; test_cap022_110_111_codim2_fingerprints.py; JSON certificate.
+- [P0] Confirm CI success at final CAP022 commit; independently referee Thackeray 110-cap completion and CAP010A 111 extension before promoting universal near-maximal slice fingerprint.
+- [P0] Build anchored-111 3x3 codim2 grid constraints (all 9 cells <=45, all 12 grid lines <=112, exact row0 fingerprint), cross-layer 3AP constraints, and proof-logged SAT/ILP. Avoid treating aggregate-only histogram as geometric witness.
+- [P0] Continue hostile referee CAP017B and provisional <=287 theorem; preserve balanced/no-112 branch and separate ≥237 lower-bound construction work. No stronger bound, no >=237 witness, no exact r3(7).
+- [NOVELTY] No literature priority established; Thackeray 2022 already classifies 110 completion and stronger near-maximal geometry. Do not claim novel global result.
