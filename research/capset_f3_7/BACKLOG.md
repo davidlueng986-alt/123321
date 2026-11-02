@@ -1,3 +1,9 @@
+## CAP-007J global 89-slice theorem (2026-11-02 10:56 UTC)
+- [EXACT ELEMENTARY PROOF / LOCAL TESTS PASS / CI PENDING] Every hypothetical 237-cap in F3^7 has an affine 6D hyperplane containing >=89 points. Exact 2nd/3rd moment contradiction -35,076 if all slices<=88; independent 236-witness JS moment replay; Python 9-cap regression and 75-profile exhaustive check. Proof/script/test: CAP007J_HYPERPLANE_THIRD_MOMENT_89_GATE_2026-11-02.md, cap007j_hyperplane_moment_gate.py, test_cap007j_hyperplane_moment_gate.py.
+- [P0] Confirm new CI with 236-point regression fixture; if failure, diagnose before promoting. CAP-007I is **separate** concurrent 5922-transform 112+112 additive-hole experiment, do not overwrite or conflate.
+- [P1] For global slice-based proof, use necessary range 89..112; CAP-007H currently only addresses exactly112. Derive additional cap-specific fourth-moment / cross-slice constraints or classification cuts for 89..111, with exact proof certificates. Second+third moment alone cannot force90 (rational fractional 89-profile model).
+- [META] This does NOT improve global bound 291 or prove existence of 237; literature novelty unverified. Avoid extrapolating the 112-slice conditional model or restricted local neighborhoods to all caps.
+
 ## CAP-005G rational LP duals (2026-11-02 03:58 UTC)
 - [LOCAL EXACT PASS / CI PENDING] 848 additional six-fiber neighborhoods have exact-rational LP dual certificates independently checked by mod-3 arithmetic. Cumulative restricted exclusions 295,922 / 296,010; 88 remain unresolved. Local artifact SHA256 0a49469949dca1e9a55e6cffab62306eec7a0e9f9e9bace17289e1e26bd4e7db (SciPy version may change certificate).
 - [P0] Confirm GitHub CI and 848-dual JSON artifact; on failure inspect checker/solver rather than counting exclusions.
