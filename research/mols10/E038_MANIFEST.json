@@ -1,0 +1,73 @@
+{
+  "generated_utc": "2026-11-02T14:00:26Z",
+  "files": {
+    "E038_SPARSE_PROBES.json": {
+      "sha256": "7cc407a4b95b1f4d3dd072436ef8ffc1349e665cf997145f3997c2ccb1f77af9",
+      "bytes": 10079
+    },
+    "E038_TRIADS.json": {
+      "sha256": "7dda884e893245a8647aedbbfa4aa4421dec63864f54170e3adba8ad0304d894",
+      "bytes": 9382
+    },
+    "E038_SUMMARY.json": {
+      "sha256": "35e3ed0a862ef71da707b6e00e1ae11102159b94cf791e7b70b6b402473327bc",
+      "bytes": 1166
+    },
+    "E038_sparse_all.py": {
+      "sha256": "69f03d703b272a700fe91cc49c2565b9ef71d29123feba4f75c4b94848834291",
+      "bytes": 1887
+    },
+    "E038_REPORT.md": {
+      "sha256": "7bd9c72a7d639ea94da628884dba6c20dea07b880fc03bba5d7b2877d91d7f3f",
+      "bytes": 6876
+    },
+    "E038_K3_LP_CONTROLS.json": {
+      "sha256": "2fba84d600ca0fe5ad1dbe069cb3bda964ee32b8ee691587beda605798574934",
+      "bytes": 56729
+    },
+    "E038_triads.py": {
+      "sha256": "494f93ca628a90e7e934d4375080c92b92efd9f7e82827e6bddc6e6c0a09af02",
+      "bytes": 2105
+    },
+    "E035_column_residual.py": {
+      "sha256": "a6fc74a86f09d90b6c983f978717be9e59a7783607d83bba192a3dce78bbe210",
+      "bytes": 4711
+    },
+    "E037_ALL_CYCLES.json": {
+      "sha256": "1963301e0e611a33a61522ac30c5a24237faad8432dd23c0ddc8215202ce36a7",
+      "bytes": 1200674
+    },
+    "E038_sparse_probe.py": {
+      "sha256": "6605ac2c2e25c224b56cd7e91b7f9ec55c8aa5b3964d87cebec0115c5948753d",
+      "bytes": 1693
+    },
+    "E038_verify.js": {
+      "sha256": "719b97654ef40f975bafca8550ce8b2982981cd3e3877c80998f8989fd3833bc",
+      "bytes": 4858
+    },
+    "E038_k3_controls.py": {
+      "sha256": "55183303f5213e00788486f654370cb9d174194da262c62d6b1c20a373a7a087",
+      "bytes": 788
+    },
+    "E038_positive_controls.py": {
+      "sha256": "83c3fcaeed6cd0c19f6ef6be20cc6c8877208417f337cc86377177e3ff8d038d",
+      "bytes": 554
+    },
+    "E038_CERTIFICATES.json": {
+      "sha256": "2a470b6ad366acc430def383461826b03bb01d03b8bc8b14cb415d8b5a876127",
+      "bytes": 521996
+    },
+    "E038_generate.py": {
+      "sha256": "456c2d5f414adbc5957aa81dec59d335c2dac331ff0cd8c96438ff04890e9a1c",
+      "bytes": 2403
+    },
+    "E038_verify_triads.js": {
+      "sha256": "57aa82103d803e4b079502f0bcb559d2603cc55ea220a385be30a6ca57d0bc56",
+      "bytes": 2999
+    },
+    "E038_verify_sparse.js": {
+      "sha256": "bb443dc1d99065e10d75049aef78f5daad89bcc89c473b89ba087b595a2d7e73",
+      "bytes": 2368
+    }
+  }
+}
