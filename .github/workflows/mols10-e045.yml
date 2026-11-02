@@ -1,0 +1,56 @@
+name: MOLS10 E045 independent LP-guided exact replay
+on:
+  push:
+    branches: [math-agent-mols10]
+    paths: ['.github/workflows/mols10-e045.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: math-agent-mols10
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install CPU dependencies
+        run: python -m pip install numpy scipy
+      - name: Generate and certify LP-guided k4 fixed prefixes
+        working-directory: research/mols10
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+        run: |
+          python E045_guided.py --parents 48 --per-parent 12 --seconds 100 > E045_GUIDED_REMOTE.log
+          for start in 0 100 200 300 400 500; do
+            end=$((start+100))
+            python E045_certify.py --start "$start" --end "$end" >> E045_CERTIFY_REMOTE.log
+          done
+          python - <<'PY'
+          import json,glob
+          C=[];F=[]
+          for p in sorted(glob.glob('E045_CERT_[0-9]*_[0-9]*.json')):
+              d=json.load(open(p));C+=d['certificates'];F+=d['failed']
+          C.sort(key=lambda x:x['index'])
+          json.dump({'experiment':'E045','certificates':C,'failed':F,'scope':'fixed prefixes only, not unrestricted'},open('E045_CERTIFICATES.json','w'),separators=(',',':'))
+          print('certificates',len(C),'failed',len(F))
+          PY
+          node E045_verify.js > E045_VERIFY_REMOTE.json
+          python E045_random_control.py > E045_RANDOM_REMOTE.log
+          sha256sum E045_GUIDED_RESULTS.json E045_CERTIFICATES.json E045_RANDOM_CONTROL.json > E045_REMOTE_SHA256.txt
+          cat E045_VERIFY_REMOTE.json
+      - name: Persist independently replayed evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/mols10/E045_GUIDED_RESULTS.json research/mols10/E045_CERTIFICATES.json research/mols10/E045_RANDOM_CONTROL.json research/mols10/E045_GUIDED_REMOTE.log research/mols10/E045_CERTIFY_REMOTE.log research/mols10/E045_VERIFY_REMOTE.json research/mols10/E045_RANDOM_REMOTE.log research/mols10/E045_REMOTE_SHA256.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "mols10 E045: independent CPU replay of guided fixed-prefix exact certificates"
+            git push origin HEAD:math-agent-mols10
+          fi
