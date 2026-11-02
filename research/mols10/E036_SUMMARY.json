@@ -1,0 +1,66 @@
+{
+  "experiment": "E036",
+  "timestamp_utc": "2026-11-02T12:50:47Z",
+  "problem_status": "OPEN",
+  "scope": "f=(01)(23)(45)(67)(89); all 156 centralizer orbits of legal B row1 g",
+  "exact_orbit_coverage": {
+    "representatives": 156,
+    "legal_g": 440192,
+    "independent_js": "PASS"
+  },
+  "constructive_prefixes": {
+    "count": 156,
+    "rows": 6,
+    "Latin_rows_columns": "PASS",
+    "pair_overlay_counts": [
+      60,
+      60,
+      60
+    ],
+    "independent_js": "PASS",
+    "max_nodes_per_single_row": 12846,
+    "canonical_witness_sha256": "5b198704a6cd24cae9ba57b7f938ce121aba182df1fc78738d39ab92a2aff66f"
+  },
+  "bounded_lookahead": {
+    "fixed_five_row_prefixes": 156,
+    "attempts_row6_sat": 3093,
+    "row7_sat": 2,
+    "row7_fixed_prefix_unsat_complete": 3091,
+    "row7_unknown": 0,
+    "row8_sat": 0,
+    "row8_fixed_prefix_unsat_complete": 2,
+    "seven_row_indices": [
+      39,
+      47
+    ],
+    "seven_row_overlays": [
+      70,
+      70,
+      70
+    ],
+    "eight_row_zero_support": [
+      {
+        "idx": 39,
+        "candidate_variables": 9,
+        "zero_constraints": 133
+      },
+      {
+        "idx": 47,
+        "candidate_variables": 4,
+        "zero_constraints": 156
+      }
+    ]
+  },
+  "controls": {
+    "negative_corruption_rejected": true
+  },
+  "negative_result": "No full order-10 triple; all UNSAT claims apply only to fixed partial prefixes. No proof of impossibility for any f/g orbit.",
+  "novelty": "Restricted finite constructive theorem, not claimed novel relative to literature.",
+  "code": [
+    "E036_reproduce.py",
+    "E036_verify.js",
+    "E036_lookahead_reproduce.py",
+    "E036_verify_k7.js"
+  ],
+  "next_action": "Apply sound column-aware residual Hall/LP before committing sixth/seventh rows; explore globally canonical f types and seek full 100/100/100 witness or complete proof."
+}
