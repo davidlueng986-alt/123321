@@ -8,7 +8,7 @@
     100,
     91
   ],
-  "next_action": "Execute and independently validate E030_direct_partition.py on n=2,3,4; implement incremental compatibility and Hall/LP cuts, then bounded order-10 search. No global claim.",
+  "next_action": "E031: direct 5-net OA SAT/CP-SAT prototype, proven symmetry normalization, n4 positive/n6 negative controls, bounded n10 smoke; compare joint third-square-aware constraints with pair-first exact-cover, record seed/solver/time/proofs; avoid more trades on already excluded Q.",
   "current_hypothesis": "H30A-DIRECT-TRIPLE-PARTITIONS",
   "last_experiment": "E030-FIRST-PRINCIPLES-DIRECT-PARTITION-PROTOTYPE",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
@@ -122,13 +122,16 @@
     "research/mols10/E026_independent_3color.py",
     "research/mols10/E026_RESULTS.json",
     "research/mols10/E026_GF9_positive.py",
-    "research/mols10/E029_Egan_BC_fixed_Q.py"
+    "research/mols10/E029_Egan_BC_fixed_Q.py",
+    "research/mols10/E030_structural_audit.js",
+    "research/mols10/E030_mate_graph.py",
+    "research/mols10/E030_MATE_GRAPH_RESULTS.json"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T09:04:00Z",
+  "last_run_utc": "2026-11-02T09:55:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -146,13 +149,14 @@
     "research/mols10/E025_REPORT.md",
     "research/mols10/E026_REPORT.md",
     "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E027_REPORT.md",
-    "research/mols10/E029_REPORT.md"
+    "research/mols10/E029_REPORT.md",
+    "research/mols10/E030_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "No 100/100/100 witness, unrestricted nonexistence proof, global symmetry classification, SAT proof certificate or family-wide exclusion. E029 fixed-Q B/C only. Isotopy inequivalence of B/C vs BKS Q untested. GitHub CI for E029 not claimed.",
+  "limitations": "No 100/100/100 witness, unrestricted nonexistence proof, complete paratopy classification, family-wide exclusion, or SAT proof certificate. E030 signatures distinguish classes only when different; Parker A/B collision unresolved. All rank37 cases are known pairs; rank filter did not prune any. Mate graph depends on prior exhaustive lists. GitHub CI not confirmed.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
-  "external_status_review": "2026-11-02 ~09:04 UTC targeted literature search: no independently checkable unrestricted 3-MOLS(10) solution found. Primary BKS EJC 2026-02-13, arXiv 2503.10504v2 and Barnoff–Bright arXiv 2605.02132 remain restricted/pair results; search absence is not proof.",
-  "current_math_result": "E029: exact fixed Egan B has 932 transversals, exactly 5 normalized orthogonal mates (common counts 0,14,2,0,0); fixed Egan C has 864 transversals, exactly 4 mates (0,0,7,0). Both independent exact-cover algorithms agree on all 9 mate matrices; compiled C++ 32,659,200 full permutation tests independently reproduce common counts and supports. Neither SPECIFIC fixed Q extends to a triple. No unrestricted resolution.",
+  "external_status_review": "2026-11-02 ~09:55 UTC: checked BKS EJC 2026, arXiv 2503.10504v2 (2026-01-21), Barnoff-Bright arXiv 2605.02132v2 (2026-07-04), BKS arXiv 2509.09633, Gill-Wanless 2023 arXiv 2204.10996. No independently verifiable unrestricted solution found; search absence is not proof.",
+  "current_math_result": "E030 structural audit: 13 concrete Latin squares yield 12 distinct paratopy cycle-spectrum signatures (only Parker A/B collide, equivalence unproved); 11 independently GF2-rank-checked genuine orthogonal pairs all rank 37; 24 normalized mates across ten fixed Q yield 25 direct mate-pair overlays, zero orthogonal mate edges, max 76/100. These are structural/conditional results only; original 3-MOLS(10) remains OPEN.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -160,5 +164,9 @@
   "e026_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E026_REPORT.md",
   "e027_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E027_REPORT.md",
   "e028_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E028_REPORT.md",
-  "e029_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E029_REPORT.md"
+  "e029_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E029_REPORT.md",
+  "verified_results": [
+    "E030: 13 Latin matrices, 12 distinct paratopy cycle-spectrum signatures (two independent cycle algorithms, positive/negative controls); 11 genuine 4-net pairs rank37 by independent GF2 row/column eliminations; 24 mates across ten specified Q, 25 pairwise overlay checks, zero orthogonal edges, maximum 76. All conditional, not unrestricted."
+  ],
+  "e030_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E030_REPORT.md"
 }
