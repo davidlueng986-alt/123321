@@ -163,3 +163,14 @@ jobs:
             /tmp/cap005_j_k7_incidence.json
             /tmp/cap005_j_k7_direct.json
           retention-days: 30
+
+      - name: CAP-005K exact quotient of seven-fiber necessary survivors (CPU)
+        run: |
+          python research/capset_f3_7/cap005_k7_symmetry_quotient.py --out /tmp/cap005_k7_symmetry.json
+          python research/capset_f3_7/cap005_k7_symmetry_check.py /tmp/cap005_k7_symmetry.json
+      - name: Archive CAP-005K 1665 seven-fiber orbit representatives (necessary only)
+        uses: actions/upload-artifact@v4
+        with:
+          name: capset-k7-symmetry-1665-representatives
+          path: /tmp/cap005_k7_symmetry.json
+          retention-days: 30

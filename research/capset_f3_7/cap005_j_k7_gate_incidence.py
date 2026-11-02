@@ -41,7 +41,7 @@ def unrank(r):
         r -= math.comb(n, k)
     return sorted(ans)
 
-def census(path):
+def census(path, return_counts=False):
     points = load_points(path)
     present = set(points)
     edges = {p:set() for p in itertools.product(range(3), repeat=7) if p not in present}
@@ -94,12 +94,13 @@ def census(path):
     max_groups = [unrank(i) for i, v in enumerate(counts) if v == mx]
     assert (N, excluded, mx, hist[mx], len(max_groups)) == (888030, 862906, 198, 8, 8)
     assert dict(sorted(k_hist.items())) == {1:8,2:16,3:64,4:142,5:712,6:297,7:320,8:8,9:384}
-    return dict(status='NECESSARY_ONLY_RESTRICTED_NO_GLOBAL_BOUND',
+    result = dict(status='NECESSARY_ONLY_RESTRICTED_NO_GLOBAL_BOUND',
                 baseline=236, released_fibers=7, total=N, excluded_by_16_outsider_gate=excluded,
                 not_excluded=N-excluded, max_admissible_outsiders=mx,
                 max_groups=sorted(max_groups), incidence_count=incidences,
                 outsider_matching_size_histogram={str(k):v for k,v in sorted(k_hist.items())},
                 histogram={str(k):v for k,v in sorted(hist.items())}, seed=None, gpu=False)
+    return (result, counts) if return_counts else result
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
