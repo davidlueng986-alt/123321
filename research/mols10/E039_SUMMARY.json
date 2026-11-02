@@ -1,0 +1,25 @@
+{
+  "experiment": "E039",
+  "timestamp_utc": "2026-11-02T15:12:00Z",
+  "global_status": "OPEN",
+  "verified_full_100_100_100_witness": false,
+  "global_orbits_certified_excluded": 0,
+  "global_orbits_total": 162959,
+  "fixed_prefixes_certified": 516,
+  "distinct_E037_360": 360,
+  "distinct_E036_holdout_156": 156,
+  "exact_class_support": {
+    "1": 63,
+    "2": 35,
+    "3": 358,
+    "4": 60
+  },
+  "additional_beyond_E038_cheap_cuts": 244,
+  "independent_integer_verification": "516/516 PASS; mutation rejection; source-index coverage PASS",
+  "new_five_demand_sparse_motifs": 2,
+  "positive_controls": "affine n5,n7,n11 k4, 105 projected LP tests feasible",
+  "negative_evidence": "GF2/GF3/GF5 gave 0 additional cuts; 14s guided search 57.45086898/60; broad 360 packing scan and full uniform hierarchy timed out",
+  "uncertainty": "nonuniform fixed prefixes only, zero complete orbits excluded",
+  "archive_status": "Created locally and clean-replayed; Google Drive upload attempted but failed CONTAINER_SESSION_EXPIRED; journal write attempted separately",
+  "report": "E039_REPORT.md"
+}
