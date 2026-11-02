@@ -11,9 +11,9 @@
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
   "current_hypothesis": "CAP-026: Any hypothetical 285-point cap with every affine 6D section<=109 has nonzero barycenter and anisotropic rank-2 quadratic form on its 6D kernel. Exact formal moment+rank2 negative control survives; no new global bound. CAP-019 <=287 remains provisional pending independent Thackeray 110-cap classification referee.",
-  "next_experiment": "Point-level 3D fiber compatibility and remaining 1053 directional constraints; independent Thackeray 110-completion referee",
-  "last_run_id": "CAP-027-RADICAL-RADON-2026-11-02",
-  "last_run_result": "RANK15_AND_130_GRIDS_EXACT_285_COUNT_ONLY_NEGATIVE_CONTROL_CI_PENDING",
+  "next_experiment": "Simultaneous point-level shared 3D fibers across intersecting quotient lines, all nonradical Q directions, Thackeray 110 completion independent referee.",
+  "last_run_id": "CAP-028-4D-QUOTIENT-LINE-LIFTS-2026-11-02",
+  "last_run_result": "1080_LINE_BOUND_PASS_12_PROFILES_LOCALLY_LIFTABLE_285_COUNT_MODEL_SURVIVES_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -97,7 +97,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T21:48:00Z",
+  "last_updated_utc": "2026-11-02T22:56:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1352,6 +1352,37 @@
     "cap026_prior_ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41524558297",
     "gpu": false,
     "paid_compute": false,
-    "seed": null
+    "seed": null,
+    "github_ci": "SUCCESS_41532249767"
+  },
+  "cap028_4d_quotient_line_lifts": {
+    "status": "LOCAL_PYTHON_6_OF_6_NODE_PASS_CI_PENDING",
+    "report": "research/capset_f3_7/CAP028_4D_QUOTIENT_LINE_LIFTS_2026-11-02.md",
+    "test": "research/capset_f3_7/test_cap028_4d_quotient_line.py",
+    "independent_js": "research/capset_f3_7/cap028_4d_line_independent.js",
+    "certificate": "research/capset_f3_7/CAP028_4d_quotient_line_certificate.json",
+    "fibers": 81,
+    "quotient_lines": 1080,
+    "observed_profiles": 12,
+    "max_line_total": 19,
+    "local_lift_witnesses": [
+      18,
+      19
+    ],
+    "all_profiles_individually_realizable": true,
+    "moments": [
+      11400,
+      56382
+    ],
+    "known236_regression": true,
+    "local_tests": "PASS_6_OF_6",
+    "independent_node": "PASS",
+    "milp_775": "TIMEOUT_12S_UNKNOWN",
+    "seed": null,
+    "gpu": false,
+    "paid_compute": false,
+    "global_285_cap": false,
+    "global_upper_bound_improved": false,
+    "novelty": "NOT_ESTABLISHED"
   }
 }

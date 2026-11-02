@@ -363,3 +363,11 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0 GEOMETRY] Replace 81-fiber count-only model by point-level 3D cap assignments with cross-fiber collinearity and remaining rank2/Type1 normals. Use proof-logged SAT/CP-SAT and independently checked UNSAT proof if attempting global bounds.
 - [P0 REFEREE] Thackeray 2022 computational 110-completion and CAP019 <=287 remain provisional; preserve balanced/no-111 and ≥237 construction branches.
 - [NOVELTY] Affine incidence p-ranks are classical; literature priority for CAP027 not established. Exact r3(7) OPEN.
+
+## CAP-028 — 1080 quotient 4D lines / local liftability (2026-11-02 ~22:56 UTC)
+- [LOCAL EXACT / CI PENDING] CAP027 285-count negative control survives all 1080 additional 4D-flat bound <=20 (maximum observed 19). All 12 quotient-line profiles individually realized by exact 18/19-point AG(4,3) caps and point deletions; independent Python 6/6 and Node PASS. Known236 7D regression PASS.
+- [FALSIFIED] Adding all 4D quotient-line cardinality bounds plus independent per-line realizability **does not** exclude CAP027's count-only 285 model. This is NOT a 285 cap, no new upper bound. Separate (7,7,5) MILP timed out 12s; UNKNOWN, not UNSAT.
+- [P0] Confirm GitHub CI green on final CAP028 head.
+- [P0 GEOMETRY] Require simultaneous shared 3D fiber point-level assignments across intersecting quotient lines; independent local lifts do not imply global compatibility. Use proof-logged SAT/CP-SAT and independent exact checker.
+- [P0] Check remaining 1053 directions and Q residue constraints; independent Thackeray 110-cap completion referee, CAP019 provisional <=287, balanced/no-111 and >=237 construction all remain active.
+- [NOVELTY] Classical AG(4,3) max20 known; no new priority established. Exact r3(7) OPEN.
