@@ -14192,9 +14192,9 @@
     {
       "id": "CAP-009A to CAP-010C",
       "title": "Universal GL(6,3) Pointwise Convolution Formula, Exact Rational Spectral Deletion Barrier (425/576), and 110/111-Cap Completion Audit",
-      "verification_status": "VERIFIED_EXACT_RATIONAL",
+      "verification_status": "MIXED: EXACT_FIXED_PAIR_CERTIFICATE_AND_NUMERIC_DIAGNOSTICS",
       "scope_boundary": "Global over all GL(6, F_3) for 112+112 zero/single-hole range (k=0 and 2<=k<=30); exact rational spectral barrier d >= m for 1 <= m <= 32 on (H, H'); 110/111-cap unique completion conditional on Potechin (2008) / Thackeray (2022).",
-      "audit_finding": "Wave 1 (CAP-010B) eliminated all floating-point SVD dependencies in CAP-009B by proving in 64-bit exact integer arithmetic that lambda_perp = 425/576 (multiplicity 4) via L = 15,840."
+      "audit_finding": "Wave 1 original CAP-010B includes floating-point SVD/eigvalsh diagnostics; independent CAP-014 exact integer PSD/rank certificate establishes 425/576 for fixed classical 112+112 pair only."
     },
     {
       "id": "CAP-011A to CAP-011C",
@@ -14871,6 +14871,7 @@
     "verified_scope": "CAP-011A sign fix and full four-witness direction replay; other v5 claims copied as source data",
     "cap010b_spectral_caveat": "Float64 SVD/eigvalsh in v5 are diagnostics; separate exact fixed-pair PSD in cap010b_exact_psd_certificate.py",
     "new_global_bound": false,
-    "r3_7_exact_status": "OPEN"
+    "r3_7_exact_status": "OPEN",
+    "proof_scope_correction": "CAP-014 independently certifies fixed classical pair; numerical diagnostics in imported source do not prove arbitrary GL(6) spectral claims"
   }
 }
