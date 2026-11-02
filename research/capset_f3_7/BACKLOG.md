@@ -330,3 +330,10 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0] Design symmetry-reduced anchored111/112 SAT proof search for M287 and target237 subcases; do NOT treat anchored111 as global for target237. Add codim2 geometry cuts only with independently proved soundness.
 - [P0 REFEREE] CAP017B common-tangent and Thackeray 2022 110 completion, CAP010A 111 completion and conditional CAP019 <=287 still require hostile mathematical audit.
 - [P0 GLOBAL] Balanced/no-111 section branch and lower-bound 237 construction remain unaddressed by this reduction. Keep exact r3(7) campaign active.
+
+## CAP-024 — anchored111 exact codegree / Cauchy necessary cut (2026-11-02 19:00 UTC)
+- [DONE LOCAL EXACT / CI PENDING] 728-difference codegree histogram 0×2,1×110,19×220,20×396; 41,137,470 four-cycles; exact 49 b+c=176 Cauchy necessary cuts. 5/5 Python PASS + independent JS PASS. Source, report and JSON certificate committed in dedicated branch.
+- [P0] Confirm final CAP-024 CI on exact commit. Do not treat green CI as SAT UNSAT or proof of r3(7).
+- [P0 EXPERIMENT] Implement exact quadratic/pseudo-Boolean Cauchy pair cuts in anchored111 SAT/CP-SAT, measure solver node/relaxation impact with CPU bounded pilot; keep proof logging for UNSAT. Do not claim count-only grids excluded.
+- [P0 REFEREE] Continue hostile proof review of CAP-017B common-tangent, Thackeray 110 completion, CAP-019 candidate global <=287.
+- [P0 GLOBAL] Preserve balanced/no-111 and ≥237 witness branches; local anchored111 cuts alone cannot solve r3(7). Novelty not established.

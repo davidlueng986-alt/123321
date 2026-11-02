@@ -11,9 +11,9 @@
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
   "current_hypothesis": "CAP-023: canonical 111 anchor exact SAT reduction with 1458 external variables and 80,919 cross-layer binary constraints; 287-target CNF SAT/UNSAT UNKNOWN. All four 111 fingerprint profiles admit explicit 3x3 count-only 287 countermodels; aggregate/grid relaxations insufficient. CAP-019 <=287 remains conditional pending hostile referee.",
-  "next_experiment": "Run proof-logged SAT on anchored111 subcases with 3x3 5D geometry/cross-layer constraints, verify Thackeray/CAP017B, and preserve global no-111 balanced branch plus 237 construction work.",
-  "last_run_id": "CAP-023-ANCHORED111-EXACT-CNF-2026-11-02",
-  "last_run_result": "EXACT_CNF_287_GENERATED_738782_CLAUSES_4_GRID_NEGATIVE_CONTROLS_6_LOCAL_TESTS_CI_PENDING",
+  "next_experiment": "Evaluate exact CAP-024 pointwise pair cuts against anchored111 SAT/CP-SAT, keep proof logging and audit CAP019/017B; pursue balanced/no-111 global branch.",
+  "last_run_id": "CAP-024-ANCHORED111-CODEGREE-2026-11-02",
+  "last_run_result": "EXACT_CODEGREE_CAUCHY_CUT_LOCAL_PASS_CI_PENDING_NO_NEW_GLOBAL_BOUND",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -97,7 +97,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T18:00:26Z",
+  "last_updated_utc": "2026-11-02T19:00:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1211,5 +1211,27 @@
       "Thackeray 2022 110 completion preprint",
       "CAP-010A 111 completion secant lemma"
     ]
+  },
+  "cap024_anchored111_codegrees": {
+    "status": "LOCAL_EXACT_PASS_CI_PENDING",
+    "report": "research/capset_f3_7/CAP024_ANCHORED111_CODEGREE_CAUCHY_2026-11-02.md",
+    "test": "research/capset_f3_7/test_cap024_anchored111_codegrees.py",
+    "certificate": "research/capset_f3_7/CAP024_anchored111_codegree_certificate.json",
+    "degree": 111,
+    "edges": 80919,
+    "codegree_histogram": {
+      "0": 2,
+      "1": 110,
+      "19": 220,
+      "20": 396
+    },
+    "four_cycles": 41137470,
+    "balanced_88_88_deficit_max": 7018,
+    "balanced_88_88_H112_difference_pair_max": 369,
+    "local_tests": "PASS_5_OF_5",
+    "independent_js": "PASS_DIFFERENT_ANCHOR",
+    "novelty": "NOT_ESTABLISHED",
+    "global_bound_improved": false,
+    "conditional_normalization": true
   }
 }
