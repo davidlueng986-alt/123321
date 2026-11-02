@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "E025: diversify beyond the eight specific source Appendix pairs; generate distinct Myrvold residual-type orthogonal pairs, especially WW; verify isotopy and search for >=10 common transversals with all 100 cells supported, then exact-cover third square. Avoid claiming family-wide exclusions.",
-  "current_hypothesis": "H25-DIVERSIFY-MYRVOLD-PAIR-FAMILIES-TRIPLE-AWARE",
-  "last_experiment": "MOLS10-E024-SIX-APPENDIX-FIXED-PAIR-REPLAY",
+  "next_action": "E026: Do not repeat E025 one/two-symbol component flip neighborhood. Seek NEW nonisotopic WW or other residual-pattern orthogonal pair via source SAT encoding + blocking clause, or larger multi-symbol orthogonal-array trade; independently verify Latin+100 overlay, count common transversals and test 10-way exact cover if necessary conditions pass.",
+  "current_hypothesis": "H26-DIVERSIFY-BEYOND-LOCAL-2-SYMBOL-TRADES",
+  "last_experiment": "MOLS10-E025-COUPLED-PROPER-TWO-SYMBOL-TRADES",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
   "last_verified_results": [
@@ -59,7 +59,9 @@
     "E023: source-audited Myrvold 4x4 row-compatibility enumeration: Z4 k=1,2,3,4 counts 16/48/32/0 vs V4 16/48/32/8; parity proof rules out Z4 for any four-white row, hence VX Z4 branch. For V4 each compatible two-white partial has unique virtual four-white completion (48/48). This is local restricted-family preprocessing, not an order10 triple result.",
     "E023: primary EJC 2026 Appendix SX and UU 10x10 transversal-representation pairs independently transcribed. For each, Z=P^-1 Q and Q are exactly Latin and orthogonal overlay100. Independent DFS and full 10! permutation replay find ZERO common transversals for BOTH fixed pairs; each specific pair cannot extend to a triple. Does not exclude either family or unrestricted problem.",
     "E024: primary-source Appendix UW, UX, VX, WW, WX, XX P,Q each Latin; Z=P^-1 Q Latin and orthogonal to Q (100/100); common transversals exactly 0,0,0,1,0,0 by independent bitmask DFS and exhaustive 10! enumeration of each fixed pair. All six UNSAT_FIXED_PAIR only; combined with E023 SX/UU all eight specific published pairs excluded; NOT family-wide or unrestricted.",
-    "E024: WW only common transversal row-to-column [9,4,7,2,8,6,0,5,3,1]; GF4 16/16/16 positive control; source PDF direct download DNS failure, used PDF page screenshots/text; no DRAT/FRAT certificate."
+    "E024: WW only common transversal row-to-column [9,4,7,2,8,6,0,5,3,1]; GF4 16/16/16 positive control; source PDF direct download DNS failure, used PDF page screenshots/text; no DRAT/FRAT certificate.",
+    "E025: exhaustive proper two-symbol component-flip neighborhoods of six specific Appendix pairs: 1446 single-square flips and 87704 coupled flips; none orthogonal. Both Python and independent JavaScript enumeration agree. WW four best double-flip pairs only 98/100, other five max 96/100; no new pair, let alone triple.",
+    "E025: bounded one-extra-flip pilot on best double-flip candidates: 96768 trials, zero orthogonal; WW expanded all 96 double candidates with >=96 overlay, 26184 third-flip trials, zero orthogonal. These follow-up sets overlap. Not family-wide, not unrestricted."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -107,13 +109,14 @@
     "research/mols10/E023_SX_RESULTS.json",
     "research/mols10/test_E023_SX_pair_replay.py",
     "research/mols10/E023_UU_pair_replay.py",
-    "research/mols10/E023_UU_RESULTS.json"
+    "research/mols10/E023_UU_RESULTS.json",
+    "research/mols10/E025_coupled_trades.py"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T02:52:00Z",
+  "last_run_utc": "2026-11-02T04:47:09Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -127,43 +130,16 @@
     "research/mols10/E018_REPORT.md",
     "research/mols10/E019_REPORT.md",
     "research/mols10/E020_REPORT.md",
-    "research/mols10/E023_REPORT.md"
+    "research/mols10/E023_REPORT.md",
+    "research/mols10/E025_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
   "limitations": "Global 3-MOLS(10) OPEN. E023 source-published SX and UU are only TWO fixed-pair extension exclusions, each with 0 common transversals. No unrestricted coverage; other six Appendix examples not yet replayed. The VX/Z4 parity obstruction was already explicitly mentioned in the source paper (not novel). Local tests passed; E023 GitHub CI not yet verified.",
   "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
   "external_status_review": "2026-11-02 ~02:47 UTC: checked Bright–Keita–Stevens EJC 2026-02-13, Barnoff–Bright arXiv:2605.02132v2 2026-07-04, and targeted fresh searches. No independently verifiable unrestricted solution found; search absence not proof.",
-  "current_math_result": {
-    "egan_fixed_A_C_optimum": 91,
-    "egan_fixed_A_B_optimum": 91,
-    "parker_fixed_A_B_upper_bound": 77,
-    "original_question": "OPEN",
-    "conditional_scope_only": true,
-    "egan_original_A_no_triple": "COMPUTATIONAL_EXHAUSTIVE_FIXED_A",
-    "egan_one_trade_variants_no_triple": 48,
-    "parker_original_A_no_triple": "COMPUTATIONAL_EXHAUSTIVE_FIXED_A_E017",
-    "parker_single_trade_variants_no_triple_tested": 12,
-    "egan_disjoint_two_trade_variants_no_triple_tested": 4,
-    "e017_new_fixed_A_exclusions": 17,
-    "e019_rooted_depth3_disjoint_triples": 39528,
-    "e019_rooted_depth3_blocked": 29973,
-    "e019_rooted_novel_cuts": 23296,
-    "e020_parker_unary_unsat_roots": 1076,
-    "e020_parker_unary_sat_roots": 28,
-    "e020_parker_uncovered_cells": 13,
-    "e022_egan_pair_root_disjoint_cases": 1647,
-    "e022_egan_pair_root_sat": 45,
-    "e022_egan_pair_root_unsat": 1602,
-    "e022_egan_pair_root_unknown": 0,
-    "e022_egan_pair_root_supported_B_roots": 14,
-    "e022_egan_pair_root_uncovered_cells": 12,
-    "e023_vx_z4_local_obstruction": true,
-    "e023_v4_two_white_unique_completion": 48,
-    "e023_appendix_fixed_pair_SX_common_transversals": 0,
-    "e023_appendix_fixed_pair_UU_common_transversals": 0,
-    "e023_appendix_source_verified_pairs": 2
-  },
+  "current_math_result": "E025 exhaustive restricted negative: six published fixed pairs, 1446 proper single-square 2-symbol flips and 87704 coupled two-square flips, zero new orthogonal pairs; best WW 98/100 (four), others 96/100. Bounded extra third-flip pilots (96768 best-double trials, 26184 WW >=96 trials) found no repair. No global conclusion.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
-  "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md"
+  "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
+  "e025_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E025_REPORT.md"
 }
