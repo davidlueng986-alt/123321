@@ -717,7 +717,7 @@
     "script": "research/capset_f3_7/cap007j_hyperplane_moment_gate.py",
     "test": "research/capset_f3_7/test_cap007j_hyperplane_moment_gate.py",
     "report": "research/capset_f3_7/CAP007J_HYPERPLANE_THIRD_MOMENT_89_GATE_2026-11-02.md",
-    "status": "EXACT_PROOF_BASE_THEOREM_CI_GREEN_INTEGER_HISTOGRAM_EXACT_JS_PASS_FOLLOWUP_CI_PENDING",
+    "status": "EXACT_ELEMENTARY_PROOF_AND_INTEGER_HISTOGRAM_CI_GREEN",
     "global_numeric_upper_bound_improved": false,
     "lower_bound_improved": false,
     "novelty_established": false,
@@ -761,7 +761,10 @@
     "integer_histogram_exact_js_verified": true,
     "first_ci_failed": "https://github.com/davidlueng986-alt/123321/actions/runs/41432756301",
     "first_ci_failure": "witness header n: 7 not parsed; repaired",
-    "ci_green_base_theorem": "https://github.com/davidlueng986-alt/123321/actions/runs/41432934273"
+    "ci_green_base_theorem": "https://github.com/davidlueng986-alt/123321/actions/runs/41432934273",
+    "ci_green_latest": "https://github.com/davidlueng986-alt/123321/actions/runs/41433674492",
+    "ci_green_commit": "6858183a05b08c565e0e1eb238b257b930fb8f16",
+    "ci_green_tests": "All repository unit tests including CAP007J exact 237 gate, 236 direct moments, integer histogram; full workflow success"
   },
   "cap007j_alignment": {
     "scope": "two 112-point 6D slices, second relative to first by at most two elementary GL6 transformations; any affine translations",
