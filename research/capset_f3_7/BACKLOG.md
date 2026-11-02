@@ -345,3 +345,13 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0 EXTERNAL REFEREE] Independently reproduce the classification/computer-assisted parts of Thackeray arXiv:2206.09804v1 Thm3.9 and its 5D dependencies before treating CAP019 ≤287 as independently established. Fourier premise appears consistent but finite tests alone are insufficient.
 - [P0] Separate proof-logged anchored111 SAT target287 and balanced/no-111 lower-bound237 branch; the new small-m* zero-hole corollary does not improve global M288 finite dual.
 - [NOVELTY] Thackeray Prop4.1 already dominates CAP017B coarse bounds at d=0,1,2. Neither small-overlap corollary nor 287 claim has verified priority.
+
+
+## CAP-026 285-point quadratic-rigidity boundary (2026-11-02 ~20:55 UTC)
+- [DONE / LOCAL EXACT / CI PENDING] On 169 admissible 285-point sorted max109 profiles, three exact integer nonnegative functionals + 28 independent projective quadric spectra imply: hypothetical 285-cap with all affine 6D sections<=109 must have NONZERO barycenter and ANISOTROPIC rank2 Q on 6D barycenter kernel (40,162,162). See CAP026_285_QUADRATIC_RIGIDITY_2026-11-02.md and test_cap026_285_quadratic_rigidity.py.
+- [NEGATIVE CONTROL] Exact 1093-profile integer histogram matches global S2/S3 and surviving Q rank2 value counts, but is NOT a cap. Therefore moment+rank-spectrum LP cannot prove 285=>110. Prior CAP021 285 histogram violated barycenter Type counts; corrected negative control now respects them.
+- [P0] Check exact final GitHub CI for CAP-026; all independent arithmetic must pass before promoting code certificate.
+- [P0] Continue hostile reproducibility review of Thackeray 110-cap completion (2022 preprint) and candidate CAP-019 <=287. CAP-025 Fourier premise CI now SUCCESS 41514324725, but Thackeray computational classification not independently replayed.
+- [P0] To improve global upper/lower bounds, impose genuine codimension-two affine incidence, per-direction quadratic FORM geometry (not just rank histogram), and proof-logged anchored111/110 SAT; balanced/no-111 branch remains open.
+- [P1] Explore whether anisotropic rank2 Q can be excluded by joint 5D-subspace incidence, or provide an actual realizable direction assignment satisfying all 5D compatibility. Avoid presenting formal integer profiles as caps.
+- [NOVELTY] No external priority established; current global numerical bounds unchanged and exact r3(7) OPEN.
