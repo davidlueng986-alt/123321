@@ -68,3 +68,15 @@ python -m unittest discover -s research/capset_f3_7 -p 'test_cap021_slice_forcin
 No random seed, GPU, paid compute, or new candidate ≥237. GitHub CI status must be checked on the exact commit. Source and evidence are on the dedicated `research/capset-f3-7` branch only; no unrelated branches touched.
 
 **Meta-audit and next step:** The M287 search can now focus on **at least one 111-point slice** (assuming CAP-017B and 110 completion). Since the formal 287 histogram remains feasible, pursue *five-dimensional codimension-two incidence constraints*, barycenter Gaussian-quadric residue counts and proof-logged SAT/ILP; a mere global S₂/S₃ functional cannot finish the proof. Separately commission hostile review of CAP-017B and 110 completion before presenting candidate 287 upper bound as established. Exact r₃(7) remains OPEN.
+
+
+## 6. Further falsification: even aggregate Gaussian-quadric rank spectra are insufficient at M=287
+Since 287≡2 (mod 3), translating the cap by its barycenter can always arrange Σ_{x∈A}x=0. Then for each normal u, the two equal residues among its three slice counts equal Q(u)=−Σ_{x∈A}(u·x)² mod3. The projective value-count spectrum of Q is constrained by its quadratic rank/sign. For the genuine rank-2 quadratic form Q(x)=x₁²+x₂² on F₃⁷, the projective counts are **(N₀,N₁,N₂)=(121,486,486)**.
+
+A separate bounded CPU-only exploratory integer MILP suggested, and **independent exact JavaScript and stdlib Python arithmetic verified**, the following formal 1093-direction histogram:
+```
+(112,109,66):33; (111,109,67):109; (100,95,92):3;
+(98,98,91):13; (98,95,94):2; (97,96,94):344;
+(97,95,95):468; (96,96,95):121.
+```
+Its 1093 counts, S₂=30191539, S₃=2920545005 and duplicate-residue Q counts **(121,486,486)** are all exact. All profiles satisfy the CAP-017B near-maximal-pair restriction; there is no pair of slices both ≥110 in this model. It is **NOT an actual cap**, nor does it assign the profiles to individual directions consistently with a single 7D point set. The conclusion is narrow but important: **the aggregate S₂/S₃ moments plus the rank/sign value spectrum of Q alone cannot exclude M=287**. Future work needs actual codimension-two incidence, geometric compatibility, or proof-logged SAT—not just another aggregate quadratic-rank table. This is an explicit failed strategy, preserved as a negative control in the updated `CAP021_slice_forcing_certificate.json` and the sixth unit test.
