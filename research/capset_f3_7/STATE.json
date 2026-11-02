@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-007J: universal (conditional on Potechin 112-cap uniqueness) two-level Fourier spectrum powers 16/529 implies additive energy E(S,T)=218624+361k for any two 112-caps; relative two-elementary-GL transform family exactly 3812 orientations has max 12 third-slice eligible points, not global GL6.",
-  "next_experiment": "Confirm CI for CAP-007J; reduce arbitrary relative GL6(3) alignments using automorphism double cosets and stronger Fourier phase-sensitive inequalities; pursue the no-112-hyperplane global branch in parallel. Keep conditional CAP-007H proof-logged.",
-  "last_run_id": "CAP-007J-LOCAL-2026-11-02",
-  "last_run_result": "EXACT_3812_RELATIVE_112CAP_ALIGNMENTS_FOURIER_ENERGY_LEMMA_TESTS_PASS_CI_PENDING",
+  "current_hypothesis": "CAP-007J2: centered canonical 112-cap S is a (729,112,1,20) regular partial difference set: 1S*1S=112 at0, 1 on S,20 otherwise; Fourier values 112/-23/4. Potechin uniqueness gives universal centered 112-cap structure and exact cross-energy for arbitrary second T.",
+  "next_experiment": "Confirm CAP-007J2 CI. Exploit 112-cap SRG parameters and general spectral energy formula in proof-producing conditional 112-hyperplane SAT, reduce arbitrary two-112 alignments by stabilizer double-coset enumeration; maintain global all-slices<=111 branch.",
+  "last_run_id": "CAP-007J2-LOCAL-2026-11-02",
+  "last_run_result": "EXACT_112CAP_SELF_DUAL_FOURIER_PDS_SRG_GENERAL_CROSS_ENERGY_TEST_PASS_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -68,7 +68,8 @@
     "CAP-006C-LOCAL",
     "CAP-007H-LOCAL",
     "CAP-007I-LOCAL",
-    "CAP-007J-LOCAL"
+    "CAP-007J-LOCAL",
+    "CAP-007J2-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41415696843",
   "baseline_secant_audit": {
@@ -90,7 +91,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T11:04:56.326Z",
+  "last_updated_utc": "2026-11-02T11:10:53.032Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -792,5 +793,40 @@
     "seed": null,
     "gpu_used": false,
     "novelty_established": false
+  },
+  "cap007j2_strongly_regular": {
+    "scope": "any centered maximal 112 cap F3^6 via Potechin uniqueness; universal spectral identity with arbitrary second slice",
+    "srg_parameters": {
+      "v": 729,
+      "k": 112,
+      "lambda": 1,
+      "mu": 20
+    },
+    "convolution": {
+      "at_zero": 112,
+      "on_cap": 1,
+      "other_nonzero": 20
+    },
+    "fourier_values": {
+      "zero": 112,
+      "on_cap": -23,
+      "other_nonzero": 4
+    },
+    "self_duality": "canonical coordinate heavy Fourier support exactly equals S; affine images transform contragrediently",
+    "universal_energy_formula": "[(112^2-16)m^2 + 16*729*m + 513*sum_{u in H_S}|hat(1_T)(u)|^2]/729",
+    "direct_energy_test_sizes": [
+      32,
+      80,
+      100,
+      110,
+      111,
+      112
+    ],
+    "status": "LOCAL_EXACT_INTEGER_TESTS_PASS_CI_PENDING",
+    "global_bound_improved": false,
+    "novelty_established": false,
+    "gpu_used": false,
+    "report": "research/capset_f3_7/CAP007J2_STRONGLY_REGULAR_112_2026-11-02.md",
+    "script": "research/capset_f3_7/cap007j_strongly_regular.py"
   }
 }

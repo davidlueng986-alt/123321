@@ -234,3 +234,9 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0] CAP-007L: derive stronger phase-sensitive Fourier/moment and exact set-support inequalities; test against k=32 giving holes 4 or12, and k=80 giving zero holes, counterexamples to naive overlap prediction.
 - [P0] CAP-007N: global target237 branch with every 6D affine hyperplane <=111. Proof of maximal-112-slice conditional case alone cannot resolve r3(7).
 - [P1] CAP-008: independently audit spectral lemma statement under published Potechin 2008 affine-uniqueness theorem, and checker metamorphic cases. Literature novelty not established.
+
+## CAP-007J2 structural amplification (2026-11-02T11:10:53.032Z)
+- [LOCAL EXACT / CI PENDING] Canonical maximal112 cap is Fourier self-dual (high power frequencies=cap) and a regular partial difference set yielding Cayley SRG(729,112,1,20); extension to every 112-cap uses Potechin uniqueness + unique center argument.
+- [P0] Use general cross-energy formula for arbitrary second slice size m to produce *cap-specific* conditional 112-slice inequalities, especially cases (112,111,14) and (112,110,15). Direct Parseval/energy by itself is not a cap upper bound.
+- [P0] Analyze doubly reduced relative112-cap alignment through its strongly regular graph automorphism group; certified coverage required to claim 112+112+13 impossible globally.
+- [P0] Separate global no-112-hyperplane SAT/ILP branch. Need matching upper and lower bounds before exact r3(7) solution.
