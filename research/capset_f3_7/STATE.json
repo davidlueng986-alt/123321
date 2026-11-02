@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-007H global-meaningful conditional 237 CNF: fix a maximal 112-cap hyperplane (unique affine class by Potechin 2008). Exact two-other-slice model has 175958 variables,606095 clauses (including 81648 cross-slice fixed-point conflicts). SAT status unknown. Solving UNSAT would exclude all 237 caps with an extremal hyperplane, not arbitrary caps.",
-  "next_experiment": "Proof-logged SAT/UNSAT test of CAP-007H conditional 112-slice CNF; add independently checked valid no-112-hyperplane cut to global CNF only IF conditional UNSAT is certified; investigate caps without large hyperplanes simultaneously.",
-  "last_run_id": "CAP-007H-LOCAL-2026-11-02",
-  "last_run_result": "LOCAL_112_SLICE_ANCHORED_237_CNF_GENERATED_TESTS_PASS_SAT_UNKNOWN_CI_PENDING",
+  "current_hypothesis": "CAP-007I sampled 5922 distinct relative GL6 maps of two 112-cap slices: allowed third-slice holes histogram 5732 maps with0,127 with1,61 with4,2 with12; no transform with >=13 holes, so this narrow two-max-slice construction family cannot beat236 for these maps. Universal double-coset proof remains open.",
+  "next_experiment": "Independently CI-replay CAP-007I exact C++ 5922 transforms; investigate quotient/double cosets of GL6 against stabilizers of the unique 112 cap and conditional anchored112 237-SAT proof logging. Do not overgeneralize sampled maps.",
+  "last_run_id": "CAP-007I-LOCAL-2026-11-02",
+  "last_run_result": "LOCAL_CXX_EXACT_5922_TRANSFORMS_MAX12_HOLES_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -66,7 +66,8 @@
     "CAP-007G-LOCAL",
     "CAP-006B-PILOT",
     "CAP-006C-LOCAL",
-    "CAP-007H-LOCAL"
+    "CAP-007H-LOCAL",
+    "CAP-007I-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41415696843",
   "baseline_secant_audit": {
@@ -88,7 +89,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T10:49:06.157Z",
+  "last_updated_utc": "2026-11-02T10:53:32.714Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -671,6 +672,24 @@
     "known236_anchor_target237_satisfied": false,
     "SAT_UNSAT": "UNKNOWN",
     "status": "LOCAL_REPLAY_PASS_REPO_CI_PENDING",
+    "global_bound_improved": false
+  },
+  "cap007i_two112_shear_pilot": {
+    "fixed_X": 112,
+    "transformed_Y": 112,
+    "tested_unique_linear_maps": 5922,
+    "histogram": {
+      "0": 5732,
+      "1": 127,
+      "4": 61,
+      "12": 2
+    },
+    "max_allowed_third_slice_points": 12,
+    "maps_with_13_or_more_holes": 0,
+    "shear_random_seed": 20261102,
+    "affine_translations_effect_on_hole_size": "invariant",
+    "status": "LOCAL_CXX_EXACT_CI_PENDING",
+    "scope": "tested relative transforms only, not GL6-exhaustive",
     "global_bound_improved": false
   }
 }

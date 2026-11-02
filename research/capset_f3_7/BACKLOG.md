@@ -214,3 +214,9 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [LOCAL CNF REPLAY / CI PENDING] Potechin affine uniqueness of maximal 112-cap in F3^6 permits a globally meaningful conditional model: any 7D cap with a 112-point hyperplane. Target237 CNF: 175958 vars,606095 clauses (176904 intra-slice cap clauses +81648 fixed-slice cross conflicts + sequential>=125 counter). Known236 112+112+12 assignment passes target236 and fails237; SAT status UNKNOWN. Reproducible 11MB CNF local SHA256 93faf29af90fb4b33ae68e08d889e02d0d5a43565afabf9f5878772738f4f830.
 - [P0] Run certified/proof-logged SAT/UNSAT on anchored branch, then independent proof checker. If UNSAT, add sound conditional no-112 hyperplane cut to GLOBAL solver; do not claim r3(7)=236.
 - [P0] Model cap configurations with all 6D hyperplane slices <=111; no argument yet that 237 caps must have 112 slice. Avoid unsupported assumption.
+
+## CAP-007I anchored double-112 additive obstacle (2026-11-02T10:53:32.714Z)
+- [LOCAL C++ EXACT / CI PENDING] Enumerated 5922 distinct relative 6D linear transforms of two 112-cap slices (identity, 60 elementary shears, all two-shear compositions, plus 4000 seeded length3/4 compositions). H=F3^6\(-X-Yg) has size 0 for 5732, 1 for127, 4 for61, 12 for2; none >=13. By itself this DOES NOT exclude 237 with two maximal slices for other g nor any profiles with <112.
+- [P0] CAP-007J: rigorously reduce all relative GL6 transforms by stabilizer double cosets (if computationally tractable), or derive a universal additive/spectral restriction on H and cap(H).
+- [P0] Keep CAP-007H anchored 112-slice 237-SAT with proof logging; no SAT/UNSAT conclusion yet.
+- [P1] Test structurally different near-maximal six-dimensional slices 110,111 as conditional branches; Thackeray's classification provides mathematical constraints.
