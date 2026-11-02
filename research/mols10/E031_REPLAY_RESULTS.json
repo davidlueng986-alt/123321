@@ -1,0 +1,158 @@
+{
+  "positive": [
+    {
+      "n": 4,
+      "nodes": 15,
+      "clauses": 2618,
+      "variables": 960,
+      "valid_cnf_witness": true,
+      "overlays": [
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "n": 5,
+      "nodes": 65,
+      "clauses": 6335,
+      "variables": 2250,
+      "valid_cnf_witness": true,
+      "overlays": [
+        25,
+        25,
+        25
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "n": 2,
+      "status": "UNSAT_EXHAUSTIVE_NORMALIZED",
+      "nodes": 1
+    },
+    {
+      "n": 3,
+      "status": "UNSAT_EXHAUSTIVE_NORMALIZED",
+      "nodes": 1
+    },
+    {
+      "n": 4,
+      "tampered_matrix": true
+    },
+    {
+      "n": 5,
+      "tampered_matrix": true
+    },
+    {
+      "n": 10,
+      "duplicate_latin_squares": true,
+      "violated_cnf_clauses": 271,
+      "type": "Latin-valid but overlay-invalid"
+    }
+  ],
+  "partial": [
+    {
+      "seed": 0,
+      "hall": false,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 50001,
+      "deepest_completed_row": 5,
+      "verification": {
+        "rows": 6,
+        "pair_counts": [
+          60,
+          60,
+          60
+        ]
+      },
+      "hall_prunes": 0,
+      "seconds": 0.87741
+    },
+    {
+      "seed": 0,
+      "hall": true,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 50001,
+      "deepest_completed_row": 5,
+      "verification": {
+        "rows": 6,
+        "pair_counts": [
+          60,
+          60,
+          60
+        ]
+      },
+      "hall_prunes": 9321,
+      "seconds": 1.85124
+    },
+    {
+      "seed": 1,
+      "hall": false,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 50001,
+      "deepest_completed_row": 5,
+      "verification": {
+        "rows": 6,
+        "pair_counts": [
+          60,
+          60,
+          60
+        ]
+      },
+      "hall_prunes": 0,
+      "seconds": 0.9728
+    },
+    {
+      "seed": 1,
+      "hall": true,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 50001,
+      "deepest_completed_row": 5,
+      "verification": {
+        "rows": 6,
+        "pair_counts": [
+          60,
+          60,
+          60
+        ]
+      },
+      "hall_prunes": 8457,
+      "seconds": 1.55579
+    },
+    {
+      "seed": 2,
+      "hall": false,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 50001,
+      "deepest_completed_row": 5,
+      "verification": {
+        "rows": 6,
+        "pair_counts": [
+          60,
+          60,
+          60
+        ]
+      },
+      "hall_prunes": 0,
+      "seconds": 0.81876
+    },
+    {
+      "seed": 2,
+      "hall": true,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 50001,
+      "deepest_completed_row": 5,
+      "verification": {
+        "rows": 6,
+        "pair_counts": [
+          60,
+          60,
+          60
+        ]
+      },
+      "hall_prunes": 9402,
+      "seconds": 1.90315
+    }
+  ]
+}
