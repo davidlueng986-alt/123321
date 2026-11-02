@@ -11,9 +11,9 @@
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
   "current_hypothesis": "CAP-014-PSD exact restricted 425/576 spectral certificate for classical 112+112 slices; no global 237 exclusion. CAP-011A sign bug still open in Drive source; global no-112 hyperplane branch remains unaddressed.",
-  "next_experiment": "Hostile independent theorem referee CAP-017B/110-completion; target balanced 5D codim2 incidence cuts (new CAP020 does not change M>=287 profile certificate).",
-  "last_run_id": "CAP-020-ANTIPODAL-SECANT-GAP-2026-11-02",
-  "last_run_result": "GENERAL_ANTIPODAL_SECANT_LEMMA_PROVED_CANONICAL_616_EXACT_REPLAY_PASS_TANGENT_REFINED_NO_GLOBAL_BOUND",
+  "next_experiment": "Hostile referee CAP-017B/Thackeray; codim-2 incidence and Gaussian quadratic-residue constraints for 287 cap with 111 slice; prove full global bound or find witness.",
+  "last_run_id": "CAP-021-SLICE-FORCING-2026-11-02",
+  "last_run_result": "GLOBAL_286_REQUIRES_110_SLICE_UNCONDITIONAL_287_REQUIRES_111_CONDITIONAL_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -95,7 +95,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T14:55:00Z",
+  "last_updated_utc": "2026-11-02",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1063,5 +1063,71 @@
     "github_ci_latest_test_run_id": 41467493910,
     "fourier_duality_direct_full_set_test": "PASS_H_EQUALS_PROJECTIVE_HIGH_DUAL_AND_SHEAR_CONTRAGREDIENT",
     "local_test_result_latest": "PASS_5_OF_5_0.141S"
+  },
+  "cap021_slice_forcing_ladder": {
+    "date_utc": "2026-11-02",
+    "status": "LOCAL_STDLIB_5_OF_5_PASS_INDEPENDENT_JS_EXACT_PASS_GITHUB_CI_PENDING",
+    "scope": "Global hyperplane profile moments; not a new r3(7) upper bound",
+    "unconditional_286_requires_section_at_least": 110,
+    "conditional_287_requires_section_at_least": 111,
+    "conditional_288_requires_section_at_least": 112,
+    "conditional_dependencies": [
+      "CAP-017B common-tangent lemma",
+      "Thackeray 2022 110-cap completion theorem"
+    ],
+    "exact_duals": {
+      "286_max109": {
+        "profiles": 161,
+        "coefficients": [
+          40,
+          -10893,
+          193029098
+        ],
+        "total": -2468100
+      },
+      "287_max110": {
+        "profiles": 175,
+        "coefficients": [
+          82,
+          -22401,
+          399662803
+        ],
+        "total": -4531050
+      },
+      "288_max111": {
+        "profiles": 189,
+        "coefficients": [
+          589,
+          -161442,
+          2900219904
+        ],
+        "total": -29038176
+      }
+    },
+    "formal_moment_countermodels": {
+      "M285_max109": true,
+      "M287_max111": true,
+      "actual_cap_witness": false
+    },
+    "known_236_reverified": {
+      "distinct": 236,
+      "pairs": 27730,
+      "collinear_triples": 0,
+      "ambient_covered": 2187,
+      "source_blob": "025a93713119d111db50b54b1d1238b97864c013"
+    },
+    "local_python_tests": "PASS_5_OF_5_0.003S",
+    "independent_javascript": "EXACT_PASS",
+    "random_seed": null,
+    "gpu_used": false,
+    "paid_compute_used": false,
+    "report": "research/capset_f3_7/CAP021_SLICE_FORCING_LADDER_2026-11-02.md",
+    "test": "research/capset_f3_7/test_cap021_slice_forcing.py",
+    "certificate": "research/capset_f3_7/CAP021_slice_forcing_certificate.json",
+    "github_ci": "PENDING",
+    "literature_meta_audit": "Thackeray Proposition 4.1(a) c<=34 for 112+112; 4.1(b) c<=55 for total>=222, stronger than CAP020 numerical d<=2 bounds",
+    "novelty": "NOT_ESTABLISHED",
+    "global_bound_improved": false,
+    "exact_r3_7": "OPEN"
   }
 }
