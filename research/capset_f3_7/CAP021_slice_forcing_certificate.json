@@ -221,5 +221,91 @@
     "covered_ambient_points": 2187,
     "complete": true
   },
-  "scope": "286->110 unconditional; 287->111 conditional on CAP-017B and 110 completion; 288->112 conditional; no new global bound"
+  "scope": "286->110 unconditional; 287->111 conditional on CAP-017B and 110 completion; 288->112 conditional; no new global bound",
+  "gaussian_rank2_formal_countermodel": {
+    "M": 287,
+    "rows": [
+      [
+        [
+          112,
+          109,
+          66
+        ],
+        33
+      ],
+      [
+        [
+          111,
+          109,
+          67
+        ],
+        109
+      ],
+      [
+        [
+          100,
+          95,
+          92
+        ],
+        3
+      ],
+      [
+        [
+          98,
+          98,
+          91
+        ],
+        13
+      ],
+      [
+        [
+          98,
+          95,
+          94
+        ],
+        2
+      ],
+      [
+        [
+          97,
+          96,
+          94
+        ],
+        344
+      ],
+      [
+        [
+          97,
+          95,
+          95
+        ],
+        468
+      ],
+      [
+        [
+          96,
+          96,
+          95
+        ],
+        121
+      ]
+    ],
+    "global_moments": [
+      1093,
+      30191539,
+      2920545005
+    ],
+    "quadratic_rank": 2,
+    "quadratic_example": "Q(x)=x_1^2+x_2^2 over F3^7",
+    "projective_Q_value_counts": [
+      121,
+      486,
+      486
+    ],
+    "requires_all_directions_centered": true,
+    "conditional_CAP017B_respected": true,
+    "geometric_cap": false,
+    "scope": "aggregate moment+quadric-spectrum relaxation only; not per-direction incidence/geometry",
+    "verified_by": "independent JavaScript exact arithmetic and Python stdlib"
+  }
 }
