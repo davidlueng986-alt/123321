@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-005J independent exact CPU censuses: among all C(27,7)=888030 seven-fiber edits of the fixed 236 cap, 862906 cannot improve by the >=17-outsider necessary gate; 25124 remain unresolved, max individually admissible outsiders 198 in 8 neighborhoods. Not a 237 witness or global upper bound. CI pending.",
+  "current_hypothesis": "CAP-005J CI GREEN: two independent complete exact seven-fiber censuses agree across all 888030 release sets and all 98 histogram bins. 862906 neighborhoods cannot improve 236 by >=17-outsider gate; 25124 remain unresolved, max N(T)=198. Not a global bound, no >=237 cap.",
   "next_experiment": "Confirm CAP-005J CI; quotient 25124 surviving seven-fiber neighborhoods by verified affine stabilizer; pursue certifiable duals for manageable cases and nonlocal constructions/global upper bound in parallel.",
-  "last_run_id": "CAP-005J-2026-11-02-k7-necessary-gate",
-  "last_run_result": "VERIFIED_LOCAL_TWO_INDEPENDENT_EXACT_K7_NECESSARY_GATE_CI_PENDING",
+  "last_run_id": "CAP-005J-CI-2026-11-02-k7-necessary-gate",
+  "last_run_result": "VERIFIED_TWO_INDEPENDENT_FULL_CENSUSES_CI_GREEN_NECESSARY_ONLY",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -54,7 +54,8 @@
     "CAP-005H-CI",
     "CAP-005I-LOCAL",
     "CAP-005I-CI",
-    "CAP-005J-LOCAL"
+    "CAP-005J-LOCAL",
+    "CAP-005J-CI"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41392035320",
   "baseline_secant_audit": {
@@ -76,7 +77,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T05:57:00Z",
+  "last_updated_utc": "2026-11-02T06:06:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -464,7 +465,7 @@
     "maximum_groups": 8,
     "total_outsider_incidence": 2946160,
     "histogram_bins": 98,
-    "status": "VERIFIED_LOCAL_TWO_INDEPENDENT_FULL_CENSUSES_CI_PENDING_NECESSARY_ONLY",
+    "status": "VERIFIED_TWO_INDEPENDENT_FULL_CENSUSES_CI_GREEN_NECESSARY_ONLY",
     "proof_scope": "Any improvement requires >=17 outsiders; N(T)<=16 excludes improvement",
     "scripts": [
       "research/capset_f3_7/cap005_j_k7_gate_incidence.py",
@@ -479,6 +480,8 @@
     "local_cpu_seconds": {
       "python_incidence": 5.45,
       "cpp_direct": 0.57
-    }
+    },
+    "ci": "https://github.com/davidlueng986-alt/123321/actions/runs/41397388094",
+    "artifact": "https://github.com/davidlueng986-alt/123321/actions/runs/41397388094/artifacts/13119049955"
   }
 }
