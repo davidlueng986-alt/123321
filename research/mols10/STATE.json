@@ -12,12 +12,13 @@
   "current_hypothesis": "E044 independent random derangement/MRV generator: 512 valid k4 partial triples spanning 11 first-square second-row derangement cycle types, 471 exact integer Farkas duals + 41 exact zero-support, independent Node verifier 512/512 and 200094 residual placements PASS; all 512 k3 parents numerically LP-feasible. This is a nonuniform fixed-prefix sample and does not exclude any complete orbit.",
   "last_experiment": "MOLS10-E044-INDEPENDENT-RANDOM-K4-EXACT-FARKAS",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
-  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41363869327",
+  "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41514534121",
   "last_verified_results": [
     "E041: independent integer-only 22-cell seven-demand Farkas certificate PASS; 22 singleton witnesses; 100 random isotopies exact PASS; no global orbit excluded.",
     "E042: 1548/1548 exact 4-row motif-embedding checks independently reproduced, only 3 source-self hits, 1545 negatives, zero marginal pruning beyond E039 LP; 0/162959 full orbits excluded.",
     "E043: 2184/2184 independently exact verified fixed-prefix nonextensions (2000 integer dual, 184 zero support), 870931 candidate placements, 370 affine positive controls; 0 global orbit exclusions.",
-    "E044: 512 independently generated k4 fixed prefixes; 471 integer Farkas duals and 41 zero-support; independent Node.js exact replay of 200094 candidates 512/512 PASS, mutation rejected; 512 k3 parents numerical LP feasible; 0 full orbits excluded."
+    "E044: 512 independently generated k4 fixed prefixes; 471 integer Farkas duals and 41 zero-support; independent Node.js exact replay of 200094 candidates 512/512 PASS, mutation rejected; 512 k3 parents numerical LP feasible; 0 full orbits excluded.",
+    "E044 remote independent GitHub Actions replay PASS attempt 2; full 512-case evidence committed 42dbc1ae9fd2a928c6f525d247dc820432b2d627."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -134,8 +135,8 @@
     "research/mols10/E044_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "E044 exact certificates exclude only 512 fixed prefixes; sampling nonuniform, 11/12 first-square cycle types represented, no entire orbit excluded. Full E044 512-case dataset and certificates are in a local downloadable ZIP, NOT yet uploaded to Drive/GitHub; GitHub has deterministic generator, exact dual producer, independent JS verifier, report and summary. k3 positive controls are numerical LP, not exact rational. E041 integer deletion-case pilot timed out 8x4s and is UNKNOWN.",
-  "last_ci_result": "E020 test-commit 84cd92e59de48e6904adbe1b6e552cd82e95ede2: GitHub Actions run 41363869327 SUCCESS (verify job; full unittest discovery including E020 independent 10! and all 1104 roots). Later STATE/report commit CI may still be pending; no unrestricted certificate.",
+  "limitations": "E044 512 exact certificates are fixed-prefix only; nonuniform random sampling, 11/12 first-square cycle types, no entire orbit excluded. GitHub Actions independently regenerated and integer-replayed all 512, persisted full data in commit 42dbc1ae9fd2a928c6f525d247dc820432b2d627. Local ZIP also exists. Google Drive binary ZIP upload failed BLOCKED_FILE_REFERENCE, but Docs journal updated. k3 positive controls numerical only. E041 integer deletion pilot 8x4s timed out UNKNOWN.",
+  "last_ci_result": "E044 GitHub Actions run 41514534121 attempt 2 SUCCESS; full independent Python/Node replay verified 512/512, 471 integer Farkas +41 zero-support, 200094 candidates, mutation rejected. Full regenerated E044_RESULTS.json/E044_CERTIFICATES.json/E044_K3_CONTROLS.json committed by Actions at 42dbc1ae9fd2a928c6f525d247dc820432b2d627. Attempt 1 failed because E035_column_residual.py was empty on GitHub; restored in 22296cab5d426beaa0e9c40fa90f426318409442; rerun passed.",
   "external_status_review": "2026-11-02 19:49 UTC: checked Bright–Keita–Stevens EJC 33(1) #P1.30 (2026-02-13) and Barnoff–Bright arXiv:2605.02132v2 (2026-07-04); targeted web/arXiv search found no independently checkable unrestricted resolution.",
   "current_math_result": "GLOBAL OPEN, 0/162959 complete orbits excluded. E044 512 new fixed k4 prefixes, raw ordered overlap 0 with E036-derived 2340, 471 exact duals and 41 exact zero-support, 512/512 integer replay. 512 k3 parents numerically LP feasible only. No 100/100/100.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
