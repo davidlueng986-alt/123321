@@ -182,3 +182,12 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 ## CAP-005M corrective update (2026-11-02T10:02:52.469Z)
 - [FAILED CI 41424961849] Greedy Python yielded 494 / 7352 instead of JS 500 / 7440 because canonical orbit representatives and greedy tie orders differ. Do not promote prior expected totals.
 - [FIX / CI PENDING] Exact blossom matching replaces heuristic; arithmetic checker verifies only concrete disjoint fixed-original-point conflicts. Require new CI GREEN and actual counts before final state. No global bound.
+
+## CAP-006A first-principles pivot (2026-11-02T10:07:35.245Z)
+- [LOCAL JS EXACT / PYTHON CI PENDING] Fixed first-three-coordinate 27-fiber decomposition is provably nonrepresentative of coordinate 3D projections for the fixed 236 cap: 15 projections with Q=2884/four empty fibers, 20 with Q=2290/no empty fibers; 512 seeded full-rank maps span Q=2096..3186. Q measures density concentration only, not probability of improving 236.
+- [P0] CAP-006B: select inequivalent projections (Q=2096, 2884, 3186), apply equal-budget exact multi-fiber search, verify all candidates independently; do not prematurely impose original partition constraints.
+- [P0] CAP-007G: create truly *global* slice encoding A0,A1,A2 in F3^6, certify correctness by reproducing exact r3(4), r3(5), r3(6) before advancing n7; derive proof-logged upper bounds. Avoid assuming 112+112+12 for every extremizer.
+- [P1] CAP-008A: adversarial metamorphic tests of every exact certificate/orbit group under random invertible affine maps and injected forbidden triples; test checker independence and certificate semantics.
+- [P1] CAP-006C: parameterized constructor/priority-function evolution (FunSearch/X-evolve precedents) from scratch without the classical 236 seed. n7 record requires direct >=237 witness verification.
+- [DEPRIORITIZED] Existing k7 exclusions: only pursue if they reveal transferable global inequalities or an actual 237 witness; score global progress separately from percentage of fixed neighborhoods excluded. Check CAP-005M CI before marking its pending 7,440 exclusions as proven.
+- [NOVELTY OPEN] Do not claim these projection observations are new in literature. Exact r3(7) remains OPEN.
