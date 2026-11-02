@@ -92,3 +92,16 @@ Exact exhaustive minimal B-class blockers (stronger than E014 at-most-once crite
 Bounded search, seed0, four seconds per new A: trade12 UNKNOWN after 4194 nodes (3193 pruned); trade20 UNKNOWN after 4313 (3327 pruned); trade30 UNKNOWN after 4672 (3650 pruned). No full-support pair found. No UNSAT or 3-MOLS claim. Details E015_REPORT.md; CI https://github.com/davidlueng986-alt/123321/actions/runs/41339094814.
 
 Next E016: optimize candidate-list lookup and branching, benchmark pruning versus unpruned on matched seeds, then broader bounded scan for changed-A orthogonal pairs with complete common-transversal coverage. Global problem OPEN.
+
+## E028 — 2026-11-02 08:09 UTC — SX/UU complete fixed-Q audit
+**Objective:** Finish E027's outstanding two published Appendix Q, SX and UU, by exhaustive Q-orthogonal mate enumeration; stronger than E023 fixed-pair exclusion. **Global status OPEN.**
+
+**Sources:** Bright–Keita–Stevens, EJC 2026-02-13 https://www.combinatorics.org/ojs/index.php/eljc/article/view/v33i1p30 ; arXiv https://arxiv.org/abs/2503.10504 ; relevant later pair work https://arxiv.org/abs/2605.02132 . Fresh 2026-11-02 search: no independently verified unrestricted result; search absence not proof.
+
+**Method/evidence:** Q-transversals form exact-cover rows. Bitset DFS + independent mutable Algorithm X enumerate all partitions into 10 transversals, canonical mate symbols fixed by row 0. SX: 864 transversals, 2 complete partitions, bitset 57,110 nodes, independent 34,710 nodes. UU: 816 transversals, 1 partition, bitset 40,048 nodes, independent 24,753 nodes. One new normalized SX orthogonal mate; UU unique mate up to relabeling. All 3 mates Latin and 100/100 with Q. Full independent 10! permutation replay for each mate (10,886,400 permutations) finds **0 common transversals** for each. Both exact-cover algorithms produce identical full mate sets. Published normalized mate recovered once per Q. This excludes these two **specific** Q, and together with E027 all eight **specific** published Appendix Q. Not entire families or unrestricted nonexistence.
+
+**Reproduce:** `python E028_SX_UU_fixed_Q.py > E028_full.json` from research/mols10. Source `E023_SX_pair_replay.py`, `E023_UU_pair_replay.py`; reusable E027 backends. Code commit https://github.com/davidlueng986-alt/123321/commit/8dc4ad2c0ce1f2224aaabd2646dd50c68749ee37 ; compact data commit https://github.com/davidlueng986-alt/123321/commit/5cc86c90307233ebe3f6c357120a61f4d53909f7 ; report commit https://github.com/davidlueng986-alt/123321/commit/40084b2c422ec5c6419942831782b64ea72b81f9 ; state commit https://github.com/davidlueng986-alt/123321/commit/4fdf434c0e843ed2bee5baa6a6651c691f64da7a .
+
+**Failures/uncertainty:** local git DNS failed; first optional source-audit patch had quoting SyntaxError, corrected and full replay rerun; no false UNSAT inferred. No unrestricted symmetry coverage, SAT certificate, or triple. E028 CI not confirmed.
+
+**E029 next:** stop fixed-Q repeats; obtain genuinely different nonisotopic Q via authors' SAT encoding, validate full pair and common-transversal coverage, then third-square exact cover if viable.
