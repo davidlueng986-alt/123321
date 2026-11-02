@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "Cross-slice blocking multiplicity r(z), not just hole count or spectra, controls deletion resilience. 121 tested 112+112 alignments with 12 holes have minimum positive r(z)=11; conditional restricted only.",
-  "next_experiment": "Confirm CAP-007K CI, then derive globally valid slice multiplicity bounds for 112+111, 111+111 and no-112 hyperplane branch; do not assume restricted GL6 sample is exhaustive.",
-  "last_run_id": "CAP-007K-MULTIPLICITY-2026-11-02",
-  "last_run_result": "LOCAL_INDEPENDENT_JS_3812_EXACT_CI_PENDING",
+  "current_hypothesis": "CAP-010A: every 110/111 six-dimensional cap extends uniquely to canonical maximal112 (published Thackeray 110 extension + Potechin 112 uniqueness + exact 10-secants covering); sound global conditional overlap cuts k>=30 for 112+111+14, k>=28 for 112+110+15. CI pending; no global bound.",
+  "next_experiment": "Confirm CAP-010A CI, then exploit sound unique 110/111 completions to symmetry-reduce all 112+111+14 / 112+110+15 cases, including k=30 and k=28; keep all hyperplanes<=111 global branch.",
+  "last_run_id": "CAP-010A-UNIQUE-110-111-COMPLETION-2026-11-02",
+  "last_run_result": "INDEPENDENT_JS_EXACT_ALL_6216_PAIRS_PYTHON_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -71,7 +71,8 @@
     "CAP-007J-LOCAL",
     "CAP-007J2-LOCAL",
     "CAP-007J3-LOCAL",
-    "CAP-007K-LOCAL"
+    "CAP-007K-LOCAL",
+    "CAP-010A-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41415696843",
   "baseline_secant_audit": {
@@ -93,7 +94,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-02T11:14:36.835Z",
+  "last_updated_utc": "2026-11-02T11:54:27Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -870,5 +871,23 @@
     "global_bound_improved": false,
     "ci_status": "PENDING",
     "report": "research/capset_f3_7/CAP007K_BLOCKING_MULTIPLICITY_2026-11-02.md"
+  },
+  "cap010a_unique_110_111_completion": {
+    "canonical_outside_secants_histogram": {
+      "10": 616,
+      "56": 1
+    },
+    "deleted_pair_cases_checked": 6216,
+    "external_extension_failures": 0,
+    "published_assumptions": [
+      "Potechin 2008 all112 affine uniqueness",
+      "Thackeray 2022 all110 extends112"
+    ],
+    "global_112_111_14_k_min": 30,
+    "global_112_110_15_k_min": 28,
+    "python_ci": "PENDING",
+    "novelty": "UNVERIFIED",
+    "global_bound_improved": false,
+    "report": "research/capset_f3_7/CAP010A_UNIQUE_COMPLETION_2026-11-02.md"
   }
 }

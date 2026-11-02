@@ -250,3 +250,10 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0] Derive general cap-specific constraints on r(z)=1_S*1_T, low-multiplicity tails, phase-sensitive Fourier and cap(H) rather than only holes or total energy; test 112+111+14 and 111+111+15 profiles.
 - [P0] Rigorously cover relative GL6 by automorphism double cosets; unenumerated alignment families remain OPEN.
 - [P0] Keep separate global no-112-hyperplane search, as all 112-conditioned facts cannot exclude it.
+
+## CAP-010A 110/111 unique completion and overlap cuts (2026-11-02T11:54:27Z)
+- [LOCAL EXACT / PYTHON CI PENDING] Independently computed 10/56 outside secant histogram and exhaustively checked 6216 two-point deletions. With Potechin 112 affine uniqueness + Thackeray 110 extension: ALL 110/111 caps have unique maximal112 completion. For 112+111+14 need completed centered overlap k>=30; 112+110+15 need k>=28. Not a global n7 upper bound.
+- [P0] Build exact symmetry reduced proof-logged SAT branches for 112+111+14 (k>=30) and 112+110+15 (k>=28); avoid restricting to small GL6 word families. Also test third-slice cap compatibility and >=237 total.
+- [P0] Independently audit CAP-009A/B Drive-only stronger claims before GitHub promotion; spectral floating point bounds need rational certificates.
+- [P0] Keep all-hyperplanes<=111 global branch; this is untouched by 112-anchored theorems.
+- [NOVELTY] Classical (729,112,1,20) Games graph known in literature. Unique-completion corollary novelty unknown, no priority claim.
