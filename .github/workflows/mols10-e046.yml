@@ -28,15 +28,17 @@ jobs:
           OPENBLAS_NUM_THREADS: '1'
         run: |
           node E046_trade_scan.js > E046_TRADE_REPLAY.json
+          node E046_independent_support.js > E046_INDEPENDENT.json
           python E046_phase1.py > E046_PHASE1.log
           node E046_phase1_verify.js > E046_PHASE1_VERIFY.json
-          sha256sum E046_TRADE_REPLAY.json E046_PHASE1_RESULTS.json E046_PHASE1_VERIFY.json > E046_SHA256.txt
+          node E046_phase1_audit.js > E046_PHASE1_AUDIT.json
+          sha256sum E046_TRADE_REPLAY.json E046_INDEPENDENT.json E046_PHASE1_RESULTS.json E046_PHASE1_VERIFY.json E046_PHASE1_AUDIT.json > E046_SHA256.txt
           cat E046_PHASE1_VERIFY.json
       - name: Persist remote evidence
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/mols10/E046_TRADE_REPLAY.json research/mols10/E046_PHASE1_RESULTS.json research/mols10/E046_PHASE1_VERIFY.json research/mols10/E046_PHASE1.log research/mols10/E046_SHA256.txt
+          git add research/mols10/E046_TRADE_REPLAY.json research/mols10/E046_INDEPENDENT.json research/mols10/E046_PHASE1_RESULTS.json research/mols10/E046_PHASE1_VERIFY.json research/mols10/E046_PHASE1_AUDIT.json research/mols10/E046_PHASE1.log research/mols10/E046_SHA256.txt
           if ! git diff --cached --quiet; then
             git commit -m "mols10 E046: remote exact replay and bounded local-trade LP probe"
             git push origin HEAD:math-agent-mols10
