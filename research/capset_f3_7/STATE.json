@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-032B/C universal high-density AG4 geometry: 7+7 forces third <=4, and 7+6+6 forces the 7-fiber to the unique non-9-extendable 7-cap affine orbit (size50544). Use SHARED point-level fiber types across quotient lines; CAP027 285 count-only model still survives all local counts. No global numeric bound.",
-  "next_experiment": "Confirm CAP032B/C Actions on final code-containing SHA, then proof-logged SAT for CAP027 fixed formal285 occupancy with consistent 81 shared fibers and orbit-type restrictions; check Thackeray 110-classification for CAP019 provisional <=287 and pursue balanced/no-112 and >=237 cap.",
-  "last_run_id": "CAP-032C-UNIVERSAL-766-ORBIT-TYPE-2026-11-03",
-  "last_run_result": "LOCAL_INDEPENDENT_EXHAUSTIVE_107406_SIXCAPS_X_TWO_7ORBITS_CI_PENDING",
+  "current_hypothesis": "CAP033: CAP027 formal285 occupancy has unique (7,6,6) and unique (7,7,4) quotient lines sharing 7-fiber 0000; CAP032C forces this fiber to non-9-extendable orbit. This is only a domain reduction, not a contradiction or actual 285-cap.",
+  "next_experiment": "Check CAP033 CI and use orbit restriction on shared fiber 0000 in bounded proof-logged fixed-occupancy SAT; independently verify witness/UNSAT proof; continue CAP019 classification referee and >=237 search.",
+  "last_run_id": "CAP-033-OVERLAP-2026-11-03",
+  "last_run_result": "EXACT_CPU_QUOTIENT_LINE_INCIDENCE_PASS_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -81,7 +81,8 @@
     "CAP-031",
     "CAP-032-ANALYTIC",
     "CAP-032B-LOCAL",
-    "CAP-032C-LOCAL"
+    "CAP-032C-LOCAL",
+    "CAP-033-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549413947",
   "baseline_secant_audit": {
@@ -103,7 +104,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-03T03:00:19.042Z",
+  "last_updated_utc": "2026-11-03T03:57:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
