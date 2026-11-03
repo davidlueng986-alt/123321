@@ -1,0 +1,52 @@
+{
+  "files": {
+    "E060_REPORT.md": {
+      "bytes": 6706,
+      "sha256": "b49b7660e230a8cd64e270faf6bfcced7984441b02b4fb13901606bf0953cfee"
+    },
+    "E060_readme.txt": {
+      "bytes": 684,
+      "sha256": "e32720e3b5c0f12a92eb45925cf165ff0c355fe97d56668ae31bcd306a5c7893"
+    },
+    "E060_seven_row_completion.py": {
+      "bytes": 5570,
+      "sha256": "3d69256d497914408188717161275c973b9df081b6b1d5ce2b70e3b72d0937ef"
+    },
+    "E060_all_six_row_extensions.py": {
+      "bytes": 3159,
+      "sha256": "8e416ef41b0cb2f421fa188eee0176a7663c1398857d00dc5225771c26132d95"
+    },
+    "E060_six_row_triples.py": {
+      "bytes": 3460,
+      "sha256": "15592d9fb2b3cbf1f82b7540c0fbf2052c0bbe87f896e33552945308d4341f34"
+    },
+    "E060_full_OA_milp.py": {
+      "bytes": 3358,
+      "sha256": "840c1948b788f3fd20466f31a1ae3953da2fae60c4ff59aa0740ff6700df0ad0"
+    },
+    "E060_validate_outputs.js": {
+      "bytes": 2247,
+      "sha256": "d6b5dc24cf15d3bcaa3fdf0e97d9d517abb50bdbfb61a69062deb83d8464c278"
+    },
+    "E060_ALL_84_SIX_ROW_RESULTS.json": {
+      "bytes": 29558,
+      "sha256": "74a32a1413f6d9fb1f2411aa4388e35be12c60ea3e4469f7791b4c4ed5f0315e"
+    },
+    "E060_seven_row_results.json": {
+      "bytes": 10122,
+      "sha256": "14f6a335782169440de0aaa7a19c2d45e549b850ae67e3e7bf60b740538b7295"
+    },
+    "E060_six_results.json": {
+      "bytes": 2082,
+      "sha256": "3c726bd233cbb7beeb0161fe03403f599f77e76a702a1467f79d528fe6136924"
+    },
+    "E060_GLOBAL_OA_MILP_RESULTS.json": {
+      "bytes": 3187,
+      "sha256": "86ef69ec842869eac7d2e82b732e44769ed354bc1b88e65bebca3073079bb979"
+    },
+    "E059_2024_9x10_analysed.json": {
+      "bytes": 7986,
+      "sha256": "fce2d8cd8a152a59bd96cc7c7266a9bd8602f77ec7416f816a5ff6884da05399"
+    }
+  }
+}

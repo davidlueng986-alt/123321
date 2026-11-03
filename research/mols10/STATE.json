@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "ON-DEMAND only, hourly task remains disabled. Focus on full 5-coordinate OA(100,5,10,2) proof/witness: construction via 9x10 MOLR whose forced 10th rows give all three overlays 100, or unrestricted complete 5-net SAT with full symmetry coverage. NEVER resume universal k4 residual fractional/integer infeasibility (now FALSE).",
-  "current_hypothesis": "E059 FALSIFIED old N-A: a legal 4x10 triple has exact column-aware fractional primal; an Egan two-MOLS-derived k4 and k7 triple have exact integral residual covers. Main target requires all FIVE OA coordinates incl ROW; constructive 9x10 MOLR forced-last-row compatibility is a direct route.",
-  "last_experiment": "MOLS10-E059-GOAL-BACKWARD-EXACT-FRACTIONAL-AND-INTEGER-COUNTEREXAMPLES-AND-9ROW-ENDGAME",
+  "next_action": "User-triggered goal-backward CLOSE only. Existence: full five-coordinate OA solver with stronger sound symmetry/branching and exact witness validation; nonexistence: 100% proven normalized orbit+every C continuation coverage and replayable UNSAT; stop investing in fixed source neighborhoods without unrestricted implication. Keep hourly MOLS10 disabled.",
+  "current_hypothesis": "ONLY GOAL = CLOSE 3-MOLS(10). Direct 5-coordinate OA(100,5,10,2) 0-1 exact cover with proved first-row/first-column normalization, and constructive 9x10 2024 seed searches; all local exclusions are tools, never success.",
+  "last_experiment": "MOLS10-E060-FULL-FIVE-COORDINATE-OA-MILP-AND-SIX-ROW-ANCHORED-ENDGAME",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549028462",
   "last_verified_results": [
@@ -133,7 +133,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-03T10:35:00Z",
+  "last_run_utc": "2026-11-03T11:08:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -166,10 +166,10 @@
     "research/mols10/E049_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "No full order10 100/100/100 witness and no unrestricted negative proof. Falsification of weaker N-A is direct goal-backward progress, NOT resolution. 2024 9x10 input attributed to Jäger et al. 2024; only its nine fixed 8row subsets completely screened. Cyclic family 26 integer MILP UNKNOWN statuses are NOT UNSAT. 0/162959 globally certified A/B orbit closures.",
+  "limitations": "No 100/100/100 witness; no unrestricted proof; 0/162959 complete global A/B orbits excluded. Full order10 MILP UNKNOWN_BUDGET. 84 fixed sixrow 2024-source anchors excluded only. Independently replayed n4/n5 positive witnesses and 84 record metadata; 84 UNSAT statuses require running exhaustive Python code, not independent proof tree.",
   "last_ci_result": "E048 strict pipefail GitHub Actions run 41549028462 SUCCESS, remote 1569 distinct prefixes x576=903744 row alignments identity-only, 2895 static intercalate subsets, 1 valid changed prefix with exact zero-support resource 595. First CI had masked assertion failure, audited and corrected.",
   "external_status_review": "2026-11-02 23:50 UTC: fresh primary arXiv 2503.10504v2 and 2605.02132v2 plus targeted November web/arXiv search; no independently checkable unrestricted solution found, absence of hits not proof.",
-  "current_math_result": "3-MOLS(10) GLOBAL OPEN. Exact cyclic k4 360/360 fractional feasible (120 placements 1/2); published Egan pair (14 common transversals, max 7 disjoint) yields integer residual k4 360/360 and k7 180/180, all separately replayed in Python and Node.js with mutation rejection. Known 2024 Jäger et al 9x10 triple 90/90/90, forced complete Latins 93/93/93. All 5392 last-two-row completions of nine 8row restrictions of this one source independently checked: 0 full triples. These counterexamples REFUTE universal k4 LP/ILP nonexistence shortcuts, not unrestricted existence or nonexistence.",
+  "current_math_result": "GLOBAL 3-MOLS(10) OPEN. Unrestricted normalized 5-coordinate exact-cover MILP: order4 SAT verified 16/16/16, order5 SAT verified 25/25/25; order10 41338 binary choices,1000 equalities,413380 incidences, solver UNKNOWN after configured 20s. Published 2024 single 9x10 source: all 36 anchored 7-row subsets and all 84 anchored 6-row subsets exhaustively unextendible, zero UNKNOWN. 84 anchored k6 yield 431 compatible seventh-row triples fully extended. This proves NOTHING about all six-row partials or global E033 f/g orbits; 0 globally closed.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -243,5 +243,7 @@
   "e058_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E058_REPORT.md",
   "e058_drive_url": "https://drive.google.com/file/d/1INUhEl3fCM0v5wfXdGpTkfQNImFKGCb3/view",
   "e059_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E059_REPORT.md",
-  "e059_bundle_drive_url": "https://drive.google.com/file/d/16SUFsjuATbJVA8EdRLn-GjlaJXixTo8i/view"
+  "e059_bundle_drive_url": "https://drive.google.com/file/d/16SUFsjuATbJVA8EdRLn-GjlaJXixTo8i/view",
+  "e060_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E060_REPORT.md",
+  "e060_bundle_drive_url": "https://drive.google.com/file/d/19W7akbXPXctABdKK6dTjHlSFtpPjizAE/view"
 }

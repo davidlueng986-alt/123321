@@ -1,3 +1,9 @@
+# SINGLE MISSION: MAKE 3-MOLS(10) CLOSED
+
+**Only success:** three independently verified 10x10 Latin squares with pair overlays 100/100/100, OR a complete unrestricted independently checked nonexistence proof with mathematically justified full symmetry/continuation coverage. Partial negatives, certificates, CPU nodes and commits are not progress-to-closure metrics. **Current status: OPEN.** MOLS10 hourly automation is disabled at user request.
+
+---
+
 # Math Agent — 3-MOLS(10) continuing research
 
 **Problem:** Do three mutually orthogonal Latin squares of order 10 exist?

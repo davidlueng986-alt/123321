@@ -1,0 +1,1775 @@
+{
+  "status": "UNSAT_FIXED_84_SIX_ROW_ANCHORS",
+  "source": "J\u00e4ger et al 2024 Figure3, original 9x10 partial triple",
+  "scope": "84 anchored 6row restrictions only, not all global possibilities",
+  "anchors": 84,
+  "total_seventh_row_triples": 431,
+  "complete_unsets": 84,
+  "unknown": 0,
+  "seconds": 17.8758,
+  "results": [
+    {
+      "omitted": [
+        0,
+        1,
+        2
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        267,
+        267,
+        267
+      ],
+      "seventh_row_options_per_square": [
+        792,
+        792,
+        792
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        1,
+        3
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        177,
+        177,
+        177
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        1,
+        4
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        254,
+        254,
+        254
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        1,
+        5
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        93,
+        93,
+        93
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        1,
+        6
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        357,
+        357,
+        357
+      ],
+      "seventh_row_options_per_square": [
+        800,
+        800,
+        800
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        1,
+        7
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        265,
+        265,
+        265
+      ],
+      "seventh_row_options_per_square": [
+        800,
+        800,
+        800
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        1,
+        8
+      ],
+      "seventh_row_triples": 13,
+      "pair_candidates": [
+        116,
+        116,
+        116
+      ],
+      "seventh_row_options_per_square": [
+        838,
+        838,
+        838
+      ],
+      "finished": 13,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        2,
+        3
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        408,
+        408,
+        408
+      ],
+      "seventh_row_options_per_square": [
+        800,
+        800,
+        800
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        2,
+        4
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        149,
+        149,
+        149
+      ],
+      "seventh_row_options_per_square": [
+        824,
+        824,
+        824
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        2,
+        5
+      ],
+      "seventh_row_triples": 12,
+      "pair_candidates": [
+        434,
+        434,
+        434
+      ],
+      "seventh_row_options_per_square": [
+        832,
+        832,
+        832
+      ],
+      "finished": 12,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        2,
+        6
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        343,
+        343,
+        343
+      ],
+      "seventh_row_options_per_square": [
+        800,
+        800,
+        800
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        2,
+        7
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        350,
+        350,
+        350
+      ],
+      "seventh_row_options_per_square": [
+        864,
+        864,
+        864
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        2,
+        8
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        202,
+        202,
+        202
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        3,
+        4
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        354,
+        354,
+        354
+      ],
+      "seventh_row_options_per_square": [
+        832,
+        832,
+        832
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        3,
+        5
+      ],
+      "seventh_row_triples": 9,
+      "pair_candidates": [
+        466,
+        466,
+        466
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 9,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        3,
+        6
+      ],
+      "seventh_row_triples": 11,
+      "pair_candidates": [
+        596,
+        596,
+        596
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 11,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        3,
+        7
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        123,
+        123,
+        123
+      ],
+      "seventh_row_options_per_square": [
+        810,
+        810,
+        810
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        3,
+        8
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        401,
+        401,
+        401
+      ],
+      "seventh_row_options_per_square": [
+        784,
+        784,
+        784
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        4,
+        5
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        324,
+        324,
+        324
+      ],
+      "seventh_row_options_per_square": [
+        800,
+        800,
+        800
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        4,
+        6
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        94,
+        94,
+        94
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        4,
+        7
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        163,
+        163,
+        163
+      ],
+      "seventh_row_options_per_square": [
+        800,
+        800,
+        800
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        4,
+        8
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        71,
+        71,
+        71
+      ],
+      "seventh_row_options_per_square": [
+        806,
+        806,
+        806
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        5,
+        6
+      ],
+      "seventh_row_triples": 7,
+      "pair_candidates": [
+        648,
+        648,
+        648
+      ],
+      "seventh_row_options_per_square": [
+        800,
+        800,
+        800
+      ],
+      "finished": 7,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        5,
+        7
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        322,
+        322,
+        322
+      ],
+      "seventh_row_options_per_square": [
+        824,
+        824,
+        824
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        5,
+        8
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        276,
+        276,
+        276
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        6,
+        7
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        176,
+        176,
+        176
+      ],
+      "seventh_row_options_per_square": [
+        826,
+        826,
+        826
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        6,
+        8
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        104,
+        104,
+        104
+      ],
+      "seventh_row_options_per_square": [
+        818,
+        818,
+        818
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        0,
+        7,
+        8
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        194,
+        194,
+        194
+      ],
+      "seventh_row_options_per_square": [
+        864,
+        864,
+        864
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        2,
+        3
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        236,
+        236,
+        236
+      ],
+      "seventh_row_options_per_square": [
+        832,
+        832,
+        832
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        2,
+        4
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        220,
+        220,
+        220
+      ],
+      "seventh_row_options_per_square": [
+        788,
+        788,
+        788
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        2,
+        5
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        64,
+        64,
+        64
+      ],
+      "seventh_row_options_per_square": [
+        788,
+        788,
+        788
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        2,
+        6
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        253,
+        253,
+        253
+      ],
+      "seventh_row_options_per_square": [
+        822,
+        822,
+        822
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        2,
+        7
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        432,
+        432,
+        432
+      ],
+      "seventh_row_options_per_square": [
+        888,
+        888,
+        888
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        2,
+        8
+      ],
+      "seventh_row_triples": 6,
+      "pair_candidates": [
+        165,
+        165,
+        165
+      ],
+      "seventh_row_options_per_square": [
+        808,
+        808,
+        808
+      ],
+      "finished": 6,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        3,
+        4
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        264,
+        264,
+        264
+      ],
+      "seventh_row_options_per_square": [
+        808,
+        808,
+        808
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        3,
+        5
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        48,
+        48,
+        48
+      ],
+      "seventh_row_options_per_square": [
+        808,
+        808,
+        808
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        3,
+        6
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        572,
+        572,
+        572
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        3,
+        7
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        335,
+        335,
+        335
+      ],
+      "seventh_row_options_per_square": [
+        864,
+        864,
+        864
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        3,
+        8
+      ],
+      "seventh_row_triples": 6,
+      "pair_candidates": [
+        181,
+        181,
+        181
+      ],
+      "seventh_row_options_per_square": [
+        800,
+        800,
+        800
+      ],
+      "finished": 6,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        4,
+        5
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        689,
+        689,
+        689
+      ],
+      "seventh_row_options_per_square": [
+        840,
+        840,
+        840
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        4,
+        6
+      ],
+      "seventh_row_triples": 10,
+      "pair_candidates": [
+        420,
+        420,
+        420
+      ],
+      "seventh_row_options_per_square": [
+        858,
+        858,
+        858
+      ],
+      "finished": 10,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        4,
+        7
+      ],
+      "seventh_row_triples": 11,
+      "pair_candidates": [
+        849,
+        849,
+        849
+      ],
+      "seventh_row_options_per_square": [
+        818,
+        818,
+        818
+      ],
+      "finished": 11,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        4,
+        8
+      ],
+      "seventh_row_triples": 6,
+      "pair_candidates": [
+        240,
+        240,
+        240
+      ],
+      "seventh_row_options_per_square": [
+        832,
+        832,
+        832
+      ],
+      "finished": 6,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        5,
+        6
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        308,
+        308,
+        308
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        5,
+        7
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        283,
+        283,
+        283
+      ],
+      "seventh_row_options_per_square": [
+        818,
+        818,
+        818
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        5,
+        8
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        99,
+        99,
+        99
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        6,
+        7
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        251,
+        251,
+        251
+      ],
+      "seventh_row_options_per_square": [
+        888,
+        888,
+        888
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,        6,
+        8
+      ],
+      "seventh_row_triples": 6,
+      "pair_candidates": [
+        122,
+        122,
+        122
+      ],
+      "seventh_row_options_per_square": [
+        792,
+        792,
+        792
+      ],
+      "finished": 6,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        1,
+        7,
+        8
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        268,
+        268,
+        268
+      ],
+      "seventh_row_options_per_square": [
+        832,
+        832,
+        832
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        2,
+        3,
+        4
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        162,
+        162,
+        162
+      ],
+      "seventh_row_options_per_square": [
+        808,
+        808,
+        808
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        2,
+        3,
+        5
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        105,
+        105,
+        105
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        2,
+        3,
+        6
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        113,
+        113,
+        113
+      ],
+      "seventh_row_options_per_square": [
+        792,
+        792,
+        792
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        2,
+        3,
+        7
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        66,
+        66,
+        66
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        2,
+        3,
+        8
+      ],
+      "seventh_row_triples": 6,
+      "pair_candidates": [
+        324,
+        324,
+        324
+      ],
+      "seventh_row_options_per_square": [
+        786,
+        786,
+        786
+      ],
+      "finished": 6,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        2,
+        4,
+        5
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        224,
+        224,
+        224
+      ],
+      "seventh_row_options_per_square": [
+        798,
+        798,
+        798
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        2,
+        4,
+        6
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        102,
+        102,
+        102
+      ],
+      "seventh_row_options_per_square": [
+        880,
+        880,
+        880
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        2,
+        4,
+        7
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        88,
+        88,
+        88
+      ],
+      "seventh_row_options_per_square": [
+        818,
+        818,
+        818
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        2,
+        4,
+        8
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        403,
+        403,
+        403
+      ],
+      "seventh_row_options_per_square": [
+        794,
+        794,
+        794
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        2,
+        5,
+        6
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        223,
+        223,
+        223
+      ],
+      "seventh_row_options_per_square": [
+        848,
+        848,
+        848
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        2,
+        5,
+        7
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        530,
+        530,
+        530
+      ],
+      "seventh_row_options_per_square": [
+        814,
+        814,
+        814
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        2,
+        5,
+        8
+      ],
+      "seventh_row_triples": 7,
+      "pair_candidates": [
+        641,
+        641,
+        641
+      ],
+      "seventh_row_options_per_square": [
+        808,
+        808,
+        808
+      ],
+      "finished": 7,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        2,
+        6,
+        7
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        135,
+        135,
+        135
+      ],
+      "seventh_row_options_per_square": [
+        832,
+        832,
+        832
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        2,
+        6,
+        8
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        105,
+        105,
+        105
+      ],
+      "seventh_row_options_per_square": [
+        796,
+        796,
+        796
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        2,
+        7,
+        8
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        568,
+        568,
+        568
+      ],
+      "seventh_row_options_per_square": [
+        874,
+        874,
+        874
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        3,
+        4,
+        5
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        146,
+        146,
+        146
+      ],
+      "seventh_row_options_per_square": [
+        804,
+        804,
+        804
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        3,
+        4,
+        6
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        260,
+        260,
+        260
+      ],
+      "seventh_row_options_per_square": [
+        792,
+        792,
+        792
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        3,
+        4,
+        7
+      ],
+      "seventh_row_triples": 6,
+      "pair_candidates": [
+        311,
+        311,
+        311
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 6,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        3,
+        4,
+        8
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        500,
+        500,
+        500
+      ],
+      "seventh_row_options_per_square": [
+        860,
+        860,
+        860
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        3,
+        5,
+        6
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        335,
+        335,
+        335
+      ],
+      "seventh_row_options_per_square": [
+        836,
+        836,
+        836
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        3,
+        5,
+        7
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        135,
+        135,
+        135
+      ],
+      "seventh_row_options_per_square": [
+        796,
+        796,
+        796
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        3,
+        5,
+        8
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        199,
+        199,
+        199
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        3,
+        6,
+        7
+      ],
+      "seventh_row_triples": 12,
+      "pair_candidates": [
+        288,
+        288,
+        288
+      ],
+      "seventh_row_options_per_square": [
+        808,
+        808,
+        808
+      ],
+      "finished": 12,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        3,
+        6,
+        8
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        160,
+        160,
+        160
+      ],
+      "seventh_row_options_per_square": [
+        856,
+        856,
+        856
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        3,
+        7,
+        8
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        101,
+        101,
+        101
+      ],
+      "seventh_row_options_per_square": [
+        844,
+        844,
+        844
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        4,
+        5,
+        6
+      ],
+      "seventh_row_triples": 5,
+      "pair_candidates": [
+        378,
+        378,
+        378
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 5,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        4,
+        5,
+        7
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        204,
+        204,
+        204
+      ],
+      "seventh_row_options_per_square": [
+        896,
+        896,
+        896
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        4,
+        5,
+        8
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        250,
+        250,
+        250
+      ],
+      "seventh_row_options_per_square": [
+        824,
+        824,
+        824
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        4,
+        6,
+        7
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        432,
+        432,
+        432
+      ],
+      "seventh_row_options_per_square": [
+        824,
+        824,
+        824
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        4,
+        6,
+        8
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        288,
+        288,
+        288
+      ],
+      "seventh_row_options_per_square": [
+        794,
+        794,
+        794
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        4,
+        7,
+        8
+      ],
+      "seventh_row_triples": 4,
+      "pair_candidates": [
+        126,
+        126,
+        126
+      ],
+      "seventh_row_options_per_square": [
+        800,
+        800,
+        800
+      ],
+      "finished": 4,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        5,
+        6,
+        7
+      ],
+      "seventh_row_triples": 3,
+      "pair_candidates": [
+        310,
+        310,
+        310
+      ],
+      "seventh_row_options_per_square": [
+        816,
+        816,
+        816
+      ],
+      "finished": 3,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        5,
+        6,
+        8
+      ],
+      "seventh_row_triples": 7,
+      "pair_candidates": [
+        148,
+        148,
+        148
+      ],
+      "seventh_row_options_per_square": [
+        888,
+        888,
+        888
+      ],
+      "finished": 7,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        5,
+        7,
+        8
+      ],
+      "seventh_row_triples": 22,
+      "pair_candidates": [
+        200,
+        200,
+        200
+      ],
+      "seventh_row_options_per_square": [
+        800,
+        800,
+        800
+      ],
+      "finished": 22,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    },
+    {
+      "omitted": [
+        6,
+        7,
+        8
+      ],
+      "seventh_row_triples": 12,
+      "pair_candidates": [
+        78,
+        78,
+        78
+      ],
+      "seventh_row_options_per_square": [
+        808,
+        808,
+        808
+      ],
+      "finished": 12,
+      "unknown": 0,
+      "status": "UNSAT_FIXED_SIX_ROWS"
+    }
+  ]
+}

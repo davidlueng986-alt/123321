@@ -1,0 +1,586 @@
+{
+  "origin": "J\u00e4ger et al 2024 Figure 3 one nine-row triple",
+  "method": "exhaustive two missing published rows then all 3 new rows; no symmetry pruning",
+  "total_cases": 36,
+  "fixed_seven_row_unsat": 36,
+  "unknown": 0,
+  "sat": 0,
+  "results": [
+    {
+      "omitted": [
+        0,
+        1
+      ],
+      "row8_options": [
+        70,
+        70,
+        70
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0219
+    },
+    {
+      "omitted": [
+        0,
+        2
+      ],
+      "row8_options": [
+        67,
+        67,
+        67
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0204
+    },
+    {
+      "omitted": [
+        0,
+        3
+      ],
+      "row8_options": [
+        73,
+        73,
+        73
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0243
+    },
+    {
+      "omitted": [
+        0,
+        4
+      ],
+      "row8_options": [
+        71,
+        71,
+        71
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0253
+    },
+    {
+      "omitted": [
+        0,
+        5
+      ],
+      "row8_options": [
+        74,
+        74,
+        74
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0236
+    },
+    {
+      "omitted": [
+        0,
+        6
+      ],
+      "row8_options": [
+        70,
+        70,
+        70
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0215
+    },
+    {
+      "omitted": [
+        0,
+        7
+      ],
+      "row8_options": [
+        94,
+        94,
+        94
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0378
+    },
+    {
+      "omitted": [
+        0,
+        8
+      ],
+      "row8_options": [
+        72,
+        72,
+        72
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0238
+    },
+    {
+      "omitted": [
+        1,
+        2
+      ],
+      "row8_options": [
+        72,
+        72,
+        72
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0236
+    },
+    {
+      "omitted": [
+        1,
+        3
+      ],
+      "row8_options": [
+        70,
+        70,
+        70
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0221
+    },
+    {
+      "omitted": [
+        1,
+        4
+      ],
+      "row8_options": [
+        72,
+        72,
+        72
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0221
+    },
+    {
+      "omitted": [
+        1,
+        5
+      ],
+      "row8_options": [
+        74,
+        74,
+        74
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.023
+    },
+    {
+      "omitted": [
+        1,
+        6
+      ],
+      "row8_options": [
+        76,
+        76,
+        76
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0241
+    },
+    {
+      "omitted": [
+        1,
+        7
+      ],
+      "row8_options": [
+        97,
+        97,
+        97
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0398
+    },
+    {
+      "omitted": [
+        1,
+        8
+      ],
+      "row8_options": [
+        67,
+        67,
+        67
+      ],
+      "row8_triples": 3,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0197
+    },
+    {
+      "omitted": [
+        2,
+        3
+      ],
+      "row8_options": [
+        66,
+        66,
+        66
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0186
+    },
+    {
+      "omitted": [
+        2,
+        4
+      ],
+      "row8_options": [
+        72,
+        72,
+        72
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0218
+    },
+    {
+      "omitted": [
+        2,
+        5
+      ],
+      "row8_options": [
+        78,
+        78,
+        78
+      ],
+      "row8_triples": 3,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0258
+    },
+    {
+      "omitted": [
+        2,
+        6
+      ],
+      "row8_options": [
+        78,
+        78,
+        78
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0258
+    },
+    {
+      "omitted": [
+        2,
+        7
+      ],
+      "row8_options": [
+        98,
+        98,
+        98
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0422
+    },
+    {
+      "omitted": [
+        2,
+        8
+      ],
+      "row8_options": [
+        80,
+        80,
+        80
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0274
+    },
+    {
+      "omitted": [
+        3,
+        4
+      ],
+      "row8_options": [
+        80,
+        80,
+        80
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.027
+    },
+    {
+      "omitted": [
+        3,
+        5
+      ],
+      "row8_options": [
+        70,
+        70,
+        70
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0213
+    },
+    {
+      "omitted": [
+        3,
+        6
+      ],
+      "row8_options": [
+        68,
+        68,
+        68
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0196
+    },
+    {
+      "omitted": [
+        3,
+        7
+      ],
+      "row8_options": [
+        80,
+        80,
+        80
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0285
+    },
+    {
+      "omitted": [
+        3,
+        8
+      ],
+      "row8_options": [
+        86,
+        86,
+        86
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0328
+    },
+    {
+      "omitted": [
+        4,
+        5
+      ],
+      "row8_options": [
+        70,
+        70,
+        70
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0218
+    },
+    {
+      "omitted": [
+        4,
+        6
+      ],
+      "row8_options": [
+        72,
+        72,
+        72
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0221
+    },
+    {
+      "omitted": [
+        4,
+        7
+      ],
+      "row8_options": [
+        78,
+        78,
+        78
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0263
+    },
+    {
+      "omitted": [
+        4,
+        8
+      ],
+      "row8_options": [
+        77,
+        77,
+        77
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0258
+    },
+    {
+      "omitted": [
+        5,
+        6
+      ],
+      "row8_options": [
+        90,
+        90,
+        90
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.034
+    },
+    {
+      "omitted": [
+        5,
+        7
+      ],
+      "row8_options": [
+        78,
+        78,
+        78
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0264
+    },
+    {
+      "omitted": [
+        5,
+        8
+      ],
+      "row8_options": [
+        88,
+        88,
+        88
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0329
+    },
+    {
+      "omitted": [
+        6,
+        7
+      ],
+      "row8_options": [
+        81,
+        81,
+        81
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0314
+    },
+    {
+      "omitted": [
+        6,
+        8
+      ],
+      "row8_options": [
+        74,
+        74,
+        74
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0249
+    },
+    {
+      "omitted": [
+        7,
+        8
+      ],
+      "row8_options": [
+        84,
+        84,
+        84
+      ],
+      "row8_triples": 2,
+      "row9_triples": 0,
+      "row10_completed": 0,
+      "status": "UNSAT_FIXED_SEVEN_ROWS",
+      "seconds": 0.0303
+    }
+  ]
+}
