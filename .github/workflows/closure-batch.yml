@@ -1,0 +1,24 @@
+name: Exact closure batch replay
+on:
+  push:
+    branches: [math-agent-mols10, research/capset-f3-7]
+    paths:
+      - 'research/closure_batch/**'
+      - '.github/workflows/closure-batch.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: closure-batch-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently replay finite controls and row-factorization certificate
+        run: node research/closure_batch/run_batch.js

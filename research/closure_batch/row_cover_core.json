@@ -1,0 +1,735 @@
+{
+  "originalVertices": [
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "graph": [
+    [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    [
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      false,
+      true,
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false
+    ],
+    [
+      false,
+      false,
+      true,
+      false,
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false
+    ],
+    [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false
+    ],
+    [
+      true,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  ],
+  "threeColor": {
+    "status": "UNSAT",
+    "vertex": 10,
+    "children": [
+      {
+        "color": 1,
+        "proof": {
+          "status": "UNSAT",
+          "vertex": 1,
+          "children": [
+            {
+              "color": 2,
+              "proof": {
+                "status": "UNSAT",
+                "vertex": 11,
+                "children": [
+                  {
+                    "color": 2,
+                    "proof": {
+                      "status": "UNSAT",
+                      "vertex": 5,
+                      "children": [
+                        {
+                          "color": 0,
+                          "proof": {
+                            "status": "UNSAT",
+                            "vertex": 7,
+                            "children": [
+                              {
+                                "color": 2,
+                                "proof": {
+                                  "status": "UNSAT",
+                                  "vertex": 6,
+                                  "children": [
+                                    {
+                                      "color": 1,
+                                      "proof": {
+                                        "status": "UNSAT",
+                                        "vertex": 2,
+                                        "children": [
+                                          {
+                                            "color": 2,
+                                            "proof": {
+                                              "status": "UNSAT",
+                                              "vertex": 4,
+                                              "children": [
+                                                {
+                                                  "color": 1,
+                                                  "proof": {
+                                                    "status": "UNSAT",
+                                                    "vertex": 3,
+                                                    "children": [
+                                                      {
+                                                        "color": 0,
+                                                        "proof": {
+                                                          "status": "UNSAT",
+                                                          "vertex": 8,
+                                                          "children": [
+                                                            {
+                                                              "color": 0,
+                                                              "proof": {
+                                                                "status": "UNSAT",
+                                                                "vertex": 9,
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "color": 2,
+                          "proof": {
+                            "status": "UNSAT",
+                            "vertex": 7,
+                            "children": [
+                              {
+                                "color": 0,
+                                "proof": {
+                                  "status": "UNSAT",
+                                  "vertex": 4,
+                                  "children": [
+                                    {
+                                      "color": 0,
+                                      "proof": {
+                                        "status": "UNSAT",
+                                        "vertex": 2,
+                                        "children": [
+                                          {
+                                            "color": 1,
+                                            "proof": {
+                                              "status": "UNSAT",
+                                              "vertex": 3,
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "color": 1,
+                                      "proof": {
+                                        "status": "UNSAT",
+                                        "vertex": 2,
+                                        "children": [
+                                          {
+                                            "color": 0,
+                                            "proof": {
+                                              "status": "UNSAT",
+                                              "vertex": 3,
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "color": 2,
+        "proof": {
+          "status": "UNSAT",
+          "vertex": 1,
+          "children": [
+            {
+              "color": 1,
+              "proof": {
+                "status": "UNSAT",
+                "vertex": 11,
+                "children": [
+                  {
+                    "color": 1,
+                    "proof": {
+                      "status": "UNSAT",
+                      "vertex": 5,
+                      "children": [
+                        {
+                          "color": 0,
+                          "proof": {
+                            "status": "UNSAT",
+                            "vertex": 7,
+                            "children": [
+                              {
+                                "color": 1,
+                                "proof": {
+                                  "status": "UNSAT",
+                                  "vertex": 6,
+                                  "children": [
+                                    {
+                                      "color": 2,
+                                      "proof": {
+                                        "status": "UNSAT",
+                                        "vertex": 2,
+                                        "children": [
+                                          {
+                                            "color": 1,
+                                            "proof": {
+                                              "status": "UNSAT",
+                                              "vertex": 4,
+                                              "children": [
+                                                {
+                                                  "color": 2,
+                                                  "proof": {
+                                                    "status": "UNSAT",
+                                                    "vertex": 3,
+                                                    "children": [
+                                                      {
+                                                        "color": 0,
+                                                        "proof": {
+                                                          "status": "UNSAT",
+                                                          "vertex": 8,
+                                                          "children": [
+                                                            {
+                                                              "color": 0,
+                                                              "proof": {
+                                                                "status": "UNSAT",
+                                                                "vertex": 9,
+                                                                "children": []
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "color": 1,
+                          "proof": {
+                            "status": "UNSAT",
+                            "vertex": 7,
+                            "children": [
+                              {
+                                "color": 0,
+                                "proof": {
+                                  "status": "UNSAT",
+                                  "vertex": 4,
+                                  "children": [
+                                    {
+                                      "color": 0,
+                                      "proof": {
+                                        "status": "UNSAT",
+                                        "vertex": 2,
+                                        "children": [
+                                          {
+                                            "color": 2,
+                                            "proof": {
+                                              "status": "UNSAT",
+                                              "vertex": 3,
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "color": 2,
+                                      "proof": {
+                                        "status": "UNSAT",
+                                        "vertex": 2,
+                                        "children": [
+                                          {
+                                            "color": 0,
+                                            "proof": {
+                                              "status": "UNSAT",
+                                              "vertex": 3,
+                                              "children": []
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "nodes": 33
+  },
+  "fourColor": {
+    "status": "SAT",
+    "colors": [
+      0,
+      2,
+      2,
+      0,
+      1,
+      0,
+      1,
+      2,
+      0,
+      3,
+      1,
+      2
+    ],
+    "nodes": 12
+  },
+  "deletionControls": [
+    {
+      "deletedVertex": 0,
+      "result": {
+        "status": "SAT",
+        "colors": [
+          0,
+          1,
+          0,
+          2,
+          0,
+          2,
+          2,
+          0,
+          1,
+          1,
+          2
+        ],
+        "nodes": 16
+      }
+    },
+    {
+      "deletedVertex": 1,
+      "result": {
+        "status": "SAT",
+        "colors": [
+          0,
+          1,
+          0,
+          2,
+          0,
+          2,
+          2,
+          0,
+          1,
+          1,
+          2
+        ],
+        "nodes": 15
+      }
+    },
+    {
+      "deletedVertex": 2,
+      "result": {
+        "status": "SAT",
+        "colors": [
+          0,
+          2,
+          0,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2
+        ],
+        "nodes": 13
+      }
+    },
+    {
+      "deletedVertex": 3,
+      "result": {
+        "status": "SAT",
+        "colors": [
+          0,
+          2,
+          1,
+          0,
+          2,
+          0,
+          0,
+          1,
+          2,
+          1,
+          2
+        ],
+        "nodes": 17
+      }
+    },
+    {
+      "deletedVertex": 4,
+      "result": {
+        "status": "SAT",
+        "colors": [
+          0,
+          2,
+          2,
+          0,
+          0,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2
+        ],
+        "nodes": 11
+      }
+    },
+    {
+      "deletedVertex": 5,
+      "result": {
+        "status": "SAT",
+        "colors": [
+          0,
+          2,
+          1,
+          0,
+          2,
+          0,
+          2,
+          0,
+          1,
+          1,
+          2
+        ],
+        "nodes": 19
+      }
+    },
+    {
+      "deletedVertex": 6,
+      "result": {
+        "status": "SAT",
+        "colors": [
+          0,
+          2,
+          1,
+          0,
+          2,
+          0,
+          2,
+          0,
+          1,
+          1,
+          2
+        ],
+        "nodes": 15
+      }
+    },
+    {
+      "deletedVertex": 7,
+      "result": {
+        "status": "SAT",
+        "colors": [
+          0,
+          2,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          1,
+          2
+        ],
+        "nodes": 11
+      }
+    },
+    {
+      "deletedVertex": 8,
+      "result": {
+        "status": "SAT",
+        "colors": [
+          0,
+          2,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2
+        ],
+        "nodes": 11
+      }
+    },
+    {
+      "deletedVertex": 9,
+      "result": {
+        "status": "SAT",
+        "colors": [
+          0,
+          2,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2
+        ],
+        "nodes": 11
+      }
+    },
+    {
+      "deletedVertex": 10,
+      "result": {
+        "status": "SAT",
+        "colors": [
+          0,
+          1,
+          1,
+          2,
+          0,
+          2,
+          0,
+          0,
+          1,
+          2,
+          1
+        ],
+        "nodes": 11
+      }
+    },
+    {
+      "deletedVertex": 11,
+      "result": {
+        "status": "SAT",
+        "colors": [
+          0,
+          2,
+          1,
+          2,
+          0,
+          2,
+          0,
+          0,
+          1,
+          2,
+          1
+        ],
+        "nodes": 17
+      }
+    }
+  ]
+}
