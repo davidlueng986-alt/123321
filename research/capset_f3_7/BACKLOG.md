@@ -445,3 +445,8 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [LOCAL INDEPENDENT EXACT PASS / CI PENDING] CAP035 796797 forbidden-triple DIMACS prefix independently reconstructed by base-3 arithmetic; matching SHA256. CAP037 CI 41599046083 SUCCESS. See CAP038 report/checker.
 - [P0] Independently audit auxiliary cardinality suffix and run CPU-bounded proof-logged SAT with verified UNSAT certificate or independently checked SAT witness; timeout UNKNOWN. Local solver absent.
 - [P1] CAP019/Thackeray classification referee, balanced/no-112, nonlocal >=237 witness search. This fixed occupancy is not a global upper bound.
+
+## CAP-039 (2026-11-03) — Cardinality suffix verified locally
+- [LOCAL PASS / CI PENDING] 162 independent Sinz counters; proof of correctness via prefix thresholds; 7938 constructive valid witnesses, 4050 invalid unit-propagation contradictions. 59049 vars and 135561 suffix clauses; full CNF expected 932358 clauses. Seed 390039. See CAP039 report and script.
+- [P0] Independently compare complete CAP035 DIMACS suffix hash and verify CI on current head. Then bounded CPU SAT solver with proof-logged UNSAT and independent checker; timeout UNKNOWN. Fixed285 UNSAT is conditional only.
+- [P0] CAP019/Thackeray 110-cap classification referee; >=237 constructive branch and balanced/no-112 remain active. Avoid more count-only relaxation and symmetry studies unless directly feeding global proof.
