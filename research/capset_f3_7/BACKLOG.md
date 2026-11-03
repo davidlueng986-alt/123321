@@ -1,3 +1,8 @@
+## CAP-034 (2026-11-03 UTC)
+- [EXPLICIT LOCAL SAT WITNESS; CI PENDING] Two unique CAP027 special lines (7,6,6) and (7,7,4) sharing 0000 fiber ARE jointly realizable: 30-point F3^7 cap on five fibers. See cap034_shared_two_lines_witness.py and CAP034 report. Two-line-only contradiction hypothesis FALSIFIED.
+- [P0] Check CI; extend to connecting quotient lines or all 81 fibers via bounded proof-logged shared-variable SAT/PB. UNSAT needs independently checked proof, timeout UNKNOWN.
+- [P1] CAP019/Thackeray 110-cap classification referee; balanced/no-112; >=237 lower-bound search. Exact r3(7) OPEN.
+
 
 ## CAP-033 (2026-11-03 UTC)
 - [LOCAL EXACT; CI PENDING] CAP027 formal285 has unique 766 and 774 quotient lines sharing 7-fiber 0000; force non-9-extendable 7-cap orbit by CAP032C. See CAP033 report/checker. Not a global bound.
