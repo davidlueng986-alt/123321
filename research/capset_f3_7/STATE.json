@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-026: Any hypothetical 285-point cap with every affine 6D section<=109 has nonzero barycenter and anisotropic rank-2 quadratic form on its 6D kernel. Exact formal moment+rank2 negative control survives; no new global bound. CAP-019 <=287 remains provisional pending independent Thackeray 110-cap classification referee.",
-  "next_experiment": "Build proof-logged shared-fiber SAT/PB for CAP027 occupancy, then independently validate SAT coordinates or UNSAT proof; continue CAP019 referee.",
-  "last_run_id": "CAP-032-RANDOM-OCCUPANCY-EXPECTATION-2026-11-03",
-  "last_run_result": "EXACT_ANALYTIC_EXPECTATION_131198_OVER_75_CI_PENDING_NO_BOUND",
+  "current_hypothesis": "CAP-032B: Any AG4 cap with two parallel 3D sections of size >=7 has third <=4; exact high-density slice table sizes6..9 from independent Python/C++ exhaustive AGL3 orbit checks. CAP027 285-point formal count-only model still satisfies every 1080 quotient-line cut. Need multi-line shared-fiber point-level constraints, not only occupancy.",
+  "next_experiment": "Confirm CAP-032B full CI; build shared-fiber two-quotient-line compatible point-level SAT, independently verify SAT/UNSAT artifacts; hostile audit Thackeray 110-classification and CAP019 <=287 provisional; maintain no-112 and >=237 construction.",
+  "last_run_id": "CAP-032B-UNIVERSAL-4D-HIGH-DENSITY-SLICE-2026-11-03",
+  "last_run_result": "LOCAL_INDEPENDENT_COMPLETE_PY_CPP_EXACT_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -79,7 +79,8 @@
     "CAP-029-LOCAL",
     "CAP-030",
     "CAP-031",
-    "CAP-032-ANALYTIC"
+    "CAP-032-ANALYTIC",
+    "CAP-032B-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549413947",
   "baseline_secant_audit": {
@@ -101,7 +102,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-03T01:55:00Z",
+  "last_updated_utc": "2026-11-03T02:54:14.969Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1417,5 +1418,54 @@
     "second_fix": "Wrap assertion-raising check() in admissible() predicate to filter invalid candidate extensions",
     "full_ci_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549413947",
     "full_ci_verified_commit": "176a2d93ea2a99a48c98d3d30e8987d97f5a8707"
+  },
+  "cap032b_universal_high_fiber_profiles": {
+    "scope": "Any affine AG4 cap; any rank4 quotient of AG7",
+    "point_counts_F3_3_by_size": {
+      "6": 107406,
+      "7": 126360,
+      "8": 63180,
+      "9": 2106
+    },
+    "affine_orbit_sizes_by_size": {
+      "6": [
+        6318,
+        25272,
+        75816
+      ],
+      "7": [
+        50544,
+        75816
+      ],
+      "8": [
+        6318,
+        18954,
+        37908
+      ],
+      "9": [
+        2106
+      ]
+    },
+    "exact_max_third": {
+      "6,6": 8,
+      "6,7": 6,
+      "6,8": 6,
+      "6,9": 3,
+      "7,7": 4,
+      "7,8": 3,
+      "7,9": 2,
+      "8,8": 2,
+      "8,9": 2,
+      "9,9": 2
+    },
+    "independent_python_exact_7_7_pairs": 252720,
+    "exceptional_pairs_with_at_least_five_holes": 189,
+    "five_cap_witnesses_in_holes": 0,
+    "sharp_774_18cap_verified": true,
+    "formal_CAP027_M285_count_only_model_passes_all_1080_threshold_cuts": true,
+    "status": "LOCAL_EXACT_PYTHON_CPP_CI_PENDING",
+    "global_bound_improved": false,
+    "novelty_established": false,
+    "report": "research/capset_f3_7/CAP032B_UNIVERSAL_4D_HIGH_FIBER_PROFILE_2026-11-03.md"
   }
 }
