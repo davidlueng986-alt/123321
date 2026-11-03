@@ -51,7 +51,7 @@ def normalize_cap(cap):
     for p in cap:
         d=[(p[i]-p0[i])%3 for i in range(n)]
         out.append(tuple(sum(inv[i][j]*d[j] for j in range(n))%3 for i in range(n)))
-    assert out[:n+1]==frame(n)
+    assert set(frame(n)) <= set(out)  # chosen basis need not be first n+1 input rows
     return out
 
 class CAP040Tests(unittest.TestCase):
@@ -87,7 +87,7 @@ class CAP040Tests(unittest.TestCase):
         N=set(norm);self.assertEqual(len(N),236)
         for a,b in combinations(norm,2):self.assertNotIn(third(a,b),N)
         cases={tuple(z['type']) for z in root_orbits(7)}
-        self.assertTrue(all(type_key(p) in cases for p in norm[8:]))
+        self.assertTrue(all(type_key(p) in cases for p in norm if p not in set(frame(7))))
 
     def test_barycentric_group_action_full_s8(self):
         for case in root_orbits(7):
