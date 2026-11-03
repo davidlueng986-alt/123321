@@ -1,0 +1,277 @@
+{
+  "cap2": {
+    "dimension": 2,
+    "status": "EXHAUSTIVE_OPTIMUM",
+    "best": 4,
+    "witness": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "nodes": 119,
+    "scope": "All subsets in this dimension; no imposed symmetry",
+    "standaloneUnsatTrace": false
+  },
+  "cap2Independent": 4,
+  "cap3": {
+    "dimension": 3,
+    "status": "EXHAUSTIVE_OPTIMUM",
+    "best": 9,
+    "witness": [
+      0,
+      1,
+      3,
+      4,
+      9,
+      10,
+      14,
+      17,
+      23
+    ],
+    "nodes": 75573,
+    "scope": "All subsets in this dimension; no imposed symmetry",
+    "standaloneUnsatTrace": false
+  },
+  "oa3": {
+    "n": 3,
+    "options": 3,
+    "equalities": 90,
+    "nodes": 4,
+    "status": "UNSAT_EXHAUSTIVE",
+    "standaloneUnsatTrace": false
+  },
+  "oa4": {
+    "n": 4,
+    "options": 64,
+    "equalities": 160,
+    "nodes": 17,
+    "status": "SAT",
+    "standaloneUnsatTrace": false,
+    "overlays": [
+      16,
+      16,
+      16
+    ],
+    "witness": [
+      [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          3,
+          2
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ]
+      ]
+    ]
+  },
+  "oa5": {
+    "n": 5,
+    "options": 413,
+    "equalities": 250,
+    "nodes": 28,
+    "status": "SAT",
+    "standaloneUnsatTrace": false,
+    "overlays": [
+      25,
+      25,
+      25
+    ],
+    "witness": [
+      [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          4,
+          0,
+          3
+        ],
+        [
+          2,
+          4,
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          1,
+          4,
+          2
+        ],
+        [
+          4,
+          3,
+          0,
+          2,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          2,
+          4,
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          1,
+          4,
+          2
+        ],
+        [
+          4,
+          3,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          4,
+          0,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          3,
+          0,
+          1,
+          4,
+          2
+        ],
+        [
+          4,
+          3,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          4,
+          0,
+          3
+        ],
+        [
+          2,
+          4,
+          3,
+          1,
+          0
+        ]
+      ]
+    ]
+  },
+  "core": {
+    "vertices": 12,
+    "edges": 22,
+    "chromaticNumber": 4,
+    "vertexDeletionMinimal": true,
+    "globalMolsStatus": "OPEN",
+    "scope": "Only row factorization of the supplied exact integral residual cover"
+  },
+  "oa10Options": 41338,
+  "negativeControls": {
+    "corruptProof": true,
+    "badCover": true,
+    "badCap": true
+  }
+}

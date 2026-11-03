@@ -8,7 +8,7 @@ Scope is fixed 84 anchors only (one published 9x10 triple), not global.
 import json,itertools,time,numpy as np
 from pathlib import Path
 from E060_seven_row_completion import latin_rows,solve,check_full
-SOURCE=str(Path(__file__).with_name('E059_2024_9x10_analysed.json')))
+SOURCE=str(Path(__file__).with_name('E059_2024_9x10_analysed.json'))
 
 def gen_seventh(W):
   S=[np.asarray(latin_rows(Q),dtype=np.uint8) for Q in W]

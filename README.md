@@ -1,8 +1,21 @@
-# Math Agent — Lean 4 proof verifier
+# Math Agent — MOLS10 research
+
+## Research mission — OPEN → CLOSED
+
+**唯一成功條件：主問題由 OPEN 變成 CLOSED。** 局部證書、工具、掃描與界線只作解題手段，不是成功百分比。
+
+- [完整成功規約與 proof／disproof 圖](docs/MISSION.md)
+- [全部已識別的24項局部問題、範圍與決策](docs/LOCAL_PROBLEM_CATALOG.md)
+- [完整暴力窮舉、天文成本與安全包圍方法](docs/EXHAUSTIVE_METHODS.md)
+- [本批可重播實作與精確證書](research/closure_batch/README.md)
+
+目前研究branch：`math-agent-mols10`。主問題仍 **OPEN**；維持現有on-demand模式。
+
+## Inherited Lean verifier workspace
 
 This is a ready-to-run **Lean 4 + Mathlib** formal verification workspace for a mathematics agent swarm.
 
-**Hosting note:** This workspace is currently on the isolated public branch `math-agent-lean-verifier` of the public GitHub repository `davidlueng986-alt/123321`, not on its default branch. Existing `main` is unchanged. The files can be moved to a dedicated public repository later.
+**Branch note:** The verifier below originated on `math-agent-lean-verifier`; its clone command refers to that verifier branch.
 
 ## What it does
 
