@@ -1,0 +1,357 @@
+{
+  "date_utc": "2026-11-03",
+  "global_status": "OPEN",
+  "only_success": "full independently verified 100/100/100 or unrestricted proof",
+  "full_OA_DLX_n3_4_5_6": [
+    {
+      "n": 3,
+      "status": "UNSAT_EXHAUSTIVE",
+      "candidates": 3,
+      "nodes": 4,
+      "branches": 3,
+      "dead_ends": 1,
+      "maxdepth": 3,
+      "seconds": 1.082e-06
+    },
+    {
+      "n": 4,
+      "status": "SAT",
+      "candidates": 64,
+      "nodes": 17,
+      "branches": 16,
+      "dead_ends": 0,
+      "maxdepth": 16,
+      "seconds": 6.159e-06
+    },
+    {
+      "n": 5,
+      "status": "SAT",
+      "candidates": 413,
+      "nodes": 28,
+      "branches": 27,
+      "dead_ends": 1,
+      "maxdepth": 25,
+      "seconds": 1.4592e-05
+    },
+    {
+      "n": 6,
+      "status": "UNSAT_EXHAUSTIVE",
+      "candidates": 1566,
+      "nodes": 200601,
+      "branches": 200600,
+      "dead_ends": 44124,
+      "maxdepth": 27,
+      "seconds": 0.5892
+    }
+  ],
+  "full_OA_DLX_n10": {
+    "n": 10,
+    "status": "UNKNOWN_BUDGET",
+    "candidates": 41338,
+    "nodes": 196608,
+    "branches": 196607,
+    "dead_ends": 49969,
+    "maxdepth": 69,
+    "seconds": 2.0384
+  },
+  "n10_15_second_followup": {
+    "n": 10,
+    "status": "UNKNOWN_BUDGET",
+    "candidates": 41338,
+    "nodes": 1687552,
+    "branches": 1687551,
+    "dead_ends": 430114,
+    "maxdepth": 72,
+    "seconds": 15.083
+  },
+  "canonical_cycle_type_tests": [
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 37306,
+      "nodes": 131072,
+      "branches": 131071,
+      "dead_ends": 31705,
+      "maxdepth": 70,
+      "seconds": 1.1085,
+      "cycle_type": "2,2,2,2,2"
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 37306,
+      "nodes": 131072,
+      "branches": 131071,
+      "dead_ends": 33368,
+      "maxdepth": 72,
+      "seconds": 1.0889,
+      "cycle_type": "2,2,2,4"
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 37306,
+      "nodes": 131072,
+      "branches": 131071,
+      "dead_ends": 31867,
+      "maxdepth": 70,
+      "seconds": 1.1499,
+      "cycle_type": "2,2,3,3"
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 37306,
+      "nodes": 114688,
+      "branches": 114687,
+      "dead_ends": 28146,
+      "maxdepth": 69,
+      "seconds": 1.015,
+      "cycle_type": "2,2,6"
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 37306,
+      "nodes": 131072,
+      "branches": 131071,
+      "dead_ends": 32625,
+      "maxdepth": 69,
+      "seconds": 1.0139,
+      "cycle_type": "2,3,5"
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 37306,
+      "nodes": 131072,
+      "branches": 131071,
+      "dead_ends": 32421,
+      "maxdepth": 70,
+      "seconds": 1.0663,
+      "cycle_type": "2,4,4"
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 37306,
+      "nodes": 98304,
+      "branches": 98303,
+      "dead_ends": 26548,
+      "maxdepth": 68,
+      "seconds": 1.1246,
+      "cycle_type": "2,8"
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 37306,
+      "nodes": 131072,
+      "branches": 131071,
+      "dead_ends": 32056,
+      "maxdepth": 69,
+      "seconds": 1.0846,
+      "cycle_type": "3,3,4"
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 37306,
+      "nodes": 131072,
+      "branches": 131071,
+      "dead_ends": 34023,
+      "maxdepth": 68,
+      "seconds": 1.0354,
+      "cycle_type": "3,7"
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 37306,
+      "nodes": 131072,
+      "branches": 131071,
+      "dead_ends": 32593,
+      "maxdepth": 71,
+      "seconds": 1.0272,
+      "cycle_type": "4,6"
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 37306,
+      "nodes": 114688,
+      "branches": 114687,
+      "dead_ends": 29429,
+      "maxdepth": 69,
+      "seconds": 1.0759,
+      "cycle_type": "5,5"
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 37306,
+      "nodes": 147456,
+      "branches": 147455,
+      "dead_ends": 37393,
+      "maxdepth": 70,
+      "seconds": 1.0995,
+      "cycle_type": "10"
+    }
+  ],
+  "fixed_g_branch_results": "seven k=2..8 n10 shifts tested, all UNKNOWN_BUDGET",
+  "pair_solver_randomized_seeds": [
+    {
+      "seed": 1,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 1490944
+    },
+    {
+      "seed": 3,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 1458176
+    },
+    {
+      "seed": 7,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 1425408
+    },
+    {
+      "seed": 11,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 1409024
+    },
+    {
+      "seed": 17,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 1359872
+    },
+    {
+      "seed": 101,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 1327104
+    },
+    {
+      "seed": 2026,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 1425408
+    },
+    {
+      "seed": 433,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 1376256
+    },
+    {
+      "seed": 1999,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 1409024
+    },
+    {
+      "seed": 421,
+      "status": "UNKNOWN_BUDGET",
+      "nodes": 1425408
+    }
+  ],
+  "transversal_closure": {
+    "criterion": "n-1 disjoint common transversals in an orthogonal Latin pair iff a complete triple exists; tenth is forced complement",
+    "controls": [
+      {
+        "n": 4,
+        "positive": true,
+        "supplied": 3,
+        "verified_complement": true,
+        "overlays": [
+          16,
+          16,
+          16
+        ]
+      },
+      {
+        "n": 5,
+        "positive": true,
+        "supplied": 4,
+        "verified_complement": true,
+        "overlays": [
+          25,
+          25,
+          25
+        ]
+      },
+      {
+        "n": 10,
+        "pair": "Egan-Wanless near triple A/B (2016)",
+        "common_transversals": 14,
+        "max_disjoint": 7,
+        "n_minus_1_needed": 9,
+        "closure": false,
+        "enumeration_nodes": 6837
+      }
+    ],
+    "global_order10_status": "OPEN"
+  },
+  "eight_packing_bipartite_gate": {
+    "status": "THEOREM_AND_POSITIVE_CONTROLS_VERIFIED",
+    "lemma": "for any orthogonal A,B, a set of n-2 disjoint common transversals extends to a full third square iff residual 2n-cell graph is bipartite",
+    "controls": [
+      {
+        "n": 4,
+        "status": "CONSTRUCTIVE_CLOSURE_PASS",
+        "bipartite": true,
+        "components": 1,
+        "vertices": 8,
+        "new_common_transversal": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "overlays": [
+          16,
+          16,
+          16
+        ],
+        "total_disjoint_n_minus_2_packs": 6,
+        "non_bipartite": 0
+      },
+      {
+        "n": 5,
+        "status": "CONSTRUCTIVE_CLOSURE_PASS",
+        "bipartite": true,
+        "components": 1,
+        "vertices": 10,
+        "new_common_transversal": [
+          3,
+          0,
+          1,
+          4,
+          2
+        ],
+        "overlays": [
+          25,
+          25,
+          25
+        ],
+        "total_disjoint_n_minus_2_packs": 20,
+        "non_bipartite": 0
+      }
+    ],
+    "order10_requirement": "Find ANY orthogonal pair with 8 disjoint common transversals AND bipartite residual graph; exact triple then follows",
+    "current_mols10_status": "OPEN"
+  },
+  "three_symbol_cycle_trade": {
+    "base": 291,
+    "best": 291,
+    "nodes": 3702370,
+    "trades_generated": 3726096,
+    "seconds": 3.198,
+    "best_by_depth": [
+      291,
+      288,
+      286,
+      291
+    ],
+    "moves": [],
+    "scope": "up to 3 symbol-pair cycle trades on one fixed Egan neartriple; complements quotient by global symbol relabeling"
+  },
+  "global_orbits_closed": 0,
+  "automation": "MOLS10 hourly disabled"
+}

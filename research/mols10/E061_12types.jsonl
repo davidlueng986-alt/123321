@@ -1,0 +1,12 @@
+{"n": 10, "status": "UNKNOWN_BUDGET", "candidates": 37306, "nodes": 131072, "branches": 131071, "dead_ends": 31705, "maxdepth": 70, "seconds": 1.1085, "cycle_type": "2,2,2,2,2"}
+{"n": 10, "status": "UNKNOWN_BUDGET", "candidates": 37306, "nodes": 131072, "branches": 131071, "dead_ends": 33368, "maxdepth": 72, "seconds": 1.0889, "cycle_type": "2,2,2,4"}
+{"n": 10, "status": "UNKNOWN_BUDGET", "candidates": 37306, "nodes": 131072, "branches": 131071, "dead_ends": 31867, "maxdepth": 70, "seconds": 1.1499, "cycle_type": "2,2,3,3"}
+{"n": 10, "status": "UNKNOWN_BUDGET", "candidates": 37306, "nodes": 114688, "branches": 114687, "dead_ends": 28146, "maxdepth": 69, "seconds": 1.015, "cycle_type": "2,2,6"}
+{"n": 10, "status": "UNKNOWN_BUDGET", "candidates": 37306, "nodes": 131072, "branches": 131071, "dead_ends": 32625, "maxdepth": 69, "seconds": 1.0139, "cycle_type": "2,3,5"}
+{"n": 10, "status": "UNKNOWN_BUDGET", "candidates": 37306, "nodes": 131072, "branches": 131071, "dead_ends": 32421, "maxdepth": 70, "seconds": 1.0663, "cycle_type": "2,4,4"}
+{"n": 10, "status": "UNKNOWN_BUDGET", "candidates": 37306, "nodes": 98304, "branches": 98303, "dead_ends": 26548, "maxdepth": 68, "seconds": 1.1246, "cycle_type": "2,8"}
+{"n": 10, "status": "UNKNOWN_BUDGET", "candidates": 37306, "nodes": 131072, "branches": 131071, "dead_ends": 32056, "maxdepth": 69, "seconds": 1.0846, "cycle_type": "3,3,4"}
+{"n": 10, "status": "UNKNOWN_BUDGET", "candidates": 37306, "nodes": 131072, "branches": 131071, "dead_ends": 34023, "maxdepth": 68, "seconds": 1.0354, "cycle_type": "3,7"}
+{"n": 10, "status": "UNKNOWN_BUDGET", "candidates": 37306, "nodes": 131072, "branches": 131071, "dead_ends": 32593, "maxdepth": 71, "seconds": 1.0272, "cycle_type": "4,6"}
+{"n": 10, "status": "UNKNOWN_BUDGET", "candidates": 37306, "nodes": 114688, "branches": 114687, "dead_ends": 29429, "maxdepth": 69, "seconds": 1.0759, "cycle_type": "5,5"}
+{"n": 10, "status": "UNKNOWN_BUDGET", "candidates": 37306, "nodes": 147456, "branches": 147455, "dead_ends": 37393, "maxdepth": 70, "seconds": 1.0995, "cycle_type": "10"}

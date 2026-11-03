@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "User-triggered goal-backward CLOSE only. Existence: full five-coordinate OA solver with stronger sound symmetry/branching and exact witness validation; nonexistence: 100% proven normalized orbit+every C continuation coverage and replayable UNSAT; stop investing in fixed source neighborhoods without unrestricted implication. Keep hourly MOLS10 disabled.",
-  "current_hypothesis": "ONLY GOAL = CLOSE 3-MOLS(10). Direct 5-coordinate OA(100,5,10,2) 0-1 exact cover with proved first-row/first-column normalization, and constructive 9x10 2024 seed searches; all local exclusions are tools, never success.",
-  "last_experiment": "MOLS10-E060-FULL-FIVE-COORDINATE-OA-MILP-AND-SIX-ROW-ANCHORED-ENDGAME",
+  "next_action": "ON-DEMAND ONLY. Aim CLOSED by constructing any 2MOLS10 pair with eight disjoint common transversals and bipartite residual graph (or nine disjoint), or by unrestricted full 5-coordinate SAT/CDCL proof-carrying and full 12-cycle/162959 A/B orbit coverage. Avoid bounded local-neartriple polishing. Any claimed SAT must independent check 100/100/100; any UNSAT must independent proof and complete coverage.",
+  "current_hypothesis": "SOLE MISSION CLOSE 3-MOLS(10). Existence equivalently: any 2-MOLS(10) pair with 9 disjoint COMMON transversals, or with 8 disjoint COMMON transversals and bipartite residual 20-cell 4-resource graph. Alternatively SAT witness for complete 5-coordinate OA. Nonexistence requires unrestricted verified theorem or full proof-producing orbit coverage.",
+  "last_experiment": "MOLS10-E061-FULL-OA-DLX-TRANSVERSAL-BIPARTITE-CLOSURE-SEARCH",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549028462",
   "last_verified_results": [
@@ -133,7 +133,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-03T11:08:00Z",
+  "last_run_utc": "2026-11-03T11:51:21Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -166,10 +166,10 @@
     "research/mols10/E049_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "No 100/100/100 witness; no unrestricted proof; 0/162959 complete global A/B orbits excluded. Full order10 MILP UNKNOWN_BUDGET. 84 fixed sixrow 2024-source anchors excluded only. Independently replayed n4/n5 positive witnesses and 84 record metadata; 84 UNSAT statuses require running exhaustive Python code, not independent proof tree.",
+  "limitations": "E061 3-MOLS(10) OPEN, no valid complete witness or unrestricted theorem; all 12 cycle types order10 only UNKNOWN, zero orbit closures. 3.7M local trade states bounded to one historical neartriple and global symbol relabel quotient, not all Latin triples. Egan 7 disjoint pack is one fixed pair, not universal. E061 exact small-order algorithmic UNSAT results lack formal LRAT/DRAT certificates. No solution ETA.",
   "last_ci_result": "E048 strict pipefail GitHub Actions run 41549028462 SUCCESS, remote 1569 distinct prefixes x576=903744 row alignments identity-only, 2895 static intercalate subsets, 1 valid changed prefix with exact zero-support resource 595. First CI had masked assertion failure, audited and corrected.",
   "external_status_review": "2026-11-02 23:50 UTC: fresh primary arXiv 2503.10504v2 and 2605.02132v2 plus targeted November web/arXiv search; no independently checkable unrestricted solution found, absence of hits not proof.",
-  "current_math_result": "GLOBAL 3-MOLS(10) OPEN. Unrestricted normalized 5-coordinate exact-cover MILP: order4 SAT verified 16/16/16, order5 SAT verified 25/25/25; order10 41338 binary choices,1000 equalities,413380 incidences, solver UNKNOWN after configured 20s. Published 2024 single 9x10 source: all 36 anchored 7-row subsets and all 84 anchored 6-row subsets exhaustively unextendible, zero UNKNOWN. 84 anchored k6 yield 431 compatible seventh-row triples fully extended. This proves NOTHING about all six-row partials or global E033 f/g orbits; 0 globally closed.",
+  "current_math_result": "E061 GLOBAL OPEN: Exact 5-coordinate DLX n3 UNSAT, n4 SAT 16/16/16, n5 SAT 25/25/25, n6 UNSAT 200601 complete nodes; n10 1687552 nodes 15s UNKNOWN. All 12 canonical A second-row cycle types 1s each UNKNOWN; seven specific f=2^5,g=shift{k} branches UNKNOWN. New pair constructor n10 10 randomized seeded bounded cases UNKNOWN. Mathematical closure lemma and code: any order10 orthogonal A/B pair + 9 disjoint common transversals produces third square; 8 transversals plus bipartite residual graph on20 cells also sufficient and necessary for extension of that packing. Exact positive controls n4/5 PASS. Egan A/B pair has exactly 14 common transversals, maximum 7 disjoint. Exhaustive depth<=3 two-symbol cycle trade neighborhood from Egan 100/100/91 (3702370 search nodes) found no improvement; two whole row/column swaps 16110 cases no improvement. 0 globally closed symmetry orbits, no order10 solution.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -245,5 +245,7 @@
   "e059_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E059_REPORT.md",
   "e059_bundle_drive_url": "https://drive.google.com/file/d/16SUFsjuATbJVA8EdRLn-GjlaJXixTo8i/view",
   "e060_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E060_REPORT.md",
-  "e060_bundle_drive_url": "https://drive.google.com/file/d/19W7akbXPXctABdKK6dTjHlSFtpPjizAE/view"
+  "e060_bundle_drive_url": "https://drive.google.com/file/d/19W7akbXPXctABdKK6dTjHlSFtpPjizAE/view",
+  "e061_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E061_REPORT.md",
+  "e061_bundle_drive_url": "https://drive.google.com/file/d/1QmUWeCQM0-ou_6AzA-w6SnKTRAlFisCQ/view"
 }

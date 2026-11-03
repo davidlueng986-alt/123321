@@ -1,0 +1,22 @@
+name: MOLS10 E061 direct OA and transversal replay
+on:
+  workflow_dispatch:
+  push:
+    branches: [math-agent-mols10]
+    paths:
+      - 'research/mols10/E061_*'
+      - '.github/workflows/mols10-e061.yml'
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile and independently replay full-OA controls and closure gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd research/mols10
+          bash E061_replay.sh

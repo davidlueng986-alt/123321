@@ -1,0 +1,30 @@
+{
+  "trades": [
+    {
+      "square": 0,
+      "nontrivial_trades": 84,
+      "smallest_rows": 2,
+      "largest_rows": 8
+    },
+    {
+      "square": 1,
+      "nontrivial_trades": 60,
+      "smallest_rows": 2,
+      "largest_rows": 8
+    },
+    {
+      "square": 2,
+      "nontrivial_trades": 96,
+      "smallest_rows": 2,
+      "largest_rows": 8
+    }
+  ],
+  "tested_single_moves": 240,
+  "best_overlay_sum": 291,
+  "best_overlay": [
+    100,
+    100,
+    91
+  ],
+  "best_move": null
+}

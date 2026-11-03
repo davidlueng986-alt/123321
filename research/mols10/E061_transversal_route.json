@@ -1,0 +1,37 @@
+{
+  "criterion": "n-1 disjoint common transversals in an orthogonal Latin pair iff a complete triple exists; tenth is forced complement",
+  "controls": [
+    {
+      "n": 4,
+      "positive": true,
+      "supplied": 3,
+      "verified_complement": true,
+      "overlays": [
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "n": 5,
+      "positive": true,
+      "supplied": 4,
+      "verified_complement": true,
+      "overlays": [
+        25,
+        25,
+        25
+      ]
+    },
+    {
+      "n": 10,
+      "pair": "Egan-Wanless near triple A/B (2016)",
+      "common_transversals": 14,
+      "max_disjoint": 7,
+      "n_minus_1_needed": 9,
+      "closure": false,
+      "enumeration_nodes": 6837
+    }
+  ],
+  "global_order10_status": "OPEN"
+}

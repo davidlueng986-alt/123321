@@ -1,0 +1,27 @@
+{
+  "E061_exact_controls": "PASS",
+  "small_orders": [
+    [
+      3,
+      "UNSAT_EXHAUSTIVE"
+    ],
+    [
+      4,
+      "SAT"
+    ],
+    [
+      5,
+      "SAT"
+    ],
+    [
+      6,
+      "UNSAT_EXHAUSTIVE"
+    ]
+  ],
+  "full_n10_status": "UNKNOWN",
+  "12_canonical_cycle_types": "12/12 UNKNOWN",
+  "neartriple_cycle_trade_depth3": "NO_IMPROVEMENT",
+  "constructive_transversal_lemma": "PASS_n4_n5",
+  "Egan_pair_max_packing": 7,
+  "full_problem": "OPEN"
+}

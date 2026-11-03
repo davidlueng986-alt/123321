@@ -1,0 +1,112 @@
+[
+  {
+    "n": 10,
+    "status": "UNKNOWN_BUDGET",
+    "candidates": 5914,
+    "nodes": 1490944,
+    "branches": 1490943,
+    "dead_ends": 196679,
+    "maxdepth": 93,
+    "seconds": 1.5129,
+    "seed": 1
+  },
+  {
+    "n": 10,
+    "status": "UNKNOWN_BUDGET",
+    "candidates": 5914,
+    "nodes": 1458176,
+    "branches": 1458175,
+    "dead_ends": 192805,
+    "maxdepth": 94,
+    "seconds": 1.5094,
+    "seed": 3
+  },
+  {
+    "n": 10,
+    "status": "UNKNOWN_BUDGET",
+    "candidates": 5914,
+    "nodes": 1425408,
+    "branches": 1425407,
+    "dead_ends": 192397,
+    "maxdepth": 91,
+    "seconds": 1.5015,
+    "seed": 7
+  },
+  {
+    "n": 10,
+    "status": "UNKNOWN_BUDGET",
+    "candidates": 5914,
+    "nodes": 1409024,
+    "branches": 1409023,
+    "dead_ends": 187777,
+    "maxdepth": 92,
+    "seconds": 1.5163,
+    "seed": 11
+  },
+  {
+    "n": 10,
+    "status": "UNKNOWN_BUDGET",
+    "candidates": 5914,
+    "nodes": 1359872,
+    "branches": 1359871,
+    "dead_ends": 192721,
+    "maxdepth": 90,
+    "seconds": 1.5077,
+    "seed": 17
+  },
+  {
+    "n": 10,
+    "status": "UNKNOWN_BUDGET",
+    "candidates": 5914,
+    "nodes": 1327104,
+    "branches": 1327103,
+    "dead_ends": 173995,
+    "maxdepth": 93,
+    "seconds": 1.5026,
+    "seed": 101
+  },
+  {
+    "n": 10,
+    "status": "UNKNOWN_BUDGET",
+    "candidates": 5914,
+    "nodes": 1425408,
+    "branches": 1425407,
+    "dead_ends": 193605,
+    "maxdepth": 91,
+    "seconds": 1.5175,
+    "seed": 2026
+  },
+  {
+    "n": 10,
+    "status": "UNKNOWN_BUDGET",
+    "candidates": 5914,
+    "nodes": 1376256,
+    "branches": 1376255,
+    "dead_ends": 193038,
+    "maxdepth": 91,
+    "seconds": 1.5119,
+    "seed": 433
+  },
+  {
+    "n": 10,
+    "status": "UNKNOWN_BUDGET",
+    "candidates": 5914,
+    "nodes": 1409024,
+    "branches": 1409023,
+    "dead_ends": 187004,
+    "maxdepth": 91,
+    "seconds": 1.5032,
+    "seed": 1999
+  },
+  {
+    "n": 10,
+    "status": "UNKNOWN_BUDGET",
+    "candidates": 5914,
+    "nodes": 1425408,
+    "branches": 1425407,
+    "dead_ends": 195082,
+    "maxdepth": 92,
+    "seconds": 1.5026,
+    "seed": 421
+  }
+]

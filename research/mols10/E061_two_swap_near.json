@@ -1,0 +1,18 @@
+{
+  "source_overlay": [
+    100,
+    100,
+    91
+  ],
+  "moves_single": 180,
+  "moves_two_combinations": 16110,
+  "best_score": 291,
+  "best_overlays": [
+    100,
+    100,
+    91
+  ],
+  "moves": null,
+  "seconds": 0.484,
+  "scope": "two row/column swaps of B,C from one historical neartriple; Latin conditions automatically preserved; all swaps repeated twice restore source"
+}

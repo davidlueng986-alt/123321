@@ -1,0 +1,19 @@
+{
+  "base_overlay": [
+    100,
+    100,
+    91
+  ],
+  "first_trades": 240,
+  "two_trade_moves_checked": 57123,
+  "best_overlay_sum": 291,
+  "best_overlay": [
+    100,
+    100,
+    91
+  ],
+  "best_moves": null,
+  "improvements_beyond_291": 0,
+  "seconds": 1.782,
+  "scope": "all ordered two-symbol cycle trades from Egan Wanless 100/100/91 original near triple, second trade enumerated in resulting Latin square; 3 Latin conditions preserved by each move"
+}
