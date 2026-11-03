@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "Only objective exact r3(7). CAP046B manual CLOSED attack: used actual Z3 237 root H00 SAT solver (95s hard wall, UNKNOWN), 112-point 6D hyperplane complete conditional branch Z3 (65s hard wall, UNKNOWN), independent H00 full MILP (65s hard wall, UNKNOWN), and 1,544,404 distinct invertible relative GL6 matrices (seed2026110302, 0 third-hole>=13); no >=237 witness. These are direct search runs, no new bound. Hourly automation disabled. Preserve concurrent CAP046 efforts, no new schedule.",
-  "next_experiment": "NO_AUTOMATION. Only on explicit request: proof-producing, independently checkable full-root SAT/CP proof on complete 10-way coverage, or independent verified ≥237 construction followed by matching rigorous global upper bound. Do not schedule hourly checks or claim timeouts/negative samples prove r3(7)=236.",
-  "last_run_id": "CAP046B_MANUAL_OPEN_TO_CLOSED_CPU_2026-11-03",
-  "last_run_result": "OPEN; Z3_H00_TIMEOUT95; Z3_MAX112_TIMEOUT65; HIGHS_H00_TIMEOUT65; 1_544_404_DISTINCT_GL6_NO_13_HOLES; NO_NEW_WITNESS_OR_BOUND",
+  "current_hypothesis": "Only accepted goal: close exact r3(7). Manual root attempt verified 236 cap, searched five batches totaling 18M relative GL6 trial matrices (17,797,340 sum of per-run distinct, not deduped across runs) safely filtered with preexisting CAP025 Fourier identity (177,872 full convolutions; max12 third-slice holes, no 237); 6M exact-cardinality 237-point exchange attempts found best10 violating lines, not zero; integer 287 direction histogram satisfies aggregate S2/S3 necessary moments, proving such moments alone insufficient for <=286. None is global 237 or upper bound. Hourly CAPSET automation remains disabled.",
+  "next_experiment": "NO RECURRING AUTOMATION. On explicit request only: independently verifiable proof-producing SAT of ALL globally complete >=237 branches, a rigorous new pointwise global theorem, or a genuinely nonlocal >=237 construction with matching upper bound. Do not treat a 112+112 relative-matrix sample, or a formal 287 histogram, as an actual cap/upper-bound proof.",
+  "last_run_id": "MANUAL_ROOT_CLOSED_ATTEMPT_18M_SPECTRAL_AND_287_BARRIER_2026-11-03",
+  "last_run_result": "ROOT_OPEN; FOURIER_PRUNED_18M_TRIALS_MAX12_NO237; ANNEAL_6M_BEST10_CONFLICTS_NO237; FORMAL_287_MOMENT_HISTOGRAM_FEASIBLE_NOT_A_CAP",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -117,7 +117,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-03T14:41:57.221Z",
+  "last_updated_utc": "2026-11-03T15:24:17.655Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1862,5 +1862,64 @@
     "report": "research/capset_f3_7/CAP046B_FULL_CLOSED_CPU_RUN_2026-11-03.md",
     "literature_novelty_claimed": false,
     "sat_proof_checked": false
+  },
+  "closed_only_manual_18m_2026_11_03": {
+    "status": "OPEN",
+    "automated_hourly_research_enabled": false,
+    "goal": "Exact r3(7) with matching independently verified lower/upper bounds",
+    "construction": {
+      "family": "112+112+third by invertible 6x6 relative matrices",
+      "seeds": [
+        2026110308,
+        2026110311,
+        2026110312,
+        2026110313,
+        2026110314
+      ],
+      "trials": 18000000,
+      "sum_per_run_distinct_matrices": 17797340,
+      "globally_deduplicated": false,
+      "full_hole_evaluations": 177872,
+      "maximum_holes": 12,
+      "candidates_with_13_or_more_holes": 0,
+      "fourier_pruning": "CAP025 existing exact selfdual Fourier identity: if t=|S∩M*T| is 1..31, no third-slice holes; if t=0, only zero possibly open",
+      "new_cap_237": false,
+      "complete_Gl6_coverage": false
+    },
+    "fixed237_nearcap": {
+      "seed": 2026110309,
+      "annealed_swaps": 6000000,
+      "best_forbidden_triples": 10,
+      "independent_direct_score_checks": true,
+      "witness_237": false
+    },
+    "aggregate_moments": {
+      "M": 287,
+      "direction_counts": {
+        "112,109,66": 132,
+        "112,88,87": 2,
+        "99,97,91": 45,
+        "99,96,92": 164,
+        "97,96,94": 1,
+        "96,96,95": 749
+      },
+      "S2": 30191539,
+      "S3": 2920545005,
+      "feasible_is_real_cap": false,
+      "cannot_improve_bound_using_only_these_constraints": true
+    },
+    "error_corrections": [
+      "25M oversized run external timeout, not included in totals",
+      "M287 residue-taxonomy scratch error corrected",
+      "portable script build std::ifstream qualifier corrected and smoke-tested"
+    ],
+    "repository_commit": "360c3dbdd3d7037780b8beae45e48004c8807242",
+    "github_report": "research/capset_f3_7/closed_attempts/manual_2026_11_03/MANUAL_CLOSED_ATTEMPT_2026-11-03.md",
+    "drive_zip_url": "https://drive.google.com/file/d/1HmRyzpxzEGvokDo6wanAjssloeVwgHwN/view?usp=drivesdk",
+    "drive_zip_sha256": "e5d3d6c6f676b145e33c1e3133f9312a462ab8e4493db3c56aed4f9b3bd8eea4",
+    "success": false,
+    "global_bound_improved": false,
+    "new_verified_lower_bound": null,
+    "ci_status": "PENDING"
   }
 }
