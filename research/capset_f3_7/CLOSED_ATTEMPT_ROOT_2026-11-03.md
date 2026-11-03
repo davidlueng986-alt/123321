@@ -68,3 +68,19 @@ Next serious closed attempt, only when requested: a scalable proof-producing SAT
 - As of 2026-10-03, public status remained OPEN with 236 <= r3(7) <=291: https://cairn-commons.com/problems/cap-sets-dim-7
 - Thackeray 2022 preprint arXiv:2206.09804 claims <=288, not independently reviewed in this campaign; CAP019 provisional <=287 is also not independently refereed.
 - FunSearch high-dimensional program search, Nature 2024, is a construction-search precedent, but no exact r3(7) closure was found.
+
+## Further actual unrestricted 7D construction attempt: 15,000 nonlocal destroy–repair runs
+
+To avoid overfitting the rigid 112+112 split, a separate C++17 builder explicitly maintained arbitrary cap sets in the FULL 2187-point F3^7 geometry. Starting from the independently validated classical 236 cap, each trial removed 70–195 random existing points and greedily reinserted any unblocked point using randomized candidate-pair interaction scores. The algorithm did **not** require preserving any 112-slice/fiber occupancy, special automorphism or fixed relative GL6 alignment; each step maintained no3AP by exact incremental third-point counts.
+
+Seed=20261105, **15000 full long-range destroy–repair trials**, ~15.61 CPU seconds. Best cap size remained **236**, no >=237 witness. 7122 trial reconstructions returned to size236; other results typically below236. This is a randomized constructive attempt, not a complete search or upper bound; the fact that many trials reassemble the original witness is evidence of a strong local basin for this heuristic, not evidence of universal optimality.
+
+Additional runnable source and raw complete log uploaded to the same dedicated Drive folder:
+- C++17: https://drive.google.com/file/d/1wx1SuOhRq-V2MfmKHhNh_afzXiyIvy3i/view?usp=drivesdk
+- 15000-trial raw log: https://drive.google.com/file/d/1wyhzxvopruCFzXcS1dN6XXyEI9SyeBhG/view?usp=drivesdk
+
+Compile `g++ -O3 -std=c++17 cap_close_destroy_repair.cpp -o cap_close_destroy_repair`; run `./cap_close_destroy_repair 15000 20261105`.
+
+### Concurrency reconciliation with CAP-046
+
+While this run was active, another in-flight CAP-046 agent committed independent, root-relevant full 237-cap MILP and affine-union constructor attempts. See `CAP046_CLOSED_ATTEMPT_2026-11-03.md`; preserve them. Its SciPy HiGHS global 796797-line feasibility model timed out without SAT/UNSAT, and some restricted 236+affine-image union MILPs reported local infeasibility/feasibility diagnostics, none proving a global bound. It also produced an exact formal integer countermodel showing aggregate moment+quadratic-spectrum conditions alone do not force a 90-point hyperplane. These are complementary to the native-Z3 and long-range GL6/direct cap attempts here. **No 237 witness or matching bound was found in any of these contemporaneous attempts.** User-requested hourly automation remains disabled; no task restart.
