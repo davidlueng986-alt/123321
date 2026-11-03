@@ -485,3 +485,9 @@ ROOT question: determine exact r3(7). Given verified 236, proving no 237-cap wou
 - [DONE LOCAL] Independent barycentric 701/10-orbit regression; no new bound, SAT still UNKNOWN. See CAP044 report.
 - [P0] Stop census-only iterations. Run bounded proof-logged CPU SAT on a complete root leaf; verify SAT witness or UNSAT proof independently. Timeout=UNKNOWN.
 - [P1] CAP019 external classification referee and >=237 search. Keep exact objective and branch isolation.
+
+## CAP-045 (2026-11-03 UTC)
+- [DONE / DEDUCTIVE] Independent elementary proof of k-disjoint-secant completion lemma; removes need to assume 110-cap completion uniqueness in CAP019. Conditional on Thackeray's 110 embedding and CAP010A k>=10 secant property; not a new verified <=287 bound.
+- [P0] Independently inspect Thackeray 2022 classification proof and CAP010A k>=10 proof/CI, then separately referee CAP017B Fourier and common-tangent double count. Avoid promoting conditional theorem to unconditional bound.
+- [P0 / BLOCKER] Local CPU runtime has no installed proof-logging SAT solver; pip python-sat install failed. Obtain a permitted available solver/checker before claiming any root leaf SAT/UNSAT; all 10 UNKNOWN. Do not replace proof with timeout/heuristic.
+- [P1] Nonlocal >=237 construction; exact r3(7) OPEN. CAP044 Actions #41639554296 SUCCESS.
