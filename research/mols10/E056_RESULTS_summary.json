@@ -1,0 +1,48 @@
+{
+  "status": "fixed-prefix only",
+  "source_sha256": "b27b2d81946aa1c1e5c3bd2a7a350e0060c7049d8751d0bb670f8bd105223b52",
+  "results": [
+    {
+      "index": 0,
+      "optimal_nonzero": 249,
+      "nodes": 47,
+      "prunes": 184
+    },
+    {
+      "index": 1,
+      "optimal_nonzero": 261,
+      "nodes": 50,
+      "prunes": 226
+    },
+    {
+      "index": 2,
+      "optimal_nonzero": 261,
+      "nodes": 8,
+      "prunes": 184
+    },
+    {
+      "index": 3,
+      "optimal_nonzero": 258,
+      "nodes": 10,
+      "prunes": 274
+    },
+    {
+      "index": 4,
+      "optimal_nonzero": 256,
+      "nodes": 6,
+      "prunes": 192
+    },
+    {
+      "index": 5,
+      "optimal_nonzero": 255,
+      "nodes": 126,
+      "prunes": 1712
+    },
+    {
+      "index": 6,
+      "optimal_nonzero": 259,
+      "nodes": 46,
+      "prunes": 148
+    }
+  ]
+}
