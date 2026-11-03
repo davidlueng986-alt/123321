@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP034: the CAP027 formal285 unique intersecting (7,6,6) and (7,7,4) quotient lines are simultaneously point-level realizable on their five fibers (explicit 30-point cap). Two-line contradiction strategy falsified; require connecting fibers/full shared-variable SAT.",
-  "next_experiment": "Check CAP034 CI; extend fixed occupancy to a connecting quotient line / full 81-fiber proof-logged SAT, independent proof or witness check; continue CAP019 referee and >=237 construction.",
-  "last_run_id": "CAP-034-TWO-LINE-GLUE-2026-11-03",
-  "last_run_result": "EXPLICIT_30_POINT_LOCAL_WITNESS_CPU_PASS_CI_PENDING",
+  "current_hypothesis": "CAP035: full shared-variable point-level CNF and conditional CAP027 formal-285 exact fiber counts constructed; solver status UNKNOWN.",
+  "next_experiment": "Check CAP035 CI; CPU-bounded proof-logged SAT pilot and independently verify any result. Continue CAP019 classification referee and balanced/no-112, >=237 searches.",
+  "last_run_id": "CAP-035-SHARED-FIBER-CNF-2026-11-03",
+  "last_run_result": "LOCAL_CPU_CNF_ARITHMETIC_PASS_SOLVER_NOT_RUN_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -83,7 +83,8 @@
     "CAP-032B-LOCAL",
     "CAP-032C-LOCAL",
     "CAP-033-LOCAL",
-    "CAP-034-LOCAL"
+    "CAP-034-LOCAL",
+    "CAP-035-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549413947",
   "baseline_secant_audit": {
@@ -105,7 +106,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-03T04:49:00Z",
+  "last_updated_utc": "2026-11-03T05:56:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
