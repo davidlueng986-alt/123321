@@ -1,0 +1,20 @@
+name: MOLS10 E059 exact witness and endgame replay
+on:
+  push:
+    branches: [math-agent-mols10]
+    paths:
+      - 'research/mols10/E059_*'
+      - '.github/workflows/mols10-e059.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independent exact JavaScript replay
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd research/mols10
+          node E059_verify_independent.js
+          node E059_verify_endgame.js

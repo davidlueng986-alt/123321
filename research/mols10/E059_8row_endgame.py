@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from pathlib import Path
 """Exact 8-row endgame: enumerate all Latin ways to add the last two rows
 in each square independently, then test the 3 orthogonality overlays.
 Each square's missing-symbol bipartite graph on 10 columns and 10 symbols
@@ -7,7 +8,7 @@ Source partial arrays: Jäger et al EJC 2024 Fig. 3, attributed.
 Scope only specified 8-row subrectangles of this one 9-row witness.
 """
 import itertools,json,collections,time
-S=json.load(open('/mnt/data/e059/E059_2024_9x10_analysed.json'))['published_9x10_rectangles']
+S=json.load(open(str(Path(__file__).with_name('E059_2024_9x10_analysed.json'))))['published_9x10_rectangles']
 n=10;P=((0,1),(0,2),(1,2))
 def latin_completions(A):
  assert len(A)==n-2
@@ -66,5 +67,5 @@ summary={'status':'COMPLETE_WITNESS_FOUND' if best else 'ALL_NINE_ANCHORED_8_ROW
          'results':out,'elapsed':round(time.monotonic()-t0,3),
          'any_full_witness':best,
          'scope':'ONLY 9 overlapping eight-row restrictions of a single 2024 published 9x10 example; not unrestricted 3MOLS10'}
-json.dump(summary,open('/mnt/data/e059/E059_8ROW_ENDGAME.json','w'),indent=2)
+json.dump(summary,open(str(Path(__file__).with_name('E059_8ROW_ENDGAME.json')),'w'),indent=2)
 print('SUMMARY',json.dumps({k:v for k,v in summary.items() if k not in ('results','any_full_witness')},indent=2))

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from pathlib import Path
 """Goal-backward: exact symmetry quotient for cyclic k-row 3-OLS Latin rectangles.
 Each square S_s(r,c)=(c+o_s[r]) mod n, row0 offsets all 0.
 For valid partial overlays the six offset/difference sets each have k distinct values.
@@ -84,4 +85,4 @@ if __name__=='__main__':
   else:stats['unknown']+=1
  stats['seconds']=round(time.monotonic()-t0,4)
  print(json.dumps(stats,indent=2))
- with open('/mnt/data/e059/E059_cyclic_result.json','w') as f:json.dump(stats,f,indent=2)
+ with open(str(Path(__file__).with_name('E059_cyclic_result.json')),'w') as f:json.dump(stats,f,indent=2)

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from pathlib import Path
 """Goal-backward: refute even the stronger universal k4 INTEGRAL
 column-aware residual obstruction using four disjoint common transversals
 of Egan-Wanless order-10 MOLS A,B. Independently check 360 exact equations.
@@ -84,4 +85,4 @@ out={'status':'EXACT_INTEGRAL_K4_RESIDUAL_COUNTEREXAMPLE','source':'Egan-Wanless
      'prefix':S,'remaining_integer_placements':remaining,'verified_exact_constraints':360,
      'scope':'Refutes universal four-row INTEGER column-aware residual infeasibility, NOT full 3-MOLS(10)'}
 print(json.dumps({k:v for k,v in out.items() if k not in ('A','B','four_transversals','prefix','remaining_integer_placements')},indent=2),flush=True)
-with open('/mnt/data/e059/E059_INTEGRAL_PRIMAL_WITNESS.json','w') as f:json.dump(out,f,indent=2)
+with open(str(Path(__file__).with_name('E059_INTEGRAL_PRIMAL_WITNESS.json')),'w') as f:json.dump(out,f,indent=2)

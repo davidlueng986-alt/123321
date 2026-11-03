@@ -37,10 +37,10 @@ function verifyFractional(path){const z=JSON.parse(fs.readFileSync(path,'utf8'))
  check(m.size===r.size,'missing resources');for(const key of r)check(m.get(key)===2,'resource not exact half-half '+key);
  return {k:4,orbits:z.weights.length,nonzero_placements:10*z.weights.length,resources:r.size,status:'PASS'};
 }
-const files=['/mnt/data/e059/E059_PRIMAL_WITNESS.json','/mnt/data/e059/E059_INTEGRAL_PRIMAL_WITNESS.json','/mnt/data/e059/E059_INTEGRAL_K7_WITNESS.json'];
+const files=[(__dirname+'/E059_PRIMAL_WITNESS.json'),(__dirname+'/E059_INTEGRAL_PRIMAL_WITNESS.json'),(__dirname+'/E059_INTEGRAL_K7_WITNESS.json')];
 const checked=[verifyFractional(files[0]),verifyIntegral(files[1]),verifyIntegral(files[2])];
 // Deliberate corruption test: remove one integer placement and make sure checker rejects.
-const bad=JSON.parse(fs.readFileSync(files[2],'utf8'));bad.remaining_integer_placements.pop();const badpath='/mnt/data/e059/E059_DELIBERATE_BAD_WITNESS.json';fs.writeFileSync(badpath,JSON.stringify(bad));
+const bad=JSON.parse(fs.readFileSync(files[2],'utf8'));bad.remaining_integer_placements.pop();const badpath=(__dirname+'/E059_DELIBERATE_BAD_WITNESS.json');fs.writeFileSync(badpath,JSON.stringify(bad));
 let mutationRejected=false;try{verifyIntegral(badpath)}catch(e){mutationRejected=true}
 check(mutationRejected,'negative mutation not rejected');
 console.log(JSON.stringify({status:'INDEPENDENT_EXACT_ALL_PASS',controls:checked,mutationRejected:true}));

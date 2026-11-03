@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-'use strict'; const fs=require('fs');const d=JSON.parse(fs.readFileSync('/mnt/data/e059/E059_2024_9x10_analysed.json'));const original=d.published_9x10_rectangles;
+'use strict'; const fs=require('fs');const d=JSON.parse(fs.readFileSync((__dirname+'/E059_2024_9x10_analysed.json')));const original=d.published_9x10_rectangles;
 const P=[[0,1],[0,2],[1,2]],n=10;
 function check(cond,m){if(!cond)throw Error(m)}
 function ways(A){let missing=[];for(let c=0;c<n;c++){let seen=new Set(A.map(row=>row[c])),m=[];for(let v=0;v<n;v++)if(!seen.has(v))m.push(v);check(m.length===2,'not eight rows');missing.push(m)}
