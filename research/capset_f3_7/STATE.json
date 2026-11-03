@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP-032B: Any AG4 cap with two parallel 3D sections of size >=7 has third <=4; exact high-density slice table sizes6..9 from independent Python/C++ exhaustive AGL3 orbit checks. CAP027 285-point formal count-only model still satisfies every 1080 quotient-line cut. Need multi-line shared-fiber point-level constraints, not only occupancy.",
-  "next_experiment": "Confirm CAP-032B full CI; build shared-fiber two-quotient-line compatible point-level SAT, independently verify SAT/UNSAT artifacts; hostile audit Thackeray 110-classification and CAP019 <=287 provisional; maintain no-112 and >=237 construction.",
-  "last_run_id": "CAP-032B-UNIVERSAL-4D-HIGH-DENSITY-SLICE-2026-11-03",
-  "last_run_result": "LOCAL_INDEPENDENT_COMPLETE_PY_CPP_EXACT_CI_PENDING",
+  "current_hypothesis": "CAP-032B/C universal high-density AG4 geometry: 7+7 forces third <=4, and 7+6+6 forces the 7-fiber to the unique non-9-extendable 7-cap affine orbit (size50544). Use SHARED point-level fiber types across quotient lines; CAP027 285 count-only model still survives all local counts. No global numeric bound.",
+  "next_experiment": "Confirm CAP032B/C Actions on final code-containing SHA, then proof-logged SAT for CAP027 fixed formal285 occupancy with consistent 81 shared fibers and orbit-type restrictions; check Thackeray 110-classification for CAP019 provisional <=287 and pursue balanced/no-112 and >=237 cap.",
+  "last_run_id": "CAP-032C-UNIVERSAL-766-ORBIT-TYPE-2026-11-03",
+  "last_run_result": "LOCAL_INDEPENDENT_EXHAUSTIVE_107406_SIXCAPS_X_TWO_7ORBITS_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -80,7 +80,8 @@
     "CAP-030",
     "CAP-031",
     "CAP-032-ANALYTIC",
-    "CAP-032B-LOCAL"
+    "CAP-032B-LOCAL",
+    "CAP-032C-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549413947",
   "baseline_secant_audit": {
@@ -102,7 +103,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-03T02:54:14.969Z",
+  "last_updated_utc": "2026-11-03T03:00:19.042Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1467,5 +1468,33 @@
     "global_bound_improved": false,
     "novelty_established": false,
     "report": "research/capset_f3_7/CAP032B_UNIVERSAL_4D_HIGH_FIBER_PROFILE_2026-11-03.md"
+  },
+  "cap032c_766_orbit_type": {
+    "scope": "Any AG4 cap with three parallel 3D slices of counts7,6,6",
+    "seven_caps_orbit_sizes": [
+      50544,
+      75816
+    ],
+    "first_orbit_mask": 5659,
+    "second_orbit_mask": 17947,
+    "six_caps_enumerated": 107406,
+    "valid_sixcap_second_choices": [
+      27,
+      0
+    ],
+    "valid_sixcap_third_pairs": [
+      27,
+      0
+    ],
+    "nine_cap_completions_of_first_7cap": [
+      0,
+      1
+    ],
+    "forcing": "the 7-fiber is non-9-extendable",
+    "sharp_19cap_witness_verified": true,
+    "status": "LOCAL_EXACT_CI_PENDING",
+    "global_bound_improved": false,
+    "novelty_established": false,
+    "report": "research/capset_f3_7/CAP032C_766_ORBIT_TYPE_CONSTRAINT_2026-11-03.md"
   }
 }
