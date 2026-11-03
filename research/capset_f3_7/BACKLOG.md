@@ -514,3 +514,9 @@ ROOT question: determine exact r3(7). Given verified 236, proving no 237-cap wou
 - [P0] New genuinely nonlocal 237 construction method not restricted to known 236 or two112 slices; independently validate every candidate in F3^7, and continue to matching upper if found.
 - [P0] Mathematical avenue: classification of two112-slice interaction up to GL6 double cosets, not further random sampling, **but only a conditional subtree**; global no-112 branch must remain open.
 - [DURABLE] Github closed_attempts/manual_2026_11_03 contains portable source/report; Google Drive canonical ZIP https://drive.google.com/file/d/1HmRyzpxzEGvokDo6wanAjssloeVwgHwN/view?usp=drivesdk SHA256 e5d3d6c6f676b145e33c1e3133f9312a462ab8e4493db3c56aed4f9b3bd8eea4. Root OPEN. No further automatic runs.
+
+## CAP047/CAP048 manual CLOSED attempt (2026-11-03T15:33:12.274Z) — no recurring research
+- [EXACT / ROOT OPEN] Existing CAP025 112-cap spectrum yields rigorous t=0/0<t<32 pruning in relative 112+112 pair family. This is a conditional constructive branch and not global; do NOT re-report as novel.
+- [REFUTED] Arbitrary 32-point antipodal subcap C⊂112 cap can avoid FOURTEEN nonzero normals, disproving naive <=12 avoidance bound. Correct next necessary subproblem: characterize **realizable** intersections K=S∩M^{-T}T0 and exclude 13-hole configurations using FULL pair structure, not just K being a subcap.
+- [NONLOCAL NEGATIVE] Rebuilt existing FunSearch 8D 512 cap; all 3280 projective directions / 9840 affine hyperplanes have max 7D cap size208. This specific reduction cannot produce >=237; don't repeat the same source/operation.
+- [PRIMARY GOAL] Exact r3(7) still OPEN. Only accept valid >=237 point list (which only disproves236 equality) + matching certified upper bound, or independently checked UNSAT for complete global237 proof coverage. No hourly automations; user's manual triggers only. No more pure verifier-only cycles.

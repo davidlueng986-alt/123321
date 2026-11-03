@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "Only accepted goal: close exact r3(7). Manual root attempt verified 236 cap, searched five batches totaling 18M relative GL6 trial matrices (17,797,340 sum of per-run distinct, not deduped across runs) safely filtered with preexisting CAP025 Fourier identity (177,872 full convolutions; max12 third-slice holes, no 237); 6M exact-cardinality 237-point exchange attempts found best10 violating lines, not zero; integer 287 direction histogram satisfies aggregate S2/S3 necessary moments, proving such moments alone insufficient for <=286. None is global 237 or upper bound. Hourly CAPSET automation remains disabled.",
-  "next_experiment": "NO RECURRING AUTOMATION. On explicit request only: independently verifiable proof-producing SAT of ALL globally complete >=237 branches, a rigorous new pointwise global theorem, or a genuinely nonlocal >=237 construction with matching upper bound. Do not treat a 112+112 relative-matrix sample, or a formal 287 histogram, as an actual cap/upper-bound proof.",
-  "last_run_id": "MANUAL_ROOT_CLOSED_ATTEMPT_18M_SPECTRAL_AND_287_BARRIER_2026-11-03",
-  "last_run_result": "ROOT_OPEN; FOURIER_PRUNED_18M_TRIALS_MAX12_NO237; ANNEAL_6M_BEST10_CONFLICTS_NO237; FORMAL_287_MOMENT_HISTOGRAM_FEASIBLE_NOT_A_CAP",
+  "current_hypothesis": "Closed-only manual research: exact 112-cap Games-graph spectrum is classical (already CAP025), and implies all relative two 112-cap pairs with dual intersection t=0 have 1 hole; 0<t<32 have zero holes. At t=32 simplistic arbitrary 32-subcap normal-avoid<=12 assertion is FALSE (explicit antipodal C32 with 14 avoiding nonzero normals); must use realizable intersection. Independently reconstructed public FunSearch 8D512 cap and exhaustively checked all 3280 projective directions/9840 affine hyperplanes; max7D section208, no >=237 via this exact source/operation. Open root unchanged; hourly disabled.",
+  "next_experiment": "No automatic research. If explicitly requested: classify realizable dual intersections S∩M^(-T)T0 for t>=32 (112+112 conditional construction only), OR a genuinely new full-global 237 cap solver with independent UNSAT cert/witness. Avoid repeated random GL6 and false arbitrary-C32 <=12 proof. Existing concurrent 18M GL6 and fixed-cardinality annealing runs are kept separate.",
+  "last_run_id": "CAP047_CAP048_MANUAL_SPECTRAL_ADVERSARIAL_NONLOCAL-2026-11-03",
+  "last_run_result": "ROOT_OPEN; CAP025_112_SPECTRAL_IDENTITY_REPLAYED; T_LT32_PROVEN_EXCLUDED_FOR_112_PLUS112; FALSE_GENERIC_C32_LEMMA_DISPROVEN_BY_14_NORMALS; FUNSEARCH_8D512_ALL3280_HYPERPLANES_MAX208; NO_237",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -95,7 +95,9 @@
     "CAP-043-LOCAL",
     "CAP-044-LOCAL",
     "CAP-045-DEDUCTIVE",
-    "CAP-046-ATTEMPT"
+    "CAP-046-ATTEMPT",
+    "CAP047_SPECTRAL_ADVERSARIAL",
+    "CAP048_FUNSEARCH512_HYPERPLANE"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41639554296",
   "baseline_secant_audit": {
@@ -117,7 +119,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-03T15:24:17.655Z",
+  "last_updated_utc": "2026-11-03T15:33:12.274Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1921,5 +1923,38 @@
     "global_bound_improved": false,
     "new_verified_lower_bound": null,
     "ci_status": "PENDING"
+  },
+  "cap047_048_manual": {
+    "scope": "112+112+13 conditional construction spectral gate + independent FunSearch8D→7D cap attempt",
+    "global_bound_improved": false,
+    "global_r3_7_closed": false,
+    "observed_237": false,
+    "ci_status": "PENDING",
+    "novelty_established": false,
+    "spectral_formula_preexisting_project_CAP025": true,
+    "dual_intersection_small_t_gate": "t=0 -> exactly1 hole; 0<t<32 ->0 holes, all exact",
+    "counterexample_to_unsound_subcap_lemma": {
+      "size": 32,
+      "antipodal_pairs": 16,
+      "avoiding_nonzero_normals": 14,
+      "point_list_in": "research/capset_f3_7/cap047_spectral_112.py",
+      "inference": "C32 arbitrary subset of S does not imply at most12 avoiding normals; realized intersection stronger"
+    },
+    "nonlocal_funsearch8d": {
+      "source": "google-deepmind/funsearch cap_set.ipynb",
+      "independently_checked_cap_size": 512,
+      "pairs_checked": 130816,
+      "projective_8d_normals_checked": 3280,
+      "affine_7d_hyperplanes_checked": 9840,
+      "maximum_7d_slice": 208,
+      "max_attaining_projective_directions": 8,
+      "no_237_by_this_specific_hyperplane_operation": true
+    },
+    "drive_bundle_id": "1BKgGLkVOhv71PujejPpFDHxoHnGu196C",
+    "report_files": [
+      "research/capset_f3_7/CAP047_SPECTRAL_ADVERSARIAL_2026-11-03.md",
+      "research/capset_f3_7/CAP048_FUNSEARCH_HYPERPLANE_2026-11-03.md"
+    ],
+    "automation_enabled": false
   }
 }
