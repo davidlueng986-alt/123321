@@ -427,3 +427,8 @@ GitHub Actions https://github.com/davidlueng986-alt/123321/actions/runs/41415696
 
 ## 2026-11-03 00:55 UTC | CAP-030 point-level cross-fiber midpoint constraint
 Verified exact algebra A_k ∩ {-a-b:a∈A_i,b∈A_j}=∅ on quotient lines; CAP028 repaired 4D witnesses midpoint image cardinalities (7,7,4): [23,19,19], (7,6,6): [20,19,20]. 7+7 first two fibers of explicit witness exclude 23/27 third-fiber sites, leaving exactly four. This is not a universal bound, not a 7D construction, and not a new global upper bound. Added stdlib Python regression + invalid insertion negative control and CAP030 report; CI pending. Next shared-fiber SAT. No GPU/paid compute/seed. Exact r3(7) OPEN.
+
+## 2026-11-03 ~01:55 UTC | CAP-031 exact shared-fiber factorization
+- Read dedicated Drive ledger/folder and GitHub STATE/LOG/BACKLOG, commits and Actions; CAP030 CI 41556385711 SUCCESS at 4a29329f. Independent local Python exact quotient-line enumeration: 1080 quotient lines, 9477 internal and 787320 cross-fiber 3APs, total 796797; direct ambient count agrees. No randomness, GPU or paid compute.
+- Created cap031_factorization.py and CAP031_SHARED_FIBER_EXACT_FACTORIZATION_2026-11-03.md. This is an exact shared-variable SAT formulation, NOT an executed SAT/UNSAT solve, NOT a 285 cap, NOT a global bound. Novelty unestablished.
+- Next: fixed CAP027 occupancy PB+CNF bounded proof-logged SAT, independent certificate; Thackeray referee and balanced/no-111. r3(7) OPEN.
