@@ -1,0 +1,313 @@
+{
+  "schema": "capset-f3-7-root-proof-dag-v1",
+  "date_utc": "2026-11-03",
+  "root_statement": "r3(7)=236",
+  "status": "OPEN",
+  "known_lower_bound": 236,
+  "known_lower_bound_witness": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
+  "global_upper_bound_independently_new": false,
+  "proof_disjunction": {
+    "construction_path": "Independently verify >=237 cap, then still solve exact maximum using a matching global upper bound.",
+    "upper_path": "Independently verify UNSAT of a complete target-237 model OR all leaves of one sound exhaustive cover, combined with known 236 witness.",
+    "requirements": [
+      "r3(6)=112",
+      "r3(5)=45 for dense-H affine span",
+      "CAP007J >=89 6D hyperplane lemma",
+      "Global forbidden 3AP clauses and at-least237 cardinality counter",
+      "Independent SAT witness or independently checked UNSAT proof per leaf"
+    ]
+  },
+  "model_A": {
+    "description": "8 frame points plus 13 ninth-point S8 orbits",
+    "cover_soundness": "All >=237 caps affinely span 7D and have a ninth point; S8 permutes barycentric coordinates of 8 simplex vertices.",
+    "candidate_ninth_points": 2151,
+    "tenth_orbit_classes": 1211,
+    "branches": [
+      {
+        "id": "A00",
+        "barycentric_counts": [
+          0,
+          0,
+          8
+        ],
+        "orbit_size": 1,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "A01",
+        "barycentric_counts": [
+          0,
+          3,
+          5
+        ],
+        "orbit_size": 56,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "A02",
+        "barycentric_counts": [
+          0,
+          6,
+          2
+        ],
+        "orbit_size": 28,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "A03",
+        "barycentric_counts": [
+          1,
+          1,
+          6
+        ],
+        "orbit_size": 56,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "A04",
+        "barycentric_counts": [
+          1,
+          4,
+          3
+        ],
+        "orbit_size": 280,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "A05",
+        "barycentric_counts": [
+          1,
+          7,
+          0
+        ],
+        "orbit_size": 8,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "A06",
+        "barycentric_counts": [
+          2,
+          2,
+          4
+        ],
+        "orbit_size": 420,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "A07",
+        "barycentric_counts": [
+          2,
+          5,
+          1
+        ],
+        "orbit_size": 168,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "A08",
+        "barycentric_counts": [
+          3,
+          0,
+          5
+        ],
+        "orbit_size": 56,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "A09",
+        "barycentric_counts": [
+          3,
+          3,
+          2
+        ],
+        "orbit_size": 560,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "A10",
+        "barycentric_counts": [
+          4,
+          1,
+          3
+        ],
+        "orbit_size": 280,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "A11",
+        "barycentric_counts": [
+          4,
+          4,
+          0
+        ],
+        "orbit_size": 70,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "A12",
+        "barycentric_counts": [
+          5,
+          2,
+          1
+        ],
+        "orbit_size": 168,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      }
+    ]
+  },
+  "model_H": {
+    "description": ">=89 dense hyperplane via CAP007J, 7 frame points inside H and one outside, 10 ninth-point S7 orbits inside H",
+    "moment_gate_total": -35076,
+    "anchored_hyperplane_minimum": 89,
+    "full_S7_types": 36,
+    "allowed_S7_types_anywhere": 32,
+    "canonical_ninth_inside_H_points": 701,
+    "cnf_base_variables": 553505,
+    "cnf_base_clauses": 1896555,
+    "cnf_base_sha256": "c45a3e74e885b070ab0bc7a4a0d71cdc976dd1c17b442bfd7fedca665e9e37be",
+    "branches": [
+      {
+        "id": "H00",
+        "barycentric_hyperplane_tag": [
+          0,
+          0,
+          1,
+          6
+        ],
+        "orbit_size": 7,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "H01",
+        "barycentric_hyperplane_tag": [
+          0,
+          0,
+          4,
+          3
+        ],
+        "orbit_size": 35,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "H02",
+        "barycentric_hyperplane_tag": [
+          0,
+          0,
+          7,
+          0
+        ],
+        "orbit_size": 1,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "H03",
+        "barycentric_hyperplane_tag": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "orbit_size": 105,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "H04",
+        "barycentric_hyperplane_tag": [
+          0,
+          1,
+          5,
+          1
+        ],
+        "orbit_size": 42,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "H05",
+        "barycentric_hyperplane_tag": [
+          0,
+          2,
+          0,
+          5
+        ],
+        "orbit_size": 21,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "H06",
+        "barycentric_hyperplane_tag": [
+          0,
+          2,
+          3,
+          2
+        ],
+        "orbit_size": 210,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "H07",
+        "barycentric_hyperplane_tag": [
+          0,
+          3,
+          1,
+          3
+        ],
+        "orbit_size": 140,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "H08",
+        "barycentric_hyperplane_tag": [
+          0,
+          3,
+          4,
+          0
+        ],
+        "orbit_size": 35,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      },
+      {
+        "id": "H09",
+        "barycentric_hyperplane_tag": [
+          0,
+          4,
+          2,
+          1
+        ],
+        "orbit_size": 105,
+        "sat_status": "UNKNOWN",
+        "proof_certificate": null
+      }
+    ]
+  },
+  "proof_checker_requirement": "Never promote local enumeration or solver status without reproducible code, complete orbit proof, independent SAT cap checker or UNSAT proof certificate. No GPU/paid compute.",
+  "last_ci_status": "PENDING",
+  "changed_paths": [
+    "research/capset_f3_7/cap040_root_orbits.py",
+    "research/capset_f3_7/cap040_hyperplane_anchor.py",
+    "research/capset_f3_7/test_cap040_root_orbits.py",
+    "research/capset_f3_7/test_cap040_hyperplane_anchor.py",
+    "research/capset_f3_7/CAP040_ROOT_FIRST_PROOF_DAG_2026-11-03.md"
+  ]
+}
