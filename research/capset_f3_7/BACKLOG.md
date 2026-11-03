@@ -435,3 +435,8 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [LOCAL CPU PASS / CI PENDING] Complete shared-variable 2187-primary-variable CNF generator with 796797 3AP clauses, fixed formal-285 81-fiber exact counts encoded by sequential counters. Exact 3AP prefix SHA256 in report; small counter encodings exhaustive truth-table checked. No solver run, status UNKNOWN.
 - [P0] Confirm exact final CAP035 CI. Run a CPU-bounded proof-logged solver pilot; require independent DRAT/LRAT checker for UNSAT and independent 7D arithmetic for SAT. A fixed occupancy UNSAT is conditional only.
 - [P0 META] Avoid low-value repetitions of count-only relaxation; prioritize shared-fiber geometric conflict, classification/upper-bound referee and balanced/no-112 and >=237 branches.
+
+
+## CAP-037 (2026-11-03 UTC) — Full AGL(4,3) stabilizer
+- [LOCAL EXACT PASS / CI PENDING] The CAP027 fixed formal 285 occupancy has trivial stabilizer in ALL AGL(4,3), not merely CAP036's monomial subgroup. Nine cells of occupancy 4/7 form the unique affine plane E; every affine stabilizer preserves it. The two 7-cells restrict (D,t) to 12 possibilities. All 48*81*12=46656 remaining affine block maps were checked against the nine 6-cells; only identity remains. Deterministic CPU-only, no seed. See cap037_full_agl_stabilizer.py and CAP037_FULL_AGL_STABILIZER_2026-11-03.md.
+- [P0] Confirm CI for CAP037. Do not impose quotient AGL4 symmetry breaking on this fixed instance. Continue bounded proof-logged SAT with independent UNSAT verification, CAP019 external referee and >=237 search. This is not a 285 cap, not a global bound, no novelty claim.
