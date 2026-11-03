@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "Avoid E046/E047 fourth-row-only and E048 static intercalate/relative-row alignment repeats on same pools. Seek k3->k4 six-class LP phase-I-feasible prefix by genuinely joint construction or implement symmetry-complete proof-producing SAT with explicit orbit coverage; falsify universal row-alignment rigidity by finding k4 counterexample outside correlated samples.",
-  "current_hypothesis": "E048 tested multi-row transformations outside exhausted fourth-row-only basin: local 1565 distinct k4 prefixes x576=901440 B/C row alignments and remote 1569 x576=903744, all identity-only; 8 sources have 60 static 2x2 intercalates, 2895 subsets sizes1..4, only one valid changed prefix, exact zero-support resource C(2,9,5), 416 residual candidates. Restricted neighborhood evidence only, no global orbit excluded.",
-  "last_experiment": "MOLS10-E048-ROW-ALIGNMENT-AND-INTERCALATE-REPLAY",
+  "next_action": "Clean independent CI replay E049_cycle3.js and six-class LP/exact dual on 109 support-positive prefixes; continue unrestricted symmetry-complete proof-producing SAT.",
+  "current_hypothesis": "E049 three-column cyclic rewrites find 133 valid neighbors unlike mostly rigid E048 intercalate/row alignment tests; 109 pass resource support, LP feasibility unknown.",
+  "last_experiment": "MOLS10-E049-FOURTH-ROW-THREE-CYCLE",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549028462",
   "last_verified_results": [
@@ -24,7 +24,8 @@
     "E046: 570 exact E045 sources independently replayed; 179550 fourth-row two-column masked swaps (7 masks x45 x570), 7428 valid; 578 zero-support, 6850 full-support, only 343 source certificates transfer. Independent bitmask replay agrees on all 7 masks; 2992090 legal residual placements checked.",
     "E046 REMOTE: 131 new unique fixed-k4-neighbor prefixes from 71 sources; 131 exact integer Farkas duals, 52920 candidates independently checked, 131 mutation rejections; 124 original duals and 7 original zero-support obstructions invalid on neighbors. CI run 41531858521 SUCCESS; evidence commit 9de3abb68b81bf7e37703d1ec842d3c0708fc24e. No full orbit excluded.",
     "E047 REMOTE: 246960 two-disjoint-swap proposals from 8 exact fixed k4 prefixes, 479 distinct valid, 79 exact zero-support and 400 integer Farkas duals, independent JS exact 479/479 PASS, 192078 placements, mutation rejected. CI SUCCESS 41541210306; full data commit b40863306ac3c62ca9cff6276caaaa63ad4f063d. Restricted local result; no full orbit excluded.",
-    "E048: local 1565 distinct fixed k4 prefixes x576 relative row permutations identity-only (901440 proposals); remote 1569 distinct x576 identity-only (903744 proposals) strict CI PASS; 2895 static original 2x2 intercalate subsets on 8 sources, 1 valid changed prefix exact zero-support resource C(2,9,5), independently JS/Python verified. No full orbit excluded."
+    "E048: local 1565 distinct fixed k4 prefixes x576 relative row permutations identity-only (901440 proposals); remote 1569 distinct x576 identity-only (903744 proposals) strict CI PASS; 2895 static original 2x2 intercalate subsets on 8 sources, 1 valid changed prefix exact zero-support resource C(2,9,5), independently JS/Python verified. No full orbit excluded.",
+    "E049 in-tool exhaustive 13440 three-column cyclic proposals, 133 valid, 24 exact zero-support, 109 full resource support; CI independent replay pending, no orbit excluded."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -124,13 +125,14 @@
     "research/mols10/E047_replay.js",
     "research/mols10/E047_REGENERATED.json",
     "research/mols10/E048_local_rigidity.js",
-    "research/mols10/E048_RESULTS.json"
+    "research/mols10/E048_RESULTS.json",
+    "research/mols10/E049_cycle3.js"
   ],
   "external_data_leads": [
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-02T23:55:00Z",
+  "last_run_utc": "2026-11-03T00:50:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -159,13 +161,14 @@
     "research/mols10/E045_REPORT.md",
     "research/mols10/E046_REPORT.md",
     "research/mols10/E047_REPORT.md",
-    "research/mols10/E048_REPORT.md"
+    "research/mols10/E048_REPORT.md",
+    "research/mols10/E049_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
   "limitations": "E048 sources are 1565 local /1569 remote distinct but correlated k4 prefixes, not full symmetry coverage. Static original intercalates sizes1..4 on 8 E047 sources only; no arbitrary dynamic trade chains. Local E045 574 differs from remote E045 570. Initial CI erroneously green due tee without pipefail, fixed; strict replay SUCCESS. No new LP-feasible k4.",
   "last_ci_result": "E048 strict pipefail GitHub Actions run 41549028462 SUCCESS, remote 1569 distinct prefixes x576=903744 row alignments identity-only, 2895 static intercalate subsets, 1 valid changed prefix with exact zero-support resource 595. First CI had masked assertion failure, audited and corrected.",
   "external_status_review": "2026-11-02 23:50 UTC: fresh primary arXiv 2503.10504v2 and 2605.02132v2 plus targeted November web/arXiv search; no independently checkable unrestricted solution found, absence of hits not proof.",
-  "current_math_result": "GLOBAL OPEN; 0/162959 complete orbits excluded. E048 finite local tests: 901440 local and 903744 remote row-permutation proposals all identity-only; 2895 static intercalate subsets on 8 fixed prefixes have 1 valid changed k4, exact zero-support resource 595. No complete triple or unrestricted negative proof.",
+  "current_math_result": "GLOBAL OPEN; 0/162959 complete orbits excluded. E049 exact 13440 cyclic three-column fourth-row proposals on eight E047 sources; 133 valid k4 prefixes, 24 exact zero-support obstructions and 109 full-support but untested by six-class LP.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
