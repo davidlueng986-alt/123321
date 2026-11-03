@@ -1,0 +1,12 @@
+# CAP-035 — Complete shared-variable CNF encoder (2026-11-03 05:56 UTC)
+
+Continuation of CAP-034, whose final GitHub Actions run 41580444764 is now **SUCCESS** (verified via Actions API). CAP-034 falsified the proposed contradiction from the two intersecting high-density quotient lines; do not retry that route in isolation.
+
+## Bounded substantive step
+Implemented deterministic, CPU-only, standard-library exact DIMACS generator for the complete F3^7 cap constraints and the **fixed CAP-027 formal 285 occupancy** as 81 exact fiber-cardinality constraints. The 2187 primary variables are indexed lexicographically by (q,u) in F3^4 × F3^3. For each pair i<j, the unique third point is -p_i-p_j. Emit (-i,-j,-k) exactly when j<k. This produces exactly 796797 distinct forbidden-triple clauses (9477 same-fiber + 787320 cross-fiber). An independent arithmetic audit counts 1080 quotient lines × 729 lifts and 81 × 117 internal lines. The per-fiber equalities are encoded by two sequential-counter at-most constraints (for selected and negated variables); auxiliary variables are disjoint between counters.
+
+## Verification / reproducibility
+Run `python3 research/capset_f3_7/cap035_shared_fiber_cnf.py` to check the 796797 clauses and exhaustive small cardinality counter truth tables. Optional `python3 research/capset_f3_7/cap035_shared_fiber_cnf.py /tmp/cap035.cnf` generates the conditional full DIMACS instance. Deterministic; no seed, no GPU, no solver. The local preliminary implementation initially had an off-by-one auxiliary-variable error (IndexError), corrected before final local PASS. Verified 796797 triple clauses, SHA256 of their newline-terminated DIMACS lines: `d9be134e726c3d84cbb8ac7ca6ef23c37fd6571d45953c9c742927ab5491c3a8`. This hash is for the triple-only prefix, not the complete CNF file.
+
+## Interpretation and strategy
+This is a **formulation**, not a SAT/UNSAT result. Fixed 285 occupancy is only one conditional configuration; UNSAT would not exclude all 285 caps. SAT must be checked by independent 7D arithmetic. Proof-logged UNSAT and independent certificate validation remain essential. Do not claim novelty for the basic exact encoding. High-priority next step: bounded solver pilot with a proper proof logger, and investigate symmetry/domain reduction; 796797 clauses may be too large for naive proof search. Keep CAP019/Thackeray computational-classification referee and balanced/no-112/≥237 searches active. No new global bound; r3(7) OPEN.
