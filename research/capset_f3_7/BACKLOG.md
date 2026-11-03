@@ -1,3 +1,8 @@
+## CAP-036 (2026-11-03 UTC)
+- [LOCAL EXACT / CI PENDING] CAP035 full CI 41586983947 SUCCESS. Fixed CAP027 occupancy has trivial affine monomial quotient stabilizer (31,104 maps exhaustively checked); do not assume translation or coordinate-permutation symmetry of conditional SAT instance. See CAP036 code/report.
+- [P0] CPU-bounded proof-logged SAT on CAP035 CNF with independent SAT witness or UNSAT certificate checking; timeout UNKNOWN. Explore full AGL4 and internal-fiber symmetries only with proof of preservation.
+- [P1] CAP019/Thackeray classification referee and >=237 construction; exact r3(7) OPEN.
+
 ## CAP-034 (2026-11-03 UTC)
 - [EXPLICIT LOCAL SAT WITNESS; CI PENDING] Two unique CAP027 special lines (7,6,6) and (7,7,4) sharing 0000 fiber ARE jointly realizable: 30-point F3^7 cap on five fibers. See cap034_shared_two_lines_witness.py and CAP034 report. Two-line-only contradiction hypothesis FALSIFIED.
 - [P0] Check CI; extend to connecting quotient lines or all 81 fibers via bounded proof-logged shared-variable SAT/PB. UNSAT needs independently checked proof, timeout UNKNOWN.
