@@ -89,18 +89,22 @@ function buildOA(n){const tuples=[],resources=[];const m=10*n*n;
  check(new Set(row).size===10&&row.every(x=>x>=0&&x<m),"resource encoding");tuples.push([r,c,a,b,d]);resources.push(row);}
  return {n,tuples,resources,equalities:m};
 }
-function solveOA(n,nodeLimit=100000){const M=buildOA(n),used=Array(M.equalities).fill(false),inc=Array.from({length:M.equalities},()=>[]);
- M.resources.forEach((row,j)=>row.forEach(x=>inc[x].push(j)));const chosen=[];let nodes=0,unknown=false,witness=null;
- function dfs(){if(++nodes>nodeLimit){unknown=true;return false;}if(chosen.length===n*n){witness=chosen.slice();return true;}
+function violatesNogood(selected,clause){return clause.every(lit=>selected.has(-lit));}
+// Additional clauses must be proved sound by the caller; certified_search.js supplies that bridge.
+function solveOA(n,nodeLimit=100000,learnedClauses=[]){const M=buildOA(n),used=Array(M.equalities).fill(false),inc=Array.from({length:M.equalities},()=>[]);
+ for(const clause of learnedClauses)check(Array.isArray(clause)&&clause.length>0&&new Set(clause).size===clause.length&&clause.every(x=>Number.isInteger(x)&&x<0&&-x<=M.tuples.length),"negative-clause schema");
+ M.resources.forEach((row,j)=>row.forEach(x=>inc[x].push(j)));const chosen=[],selected=new Set();let nodes=0,unknown=false,witness=null,learnedPrunes=0;
+ function dfs(){if(++nodes>nodeLimit){unknown=true;return false;}if(learnedClauses.some(clause=>violatesNogood(selected,clause))){learnedPrunes++;return false;}if(chosen.length===n*n){witness=chosen.slice();return true;}
  let candidates=null;for(let r=0;r<inc.length;r++)if(!used[r]){const options=inc[r].filter(j=>M.resources[j].every(x=>!used[x]));
  if(options.length===0)return false;if(candidates===null||options.length<candidates.length)candidates=options;if(candidates.length===1)break;}
- for(const j of candidates){chosen.push(j);M.resources[j].forEach(x=>used[x]=true);if(dfs())return true;
- M.resources[j].forEach(x=>used[x]=false);chosen.pop();if(unknown)return false;}return false;}
+ for(const j of candidates){chosen.push(j);selected.add(j+1);M.resources[j].forEach(x=>used[x]=true);if(dfs())return true;
+ M.resources[j].forEach(x=>used[x]=false);chosen.pop();selected.delete(j+1);if(unknown)return false;}return false;}
  dfs();const result={n,options:M.tuples.length,equalities:M.equalities,nodes,status:witness?"SAT":unknown?"UNKNOWN_BUDGET":"UNSAT_EXHAUSTIVE",standaloneUnsatTrace:false};
+ if(learnedClauses.length)result.learnedPrunes=learnedPrunes;
  if(witness){const S=Array.from({length:3},()=>Array.from({length:n},()=>Array(n).fill(-1)));
  for(const j of witness){const [r,c,a,b,d]=M.tuples[j];[a,b,d].forEach((v,s)=>S[s][r][c]=v);}
  result.overlays=verifyTriple(S);result.witness=S;}return result;
 }
 function expectReject(f){let rejected=false;try{f();}catch(e){rejected=true;}check(rejected,"negative control accepted");return true;}
-const api={residualGraph,solve,verifyColoring,verifyUnsat,auditCore,capMaximum,bruteCap2,verifyCap,buildOA,solveOA,verifyTriple,expectReject};
+const api={residualGraph,solve,verifyColoring,verifyUnsat,auditCore,capMaximum,bruteCap2,verifyCap,buildOA,solveOA,verifyTriple,violatesNogood,expectReject};
 if(typeof module!=="undefined")module.exports=api;

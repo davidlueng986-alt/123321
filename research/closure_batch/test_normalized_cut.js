@@ -1,0 +1,18 @@
+"use strict";
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const path = require("node:path");
+const {verifyCut} = require("./verify_normalized_cut.js");
+const read = name => JSON.parse(fs.readFileSync(path.join(__dirname, name), "utf8"));
+const prefix = read("row_cover_fixture.json").prefix;
+const proof = read("forced_prefix_certificate.json");
+const cut = read("normalized_oa_cut.json");
+assert.equal(verifyCut(prefix, proof, cut).clauseLength, 60);
+const clone = x => JSON.parse(JSON.stringify(x));
+const dropped = clone(cut); dropped.clause.pop();
+assert.throws(() => verifyCut(prefix, proof, dropped));
+const sign = clone(cut); sign.clause[0] *= -1;
+assert.throws(() => verifyCut(prefix, proof, sign));
+const guard = clone(cut); guard.physical_to_normalized_row.reverse();
+assert.throws(() => verifyCut(prefix, proof, guard));
+console.log("NORMALIZED_OA_NOGOOD_BRIDGE_PASS; 3 mutations rejected; root OPEN");
