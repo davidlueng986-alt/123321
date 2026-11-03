@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP035: full shared-variable point-level CNF and conditional CAP027 formal-285 exact fiber counts constructed; solver status UNKNOWN.",
-  "next_experiment": "Check CAP035 CI; CPU-bounded proof-logged SAT pilot and independently verify any result. Continue CAP019 classification referee and balanced/no-112, >=237 searches.",
-  "last_run_id": "CAP-035-SHARED-FIBER-CNF-2026-11-03",
-  "last_run_result": "LOCAL_CPU_CNF_ARITHMETIC_PASS_SOLVER_NOT_RUN_CI_PENDING",
+  "current_hypothesis": "CAP036: CAP027 fixed 285-fiber occupancy has trivial affine monomial quotient stabilizer; CAP035 CNF CI green; SAT still UNKNOWN.",
+  "next_experiment": "Proof-logged bounded SAT on CAP035 with independent verification; audit full AGL4/internal fiber symmetries before symmetry breaking; continue CAP019 referee.",
+  "last_run_id": "CAP-036-OCCUPANCY-STABILIZER-2026-11-03",
+  "last_run_result": "LOCAL_CPU_EXHAUSTIVE_PASS_CI_PENDING_NO_SAT_SOLVE",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -84,7 +84,8 @@
     "CAP-032C-LOCAL",
     "CAP-033-LOCAL",
     "CAP-034-LOCAL",
-    "CAP-035-LOCAL"
+    "CAP-035-LOCAL",
+    "CAP-036-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549413947",
   "baseline_secant_audit": {
@@ -106,7 +107,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-03T05:56:00Z",
+  "last_updated_utc": "2026-11-03T07:00:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1499,5 +1500,12 @@
     "global_bound_improved": false,
     "novelty_established": false,
     "report": "research/capset_f3_7/CAP032C_766_ORBIT_TYPE_CONSTRAINT_2026-11-03.md"
+  },
+  "cap036_affine_monomial_stabilizer": {
+    "candidate_maps": 31104,
+    "stabilizer_size": 1,
+    "scope": "fixed CAP027 quotient occupancy; affine monomial subgroup only",
+    "ci": "PENDING",
+    "global_bound_improved": false
   }
 }
