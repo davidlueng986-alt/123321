@@ -1,3 +1,8 @@
+
+## CAP-031 next gate (2026-11-03 ~01:55 UTC)
+- [LOCAL EXACT PASS; CI PENDING] Verified 1080 quotient lines, 9477 internal and 787320 cross-fiber affine triples = 796797 total. Code cap031_factorization.py and report CAP031_SHARED_FIBER_EXACT_FACTORIZATION_2026-11-03.md.
+- [P0] Instantiate CAP027 81-fiber occupancy as exact shared-variable CNF/PB, bounded proof-logged SAT. SAT must yield independently checked actual coordinates; UNSAT requires verifiable proof. Timeout is UNKNOWN. This excludes only a fixed occupancy, not all 285 caps.
+- [P1] Continue CAP019/Thackeray hostile referee, balanced/no-111, nonlocal >=237 search. No novelty or global bound claimed.
 ## CAP-029 final CI verification (2026-11-03 00:04 UTC)
 - [DONE / FULL CI GREEN] https://github.com/davidlueng986-alt/123321/actions/runs/41549413947 on code SHA 176a2d93ea2a99a48c98d3d30e8987d97f5a8707. All exact unit tests and CPU certificate steps passed. Preserve earlier failed CI runs as evidence.
 - [P0] Next bounded mathematical work: simultaneous shared-fiber point-level constraints or independent Thackeray 110-cap completion referee; avoid repeating local count-only relaxations.
