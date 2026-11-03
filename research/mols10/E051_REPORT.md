@@ -1,0 +1,13 @@
+# E051 — Exact upgrade of E050 source-0 cyclic-neighborhood LP screening
+
+Timestamp: 2026-11-03 02:5x UTC (automation iteration). Status: GLOBAL OPEN, no symmetry orbit excluded.
+
+Objective: resolve E050's seven numerical-only LP-infeasible cases using independently replayable integer Farkas certificates, while checking eight zero-support cases. Scope: exactly 15 valid k4 partial triples among 1680 three-column fourth-row cyclic moves on E047 source 0, NOT unrestricted 3-MOLS(10).
+
+Method: reconstruct the E050 360-resource six-class residual exact-cover matrix. Solve Phase-I LP min sum(s) subject to A*x+s=1, x,s>=0; take equality dual marginals, scale by 1,000,000 and round to integers. If maximum placement score is m>0, subtract ceil(m/6) from every dual resource weight (each placement covers exactly six resources). Independently check sum(y)>0 and every legal placement's six-weight sum<=0, using integer arithmetic. Zero-support certificates are missing demanded resources with no legal placement.
+
+Results: 15/15 exact non-extension certificates: 8 zero-support + 7 integer Farkas; 6210 residual placements independently enumerated and checked. Seven positive integer dual RHS: 24070781, 20200697, 20058324, 20934029, 22863952, 20274635, 17499026; maximum placement score -5 in each. Each dual has 360 nonzero resource weights (non-sparse, but exact). Local standalone generator and independent verifier were executed successfully; the full JSON certificates are available as conversation artifacts, but **not uploaded to this repository** at this commit. Thus this report is a result summary, not sufficient by itself for independent replay without the artifacts. The first naive rational-reconstruction approach failed because componentwise rational approximations violated some placement inequalities; the uniform shift fixed this exactly, without relying on floating-point validation.
+
+Sources: E050 report https://github.com/davidlueng986-alt/123321/commit/e5c9dba2d31e97281bf00611bee1ce46f0e2c36a ; Bright–Keita–Stevens https://arxiv.org/abs/2503.10504 ; Barnoff–Bright https://arxiv.org/abs/2605.02132 . Targeted fresh 2026-11-03 search found no independently verified global resolution (absence of search results is not a proof).
+
+Next: publish complete E051 generator, verifier, and JSON evidence; independently CI replay; screen remaining E049 source prefixes, prioritizing search for LP-feasible k4. In parallel, pursue unrestricted symmetry-complete proof-producing SAT with justified orbit coverage. No 100/100/100 witness, no global nonexistence certificate, no full orbit eliminated.
