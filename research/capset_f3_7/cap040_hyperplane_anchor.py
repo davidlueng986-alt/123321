@@ -86,27 +86,55 @@ def stats():
             'counter_aux_variables':aux,'additional_clauses':clauses,
             'base_variables':original['variables']}
 
-def write_cnf(path):
+def anchored_ninth_branches():
+    # The >=89-point H already contains seven chosen basis vertices.
+    # Thus every >=237 cap supplies a ninth point INSIDE H, allowing
+    # the H-preserving S7 stabilizer instead of the unrestricted S8.
+    cases=[q for q in h_anchor_orbits() if q['tag'][0]==0]
+    assert len(cases)==10 and sum(q['size'] for q in cases)==701
+    return cases
+
+def extra_ninth_units(case):
+    from cap040_root_orbits import third
+    p=vec(case['rep'],7)
+    assert p[-1]==0
+    base=frame(7)
+    both=base+[p]
+    old={pack(third(x,y))+1 for x,y in __import__('itertools').combinations(base,2)}
+    new={pack(third(x,y))+1 for x,y in __import__('itertools').combinations(both,2)}
+    assert not (new & {pack(x)+1 for x in both})
+    assert len(new) in (35,36)
+    return [(pack(p)+1,)]+[(-i,) for i in sorted(new-old)]
+
+def write_cnf(path,branch=None):
     from cap007_global_exact_model import clauses as base_clauses
-    d=stats()
+    d=stats().copy()
+    extra=[] if branch is None else extra_ninth_units(anchored_ninth_branches()[branch])
+    d['total_clauses']+=len(extra)
+    d['ninth_extra_unit_clauses']=len(extra)
     H=[i+1 for i in range(2187) if i%3==0]
     assert len(H)==729
     with open(path,'w',encoding='ascii') as f:
-        f.write('c CAP040H globally complete target237, moment-anchored hyperplane>=89\n')
+        f.write('c CAP040H globally complete target237, moment-anchored hyperplane>=89'+(' branch='+str(branch) if branch is not None else '')+'\n')
         f.write(f"p cnf {d['total_variables']} {d['total_clauses']}\n")
         count=0
         for cl in base_clauses(7,237,basis=True):
             f.write(' '.join(map(str,cl))+' 0\n');count+=1
         for cl in at_least_clauses(H,89,d['base_variables']):
             f.write(' '.join(map(str,cl))+' 0\n');count+=1
+        for cl in extra:
+            f.write(' '.join(map(str,cl))+' 0\n');count+=1
         assert count==d['total_clauses']
     return d
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--cnf')
+    p=argparse.ArgumentParser();p.add_argument('--cnf');p.add_argument('--branch',type=int)
     args=p.parse_args()
+    if args.branch is not None and not 0<=args.branch<10:p.error('--branch must be 0..9')
     o={'moment_proof':moment_89_check(),'normalized_9th_orbits':len(h_anchor_orbits()),
+       'dense_hyperplane_ninth_orbits':len(anchored_ninth_branches()),
+       'dense_hyperplane_ninth_candidate_points':701,
        'coverage':2151,'cnf_stats':stats(),'sat_status':'UNKNOWN',
        'global_bound_improved':False}
-    if args.cnf:o['generated']=write_cnf(args.cnf)
+    if args.cnf:o['generated']=write_cnf(args.cnf,args.branch)
     print(json.dumps(o,sort_keys=True))
