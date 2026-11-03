@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP044 independently rechecks ten dense-H ninth-point barycentric orbits and H09 collision; all root SAT leaves UNKNOWN; regression only.",
-  "next_experiment": "CPU-bounded proof-logged SAT on one root leaf with independently checked witness/proof; no more census-only work.",
-  "last_run_id": "CAP-044-BARYCENTRIC-ORBIT-REGRESSION-2026-11-03",
-  "last_run_result": "LOCAL_EXACT_PASS_CI_PENDING_SAT_UNKNOWN",
+  "current_hypothesis": "CAP045 completion-bridge lemma proves 110-to-111 extension implication conditional on Thackeray 110 embedding and CAP010A k>=10 disjoint secants; CAP019 <=287 remains provisional.",
+  "next_experiment": "Independently referee Thackeray classification and CAP017B tangent lemma; acquire free CPU proof-logging SAT solver/checker for bounded global H00 pilot; all root leaves UNKNOWN.",
+  "last_run_id": "CAP-045-COMPLETION-BRIDGE-REFEREE-2026-11-03",
+  "last_run_result": "DEDUCTIVE_LEMMA_PROVED_EXTERNAL_DEPENDENCIES_PENDING_SAT_UNKNOWN",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -93,9 +93,10 @@
     "CAP-041-LOCAL",
     "CAP-042-LOCAL",
     "CAP-043-LOCAL",
-    "CAP-044-LOCAL"
+    "CAP-044-LOCAL",
+    "CAP-045-DEDUCTIVE"
   ],
-  "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41631698651",
+  "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41639554296",
   "baseline_secant_audit": {
     "external_points": 1951,
     "all_blocked": true,
@@ -115,7 +116,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-03T12:50:00Z",
+  "last_updated_utc": "2026-11-03T13:52:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1667,5 +1668,15 @@
     "sat_status": "UNKNOWN",
     "source": "research/capset_f3_7/cap042_ten_leaf_incidence.py",
     "no_gpu_paid_compute": true
+  },
+  "cap045_completion_bridge": {
+    "report": "research/capset_f3_7/CAP045_COMPLETION_BRIDGE_REFEREE_2026-11-03.md",
+    "lemma": "k vertex-disjoint secants imply any extension of B subset C with |C\\B|<k lies in C",
+    "application": "111-cap completes to 112 conditional on Thackeray 110 embedding and CAP010A k>=10",
+    "external_classification_reviewed": false,
+    "cap019_upper_287_verified": false,
+    "root_sat_status": "UNKNOWN",
+    "solver_available_local": false,
+    "novelty_claimed": false
   }
 }
