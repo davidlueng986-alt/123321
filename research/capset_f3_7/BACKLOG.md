@@ -400,3 +400,11 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 ## CAP-030 (2026-11-03)
 - [DONE / EXACT LEMMA] For each quotient line (i,j,k), require A_k disjoint from {-a-b:a in A_i,b in A_j}; reuse identical fiber assignments across all lines. CAP028 local witnesses have midpoint image sizes [23,19,19] and [20,19,20]. No global numerical improvement.
 - [P0] Check CAP030 CI; build bounded shared-fiber SAT/PB pilot with independent verifier and proof-logged UNSAT where possible; continue Thackeray 110-cap completion referee and balanced/no-111 branch.
+
+## CAP-032B universal AG(4,3) slice profile cut (2026-11-03T02:53:58.437Z)
+- [LOCAL EXACT Python+C++ / CI PENDING] New complete high-density 3D parallel-slice compatibility table for ANY AG4 cap, verified by F3^3 AGL orbits and all second caps (sizes6..9). Universal (7,7) implies third<=4; 189 exceptional hole sets have no 5-cap, 252720 pairs independently checked. Exact 10-pair table in CAP032B report. No novelty claim and no new global r3(7) numeric bound.
+- [NEGATIVE CONTROL] All 1080 quotient 4D lines of CAP027 285-point FORMAL count-only countermodel still meet the high-fiber cuts. Count-only relaxation remains too weak, not a 285 cap. Preserve prior CAP032 random-occupancy expectation as independent effort.
+- [P0] Confirm CAP032B final GitHub full CI on code commit 784ad1b6ff34c0bcb245993747a5cbb0bc5da503 or later code-containing SHA; do not mark CI GREEN before completed pass.
+- [P0] Implement GLOBAL shared-fiber multi-quotient-line compatibility: one common 3D cap variable assignment for intersecting quotient lines, proof-logged SAT/UNSAT, independent arithmetic checker; start with CAP027 formal285 fixed counts only as a CONDITIONAL test, not a global upper-bound proof.
+- [P0 REFEREE] Verify Thackeray's 110-cap computer classification and CAP019 conditional <=287 from original sources and independent exact witness/classification; unresolved external premise prevents unconditional improvement claim.
+- [P0] Preserve balanced/no-112-hyperplane and >=237 construction branches (independent of known236). Validate candidates, avoid inferring global bound from single-line profiles.
