@@ -3,7 +3,8 @@ import hashlib,tempfile,unittest
 from itertools import permutations
 from pathlib import Path
 from cap040_hyperplane_anchor import (moment_89_check,h_anchor_orbits,
-                                    at_least_clauses,stats,write_cnf)
+                                    at_least_clauses,stats,write_cnf,
+                                    anchored_ninth_branches,extra_ninth_units)
 from cap040_root_orbits import barycentric,vec
 
 class CAP040HTests(unittest.TestCase):
@@ -22,6 +23,16 @@ class CAP040HTests(unittest.TestCase):
                     for perm in permutations(range(7))}
             self.assertEqual(len(images),x['size'])
             self.assertEqual({v[-1] for v in images},{x['tag'][0]})
+
+    def test_ten_complete_high_slice_ninth_branches(self):
+        cases=anchored_ninth_branches()
+        self.assertEqual(len(cases),10)
+        self.assertEqual([q['size'] for q in cases],
+                         [7,35,1,105,42,21,210,140,35,105])
+        self.assertEqual(sum(q['size'] for q in cases),701)
+        self.assertTrue(all(q['tag'][0]==0 for q in cases))
+        self.assertEqual(sorted(len(extra_ninth_units(q)) for q in cases),
+                         [8]+[9]*9)
 
     def test_cardinality_counter_truth_table(self):
         V=[1,2,3,4];clauses=list(at_least_clauses(V,2,4))
