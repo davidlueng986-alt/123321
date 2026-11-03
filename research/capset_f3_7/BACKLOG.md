@@ -1,4 +1,9 @@
 
+## CAP-032 (2026-11-03 UTC)
+- [ANALYTIC; CI PENDING] CAP027 occupancy has exact random-independent-fiber E[3AP]=131198/75, including 5207/3 cross-fiber. This is NOT an exclusion or probability bound. See CAP032 report and checker.
+- [P0] Proof-logged shared-fiber SAT/PB pilot with exact occupancy, independent proof/witness validation; timeout UNKNOWN.
+- [P1] CAP019 classification referee and balanced/no-111 branches; do not claim novelty.
+
 ## CAP-031 next gate (2026-11-03 ~01:55 UTC)
 - [LOCAL EXACT PASS; CI PENDING] Verified 1080 quotient lines, 9477 internal and 787320 cross-fiber affine triples = 796797 total. Code cap031_factorization.py and report CAP031_SHARED_FIBER_EXACT_FACTORIZATION_2026-11-03.md.
 - [P0] Instantiate CAP027 81-fiber occupancy as exact shared-variable CNF/PB, bounded proof-logged SAT. SAT must yield independently checked actual coordinates; UNSAT requires verifiable proof. Timeout is UNKNOWN. This excludes only a fixed occupancy, not all 285 caps.
