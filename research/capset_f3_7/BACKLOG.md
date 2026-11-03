@@ -1,3 +1,7 @@
+## CAP-029 final CI verification (2026-11-03 00:04 UTC)
+- [DONE / FULL CI GREEN] https://github.com/davidlueng986-alt/123321/actions/runs/41549413947 on code SHA 176a2d93ea2a99a48c98d3d30e8987d97f5a8707. All exact unit tests and CPU certificate steps passed. Preserve earlier failed CI runs as evidence.
+- [P0] Next bounded mathematical work: simultaneous shared-fiber point-level constraints or independent Thackeray 110-cap completion referee; avoid repeating local count-only relaxations.
+
 ## CAP-029 CI regression follow-up (2026-11-02 ~23:58 UTC)
 - [CI FAIL] 41549068067: repaired 19-point witness passes all six CAP-028 tests, but new extension-census regression test failed because check() asserts on invalid candidate instead of returning False. This is a test harness bug, not cap failure.
 - [LOCAL FIX] Add admissible() catching AssertionError for invalid additions. Check next CI on the exact new commit before declaring success.
