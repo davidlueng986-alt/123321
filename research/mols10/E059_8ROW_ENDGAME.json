@@ -1,0 +1,143 @@
+{
+  "status": "ALL_NINE_ANCHORED_8_ROW_PREFIXES_EXCLUDED",
+  "results": [
+    {
+      "omitted_original_row": 0,
+      "options_by_square": [
+        2,
+        2,
+        2
+      ],
+      "full_completion_combinations_checked": 8,
+      "full_sat": false,
+      "best_overlay": [
+        93,
+        93,
+        93
+      ]
+    },
+    {
+      "omitted_original_row": 1,
+      "options_by_square": [
+        4,
+        4,
+        4
+      ],
+      "full_completion_combinations_checked": 64,
+      "full_sat": false,
+      "best_overlay": [
+        93,
+        93,
+        93
+      ]
+    },
+    {
+      "omitted_original_row": 2,
+      "options_by_square": [
+        8,
+        8,
+        8
+      ],
+      "full_completion_combinations_checked": 512,
+      "full_sat": false,
+      "best_overlay": [
+        93,
+        93,
+        93
+      ]
+    },
+    {
+      "omitted_original_row": 3,
+      "options_by_square": [
+        2,
+        2,
+        2
+      ],
+      "full_completion_combinations_checked": 8,
+      "full_sat": false,
+      "best_overlay": [
+        93,
+        93,
+        93
+      ]
+    },
+    {
+      "omitted_original_row": 4,
+      "options_by_square": [
+        4,
+        4,
+        4
+      ],
+      "full_completion_combinations_checked": 64,
+      "full_sat": false,
+      "best_overlay": [
+        93,
+        93,
+        93
+      ]
+    },
+    {
+      "omitted_original_row": 5,
+      "options_by_square": [
+        4,
+        4,
+        4
+      ],
+      "full_completion_combinations_checked": 64,
+      "full_sat": false,
+      "best_overlay": [
+        93,
+        93,
+        93
+      ]
+    },
+    {
+      "omitted_original_row": 6,
+      "options_by_square": [
+        4,
+        4,
+        4
+      ],
+      "full_completion_combinations_checked": 64,
+      "full_sat": false,
+      "best_overlay": [
+        93,
+        93,
+        93
+      ]
+    },
+    {
+      "omitted_original_row": 7,
+      "options_by_square": [
+        16,
+        16,
+        16
+      ],
+      "full_completion_combinations_checked": 4096,
+      "full_sat": false,
+      "best_overlay": [
+        93,
+        93,
+        93
+      ]
+    },
+    {
+      "omitted_original_row": 8,
+      "options_by_square": [
+        8,
+        8,
+        8
+      ],
+      "full_completion_combinations_checked": 512,
+      "full_sat": false,
+      "best_overlay": [
+        93,
+        93,
+        93
+      ]
+    }
+  ],
+  "elapsed": 0.157,
+  "any_full_witness": null,
+  "scope": "ONLY 9 overlapping eight-row restrictions of a single 2024 published 9x10 example; not unrestricted 3MOLS10"
+}

@@ -1,0 +1,130 @@
+{
+  "date_utc": "2026-11-03",
+  "status": "OPEN",
+  "files": {
+    "E059_2024_9x10.py": {
+      "size": 2346,
+      "sha256": "dceb33a4d016d5ea8080435ebe24cd7ebbfb3d3471b6b0123b6d7fbe39a20444"
+    },
+    "E059_2024_9x10_analysed.json": {
+      "size": 7986,
+      "sha256": "fce2d8cd8a152a59bd96cc7c7266a9bd8602f77ec7416f816a5ff6884da05399"
+    },
+    "E059_8ROW_ENDGAME.json": {
+      "size": 2575,
+      "sha256": "ea107877638b8303c56edbbf82d96816e8bb6982f0691b23a372ee2349c40967"
+    },
+    "E059_8ROW_TRADE.json": {
+      "size": 270,
+      "sha256": "8a84632b9e1963516cf1f69e265ae0352837fce22c46576eba3df2896515ddd3"
+    },
+    "E059_8row_endgame.py": {
+      "size": 3095,
+      "sha256": "5505ee570fa003d54755fd511bc611309b4367dac9c9edaf6ace529cd90aca93"
+    },
+    "E059_8row_trade_search.py": {
+      "size": 2581,
+      "sha256": "fbe4035736bb1fe73564e4aa36905e166536c48459989aa2232d5d1687c13083"
+    },
+    "E059_9ROW_PERM_DIAG.json": {
+      "size": 694,
+      "sha256": "720c47e4d7b32ca8c77224557f6fedd708fc6442209c39e6f73d2ba57b231df5"
+    },
+    "E059_9row_permutation.py": {
+      "size": 1348,
+      "sha256": "6149eeb921001d69f31d51b0a4cd66dc901ff93746e7ab1585c8b2ab821d569d"
+    },
+    "E059_EGAN_K7_EXTENSION.json": {
+      "size": 309,
+      "sha256": "a76642088d84afe496fcc02fcac33d72cbc3a60a5784ef25061db487d1e69fdc"
+    },
+    "E059_Egan_integral.py": {
+      "size": 4238,
+      "sha256": "0443b15f238ab2b8fbdd03afcc530c252742aa9d6b42e93a6189e64ddcf001eb"
+    },
+    "E059_Egan_k7_extensions.py": {
+      "size": 3277,
+      "sha256": "803ccc994481a79b335f331568965d36881d9c4accfbdf4c97d476e9617c31bd"
+    },
+    "E059_INTEGRAL_K7_WITNESS.json": {
+      "size": 4546,
+      "sha256": "4980f6999c8c30811ae780a48c5d5997f208bcb6fb64da2f658b1f6086301361"
+    },
+    "E059_INTEGRAL_PRIMAL_WITNESS.json": {
+      "size": 7414,
+      "sha256": "792c77886f51e384d3c2958bdafc2e52e1682275ad2bae8b4666a733543ed0c9"
+    },
+    "E059_PACK6_STATS.json": {
+      "size": 1130,
+      "sha256": "df2f97adfe5d1ab9c8c5f99ceada9a45d37da3e5efbf20121f0dfbef65c8fafc"
+    },
+    "E059_PRIMAL_WITNESS.json": {
+      "size": 2942,
+      "sha256": "5c3a93f2e920bca38d3fb31e00cf99de97b9f1b3db8803891781c9d17318655a"
+    },
+    "E059_REPORT.md": {
+      "size": 9199,
+      "sha256": "54ebe22d5b24303953c6dfa9c213a4eb27f8ff90f18bb7f8017ebd181e17697e"
+    },
+    "E059_ROW8_HUNT.json": {
+      "size": 2202,
+      "sha256": "7a4c88f313ff47c7006488f5d4bdd94e1f0105c25dc6e42ef9798e6c5d6df954"
+    },
+    "E059_STRATEGY_REVISION.md": {
+      "size": 2950,
+      "sha256": "21103c5c8ae3d92a025bbceb4c9873e3f5d89b5ad2d215fa0bc037fc3c8b6af6"
+    },
+    "E059_cyclic_integral_search.json": {
+      "size": 416,
+      "sha256": "8a17a8623e6a0d96b024e6f74cb691b1ec27320d0aa16a0d145b7b014985f25e"
+    },
+    "E059_cyclic_quotient.py": {
+      "size": 3681,
+      "sha256": "2799a9d36c3b77db4398cedf42fb378ddd2e7f150c019add935c3f0d4c878509"
+    },
+    "E059_cyclic_result.json": {
+      "size": 1889,
+      "sha256": "3ffd04624a7dd07a1df654a59e4b7dcf530148cc0f8eb27ce8e40131e0a29e62"
+    },
+    "E059_endgame_control.py": {
+      "size": 1413,
+      "sha256": "09fbf6715cae1ad8c051239e51f735b9884826aa28bdf349ca3e8e96ffb318bb"
+    },
+    "E059_full_integral_test.py": {
+      "size": 1283,
+      "sha256": "655cf78882d26b242eff301b6f58c266e5134e9f956f0dc2fedac7ef3e486e99"
+    },
+    "E059_integral_k7_witness.py": {
+      "size": 2355,
+      "sha256": "1354620d667eb410f215d122977060d7e30008293afcc4dbe8e102c13bf41564"
+    },
+    "E059_pack6_row8_hunt.py": {
+      "size": 2539,
+      "sha256": "b3a23bdc20eac90eadc08788deea98a82661961736750d87824fb3a00435d8bc"
+    },
+    "E059_pack6_stats.py": {
+      "size": 752,
+      "sha256": "09e03e5083c174218e2a9936ed5f9375c9d375a596bc2f77b35945526aa69bcf"
+    },
+    "E059_search_integral_relaxation.py": {
+      "size": 1778,
+      "sha256": "02737a9c71a4a2052b7ce6db5bf251f2f27dff762bd1c7ac2bd5d00b4d583386"
+    },
+    "E059_support_integrality.py": {
+      "size": 1922,
+      "sha256": "7a180b806cc32a6345b922ead5ba9843c29e2031821989513c1ab8bab393a171"
+    },
+    "E059_verify_endgame.js": {
+      "size": 1780,
+      "sha256": "180685b0e4c590fcb38cf34c6e12847b0c1fcb8728e2807808fe6174532e1aa4"
+    },
+    "E059_verify_independent.js": {
+      "size": 3438,
+      "sha256": "e3262b9d84d4f68e0d1bccc829b4b2933fb6be960eeae5c43b4042ae82f43608"
+    },
+    "E059_verify_primal.py": {
+      "size": 2405,
+      "sha256": "eb5c9f893072bcd4d8fa2dc04741592c56ee1458c66ca1884602260b375729ba"
+    }
+  }
+}
