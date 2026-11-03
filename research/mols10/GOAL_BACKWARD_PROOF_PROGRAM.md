@@ -1,3 +1,9 @@
+## UPDATE 2026-11-03 — E059 SUPERSEDES N-A (REFUTED)
+
+Both universal four-row residual LP infeasibility and universal four-/seven-row INTEGER residual exact-cover infeasibility have explicit exact witnesses and are FALSE. See E059_REPORT.md and E059_STRATEGY_REVISION.md. The original N-A conjecture below remains only as historical record, NOT an active research objective. No unrestricted 3-MOLS(10) solution was found. The 2024 literature already provides a 9×10 triple of MOLR; direct endgame must include all five OA coordinates. Hourly MOLS10 automation remains paused by user request.
+
+---
+
 # MOLS10 — Goal-Backward Proof Program (operational charter)
 
 Date: 2026-11-03. **Problem status: OPEN.** The prior hourly MOLS10 automation was disabled at the user's request. This document describes the work done in this interactive run only; no future autonomous execution is promised.

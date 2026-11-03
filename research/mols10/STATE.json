@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "GOAL-BACKWARD proof only on explicit interactive request (hourly task disabled by user): falsify universal k4 column-aware LP conjecture by constructing one exact primal-feasible k4 prefix; or complete symmetry coverage/proof for whole (f,g,C second row, subsequent rows) branches, or find and independently verify full 100/100/100. Reject decorative local-dual polishing without closure path. Every proof obligation must connect logically to full resolution.",
-  "current_hypothesis": "Proof-first/falsification-first: PROVE via verified full 100/100/100 witness OR DISPROVE via universal four-row column-aware LP infeasibility (unproved, counterexample sought), alternatively symmetry-complete independently checked SAT UNSAT. No local certificate counted as global orbit closure.",
-  "last_experiment": "MOLS10-E058-GOAL-BACKWARD-K3-COUNTEREXAMPLE-AND-BINARY-PROJECTION-AUDIT",
+  "next_action": "ON-DEMAND only, hourly task remains disabled. Focus on full 5-coordinate OA(100,5,10,2) proof/witness: construction via 9x10 MOLR whose forced 10th rows give all three overlays 100, or unrestricted complete 5-net SAT with full symmetry coverage. NEVER resume universal k4 residual fractional/integer infeasibility (now FALSE).",
+  "current_hypothesis": "E059 FALSIFIED old N-A: a legal 4x10 triple has exact column-aware fractional primal; an Egan two-MOLS-derived k4 and k7 triple have exact integral residual covers. Main target requires all FIVE OA coordinates incl ROW; constructive 9x10 MOLR forced-last-row compatibility is a direct route.",
+  "last_experiment": "MOLS10-E059-GOAL-BACKWARD-EXACT-FRACTIONAL-AND-INTEGER-COUNTEREXAMPLES-AND-9ROW-ENDGAME",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549028462",
   "last_verified_results": [
@@ -133,7 +133,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-03T09:26:59Z",
+  "last_run_utc": "2026-11-03T10:35:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -166,10 +166,10 @@
     "research/mols10/E049_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "No 100/100/100 witness nor unrestricted proof. E058 1/360 exact binary cut is fixed prefix only. No global complete symmetry orbit proved UNSAT. Extra E058 perturbation search timed out. E058 source/checkers archived in Drive ZIP and full strategy/report committed to GitHub; source scripts not individually committed.",
+  "limitations": "No full order10 100/100/100 witness and no unrestricted negative proof. Falsification of weaker N-A is direct goal-backward progress, NOT resolution. 2024 9x10 input attributed to Jäger et al. 2024; only its nine fixed 8row subsets completely screened. Cyclic family 26 integer MILP UNKNOWN statuses are NOT UNSAT. 0/162959 globally certified A/B orbit closures.",
   "last_ci_result": "E048 strict pipefail GitHub Actions run 41549028462 SUCCESS, remote 1569 distinct prefixes x576=903744 row alignments identity-only, 2895 static intercalate subsets, 1 valid changed prefix with exact zero-support resource 595. First CI had masked assertion failure, audited and corrected.",
   "external_status_review": "2026-11-02 23:50 UTC: fresh primary arXiv 2503.10504v2 and 2605.02132v2 plus targeted November web/arXiv search; no independently checkable unrestricted solution found, absence of hits not proof.",
-  "current_math_result": "GLOBAL OPEN; 0/162959 two-row A/B normalized orbit representatives globally excluded. E058 new universal necessity: for ANY 5/5 symbol bipartitions of any full 3-MOLS(10), exactly 25/100 cells have all three binary labels equal. A valid order10 k3 cyclic triple prefix with slopes 1,3,7 has all 30/30/30 partial overlays and already 30 equal-label cells; impossible to extend. Independently confirmed exact Farkas RHS20 over 420 resources and 1000 legal placements. Exhaustive maximization over all 252^3 balanced partitions on each of 360 biased E037 k4 prefixes: exactly 1 fixed prefix (index222) violates global count, 26>25, independently checked. Remaining 359 not certified extendible. This pruner has weak yield, deprecated as main effort. Base 360 k4 fractional packing scores 56.48..57.38<60; larger perturbation experiment TIMEOUT and not counted. GF4 complete positive control over 216 balanced labellings PASS.",
+  "current_math_result": "3-MOLS(10) GLOBAL OPEN. Exact cyclic k4 360/360 fractional feasible (120 placements 1/2); published Egan pair (14 common transversals, max 7 disjoint) yields integer residual k4 360/360 and k7 180/180, all separately replayed in Python and Node.js with mutation rejection. Known 2024 Jäger et al 9x10 triple 90/90/90, forced complete Latins 93/93/93. All 5392 last-two-row completions of nine 8row restrictions of this one source independently checked: 0 full triples. These counterexamples REFUTE universal k4 LP/ILP nonexistence shortcuts, not unrestricted existence or nonexistence.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -241,5 +241,7 @@
   "automation_enabled": false,
   "e058_program_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/GOAL_BACKWARD_PROOF_PROGRAM.md",
   "e058_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E058_REPORT.md",
-  "e058_drive_url": "https://drive.google.com/file/d/1INUhEl3fCM0v5wfXdGpTkfQNImFKGCb3/view"
+  "e058_drive_url": "https://drive.google.com/file/d/1INUhEl3fCM0v5wfXdGpTkfQNImFKGCb3/view",
+  "e059_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E059_REPORT.md",
+  "e059_bundle_drive_url": "https://drive.google.com/file/d/16SUFsjuATbJVA8EdRLn-GjlaJXixTo8i/view"
 }
