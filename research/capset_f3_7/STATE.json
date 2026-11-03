@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP045 completion-bridge lemma proves 110-to-111 extension implication conditional on Thackeray 110 embedding and CAP010A k>=10 disjoint secants; CAP019 <=287 remains provisional.",
-  "next_experiment": "Independently referee Thackeray classification and CAP017B tangent lemma; acquire free CPU proof-logging SAT solver/checker for bounded global H00 pilot; all root leaves UNKNOWN.",
-  "last_run_id": "CAP-045-COMPLETION-BRIDGE-REFEREE-2026-11-03",
-  "last_run_result": "DEDUCTIVE_LEMMA_PROVED_EXTERNAL_DEPENDENCIES_PENDING_SAT_UNKNOWN",
+  "current_hypothesis": "Only root goal: exact r3(7). Actual global 237 cap feasibility in complete 2187-point model and H00 root-complete Z3 both timed out UNKNOWN. Independent nonlocal affine-union MILP searches found no >=237 witness. Exact 1093-direction formal integer histogram with max six-dimensional hyperplane89 matches S2/S3, barycenter Type0/1 and rank6 quadratic spectrum; thus aggregate moment/Q alone cannot close 237. Need pointwise geometry or true proof-producing SAT, not more local verifiers.",
+  "next_experiment": "USER DISABLED HOURLY AUTOMATION: no scheduled work. If explicitly requested, pursue a genuinely root-complete independently proof-logged UNSAT for all10 CAP040 H leaves or a verified new >=237 point set and matching global upper bound; reject ordinary fixed285 or limited affine unions as root proof.",
+  "last_run_id": "CAP-046-CLOSED_ATTEMPT_DIRECT_ROOT_AND_NONLOCAL-2026-11-03",
+  "last_run_result": "GLOBAL_237_MIP_TIMEOUT_AND_CONCURRENT_Z3_H00_TIMEOUT_NONLOCAL_NO_237_RIGOROUS_AGGREGATE_COUNTERMODEL_ROOT_OPEN_HOURLY_PAUSED",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -94,7 +94,8 @@
     "CAP-042-LOCAL",
     "CAP-043-LOCAL",
     "CAP-044-LOCAL",
-    "CAP-045-DEDUCTIVE"
+    "CAP-045-DEDUCTIVE",
+    "CAP-046-ATTEMPT"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41639554296",
   "baseline_secant_audit": {
@@ -116,7 +117,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-03T13:52:00Z",
+  "last_updated_utc": "2026-11-03T14:34:20.325Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1678,5 +1679,87 @@
     "root_sat_status": "UNKNOWN",
     "solver_available_local": false,
     "novelty_claimed": false
+  },
+  "cap046_closed_attempt": {
+    "status": "OPEN_NOT_CLOSED",
+    "hourly_automation_id": "6ae77c6ed4f4819191afec5f9b63437a",
+    "hourly_automation_enabled": false,
+    "automation_pause_confirmed": true,
+    "root_global_MIP": {
+      "primary_variables": 2187,
+      "affine_lines": 796797,
+      "constraints": 796799,
+      "nonzeros": 2393307,
+      "selected_affine_frame": 8,
+      "forced_secant_zeros": 28,
+      "hyperplane_min": 89,
+      "target": 237,
+      "result": "UNKNOWN_EXTERNAL_TIMEOUT_NO_SAT_UNSAT",
+      "attempts": [
+        {
+          "external_timeout_seconds": 60,
+          "returned": false
+        },
+        {
+          "external_timeout_seconds": 22,
+          "exit_code": 124
+        }
+      ]
+    },
+    "nonlocal_affine_union_milp": {
+      "independently_checked_lower_fixture": 236,
+      "distinct_initial_transformations": 7,
+      "initial_trials": 10,
+      "union_pool_sizes_tested": [
+        300,
+        332,
+        339,
+        360,
+        374,
+        400,
+        424,
+        448
+      ],
+      "solver_reported_236_optimum_pools": [
+        300,
+        332,
+        360
+      ],
+      "other_pools": "UNKNOWN_TIMEOUT",
+      "no_new_237_witness": true
+    },
+    "aggregate_237_max89_falsification": {
+      "integer_profiles": 10,
+      "directions": 1093,
+      "global_S2": 20618289,
+      "global_S3": 1651763205,
+      "type1": 729,
+      "type0_quadratic_rank6_spectrum": [
+        112,
+        126,
+        126
+      ],
+      "is_a_cap": false,
+      "conclusion": "Aggregate moments plus quadratic rank/sign value counts alone do not rule out 237 with maximum 6D slice89"
+    },
+    "parallel_run_report": {
+      "path": "research/capset_f3_7/CLOSED_ATTEMPT_ROOT_2026-11-03.md",
+      "reported_Z3_global_H00_status": "UNKNOWN_TIMEOUT",
+      "reported_sampled_GL6_alignments": 215002,
+      "reported_best_third_slice_holes": 12,
+      "note": "Parallel agent report read from GitHub, not independently rerun in this local environment"
+    },
+    "documentation": "research/capset_f3_7/CAP046_CLOSED_ATTEMPT_2026-11-03.md",
+    "repro_sources": [
+      "research/capset_f3_7/cap046_closed_root_global_mip.py",
+      "research/capset_f3_7/cap046_closed_affine_union.py",
+      "research/capset_f3_7/cap046_aggregate_max89_falsifier.py"
+    ],
+    "exact_r3_7_value": null,
+    "global_bound_improved": false,
+    "novelty_established": false,
+    "paid_compute_used": false,
+    "gpu_used": false,
+    "all_root_leaves_unsat_proof_checked": false
   }
 }
