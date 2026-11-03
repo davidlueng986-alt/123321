@@ -1,3 +1,20 @@
+# 123321 — repository navigation
+
+本 repo 的預設 branch 是 `main`（下方 FinSight app）；數學研究位於獨立 branches，並非已合併到 main。
+
+| Branch | 內容與入口 | 主問題狀態 |
+|---|---|---|
+| [math-agent-mols10](https://github.com/davidlueng986-alt/123321/tree/math-agent-mols10) | [3-MOLS(10) 研究](https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/README.md)、[局部問題目錄](https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/docs/LOCAL_PROBLEM_CATALOG.md) | OPEN |
+| [research/capset-f3-7](https://github.com/davidlueng986-alt/123321/tree/research/capset-f3-7) | [exact r3(7) 研究](https://github.com/davidlueng986-alt/123321/blob/research/capset-f3-7/README.md)、[STATE](https://github.com/davidlueng986-alt/123321/blob/research/capset-f3-7/research/capset_f3_7/STATE.json) | OPEN |
+| [math-agent-lean-verifier](https://github.com/davidlueng986-alt/123321/tree/math-agent-lean-verifier) | Lean／Mathlib 驗證工作區；build 成功只支持其精確 theorem | 驗證工具 |
+| main | FinSight 金融 app（保留原有程式與說明） | 非數學研究結論 |
+
+**數學研究唯一成功條件：主問題 OPEN → CLOSED。** 局部定理、程式、CI、分支數及新下界都是手段；
+不得代替完整解決。Cap Set 必須同一 K 的構造與上界相遇；237 點構造本身不是 exact solved。
+詳細 branch 路徑、重播與解讀見 [RESEARCH_BRANCHES.md](RESEARCH_BRANCHES.md)。
+
+---
+
 # FinSight AI — AI Financial Assistant for SMEs
 
 > Production-grade SaaS financial intelligence platform powered by GPT-4o, Next.js 15, and PostgreSQL.
