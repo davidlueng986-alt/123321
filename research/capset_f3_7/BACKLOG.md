@@ -470,3 +470,8 @@ ROOT question: determine exact r3(7). Given verified 236, proving no 237-cap wou
 - [P0] Bounded free CPU proof-logging SAT pilot H00 compressed vs H00 uncompressed matched wallclock; require actual independently verified LRAT/DRAT-style proof for UNSAT and full 7D cap arithmetic for SAT. If unavailable/timed out, report UNKNOWN; don't imply completion.
 - [P0] Optimize other nine dense-H branches only after confirming matched-benchmark benefit; first naive all10 enumeration timed out after eight, no ten-way compressed exhaustive result yet. Never misinterpret reduced CNF size as bound on r3(7).
 - [P0] Alternative proof route: 13 globally complete S8 frame branches or unconditional nonlocal >=237 constructive search. Candidate CAP019 <=287 still requires hostile external 110-cap classification referee. Root r3(7) OPEN.
+
+## CAP-042 (2026-11-03 UTC)
+- [LOCAL EXACT PASS / CI PENDING] Independent full ten-branch incidence census closes CAP041 aborted eight-branch computation. H05, H07/H08 and H09 have distinct exact clause counts; do not reuse H00 counts indiscriminately. Source cap042_ten_leaf_incidence.py and CAP042 report.
+- [P0] Check new CI; run bounded free-CPU proof-logged SAT H00 with independently verified SAT witness or UNSAT certificate. Timeout UNKNOWN. Root requires all ten branches proved UNSAT to establish <=236.
+- [P1] CAP019 classification referee, nonlocal >=237 witness search; novelty unestablished; exact r3(7) OPEN.
