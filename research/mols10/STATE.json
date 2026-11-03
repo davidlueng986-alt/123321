@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "Clean independent CI replay E049_cycle3.js and six-class LP/exact dual on 109 support-positive prefixes; continue unrestricted symmetry-complete proof-producing SAT.",
+  "next_action": "Persist full E051 certificates/code and CI replay; test remaining E049 source prefixes and prioritize unrestricted symmetry-complete SAT.",
   "current_hypothesis": "E049 three-column cyclic rewrites find 133 valid neighbors unlike mostly rigid E048 intercalate/row alignment tests; 109 pass resource support, LP feasibility unknown.",
-  "last_experiment": "MOLS10-E049-FOURTH-ROW-THREE-CYCLE",
+  "last_experiment": "MOLS10-E051-E050-EXACT-DUAL-UPGRADE",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549028462",
   "last_verified_results": [
@@ -25,7 +25,8 @@
     "E046 REMOTE: 131 new unique fixed-k4-neighbor prefixes from 71 sources; 131 exact integer Farkas duals, 52920 candidates independently checked, 131 mutation rejections; 124 original duals and 7 original zero-support obstructions invalid on neighbors. CI run 41531858521 SUCCESS; evidence commit 9de3abb68b81bf7e37703d1ec842d3c0708fc24e. No full orbit excluded.",
     "E047 REMOTE: 246960 two-disjoint-swap proposals from 8 exact fixed k4 prefixes, 479 distinct valid, 79 exact zero-support and 400 integer Farkas duals, independent JS exact 479/479 PASS, 192078 placements, mutation rejected. CI SUCCESS 41541210306; full data commit b40863306ac3c62ca9cff6276caaaa63ad4f063d. Restricted local result; no full orbit excluded.",
     "E048: local 1565 distinct fixed k4 prefixes x576 relative row permutations identity-only (901440 proposals); remote 1569 distinct x576 identity-only (903744 proposals) strict CI PASS; 2895 static original 2x2 intercalate subsets on 8 sources, 1 valid changed prefix exact zero-support resource C(2,9,5), independently JS/Python verified. No full orbit excluded.",
-    "E049 in-tool exhaustive 13440 three-column cyclic proposals, 133 valid, 24 exact zero-support, 109 full resource support; CI independent replay pending, no orbit excluded."
+    "E049 in-tool exhaustive 13440 three-column cyclic proposals, 133 valid, 24 exact zero-support, 109 full resource support; CI independent replay pending, no orbit excluded.",
+    "E051 local independent integer replay: E050 source0 15/15 fixed k4 nonextensions, 8 zero support +7 integer Farkas, 6210 legal residual placements; full certificates presently local artifacts, not yet GitHub."
   ],
   "certificate_path": "research/mols10/E008_E011_OPTIMALITY_PROOFS.md",
   "code_paths": [
@@ -132,7 +133,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-03T00:50:00Z",
+  "last_run_utc": "2026-11-03T02:55:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -168,7 +169,7 @@
   "limitations": "E048 sources are 1565 local /1569 remote distinct but correlated k4 prefixes, not full symmetry coverage. Static original intercalates sizes1..4 on 8 E047 sources only; no arbitrary dynamic trade chains. Local E045 574 differs from remote E045 570. Initial CI erroneously green due tee without pipefail, fixed; strict replay SUCCESS. No new LP-feasible k4.",
   "last_ci_result": "E048 strict pipefail GitHub Actions run 41549028462 SUCCESS, remote 1569 distinct prefixes x576=903744 row alignments identity-only, 2895 static intercalate subsets, 1 valid changed prefix with exact zero-support resource 595. First CI had masked assertion failure, audited and corrected.",
   "external_status_review": "2026-11-02 23:50 UTC: fresh primary arXiv 2503.10504v2 and 2605.02132v2 plus targeted November web/arXiv search; no independently checkable unrestricted solution found, absence of hits not proof.",
-  "current_math_result": "GLOBAL OPEN; 0/162959 complete orbits excluded. E049 exact 13440 cyclic three-column fourth-row proposals on eight E047 sources; 133 valid k4 prefixes, 24 exact zero-support obstructions and 109 full-support but untested by six-class LP.",
+  "current_math_result": "GLOBAL OPEN. E051 exact upgraded E050 source0: 15 fixed k4 prefixes, 8 zero-support and 7 integer Farkas duals, 6210 legal placements independently checked. 0 full orbits excluded.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
