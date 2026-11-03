@@ -1,0 +1,41 @@
+name: MOLS10 E062 Public Pair Closure Scan
+on:
+  workflow_dispatch:
+  push:
+    branches: [math-agent-mols10]
+    paths:
+      - 'research/mols10/E062_*'
+      - '.github/workflows/mols10-e062.yml'
+permissions:
+  contents: write
+jobs:
+  public-orthogonal-pairs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Independently enumerate known pairs and seek complete MOLS10
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd research/mols10
+          bash E062_CI_REPLAY.sh | tee e062_ci.log
+      - name: Persist result (not raw source catalogue)
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd research/mols10
+          if [ -f E062_WANLESS_PAIR_SCAN.json ]; then
+            python -m json.tool E062_WANLESS_PAIR_SCAN.json > /dev/null
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git config user.name 'github-actions[bot]'
+            git add E062_WANLESS_PAIR_SCAN.json
+            if ! git diff --cached --quiet; then
+              git commit -m 'MOLS10 E062: independently scanned published order-10 MOLS pairs'
+              git push origin HEAD:math-agent-mols10
+            fi
+          fi

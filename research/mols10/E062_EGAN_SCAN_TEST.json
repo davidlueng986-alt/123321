@@ -1,0 +1,34 @@
+{
+  "source_url": "https://users.monash.edu.au/~iwanless/data/MOLS/MOLS10.txt",
+  "sha256": "8fad554cdbc16dba4dadf506fe632695410b200407bac45a1a600e3a051c54fa",
+  "source_squares": 2,
+  "source_pairs": 1,
+  "pairs_processed": 1,
+  "max_common_transversals": 14,
+  "common_transversal_count_distribution": {
+    "14": 1
+  },
+  "disjoint_packing_distribution_exact_or_lowerbound": {
+    "7": 1
+  },
+  "packing_unknown_cases": [],
+  "record_packing_improvements": [
+    {
+      "index": 0,
+      "max_disjoint_lower_bound": 7,
+      "common_transversals": 14,
+      "best_pack": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        7
+      ]
+    }
+  ],
+  "complete_witness": null,
+  "global_claim": "OPEN; results apply only to published pairs; a full witness requires 3 complete 10x10 arrays",
+  "seconds": 0.008
+}
