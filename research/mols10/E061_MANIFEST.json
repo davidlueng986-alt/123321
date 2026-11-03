@@ -3,6 +3,10 @@
     "bytes": 2082,
     "sha256": "38b08a499d271caa35afef6055d2a7ffe3e023869fed68fd49e432fbf1bdbdd8"
   },
+  "E061_INDEPENDENT_VERIFY_LOG.json": {
+    "bytes": 460,
+    "sha256": "988050c4745a807f273492536b0dd9e500cfc1b6452422454b17bf21a1d6734f"
+  },
   "E061_REPORT.md": {
     "bytes": 8251,
     "sha256": "4e5437fa8e55c2ffd6ae42d80134c064206d12db3f55d10f5a29b5507b752040"
@@ -48,8 +52,8 @@
     "sha256": "5481283ad9bc42b84f1b5f406bb5df1829e120031145074666ab5dbfd6c57387"
   },
   "E061_replay.sh": {
-    "bytes": 463,
-    "sha256": "783d95b5465e8e22347cf655b20bb27cd6c8ab8d8abd3b7d74519f96f38a582f"
+    "bytes": 966,
+    "sha256": "ef787c442adf4176ba4ae32d0df8ca90dbc6b75f94c2c27562dc613b87399637"
   },
   "E061_symbol_trades.json": {
     "bytes": 487,
