@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "ON-DEMAND ONLY. Aim CLOSED by constructing any 2MOLS10 pair with eight disjoint common transversals and bipartite residual graph (or nine disjoint), or by unrestricted full 5-coordinate SAT/CDCL proof-carrying and full 12-cycle/162959 A/B orbit coverage. Avoid bounded local-neartriple polishing. Any claimed SAT must independent check 100/100/100; any UNSAT must independent proof and complete coverage.",
-  "current_hypothesis": "SOLE MISSION CLOSE 3-MOLS(10). Existence equivalently: any 2-MOLS(10) pair with 9 disjoint COMMON transversals, or with 8 disjoint COMMON transversals and bipartite residual 20-cell 4-resource graph. Alternatively SAT witness for complete 5-coordinate OA. Nonexistence requires unrestricted verified theorem or full proof-producing orbit coverage.",
-  "last_experiment": "MOLS10-E061-FULL-OA-DLX-TRANSVERSAL-BIPARTITE-CLOSURE-SEARCH",
+  "next_action": "ON-DEMAND only; hourly task stays disabled. Attack CLOSED by SAT/CDCL with row/column/AB/C orthogonality coupled with ≥7 or ≥8 disjoint common transversal classes while varying BOTH squares, or unrestricted 5-coordinate OA proof-carrying branching. Avoid more random pair generation (observed max2 of 2781), and do not infer universal nonexistence from source corpus / fixed A.",
+  "current_hypothesis": "ONLY MISSION CLOSE 3-MOLS10. Public 2781 unconditioned pairs have max2 disjoint common transversals; generic pair generation poor. A stronger direct route must jointly vary both A and B under 7+ transversal cell-set constraints, or use full 5-coordinate OA SAT/CDCL with proof logging.",
+  "last_experiment": "MOLS10-E062-2781-WANLESS-PAIRS-EXACT-SCAN-AND-FIXED-EGAN-7PACK-RIGIDITY",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549028462",
   "last_verified_results": [
@@ -133,7 +133,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-03T11:51:21Z",
+  "last_run_utc": "2026-11-03T12:35:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -166,10 +166,10 @@
     "research/mols10/E049_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "E061 3-MOLS(10) OPEN, no valid complete witness or unrestricted theorem; all 12 cycle types order10 only UNKNOWN, zero orbit closures. 3.7M local trade states bounded to one historical neartriple and global symbol relabel quotient, not all Latin triples. Egan 7 disjoint pack is one fixed pair, not universal. E061 exact small-order algorithmic UNSAT results lack formal LRAT/DRAT certificates. No solution ETA.",
+  "limitations": "Still OPEN, no triple witness and no complete unrestricted nonexistence proof. Corpus enumerates only Ian Wanless's published random pairs; 899-node B uniqueness applies only one Egan A and seven fixed transversals; full 5D A/B-variable search UNKNOWN. CI public corpus scan source stored by remote GitHub Actions. Hourly automation user-paused.",
   "last_ci_result": "E048 strict pipefail GitHub Actions run 41549028462 SUCCESS, remote 1569 distinct prefixes x576=903744 row alignments identity-only, 2895 static intercalate subsets, 1 valid changed prefix with exact zero-support resource 595. First CI had masked assertion failure, audited and corrected.",
   "external_status_review": "2026-11-02 23:50 UTC: fresh primary arXiv 2503.10504v2 and 2605.02132v2 plus targeted November web/arXiv search; no independently checkable unrestricted solution found, absence of hits not proof.",
-  "current_math_result": "E061 GLOBAL OPEN: Exact 5-coordinate DLX n3 UNSAT, n4 SAT 16/16/16, n5 SAT 25/25/25, n6 UNSAT 200601 complete nodes; n10 1687552 nodes 15s UNKNOWN. All 12 canonical A second-row cycle types 1s each UNKNOWN; seven specific f=2^5,g=shift{k} branches UNKNOWN. New pair constructor n10 10 randomized seeded bounded cases UNKNOWN. Mathematical closure lemma and code: any order10 orthogonal A/B pair + 9 disjoint common transversals produces third square; 8 transversals plus bipartite residual graph on20 cells also sufficient and necessary for extension of that packing. Exact positive controls n4/5 PASS. Egan A/B pair has exactly 14 common transversals, maximum 7 disjoint. Exhaustive depth<=3 two-symbol cycle trade neighborhood from Egan 100/100/91 (3702370 search nodes) found no improvement; two whole row/column swaps 16110 cases no improvement. 0 globally closed symmetry orbits, no order10 solution.",
+  "current_math_result": "E062 GLOBAL OPEN, 0 unrestricted orbit closures. Public Ian Wanless file SHA256 efc22cbdb1ffe0ea6173011a738fa6893304e787263913c218e0cb480144428d, 5562 order10 Latin squares in 2781 orthogonal pairs: full exact transversal counts 2455 zero, 308 one, 17 two, 1 three; exact maximum disjoint counts 2455 zero,317 one,9 two. All 2781 completed no UNKNOWN; none has 8/9 packing. Independent Scheinerman published pair has ZERO common transversals; Egan-Wanless fixed pair has 14 transversals max disjoint7, order4/5 controls reconstruct full triples. With Egan A and 7 chosen C transversals FIXED, B[0] normalized, Z3 proves no B other than original (0.066s); independent pure C++ DLX enumerates exactly ONE B in 899 search nodes. This is strictly local rigidity. With both A/B variable and same 7 C cell sets, full OA DLX 17146 candidates,3457024 nodes,20.076s, returns UNKNOWN_BUDGET. MILP 3x4s+1x25s UNKNOWN; none is nonexistence proof. No full 100/100/100.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -247,5 +247,8 @@
   "e060_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E060_REPORT.md",
   "e060_bundle_drive_url": "https://drive.google.com/file/d/19W7akbXPXctABdKK6dTjHlSFtpPjizAE/view",
   "e061_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E061_REPORT.md",
-  "e061_bundle_drive_url": "https://drive.google.com/file/d/1QmUWeCQM0-ou_6AzA-w6SnKTRAlFisCQ/view"
+  "e061_bundle_drive_url": "https://drive.google.com/file/d/1QmUWeCQM0-ou_6AzA-w6SnKTRAlFisCQ/view",
+  "e062_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E062_REPORT.md",
+  "e062_scan_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E062_WANLESS_PAIR_SCAN.json",
+  "e062_bundle_drive_url": "https://drive.google.com/file/d/1KMJJALFEelJibTghi3ZeYdOS54cPex8I/view"
 }

@@ -1,0 +1,82 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// Fixed 7 C-symbol classes from a known disjoint transversal packing,
+// C labels reidentified so C[0,c]=c; A,B otherwise FREE.
+static int Cfixed[10][10]={{0,-1,-1,-1,4,5,6,7,8,9},{9,7,5,-1,-1,8,4,6,-1,0},{7,-1,8,6,5,-1,9,0,4,-1},{8,4,-1,9,7,6,-1,-1,0,5},{6,5,-1,0,-1,4,8,9,-1,7},{4,0,6,-1,9,-1,5,8,7,-1},{5,-1,0,4,6,7,-1,-1,9,8},{-1,8,7,5,-1,9,0,4,6,-1},{-1,6,9,8,0,-1,7,-1,5,4},{-1,9,4,7,8,0,-1,5,-1,6}};
+using Clock=chrono::steady_clock;
+struct Candidate {int r,c,a,b,d;};
+struct DLX {
+ int n,roots,head,tot, selected=0,maxdepth=0;
+ vector<int> L,R,U,D,C,S,ROW; vector<Candidate> cand; vector<array<int,10>> cs;
+ vector<int> chosen,solution; long long nodes=0, prune=0, branches=0; bool timedout=false; Clock::time_point started; double limit=5.0; long long node_budget=1000000;
+ DLX(int n_):n(n_),roots(10*n*n),head(0),tot(roots+1){
+  L.resize(roots+1);R.resize(roots+1);U.resize(roots+1);D.resize(roots+1);C.resize(roots+1);S.resize(roots+1);ROW.resize(roots+1);
+  for(int i=0;i<=roots;i++){L[i]=i-1;R[i]=i+1;U[i]=D[i]=i;C[i]=i;}
+  L[0]=roots;R[roots]=0;
+ }
+ void add(int r,int c,int a,int b,int d){
+   int id=cand.size();cand.push_back({r,c,a,b,d});
+   array<int,10> cols{};cols[0]=r*n+c;
+   int x[3]={a,b,d};
+   for(int i=0;i<3;i++){
+    cols[1+2*i]=n*n+(2*i)*n*n+r*n+x[i];
+    cols[2+2*i]=n*n+(2*i+1)*n*n+c*n+x[i];
+   }
+   cols[7]=7*n*n+a*n+b;cols[8]=8*n*n+a*n+d;cols[9]=9*n*n+b*n+d;
+   int first=tot;
+   for(int k=0;k<10;k++){
+    int col=cols[k]+1;int u=U[col];
+    U.push_back(u);D.push_back(col);L.push_back(tot-1);R.push_back(tot+1);C.push_back(col);S.push_back(0);ROW.push_back(id);
+    U[col]=tot;D[u]=tot;S[col]++;tot++;
+   }
+   L[first]=tot-1;R[tot-1]=first;
+   cs.push_back(cols);
+ }
+ void cover(int c){R[L[c]]=R[c];L[R[c]]=L[c];for(int i=D[c];i!=c;i=D[i])for(int j=R[i];j!=i;j=R[j]){U[D[j]]=U[j];D[U[j]]=D[j];S[C[j]]--;}}
+ void uncover(int c){for(int i=U[c];i!=c;i=U[i])for(int j=L[i];j!=i;j=L[j]){S[C[j]]++;U[D[j]]=j;D[U[j]]=j;}R[L[c]]=c;L[R[c]]=c;}
+ bool go(int d){
+  nodes++;if(d>maxdepth)maxdepth=d;
+  if(nodes>=node_budget || ((nodes&16383)==0 && chrono::duration<double>(Clock::now()-started).count()>limit)) {timedout=true;return false;}
+  if(R[head]==head){solution=chosen;return true;}
+  int c=-1,best=INT_MAX;
+  for(int i=R[head];i!=head;i=R[i]){if(S[i]<best){best=S[i];c=i;if(best<=1)break;}}
+  if(best==0){prune++;return false;}
+  cover(c);
+  for(int r=D[c];r!=c;r=D[r]){
+   chosen.push_back(ROW[r]); branches++;
+   for(int j=R[r];j!=r;j=R[j])cover(C[j]);
+   if(go(d+1))return true;
+   for(int j=L[r];j!=r;j=L[j])uncover(C[j]);
+   chosen.pop_back();
+   if(timedout)break;
+  }
+  uncover(c);
+  return false;
+ }
+ string solve(double secs,long long nbudget){limit=secs;node_budget=nbudget;started=Clock::now();bool sat=go(0);double elapsed=chrono::duration<double>(Clock::now()-started).count();
+  string status=sat?"SAT":timedout?"UNKNOWN_BUDGET":"UNSAT_EXHAUSTIVE";
+  cerr << "E061 order "<<n<<" candidates "<<cand.size()<<" nodes "<<nodes<<" branches "<<branches<<" prune "<<prune<<" maxdepth "<<maxdepth<<" sec "<<elapsed<<" status "<<status<<"\n";
+  cout << "{\"n\":"<<n<<",\"status\":\""<<status<<"\",\"candidates\":"<<cand.size()<<",\"nodes\":"<<nodes<<",\"branches\":"<<branches<<",\"dead_ends\":"<<prune<<",\"maxdepth\":"<<maxdepth<<",\"seconds\":"<<setprecision(5)<<elapsed;
+  if(sat){vector<vector<vector<int>>> mats(3,vector<vector<int>>(n,vector<int>(n,-1)));for(int id:solution){auto v=cand[id];mats[0][v.r][v.c]=v.a;mats[1][v.r][v.c]=v.b;mats[2][v.r][v.c]=v.d;}for(auto&m:mats)for(auto&row:m)for(int v:row)if(v<0)abort();cout<<",\"witness\":[";for(int s=0;s<3;s++){if(s)cout<<",";cout<<"[";for(int r=0;r<n;r++){if(r)cout<<",";cout<<"[";for(int c=0;c<n;c++){if(c)cout<<",";cout<<mats[s][r][c];}cout<<"]";}cout<<"]";}cout<<"]";}
+  cout<<"}\n";
+  return status;
+ }
+};
+int main(int argc,char**argv){int n=argc>1?atoi(argv[1]):10;double sec=argc>2?atof(argv[2]):5;long long budget=argc>3?atoll(argv[3]):10000000;
+ vector<int> f(n,-1);string cyc=argc>4?argv[4]:"";if(cyc.size()){
+  vector<int> dims;istringstream ss(cyc);string tok;int next=0;
+  while(getline(ss,tok,',')){int k=stoi(tok);if(k<2||next+k>n)abort();
+   for(int j=0;j<k;j++)f[next+j]=next+(j+1)%k;next+=k;dims.push_back(k);}
+  if(next!=n||f[0]!=1)abort();
+ }
+vector<int> g; if(argc>5){istringstream gs(argv[5]);string tok;while(getline(gs,tok,','))g.push_back(stoi(tok));if(g.size()!=size_t(n))abort();vector<int> tmp=g;sort(tmp.begin(),tmp.end());for(int i=0;i<n;i++)if(tmp[i]!=i||g[i]==i||g[i]==f[i])abort();}
+ DLX solver(n);for(int r=0;r<n;r++)for(int c=0;c<n;c++){
+ if(r==0){solver.add(r,c,c,c,c);continue;}
+ for(int a=0;a<n;a++){if(a==c)continue;
+ for(int b=0;b<n;b++){if(b==c||b==a||(r==1&&!g.empty()&&b!=g[c]))continue;
+ for(int d=0;d<n;d++){if(d==c||d==a||d==b||(Cfixed[r][c]>=0&&d!=Cfixed[r][c]))continue;solver.add(r,c,a,b,d);}}
+ }
+ }
+ solver.solve(sec,budget);
+}

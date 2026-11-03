@@ -1,0 +1,20 @@
+{
+  "source_url": "https://users.monash.edu.au/~iwanless/data/MOLS/MOLS10.txt",
+  "source_sha256": "efc22cbdb1ffe0ea6173011a738fa6893304e787263913c218e0cb480144428d",
+  "source_squares": 5562,
+  "source_pairs": 2781,
+  "pairs_checked": 2781,
+  "full_pair_validation": true,
+  "common_transversals_histogram": {"0": 2455, "1": 308, "2": 17, "3": 1},
+  "max_disjoint_histogram": {"0": 2455, "1": 317, "2": 9},
+  "packing_unknown_cases": 0,
+  "max_common_transversals": 3,
+  "max_disjoint": 2,
+  "complete_triple": null,
+  "result_scope": "ONLY PUBLIC 2781 PAIRS; NOT UNRESTRICTED 3-MOLS(10)",
+  "Egan_orthogonal_pair_control": {"common_transversals":14,"max_disjoint":7},
+  "published_scheinerman_pair_control": {"common_transversals":0,"max_disjoint":0},
+  "fixed_Egan_A_and_7_transversals": {"z3":"UNSAT_DIFFERENT_B","independent_dlx":"EXHAUSTIVE_UNIQUE_B","nodes":899,"all_solutions":1,"distinct_B":0},
+  "full_OA_given_7_C_transversals": {"status":"UNKNOWN_BUDGET","nodes":3457024,"candidate_choices":17146},
+  "global_status":"OPEN"
+}
