@@ -440,3 +440,8 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 ## CAP-037 (2026-11-03 UTC) — Full AGL(4,3) stabilizer
 - [LOCAL EXACT PASS / CI PENDING] The CAP027 fixed formal 285 occupancy has trivial stabilizer in ALL AGL(4,3), not merely CAP036's monomial subgroup. Nine cells of occupancy 4/7 form the unique affine plane E; every affine stabilizer preserves it. The two 7-cells restrict (D,t) to 12 possibilities. All 48*81*12=46656 remaining affine block maps were checked against the nine 6-cells; only identity remains. Deterministic CPU-only, no seed. See cap037_full_agl_stabilizer.py and CAP037_FULL_AGL_STABILIZER_2026-11-03.md.
 - [P0] Confirm CI for CAP037. Do not impose quotient AGL4 symmetry breaking on this fixed instance. Continue bounded proof-logged SAT with independent UNSAT verification, CAP019 external referee and >=237 search. This is not a 285 cap, not a global bound, no novelty claim.
+
+## CAP-038 (2026-11-03 UTC)
+- [LOCAL INDEPENDENT EXACT PASS / CI PENDING] CAP035 796797 forbidden-triple DIMACS prefix independently reconstructed by base-3 arithmetic; matching SHA256. CAP037 CI 41599046083 SUCCESS. See CAP038 report/checker.
+- [P0] Independently audit auxiliary cardinality suffix and run CPU-bounded proof-logged SAT with verified UNSAT certificate or independently checked SAT witness; timeout UNKNOWN. Local solver absent.
+- [P1] CAP019/Thackeray classification referee, balanced/no-112, nonlocal >=237 witness search. This fixed occupancy is not a global upper bound.
