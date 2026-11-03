@@ -425,3 +425,8 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0] Find *multi-line* constraints needing actual shared internal 3D point arrangements, not only cap types; certify via proof logging and independent full 7D arithmetic.
 - [P0 REFEREE] Independently audit Thackeray 110-cap classification under CAP019 provisional global <=287, before making unconditional bound claims; parallel balanced/no-112 and >=237 constructive search.
 - [HONESTY] CA032B/C claims are universal necessary geometry and finite exact maxima in dimension4; no r3(7) numeric improvement, novelty unverified. Check latest GitHub Actions before CI promotion.
+
+## CAP-035 (2026-11-03 05:56 UTC)
+- [LOCAL CPU PASS / CI PENDING] Complete shared-variable 2187-primary-variable CNF generator with 796797 3AP clauses, fixed formal-285 81-fiber exact counts encoded by sequential counters. Exact 3AP prefix SHA256 in report; small counter encodings exhaustive truth-table checked. No solver run, status UNKNOWN.
+- [P0] Confirm exact final CAP035 CI. Run a CPU-bounded proof-logged solver pilot; require independent DRAT/LRAT checker for UNSAT and independent 7D arithmetic for SAT. A fixed occupancy UNSAT is conditional only.
+- [P0 META] Avoid low-value repetitions of count-only relaxation; prioritize shared-fiber geometric conflict, classification/upper-bound referee and balanced/no-112 and >=237 branches.
