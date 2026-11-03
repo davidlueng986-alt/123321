@@ -480,3 +480,8 @@ ROOT question: determine exact r3(7). Given verified 236, proving no 237-cap wou
 - [LOCAL EXACT PASS / CI PENDING] Independent base3 coordinate convention verifies CAP042 ten ninth-point classes, and explains unique 35-zero H09: third(0,e1+e2)=third(e1,e2). The other nine branches have 36 distinct forced-zero points. CAP042 Actions 41623152905 SUCCESS.
 - [P0] Do not over-invest in counting: bounded proof-logged root SAT pilot; check actual UNSAT certificate with independent verifier, SAT coordinates with independent checker, timeout UNKNOWN. All ten root leaves needed for <=236 proof.
 - [P1] CAP019/Thackeray classification referee and nonlocal >=237 construction; exact optimum OPEN.
+
+## CAP-044 (2026-11-03 UTC)
+- [DONE LOCAL] Independent barycentric 701/10-orbit regression; no new bound, SAT still UNKNOWN. See CAP044 report.
+- [P0] Stop census-only iterations. Run bounded proof-logged CPU SAT on a complete root leaf; verify SAT witness or UNSAT proof independently. Timeout=UNKNOWN.
+- [P1] CAP019 external classification referee and >=237 search. Keep exact objective and branch isolation.
