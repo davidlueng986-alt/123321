@@ -432,3 +432,8 @@ Verified exact algebra A_k ∩ {-a-b:a∈A_i,b∈A_j}=∅ on quotient lines; CAP
 - Read dedicated Drive ledger/folder and GitHub STATE/LOG/BACKLOG, commits and Actions; CAP030 CI 41556385711 SUCCESS at 4a29329f. Independent local Python exact quotient-line enumeration: 1080 quotient lines, 9477 internal and 787320 cross-fiber 3APs, total 796797; direct ambient count agrees. No randomness, GPU or paid compute.
 - Created cap031_factorization.py and CAP031_SHARED_FIBER_EXACT_FACTORIZATION_2026-11-03.md. This is an exact shared-variable SAT formulation, NOT an executed SAT/UNSAT solve, NOT a 285 cap, NOT a global bound. Novelty unestablished.
 - Next: fixed CAP027 occupancy PB+CNF bounded proof-logged SAT, independent certificate; Thackeray referee and balanced/no-111. r3(7) OPEN.
+
+## 2026-11-03 | CAP-032 exact random occupancy 3AP expectation | ANALYTIC / CI PENDING
+- Read Drive ledger/folder, STATE/LOG/BACKLOG, branch commits and CI. CAP031 run 41562888815 SUCCESS.
+- Under independent uniformly chosen subsets of the CAP027 fixed fiber occupancy (63x3, 7x4, 9x6, 2x7), exact expected 3AP count is 131198/75: 341/25 internal plus 5207/3 cross. Enumerated 1080 quotient lines, sum of triple occupancy products 46863; independent ordered-pair identity counts six orientations per line. Deterministic code cap032_random_occupancy_expectation.py; report CAP032_RANDOM_OCCUPANCY_EXPECTATION_2026-11-03.md.
+- No SAT/UNSAT, no actual 285-cap, no novel bound or >=237 witness. This expectation is not a minimum or an impossibility proof. Avoid independent random fiber assignments; prioritize point-level shared-variable proof-logged SAT and CAP019 hostile referee.
