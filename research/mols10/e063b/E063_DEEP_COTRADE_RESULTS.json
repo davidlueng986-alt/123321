@@ -1,0 +1,1841 @@
+{
+  "status": "ONLY_WHOLE_SYMBOL_RELABELLINGS_SURVIVE",
+  "A_one_trade_variants": 120,
+  "B_one_trade_variants": 78,
+  "A_two_trade_unique_variants": 9192,
+  "B_two_trade_unique_variants": 4824,
+  "candidate_count_by_family": {
+    "A_two_B_at_most_one": 726168,
+    "B_two_A_at_most_one": 583704
+  },
+  "orthogonal_new_pairs": [
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            0,
+            1
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 8
+        },
+        "second": {
+          "symbols": [
+            0,
+            1
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 12
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            0,
+            2
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 8
+        },
+        "second": {
+          "symbols": [
+            0,
+            2
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 12
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            0,
+            3
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 4
+        },
+        "second": {
+          "symbols": [
+            0,
+            3
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 16
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            0,
+            4
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 16
+        },
+        "second": {
+          "symbols": [
+            0,
+            4
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 4
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            0,
+            5
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 4
+        },
+        "second": {
+          "symbols": [
+            0,
+            5
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 16
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            0,
+            6
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 4
+        },
+        "second": {
+          "symbols": [
+            0,
+            6
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 16
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            0,
+            7
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 4
+        },
+        "second": {
+          "symbols": [
+            0,
+            7
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 16
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            0,
+            8
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 16
+        },
+        "second": {
+          "symbols": [
+            0,
+            8
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 4
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            0,
+            9
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 4
+        },
+        "second": {
+          "symbols": [
+            0,
+            9
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 16
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            1,
+            2
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 14
+        },
+        "second": {
+          "symbols": [
+            1,
+            2
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 6
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            1,
+            3
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 14
+        },
+        "second": {
+          "symbols": [
+            1,
+            3
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 6
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            1,
+            4
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 6
+        },
+        "second": {
+          "symbols": [
+            1,
+            4
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 14
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            1,
+            6
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 10
+        },
+        "second": {
+          "symbols": [
+            1,
+            6
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 10
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            1,
+            8
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 6
+        },
+        "second": {
+          "symbols": [
+            1,
+            8
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 14
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            2,
+            3
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 14
+        },
+        "second": {
+          "symbols": [
+            2,
+            3
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 6
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            2,
+            4
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 10
+        },
+        "second": {
+          "symbols": [
+            2,
+            4
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 10
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            2,
+            5
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 10
+        },
+        "second": {
+          "symbols": [
+            2,
+            5
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 10
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            2,
+            9
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 6
+        },
+        "second": {
+          "symbols": [
+            2,
+            9
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 14
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            3,
+            5
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 10
+        },
+        "second": {
+          "symbols": [
+            3,
+            5
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 10
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            3,
+            6
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 4
+        },
+        "second": {
+          "symbols": [
+            3,
+            6
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 16
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            3,
+            7
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 8
+        },
+        "second": {
+          "symbols": [
+            3,
+            7
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 12
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            4,
+            5
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 14
+        },
+        "second": {
+          "symbols": [
+            4,
+            5
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 6
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            4,
+            6
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 14
+        },
+        "second": {
+          "symbols": [
+            4,
+            6
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 6
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            4,
+            7
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 16
+        },
+        "second": {
+          "symbols": [
+            4,
+            7
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 4
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            4,
+            8
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 4
+        },
+        "second": {
+          "symbols": [
+            4,
+            8
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 16
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            4,
+            9
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 12
+        },
+        "second": {
+          "symbols": [
+            4,
+            9
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 8
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            5,
+            6
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 14
+        },
+        "second": {
+          "symbols": [
+            5,
+            6
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 6
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            5,
+            7
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 12
+        },
+        "second": {
+          "symbols": [
+            5,
+            7
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 8
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            5,
+            8
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 4
+        },
+        "second": {
+          "symbols": [
+            5,
+            8
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 16
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            5,
+            9
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 4
+        },
+        "second": {
+          "symbols": [
+            5,
+            9
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 16
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            6,
+            7
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 16
+        },
+        "second": {
+          "symbols": [
+            6,
+            7
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 4
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            6,
+            8
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 12
+        },
+        "second": {
+          "symbols": [
+            6,
+            8
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 8
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            6,
+            9
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 16
+        },
+        "second": {
+          "symbols": [
+            6,
+            9
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 4
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            7,
+            8
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 6
+        },
+        "second": {
+          "symbols": [
+            7,
+            8
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 14
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {        "first": {
+          "symbols": [
+            7,
+            9
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 14
+        },
+        "second": {
+          "symbols": [
+            7,
+            9
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 6
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "A_two_B_at_most_one",
+      "A": {
+        "first": {
+          "symbols": [
+            8,
+            9
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 6
+        },
+        "second": {
+          "symbols": [
+            8,
+            9
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 14
+        }
+      },
+      "B": {
+        "base": true
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            0,
+            1
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 6
+        },
+        "second": {
+          "symbols": [
+            0,
+            1
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 14
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            0,
+            2
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 8
+        },
+        "second": {
+          "symbols": [
+            0,
+            2
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 12
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            0,
+            3
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 8
+        },
+        "second": {
+          "symbols": [
+            0,
+            3
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 12
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            0,
+            7
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 12
+        },
+        "second": {
+          "symbols": [
+            0,
+            7
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 8
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            0,
+            8
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 8
+        },
+        "second": {
+          "symbols": [
+            0,
+            8
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 12
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            0,
+            9
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 12
+        },
+        "second": {
+          "symbols": [
+            0,
+            9
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 8
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            1,
+            2
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 4
+        },
+        "second": {
+          "symbols": [
+            1,
+            2
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 16
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            1,
+            3
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 4
+        },
+        "second": {
+          "symbols": [
+            1,
+            3
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 16
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            1,
+            4
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 14
+        },
+        "second": {
+          "symbols": [
+            1,
+            4
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 6
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            1,
+            5
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 16
+        },
+        "second": {
+          "symbols": [
+            1,
+            5
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 4
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            1,
+            6
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 14
+        },
+        "second": {
+          "symbols": [
+            1,
+            6
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 6
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            2,
+            3
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 16
+        },
+        "second": {
+          "symbols": [
+            2,
+            3
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 4
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            2,
+            4
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 14
+        },
+        "second": {
+          "symbols": [
+            2,
+            4
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 6
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            2,
+            5
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 6
+        },
+        "second": {
+          "symbols": [
+            2,
+            5
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 14
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            2,
+            6
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 16
+        },
+        "second": {
+          "symbols": [
+            2,
+            6
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 4
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            3,
+            4
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 16
+        },
+        "second": {
+          "symbols": [
+            3,
+            4
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 4
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            3,
+            5
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 14
+        },
+        "second": {
+          "symbols": [
+            3,
+            5
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 6
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            3,
+            6
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 14
+        },
+        "second": {
+          "symbols": [
+            3,
+            6
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 6
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            4,
+            5
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 4
+        },
+        "second": {
+          "symbols": [
+            4,
+            5
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 16
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            4,
+            6
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 4
+        },
+        "second": {
+          "symbols": [
+            4,
+            6
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 16
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            4,
+            8
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 8
+        },
+        "second": {
+          "symbols": [
+            4,
+            8
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 12
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            5,
+            6
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 16
+        },
+        "second": {
+          "symbols": [
+            5,
+            6
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 4
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            5,
+            9
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 8
+        },
+        "second": {
+          "symbols": [
+            5,
+            9
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 12
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            6,
+            7
+          ],
+          "components": 3,
+          "subset": 1,
+          "cells_changed": 8
+        },
+        "second": {
+          "symbols": [
+            6,
+            7
+          ],
+          "components": 3,
+          "subset": 6,
+          "cells_changed": 12
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            7,
+            8
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 10
+        },
+        "second": {
+          "symbols": [
+            7,
+            8
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 10
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            7,
+            9
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 10
+        },
+        "second": {
+          "symbols": [
+            7,
+            9
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 10
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    },
+    {
+      "from": "B_two_A_at_most_one",
+      "A": {
+        "base": true
+      },
+      "B": {
+        "first": {
+          "symbols": [
+            8,
+            9
+          ],
+          "components": 2,
+          "subset": 1,
+          "cells_changed": 10
+        },
+        "second": {
+          "symbols": [
+            8,
+            9
+          ],
+          "components": 2,
+          "subset": 2,
+          "cells_changed": 10
+        }
+      },
+      "total_transversals": 14,
+      "max_pack": 7,
+      "closure_found": false
+    }
+  ],
+  "elapsed_seconds": 4.9067,
+  "scope": "at most two sequential two-symbol Latin cycle trades in A and at most one in B, OR reversed; original pair excluded; not an unrestricted search"
+}

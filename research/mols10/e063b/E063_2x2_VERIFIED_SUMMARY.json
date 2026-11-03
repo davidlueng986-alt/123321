@@ -1,0 +1,13 @@
+{
+  "status": "EXACT_FINITE_PAIR_NEIGHBORHOOD_EXHAUSTED_ONLY_RELABELLINGS",
+  "A_unique_two_trade_variants": 9192,
+  "B_unique_two_trade_variants": 4824,
+  "pair_candidates": 44342208,
+  "orthogonal_hits": 972,
+  "all_hits_independently_orthogonal": true,
+  "none_nonrelabel": true,
+  "A_relabelings": 36,
+  "B_relabelings": 27,
+  "full_3MOLS10_witness": false,
+  "scope": "all pairwise combinations of at most 2 sequential two-symbol cycle trades per square, excluding original A/B; one Egan A/B seed only"
+}

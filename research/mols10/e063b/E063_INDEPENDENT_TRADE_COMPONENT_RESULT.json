@@ -1,0 +1,12 @@
+{
+  "status": "INDEPENDENT_COMPLETE",
+  "pairs": 64,
+  "edges": 384,
+  "max_total_transversals": 10,
+  "max_pairwise_disjoint": 1,
+  "transversal_hist": {
+    "1": 48,
+    "7": 8,
+    "10": 8
+  }
+}

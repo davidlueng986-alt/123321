@@ -1,0 +1,15 @@
+{
+  "status": "LOCAL_NEIGHBORHOOD_EXHAUSTED_OPEN",
+  "A_variants": 120,
+  "B_variants": 78,
+  "paired_candidates": 9558,
+  "orthogonal_pairs_found": 0,
+  "eight_pack_pairs": 0,
+  "max_pack_found": 0,
+  "max_transversal_count": 0,
+  "valid_pair_records": [],
+  "verified_full_solution": null,
+  "independent_control": "Egan A/B 14 transversals max 7",
+  "seconds": 0.0327,
+  "orthogonal_pair_sources": 0
+}

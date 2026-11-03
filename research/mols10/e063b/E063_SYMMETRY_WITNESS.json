@@ -1,0 +1,17 @@
+{
+  "result": "NONTRIVIAL_AUTOTOPISM_VERIFIED_ON_EACH_EGAN_SQUARE",
+  "permutation": [
+    0,
+    2,
+    3,
+    1,
+    5,
+    6,
+    4,
+    8,
+    9,
+    7
+  ],
+  "checked_cells_per_square": 100,
+  "scope": "Egan published three squares; combine with McKay-Meynert-Myrvold 2007 theorem for existence impossibility if one such square lies in order10 triple"
+}

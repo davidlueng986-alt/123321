@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "User-triggered only; keep MOLS10 automation disabled. For unrestricted CLOSED, need complete witness / complete proof-producing global 5-coordinate OA symmetry coverage. E063 local 7-C source branch already classifies to 11 nontrivial cases, but solving them would only exclude that fixed pattern and cannot replace unrestricted proof. Do not spend time on basic GF2 or underpowered DLX neartriple local sweeps.",
-  "current_hypothesis": "SOLE MISSION CLOSED. For one fixed Egan-derived C7 70-entry third-square pattern, classify all 216 C completions under exact pattern-preserving row/column/symbol group (14 orbits); apply McKay-Meynert-Myrvold 2007 global trivial-autoparatopism theorem; attempt full five-coordinate OA with A/B free or fixed complete C. No step proves unrestricted MOLS10 nonexistence.",
-  "last_experiment": "MOLS10-E063-216-C7-COMPLETIONS-14-ORBITS-3-THEOREM-EXCLUSIONS",
+  "next_action": "ON DEMAND ONLY. STOP Egan symmetric seed and its low-depth pair trades as construction objective (excluded by existing theorem). Only CLOSED objectives: direct full five-coordinate OA SAT/CP with proof-carrying global symmetry, or find two MOLS with 8 disjoint transversals and bipartite 20-cell graph OUTSIDE known symmetric seed. No routine rechecks of 2781 Wanless corpus already completed by E062. Hourly task stays disabled.",
+  "current_hypothesis": "SOLE GOAL CLOSED: exact 100/100/100 witness or complete unrestricted negative proof. E063B tested Egan A/B two-trade-per-square neighborhood (44,342,208 pair combinations) and Egan A/C exact orthogonality-preserving trade-connected component (64 pairs); both fail 8-disjoint closure. EXISTING McKay-Meynert-Myrvold 2007 theorem excludes any full triple containing a square with nontrivial autoparatopism; all three Egan neartriple squares explicitly have such symmetry.",
+  "last_experiment": "MOLS10-E063B-44M-PAIRWISE-TWO-CYCLE-COTRADES-AND-ORTHOGONAL-TRADE-GRAPH",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549028462",
   "last_verified_results": [
@@ -133,7 +133,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-03T15:40:00Z",
+  "last_run_utc": "2026-11-03T15:36:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -166,10 +166,10 @@
     "research/mols10/E049_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "Order10 original mathematical status OPEN. E063 3 of 14 excluded *locally* within one 70-clue C pattern, not 3 of E033 global f/g classes and not a percentage-to-closure. The known 2007 theorem supplies exclusion; Z3/DLX statuses on remaining 11 are UNKNOWN, not UNSAT. All 14 S3-orbit representatives verified by exact scripts. No global proof/witness.",
+  "limitations": "Still no unrestricted CLOSED proof; 44M finite pair checks and 64 pair orbit exclude only explicitly defined Egan trade neighborhoods. Published symmetry exclusion is a general theorem but does not settle arbitrary trivial-symmetry order10 squares. The GitHub E063B CI workflow is created for independent replay; no remote run status claimed.",
   "last_ci_result": "E048 strict pipefail GitHub Actions run 41549028462 SUCCESS, remote 1569 distinct prefixes x576=903744 row alignments identity-only, 2895 static intercalate subsets, 1 valid changed prefix with exact zero-support resource 595. First CI had masked assertion failure, audited and corrected.",
   "external_status_review": "2026-11-02 23:50 UTC: fresh primary arXiv 2503.10504v2 and 2605.02132v2 plus targeted November web/arXiv search; no independently checkable unrestricted solution found, absence of hits not proof.",
-  "current_math_result": "GLOBAL 3-MOLS10 OPEN. E063 fixed C7 pattern has exactly 216 completions, 14 proven symmetry classes (eleven orbits18, three orbits6). Each of the three small orbits has explicit nontrivial Latin square autotopism, independently verified on 100 cells, and is rigorously excluded by McKay-Meynert-Myrvold 2007 theorem: 18/216 C completions excluded, 11 orbits remain. Independent full parastrophe/autoparatopism audit finds no additional exclusions. Pure stdlib exact verifier reenumerates all 216, checks every group action and the exact orbit partition, checks three certificates and mutation rejection. Full OA 17146 Boolean candidates 1000 exact equations Z3 25s UNKNOWN; 14 fixed-complete-C 5050 Boolean candidate instances Z3 2-5s all UNKNOWN. Four single-mate DLX runs at 10M nodes UNKNOWN; three single-mate Z3 6s UNKNOWN. C transversal counts 780-864; GF2 rank73 necessary condition passes all. NO full 100/100/100, NO global orbit exclusions.",
+  "current_math_result": "GLOBAL OPEN: no 100/100/100 witness, zero unrestricted symmetry-orbit exclusions. E063B exact 44,342,208 finite Egan A2xB2 matrix combinations yield 972 orthogonal hits, ALL independently checked to be 36x27 global symbol relabels of source A/B; zero novel pairs or 8 packs. Exact Egan A/C orthogonality-preserving 2-symbol component graph has 64 pairs,384 directed trades, transversal histogram T1=48,T7=8,T10=8 and ALL max disjoint=1; independent JS replay agrees. General row/column/other-symbol connected-component union lemma proved in E063B report. Egan A/B all 45 trade graphs connected on both sides. Published McKay-Meynert-Myrvold 2007 theorem says any order10 square in 3MOLS must have trivial autoparatopism; explicit nontrivial p=(1 2 3)(4 5 6)(7 8 9) verified 100/100 on each of original three Egan squares, so no solution can retain any of them.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -252,5 +252,7 @@
   "e062_scan_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E062_WANLESS_PAIR_SCAN.json",
   "e062_bundle_drive_url": "https://drive.google.com/file/d/1KMJJALFEelJibTghi3ZeYdOS54cPex8I/view",
   "e063_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E063_REPORT.md",
-  "e063_drive_bundle_url": "https://drive.google.com/file/d/14oOCxNXoIJW2Hyr73U5t2ob4oxjYMWUw/view"
+  "e063_drive_bundle_url": "https://drive.google.com/file/d/14oOCxNXoIJW2Hyr73U5t2ob4oxjYMWUw/view",
+  "e063b_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e063b/E063B_REPORT.md",
+  "e063b_bundle_drive_url": "https://drive.google.com/file/d/11gKrAMe49dLM98mmt1hX_RCSzswu0Ij5/view"
 }

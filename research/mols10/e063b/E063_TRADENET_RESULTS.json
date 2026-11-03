@@ -1,0 +1,19 @@
+{
+  "status": "EXACT_FINITE_TRADE_COMPONENT_EXHAUSTED",
+  "source": "Egan A/C",
+  "visited_pairs": 64,
+  "trade_edges_tested": 384,
+  "max_transversals": 10,
+  "max_packing": 1,
+  "eight_packing_candidates": 0,
+  "closure_witness": null,
+  "pair_distributions": {
+    "7,1": 8,
+    "1,1": 48,
+    "10,1": 8
+  },
+  "time_limit_seconds": 20,
+  "total_seen_pairs": 64,
+  "queue_unprocessed": 0,
+  "seconds": 0.6393
+}

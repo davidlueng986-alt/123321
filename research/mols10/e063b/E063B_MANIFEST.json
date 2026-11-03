@@ -1,0 +1,98 @@
+{
+  "experiment": "E063B",
+  "global_status": "OPEN",
+  "files": {
+    "E063B_REPORT.md": {
+      "size": 8515,
+      "sha256": "a4b242d7c4bb9bebef5c6dadae10ba298e9379f87b45a339942c06e8f5a3665f"
+    },
+    "E063_REPLAY.sh": {
+      "size": 943,
+      "sha256": "7ae2768f5af90eddcd2b6962f32a7c404f9975ae3c9de7c00e7b8e1bfa46a84a"
+    },
+    "E063_transversal_core.py": {
+      "size": 8280,
+      "sha256": "11659966f301bf67245df2ad98c5ef34006a7433b81458007c61f17e93b14f23"
+    },
+    "E063_SCHEINERMAN_PAIR.json": {
+      "size": 2131,
+      "sha256": "9a02e8c3ba50e78726c0d6f5bf018afe4bfc276aa7c4b30bb1177823c3b2d9fc"
+    },
+    "E063_cotrade_search.py": {
+      "size": 4187,
+      "sha256": "8a1d81c3c4442a81d7107b618c3f7fca7499ab47c5863cbff36e0bbfdb5f6c6c"
+    },
+    "E063_deeper_cotrades.py": {
+      "size": 3245,
+      "sha256": "793be1aac1bbde68153b704e3450c1e02f1c1b5cd26139fe30fac633ec37e303"
+    },
+    "E063_component_trade_graph.py": {
+      "size": 3114,
+      "sha256": "051bfcaba9f9fd21c4ca44cbac206237ae11890665c9a3881301e2bce2a3aed1"
+    },
+    "E063_tradenet_bfs.py": {
+      "size": 2691,
+      "sha256": "6a0e7b5104a433bec8dd1a6e7b93cfbc89ddef86023528ad9449bb1cef57a01b"
+    },
+    "E063_INDEPENDENT_TRADE_COMPONENT.js": {
+      "size": 3138,
+      "sha256": "eac15e23af756c45b30c9e18346fa153b60edb8c52e455b03f64daa73854e12c"
+    },
+    "E063_INDEPENDENT_TRADE_COMPONENT_RESULT.json": {
+      "size": 198,
+      "sha256": "b7100f545d039f6c4a0ac3e94b35eee5b2a1a3d29b372508d1d6ce87594238e0"
+    },
+    "E063_COTRADE_RESULTS.json": {
+      "size": 405,
+      "sha256": "d889828202dcc99c50af68cf063dbadf0bf1f2d08a85c8e077a0be1aa7acefa2"
+    },
+    "E063_DEEP_COTRADE_RESULTS.json": {
+      "size": 34926,
+      "sha256": "f47d91affb3a88e389ad669c75c7042c3bb31a8a81f5a34c9f6871038499ac0c"
+    },
+    "E063_COMPONENT_TRADE_GRAPH.json": {
+      "size": 8421,
+      "sha256": "bca0d5843882e660beb1f96def2a41479a0564bc604dd0dee66d6490163f67e6"
+    },
+    "E063_TRADENET_RESULTS.json": {
+      "size": 414,
+      "sha256": "646e5b462946d72e9f5a6761be31027b7f8bbcd03f65ce6f612ed99201e3fcfc"
+    },
+    "E063_2x2_cotrade.cpp": {
+      "size": 1500,
+      "sha256": "b2b2fa182c52870a3fc18358d20298534d7dd8066bed76093ddeb13018cfd2c3"
+    },
+    "E063_export_pairs.py": {
+      "size": 560,
+      "sha256": "2b24e695cb70fa3ec419a8ace8ce42d6a04e20fe17a4439f37edd7cf3c74fc39"
+    },
+    "E063_verify_44m.py": {
+      "size": 1854,
+      "sha256": "e7dde6e07ccc1cee4024ef61edf5966cfdbb2b64e73ec3398e982cacddc110e1"
+    },
+    "E063_2x2_CROSS_RESULTS.json": {
+      "size": 11542,
+      "sha256": "df30595c6536f283991314ca8f4ee4c015c6dbc66654025e11b7f046c4adc622"
+    },
+    "E063_2x2_VERIFIED_SUMMARY.json": {
+      "size": 510,
+      "sha256": "516c46024d7f4a85425b8c51807425491c49d479dcb31308f3ca9ec5a9d82ed3"
+    },
+    "E063_VERIFY_EGAN_SYMMETRY.js": {
+      "size": 996,
+      "sha256": "e52c3a1b5eff849fb049a42cffa7d1cbde7bcd2a94b443bce28d4a09db2f5f6a"
+    },
+    "E063_SYMMETRY_WITNESS.json": {
+      "size": 359,
+      "sha256": "f3024a7374f70133aab410873441ac19735c15188840d2cd39a561ed9690e53e"
+    },
+    "E061_near_triple.json": {
+      "size": 1022,
+      "sha256": "5d12efc05ae858932745f0524cb0284d17ce35cddac885bc5616e5e1d7374f4b"
+    },
+    "mols10-e063b.yml": {
+      "size": 1007,
+      "sha256": "ad44f1fc654cacef6fce224c0ae3f76094b1b21289c6be35a68f7bd5d8574395"
+    }
+  }
+}

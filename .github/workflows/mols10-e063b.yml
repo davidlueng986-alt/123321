@@ -1,0 +1,32 @@
+name: MOLS10 E063B exact trade-canonical closure attempt
+on:
+  workflow_dispatch:
+  push:
+    branches: [math-agent-mols10]
+    paths:
+      - 'research/mols10/e063b/**'
+      - '.github/workflows/mols10-e063b.yml'
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Exact Python C++ and independent JS finite-scope replay
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd research/mols10/e063b
+          bash E063_REPLAY.sh
+      - name: Upload audit logs and validated summaries
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: MOLS10-E063B-finite-trade-replay
+          path: |
+            research/mols10/e063b/E063_REPLAY_LOG.txt
+            research/mols10/e063b/E063_2x2_VERIFIED_SUMMARY.json
+            research/mols10/e063b/E063_INDEPENDENT_TRADE_COMPONENT_RESULT.json
