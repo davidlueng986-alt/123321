@@ -74,3 +74,10 @@ Reproduction commands, code, raw logs and the verified 236 fixture are packaged 
 - Prior fixed anchor model: https://github.com/davidlueng986-alt/123321/blob/research/capset-f3-7/research/capset_f3_7/CAP041_ROOT_BRANCH_PRESOLVE_2026-11-03.md
 - https://arxiv.org/abs/2206.09804 (Thackeray's 288 preprint)
 - https://cairn-commons.com/problems/cap-sets-dim-7 (public current open status, 236..291)
+## Durable artifact references (uploaded and verified)
+
+Complete runnable CPU source, logs, exact seed and 236 fixture (ZIP SHA256 `5f0057fb0112d24cb491ea88db591837e2960687ec3dec4c1e714fe5c2541506`): https://drive.google.com/file/d/1o8mpVfMfVqqCoAANf9LjEV0I4k8gR-bn/view?usp=drivesdk
+
+Readable Drive-side report: https://drive.google.com/file/d/1eY9bhdsFbmT-2Fcc1a3n284wfFc1ilni/view?usp=drivesdk
+
+Hourly CAPSET automation remains disabled; all SAT branches remain UNKNOWN. See the adjacent concurrent CLOSED_ATTEMPT_ROOT work for a separate Z3 run with globally sound 5D/6D cardinality cuts and 15,000 nonlocal destroy–repair iterations; that independent effort likewise found no matching proof or >236 witness. Do not conflate the two sets of seeds, timings, or model configurations.
