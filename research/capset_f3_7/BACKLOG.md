@@ -1,4 +1,9 @@
 
+## CAP-033 (2026-11-03 UTC)
+- [LOCAL EXACT; CI PENDING] CAP027 formal285 has unique 766 and 774 quotient lines sharing 7-fiber 0000; force non-9-extendable 7-cap orbit by CAP032C. See CAP033 report/checker. Not a global bound.
+- [P0] Test simultaneous shared-fiber point-level compatibility for these two lines and then all 1080; bounded proof-logged SAT, UNKNOWN on timeout, independent proof/witness checker.
+- [P1] Independently referee CAP019/Thackeray 110-cap classification; maintain balanced/no-112 and >=237 search.
+
 ## CAP-032 (2026-11-03 UTC)
 - [ANALYTIC; CI PENDING] CAP027 occupancy has exact random-independent-fiber E[3AP]=131198/75, including 5207/3 cross-fiber. This is NOT an exclusion or probability bound. See CAP032 report and checker.
 - [P0] Proof-logged shared-fiber SAT/PB pilot with exact occupancy, independent proof/witness validation; timeout UNKNOWN.
