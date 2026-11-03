@@ -1,0 +1,90 @@
+{
+  "orbits": [
+    {
+      "C_rep": 0,
+      "transversals": 788,
+      "enum_nodes": 93782,
+      "seconds": 0.058
+    },
+    {
+      "C_rep": 1,
+      "transversals": 820,
+      "enum_nodes": 93748,
+      "seconds": 0.057
+    },
+    {
+      "C_rep": 2,
+      "transversals": 824,
+      "enum_nodes": 93742,
+      "seconds": 0.055
+    },
+    {
+      "C_rep": 3,
+      "transversals": 792,
+      "enum_nodes": 93760,
+      "seconds": 0.056
+    },
+    {
+      "C_rep": 4,
+      "transversals": 852,
+      "enum_nodes": 93781,
+      "seconds": 0.057
+    },
+    {
+      "C_rep": 7,
+      "transversals": 780,
+      "enum_nodes": 93546,
+      "seconds": 0.055
+    },
+    {
+      "C_rep": 8,
+      "transversals": 780,
+      "enum_nodes": 93571,
+      "seconds": 0.056
+    },
+    {
+      "C_rep": 9,
+      "transversals": 804,
+      "enum_nodes": 93775,
+      "seconds": 0.057
+    },
+    {
+      "C_rep": 11,
+      "transversals": 864,
+      "enum_nodes": 93842,
+      "seconds": 0.057
+    },
+    {
+      "C_rep": 15,
+      "transversals": 848,
+      "enum_nodes": 93836,
+      "seconds": 0.056
+    },
+    {
+      "C_rep": 17,
+      "transversals": 784,
+      "enum_nodes": 93713,
+      "seconds": 0.056
+    },
+    {
+      "C_rep": 18,
+      "transversals": 780,
+      "enum_nodes": 93641,
+      "seconds": 0.056
+    },
+    {
+      "C_rep": 25,
+      "transversals": 796,
+      "enum_nodes": 93741,
+      "seconds": 0.056
+    },
+    {
+      "C_rep": 32,
+      "transversals": 864,
+      "enum_nodes": 93741,
+      "seconds": 0.057
+    }
+  ],
+  "all_checked": true,
+  "scope": "C completion of ONE 70-entry C pattern"
+}

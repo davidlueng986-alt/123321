@@ -1,0 +1,138 @@
+{
+  "theorem": "McKay-Meynert-Myrvold 2007: any order10 Latin square in three MOLS has trivial autoparatopism group",
+  "known_reference": "https://doi.org/10.1002/jcd.20105",
+  "scope": "C completions of ONE fixed partial C7 pattern; 3 out of 14 symmetry orbits excluded using published theorem",
+  "excluded_orbits": [
+    {
+      "C_index": 4,
+      "orbit_size": 6,
+      "autotopisms": 3,
+      "nontrivial": {
+        "row_perm": [
+          0,
+          3,
+          1,
+          2,
+          6,
+          4,
+          5,
+          9,
+          7,
+          8
+        ],
+        "col_perm": [
+          0,
+          3,
+          1,
+          2,
+          6,
+          4,
+          5,
+          9,
+          7,
+          8
+        ],
+        "sym_perm": [
+          0,
+          3,
+          1,
+          2,
+          6,
+          4,
+          5,
+          9,
+          7,
+          8
+        ]
+      }
+    },
+    {
+      "C_index": 11,
+      "orbit_size": 6,
+      "autotopisms": 3,
+      "nontrivial": {
+        "row_perm": [
+          0,
+          3,
+          1,
+          2,
+          6,
+          4,
+          5,
+          9,
+          7,
+          8
+        ],
+        "col_perm": [
+          0,
+          3,
+          1,
+          2,
+          6,
+          4,
+          5,
+          9,
+          7,
+          8
+        ],
+        "sym_perm": [
+          0,
+          3,
+          1,
+          2,
+          6,
+          4,
+          5,
+          9,
+          7,
+          8
+        ]
+      }
+    },
+    {
+      "C_index": 32,
+      "orbit_size": 6,
+      "autotopisms": 3,
+      "nontrivial": {
+        "row_perm": [
+          0,
+          3,
+          1,
+          2,
+          6,
+          4,
+          5,
+          9,
+          7,
+          8
+        ],
+        "col_perm": [
+          0,
+          3,
+          1,
+          2,
+          6,
+          4,
+          5,
+          9,
+          7,
+          8
+        ],
+        "sym_perm": [
+          0,
+          3,
+          1,
+          2,
+          6,
+          4,
+          5,
+          9,
+          7,
+          8
+        ]
+      }
+    }
+  ],
+  "remaining_orbits": 11,
+  "not_global_solution": true
+}

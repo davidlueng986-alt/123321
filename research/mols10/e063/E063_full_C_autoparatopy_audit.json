@@ -1,0 +1,231 @@
+{
+  "scope": "All fourteen isotopy classes of 216 completions of one C7 partial pattern",
+  "cases": [
+    {
+      "rep": 0,
+      "status": "TRIVIAL_AUTOPARATOPY",
+      "nodes": 6000,
+      "seconds": 0.061,
+      "witness": null
+    },
+    {
+      "rep": 1,
+      "status": "TRIVIAL_AUTOPARATOPY",
+      "nodes": 6000,
+      "seconds": 0.063,
+      "witness": null
+    },
+    {
+      "rep": 2,
+      "status": "TRIVIAL_AUTOPARATOPY",
+      "nodes": 6000,
+      "seconds": 0.06,
+      "witness": null
+    },
+    {
+      "rep": 3,
+      "status": "TRIVIAL_AUTOPARATOPY",
+      "nodes": 6000,
+      "seconds": 0.056,
+      "witness": null
+    },
+    {
+      "rep": 4,
+      "status": "NONTRIVIAL_AUTOPARATOPY",
+      "nodes": 3,
+      "seconds": 0.0,
+      "witness": {
+        "coordinate_perm": [
+          0,
+          1,
+          2
+        ],
+        "f": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ],
+        "g": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ],
+        "h": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ]
+      }
+    },
+    {
+      "rep": 7,
+      "status": "TRIVIAL_AUTOPARATOPY",
+      "nodes": 6000,
+      "seconds": 0.057,
+      "witness": null
+    },
+    {
+      "rep": 8,
+      "status": "TRIVIAL_AUTOPARATOPY",
+      "nodes": 6000,
+      "seconds": 0.06,
+      "witness": null
+    },
+    {
+      "rep": 9,
+      "status": "TRIVIAL_AUTOPARATOPY",
+      "nodes": 6000,
+      "seconds": 0.062,
+      "witness": null
+    },
+    {
+      "rep": 11,
+      "status": "NONTRIVIAL_AUTOPARATOPY",
+      "nodes": 3,
+      "seconds": 0.0,
+      "witness": {
+        "coordinate_perm": [
+          0,
+          1,
+          2
+        ],
+        "f": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ],
+        "g": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ],
+        "h": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ]
+      }
+    },
+    {
+      "rep": 15,
+      "status": "TRIVIAL_AUTOPARATOPY",
+      "nodes": 6000,
+      "seconds": 0.061,
+      "witness": null
+    },
+    {
+      "rep": 17,
+      "status": "TRIVIAL_AUTOPARATOPY",
+      "nodes": 6000,
+      "seconds": 0.06,
+      "witness": null
+    },
+    {
+      "rep": 18,
+      "status": "TRIVIAL_AUTOPARATOPY",
+      "nodes": 6000,
+      "seconds": 0.055,
+      "witness": null
+    },
+    {
+      "rep": 25,
+      "status": "TRIVIAL_AUTOPARATOPY",
+      "nodes": 6000,
+      "seconds": 0.06,
+      "witness": null
+    },
+    {
+      "rep": 32,
+      "status": "NONTRIVIAL_AUTOPARATOPY",
+      "nodes": 3,
+      "seconds": 0.0,
+      "witness": {
+        "coordinate_perm": [
+          0,
+          1,
+          2
+        ],
+        "f": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ],
+        "g": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ],
+        "h": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ]
+      }
+    }
+  ],
+  "count_nontrivial": 3,
+  "current_status": "not global CLOSED"
+}

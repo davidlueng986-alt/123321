@@ -1,0 +1,89 @@
+{
+  "results": [
+    {
+      "rep": 0,
+      "tr_count": 788,
+      "rank_GF2": 73,
+      "necessary_GF2_satisfied": true
+    },
+    {
+      "rep": 1,
+      "tr_count": 820,
+      "rank_GF2": 73,
+      "necessary_GF2_satisfied": true
+    },
+    {
+      "rep": 2,
+      "tr_count": 824,
+      "rank_GF2": 73,
+      "necessary_GF2_satisfied": true
+    },
+    {
+      "rep": 3,
+      "tr_count": 792,
+      "rank_GF2": 73,
+      "necessary_GF2_satisfied": true
+    },
+    {
+      "rep": 4,
+      "tr_count": 852,
+      "rank_GF2": 73,
+      "necessary_GF2_satisfied": true
+    },
+    {
+      "rep": 7,
+      "tr_count": 780,
+      "rank_GF2": 73,
+      "necessary_GF2_satisfied": true
+    },
+    {
+      "rep": 8,
+      "tr_count": 780,
+      "rank_GF2": 73,
+      "necessary_GF2_satisfied": true
+    },
+    {
+      "rep": 9,
+      "tr_count": 804,
+      "rank_GF2": 73,
+      "necessary_GF2_satisfied": true
+    },
+    {
+      "rep": 11,
+      "tr_count": 864,
+      "rank_GF2": 73,
+      "necessary_GF2_satisfied": true
+    },
+    {
+      "rep": 15,
+      "tr_count": 848,
+      "rank_GF2": 73,
+      "necessary_GF2_satisfied": true
+    },
+    {
+      "rep": 17,
+      "tr_count": 784,
+      "rank_GF2": 73,
+      "necessary_GF2_satisfied": true
+    },
+    {
+      "rep": 18,
+      "tr_count": 780,
+      "rank_GF2": 73,
+      "necessary_GF2_satisfied": true
+    },
+    {
+      "rep": 25,
+      "tr_count": 796,
+      "rank_GF2": 73,
+      "necessary_GF2_satisfied": true
+    },
+    {
+      "rep": 32,
+      "tr_count": 864,
+      "rank_GF2": 73,
+      "necessary_GF2_satisfied": true
+    }
+  ],
+  "warning": "GF2 feasibility is necessary for any orthogonal mate but not sufficient; no global MOLS10 inference."
+}

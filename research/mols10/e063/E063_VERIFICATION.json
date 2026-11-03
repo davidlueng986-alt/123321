@@ -1,0 +1,16 @@
+{
+  "status": "E063_FINITE_PATTERN_CERTIFICATES_VERIFIED",
+  "C_completions": 216,
+  "orbits": 14,
+  "orbit_sizes": {
+    "18": 11,
+    "6": 3
+  },
+  "excluded_by_published_theorem": 3,
+  "still_open_C_orbits": 11,
+  "z3_statuses": {
+    "UNKNOWN": 14
+  },
+  "mutated_autotopism_rejected": true,
+  "GLOBAL_MOLS10_STATUS": "OPEN"
+}

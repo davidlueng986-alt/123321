@@ -1,0 +1,37 @@
+name: MOLS10 E063 exact local pattern certificates
+on:
+  workflow_dispatch:
+  push:
+    branches: [math-agent-mols10]
+    paths:
+      - 'research/mols10/e063/**'
+      - '.github/workflows/mols10-e063.yml'
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Reenumerate 216 C completions and certify exact 14-orbit cover / theorem witnesses
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd research/mols10/e063
+          python3 verify_E063.py
+          python3 paratopy_audit.py
+          python3 verify_E063.py
+      - name: Compile independent one-mate DLX (bounded status cannot imply global result)
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd research/mols10/e063
+          g++ -O2 -std=c++17 mate_dlx.cpp -o /tmp/e063_mate
+          /tmp/e063_mate 0 0.1 100000 C7_all_complete.txt | tee /tmp/e063_mate_status.json
+          python3 - <<'PY_CHECK'
+          import json
+          z=json.load(open('/tmp/e063_mate_status.json'))
+          assert z['status'] in ('SAT','UNSAT_EXHAUSTIVE','UNKNOWN_BUDGET')
+          print('MATE_STATUS_SCOPE_CHECK_PASS',z['status'])
+          PY_CHECK

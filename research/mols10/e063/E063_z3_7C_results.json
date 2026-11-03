@@ -1,0 +1,8 @@
+{
+  "status": "UNKNOWN",
+  "c_fixed": 70,
+  "vars": 17146,
+  "constraints": 1000,
+  "seconds": 25.39,
+  "reason": "timeout"
+}

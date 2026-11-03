@@ -1,0 +1,101 @@
+{
+  "title": "E063 fixed 70-entry C pattern; complete local 216-to-14 orbit audit; global remains OPEN",
+  "files": {
+    "E063_REPORT.md": {
+      "bytes": 5722,
+      "sha256": "3f8a6bd592e356b55c43774a143a7df0369babc995a0c4a9b1c367f56358ebb0"
+    },
+    "E063_README.md": {
+      "bytes": 1306,
+      "sha256": "bc7626309106aac42e60141183d74ce66f1a5c69621863b04c745920645bd083"
+    },
+    "complete_C.py": {
+      "bytes": 1676,
+      "sha256": "80d168e39cd9e14ea0efadbf8794c9ab3008ff3dde2165b0980bdf19a1e2318f"
+    },
+    "classify_C.py": {
+      "bytes": 2573,
+      "sha256": "10944038712689de6894674c772e1fc91db7d860ac1927093ea03ef011ba83f7"
+    },
+    "export_group.py": {
+      "bytes": 465,
+      "sha256": "81438c1dbc825f257987fee36685406bbf93094d325cfc1322c8adc3ad2feaff"
+    },
+    "explicit_autotopisms.py": {
+      "bytes": 1655,
+      "sha256": "6ac27dd3792216c077e9c31fcdd75df37ac0b8ca87fc2805dddd78f4eec4d4ca"
+    },
+    "paratopy_audit.py": {
+      "bytes": 3760,
+      "sha256": "fad5107c6b34d6f031fb5d6a8b39b4fbd66af066f02e4045ad27e57d7ae59226"
+    },
+    "verify_E063.py": {
+      "bytes": 4082,
+      "sha256": "da90d51d24f9da323b07c91bc3349e2b4ad925b63d1fcc3bf8fad3aa4bcd258c"
+    },
+    "autotopism_propagator.py": {
+      "bytes": 2915,
+      "sha256": "cf02900e72234dd2edaf5179117a9ce24e15b1f10a12c562e2bd1deef6263b91"
+    },
+    "z3_full_C7.py": {
+      "bytes": 4528,
+      "sha256": "f0bd8074b229654adfdb53850a03ac05608759cba9f316ccca52d97dbe698ef8"
+    },
+    "z3_single_mate.py": {
+      "bytes": 2919,
+      "sha256": "c893c3cb83992905f9b3e8ea443eac1a39630356a0a774b265dd17919df2835f"
+    },
+    "mate_dlx.cpp": {
+      "bytes": 3156,
+      "sha256": "9e0bfcf6087c4fc1dacf2762a16ca7e15f86edbe195deba60299aa1277df04ee"
+    },
+    "C7_all_complete.json": {
+      "bytes": 69948,
+      "sha256": "c921f8ccff8ba1bcdde81c6e11740fa1751a0ae0fa1849b04cb353b13d2258bb"
+    },
+    "C7_all_complete.txt": {
+      "bytes": 43200,
+      "sha256": "90d83339c8cd77bb79e5c6cac113aecd01f698d3ba41048921d373159edef490"
+    },
+    "E063_C_orbits.json": {
+      "bytes": 2723,
+      "sha256": "0a0b8401c0ad974974dc58c3080fc4cd33aa98cf58b6540b0d7d77aa9549cd49"
+    },
+    "E063_group_actions.json": {
+      "bytes": 10204,
+      "sha256": "4c260f19b137018dd0bad5cfecd16f520831b02e966fe44473ebbdcd73878b29"
+    },
+    "E063_symmetric_C_exclusions.json": {
+      "bytes": 2169,
+      "sha256": "aac06cc62d782598009182e3142bbf180ca2ef081a261fa671d01b41ba047299"
+    },
+    "E063_full_C_autoparatopy_audit.json": {
+      "bytes": 3714,
+      "sha256": "b280b7578c3c3724836e7e2a96507874d17e12dd74ac66aa4ceaa83b506a095c"
+    },
+    "E063_full_C_autotopism_audit.json": {
+      "bytes": 4302,
+      "sha256": "403e356ec30fb3244fbc4bcdf4df056e69bf215632d8d10e3f18d2fbb7248dea"
+    },
+    "E063_C_transversal_counts.json": {
+      "bytes": 1614,
+      "sha256": "4da86d876d67846b71094058225a5d784498a304f02814169b309f3246b994e6"
+    },
+    "E063_C_GF2_results.json": {
+      "bytes": 1712,
+      "sha256": "bb8e4a1fecea67675aaadf6ee6accec8c6689972108945ccf035ecad00c5d7ed"
+    },
+    "E063_SOLVER_SUMMARY.json": {
+      "bytes": 3057,
+      "sha256": "626711b1434718890c205946f31b34ca6c436a86377dd256f279d3be7c8532e3"
+    },
+    "E063_VERIFICATION.json": {
+      "bytes": 330,
+      "sha256": "eb48c9ef021742a33b41a164e1f03006a3abd7045935e791d8be5c8ccfe620c6"
+    },
+    "E063_z3_7C_results.json": {
+      "bytes": 126,
+      "sha256": "6e6d326caa3714b15cf17f03b6e5d25d3dea06adcc2b35b2111a4bd6012276dc"
+    }
+  }
+}

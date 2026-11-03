@@ -1,0 +1,229 @@
+{
+  "cases": [
+    {
+      "rep": 0,
+      "status": "NO_NONTRIVIAL_AUTOTOPISM",
+      "nodes": 1800,
+      "seconds": 0.01,
+      "certificate": null,
+      "scope": "autotopism, not full autoparatopism"
+    },
+    {
+      "rep": 1,
+      "status": "NO_NONTRIVIAL_AUTOTOPISM",
+      "nodes": 1864,
+      "seconds": 0.01,
+      "certificate": null,
+      "scope": "autotopism, not full autoparatopism"
+    },
+    {
+      "rep": 2,
+      "status": "NO_NONTRIVIAL_AUTOTOPISM",
+      "nodes": 1896,
+      "seconds": 0.011,
+      "certificate": null,
+      "scope": "autotopism, not full autoparatopism"
+    },
+    {
+      "rep": 3,
+      "status": "NO_NONTRIVIAL_AUTOTOPISM",
+      "nodes": 1832,
+      "seconds": 0.01,
+      "certificate": null,
+      "scope": "autotopism, not full autoparatopism"
+    },
+    {
+      "rep": 4,
+      "status": "AUTOTOPISM_FOUND",
+      "nodes": 16,
+      "seconds": 0.0,
+      "certificate": {
+        "row_perm": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ],
+        "col_perm": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ],
+        "symbol_perm": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ]
+      },
+      "scope": "autotopism, not full autoparatopism"
+    },
+    {
+      "rep": 7,
+      "status": "NO_NONTRIVIAL_AUTOTOPISM",
+      "nodes": 1832,
+      "seconds": 0.01,
+      "certificate": null,
+      "scope": "autotopism, not full autoparatopism"
+    },
+    {
+      "rep": 8,
+      "status": "NO_NONTRIVIAL_AUTOTOPISM",
+      "nodes": 1928,
+      "seconds": 0.011,
+      "certificate": null,
+      "scope": "autotopism, not full autoparatopism"
+    },
+    {
+      "rep": 9,
+      "status": "NO_NONTRIVIAL_AUTOTOPISM",
+      "nodes": 1960,
+      "seconds": 0.011,
+      "certificate": null,
+      "scope": "autotopism, not full autoparatopism"
+    },
+    {
+      "rep": 11,
+      "status": "AUTOTOPISM_FOUND",
+      "nodes": 16,
+      "seconds": 0.0,
+      "certificate": {
+        "row_perm": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ],
+        "col_perm": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ],
+        "symbol_perm": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ]
+      },
+      "scope": "autotopism, not full autoparatopism"
+    },
+    {
+      "rep": 15,
+      "status": "NO_NONTRIVIAL_AUTOTOPISM",
+      "nodes": 1832,
+      "seconds": 0.01,
+      "certificate": null,
+      "scope": "autotopism, not full autoparatopism"
+    },
+    {
+      "rep": 17,
+      "status": "NO_NONTRIVIAL_AUTOTOPISM",
+      "nodes": 1832,
+      "seconds": 0.011,
+      "certificate": null,
+      "scope": "autotopism, not full autoparatopism"
+    },
+    {
+      "rep": 18,
+      "status": "NO_NONTRIVIAL_AUTOTOPISM",
+      "nodes": 1864,
+      "seconds": 0.01,
+      "certificate": null,
+      "scope": "autotopism, not full autoparatopism"
+    },
+    {
+      "rep": 25,
+      "status": "NO_NONTRIVIAL_AUTOTOPISM",
+      "nodes": 1768,
+      "seconds": 0.01,
+      "certificate": null,
+      "scope": "autotopism, not full autoparatopism"
+    },
+    {
+      "rep": 32,
+      "status": "AUTOTOPISM_FOUND",
+      "nodes": 16,
+      "seconds": 0.0,
+      "certificate": {
+        "row_perm": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ],
+        "col_perm": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ],
+        "symbol_perm": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          8,
+          9,
+          7
+        ]
+      },
+      "scope": "autotopism, not full autoparatopism"
+    }
+  ],
+  "scope": "all 14 fixed C7 pattern orbit reps",
+  "complete": true
+}

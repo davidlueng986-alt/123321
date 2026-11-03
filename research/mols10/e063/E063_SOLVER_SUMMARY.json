@@ -1,0 +1,152 @@
+{
+  "scope": "14 fixed seven-class C-orbit representatives; this is not unrestricted",
+  "solver_model": "5-coordinate OA exact-cover Boolean SAT with C complete, A and B free",
+  "results": [
+    {
+      "status": "UNKNOWN",
+      "c_fixed": 100,
+      "vars": 5050,
+      "constraints": 1000,
+      "seconds": 5.06,
+      "reason": "timeout"
+    },
+    {
+      "status": "UNKNOWN",
+      "c_fixed": 100,
+      "vars": 5050,
+      "constraints": 1000,
+      "seconds": 5.06,
+      "reason": "timeout"
+    },
+    {
+      "status": "UNKNOWN",
+      "c_fixed": 100,
+      "vars": 5050,
+      "constraints": 1000,
+      "seconds": 5.06,
+      "reason": "timeout"
+    },
+    {
+      "status": "UNKNOWN",
+      "c_fixed": 100,
+      "vars": 5050,
+      "constraints": 1000,
+      "seconds": 5.06,
+      "reason": "timeout"
+    },
+    {
+      "status": "UNKNOWN",
+      "c_fixed": 100,
+      "vars": 5050,
+      "constraints": 1000,
+      "seconds": 5.06,
+      "reason": "timeout"
+    },
+    {
+      "status": "UNKNOWN",
+      "c_fixed": 100,
+      "vars": 5050,
+      "constraints": 1000,
+      "seconds": 2.06,
+      "reason": "timeout"
+    },
+    {
+      "status": "UNKNOWN",
+      "c_fixed": 100,
+      "vars": 5050,
+      "constraints": 1000,
+      "seconds": 2.08,
+      "reason": "timeout"
+    },
+    {
+      "status": "UNKNOWN",
+      "c_fixed": 100,
+      "vars": 5050,
+      "constraints": 1000,
+      "seconds": 2.05,
+      "reason": "timeout"
+    },
+    {
+      "status": "UNKNOWN",
+      "c_fixed": 100,
+      "vars": 5050,
+      "constraints": 1000,
+      "seconds": 2.05,
+      "reason": "timeout"
+    },
+    {
+      "status": "UNKNOWN",
+      "c_fixed": 100,
+      "vars": 5050,
+      "constraints": 1000,
+      "seconds": 2.05,
+      "reason": "timeout"
+    },
+    {
+      "status": "UNKNOWN",
+      "c_fixed": 100,
+      "vars": 5050,
+      "constraints": 1000,
+      "seconds": 2.06,
+      "reason": "timeout"
+    },
+    {
+      "status": "UNKNOWN",
+      "c_fixed": 100,
+      "vars": 5050,
+      "constraints": 1000,
+      "seconds": 2.06,
+      "reason": "timeout"
+    },
+    {
+      "status": "UNKNOWN",
+      "c_fixed": 100,
+      "vars": 5050,
+      "constraints": 1000,
+      "seconds": 2.11,
+      "reason": "timeout"
+    },
+    {
+      "status": "UNKNOWN",
+      "c_fixed": 100,
+      "vars": 5050,
+      "constraints": 1000,
+      "seconds": 2.05,
+      "reason": "timeout"
+    }
+  ],
+  "number_sat": 0,
+  "number_unsat": 0,
+  "number_unknown": 14,
+  "big_full_OA_partial_C": {
+    "status": "UNKNOWN",
+    "c_fixed": 70,
+    "vars": 17146,
+    "constraints": 1000,
+    "seconds": 25.39,
+    "reason": "timeout"
+  },
+  "single_mate": [
+    {
+      "index": 0,
+      "status": "UNKNOWN",
+      "seconds": 6.006,
+      "variables": 730,
+      "constraints": 400
+    },
+    {
+      "index": 1,
+      "status": "UNKNOWN",
+      "seconds": 6.006,
+      "variables": 730,
+      "constraints": 400
+    },
+    {
+      "index": 2,
+      "status": "UNKNOWN",
+      "seconds": 6.006,
+      "variables": 730,
+      "constraints": 400
+    }
+  ]
+}
