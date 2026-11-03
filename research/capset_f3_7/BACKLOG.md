@@ -386,3 +386,7 @@ CAP-006 [P2/TODO] Formalize a verified candidate or structural lemma in Lean; re
 - [P0 GEOMETRY] Require simultaneous shared 3D fiber point-level assignments across intersecting quotient lines; independent local lifts do not imply global compatibility. Use proof-logged SAT/CP-SAT and independent exact checker.
 - [P0] Check remaining 1053 directions and Q residue constraints; independent Thackeray 110-cap completion referee, CAP019 provisional <=287, balanced/no-111 and >=237 construction all remain active.
 - [NOVELTY] Classical AG(4,3) max20 known; no new priority established. Exact r3(7) OPEN.
+
+## CAP-030 (2026-11-03)
+- [DONE / EXACT LEMMA] For each quotient line (i,j,k), require A_k disjoint from {-a-b:a in A_i,b in A_j}; reuse identical fiber assignments across all lines. CAP028 local witnesses have midpoint image sizes [23,19,19] and [20,19,20]. No global numerical improvement.
+- [P0] Check CAP030 CI; build bounded shared-fiber SAT/PB pilot with independent verifier and proof-logged UNSAT where possible; continue Thackeray 110-cap completion referee and balanced/no-111 branch.
