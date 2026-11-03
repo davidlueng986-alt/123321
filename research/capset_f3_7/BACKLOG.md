@@ -475,3 +475,8 @@ ROOT question: determine exact r3(7). Given verified 236, proving no 237-cap wou
 - [LOCAL EXACT PASS / CI PENDING] Independent full ten-branch incidence census closes CAP041 aborted eight-branch computation. H05, H07/H08 and H09 have distinct exact clause counts; do not reuse H00 counts indiscriminately. Source cap042_ten_leaf_incidence.py and CAP042 report.
 - [P0] Check new CI; run bounded free-CPU proof-logged SAT H00 with independently verified SAT witness or UNSAT certificate. Timeout UNKNOWN. Root requires all ten branches proved UNSAT to establish <=236.
 - [P1] CAP019 classification referee, nonlocal >=237 witness search; novelty unestablished; exact r3(7) OPEN.
+
+## CAP-043 (2026-11-03 11:56 UTC)
+- [LOCAL EXACT PASS / CI PENDING] Independent base3 coordinate convention verifies CAP042 ten ninth-point classes, and explains unique 35-zero H09: third(0,e1+e2)=third(e1,e2). The other nine branches have 36 distinct forced-zero points. CAP042 Actions 41623152905 SUCCESS.
+- [P0] Do not over-invest in counting: bounded proof-logged root SAT pilot; check actual UNSAT certificate with independent verifier, SAT coordinates with independent checker, timeout UNKNOWN. All ten root leaves needed for <=236 proof.
+- [P1] CAP019/Thackeray classification referee and nonlocal >=237 construction; exact optimum OPEN.
