@@ -78,3 +78,27 @@ Proof readiness checklist for every leaf: `parent_goal`, `coverage_lemma`, `SAT 
 - CAP019 provisional <=287 is independent of CAP040 and remains mathematically unreviewed; do not promote it to verified.
 
 **The whole objective is still OPEN.** Neither an >=237 witness nor proof of no 237 has appeared. Affine-frame symmetry normalization is standard; novelty is not established. CAP040's main contribution is a reproducible, logically closed research architecture replacing disconnected local experiments with global proof obligations.
+
+## CAP-040H strengthening: ten fully exhaustive dense-H ninth-point cases
+
+The initial 32 S7 classes listed above cover every *compatible* ninth point anywhere in F3^7. **But the globally sound >=89 hyperplane normalization lets us insist the ninth selected point lies inside the distinguished dense H.** Since H already contains exactly seven chosen frame vertices (0,e1,...,e6) and has at least 89 cap points, an extra selected point in H necessarily exists. Keeping H fixed, its seven frame vertices admit every permutation in S7. Therefore the 701 compatible ninth points *inside H* fall into exactly **ten S7 orbits** of sizes
+
+```
+[7,35,1,105,42,21,210,140,35,105]
+```
+
+(701=729 ambient H points−7 frame vertices in H−21 their pair-secants in H.) All orbit representatives and their counts are checked by explicit GF3 enumeration and multinomial formulas. Each of ten branch CNFs is the same globally complete moment-anchored target237 instance plus one ninth selected point and seven/eight further forced nonselected secant points. These **ten** cases, unlike the unrestricted 13 S8 cases, are exhaustive *while preserving the distinguished hyperplane H*. The complete proof obligation is:
+
+```
+No size>=237 cap iff UNSAT(H0) AND ... AND UNSAT(H9),
+```
+
+given CAP007J's existing >=89 theorem, r3(5)=45, r3(6)=112, and sound proof-logged SAT checks. None of these cases has been solved. All 10 have 553505 variables, with 1896563 or 1896564 clauses; a full solver may still be intractable. Do not claim solving the original problem from generating these instances.
+
+Reproduce:
+```bash
+python research/capset_f3_7/cap040_hyperplane_anchor.py --branch 0 --cnf /tmp/CAP040H_B0.cnf
+python -m unittest discover -s research/capset_f3_7 -p 'test_cap040*.py' -v
+```
+
+The original unbranched 1896555-clause anchored model is retained as a single equivalent root decision problem. The 10-way split is an alternative proof tree, not a guarantee of runtime improvement. Individual branch status: UNKNOWN. Literature novelty: not established.
