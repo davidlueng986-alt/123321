@@ -499,3 +499,8 @@ Read dedicated Drive ledger/folder and GitHub STATE/LOG/BACKLOG; checked CAP036 
 
 ## 2026-11-03 11:56 UTC | CAP-043 independent frame-secant collision census | LOCAL EXACT PASS / CI PENDING
 - Continued CAP042 after verifying Actions 41623152905 SUCCESS (commit b535735fbab2e9fcf1a17a6458171ce27dff148b). Independent Python standard-library least-significant-base3 enumeration: 701 eligible ninth H points in 10 S7 classes; nine branches have 36 distinct forced-zero secant thirds, exceptional branch 9 (p=e1+e2, integer 4) has 35 because third(0,p)=third(e1,e2)=8. All assertions passed locally. Code cap043_secant_collision_audit.py, report CAP043_SECANT_COLLISION_AUDIT_2026-11-03.md. No solver run, no new >=237 cap or global bound, SAT UNKNOWN, exact r3(7) OPEN. P0 proof-logged CPU SAT pilot with independent verification; CAP019 referee and >=237 construction retained. No GPU, paid compute or seed.
+
+## 2026-11-03 | CAP-044 independent orbit regression
+- [LOCAL EXACT PASS] Standalone Python itertools/base-3 enumeration: 701 eligible ninth points in H, 10 S7 barycentric orbits with sizes [1,7,21,35,35,42,105,105,140,210], secant-third distinct counts nine 36 and one 35. No SAT solve; all root leaves UNKNOWN. See CAP044_BARYCENTRIC_ORBIT_REGRESSION_2026-11-03.md.
+- [CI VERIFIED PREDECESSOR] CAP043 GitHub run 41631698651 SUCCESS. CAP044 new CI not yet verified.
+- [META] This is regression evidence, not novel mathematical progress. Do not repeat orbit census; prioritize bounded proof-logged CPU SAT or global structural theorem. Other closure-batch commits are unrelated and untouched.
