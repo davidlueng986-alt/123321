@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "Only objective: close exact r3(7). Native-Z3 actually checked one global 237 root leaf H00 using all 3AP constraints+sound 5D/6D cap cuts, returning UNKNOWN timeout at 12s; 170001 relative GL6 constructions of form 112+112+third found <=12 available positions; 15000 unrestricted full-7D destroy/repair trials found <=236. None of this proves global upper bound. CAP046 concurrent full MILP and union searches also gave no certified global result. No routine hourly research.",
-  "next_experiment": "No automatic recurring runs. Only on explicit request: a genuinely proof-producing SAT/CP solver on all 10 globally complete H branches with independent LRAT/DRAT certificates, or a >=237 construction under independent F3 arithmetic followed by matching upper-bound proof. Avoid more random GL6 sampling without a theoretical route to >=13 holes.",
-  "last_run_id": "CLOSED_ATTEMPT_ROOT_2026-11-03_MANUAL",
-  "last_run_result": "GLOBAL_Z3_H00_237_UNKNOWN_TIMEOUT; GL6_170001_NO_13_HOLES; GL6_FOURIER_45001_NO_13_HOLES; DESTROY_REPAIR_15000_BEST236; ROOT_STILL_OPEN",
+  "current_hypothesis": "Only objective exact r3(7). CAP046B manual CLOSED attack: used actual Z3 237 root H00 SAT solver (95s hard wall, UNKNOWN), 112-point 6D hyperplane complete conditional branch Z3 (65s hard wall, UNKNOWN), independent H00 full MILP (65s hard wall, UNKNOWN), and 1,544,404 distinct invertible relative GL6 matrices (seed2026110302, 0 third-hole>=13); no >=237 witness. These are direct search runs, no new bound. Hourly automation disabled. Preserve concurrent CAP046 efforts, no new schedule.",
+  "next_experiment": "NO_AUTOMATION. Only on explicit request: proof-producing, independently checkable full-root SAT/CP proof on complete 10-way coverage, or independent verified ≥237 construction followed by matching rigorous global upper bound. Do not schedule hourly checks or claim timeouts/negative samples prove r3(7)=236.",
+  "last_run_id": "CAP046B_MANUAL_OPEN_TO_CLOSED_CPU_2026-11-03",
+  "last_run_result": "OPEN; Z3_H00_TIMEOUT95; Z3_MAX112_TIMEOUT65; HIGHS_H00_TIMEOUT65; 1_544_404_DISTINCT_GL6_NO_13_HOLES; NO_NEW_WITNESS_OR_BOUND",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -117,7 +117,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-03T14:34:28.108Z",
+  "last_updated_utc": "2026-11-03T14:41:57.221Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1806,5 +1806,61 @@
     "artifact_source_url": "https://drive.google.com/file/d/1wx1SuOhRq-V2MfmKHhNh_afzXiyIvy3i/view?usp=drivesdk",
     "github_report": "research/capset_f3_7/CLOSED_ATTEMPT_ROOT_2026-11-03.md",
     "concurrent_CAP046_report": "research/capset_f3_7/CAP046_CLOSED_ATTEMPT_2026-11-03.md"
+  },
+  "cap046b_closed_cpu_manual": {
+    "automation_id": "6ae77c6ed4f4819191afec5f9b63437a",
+    "hourly_automation_enabled": false,
+    "proof_goal": "Exact matching lower and upper bound r3(7)",
+    "exact_open": true,
+    "known_verified_lower": 236,
+    "new_verified_lower": null,
+    "new_global_upper": null,
+    "z3_root_H00": {
+      "status": "UNKNOWN",
+      "wall_limit_seconds": 95,
+      "external_exit_code": 124,
+      "lines": 796797,
+      "ninth_frame_fixed_points": 9,
+      "dense_hyperplane_min": 89
+    },
+    "z3_fixed_112_hyperplane": {
+      "status": "UNKNOWN",
+      "wall_limit_seconds": 65,
+      "external_exit_code": 124,
+      "free_points": 1458,
+      "negative_binary_clauses": 81648,
+      "negative_ternary_clauses": 176904
+    },
+    "highs_root_H00": {
+      "status": "UNKNOWN",
+      "wall_limit_seconds": 65,
+      "external_exit_code": 124,
+      "free_points": 2142,
+      "constraint_rows": 758081,
+      "nonzeros": 2267559
+    },
+    "constructive_112_112_plus_13": {
+      "seed": 2026110302,
+      "generated_matrices": 1600000,
+      "unique_invertible_GL6_matrices": 1544404,
+      "duplicates": 55596,
+      "hole_histogram": {
+        "0": 1542390,
+        "1": 1447,
+        "4": 403,
+        "12": 164
+      },
+      "holes_ge_13": 0,
+      "sampling_not_exhaustive": true
+    },
+    "local_mip": {
+      "two_neighborhoods_solver_reported_best": 236,
+      "certified_global_upper": false
+    },
+    "cap236_fixture_git_blob_sha1": "bb75562499071945a07273e439a892c55a8d6b9f",
+    "full_artifacts_google_drive_url": "https://drive.google.com/file/d/1o8mpVfMfVqqCoAANf9LjEV0I4k8gR-bn/view?usp=drivesdk",
+    "report": "research/capset_f3_7/CAP046B_FULL_CLOSED_CPU_RUN_2026-11-03.md",
+    "literature_novelty_claimed": false,
+    "sat_proof_checked": false
   }
 }
