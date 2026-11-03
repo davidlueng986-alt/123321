@@ -105,8 +105,8 @@ class CAP040Tests(unittest.TestCase):
                              (492540,1775362,9))
             with p.open('rb') as f:
                 self.assertIn(b'p cnf 492540 1775362',f.readline()+f.readline())
-                h=hashlib.file_digest(f,'sha256').hexdigest()
-            # Hash for complete file, not just suffix (first two lines included separately).
-            self.assertEqual(len(h),64)
+            # SHA for the ENTIRE DIMACS, independently generated locally.
+            self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),
+                             '8d23ac06842a0fbdafab8aef244e54dd819770578c2c8023b04e565a330e19e9')
 
 if __name__=='__main__':unittest.main()
