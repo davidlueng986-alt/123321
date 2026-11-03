@@ -11,9 +11,9 @@
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
   "current_hypothesis": "CAP-026: Any hypothetical 285-point cap with every affine 6D section<=109 has nonzero barycenter and anisotropic rank-2 quadratic form on its 6D kernel. Exact formal moment+rank2 negative control survives; no new global bound. CAP-019 <=287 remains provisional pending independent Thackeray 110-cap classification referee.",
-  "next_experiment": "Confirm CAP029 GitHub CI success; then tackle simultaneous shared-fiber point-level compatibility and independent 110-cap completion referee.",
-  "last_run_id": "CAP-029-4D-LIFT-CI-REFEREE-2026-11-02",
-  "last_run_result": "CAP029_EXACT_17_TO_19_4D_WITNESS_REPAIR_FULL_CI_SUCCESS",
+  "next_experiment": "Shared 3D-fiber point-level SAT/PB with same fiber assignments across intersecting quotient lines; independent checker and proof logging. Referee CAP019 completion dependency.",
+  "last_run_id": "CAP-030-CROSS-FIBER-MIDPOINT-2026-11-03",
+  "last_run_result": "EXACT_MIDPOINT_LEMMA_AND_4D_REGRESSION_CI_PENDING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -76,7 +76,8 @@
     "CAP-014-PSD-LOCAL",
     "CAP-022-LOCAL",
     "CAP-023-LOCAL",
-    "CAP-029-LOCAL"
+    "CAP-029-LOCAL",
+    "CAP-030"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549413947",
   "baseline_secant_audit": {
