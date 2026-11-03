@@ -8,3 +8,15 @@ g++ -O3 -std=c++17 E061_three_cycle_trade.cpp -o e061_trade3
 python E061_transversal_route.py > /tmp/e061_transversal_route.json
 python E061_two_transversal_completion.py > /tmp/e061_two_transversal_completion.json
 python E061_verify.py
+python - <<'PY_CHECK'
+import json
+from E061_verify import verify_triple
+expected={3:'UNSAT_EXHAUSTIVE',4:'SAT',5:'SAT',6:'UNSAT_EXHAUSTIVE'}
+for n,status in expected.items():
+    d=json.load(open(f'/tmp/e061_{n}.json'))
+    assert d['status']==status,(n,d['status'],status)
+    if status=='SAT':verify_triple(d['witness'])
+q=json.load(open('/tmp/e061_trade3.json'))
+assert q['best']==291 and q['nodes']>=3000000,q
+print('FRESH_BINARY_REPLAY_PASS', expected, 'depth3_trade_nodes',q['nodes'])
+PY_CHECK
