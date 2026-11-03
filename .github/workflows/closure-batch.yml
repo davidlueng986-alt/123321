@@ -22,3 +22,13 @@ jobs:
           node-version: '22'
       - name: Independently replay finite controls and row-factorization certificate
         run: node research/closure_batch/run_batch.js
+      - name: Independently verify forced-prefix nonextension and its negative controls
+        run: |
+          python3 -m unittest discover -s research/closure_batch -p test_forced_prefix.py -v
+          python3 research/closure_batch/verify_forced_prefix.py
+      - name: Verify normalized nogood and bounded search integration
+        run: |
+          node research/closure_batch/test_normalized_cut.js
+          node research/closure_batch/certified_search.js
+      - name: Independently check all ten binary-relaxation countermodels
+        run: node research/closure_batch/verify_cap_binary.js

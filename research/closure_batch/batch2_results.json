@@ -1,0 +1,54 @@
+{
+  "schema": "closure-batch2-results-v1",
+  "date": "2026-11-03",
+  "root_status": {
+    "MOLS10": "OPEN",
+    "CAP7": "OPEN"
+  },
+  "forced_prefix": {
+    "sha256": "e199bf4266f744369b4401c6726ecebdd4a91b8b87a79b0f2f4b86518cd4739e",
+    "legal_options": 30,
+    "singleton_demands": 180,
+    "forced_options": 30,
+    "core_vertices": 12,
+    "core_edges": 22,
+    "proof_nodes": 33,
+    "conclusion": "NO_COMPLETION_OF_THIS_EXACT_PREFIX",
+    "global_orbits_closed": 0
+  },
+  "learned_cut": {
+    "literals": 60,
+    "normalized_model_options": 41338,
+    "scope": "All supplied non-first-row cell assignments must hold together",
+    "matched_smoke_node_budget": 16,
+    "baseline_status": "UNKNOWN_BUDGET",
+    "with_cut_status": "UNKNOWN_BUDGET",
+    "learned_prunes_observed": 0,
+    "speedup_established": false
+  },
+  "cap_binary_relaxation": {
+    "branches_with_exact237_countermodels": 10,
+    "H_points_each": 89,
+    "actual_cap_witnesses": 0,
+    "full_model_status": "UNKNOWN",
+    "greedy_total_sizes": [
+      716,
+      737,
+      707,
+      739,
+      746,
+      696,
+      747,
+      685,
+      692,
+      713
+    ]
+  },
+  "checks": {
+    "python_unittests": 9,
+    "independent_normalized_cut_mutations_rejected": 3,
+    "independent_cap_countermodel_mutations_rejected": 3,
+    "prior_batch_regression": "PASS"
+  },
+  "ci_status": "NOT_YET_OBSERVED_FOR_THIS_NEW_COMMIT"
+}

@@ -250,3 +250,11 @@
 固定 input hash、parent 推導橋樑、完整覆蓋集合、negative control、證據產物、checker、budget及PASS/FAIL/UNKNOWN後續動作。
 新局部命題若不會改變表示法、覆蓋、構造或根證明的下一步，先不排進執行批次。
 一般局部不可行不自動排除祖先：若祖先還有其他covers／continuations，必須保留。
+
+## 第二批狀態更新
+
+M06：指定七行prefix的30個合法placements全部被迫，故既有row障礙已提升成該prefix完整非延伸證明；可重播60-literal guarded nogood已接入full OA搜尋，尚無加速證據。
+
+C09：十分支的binary-only＋cardinality relaxation皆有237點可行countermodel，並有明確ternary違反；不能只靠該relaxation閉合237問題。完整模型仍UNKNOWN。
+
+證據、界限與重播見 [第二批報告](../research/closure_batch/FORCED_PREFIX_REPORT.md)。

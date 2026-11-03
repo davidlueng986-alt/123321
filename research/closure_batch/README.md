@@ -1,4 +1,8 @@
 # Closure batch 2026-11-03：可重用row-factorization障礙與完整有限後備法
+
+更新：[第二批報告](FORCED_PREFIX_REPORT.md) 已將固定cover障礙提升到完整指定prefix的排除，
+加入已驗證的60-literal normalized OA nogood及root搜尋介面，並對Cap十分支提供binary-only
+relaxation的明確SAT countermodels。主問題仍OPEN；沒有已量測的root加速。
 **根狀態：3-MOLS(10) OPEN；exact r3(7) OPEN。**
 本批的局部答案及控制不構成主問題成功。核心規約見 [MISSION](../../docs/MISSION.md)。
 
