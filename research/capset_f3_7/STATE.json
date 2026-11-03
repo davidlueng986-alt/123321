@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP039 independently audited CAP035 exact-cardinality suffix with constructive witnesses and UP refutations; conditional fixed-285 SAT still UNKNOWN.",
-  "next_experiment": "Compare full DIMACS suffix hash against CAP035, CI; bounded proof-logged SAT or CAP019 classification referee.",
-  "last_run_id": "CAP-039-CARDINALITY-SUFFIX-AUDIT-2026-11-03",
-  "last_run_result": "LOCAL_CPU_PASS_CI_PENDING_SAT_UNKNOWN",
+  "current_hypothesis": "Root-first CAP040: all possible >=237 caps are covered by 13 affine-frame S8 ninth-point cases (2151 compatible positions, 1211 tenth stabilizer orbits); via CAP007J >=89 6D hyperplane moment theorem, normalize 7 frame points inside H and 1 outside, giving one root-equivalent >=237 SAT with H>=89 or 10 H-preserving S7 ninth-point branches. All SAT/UNSAT UNKNOWN; do not return to fixed285 conditional family as primary goal.",
+  "next_experiment": "Confirm final CAP040 GitHub CI, audit exact CNF and 13/10 no-loss coverage, then one bounded CPU proof-logging SAT pilot on globally sound hyperplane-anchored model vs unanchored control. Require independently checked LRAT/DRAT for UNSAT or exact 7D witness for SAT; UNKNOWN on timeout. Do not spend repeated cycles improving disconnected local constraints.",
+  "last_run_id": "CAP-040-GOAL_BACKWARD_GLOBAL_PROOF_DAG-2026-11-03",
+  "last_run_result": "LOCAL_EXACT_AFFINE_ORBITS_AND_ROOT_COMPLETE_CNF_GENERATED_CI_PENDING_SAT_UNKNOWN",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -88,7 +88,8 @@
     "CAP-036-LOCAL",
     "CAP-037-LOCAL",
     "CAP-038-LOCAL",
-    "CAP-039-LOCAL"
+    "CAP-039-LOCAL",
+    "CAP-040-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549413947",
   "baseline_secant_audit": {
@@ -110,7 +111,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-03T10:00:00Z",
+  "last_updated_utc": "2026-11-03T10:34:43.025Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1529,5 +1530,58 @@
     "status": "LOCAL_CPU_PASS_CI_PENDING",
     "sat_status": "UNKNOWN",
     "report": "research/capset_f3_7/CAP039_CARDINALITY_SUFFIX_AUDIT_2026-11-03.md"
+  },
+  "cap040_root_goal_dag": {
+    "scope": "Full r3(7) exact goal; no fixed236 neighborhood or fixed285 occupancy assumption",
+    "known_verified_lower": 236,
+    "root_upper_proof_target": "UNSAT of >=237-point cap",
+    "ninth_S8_orbits": 13,
+    "ninth_allowed_points": 2151,
+    "tenth_S8_stabilizer_orbits": 1211,
+    "affine_frame_fixed_ones": 8,
+    "frame_forced_zeros": 28,
+    "ninth_S8_forced_zeros": [
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      35
+    ],
+    "moment_89_gate": "CAP007J proven via S2/S3 exact moment; 75 local max88 profiles; global contradiction -35076",
+    "moment_dense_hyperplane_S7_all_ninth_orbits": 32,
+    "complete_ninth_branches_in_dense_H": 10,
+    "dense_H_ninth_candidates": 701,
+    "unrestricted_branch_0_DIMACS_sha256": "8d23ac06842a0fbdafab8aef244e54dd819770578c2c8023b04e565a330e19e9",
+    "anchored_global_DIMACS_sha256": "c45a3e74e885b070ab0bc7a4a0d71cdc976dd1c17b442bfd7fedca665e9e37be",
+    "unrestricted_branch0_vars": 492540,
+    "unrestricted_branch0_clauses": 1775362,
+    "anchored_global_vars": 553505,
+    "anchored_global_clauses": 1896555,
+    "sat_status": "UNKNOWN",
+    "all_branch_unsat_certificates": 0,
+    "branching_soundness": "Local Python exact arithmetic verified; GitHub CI pending",
+    "global_bound_improved": false,
+    "novelty_established": false,
+    "report": "research/capset_f3_7/CAP040_ROOT_FIRST_PROOF_DAG_2026-11-03.md",
+    "manifest": "research/capset_f3_7/CAP040_ROOT_PROOF_DAG.json",
+    "code": [
+      "research/capset_f3_7/cap040_root_orbits.py",
+      "research/capset_f3_7/cap040_hyperplane_anchor.py"
+    ],
+    "tests": [
+      "research/capset_f3_7/test_cap040_root_orbits.py",
+      "research/capset_f3_7/test_cap040_hyperplane_anchor.py"
+    ],
+    "local_seed": null,
+    "gpu_used": false,
+    "paid_compute": false
   }
 }
