@@ -1,3 +1,17 @@
+# Sole Mission: CLOSE 3-MOLS(10)
+
+**SINGLE ACCEPTABLE FINAL OUTCOME: change the mathematical status of 3-MOLS(10) from OPEN to CLOSED.**
+
+- **PROVE EXISTENCE:** exhibit three complete order-10 Latin squares and independently verify all 300 row/column permutations and all three **100/100/100** orthogonality overlays; release the matrices and checker.
+- **PROVE NONEXISTENCE:** supply an unrestricted mathematical proof or complete independently replayable UNSAT certificate, with a proved covering argument for *all* symmetry classes and all continuations.
+- All other activities (new lemmas, near triples, LP/ILP relaxations, fixed-prefix exclusions, certificates, code, commits, search nodes) are **tools, not success metrics**. No partial result may be called a resolution or a percent-to-closure estimate.
+- **Goal-backward discipline:** before computation, write the exact logical implication from the desired intermediate claim to CLOSED. Seek counterexamples before proving a proposed universal lemma. Stop false shortcuts immediately; E059 refutes universal 4-row fractional/integer residual infeasibility.
+- **Audit barrier:** label UNKNOWN correctly; independently verify witnesses, branch coverage and proof objects. Publication requires readable, reproducible, correctly scoped evidence and appropriate credit to earlier work.
+- **Execution mode:** user-triggered only. The user's MOLS10 hourly automation is disabled; do not reenable without explicit consent.
+- Current global status: **OPEN**, as of 2026-11-03. Never silently mark CLOSED without a complete independently verified result.
+
+---
+
 ## UPDATE 2026-11-03 — E059 SUPERSEDES N-A (REFUTED)
 
 Both universal four-row residual LP infeasibility and universal four-/seven-row INTEGER residual exact-cover infeasibility have explicit exact witnesses and are FALSE. See E059_REPORT.md and E059_STRATEGY_REVISION.md. The original N-A conjecture below remains only as historical record, NOT an active research objective. No unrestricted 3-MOLS(10) solution was found. The 2024 literature already provides a 9×10 triple of MOLR; direct endgame must include all five OA coordinates. Hourly MOLS10 automation remains paused by user request.
