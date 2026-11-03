@@ -11,9 +11,9 @@
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
   "current_hypothesis": "CAP-026: Any hypothetical 285-point cap with every affine 6D section<=109 has nonzero barycenter and anisotropic rank-2 quadratic form on its 6D kernel. Exact formal moment+rank2 negative control survives; no new global bound. CAP-019 <=287 remains provisional pending independent Thackeray 110-cap classification referee.",
-  "next_experiment": "Instantiate shared-fiber SAT with CAP027 f(q), exact occupancy PB, bounded solver with proof logging and independent checker; audit CAP019.",
-  "last_run_id": "CAP-031-SHARED-FIBER-FACTORIZATION-2026-11-03",
-  "last_run_result": "EXACT_3AP_FACTORIZATION_LOCAL_PASS_CI_PENDING_NO_SAT_CLAIM",
+  "next_experiment": "Build proof-logged shared-fiber SAT/PB for CAP027 occupancy, then independently validate SAT coordinates or UNSAT proof; continue CAP019 referee.",
+  "last_run_id": "CAP-032-RANDOM-OCCUPANCY-EXPECTATION-2026-11-03",
+  "last_run_result": "EXACT_ANALYTIC_EXPECTATION_131198_OVER_75_CI_PENDING_NO_BOUND",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -78,7 +78,8 @@
     "CAP-023-LOCAL",
     "CAP-029-LOCAL",
     "CAP-030",
-    "CAP-031"
+    "CAP-031",
+    "CAP-032-ANALYTIC"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549413947",
   "baseline_secant_audit": {
