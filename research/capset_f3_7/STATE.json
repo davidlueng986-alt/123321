@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "CAP041 directly reduces one of CAP040H's 10 globally exhaustive 237-cap proof leaves by sound literal substitution of 9 selected frame+ninth points and their 36 secant-forced zeros. Full H00 compressed CNF 517533 vars/1786028 clauses vs 553505/1896555 unbranched; no SAT solve; goal requires 10 sound UNSAT proofs or an independently checked >=237 witness to disprove 236 equality.",
-  "next_experiment": "Check CAP041 final GitHub CI and pinned entire CNF SHA; evaluate bounded free CPU proof-logged SAT on compressed H00 against same-H00 uncompressed control, independently verify SAT witness or DRAT/LRAT UNSAT proof; report UNKNOWN on timeout. Continue root-complete 10-way proof tree, not fixed285-only.",
-  "last_run_id": "CAP-041-ROOT_EQUIVALENT_H00_PRESOLVE-2026-11-03",
-  "last_run_result": "LOCAL_EXACT_COMPLETE_H00_REDUCED_CNF_SHA_VERIFIED_CI_PENDING_SAT_UNKNOWN",
+  "current_hypothesis": "CAP042 independent ten-leaf incidence census confirms sound CAP041 H00 and counts all other nine dense-H branches, but all SAT statuses UNKNOWN; root proof requires verified UNSAT certificates for all ten or a new witness to refute <=236.",
+  "next_experiment": "Check CAP042 CI; bounded proof-logged CPU SAT on H00, independent proof/witness checker; CAP019 referee and >=237 construction remain parallel priorities.",
+  "last_run_id": "CAP-042-TEN_LEAF_INCIDENCE-2026-11-03",
+  "last_run_result": "LOCAL_EXACT_TEN_BRANCH_INCIDENCE_PASS_CI_PENDING_SAT_UNKNOWN",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -90,7 +90,8 @@
     "CAP-038-LOCAL",
     "CAP-039-LOCAL",
     "CAP-040-LOCAL",
-    "CAP-041-LOCAL"
+    "CAP-041-LOCAL",
+    "CAP-042-LOCAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549413947",
   "baseline_secant_audit": {
@@ -112,7 +113,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-03T10:46:42.264Z",
+  "last_updated_utc": "2026-11-03T10:55:00Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1621,6 +1622,48 @@
     "code": "research/capset_f3_7/cap041_root_presolve.py",
     "test": "research/capset_f3_7/test_cap041_root_presolve.py",
     "report": "research/capset_f3_7/CAP041_ROOT_BRANCH_PRESOLVE_2026-11-03.md",
+    "no_gpu_paid_compute": true
+  },
+  "cap042_ten_leaf_incidence": {
+    "status": "LOCAL_EXACT_PASS_CI_PENDING",
+    "dropped": [
+      38718,
+      38718,
+      38718,
+      38718,
+      38718,
+      38733,
+      38718,
+      38724,
+      38724,
+      37662
+    ],
+    "binary": [
+      9513,
+      9513,
+      9513,
+      9513,
+      9513,
+      9513,
+      9513,
+      9516,
+      9516,
+      9526
+    ],
+    "clauses": [
+      1786028,
+      1786028,
+      1786028,
+      1786028,
+      1786028,
+      1786013,
+      1786028,
+      1786022,
+      1786022,
+      1787700
+    ],
+    "sat_status": "UNKNOWN",
+    "source": "research/capset_f3_7/cap042_ten_leaf_incidence.py",
     "no_gpu_paid_compute": true
   }
 }
