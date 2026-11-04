@@ -1,0 +1,129 @@
+{
+  "experiment": "E065",
+  "problem": "3-MOLS(10)",
+  "status": "OPEN",
+  "normalization": "first-row identities in A/B/C plus A firstcolumn identity",
+  "model_equivalence": "both encode FULL OA(n^2,5,n,2), no omission of ROW coordinate",
+  "n10_base_cnf": {
+    "variables": 33000,
+    "clauses": 101740
+  },
+  "n10_full_pb": {
+    "binary_choices": 41338,
+    "exactly_one_equations": 1000
+  },
+  "order6_complete_firstcolumn_paratopy_classes": 3,
+  "order6_crosschecked": "CNF_Z3 and PB_Z3 both 3/3 UNSAT; independent C++ DLX 3/3 exhaustive =1203 nodes",
+  "order10_16_cross_cycle_types": [
+    {
+      "engine": "CNF_Z3",
+      "status": "UNKNOWN 16/16",
+      "seconds": 32.006
+    },
+    {
+      "engine": "PB_Z3",
+      "status": "UNKNOWN 16/16",
+      "seconds": 32.013
+    }
+  ],
+  "global_10_branch_closed": 0,
+  "global_10_branches": 1700,
+  "notes": [
+    "No independently checked LRAT proof produced for order10",
+    "No 100/100/100 order10 witness",
+    "Z3 incremental uses same solver instance but measurable learned-clause reuse is not established",
+    "No credible numerical ETA"
+  ],
+  "models": [
+    {
+      "model": "cnf",
+      "n": 5,
+      "case": "_branches",
+      "total": 2,
+      "status_hist": {
+        "UNSAT": 1,
+        "SAT": 1
+      },
+      "seconds": 0.0155
+    },
+    {
+      "model": "cnf",
+      "n": 6,
+      "case": "_branches",
+      "total": 3,
+      "status_hist": {
+        "UNSAT": 3
+      },
+      "seconds": 0.426
+    },
+    {
+      "model": "cnf",
+      "n": 10,
+      "case": "E065_n10_results.jsonl",
+      "total": 3,
+      "status_hist": {
+        "UNKNOWN": 3
+      },
+      "seconds": 15.002
+    },
+    {
+      "model": "cnf",
+      "n": 10,
+      "case": "E065_n10_sample_cnf.jsonl",
+      "total": 16,
+      "status_hist": {
+        "UNKNOWN": 16
+      },
+      "seconds": 32.006
+    },
+    {
+      "model": "pb",
+      "n": 5,
+      "case": "_branches",
+      "total": 2,
+      "status_hist": {
+        "UNSAT": 1,
+        "SAT": 1
+      },
+      "seconds": 0.0105
+    },
+    {
+      "model": "pb",
+      "n": 6,
+      "case": "_branches",
+      "total": 3,
+      "status_hist": {
+        "UNSAT": 3
+      },
+      "seconds": 0.0851
+    },
+    {
+      "model": "pb",
+      "n": 10,
+      "case": "E065_n10_sample_pb.jsonl",
+      "total": 16,
+      "status_hist": {
+        "UNKNOWN": 16
+      },
+      "seconds": 32.0128
+    }
+  ],
+  "sample": [
+    {
+      "file": "E065_n10_sample_cnf.jsonl",
+      "total": 16,
+      "counts": {
+        "UNKNOWN": 16
+      },
+      "seconds": 32.006
+    },
+    {
+      "file": "E065_n10_sample_pb.jsonl",
+      "total": 16,
+      "counts": {
+        "UNKNOWN": 16
+      },
+      "seconds": 32.0128
+    }
+  ]
+}

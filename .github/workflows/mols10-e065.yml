@@ -1,0 +1,80 @@
+name: MOLS10 E065 complete OA SAT replay
+on:
+  push:
+    branches: [math-agent-mols10]
+    paths:
+      - 'research/mols10/e065/**'
+      - '.github/workflows/mols10-e065.yml'
+  workflow_dispatch:
+jobs:
+  offline-z3-controls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install native Z3 library
+        run: sudo apt-get update -qq && sudo apt-get install -y libz3-dev g++
+      - name: Rebuild two full five-coordinate encodings; n4,n5,n6 crosschecks and bounded n10
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd research/mols10/e065
+          bash E065_replay.sh
+      - name: Retain bounded results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e065-z3-replay
+          path: |
+            research/mols10/e065/E065_replay_*.jsonl
+            research/mols10/e065/E065_n*_reps.jsonl
+  cadical-lrat-calibration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build pinned CaDiCaL 3 and independent LRAT checker
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone -q https://github.com/arminbiere/cadical.git /tmp/e065-cadical
+          cd /tmp/e065-cadical
+          git checkout -q c60730422e758ef1cebe7aeddf2dda31c996bf04
+          ./configure
+          make -j2
+          git clone -q https://github.com/marijnheule/drat-trim.git /tmp/e065-drat-trim
+          cd /tmp/e065-drat-trim
+          git checkout -q 2e3b2dc0ecf938addbd779d42877b6ed69d9a985
+          gcc -O2 lrat-check.c -o lrat-check
+      - name: Verify full branch CNF proof pipeline on n5 negative control
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd research/mols10/e065
+          python - <<'PY'
+          import json
+          from E065_small_order_symmetry import group_orbits
+          R,_,_=group_orbits(4)
+          with open('E065_n5_reps.jsonl','w') as out:
+              for b,c in R:
+                  out.write(json.dumps({'B_col0':[0]+[x+1 for x in b],'C_col0':[0]+[x+1 for x in c]})+'\n')
+          PY
+          CADICAL=/tmp/e065-cadical/build/cadical LRAT_CHECK=/tmp/e065-drat-trim/lrat-check bash E065_cadical_proof.sh 5 0 40 E065_n5_reps.jsonl
+      - name: Order10 one canonical branch; keep SAT, UNSAT verified, UNKNOWN distinct
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd research/mols10/e065
+          CADICAL=/tmp/e065-cadical/build/cadical LRAT_CHECK=/tmp/e065-drat-trim/lrat-check bash E065_cadical_proof.sh 10 0 45 ../e064/E064_12_representatives.jsonl
+      - name: Keep proof attempts and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e065-cadical-lrat
+          path: research/mols10/e065/E065_proof_outputs/

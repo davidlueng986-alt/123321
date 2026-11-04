@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "ON DEMAND: use 1700 exact first-column paratopy representatives and proof-producing full five-coordinate OA SAT/CDCL/LRAT, or find full 100/100/100 witness; avoid root LP sampling and fixed Egan source neighborhoods. Global proof needs all 1700 branches checked exhaustively. MOLS10 hourly remains DISABLED.",
-  "current_hypothesis": "ONLY GOAL: CLOSE 3MOLS10. Full 3x9 first-column Latin rectangle paratopy classes form a mathematically sound unrestricted 1700-branch SAT/UNSAT search frontier after first-row identities and A first-column identity. Seek one full witness or 1700 complete independently replayable UNSAT certificates. The counts 2877/1700 are previously known, not new mathematics.",
-  "last_experiment": "MOLS10-E064-1700-PARATOPY-CLASS-GLOBAL-FRONTIER-AND-FULL-OA-CONTROLS",
+  "next_action": "ON DEMAND ONLY, hourly disabled. Run proof-producing CaDiCaL/LRAT checker on EXACT E065 branch-unit DIMACS and independently verify each UNSAT; compare CDCL with native PB. Prioritize solver architecture improvement/structural global lemma if no order10 branch closes; do not claim success for n6 controls or n10 UNKNOWN. A 100/100/100 verified SAT witness instantly closes existence.",
+  "current_hypothesis": "SOLE GOAL CLOSED. E064 mathematically complete 1700 firstcolumn paratopy branches; direct full OA(100,5,10,2) CDCL/SMT attempt, via two distinct native encodings and assumption-based incremental solving. Complete closure requires verified SAT 100/100/100 or independently checked UNSAT for every branch.",
+  "last_experiment": "MOLS10-E065-DIRECT-INCREMENTAL-FULL-5D-SAT-AND-NATIVE-PB",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549028462",
   "last_verified_results": [
@@ -133,7 +133,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-03T17:53:00Z",
+  "last_run_utc": "2026-11-04T08:01:14Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -166,10 +166,10 @@
     "research/mols10/E049_REPORT.md"
   ],
   "last_run_date": "2026-11-02",
-  "limitations": "E064 counts 2877 and 1700 correspond to known Latin rectangle isotopy/paratopy classifications; no novelty claimed. Branch count reduction does NOT imply speedup or percent solved. 0 completed order10 branches. Plain DLX and root LP insufficient, no DRAT/LRAT certificates. Full portable code archived Drive ZIP. All experiments current-turn, no background work/scheduled automation.",
+  "limitations": "E065 3-MOLS(10) OPEN. No n10 SAT model or fully checked order10 UNSAT cert. All 16 sampled n10 branches per encoding UNKNOWN. Z3 CNF and PB are different encodings but share one solver backend; order6 independent DLX replay is a separate exact solver, not LRAT. CaDiCaL/LRAT path unexecuted locally due offline environment. No ETA or percent-to-solution.",
   "last_ci_result": "E048 strict pipefail GitHub Actions run 41549028462 SUCCESS, remote 1569 distinct prefixes x576=903744 row alignments identity-only, 2895 static intercalate subsets, 1 valid changed prefix with exact zero-support resource 595. First CI had masked assertion failure, audited and corrected.",
   "external_status_review": "2026-11-02 23:50 UTC: fresh primary arXiv 2503.10504v2 and 2605.02132v2 plus targeted November web/arXiv search; no independently checkable unrestricted solution found, absence of hits not proof.",
-  "current_math_result": "OPEN, no order10 witness and no unrestricted UNSAT, 0/1700 global branches fully closed. E064 independently recomputed 16085 conjugacy orbits of ordered 3x9 first-column pairs by exact generator orbit traversal and Burnside; added square S3 to obtain 2877, plus row/column transpose (f,g)->(f^-1,g^-1) to obtain 1700, matching McKay data and OEIS A393633 known counts. Pure Python brute force independently enumerated ALL first-column classes for n4 (1 SAT), n5 (2 classes one SAT one UNSAT), n6 (3/3 exhaustive UNSAT in 1203 DLX nodes), validating full OA global coverage on small orders. All 1700 order10 root support screens yielded nonzero degree, ten numerical root LPs feasible; 25 order10 short branches and 2 deep 12sec branches UNKNOWN_BUDGET; no orbit excluded.",
+  "current_math_result": "GLOBAL OPEN, 0/1700 order10 paratopy branches globally eliminated, no order10 100/100/100 witness. E065 full 5-coordinate CNF 33000 variables,101740 clauses; PB native Z3 41338 placement vars,1000 exact-one equations. n4 SAT independently verified16/16/16 each. n5 both full symmetry classes Z3 CNF/PB: 1 UNSAT+1 SAT, SAT checked25/25/25. n6 all 3 fully normalized branches UNSAT by both Z3 encodings, independently 3/3 exact C++ DLX exhaustive 1203 nodes; unbranched n6 Z3 still UNKNOWN after 10-12 sec. n10 16 distinct representatives covering eight cycle types, 2 sec each/encoding: 16/16 UNKNOWN CNF,16/16 UNKNOWN PB; first 3 reps at 5sec also all UNKNOWN. Branch-unit DIMACS generator validated against n5 SAT/UNSAT. Local CaDiCaL/LRAT checker unavailable; proof pipeline scripted but NOT RUN, zero order10 proof certs. Clean archive replay passes all controls.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -256,5 +256,7 @@
   "e063b_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e063b/E063B_REPORT.md",
   "e063b_bundle_drive_url": "https://drive.google.com/file/d/11gKrAMe49dLM98mmt1hX_RCSzswu0Ij5/view",
   "e064_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E064_REPORT.md",
-  "e064_bundle_drive_url": "https://drive.google.com/file/d/14uP0ELu3NNIH8o2VKZFDoegR3tP2YcKs/view"
+  "e064_bundle_drive_url": "https://drive.google.com/file/d/14uP0ELu3NNIH8o2VKZFDoegR3tP2YcKs/view",
+  "e065_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e065/E065_REPORT.md",
+  "e065_bundle_drive_url": "https://drive.google.com/file/d/1lfTgElYz8TTPnUZGKZjmdF6ZrdbtPa1n/view"
 }
