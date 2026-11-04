@@ -1,0 +1,9 @@
+{"type":[2,2,2,3],"centralizer":144,"allowed_g":43424,"g_orbits":318,"max_orbit":144}
+{"type":[2,2,5],"centralizer":40,"allowed_g":43412,"g_orbits":1094,"max_orbit":40}
+{"type":[2,3,4],"centralizer":24,"allowed_g":43400,"g_orbits":1820,"max_orbit":24}
+{"type":[2,7],"centralizer":14,"allowed_g":43400,"g_orbits":3100,"max_orbit":14}
+{"type":[3,3,3],"centralizer":162,"allowed_g":43390,"g_orbits":290,"max_orbit":162}
+{"type":[3,6],"centralizer":18,"allowed_g":43388,"g_orbits":2442,"max_orbit":18}
+{"type":[4,5],"centralizer":20,"allowed_g":43386,"g_orbits":2178,"max_orbit":20}
+{"type":[9],"centralizer":9,"allowed_g":43387,"g_orbits":4843,"max_orbit":9}
+TOTAL 16085

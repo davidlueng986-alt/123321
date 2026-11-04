@@ -1,0 +1,2 @@
+E064_TWELVE {"ordered_orbits":16085,"S3xC2_orbits":1700,"burnside_sum":20400,"orbit_size_hist":{"1":8,"2":8,"3":115,"4":2,"6":516,"12":1051}}
+{"ordered_orbits":16085,"S3_unordered_orbits":2877,"fixed_BC":371,"fixed_AB":371,"fixed_AC":371,"fixed_cycle1":32,"fixed_cycle2":32,"S3_orbit_size_hist":{"1":20,"2":6,"3":351,"6":2500}}

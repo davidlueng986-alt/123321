@@ -1,0 +1,435 @@
+{
+  "n": 10,
+  "sample_ids": [
+    0,
+    1,
+    2,
+    3,
+    8,
+    19,
+    35,
+    49,
+    100,
+    155,
+    158,
+    199,
+    275,
+    311,
+    320,
+    692,
+    800,
+    1200,
+    1417,
+    2000,
+    2185,
+    2265,
+    2597,
+    2697,
+    2800
+  ],
+  "results": [
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 81920,
+      "branches": 81919,
+      "dead_ends": 21438,
+      "maxdepth": 68,
+      "seconds": 0.5435,
+      "rep_id": 0,
+      "type": [
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 81920,
+      "branches": 81919,
+      "dead_ends": 20650,
+      "maxdepth": 69,
+      "seconds": 0.50977,
+      "rep_id": 1,
+      "type": [
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 81920,
+      "branches": 81919,
+      "dead_ends": 19662,
+      "maxdepth": 70,
+      "seconds": 0.54454,
+      "rep_id": 2,
+      "type": [
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16086,
+      "maxdepth": 70,
+      "seconds": 0.50533,
+      "rep_id": 3,
+      "type": [
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16417,
+      "maxdepth": 68,
+      "seconds": 0.46999,
+      "rep_id": 8,
+      "type": [
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16802,
+      "maxdepth": 68,
+      "seconds": 0.49243,
+      "rep_id": 19,
+      "type": [
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16460,
+      "maxdepth": 69,
+      "seconds": 0.48222,
+      "rep_id": 35,
+      "type": [
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 17030,
+      "maxdepth": 68,
+      "seconds": 0.50102,
+      "rep_id": 49,
+      "type": [
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16228,
+      "maxdepth": 68,
+      "seconds": 0.50515,
+      "rep_id": 100,
+      "type": [
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 81920,
+      "branches": 81919,
+      "dead_ends": 19772,
+      "maxdepth": 69,
+      "seconds": 0.48066,
+      "rep_id": 155,
+      "type": [
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 17008,
+      "maxdepth": 71,
+      "seconds": 0.5305,
+      "rep_id": 158,
+      "type": [
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16363,
+      "maxdepth": 68,
+      "seconds": 0.53754,
+      "rep_id": 199,
+      "type": [
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16294,
+      "maxdepth": 68,
+      "seconds": 0.46571,
+      "rep_id": 275,
+      "type": [
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16498,
+      "maxdepth": 67,
+      "seconds": 0.53925,
+      "rep_id": 311,
+      "type": [
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16626,
+      "maxdepth": 70,
+      "seconds": 0.46331,
+      "rep_id": 320,
+      "type": [
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 81920,
+      "branches": 81919,
+      "dead_ends": 20171,
+      "maxdepth": 68,
+      "seconds": 0.54839,
+      "rep_id": 692,
+      "type": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16727,
+      "maxdepth": 69,
+      "seconds": 0.46315,
+      "rep_id": 800,
+      "type": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16296,
+      "maxdepth": 70,
+      "seconds": 0.46291,
+      "rep_id": 1200,
+      "type": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 81920,
+      "branches": 81919,
+      "dead_ends": 19427,
+      "maxdepth": 68,
+      "seconds": 0.56046,
+      "rep_id": 1417,
+      "type": [
+        2,
+        7
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16112,
+      "maxdepth": 71,
+      "seconds": 0.47673,
+      "rep_id": 2000,
+      "type": [
+        2,
+        7
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16548,
+      "maxdepth": 69,
+      "seconds": 0.51141,
+      "rep_id": 2185,
+      "type": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16299,
+      "maxdepth": 69,
+      "seconds": 0.48928,
+      "rep_id": 2265,
+      "type": [
+        3,
+        6
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 15404,
+      "maxdepth": 69,
+      "seconds": 0.48117,
+      "rep_id": 2597,
+      "type": [
+        4,
+        5
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16559,
+      "maxdepth": 66,
+      "seconds": 0.50735,
+      "rep_id": 2697,
+      "type": [
+        9
+      ]
+    },
+    {
+      "n": 10,
+      "status": "UNKNOWN_BUDGET",
+      "candidates": 40843,
+      "nodes": 65536,
+      "branches": 65535,
+      "dead_ends": 16454,
+      "maxdepth": 71,
+      "seconds": 0.56297,
+      "rep_id": 2800,
+      "type": [
+        9
+      ]
+    }
+  ],
+  "elapsed": 13.035229189000006
+}

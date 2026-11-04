@@ -1,0 +1,9 @@
+{"type":[2,2,2,3],"centralizer":144,"allowed_g":43424,"fixed_sum":45792,"orbits":318}
+{"type":[2,2,5],"centralizer":40,"allowed_g":43412,"fixed_sum":43760,"orbits":1094}
+{"type":[2,3,4],"centralizer":24,"allowed_g":43400,"fixed_sum":43680,"orbits":1820}
+{"type":[2,7],"centralizer":14,"allowed_g":43400,"fixed_sum":43400,"orbits":3100}
+{"type":[3,3,3],"centralizer":162,"allowed_g":43390,"fixed_sum":46980,"orbits":290}
+{"type":[3,6],"centralizer":18,"allowed_g":43388,"fixed_sum":43956,"orbits":2442}
+{"type":[4,5],"centralizer":20,"allowed_g":43386,"fixed_sum":43560,"orbits":2178}
+{"type":[9],"centralizer":9,"allowed_g":43387,"fixed_sum":43587,"orbits":4843}
+TOTAL 16085
