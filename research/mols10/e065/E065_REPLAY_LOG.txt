@@ -1,0 +1,40 @@
+{"n": 4, "nvars": 960, "clauses": 2608, "units": 16, "sha256": "6dcd433888457bfe0eb482707906287f6f6d84f3f2bc93fb795b078912fa3a36", "encoding": "E065-full-OA-normalized-no-B<C"}
+{"n": 5, "nvars": 2250, "clauses": 6320, "units": 20, "sha256": "2becd884f28550a6022fa5529283e2260c331d3a786f4edec649eb4183ff4136", "encoding": "E065-full-OA-normalized-no-B<C"}
+{"n": 6, "nvars": 4536, "clauses": 13092, "units": 24, "sha256": "64601579f25856be04386a7d7e4683fd4ca6aadae6444cdb333df38483550f3f", "encoding": "E065-full-OA-normalized-no-B<C"}
+{"n": 10, "nvars": 33000, "clauses": 101740, "units": 40, "sha256": "0189632902abef9674af8ae3e3a80f204a2c301e9de5c4e48d5295470a856f12", "encoding": "E065-full-OA-normalized-no-B<C"}
+E065 BUILT n=4 vars=960 clauses=2608 time=0.00859884s
+{"n":4,"branch":0,"status":"SAT","seconds":0.00509755,"assumptions":8,"reason":"","verified":"INDEPENDENT_16_16_16","witness":[[[0,1,2,3],[1,0,3,2],[2,3,0,1],[3,2,1,0]],[[0,1,2,3],[2,3,0,1],[3,2,1,0],[1,0,3,2]],[[0,1,2,3],[3,2,1,0],[1,0,3,2],[2,3,0,1]]]}
+E065 SUMMARY sat=1 unsat=0 unknown=0 construction_s=0.00859884 total_s=0.0151822
+E065 PB BUILT: n=4 placements=64 equations=160 empty_resources=0 compile_seconds=0.00659048
+{"n":4,"branch":0,"status":"SAT","seconds":0.00242027,"assumptions":3,"placements":64,"verified":"INDEPENDENT_16_16_16","witness":[[[0,1,2,3],[1,0,3,2],[2,3,0,1],[3,2,1,0]],[[0,1,2,3],[2,3,0,1],[3,2,1,0],[1,0,3,2]],[[0,1,2,3],[3,2,1,0],[1,0,3,2],[2,3,0,1]]]}
+E065 PB SUMMARY SAT=1 UNSAT=0 UNKNOWN=0 total_s=0.00940781
+E065 BUILT n=5 vars=2250 clauses=6320 time=0.0131797s
+{"n":5,"branch":0,"status":"UNSAT","seconds":0.012541,"assumptions":10,"reason":""}
+{"n":5,"branch":1,"status":"SAT","seconds":0.000505555,"assumptions":10,"reason":"","verified":"INDEPENDENT_25_25_25","witness":[[[0,1,2,3,4],[1,3,0,4,2],[2,0,4,1,3],[3,4,1,2,0],[4,2,3,0,1]],[[0,1,2,3,4],[2,0,4,1,3],[1,3,0,4,2],[4,2,3,0,1],[3,4,1,2,0]],[[0,1,2,3,4],[3,4,1,2,0],[4,2,3,0,1],[2,0,4,1,3],[1,3,0,4,2]]]}
+E065 SUMMARY sat=1 unsat=1 unknown=0 construction_s=0.0131797 total_s=0.028544
+E065 PB BUILT: n=5 placements=413 equations=250 empty_resources=0 compile_seconds=0.00829283
+{"n":5,"branch":0,"status":"UNSAT","seconds":0.00978555,"assumptions":4,"placements":413}
+{"n":5,"branch":1,"status":"SAT","seconds":0.000191399,"assumptions":4,"placements":413,"verified":"INDEPENDENT_25_25_25","witness":[[[0,1,2,3,4],[1,4,0,2,3],[2,0,3,4,1],[3,2,4,1,0],[4,3,1,0,2]],[[0,1,2,3,4],[2,0,3,4,1],[1,4,0,2,3],[4,3,1,0,2],[3,2,4,1,0]],[[0,1,2,3,4],[3,2,4,1,0],[4,3,1,0,2],[2,0,3,4,1],[1,4,0,2,3]]]}
+E065 PB SUMMARY SAT=1 UNSAT=1 UNKNOWN=0 total_s=0.0193657
+E065 BUILT n=6 vars=4536 clauses=13092 time=0.0222724s
+{"n":6,"branch":0,"status":"UNSAT","seconds":0.15042,"assumptions":12,"reason":""}
+{"n":6,"branch":1,"status":"UNSAT","seconds":0.148726,"assumptions":12,"reason":""}
+{"n":6,"branch":2,"status":"UNSAT","seconds":0.157811,"assumptions":12,"reason":""}
+E065 SUMMARY sat=0 unsat=3 unknown=0 construction_s=0.0222724 total_s=0.479568
+E065 PB BUILT: n=6 placements=1566 equations=360 empty_resources=0 compile_seconds=0.0123598
+{"n":6,"branch":0,"status":"UNSAT","seconds":0.0586379,"assumptions":5,"placements":1566}
+{"n":6,"branch":1,"status":"UNSAT","seconds":0.016042,"assumptions":5,"placements":1566}
+{"n":6,"branch":2,"status":"UNSAT","seconds":0.0169085,"assumptions":5,"placements":1566}
+E065 PB SUMMARY SAT=0 UNSAT=3 UNKNOWN=0 total_s=0.104289
+INDEPENDENT_SAT_AND_ORDER6_BRANCH_EXHAUSTION_CHECK_PASS
+E065 BUILT n=10 vars=33000 clauses=101740 time=0.176594s
+{"n":10,"branch":0,"status":"UNKNOWN","seconds":2.00048,"assumptions":20,"reason":"canceled"}
+{"n":10,"branch":1,"status":"UNKNOWN","seconds":2.00016,"assumptions":20,"reason":"canceled"}
+{"n":10,"branch":2,"status":"UNKNOWN","seconds":2.00014,"assumptions":20,"reason":"canceled"}
+E065 SUMMARY sat=0 unsat=0 unknown=3 construction_s=0.176594 total_s=6.17961
+E065 PB BUILT: n=10 placements=41338 equations=1000 empty_resources=0 compile_seconds=0.352451
+{"n":10,"branch":0,"status":"UNKNOWN","seconds":2.00029,"assumptions":9,"placements":41338,"reason":"canceled"}
+{"n":10,"branch":1,"status":"UNKNOWN","seconds":2.00017,"assumptions":9,"placements":41338,"reason":"canceled"}
+{"n":10,"branch":2,"status":"UNKNOWN","seconds":2.01023,"assumptions":9,"placements":41338,"reason":"canceled"}
+E065 PB SUMMARY SAT=0 UNSAT=0 UNKNOWN=3 total_s=6.36562
+ORDER10_BOUNDED_RUNS_RECORDED_WITHOUT_FALSE_UNSAT

@@ -1,0 +1,20 @@
+[
+  {
+    "i": 0,
+    "status": "UNSAT_EXHAUSTIVE",
+    "nodes": 438,
+    "maxdepth": 22
+  },
+  {
+    "i": 1,
+    "status": "UNSAT_EXHAUSTIVE",
+    "nodes": 398,
+    "maxdepth": 23
+  },
+  {
+    "i": 2,
+    "status": "UNSAT_EXHAUSTIVE",
+    "nodes": 367,
+    "maxdepth": 23
+  }
+]

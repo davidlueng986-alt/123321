@@ -1,0 +1,32 @@
+{"ordered_orbit_id": 0, "type": [2, 2, 2, 3], "B_col0": [0, 2, 1, 4, 3, 6, 5, 8, 9, 7], "C_col0": [0, 3, 4, 1, 2, 7, 8, 9, 5, 6], "S3xC2_orbit_size": 3, "original_branch_index": 0}
+{"ordered_orbit_id": 109, "type": [2, 2, 2, 3], "B_col0": [0, 2, 1, 4, 3, 6, 5, 8, 9, 7], "C_col0": [0, 3, 5, 1, 7, 9, 8, 2, 4, 6], "S3xC2_orbit_size": 12, "original_branch_index": 52}
+{"ordered_orbit_id": 318, "type": [2, 2, 5], "B_col0": [0, 2, 1, 4, 3, 6, 7, 8, 9, 5], "C_col0": [0, 3, 4, 1, 2, 7, 5, 9, 6, 8], "S3xC2_orbit_size": 1, "original_branch_index": 104}
+{"ordered_orbit_id": 666, "type": [2, 2, 5], "B_col0": [0, 2, 1, 4, 3, 6, 7, 8, 9, 5], "C_col0": [0, 3, 5, 6, 7, 9, 8, 4, 1, 2], "S3xC2_orbit_size": 12, "original_branch_index": 272}
+{"ordered_orbit_id": 1420, "type": [2, 3, 4], "B_col0": [0, 2, 1, 4, 5, 3, 7, 8, 9, 6], "C_col0": [0, 3, 4, 1, 6, 7, 2, 9, 5, 8], "S3xC2_orbit_size": 2, "original_branch_index": 440}
+{"ordered_orbit_id": 1956, "type": [2, 3, 4], "B_col0": [0, 2, 1, 4, 5, 3, 7, 8, 9, 6], "C_col0": [0, 3, 6, 5, 1, 8, 4, 9, 2, 7], "S3xC2_orbit_size": 12, "original_branch_index": 636}
+{"ordered_orbit_id": 3344, "type": [2, 7], "B_col0": [0, 2, 1, 4, 5, 6, 7, 8, 9, 3], "C_col0": [0, 3, 4, 2, 1, 7, 5, 9, 6, 8], "S3xC2_orbit_size": 6, "original_branch_index": 833}
+{"ordered_orbit_id": 3774, "type": [2, 7], "B_col0": [0, 2, 1, 4, 5, 6, 7, 8, 9, 3], "C_col0": [0, 3, 4, 7, 1, 2, 9, 6, 5, 8], "S3xC2_orbit_size": 6, "original_branch_index": 1052}
+{"ordered_orbit_id": 6332, "type": [3, 3, 3], "B_col0": [0, 2, 3, 1, 5, 6, 4, 8, 9, 7], "C_col0": [0, 3, 1, 2, 6, 4, 5, 9, 7, 8], "S3xC2_orbit_size": 1, "original_branch_index": 1271}
+{"ordered_orbit_id": 6447, "type": [3, 3, 3], "B_col0": [0, 2, 3, 1, 5, 6, 4, 8, 9, 7], "C_col0": [0, 3, 4, 6, 7, 9, 5, 2, 1, 8], "S3xC2_orbit_size": 3, "original_branch_index": 1305}
+{"ordered_orbit_id": 6642, "type": [3, 6], "B_col0": [0, 2, 3, 1, 5, 6, 7, 8, 9, 4], "C_col0": [0, 3, 1, 4, 2, 7, 5, 9, 6, 8], "S3xC2_orbit_size": 6, "original_branch_index": 1339}
+{"ordered_orbit_id": 7328, "type": [3, 6], "B_col0": [0, 2, 3, 1, 5, 6, 7, 8, 9, 4], "C_col0": [0, 3, 4, 8, 7, 2, 1, 9, 5, 6], "S3xC2_orbit_size": 12, "original_branch_index": 1433}
+{"ordered_orbit_id": 9110, "type": [4, 5], "B_col0": [0, 2, 3, 4, 1, 6, 7, 8, 9, 5], "C_col0": [0, 3, 1, 5, 6, 7, 2, 9, 4, 8], "S3xC2_orbit_size": 6, "original_branch_index": 1528}
+{"ordered_orbit_id": 9536, "type": [4, 5], "B_col0": [0, 2, 3, 4, 1, 6, 7, 8, 9, 5], "C_col0": [0, 3, 5, 6, 7, 1, 9, 2, 4, 8], "S3xC2_orbit_size": 12, "original_branch_index": 1558}
+{"ordered_orbit_id": 11340, "type": [9], "B_col0": [0, 2, 3, 4, 5, 6, 7, 8, 9, 1], "C_col0": [0, 3, 1, 5, 2, 7, 4, 9, 6, 8], "S3xC2_orbit_size": 3, "original_branch_index": 1588}
+{"ordered_orbit_id": 12194, "type": [9], "B_col0": [0, 2, 3, 4, 5, 6, 7, 8, 9, 1], "C_col0": [0, 3, 4, 6, 9, 1, 8, 5, 2, 7], "S3xC2_orbit_size": 6, "original_branch_index": 1644}
+{"ordered_orbit_id": 9114, "type": [4, 5], "B_col0": [0, 2, 3, 4, 1, 6, 7, 8, 9, 5], "C_col0": [0, 3, 1, 5, 6, 7, 9, 2, 4, 8], "S3xC2_orbit_size": 12, "original_branch_index": 1529}
+{"ordered_orbit_id": 6442, "type": [3, 3, 3], "B_col0": [0, 2, 3, 1, 5, 6, 4, 8, 9, 7], "C_col0": [0, 3, 4, 6, 7, 8, 9, 5, 2, 1], "S3xC2_orbit_size": 3, "original_branch_index": 1302}
+{"ordered_orbit_id": 1344, "type": [2, 2, 5], "B_col0": [0, 2, 1, 4, 3, 6, 7, 8, 9, 5], "C_col0": [0, 5, 7, 6, 8, 1, 4, 9, 2, 3], "S3xC2_orbit_size": 12, "original_branch_index": 432}
+{"ordered_orbit_id": 2030, "type": [2, 3, 4], "B_col0": [0, 2, 1, 4, 5, 3, 7, 8, 9, 6], "C_col0": [0, 3, 6, 5, 7, 9, 4, 1, 2, 8], "S3xC2_orbit_size": 12, "original_branch_index": 667}
+{"ordered_orbit_id": 2312, "type": [2, 3, 4], "B_col0": [0, 2, 1, 4, 5, 3, 7, 8, 9, 6], "C_col0": [0, 3, 6, 7, 9, 8, 4, 5, 1, 2], "S3xC2_orbit_size": 12, "original_branch_index": 765}
+{"ordered_orbit_id": 3729, "type": [2, 7], "B_col0": [0, 2, 1, 4, 5, 6, 7, 8, 9, 3], "C_col0": [0, 3, 4, 6, 8, 9, 2, 5, 7, 1], "S3xC2_orbit_size": 12, "original_branch_index": 1028}
+{"ordered_orbit_id": 5385, "type": [2, 7], "B_col0": [0, 2, 1, 4, 5, 6, 7, 8, 9, 3], "C_col0": [0, 3, 6, 1, 8, 9, 5, 2, 7, 4], "S3xC2_orbit_size": 6, "original_branch_index": 1219}
+{"ordered_orbit_id": 97, "type": [2, 2, 2, 3], "B_col0": [0, 2, 1, 4, 3, 6, 5, 8, 9, 7], "C_col0": [0, 3, 5, 1, 7, 8, 4, 9, 2, 6], "S3xC2_orbit_size": 12, "original_branch_index": 42}
+{"ordered_orbit_id": 1491, "type": [2, 3, 4], "B_col0": [0, 2, 1, 4, 5, 3, 7, 8, 9, 6], "C_col0": [0, 3, 4, 5, 6, 7, 8, 9, 2, 1], "S3xC2_orbit_size": 12, "original_branch_index": 472}
+{"ordered_orbit_id": 2696, "type": [2, 3, 4], "B_col0": [0, 2, 1, 4, 5, 3, 7, 8, 9, 6], "C_col0": [0, 3, 6, 9, 8, 7, 2, 4, 1, 5], "S3xC2_orbit_size": 12, "original_branch_index": 799}
+{"ordered_orbit_id": 36, "type": [2, 2, 2, 3], "B_col0": [0, 2, 1, 4, 3, 6, 5, 8, 9, 7], "C_col0": [0, 3, 4, 5, 6, 1, 2, 9, 7, 8], "S3xC2_orbit_size": 6, "original_branch_index": 14}
+{"ordered_orbit_id": 6643, "type": [3, 6], "B_col0": [0, 2, 3, 1, 5, 6, 7, 8, 9, 4], "C_col0": [0, 3, 1, 4, 2, 7, 8, 9, 5, 6], "S3xC2_orbit_size": 6, "original_branch_index": 1340}
+{"ordered_orbit_id": 4418, "type": [2, 7], "B_col0": [0, 2, 1, 4, 5, 6, 7, 8, 9, 3], "C_col0": [0, 3, 5, 2, 6, 8, 9, 1, 4, 7], "S3xC2_orbit_size": 12, "original_branch_index": 1117}
+{"ordered_orbit_id": 4989, "type": [2, 7], "B_col0": [0, 2, 1, 4, 5, 6, 7, 8, 9, 3], "C_col0": [0, 3, 5, 8, 6, 7, 2, 9, 4, 1], "S3xC2_orbit_size": 12, "original_branch_index": 1208}
+{"ordered_orbit_id": 12959, "type": [9], "B_col0": [0, 2, 3, 4, 5, 6, 7, 8, 9, 1], "C_col0": [0, 3, 5, 9, 1, 8, 2, 4, 7, 6], "S3xC2_orbit_size": 12, "original_branch_index": 1685}
+{"ordered_orbit_id": 6343, "type": [3, 3, 3], "B_col0": [0, 2, 3, 1, 5, 6, 4, 8, 9, 7], "C_col0": [0, 3, 1, 4, 2, 7, 5, 9, 6, 8], "S3xC2_orbit_size": 3, "original_branch_index": 1277}
