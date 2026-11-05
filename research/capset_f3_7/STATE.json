@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "Closed-only manual research: exact 112-cap Games-graph spectrum is classical (already CAP025), and implies all relative two 112-cap pairs with dual intersection t=0 have 1 hole; 0<t<32 have zero holes. At t=32 simplistic arbitrary 32-subcap normal-avoid<=12 assertion is FALSE (explicit antipodal C32 with 14 avoiding nonzero normals); must use realizable intersection. Independently reconstructed public FunSearch 8D512 cap and exhaustively checked all 3280 projective directions/9840 affine hyperplanes; max7D section208, no >=237 via this exact source/operation. Open root unchanged; hourly disabled.",
-  "next_experiment": "No automatic research. If explicitly requested: classify realizable dual intersections S∩M^(-T)T0 for t>=32 (112+112 conditional construction only), OR a genuinely new full-global 237 cap solver with independent UNSAT cert/witness. Avoid repeated random GL6 and false arbitrary-C32 <=12 proof. Existing concurrent 18M GL6 and fixed-cardinality annealing runs are kept separate.",
-  "last_run_id": "CAP047_CAP048_MANUAL_SPECTRAL_ADVERSARIAL_NONLOCAL-2026-11-03",
-  "last_run_result": "ROOT_OPEN; CAP025_112_SPECTRAL_IDENTITY_REPLAYED; T_LT32_PROVEN_EXCLUDED_FOR_112_PLUS112; FALSE_GENERIC_C32_LEMMA_DISPROVEN_BY_14_NORMALS; FUNSEARCH_8D512_ALL3280_HYPERPLANES_MAX208; NO_237",
+  "current_hypothesis": "ONLY root exact r3(7) matters. CAP049 manually derived a fully independent arithmetic proof of already published global <=291 via S4=base+1944*P and exact 184-profile dual; for N291 the same method requires an additional >=2922 coplanar quadruples above the elementary secant degree minimum (a new cap-specific geometric theorem, unproved). For N237, purely aggregate S1-S4+secant Cauchy cannot force >=90 slice: explicit nine-profile formal integer countermodel. Global full-7D fixed-size237 stochastic anneal 6M swaps remains 10 forbidden triples, no 237. No auto hourly research.",
+  "next_experiment": "Manual only, no automation. Attack root closure: either prove a strong cap-specific 291-case secant-degree variance lower bound >=2922 beyond convexity and then continue lowering global bound, OR solve complete normalized 237 SAT with proof certificates, OR construct independently checked >=237 and obtain matching upper bound. Do not continue moments without pointwise geometry; 236 lower and 291 upper remain nonmatching.",
+  "last_run_id": "CAP049_MANUAL_CLOSED_ATTEMPT_GLOBAL_4TH_MOMENT_2026-11-05",
+  "last_run_result": "ROOT_OPEN; GLOBAL_N292_UNSAT_BY_EXACT_184_PROFILE_DUAL_REPROVES_KNOWN_UPPER291; N291_SECANT_GAP_2922_OPEN; FORMAL237_MAX89_4TH_MOMENT_COUNTERMODEL; 6M_FIXED237_ANNEAL_BEST10",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -97,7 +97,8 @@
     "CAP-045-DEDUCTIVE",
     "CAP-046-ATTEMPT",
     "CAP047_SPECTRAL_ADVERSARIAL",
-    "CAP048_FUNSEARCH512_HYPERPLANE"
+    "CAP048_FUNSEARCH512_HYPERPLANE",
+    "CAP049_MANUAL_GLOBAL_FOURTH_MOMENT"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41639554296",
   "baseline_secant_audit": {
@@ -119,7 +120,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-03T15:33:12.274Z",
+  "last_updated_utc": "2026-11-05T12:27:56.413Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -1771,7 +1772,8 @@
     "update_success": true,
     "paused_at_utc": "2026-11-03",
     "user_explicitly_requested_pause": true,
-    "do_not_resume_without_explicit_user_request": true
+    "do_not_resume_without_explicit_user_request": true,
+    "enabled": false
   },
   "closed_attempt_manual_2026_11_03": {
     "goal": "exact r3(7) proved or disproved with matching bounds",
@@ -1956,5 +1958,66 @@
       "research/capset_f3_7/CAP048_FUNSEARCH_HYPERPLANE_2026-11-03.md"
     ],
     "automation_enabled": false
+  },
+  "cap049_global_fourth_moment_closed": {
+    "date_utc": "2026-11-05",
+    "exact_root_status": "OPEN",
+    "existing_published_upper_independently_reproved": 291,
+    "new_numerical_upper_bound": false,
+    "theorem": "Any 292-cap in F3^7 contradicts exact S2,S3,S4 and outsider secant convexity given r3(6)=112",
+    "all_sorted_max112_profiles_for_N292": 184,
+    "dual_polynomial_times45": [
+      30464609312,
+      -2254590,
+      16531,
+      -45
+    ],
+    "dual_contacts": [
+      [
+        68,
+        112,
+        112
+      ],
+      [
+        90,
+        90,
+        112
+      ],
+      [
+        97,
+        97,
+        98
+      ]
+    ],
+    "exact_contradiction_times45": 48384,
+    "coplanar4_minimum_for_N292": 455257,
+    "number_N291_profiles": 192,
+    "N291_P_lower": 448602,
+    "N291_P_upper_rational": "548600572/1215",
+    "N291_P_threshold_to_exclude": 451524,
+    "N291_additional_P_missing": 2922,
+    "N237_formal_hyperplane_histogram_max89_possible_under_S1_to_S4": true,
+    "N237_formal_coplanarP": 187105,
+    "N237_formal_model_is_cap": false,
+    "actual_236_direct_fourth_moment_check_passed": true,
+    "actual_236_coplanar4": 198503,
+    "actual_236_S4": 130900831300,
+    "full_dimension_local_search": {
+      "selected_count": 237,
+      "swaps": 6000000,
+      "seed": 2026110501,
+      "best_forbidden_triples": 10,
+      "witness237_found": false,
+      "proof_of_impossibility": false
+    },
+    "github_report": "research/capset_f3_7/CAP049_GLOBAL_FOURTH_MOMENT_CLOSED_ATTEMPT_2026-11-05.md",
+    "github_python_checker": "research/capset_f3_7/cap049_global_fourth_moment_certificate.py",
+    "github_cpp_checker": "research/capset_f3_7/cap049_independent_fourth_dual.cpp",
+    "github_ci": "PENDING",
+    "drive_raw_evidence": "https://drive.google.com/file/d/15RGWljWUdrMmAnOAABNCtcSZy9VYS0Eq/view?usp=drivesdk",
+    "drive_zip_sha256": "1840c4da0731ea20851552bb6774b34c06ff7ef7d5379dc552ae2b9f5c0b46a7",
+    "no_paid_compute": true,
+    "no_gpu": true,
+    "novelty_claimed": false
   }
 }
