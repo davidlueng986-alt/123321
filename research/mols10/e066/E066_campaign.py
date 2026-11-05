@@ -54,6 +54,42 @@ def read_lrat_verified(p):
     text=p.read_text(errors='replace')
     return re.search(r'(?m)^c\s+VERIFIED\s*$',text) is not None and 'NOT VERIFIED' not in text
 
+def lrat_structure_ok(path, initial_clauses):
+    """Independent LRAT structural guard before legacy semantic lrat-check.
+
+    Historical lrat-check accepted a fake '1 0 0' against a SAT CNF when
+    clause ID 1 collides with an original clause. Reject all such ID reuse.
+    LRAT add indices must be fresh > original input clause count, increasing.
+    Empty-clause addition must have a nonempty hint list. Not a replacement
+    for full semantic LRAT checking, only a mandatory extra guard.
+    """
+    previous=initial_clauses; saw_empty=False
+    with open(path,encoding='ascii',errors='strict') as f:
+        for line_no,line in enumerate(f,1):
+            t=line.split()
+            if not t:continue
+            if len(t)<3 or not t[0].isdigit():
+                raise ValueError(f'Invalid LRAT id/line {line_no}')
+            idx=int(t[0])
+            if t[1]=='d':
+                if t[-1]!='0':raise ValueError(f'Deletion missing zero {line_no}')
+                if any(not x.isdigit() or int(x)<1 for x in t[2:-1]):
+                    raise ValueError(f'Bad delete literal {line_no}')
+                continue
+            if idx<=previous:
+                raise ValueError(f'Nonfresh or decreasing LRAT clause ID {idx} on line {line_no}')
+            previous=idx
+            try: v=[int(x) for x in t[1:]]
+            except ValueError as e:raise ValueError(f'Invalid LRAT integer {line_no}') from e
+            if v.count(0)<2 or v[-1]!=0:
+                raise ValueError(f'Bad LRAT separators {line_no}')
+            sep=v.index(0)
+            if sep==0:
+                if not v[1:-1]:raise ValueError(f'Unjustified empty clause {line_no}')
+                saw_empty=True
+    if not saw_empty:raise ValueError('LRAT proof never derives an empty clause')
+    return True
+
 def solve_branch(n,index,replist,base,tools,out,seconds,keep_cnf=False):
     """Do not trust SAT/UNSAT result without independent verification."""
     out.mkdir(parents=True,exist_ok=True)
@@ -88,6 +124,10 @@ def solve_branch(n,index,replist,base,tools,out,seconds,keep_cnf=False):
         if not proof.exists() or proof.stat().st_size==0:
             result.update(status='ERROR_MISSING_UNSAT_PROOF')
         else:
+            try: lrat_structure_ok(proof,meta['clauses'])
+            except (ValueError,UnicodeError) as exc:
+                result.update(status='ERROR_MALFORMED_LRAT',error=str(exc))
+                return result
             check_rc,check_t=cmd([check,str(cnf),str(proof)],max(60,seconds*10),certlog,slack=8)
             if check_rc==0 and read_lrat_verified(certlog):
                 zpath=Path(str(proof)+'.gz')
@@ -136,18 +176,23 @@ def calibration(args):
         (dir/f'calibration_b{i}.json').write_text(json.dumps(res,indent=2)+'\n')
         print(json.dumps(res),flush=True)
     assert statuses==['UNSAT_LRAT_VERIFIED','SAT_WITNESS_VERIFIED'],statuses
-    # A fake empty-clause proof must be rejected against the KNOWN SAT branch,
-    # not against an UNSAT instance possibly already contradictory under unit propagation.
-    bad=dir/'bogus.lrat';bad.write_text('1 0 0\n')
-    chk=dir/'bogus.check.log'
-    rc,_=cmd([tools[1],str(dir/'n5_b0001.cnf'),str(bad)],10,chk)
-    assert rc!=0 or not read_lrat_verified(chk),'CRITICAL: fake UNSAT certificate accepted for known SAT CNF!'
-    # A completely absent/truncated proof must fail even on the UNSAT instance.
-    empty=dir/'empty.lrat';empty.write_text('')
-    chk2=dir/'empty.check.log'
-    rc2,_=cmd([tools[1],str(dir/'n5_b0000.cnf'),str(empty)],10,chk2)
-    assert rc2!=0 or not read_lrat_verified(chk2),'CRITICAL: empty proof accepted!'
-    print('PROOF_CHAIN_CALIBRATED',statuses,'SAT_FALSE_PROOF_REJECTED','EMPTY_PROOF_REJECTED',flush=True)
+    # Forged LRAT was accepted by the original checker even for the SAT CNF!
+    # The structural guard must independently reject a collided original ID,
+    # an unhinted new empty clause, and a truncated proof.
+    bad=dir/'bogus.lrat'
+    for bogus in ('1 0 0\n','6329 0 0\n','6329 1 0 6301 0\n'):
+        bad.write_text(bogus)
+        try: lrat_structure_ok(bad,6328)
+        except ValueError: pass
+        else:raise AssertionError('LRAT syntax guard ACCEPTED forged/truncated proof '+bogus.strip())
+    # Independently recompute syntax of a legitimate LRAT, not only semantic check.
+    original=dir/'n5_b0000.lrat.gz'
+    import gzip
+    dest=dir/'calibration_real.lrat'
+    with gzip.open(original,'rb') as src,dest.open('wb') as dst:shutil.copyfileobj(src,dst)
+    assert lrat_structure_ok(dest,6328)
+    dest.unlink()
+    print('PROOF_CHAIN_CALIBRATED',statuses,'FRESH_ID_AND_HINT_GATES_PASS',flush=True)
 
 def sweep(args):
     assert 0<=args.shard<SHARDS
