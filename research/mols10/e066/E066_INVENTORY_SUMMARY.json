@@ -1,0 +1,21 @@
+{
+  "status": "INVENTORY_ONLY_NO_ORDER10_UNSAT_PROVED",
+  "branches": 1700,
+  "inventory_sha256": "66e2ceb1f8aeb1316b9051a5cab007795584df3090aff15c3c0d69a78926cf70",
+  "base_sha256": "0189632902abef9674af8ae3e3a80f204a2c301e9de5c4e48d5295470a856f12",
+  "types": {
+    "2.2.2.3": 104,
+    "2.2.5": 336,
+    "2.3.4": 393,
+    "2.7": 438,
+    "3.3.3": 68,
+    "3.6": 189,
+    "4.5": 60,
+    "9": 112
+  },
+  "nvars": 33000,
+  "branch_clauses": 101758,
+  "normalization": "E064 complete first-column paratopy coverage",
+  "positive_controls": "E065 n4/5 SAT and n6 3/3 UNSAT, not reproduced by this inventory",
+  "actual_order10_proofs": 0
+}

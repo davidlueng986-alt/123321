@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "ON DEMAND ONLY, hourly disabled. Run proof-producing CaDiCaL/LRAT checker on EXACT E065 branch-unit DIMACS and independently verify each UNSAT; compare CDCL with native PB. Prioritize solver architecture improvement/structural global lemma if no order10 branch closes; do not claim success for n6 controls or n10 UNKNOWN. A 100/100/100 verified SAT witness instantly closes existence.",
-  "current_hypothesis": "SOLE GOAL CLOSED. E064 mathematically complete 1700 firstcolumn paratopy branches; direct full OA(100,5,10,2) CDCL/SMT attempt, via two distinct native encodings and assumption-based incremental solving. Complete closure requires verified SAT 100/100/100 or independently checked UNSAT for every branch.",
-  "last_experiment": "MOLS10-E065-DIRECT-INCREMENTAL-FULL-5D-SAT-AND-NATIVE-PB",
+  "next_action": "Check E066 GitHub Actions calibration pinned CaDiCaL+independent LRAT checker. If calibration succeeds, verify all 17 shards x100 branches, proof SHA and missing/error states, publish 1700-branch ledger. Attempt stronger encoding/proof-producing all-branch search if UNKNOWN remains. Never count UNKNOWN as UNSAT. MOLS10 hourly automation stays OFF.",
+  "current_hypothesis": "SOLE GOAL CLOSED. E064 complete firstcolumn paratopy 1700 representatives. E066 full 5-coordinate OA proof-carrying search by verified SAT witness or archived independently LRAT-checked UNSAT for all 1700, with 17x100 shards. CI execution/calibration must be verified, deployment alone is NOT proof.",
+  "last_experiment": "MOLS10-E066-ALL-1700-PROOF-CARRYING-CAMPAIGN-DEPLOYMENT",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549028462",
   "last_verified_results": [
@@ -133,7 +133,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-04T08:01:14Z",
+  "last_run_utc": "2026-11-05T11:54:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -169,7 +169,7 @@
   "limitations": "E065 3-MOLS(10) OPEN. No n10 SAT model or fully checked order10 UNSAT cert. All 16 sampled n10 branches per encoding UNKNOWN. Z3 CNF and PB are different encodings but share one solver backend; order6 independent DLX replay is a separate exact solver, not LRAT. CaDiCaL/LRAT path unexecuted locally due offline environment. No ETA or percent-to-solution.",
   "last_ci_result": "E048 strict pipefail GitHub Actions run 41549028462 SUCCESS, remote 1569 distinct prefixes x576=903744 row alignments identity-only, 2895 static intercalate subsets, 1 valid changed prefix with exact zero-support resource 595. First CI had masked assertion failure, audited and corrected.",
   "external_status_review": "2026-11-02 23:50 UTC: fresh primary arXiv 2503.10504v2 and 2605.02132v2 plus targeted November web/arXiv search; no independently checkable unrestricted solution found, absence of hits not proof.",
-  "current_math_result": "GLOBAL OPEN, 0/1700 order10 paratopy branches globally eliminated, no order10 100/100/100 witness. E065 full 5-coordinate CNF 33000 variables,101740 clauses; PB native Z3 41338 placement vars,1000 exact-one equations. n4 SAT independently verified16/16/16 each. n5 both full symmetry classes Z3 CNF/PB: 1 UNSAT+1 SAT, SAT checked25/25/25. n6 all 3 fully normalized branches UNSAT by both Z3 encodings, independently 3/3 exact C++ DLX exhaustive 1203 nodes; unbranched n6 Z3 still UNKNOWN after 10-12 sec. n10 16 distinct representatives covering eight cycle types, 2 sec each/encoding: 16/16 UNKNOWN CNF,16/16 UNKNOWN PB; first 3 reps at 5sec also all UNKNOWN. Branch-unit DIMACS generator validated against n5 SAT/UNSAT. Local CaDiCaL/LRAT checker unavailable; proof pipeline scripted but NOT RUN, zero order10 proof certs. Clean archive replay passes all controls.",
+  "current_math_result": "GLOBAL OPEN: 0/1700 n10 classes formally UNSAT, no full 100/100/100. E066 checks 1700 unique branch DIMACS fingerprints, 3 sampled reconstructed CNFs byte-identical; every branch 33000 vars,101758 clauses. Local mocked shard 0 accounted for 100/100 UNKNOWN outcomes and incomplete-ledger negative test rejected. Actual E066 GitHub Actions solver run not yet confirmed. Corrected checker acceptance c VERIFIED; retain failed/missing proof as ERROR not closure.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -258,5 +258,7 @@
   "e064_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E064_REPORT.md",
   "e064_bundle_drive_url": "https://drive.google.com/file/d/14uP0ELu3NNIH8o2VKZFDoegR3tP2YcKs/view",
   "e065_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e065/E065_REPORT.md",
-  "e065_bundle_drive_url": "https://drive.google.com/file/d/1lfTgElYz8TTPnUZGKZjmdF6ZrdbtPa1n/view"
+  "e065_bundle_drive_url": "https://drive.google.com/file/d/1lfTgElYz8TTPnUZGKZjmdF6ZrdbtPa1n/view",
+  "e066_bundle_drive_url": "https://drive.google.com/file/d/1JElVnV6aQUg4FjwdjuhV2QPgZPm1cf34/view",
+  "e066_readme_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e066/E066_README.md"
 }

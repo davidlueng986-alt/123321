@@ -1,0 +1,162 @@
+name: MOLS10 E066 all 1700 proof-checked branches
+on:
+  push:
+    branches: [math-agent-mols10]
+    paths:
+      - 'research/mols10/e066/E066_campaign.py'
+      - 'research/mols10/e066/E066_inventory.py'
+      - '.github/workflows/mols10-e066-all-1700.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mols10-e066-1700-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  proof-chain-calibration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate all 1700 branch formulas with independent canonical generation
+        run: |
+          set -euo pipefail
+          cd research/mols10/e066
+          python E066_inventory.py
+          python - <<'PY'
+          import json
+          d=json.load(open('E066_INVENTORY_SUMMARY.json'))
+          assert d['branches']==1700 and d['branch_clauses']==101758
+          assert d['actual_order10_proofs']==0
+          PY
+      - name: Build pinned independent SAT solver and LRAT verifier
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/mols10-tools/bin
+          git clone --quiet https://github.com/arminbiere/cadical.git /tmp/mols10-tools/cadical
+          cd /tmp/mols10-tools/cadical
+          git checkout --quiet c60730422e758ef1cebe7aeddf2dda31c996bf04
+          ./configure
+          make -j2
+          cp build/cadical /tmp/mols10-tools/bin/cadical
+          git clone --quiet https://github.com/marijnheule/drat-trim.git /tmp/mols10-tools/drat-trim
+          cd /tmp/mols10-tools/drat-trim
+          git checkout --quiet 2e3b2dc0ecf938addbd779d42877b6ed69d9a985
+          gcc -O2 lrat-check.c -o /tmp/mols10-tools/bin/lrat-check
+          tar -czf /tmp/mols10-tools/E066_pinned_tools.tar.gz -C /tmp/mols10-tools/bin cadical lrat-check
+      - name: Calibration must have independently verified n5 SAT and LRAT UNSAT plus corruption rejection
+        run: |
+          set -euo pipefail
+          cd research/mols10/e066
+          python E066_campaign.py calibrate \
+            --cadical /tmp/mols10-tools/bin/cadical \
+            --lrat-check /tmp/mols10-tools/bin/lrat-check \
+            --seconds 20 --output calibration
+      - name: Upload pinned tools binary for 17 parallel shards
+        uses: actions/upload-artifact@v4
+        with:
+          name: e066-pinned-tools
+          path: /tmp/mols10-tools/E066_pinned_tools.tar.gz
+          retention-days: 14
+      - name: Archive 1700 complete branch inventory and n5 calibration evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e066-calibration-inventory
+          path: |
+            research/mols10/e066/E066_1700_BRANCH_INVENTORY.jsonl
+            research/mols10/e066/E066_INVENTORY_SUMMARY.json
+            research/mols10/e066/calibration/
+          retention-days: 30
+  sweep-all-1700:
+    needs: proof-chain-calibration
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          name: e066-pinned-tools
+          path: /tmp/mols10-tools
+      - name: Restore pinned binaries
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/mols10-tools/bin
+          tar -xzf /tmp/mols10-tools/E066_pinned_tools.tar.gz -C /tmp/mols10-tools/bin
+          chmod +x /tmp/mols10-tools/bin/cadical /tmp/mols10-tools/bin/lrat-check
+      - name: Exhaustively account for 100 branches in shard (SAT/verified UNSAT/UNKNOWN)
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd research/mols10/e066
+          python E066_campaign.py sweep \
+            --shard ${{ matrix.shard }} --seconds 8 \
+            --cadical /tmp/mols10-tools/bin/cadical \
+            --lrat-check /tmp/mols10-tools/bin/lrat-check \
+            --output results/shard_$(printf '%02d' ${{ matrix.shard }})
+      - name: Persist all exact LRAT proofs and independently checked full witnesses
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e066-shard-${{ matrix.shard }}
+          path: research/mols10/e066/results/shard_*/
+          retention-days: 30
+  aggregate-and-persist:
+    if: always()
+    needs: [proof-chain-calibration, sweep-all-1700]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: e066-shard-*
+          path: /tmp/e066-shards
+      - name: Aggregate and audit exactly 1700 canonical branch records
+        id: audit
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          cd research/mols10/e066
+          python E066_campaign.py aggregate \
+            --input /tmp/e066-shards --output results/aggregate
+      - name: Preserve auditable ledger regardless of missing shards
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e066-1700-complete-ledger
+          path: research/mols10/e066/results/aggregate/
+          retention-days: 90
+      - name: Best-effort write complete aggregate ledger into GitHub repository
+        if: steps.audit.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p research/mols10/e066/ledger
+          cp research/mols10/e066/results/aggregate/E066_ALL_1700_SUMMARY.json research/mols10/e066/ledger/
+          cp research/mols10/e066/results/aggregate/E066_1700_RESULTS.jsonl research/mols10/e066/ledger/
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config user.name 'github-actions[bot]'
+          git add research/mols10/e066/ledger
+          if ! git diff --cached --quiet; then
+            git commit -m 'MOLS10 E066: record all 1700 proof-carrying branch outcomes [skip ci]'
+            git push origin HEAD:math-agent-mols10
+          fi
+      - name: Fail if any shard was missing or invalid (without hiding preserved artifacts)
+        if: steps.audit.outcome != 'success'
+        run: exit 1
