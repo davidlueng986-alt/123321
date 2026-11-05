@@ -1,0 +1,23 @@
+{
+  "experiment": "E066_LOCAL_FULL_1700_Z3",
+  "date_utc": "2026-11-05",
+  "global_problem_status": "OPEN",
+  "canonical_branches": 1700,
+  "attempted": 1700,
+  "SAT": 0,
+  "UNSAT": 0,
+  "UNKNOWN": 1700,
+  "certified_UNSAT": 0,
+  "full_witness": 0,
+  "nominal_ms_per_branch": 50,
+  "shard_counts": [
+    425,
+    425,
+    425,
+    425
+  ],
+  "missing": 0,
+  "duplicates": 0,
+  "sha256": "6fe1dc4a367769766b831c8d1680a7fbf1f87194b59e80c8ec0805bd6715c301",
+  "archive": "https://drive.google.com/file/d/1wh05Zye-0-nGSkwRSPT1usboVB4TDgHl/view"
+}

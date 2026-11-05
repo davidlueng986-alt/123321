@@ -1,0 +1,59 @@
+name: MOLS10 E066 one-global-CNF CLOSED attempt
+on:
+  push:
+    branches: [math-agent-mols10]
+    paths:
+      - 'research/mols10/e066/E066_global_all_classes.py'
+      - '.github/workflows/mols10-e066-global.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  solve-global:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build pinned proof-producing CaDiCaL and LRAT checker
+        run: |
+          set -euo pipefail
+          git clone -q https://github.com/arminbiere/cadical.git /tmp/e066-cadical
+          cd /tmp/e066-cadical
+          git checkout -q c60730422e758ef1cebe7aeddf2dda31c996bf04
+          ./configure
+          make -j2
+          git clone -q https://github.com/marijnheule/drat-trim.git /tmp/e066-drat-trim
+          cd /tmp/e066-drat-trim
+          git checkout -q 2e3b2dc0ecf938addbd779d42877b6ed69d9a985
+          gcc -O2 lrat-check.c -o lrat-check
+      - name: Independently calibrate n5 SAT and n6 LRAT UNSAT
+        run: |
+          set -euo pipefail
+          cd research/mols10/e066
+          python E066_global_all_classes.py --n 5 --output /tmp/e066-global-n5 --seconds 15 --cadical /tmp/e066-cadical/build/cadical --lrat-check /tmp/e066-drat-trim/lrat-check
+          python E066_global_all_classes.py --n 6 --output /tmp/e066-global-n6 --seconds 30 --cadical /tmp/e066-cadical/build/cadical --lrat-check /tmp/e066-drat-trim/lrat-check
+          python - <<'PY'
+          import json
+          a=json.load(open('/tmp/e066-global-n5/E066_GLOBAL_RESULT.json'))
+          b=json.load(open('/tmp/e066-global-n6/E066_GLOBAL_RESULT.json'))
+          assert a['status']=='SAT_FULL_WITNESS_INDEPENDENTLY_VERIFIED',a
+          assert b['status']=='UNSAT_LRAT_VERIFIED',b
+          print('GLOBAL_PROOF_CALIBRATION_PASS')
+          PY
+      - name: Direct full 1700-class SAT or proof-checked UNSAT attempt
+        run: |
+          set -euo pipefail
+          cd research/mols10/e066
+          python E066_global_all_classes.py --n 10 --output /tmp/e066-global-n10 --seconds 150 --proof-seconds 180 --cadical /tmp/e066-cadical/build/cadical --lrat-check /tmp/e066-drat-trim/lrat-check
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: e066-single-global-1700
+          path: |
+            /tmp/e066-global-n5/E066_GLOBAL_RESULT.json
+            /tmp/e066-global-n6/E066_GLOBAL_RESULT.json
+            /tmp/e066-global-n10/
+          retention-days: 30
