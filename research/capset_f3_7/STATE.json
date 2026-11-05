@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "Only root goal is exact r3(7). CAP050 constructs independently replayable all-configurations global no291-cap argument conditional on published Potechin AG6 maximal112 classification and Barat/Edel/Hill/Storme PG6 ternary cap bound <=136. M291 192-profile exact dual forces >=69 directions with maximal112 sections. Centers' antipodal secants form projective caps of size d<=136, exact 81-case third projective moment gives delta(d) >=46*t(q), so global P>=451776; CAP049 fourth-moment dual gives P<=451523. Candidate global r3(7)<=290, independently integer Python+C++ verified, subject to mathematical referee and novelty check. Thackeray 2022 preprint <=288 and project's provisional CAP019 <=287 are potentially stronger; neither yields exact value. NO_237, root still OPEN. Hourly remains off.",
-  "next_experiment": "NO recurring automation. ROOT PRIORITY after CAP050: obtain independent mathematical referee of center/secant projective cap lemma and published PG6 cap theorem; then pursue stronger no290/no289 bounds or complete global >=237 no-237 proof via proof-logged SAT with independent checker, or find independent >=237 cap with matching upper. Do not measure success by local experiment count.",
-  "last_run_id": "CAP050_MANUAL_GLOBAL_290_CENTRE_PROJECTIVE_CERTIFICATE_2026-11-05",
-  "last_run_result": "ROOT_OPEN; CANDIDATE_GLOBAL_BOUND<=290_BY_PUBLISHED_POTECHIN_UNIQUENESS+PROJECTIVE_M2(6,3)<=136; INDEPENDENT_PY_CPP_EXACT_INTEGER_PASS; FULL_CI_PENDING; P_MIN451776_GT_P_MAX451523; LITERATURE_THACKERAY_PREPRINT<=288_IS_STRONGER",
+  "current_hypothesis": "Prioritized direct no-237 proof. Exhaustive global H00 MILP/Z3 and alternative signed-projective SAT still UNKNOWN; n5 target46 known-UNSAT controls also unsolved in 22–45s despite exact 3D/4D subspace caps. Crucial integrality gap: n5 LP optimum 57.166666... vs true cap max45, unchanged by all 10890 3D-flat cardinality cuts. No root proof or new major result. Hourly task remains disabled.",
+  "next_experiment": "Manual only on explicit request: genuinely stronger universal geometric stability/structure theorem covering ALL hypothetical 237 caps, with complete proof certificates; do NOT rerun same Z3/MILP with time-only increase or report negative samples as progress. Known r3(7) still OPEN.",
+  "last_run_id": "CAP051_MANUAL_ROOT_DISPROOF_FAILED_2026-11-06",
+  "last_run_result": "NOT_DONE; NO_SAT_237; NO_UNSAT_237; NO_NEW_GLOBAL_BOUND; ALL_SOLVER_ATTEMPTS_UNKNOWN",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -99,7 +99,8 @@
     "CAP047_SPECTRAL_ADVERSARIAL",
     "CAP048_FUNSEARCH512_HYPERPLANE",
     "CAP049_MANUAL_GLOBAL_FOURTH_MOMENT",
-    "CAP050_MANUAL_ROOT_CANDIDATE290"
+    "CAP050_MANUAL_ROOT_CANDIDATE290",
+    "CAP051_MANUAL_FAILED"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41639554296",
   "baseline_secant_audit": {
@@ -121,7 +122,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-05T12:44:42.307Z",
+  "last_updated_utc": "2026-11-05T16:48:45.058Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -2050,5 +2051,54 @@
     "source_bundle_sha256": "17910536a0241743cec32c645e95842bd5b613e19606b8db2f92eb095e2b29c9",
     "ci_status": "PENDING",
     "no_gpu_paid_compute": true
+  },
+  "cap051_manual_disproof_failed": {
+    "status": "NOT_DONE",
+    "root_exact_open": true,
+    "new_lower_bound": null,
+    "new_upper_bound": null,
+    "n5_milp": {
+      "target": 46,
+      "truth_max": 45,
+      "seconds": 22,
+      "status": "UNKNOWN"
+    },
+    "n5_Z3": {
+      "target": 46,
+      "seconds": 32,
+      "status": "UNKNOWN",
+      "conflicts": 605378
+    },
+    "n5_Z3_all3d_cuts": {
+      "target": 46,
+      "seconds": 45,
+      "status": "UNKNOWN",
+      "exact_3D_flats": 10890,
+      "conflicts": 1303655
+    },
+    "n7_Z3_all6d_cuts": {
+      "root_branch": "H00 only, 1 of ten exhaustive normalized cases",
+      "target": 237,
+      "seconds": 35,
+      "status": "UNKNOWN",
+      "line_clauses": 796797,
+      "affine6D_flats_with_max112": 3279
+    },
+    "signed_projective": {
+      "directions": 1093,
+      "clauses": 795704,
+      "n7_seconds": 30,
+      "n7_status": "UNKNOWN",
+      "n5_status": "UNKNOWN",
+      "n2_controls": "4 SAT;5 UNSAT"
+    },
+    "n5_lp_fractional_max": 57.16666666666667,
+    "n5_lp_fractional_max_after_all3D_cuts": 57.16666666666667,
+    "hourly_automation_enabled": false,
+    "paid_compute": false,
+    "gpu": false,
+    "report": "research/capset_f3_7/CAP051_MANUAL_DISPROOF_FAILED_ATTEMPT_2026-11-06.md",
+    "drive_bundle": "https://drive.google.com/file/d/1PqUlXFw2L-37rOAoUpINdozD301DMrYS/view?usp=drivesdk",
+    "zip_sha256": "b0ec06ac8287250ee3d949893a596bd8ccbc80a1ae58303671293c8fcea20f3a"
   }
 }
