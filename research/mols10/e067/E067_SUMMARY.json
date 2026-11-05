@@ -1,0 +1,24 @@
+{
+  "iteration": "E067",
+  "created_utc": "2026-11-05T23:10:00Z",
+  "global_status": "OPEN",
+  "E066_1700_ledger": "1700 UNKNOWN_BUDGET, zero verified UNSAT / SAT",
+  "E064_1700_firstcolumn_spectral_exclusions": 0,
+  "E064_1700_firstcolumn_all5_GF2_relation_exclusions": 0,
+  "GF2_4net_projection_rank_upper_bounds": "all five 4-net projected rank upper bounds =37 across 1700 canonical E064 firstcolumn classes",
+  "Egan_Wanless_orthogonal_pair": {
+    "GF2_rank": 37,
+    "common_transversals": 14,
+    "max_disjoint": 7
+  },
+  "Wanless_crimped_orthogonal_pair": {
+    "GF2_rank": 37,
+    "common_transversals": 0,
+    "max_disjoint": 0
+  },
+  "theorem": "Any 5-net(10) has strongly regular collinearity graph (100,45,20,20), A²=25I+20J; its 19-root centered spectral bound automatically holds for any 3-regular firstcolumn D=I+P_f+P_g, so root spectral cannot prune any canonical class.",
+  "strength": "Gill-Wanless (2023) excludes 18,526,320 species of nontrivial GF2-relation order10 orthogonal pairs; species ≠ E064 firstcolumn classes.",
+  "next_action": "Improve deep partial 4-net / pair-level pruning using forbidden GF2 relation templates, 10-transversal packing upper bounds and 20-cell bipartite residual completion; audit proof lifting.",
+  "proof_limitation": "No order10 100/100/100 witness or unrestricted proof. No E064 firstcolumn class excluded.",
+  "drive_bundle": "https://drive.google.com/file/d/1u4An8sL8HCix88a9V1mVXB1AA-9ALgmo/view"
+}

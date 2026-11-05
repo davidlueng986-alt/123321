@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "ON DEMAND ONLY. All 1700 n10 branches completed at current bounded budget with UNKNOWN; stop re-running identical setup. Must significantly improve propagation/encoding or supply new rigorous global mathematical lemma, then relaunch verified SAT/UNSAT search. Preserve exact ledger and never claim UNKNOWN as UNSAT. Hourly task stays disabled.",
+  "next_action": "Only CLOSED counts. Instead of root-only pruning or longer identical SAT timeouts, build proof-sound deep 4-net GF2 rank obstruction and 10-transversal packing/8+residual-bipartite cuts; test on completed or deeper partial orthogonal pairs, measure genuine pruning, certify any added theorem-derived clause separately from LRAT. E067 full reproduction ZIP is in Drive. Hourly automation remains OFF.",
   "current_hypothesis": "SOLE GOAL CLOSED. E064 complete firstcolumn paratopy 1700 representatives. E066 full 5-coordinate OA proof-carrying search by verified SAT witness or archived independently LRAT-checked UNSAT for all 1700, with 17x100 shards. CI execution/calibration must be verified, deployment alone is NOT proof.",
-  "last_experiment": "MOLS10-E066-ALL-1700-GITHUB-ACTIONS-FINISHED-ALL-UNKNOWN",
+  "last_experiment": "MOLS10-E067-GLOBAL-MATH-OBSTRUCTIONS-SPECTRAL-GF2-TRANSVERSAL",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549028462",
   "last_verified_results": [
@@ -133,7 +133,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-05T12:37:19Z",
+  "last_run_utc": "2026-11-05T23:10:00Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -169,7 +169,7 @@
   "limitations": "E065 3-MOLS(10) OPEN. No n10 SAT model or fully checked order10 UNSAT cert. All 16 sampled n10 branches per encoding UNKNOWN. Z3 CNF and PB are different encodings but share one solver backend; order6 independent DLX replay is a separate exact solver, not LRAT. CaDiCaL/LRAT path unexecuted locally due offline environment. No ETA or percent-to-solution.",
   "last_ci_result": "E048 strict pipefail GitHub Actions run 41549028462 SUCCESS, remote 1569 distinct prefixes x576=903744 row alignments identity-only, 2895 static intercalate subsets, 1 valid changed prefix with exact zero-support resource 595. First CI had masked assertion failure, audited and corrected.",
   "external_status_review": "2026-11-02 23:50 UTC: fresh primary arXiv 2503.10504v2 and 2605.02132v2 plus targeted November web/arXiv search; no independently checkable unrestricted solution found, absence of hits not proof.",
-  "current_math_result": "GLOBAL 3-MOLS(10) OPEN. E066 full proof-carrying search campaign finished 17/17 shards + calibration + aggregation. Independent extraction of artifact 13415231346 confirms exactly 1700 unique branch records and 1700 UNKNOWN_BUDGET, zero SAT witnesses, zero independently verified UNSAT; no missing branches or errors. Ledger SHA256 b0d912368d4b1e8a073c40e5df742b14b4aefb3bbe440fccaa88521845877901. Full ZIP Drive 1YunKMnAaoafaB9m5_ISSfNyXfSaB2BpG. Run 42026521585. Original aggregate push rejected due branch divergence but artifact persisted; status updated separately. 0/1700 global closures, no solution.",
+  "current_math_result": "E067 GLOBAL STATUS OPEN. E066 1700/1700 bounded attempts all UNKNOWN. Independently screened all 1700 canonical firstcolumn classes by centered collinearity spectral bound and by all five 4-net GF2 forced-relation upper bounds: zero firstcolumn classes excluded by either. Stronger theorem: root spectral bound is automatically satisfied for every 3-regular D=I+P_f+P_g. Published orthogonal-pair examples Egan/Wanless rank_GF2=37, total transversals14/max disjoint7; Wanless crimped rank_GF2=37, transversals0/packing0; both impossible as pairs in any full triple. Gill-Wanless 2023 excludes 18,526,320 complete pair species with nontrivial GF2 relation, not 1700 firstcolumn branches. No 100/100/100 witness, no unrestricted UNSAT.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -263,5 +263,7 @@
   "e066_readme_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e066/E066_README.md",
   "e066_action_url": "https://github.com/davidlueng986-alt/123321/actions/runs/42026521585",
   "e066_ledger_drive_url": "https://drive.google.com/file/d/1YunKMnAaoafaB9m5_ISSfNyXfSaB2BpG/view",
-  "e066_final_summary_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e066/E066_ALL_1700_FINAL_SUMMARY.json"
+  "e066_final_summary_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e066/E066_ALL_1700_FINAL_SUMMARY.json",
+  "e067_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e067/E067_REPORT.md",
+  "e067_bundle_drive_url": "https://drive.google.com/file/d/1u4An8sL8HCix88a9V1mVXB1AA-9ALgmo/view"
 }
