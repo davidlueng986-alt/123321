@@ -136,12 +136,18 @@ def calibration(args):
         (dir/f'calibration_b{i}.json').write_text(json.dumps(res,indent=2)+'\n')
         print(json.dumps(res),flush=True)
     assert statuses==['UNSAT_LRAT_VERIFIED','SAT_WITNESS_VERIFIED'],statuses
-    # Independent negative test: a bogus LRAT file must not be accepted.
+    # A fake empty-clause proof must be rejected against the KNOWN SAT branch,
+    # not against an UNSAT instance possibly already contradictory under unit propagation.
     bad=dir/'bogus.lrat';bad.write_text('1 0 0\n')
     chk=dir/'bogus.check.log'
-    rc,_=cmd([tools[1],str(dir/'n5_b0000.cnf'),str(bad)],10,chk)
-    assert rc!=0 or not read_lrat_verified(chk),'A fake certificate was ACCEPTED!'
-    print('PROOF_CHAIN_CALIBRATED',statuses,'MUTATION_REJECTED',flush=True)
+    rc,_=cmd([tools[1],str(dir/'n5_b0001.cnf'),str(bad)],10,chk)
+    assert rc!=0 or not read_lrat_verified(chk),'CRITICAL: fake UNSAT certificate accepted for known SAT CNF!'
+    # A completely absent/truncated proof must fail even on the UNSAT instance.
+    empty=dir/'empty.lrat';empty.write_text('')
+    chk2=dir/'empty.check.log'
+    rc2,_=cmd([tools[1],str(dir/'n5_b0000.cnf'),str(empty)],10,chk2)
+    assert rc2!=0 or not read_lrat_verified(chk2),'CRITICAL: empty proof accepted!'
+    print('PROOF_CHAIN_CALIBRATED',statuses,'SAT_FALSE_PROOF_REJECTED','EMPTY_PROOF_REJECTED',flush=True)
 
 def sweep(args):
     assert 0<=args.shard<SHARDS
