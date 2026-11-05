@@ -1,0 +1,21 @@
+{
+  "experiment": "E066",
+  "date_utc": "2026-11-05",
+  "workflow_run_id": 42026521585,
+  "workflow_url": "https://github.com/davidlueng986-alt/123321/actions/runs/42026521585",
+  "status": "OPEN",
+  "complete_execution_coverage": true,
+  "branches_required": 1700,
+  "branches_with_records": 1700,
+  "branch_statuses": {
+    "UNKNOWN_BUDGET": 1700
+  },
+  "missing_branches": [],
+  "errors": [],
+  "sat_witness_branch_ids": [],
+  "verified_unsat_branches": 0,
+  "all_1700_verified_unsat": false,
+  "ledger_sha256": "b0d912368d4b1e8a073c40e5df742b14b4aefb3bbe440fccaa88521845877901",
+  "ledger_download": "https://drive.google.com/file/d/1YunKMnAaoafaB9m5_ISSfNyXfSaB2BpG/view",
+  "note": "All 19 workflow jobs completed successfully per GitHub jobs endpoint; aggregate output exists, independently recounted 1700 IDs and status histogram. Final in-workflow git push rejected due divergent branch, so summary is explicitly committed separately here. UNKNOWN_BUDGET is not UNSAT."
+}

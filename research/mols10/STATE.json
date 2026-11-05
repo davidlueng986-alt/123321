@@ -8,9 +8,9 @@
     100,
     91
   ],
-  "next_action": "After E066 GitHub Actions run 42026521585 completes, download all 17 shard records and proofs, independently reconcile all 1700 fingerprints, verify any SAT 100/100/100 or UNSAT LRAT+syntax. If any UNKNOWN, problem still OPEN and all remaining branch IDs must be handled with stronger solver. No hourly automation.",
+  "next_action": "ON DEMAND ONLY. All 1700 n10 branches completed at current bounded budget with UNKNOWN; stop re-running identical setup. Must significantly improve propagation/encoding or supply new rigorous global mathematical lemma, then relaunch verified SAT/UNSAT search. Preserve exact ledger and never claim UNKNOWN as UNSAT. Hourly task stays disabled.",
   "current_hypothesis": "SOLE GOAL CLOSED. E064 complete firstcolumn paratopy 1700 representatives. E066 full 5-coordinate OA proof-carrying search by verified SAT witness or archived independently LRAT-checked UNSAT for all 1700, with 17x100 shards. CI execution/calibration must be verified, deployment alone is NOT proof.",
-  "last_experiment": "MOLS10-E066-ACTUAL-17-SHARD-1700-REMOTE-CDCL-SEARCH-IN_PROGRESS",
+  "last_experiment": "MOLS10-E066-ALL-1700-GITHUB-ACTIONS-FINISHED-ALL-UNKNOWN",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
   "ci_validation_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41549028462",
   "last_verified_results": [
@@ -133,7 +133,7 @@
     "https://github.com/curtisbright/Myrvold-MOLS",
     "https://github.com/curtisbright/Delisle-MOLS"
   ],
-  "last_run_utc": "2026-11-05T12:28:53Z",
+  "last_run_utc": "2026-11-05T12:37:19Z",
   "research_reports": [
     "research/mols10/E003_E005_REPORT.md",
     "research/mols10/E003_E005_RESULTS.json",
@@ -169,7 +169,7 @@
   "limitations": "E065 3-MOLS(10) OPEN. No n10 SAT model or fully checked order10 UNSAT cert. All 16 sampled n10 branches per encoding UNKNOWN. Z3 CNF and PB are different encodings but share one solver backend; order6 independent DLX replay is a separate exact solver, not LRAT. CaDiCaL/LRAT path unexecuted locally due offline environment. No ETA or percent-to-solution.",
   "last_ci_result": "E048 strict pipefail GitHub Actions run 41549028462 SUCCESS, remote 1569 distinct prefixes x576=903744 row alignments identity-only, 2895 static intercalate subsets, 1 valid changed prefix with exact zero-support resource 595. First CI had masked assertion failure, audited and corrected.",
   "external_status_review": "2026-11-02 23:50 UTC: fresh primary arXiv 2503.10504v2 and 2605.02132v2 plus targeted November web/arXiv search; no independently checkable unrestricted solution found, absence of hits not proof.",
-  "current_math_result": "GLOBAL 3-MOLS(10) OPEN. E066 exact 1700-branch inventory PASS, all 1700 canonical CNFs 33000 vars and 101758 clauses. True pinned CaDiCaL 3.0.1 and independent lrat-check calibration n5 branch0 UNSAT LRAT VERIFIED and n5 branch1 SAT 25/25/25. Legacy checker accepted forged '1 0 0' due original-clause-ID collision; E066 independent LRAT structural auditor now rejects collisions/unhinted/truncated proofs, real proof passes. Verified GitHub Actions run 42026521585 calibration SUCCESS and all 17 search shards IN_PROGRESS, none completed as of last check; no n10 SAT/UNSAT or final ledger yet.",
+  "current_math_result": "GLOBAL 3-MOLS(10) OPEN. E066 full proof-carrying search campaign finished 17/17 shards + calibration + aggregation. Independent extraction of artifact 13415231346 confirms exactly 1700 unique branch records and 1700 UNKNOWN_BUDGET, zero SAT witnesses, zero independently verified UNSAT; no missing branches or errors. Ledger SHA256 b0d912368d4b1e8a073c40e5df742b14b4aefb3bbe440fccaa88521845877901. Full ZIP Drive 1YunKMnAaoafaB9m5_ISSfNyXfSaB2BpG. Run 42026521585. Original aggregate push rejected due branch divergence but artifact persisted; status updated separately. 0/1700 global closures, no solution.",
   "e021_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E021_REPORT.md",
   "e022_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E022_REPORT.md",
   "e023_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/E023_REPORT.md",
@@ -261,5 +261,7 @@
   "e065_bundle_drive_url": "https://drive.google.com/file/d/1lfTgElYz8TTPnUZGKZjmdF6ZrdbtPa1n/view",
   "e066_bundle_drive_url": "https://drive.google.com/file/d/1JElVnV6aQUg4FjwdjuhV2QPgZPm1cf34/view",
   "e066_readme_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e066/E066_README.md",
-  "e066_action_url": "https://github.com/davidlueng986-alt/123321/actions/runs/42026521585"
+  "e066_action_url": "https://github.com/davidlueng986-alt/123321/actions/runs/42026521585",
+  "e066_ledger_drive_url": "https://drive.google.com/file/d/1YunKMnAaoafaB9m5_ISSfNyXfSaB2BpG/view",
+  "e066_final_summary_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e066/E066_ALL_1700_FINAL_SUMMARY.json"
 }
