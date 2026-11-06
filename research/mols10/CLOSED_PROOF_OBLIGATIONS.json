@@ -1,0 +1,71 @@
+{
+  "schema": "mols10-closed-goal-milestone-v1",
+  "milestone_id": "M068",
+  "as_of": "2026-11-06",
+  "problem": "Existence of three mutually orthogonal Latin squares of order 10 / OA(100,5,10,2)",
+  "global_status": "OPEN",
+  "acceptance": {
+    "yes": "One independently verified full 10x10x3 Latin witness with 100 distinct ordered pairs in AB, AC and BC overlays.",
+    "no": "One unrestricted mathematically sound nonexistence proof, or exact symmetry-complete coverage with independently checked UNSAT certificates for every remaining branch; any added cut has independent soundness evidence.",
+    "unknown": "Any timeout, unfinished branch, unsupported theorem assumption, local fixed-pair exclusion, near triple, LP relaxation, or solver result without proper checking."
+  },
+  "global_coverage": {
+    "symmetry_representatives": 1700,
+    "source": "E064 paratopy complete first-column representatives",
+    "ordered_orbits": 16085,
+    "isotopy_orbits": 2877,
+    "enumeration_claim": "Reproduced with independent orbit generation and Burnside small-order controls; also consistent with published 3x9 Latin rectangle counts.",
+    "branch_cnf_variables": 33000,
+    "branch_cnf_clauses": 101758,
+    "attempted_full_coverage": 1700,
+    "verified_unsat_branches": 0,
+    "verified_sat_branches": 0,
+    "unknown_budget_branches": 1700,
+    "execution_total_solver_seconds": 13658.466,
+    "source_evidence_sha256": "b0d912368d4b1e8a073c40e5df742b14b4aefb3bbe440fccaa88521845877901",
+    "ledger_drive_url": "https://drive.google.com/file/d/1YunKMnAaoafaB9m5_ISSfNyXfSaB2BpG/view"
+  },
+  "proof_routes": {
+    "R1_PROOF_SOUND_PRUNING": {
+      "status": "RESEARCH_ACTIVE_NO_GLOBAL_BRANCH_CLOSURE",
+      "meaning": "A pruning theorem is a route to CLOSED only together with a complete remainder proof or a complete SAT witness.",
+      "observations": ["E067 root spectral scan 0/1700 excluded", "E067 5x GF(2) root rank tests 0/1700 excluded", "Egan pair has only 7 disjoint common transversals and cannot extend"],
+      "next": "Deep partial-pair transversal packing overapproximation or 4-net GF(2) forbidden relation rank upper-bound; prove soundness and test positive examples."
+    },
+    "R2_SAT_WITNESS": {
+      "status": "NO_COMPLETE_ORDER10_WITNESS",
+      "required": "3 full Latin squares, independent row and column checks, and AB/AC/BC pair overlay sizes 100/100/100.",
+      "known_neartriple_overlay": [100,100,91],
+      "next": "Joint A/B construction with 10 disjoint common transversals or complete full OA SAT, independently verified."
+    },
+    "R3_GLOBAL_UNSAT": {
+      "status": "ZERO_CHECKED_ORDER10_UNSAT_BRANCHES",
+      "coverage_target": 1700,
+      "required": "Checked LRAT proof for each branch or a single global selector full OA proof, with correct symmetry coverage.",
+      "next": "Improve propagation/encoding and execute proof-producing solver with proof artifacts and zero false UNKNOWN-as-UNSAT."
+    },
+    "R4_UNIVERSAL_CONTRADICTION": {
+      "status": "NO_UNRESTRICTED_CONTRADICTION_PROVED",
+      "required": "Assume OA(100,5,10,2); prove contradiction without restricting to special pair or partial-square patterns.",
+      "excluded_wrong_leads": ["E059 refutes universal 4-row fractional residual obstruction", "E059 refutes universal four-/seven-row integer residual four-coordinate obstruction"],
+      "next": "Combine GF(2), parity, incidence geometry, and full five-coordinate necessary constraints; find counterexamples first."
+    }
+  },
+  "milestones": [
+    {"id":"M0","name":"State freeze and bilateral GitHub/Drive handoff","status":"IN_PROGRESS_THIS_TURN"},
+    {"id":"M1","name":"First proven sound deep pruning cut for partial pair","status":"EXPERIMENT_PENDING"},
+    {"id":"M2","name":"Transferable global nogoods and rigorous proof lifting","status":"NOT_STARTED"},
+    {"id":"M3","name":"Direct constructive full SAT witness","status":"ONGOING_NO_WITNESS"},
+    {"id":"M4","name":"Certified full-coverage global UNSAT proof search","status":"0_OF_1700"},
+    {"id":"M5","name":"CLOSED and independently audited archive","status":"NOT_ACHIEVED"}
+  ],
+  "persistence": {
+    "github_root": "https://github.com/davidlueng986-alt/123321/tree/math-agent-mols10/research/mols10",
+    "github_milestone_path": "research/mols10/MILESTONE_CLOSED_2026-11-06.md",
+    "drive_folder": "https://drive.google.com/drive/folders/1-Unm0P7vD-B5VMg-9vrARTKEU8j67MxO",
+    "drive_path": "/Google Drive/Math Agent/04_EXPERIMENTS_AND_PROOFS/MOLS10/",
+    "research_journal": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
+    "historical_file_mirror_status": "Not independently audited file-for-file. Some older material is packaged as Drive ZIP rather than present individually in GitHub. Do not assert full mirror."
+  },
+  "operational_rules": ["Goal backward, both YES and NO paths stay open", "No fixed pair scope promoted to unrestricted theorem", "Full five-coordinate OA required", "UNKNOWN stays UNKNOWN", "Every new source/result/report preserved in GitHub and Google Drive with SHA256", "No automatic hourly research: user turned it OFF", "Do not claim asynchronous progress from a chat"]
+}

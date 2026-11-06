@@ -1,3 +1,17 @@
+# CURRENT CANONICAL MILESTONE — 2026-11-06
+
+**OPEN — 0/1,700 complete order-10 branch exclusions; no full 100/100/100 witness.**
+
+- [Milestone: all status and 4 CLOSED routes](MILESTONE_CLOSED_2026-11-06.md)
+- [Agent handoff and exact two persistence locations](MILESTONE_INDEX.md)
+- [Machine-readable proof obligations](CLOSED_PROOF_OBLIGATIONS.json)
+- [Latest experiment state](STATE.json)
+- [Google Drive MOLS10 folder](https://drive.google.com/drive/folders/1-Unm0P7vD-B5VMg-9vrARTKEU8j67MxO)
+
+**R1:** Sound pruning + finish remainder; **R2:** one verified full SAT triple; **R3:** complete global checked UNSAT; **R4:** unrestricted universal contradiction. Local negative and timeouts do not close the global question. Older content below is historical and may be superseded by M068.
+
+---
+
 # SINGLE MISSION: MAKE 3-MOLS(10) CLOSED
 
 **Only success:** three independently verified 10x10 Latin squares with pair overlays 100/100/100, OR a complete unrestricted independently checked nonexistence proof with mathematically justified full symmetry/continuation coverage. Partial negatives, certificates, CPU nodes and commits are not progress-to-closure metrics. **Current status: OPEN.** MOLS10 hourly automation is disabled at user request.
