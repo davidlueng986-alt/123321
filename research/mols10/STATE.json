@@ -278,5 +278,8 @@
     "M5": "OPEN"
   },
   "e068_drive_zip_url": "https://drive.google.com/file/d/1K5lo1B6EZqCJN21OkfiuPmAPnCT6R8aJ/view",
-  "e068_github_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e068/E068_REPORT.md"
+  "e068_github_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e068/E068_REPORT.md",
+  "e068_v2_drive_url": "https://drive.google.com/file/d/1_37FLsuI8LbrFNe3CO7cNnnJeEJGE1vt/view",
+  "e068_v2_sha256": "287f10343ae741d62cbc4f48ba80c4b2f3fe2fb7a51580839887320b876a867a",
+  "e068_v2_reproducibility": "clean unzip+E068_REPLAY.sh PASS; v2 removes nondeterministic elapsed_seconds from results; all 12 exact local cuts, all 1446 deletion controls, GF5 positive controls independently passed. Earlier v1 replay same mathematics but not SHA-identical."
 }

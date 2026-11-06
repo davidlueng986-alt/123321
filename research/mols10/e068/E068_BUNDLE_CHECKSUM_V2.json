@@ -1,0 +1,8 @@
+{
+  "archive_filename": "E068_PARTIAL_PAIR_SOUND_CUTS_V2.zip",
+  "archive_sha256": "287f10343ae741d62cbc4f48ba80c4b2f3fe2fb7a51580839887320b876a867a",
+  "archive_bytes": 39952,
+  "encoding": "base64, wrapped at 76 characters per line",
+  "replay": "unzip -o archive.zip && bash E068_REPLAY.sh",
+  "global_3mols10_status": "OPEN"
+}
