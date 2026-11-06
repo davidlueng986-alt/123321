@@ -1,0 +1,9 @@
+{
+  "archive": "E070_R4_GRAM_PSD_ATTACK.zip",
+  "sha256": "db33c2bc7e069852a2cf93eb866d79ab81fd4b64684b21130e62c48c6d3f5b68",
+  "bytes": 91292,
+  "base64_text": "E070_R4_GRAM_PSD_ATTACK.zip.b64.txt",
+  "global_status": "OPEN",
+  "full_classes_proved_UNSAT": 0,
+  "mathematical_nogoods_independently_verified": 10
+}
