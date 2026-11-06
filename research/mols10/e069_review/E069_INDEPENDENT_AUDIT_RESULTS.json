@@ -1,0 +1,88 @@
+{
+  "source": "E069_R2_R4_CLOSED_ATTACK.zip",
+  "status": "OPEN",
+  "64_core_uniqueness": {
+    "independent_python": {
+      "placements": 5131,
+      "nodes": 13100,
+      "exact_egan_pair": true,
+      "solutions": 1
+    },
+    "independent_cpp": {
+      "nodes": 11541,
+      "solutions": 1
+    }
+  },
+  "64_literal_deletion_minimal": false,
+  "single_literal_deletions_exhaustively_still_unique": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    11,
+    13,
+    15,
+    16,
+    18,
+    19,
+    20,
+    21,
+    24,
+    26,
+    27,
+    28,
+    30,
+    33,
+    35,
+    39,
+    40,
+    41,
+    42,
+    43,
+    46,
+    48,
+    50,
+    54,
+    55,
+    58,
+    60,
+    62
+  ],
+  "number_exhaustively_removable": 37,
+  "one_omission_independent_confirmation": {
+    "removed_original_literal_index": 2,
+    "cpp_exhaustive_nodes": 41814,
+    "python_exhaustive_nodes": 46382,
+    "solutions": 1
+  },
+  "remaining_deletions_unknown_due_500000_cap": 27,
+  "exported_clause_matches_E064_canonical_Bfirstcol_branches": 0,
+  "total_E064_canonical_branches": 1700,
+  "kpack_exhaustive": {
+    "7": [
+      1,
+      31
+    ],
+    "6": [
+      7,
+      287
+    ],
+    "5": [
+      24,
+      1224
+    ],
+    "4": [
+      51,
+      4426
+    ]
+  },
+  "n6_three_branches_correctly_tested": false,
+  "R4_Krein_calculated_in_code": false,
+  "R4_SNF_calculated_in_code": false,
+  "standalone_zip_replay_complete": false
+}

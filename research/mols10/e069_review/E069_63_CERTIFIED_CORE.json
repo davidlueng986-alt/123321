@@ -1,0 +1,907 @@
+{
+  "scope": "Egan-Wanless-specific sound inferred nogood; global MOLS10 OPEN",
+  "reference": "E069 original 64 clues, original literal index 2 removed",
+  "core_size": 63,
+  "wildcards": 137,
+  "source_literals": [
+    {
+      "square": "A",
+      "row": 1,
+      "col": 1,
+      "value": 1
+    },
+    {
+      "square": "A",
+      "row": 1,
+      "col": 2,
+      "value": 4
+    },
+    {
+      "square": "A",
+      "row": 1,
+      "col": 5,
+      "value": 7
+    },
+    {
+      "square": "A",
+      "row": 1,
+      "col": 6,
+      "value": 3
+    },
+    {
+      "square": "A",
+      "row": 2,
+      "col": 0,
+      "value": 7
+    },
+    {
+      "square": "A",
+      "row": 2,
+      "col": 3,
+      "value": 5
+    },
+    {
+      "square": "A",
+      "row": 2,
+      "col": 9,
+      "value": 0
+    },
+    {
+      "square": "A",
+      "row": 3,
+      "col": 2,
+      "value": 5
+    },
+    {
+      "square": "A",
+      "row": 3,
+      "col": 3,
+      "value": 3
+    },
+    {
+      "square": "A",
+      "row": 3,
+      "col": 5,
+      "value": 2
+    },
+    {
+      "square": "A",
+      "row": 3,
+      "col": 7,
+      "value": 0
+    },
+    {
+      "square": "A",
+      "row": 3,
+      "col": 9,
+      "value": 7
+    },
+    {
+      "square": "A",
+      "row": 4,
+      "col": 2,
+      "value": 1
+    },
+    {
+      "square": "A",
+      "row": 4,
+      "col": 4,
+      "value": 4
+    },
+    {
+      "square": "A",
+      "row": 4,
+      "col": 7,
+      "value": 5
+    },
+    {
+      "square": "A",
+      "row": 4,
+      "col": 8,
+      "value": 7
+    },
+    {
+      "square": "A",
+      "row": 4,
+      "col": 9,
+      "value": 3
+    },
+    {
+      "square": "A",
+      "row": 5,
+      "col": 5,
+      "value": 5
+    },
+    {
+      "square": "A",
+      "row": 5,
+      "col": 8,
+      "value": 6
+    },
+    {
+      "square": "A",
+      "row": 6,
+      "col": 0,
+      "value": 5
+    },
+    {
+      "square": "A",
+      "row": 6,
+      "col": 1,
+      "value": 3
+    },
+    {
+      "square": "A",
+      "row": 6,
+      "col": 4,
+      "value": 0
+    },
+    {
+      "square": "A",
+      "row": 6,
+      "col": 6,
+      "value": 6
+    },
+    {
+      "square": "A",
+      "row": 6,
+      "col": 7,
+      "value": 9
+    },
+    {
+      "square": "A",
+      "row": 7,
+      "col": 5,
+      "value": 4
+    },
+    {
+      "square": "A",
+      "row": 7,
+      "col": 8,
+      "value": 1
+    },
+    {
+      "square": "A",
+      "row": 8,
+      "col": 2,
+      "value": 6
+    },
+    {
+      "square": "A",
+      "row": 8,
+      "col": 3,
+      "value": 0
+    },
+    {
+      "square": "A",
+      "row": 8,
+      "col": 6,
+      "value": 5
+    },
+    {
+      "square": "A",
+      "row": 8,
+      "col": 7,
+      "value": 4
+    },
+    {
+      "square": "A",
+      "row": 8,
+      "col": 9,
+      "value": 2
+    },
+    {
+      "square": "A",
+      "row": 9,
+      "col": 2,
+      "value": 8
+    },
+    {
+      "square": "A",
+      "row": 9,
+      "col": 3,
+      "value": 4
+    },
+    {
+      "square": "A",
+      "row": 9,
+      "col": 5,
+      "value": 1
+    },
+    {
+      "square": "B",
+      "row": 0,
+      "col": 0,
+      "value": 0
+    },
+    {
+      "square": "B",
+      "row": 0,
+      "col": 5,
+      "value": 2
+    },
+    {
+      "square": "B",
+      "row": 0,
+      "col": 9,
+      "value": 6
+    },
+    {
+      "square": "B",
+      "row": 1,
+      "col": 1,
+      "value": 0
+    },
+    {
+      "square": "B",
+      "row": 1,
+      "col": 2,
+      "value": 6
+    },
+    {
+      "square": "B",
+      "row": 1,
+      "col": 5,
+      "value": 3
+    },
+    {
+      "square": "B",
+      "row": 2,
+      "col": 4,
+      "value": 3
+    },
+    {
+      "square": "B",
+      "row": 2,
+      "col": 6,
+      "value": 1
+    },
+    {
+      "square": "B",
+      "row": 2,
+      "col": 7,
+      "value": 8
+    },
+    {
+      "square": "B",
+      "row": 3,
+      "col": 0,
+      "value": 8
+    },
+    {
+      "square": "B",
+      "row": 3,
+      "col": 5,
+      "value": 1
+    },
+    {
+      "square": "B",
+      "row": 4,
+      "col": 0,
+      "value": 6
+    },
+    {
+      "square": "B",
+      "row": 4,
+      "col": 1,
+      "value": 9
+    },
+    {
+      "square": "B",
+      "row": 4,
+      "col": 3,
+      "value": 3
+    },
+    {
+      "square": "B",
+      "row": 4,
+      "col": 4,
+      "value": 0
+    },
+    {
+      "square": "B",
+      "row": 5,
+      "col": 7,
+      "value": 9
+    },
+    {
+      "square": "B",
+      "row": 5,
+      "col": 9,
+      "value": 2
+    },
+    {
+      "square": "B",
+      "row": 6,
+      "col": 4,
+      "value": 9
+    },
+    {
+      "square": "B",
+      "row": 6,
+      "col": 6,
+      "value": 0
+    },
+    {
+      "square": "B",
+      "row": 6,
+      "col": 7,
+      "value": 3
+    },
+    {
+      "square": "B",
+      "row": 6,
+      "col": 8,
+      "value": 7
+    },
+    {
+      "square": "B",
+      "row": 6,
+      "col": 9,
+      "value": 1
+    },
+    {
+      "square": "B",
+      "row": 7,
+      "col": 9,
+      "value": 9
+    },
+    {
+      "square": "B",
+      "row": 8,
+      "col": 5,
+      "value": 5
+    },
+    {
+      "square": "B",
+      "row": 8,
+      "col": 6,
+      "value": 9
+    },
+    {
+      "square": "B",
+      "row": 9,
+      "col": 0,
+      "value": 2
+    },
+    {
+      "square": "B",
+      "row": 9,
+      "col": 2,
+      "value": 9
+    },
+    {
+      "square": "B",
+      "row": 9,
+      "col": 5,
+      "value": 4
+    },
+    {
+      "square": "B",
+      "row": 9,
+      "col": 9,
+      "value": 0
+    }
+  ],
+  "normalized_literals": [
+    {
+      "square": "A",
+      "row": 2,
+      "col": 1,
+      "value": 9,
+      "e065_var": 220
+    },
+    {
+      "square": "A",
+      "row": 2,
+      "col": 2,
+      "value": 6,
+      "e065_var": 227
+    },
+    {
+      "square": "A",
+      "row": 2,
+      "col": 5,
+      "value": 3,
+      "e065_var": 254
+    },
+    {
+      "square": "A",
+      "row": 2,
+      "col": 6,
+      "value": 8,
+      "e065_var": 269
+    },
+    {
+      "square": "A",
+      "row": 3,
+      "col": 0,
+      "value": 3,
+      "e065_var": 304
+    },
+    {
+      "square": "A",
+      "row": 3,
+      "col": 3,
+      "value": 4,
+      "e065_var": 335
+    },
+    {
+      "square": "A",
+      "row": 3,
+      "col": 9,
+      "value": 0,
+      "e065_var": 391
+    },
+    {
+      "square": "A",
+      "row": 1,
+      "col": 2,
+      "value": 4,
+      "e065_var": 125
+    },
+    {
+      "square": "A",
+      "row": 1,
+      "col": 3,
+      "value": 8,
+      "e065_var": 139
+    },
+    {
+      "square": "A",
+      "row": 1,
+      "col": 5,
+      "value": 7,
+      "e065_var": 158
+    },
+    {
+      "square": "A",
+      "row": 1,
+      "col": 7,
+      "value": 0,
+      "e065_var": 171
+    },
+    {
+      "square": "A",
+      "row": 1,
+      "col": 9,
+      "value": 3,
+      "e065_var": 194
+    },
+    {
+      "square": "A",
+      "row": 5,
+      "col": 2,
+      "value": 9,
+      "e065_var": 530
+    },
+    {
+      "square": "A",
+      "row": 5,
+      "col": 4,
+      "value": 6,
+      "e065_var": 547
+    },
+    {
+      "square": "A",
+      "row": 5,
+      "col": 7,
+      "value": 4,
+      "e065_var": 575
+    },
+    {
+      "square": "A",
+      "row": 5,
+      "col": 8,
+      "value": 3,
+      "e065_var": 584
+    },
+    {
+      "square": "A",
+      "row": 5,
+      "col": 9,
+      "value": 8,
+      "e065_var": 599
+    },
+    {
+      "square": "A",
+      "row": 6,
+      "col": 5,
+      "value": 4,
+      "e065_var": 655
+    },
+    {
+      "square": "A",
+      "row": 6,
+      "col": 8,
+      "value": 5,
+      "e065_var": 686
+    },
+    {
+      "square": "A",
+      "row": 4,
+      "col": 0,
+      "value": 4,
+      "e065_var": 405
+    },
+    {
+      "square": "A",
+      "row": 4,
+      "col": 1,
+      "value": 8,
+      "e065_var": 419
+    },
+    {
+      "square": "A",
+      "row": 4,
+      "col": 4,
+      "value": 0,
+      "e065_var": 441
+    },
+    {
+      "square": "A",
+      "row": 4,
+      "col": 6,
+      "value": 5,
+      "e065_var": 466
+    },
+    {
+      "square": "A",
+      "row": 4,
+      "col": 7,
+      "value": 2,
+      "e065_var": 473
+    },
+    {
+      "square": "A",
+      "row": 8,
+      "col": 5,
+      "value": 6,
+      "e065_var": 857
+    },
+    {
+      "square": "A",
+      "row": 8,
+      "col": 8,
+      "value": 9,
+      "e065_var": 890
+    },
+    {
+      "square": "A",
+      "row": 9,
+      "col": 2,
+      "value": 5,
+      "e065_var": 926
+    },
+    {
+      "square": "A",
+      "row": 9,
+      "col": 3,
+      "value": 0,
+      "e065_var": 931
+    },
+    {
+      "square": "A",
+      "row": 9,
+      "col": 6,
+      "value": 4,
+      "e065_var": 965
+    },
+    {
+      "square": "A",
+      "row": 9,
+      "col": 7,
+      "value": 6,
+      "e065_var": 977
+    },
+    {
+      "square": "A",
+      "row": 9,
+      "col": 9,
+      "value": 7,
+      "e065_var": 998
+    },
+    {
+      "square": "A",
+      "row": 7,
+      "col": 2,
+      "value": 1,
+      "e065_var": 722
+    },
+    {
+      "square": "A",
+      "row": 7,
+      "col": 3,
+      "value": 6,
+      "e065_var": 737
+    },
+    {
+      "square": "A",
+      "row": 7,
+      "col": 5,
+      "value": 9,
+      "e065_var": 760
+    },
+    {
+      "square": "B",
+      "row": 0,
+      "col": 0,
+      "value": 0,
+      "e065_var": 1001
+    },
+    {
+      "square": "B",
+      "row": 0,
+      "col": 5,
+      "value": 5,
+      "e065_var": 1056
+    },
+    {
+      "square": "B",
+      "row": 0,
+      "col": 9,
+      "value": 9,
+      "e065_var": 1100
+    },
+    {
+      "square": "B",
+      "row": 2,
+      "col": 1,
+      "value": 0,
+      "e065_var": 1211
+    },
+    {
+      "square": "B",
+      "row": 2,
+      "col": 2,
+      "value": 9,
+      "e065_var": 1230
+    },
+    {
+      "square": "B",
+      "row": 2,
+      "col": 5,
+      "value": 6,
+      "e065_var": 1257
+    },
+    {
+      "square": "B",
+      "row": 3,
+      "col": 4,
+      "value": 6,
+      "e065_var": 1347
+    },
+    {
+      "square": "B",
+      "row": 3,
+      "col": 6,
+      "value": 4,
+      "e065_var": 1365
+    },
+    {
+      "square": "B",
+      "row": 3,
+      "col": 7,
+      "value": 2,
+      "e065_var": 1373
+    },
+    {
+      "square": "B",
+      "row": 1,
+      "col": 0,
+      "value": 2,
+      "e065_var": 1103
+    },
+    {
+      "square": "B",
+      "row": 1,
+      "col": 5,
+      "value": 4,
+      "e065_var": 1155
+    },
+    {
+      "square": "B",
+      "row": 5,
+      "col": 0,
+      "value": 9,
+      "e065_var": 1510
+    },
+    {
+      "square": "B",
+      "row": 5,
+      "col": 1,
+      "value": 3,
+      "e065_var": 1514
+    },
+    {
+      "square": "B",
+      "row": 5,
+      "col": 3,
+      "value": 6,
+      "e065_var": 1537
+    },
+    {
+      "square": "B",
+      "row": 5,
+      "col": 4,
+      "value": 0,
+      "e065_var": 1541
+    },
+    {
+      "square": "B",
+      "row": 6,
+      "col": 7,
+      "value": 3,
+      "e065_var": 1674
+    },
+    {
+      "square": "B",
+      "row": 6,
+      "col": 9,
+      "value": 5,
+      "e065_var": 1696
+    },
+    {
+      "square": "B",
+      "row": 4,
+      "col": 4,
+      "value": 3,
+      "e065_var": 1444
+    },
+    {
+      "square": "B",
+      "row": 4,
+      "col": 6,
+      "value": 0,
+      "e065_var": 1461
+    },
+    {
+      "square": "B",
+      "row": 4,
+      "col": 7,
+      "value": 6,
+      "e065_var": 1477
+    },
+    {
+      "square": "B",
+      "row": 4,
+      "col": 8,
+      "value": 1,
+      "e065_var": 1482
+    },
+    {
+      "square": "B",
+      "row": 4,
+      "col": 9,
+      "value": 4,
+      "e065_var": 1495
+    },
+    {
+      "square": "B",
+      "row": 8,
+      "col": 9,
+      "value": 3,
+      "e065_var": 1894
+    },
+    {
+      "square": "B",
+      "row": 9,
+      "col": 5,
+      "value": 8,
+      "e065_var": 1959
+    },
+    {
+      "square": "B",
+      "row": 9,
+      "col": 6,
+      "value": 3,
+      "e065_var": 1964
+    },
+    {
+      "square": "B",
+      "row": 7,
+      "col": 0,
+      "value": 5,
+      "e065_var": 1706
+    },
+    {
+      "square": "B",
+      "row": 7,
+      "col": 2,
+      "value": 3,
+      "e065_var": 1724
+    },
+    {
+      "square": "B",
+      "row": 7,
+      "col": 5,
+      "value": 7,
+      "e065_var": 1758
+    },
+    {
+      "square": "B",
+      "row": 7,
+      "col": 9,
+      "value": 0,
+      "e065_var": 1791
+    }
+  ],
+  "independent_proof": {
+    "C++ exactcover no extra gauge": {
+      "solutions": 1,
+      "nodes": 41814,
+      "exhaustive": true
+    },
+    "Python bitset exactcover": {
+      "solutions": 1,
+      "nodes": 46382,
+      "exhaustive": true
+    }
+  },
+  "normalized_DIMACS_literals": [
+    -220,
+    -227,
+    -254,
+    -269,
+    -304,
+    -335,
+    -391,
+    -125,
+    -139,
+    -158,
+    -171,
+    -194,
+    -530,
+    -547,
+    -575,
+    -584,
+    -599,
+    -655,
+    -686,
+    -405,
+    -419,
+    -441,
+    -466,
+    -473,
+    -857,
+    -890,
+    -926,
+    -931,
+    -965,
+    -977,
+    -998,
+    -722,
+    -737,
+    -760,
+    -1001,
+    -1056,
+    -1100,
+    -1211,
+    -1230,
+    -1257,
+    -1347,
+    -1365,
+    -1373,
+    -1103,
+    -1155,
+    -1510,
+    -1514,
+    -1537,
+    -1541,
+    -1674,
+    -1696,
+    -1444,
+    -1461,
+    -1477,
+    -1482,
+    -1495,
+    -1894,
+    -1959,
+    -1964,
+    -1706,
+    -1724,
+    -1758,
+    -1791
+  ],
+  "firstcolumn_root_classes_affected_before_symmetry_lift": 0
+}
