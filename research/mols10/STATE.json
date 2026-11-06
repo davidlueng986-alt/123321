@@ -8,7 +8,7 @@
     100,
     91
   ],
-  "next_action": "Correct E069 claims; focus on symmetry-orbit-aware or dynamic Egan-type sound cuts in genuine E064 branches, benchmark improvement on n10, audit proof lifting; separate R4 formal parity-model consistency from geometric necessary conditions. Do not burn cycles minimizing only Egan-specific cores absent generic hit rates. Hourly automation stays off.",
+  "next_action": "R4 PRIMARY: attempt unrestricted 5-net contradiction; also conditionalize necessary algebraic parity/GF2 code/quadratic invariant on E064 branch f,g and deeper rows, seek first one rigorously verified full-class UNSAT (1/1700), or full 100/100/100 SAT witness. E066 unknown is not UNSAT. Hourly OFF.",
   "current_hypothesis": "SOLE GOAL CLOSED. E064 complete firstcolumn paratopy 1700 representatives. E066 full 5-coordinate OA proof-carrying search by verified SAT witness or archived independently LRAT-checked UNSAT for all 1700, with 17x100 shards. CI execution/calibration must be verified, deployment alone is NOT proof.",
   "last_experiment": "MOLS10-E069-INDEPENDENT-CRITICAL-AUDIT",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
@@ -286,5 +286,7 @@
   "e068_v2_github_archive": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e068/E068_COMPLETE_ARCHIVE_V2.zip.b64.txt",
   "e068_v2_replay": "PASS_2026-11-07; SHA256 manifest 20/20",
   "e069_independent_audit_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e069_review/E069_INDEPENDENT_AUDIT_2026-11-07.md",
-  "e069_audit_drive_zip": "https://drive.google.com/file/d/1Gnq-U1rySmQ5yQutQeQzVelS2E-YX1Kd/view"
+  "e069_audit_drive_zip": "https://drive.google.com/file/d/1Gnq-U1rySmQ5yQutQeQzVelS2E-YX1Kd/view",
+  "r4_priority": "ACTIVE_PRIMARY_UNIVERSAL_THEOREM_AND_BRANCH_CONDITIONAL_OBSTRUCTION",
+  "r4_correction": "2026-11-07: Earlier E069 R4 de-prioritization was unjustified; code bugs and feasible abstract parameter identities do not de-prioritize all universal mathematics. E069 formal parity, symbolic Gram and sample code audits never read E064 firstcolumn f/g, so they cannot eliminate any of 1700 classes on their own. Inspect R4 branch-conditioned invariants and proof soundness. See research/mols10/R4_REPRIORITIZATION_2026-11-07.md."
 }
