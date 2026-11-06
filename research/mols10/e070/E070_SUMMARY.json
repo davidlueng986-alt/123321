@@ -99,5 +99,20 @@
   "truth_gate": "No certificate accepted without strict negative integer quadratic and independent pairwise OA consistency verification",
   "exact_1_over_1700_objective": "NOT_MET; complete proof of all possible extensions of one E064 branch still required",
   "next": "Integrate oracle into full OA solver, prove every injected clause, benchmark actual search, attempt full branch0 exhaustive proof; also pursue full 100/100/100 witness",
-  "all_8_integer_certificates_verified": true
+  "all_8_integer_certificates_verified": true,
+  "e070_b_live_full_normalized_OA_solver": {
+    "first_column_branch": 0,
+    "same_5s_baseline_DLX_nodes": 704512,
+    "same_5s_baseline_status": "UNKNOWN_BUDGET",
+    "R4_integer_gated_5s_nodes": 393216,
+    "R4_integer_gated_5s_verified_cuts": 144094,
+    "R4_integer_gated_5s_status": "UNKNOWN_BUDGET",
+    "R4_integer_gated_18s_nodes": 1441792,
+    "R4_integer_gated_18s_verified_cuts": 547452,
+    "R4_18s_numerical_cut_requests_without_integer_certificate_kept": 3,
+    "R4_18s_status": "UNKNOWN_BUDGET",
+    "first_live_example_exact_integer_q": -1165,
+    "first_live_example_points": 48,
+    "real_speedup_claim": "NONE: PSD oracle costs time; same-time node throughput lower; no full-branch proof"
+  }
 }

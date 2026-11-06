@@ -21,3 +21,7 @@ Requires Python 3, NumPy (for positive examples, spectral oracle). The exact 8-t
 ## Why this matters—and what it does NOT show
 
 The necessary theorem for every point subset S in a hypothetical OA(100,5,10,2) is `25I-5A_S+2J >= 0`, where A_S has adjacency 1 iff two distinct points agree on one OA coordinate. Each integer violation is an **exact, independently checkable mathematical nogood**. But a finite collection of 10 such nogoods does **not** eliminate an entire E064 symmetry class; no global nonexistence proof or full SAT witness has been generated.
+
+## E070-B: full five-coordinate solver integration
+
+[Actual DLX search logs and exact-gated PSD pruning](E070_R4_SOLVER_INTEGRATION.md). R4 pruning 547,452 times with strict exact integer gates in 18 s, branch0 remains UNKNOWN. Run `E070_REPLAY.sh` to regenerate the features, compile, run a short proof-sound search smoke test, and independently check its first integer-cut certificate. No end-to-end SAT improvement or global UNSAT certificate is claimed.

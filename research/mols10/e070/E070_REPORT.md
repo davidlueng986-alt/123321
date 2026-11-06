@@ -107,3 +107,8 @@ To certify even one full canonical root branch `i`, we must show **every** full 
 **Next direct R4 attack:** instrument the full normalized 5-dimensional OA exact-cover/SAT search with this **adaptive PSD-separation oracle**, emitting exact checked integer certificates (and corresponding clauses) whenever a partial set becomes spectrally impossible; benchmark branch 0 plus other types against the untouched baseline with identical budgets. Derive stronger group-level cut families and seek an exhaustive 1/1700 proof, not just additional certificates from random paths. Parallel positive search for a full verified 100/100/100 witness remains essential.
 
 **Status:** `OPEN`; full root branches ruled out: **0/1700**; partial R4 certificates: **10** individually integer-checkable examples (eight types plus two optimized; branch0 duplicated as a type but distinct sample), zero full 100/100/100 witnesses. Hourly automations remain disabled.
+
+
+## E070-B ADDENDUM (2026-11-07): ACTUAL R4 cuts integrated into the **complete normalized five-dimensional DLX**
+
+See [E070_R4_SOLVER_INTEGRATION.md](E070_R4_SOLVER_INTEGRATION.md). Branch 0, exact-integer-gated cuts: **5 seconds 144,094 verified cuts / 393,216 nodes; 18 seconds 547,452 verified cuts / 1,441,792 nodes; status UNKNOWN_BUDGET in both.** Baseline same 5 seconds 704,512 nodes but no PSD cuts. The PSD oracle is computationally costly, so **no solver speedup is claimed**. The first live cut on 48 OA-compatible tuples has independent integer quadratic `-1165`. **0/1700 full root classes closed**, no full SAT witness; the user target 1/1700 remains unmet.
