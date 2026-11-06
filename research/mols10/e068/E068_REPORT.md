@@ -36,6 +36,9 @@ A defensible next step is **general on-demand cut generation for arbitrary deep 
 
 ## Reproduction
 
+**Reproducibility correction (v2):** Removed a nondeterministic elapsed-time field from `E068_independent_results.json`. All mathematical results are unchanged. The earlier ZIP v1 can replay the mathematics but cannot reproduce that one file's SHA exactly. Use the `E068_PARTIAL_PAIR_SOUND_CUTS_V2.zip` SHA-attested archive as the authoritative self-replayable package.
+
+
 Run from this `e068` directory:
 
 ```bash

@@ -15,5 +15,10 @@ assert all(a['every_one_literal_deletion_has_transversal']=='VERIFIED' for a in 
 assert x['independent_positive_GF5_anchor_checks']==25
 v=json.load(open('E068_all_12_sound_nogoods.json'))
 assert len(v['cuts'])==12 and sum(z['count'] for z in v['cuts'])==1446
+import hashlib, pathlib
+manifest=pathlib.Path('E068_MANIFEST.json')
+if manifest.exists():
+  m=json.loads(manifest.read_text())
+  assert all(hashlib.sha256(pathlib.Path(fname).read_bytes()).hexdigest()==x['sha256'] for fname,x in m['files'].items()), 'SOURCE/RESULT HASH REGRESSION'
 print('E068 PROOF-SOUND LOCAL NOGOODS: 12/12 VERIFIED; GF5 POSITIVE 25/25; GLOBAL MOLS10 STILL OPEN')
 PY

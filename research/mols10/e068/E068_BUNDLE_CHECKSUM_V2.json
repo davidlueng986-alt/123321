@@ -1,8 +1,9 @@
 {
-  "archive_filename": "E068_PARTIAL_PAIR_SOUND_CUTS_V2.zip",
-  "archive_sha256": "287f10343ae741d62cbc4f48ba80c4b2f3fe2fb7a51580839887320b876a867a",
-  "archive_bytes": 39952,
-  "encoding": "base64, wrapped at 76 characters per line",
-  "replay": "unzip -o archive.zip && bash E068_REPLAY.sh",
-  "global_3mols10_status": "OPEN"
+  "version": "E068_V2_DETERMINISTIC",
+  "zip_sha256": "287f10343ae741d62cbc4f48ba80c4b2f3fe2fb7a51580839887320b876a867a",
+  "zip_bytes": 39952,
+  "manifest_sha256": "ca9a2399f0b9265710f8735e43aabdeb40ce46d90eda07fb0f41f2065659b107",
+  "replay_status": "PASS_2026-11-07",
+  "verified_files": 20,
+  "math_status": "OPEN"
 }

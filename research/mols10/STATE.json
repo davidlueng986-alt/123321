@@ -8,7 +8,7 @@
     100,
     91
   ],
-  "next_action": "Generalize E068 cut generation dynamically in partial generic A/B search, test propagation on diverse E064 classes and certify cut soundness; independently pursue one full SAT witness or unrestricted proof. M068 milestone documents four closure routes. Hourly automation remains off.",
+  "next_action": "After E068 v2 clean replay PASS, benchmark adaptive proof-sound partial-pair nogoods in general E064 branches; no branch SAT/UNSAT yet, 0/1700. Four CLOSED routes tracked in M068. Hourly automation disabled.",
   "current_hypothesis": "SOLE GOAL CLOSED. E064 complete firstcolumn paratopy 1700 representatives. E066 full 5-coordinate OA proof-carrying search by verified SAT witness or archived independently LRAT-checked UNSAT for all 1700, with 17x100 shards. CI execution/calibration must be verified, deployment alone is NOT proof.",
   "last_experiment": "MOLS10-E068-PARTIAL-PAIR-SOUND-TRANSVERSAL-NOGOODS",
   "drive_log_url": "https://docs.google.com/document/d/1NDPWEMM3Cf5HrhdOcV6pVE9tCI-kxKbavxcfIBFva3k/edit",
@@ -281,5 +281,8 @@
   "e068_github_report_url": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e068/E068_REPORT.md",
   "e068_v2_drive_url": "https://drive.google.com/file/d/1_37FLsuI8LbrFNe3CO7cNnnJeEJGE1vt/view",
   "e068_v2_sha256": "287f10343ae741d62cbc4f48ba80c4b2f3fe2fb7a51580839887320b876a867a",
-  "e068_v2_reproducibility": "clean unzip+E068_REPLAY.sh PASS; v2 removes nondeterministic elapsed_seconds from results; all 12 exact local cuts, all 1446 deletion controls, GF5 positive controls independently passed. Earlier v1 replay same mathematics but not SHA-identical."
+  "e068_v2_reproducibility": "clean unzip+E068_REPLAY.sh PASS; v2 removes nondeterministic elapsed_seconds from results; all 12 exact local cuts, all 1446 deletion controls, GF5 positive controls independently passed. Earlier v1 replay same mathematics but not SHA-identical.",
+  "e068_reproducible_archive_v2": "https://drive.google.com/file/d/1_37FLsuI8LbrFNe3CO7cNnnJeEJGE1vt/view",
+  "e068_v2_github_archive": "https://github.com/davidlueng986-alt/123321/blob/math-agent-mols10/research/mols10/e068/E068_COMPLETE_ARCHIVE_V2.zip.b64.txt",
+  "e068_v2_replay": "PASS_2026-11-07; SHA256 manifest 20/20"
 }

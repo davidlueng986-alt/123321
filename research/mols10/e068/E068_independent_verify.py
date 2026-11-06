@@ -8,7 +8,7 @@ one cell, even with unknown values treated as unrestricted, proves NO full
 triple can contain the listed partial A/B coordinate assignments.
 """
 from __future__ import annotations
-import json, pathlib, itertools, hashlib, time
+import json, pathlib, itertools, hashlib
 ROOT=pathlib.Path(__file__).resolve().parent
 
 def witness(n:int,known:dict[tuple[int,int,int],int],anchor:tuple[int,int]) -> tuple[int,...]|None:
@@ -48,7 +48,7 @@ def main():
     full={(s,r,c):(A if s==0 else B)[r][c] for s in range(2) for r in range(n) for c in range(n)}
     best=min(all12,key=lambda q:q['literal_count'])
     assert best['literal_count']==len(best['known_symbols'])
-    results=[];st=time.perf_counter()
+    results=[]
     for q in all12:
         known={(s,r,c):v for s,r,c,v in q['known_symbols']}
         assert len(known)==q['literal_count']
@@ -93,7 +93,6 @@ def main():
       'negative_core_is_embedded_in_known_egan_pair':True,
       'global_first_column_classes_eliminated':0,
       'logic':'Any third Latin square orthogonal to A and B partitions the 100 cells into 10 disjoint common transversals. At least one must cover the anchor cell. If even wildcard-permitted partial pair has no transversal through anchor, NO completion to 3-MOLS contains all core assignments.',
-      'elapsed_seconds':round(time.perf_counter()-st,5)
     }
     (ROOT/'E068_independent_results.json').write_text(json.dumps(result,indent=2)+'\n')
     (ROOT/'E068_leave_one_out_witnesses.json').write_text(json.dumps({'anchor':list(anchor),'core_literals':best['known_symbols'],'witnesses':leaveone},indent=2)+'\n')
