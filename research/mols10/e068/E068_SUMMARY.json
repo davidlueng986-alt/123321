@@ -1,0 +1,33 @@
+{
+  "experiment":"E068",
+  "date_utc":"2026-11-06",
+  "project":"3-MOLS(10)",
+  "global_status":"OPEN",
+  "proof_route":"R1_SOUND_DEEP_PRUNING",
+  "new_local_theorem":"If a specified partial orthogonal pair A/B has no wildcard-relaxed common transversal through an anchor cell, no full 3-MOLS completion contains that partial pair.",
+  "independent_evidence":{
+    "historic_pair":"Egan-Wanless 2016 A/B with overlay 100/100, not a triple",
+    "uncovered_common_transversal_anchor_cells":12,
+    "minimized_partial_pair_cores":12,
+    "smallest_core_literals":116,
+    "literal_total_full_pair":200,
+    "unfixed_literals_in_best_core":84,
+    "independent_python_verified_all_12_no_anchor_transversal":true,
+    "independent_python_verified_all_1446_single_deletions_satisfiable":true,
+    "gf5_positive_transversal_anchor_checks":25,
+    "normalized_sat_implied_clauses":12,
+    "best_sat_implied_clause_literals":116,
+    "additional_1000_greedy_minimizations_best_count":116
+  },
+  "global_first_column_branches_eliminated":0,
+  "global_verified_unsat_branches":0,
+  "global_complete_sat_witnesses":0,
+  "limitations":[
+    "Each cut applies to a particular partially fixed A/B pattern and its justified symmetry orbit; no E064 whole root branch eliminated.",
+    "Greedy deletion minimality is not globally minimum core size.",
+    "No benchmark showing improved generic order10 SAT search or learned-clause hit rate yet.",
+    "Theorem-level validity of adaptive generated cuts must be checked before adding to a proof-producing SAT system."
+  ],
+  "next_action":"Implement dynamic partial-A/B transversal-through-anchor overapprox nogood generation with independently verified conflict cores, benchmark on generic E064 branches, and combine with GF(2) deep rank cuts.",
+  "acceptance":"Only verified 100/100/100 witness or unrestricted certified UNSAT is CLOSED."
+}
