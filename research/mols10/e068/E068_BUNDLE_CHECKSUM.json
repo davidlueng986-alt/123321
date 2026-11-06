@@ -1,0 +1,8 @@
+{
+  "zip_filename": "E068_PARTIAL_PAIR_SOUND_CUTS.zip",
+  "zip_sha256": "6a6a3d2452ef1022fab3adcc1877ae42d1e319b66b215c3dd41e02193490d358",
+  "zip_bytes": 39642,
+  "base64_file": "E068_COMPLETE_ARCHIVE.zip.b64.txt",
+  "restore": "base64 -d E068_COMPLETE_ARCHIVE.zip.b64.txt > E068_PARTIAL_PAIR_SOUND_CUTS.zip",
+  "global_problem_status": "OPEN"
+}
