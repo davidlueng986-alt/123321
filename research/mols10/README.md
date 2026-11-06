@@ -1,3 +1,11 @@
+# CURRENT HANDOFF — M068 MILESTONE + E068 COMPLETED EXPERIMENT
+
+[**CURRENT_CHECKPOINT_E068.md**](CURRENT_CHECKPOINT_E068.md) · [E068 full source, local proof-sound cuts](e068/E068_REPORT.md) · [GitHub+Drive study locations](MILESTONE_INDEX.md)
+
+**Global 3-MOLS(10) remains OPEN.** E068 delivered 12 sound partial A/B cuts (best 116 fixed symbol values); this is not a universal proof or complete branch closure. The E066 1,700/1,700 UNKNOWN ledger remains unchanged.
+
+---
+
 # CURRENT CANONICAL MILESTONE — 2026-11-06
 
 **OPEN — 0/1,700 complete order-10 branch exclusions; no full 100/100/100 witness.**
