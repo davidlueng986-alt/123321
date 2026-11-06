@@ -1,0 +1,103 @@
+{
+  "experiment": "E070",
+  "problem": "3-MOLS(10)",
+  "status": "OPEN",
+  "complete_E064_branches_UNSAT": 0,
+  "complete_E064_branches": 1700,
+  "complete_SAT_witnesses": 0,
+  "mathematical_necessary_condition": "For any point subset S in OA(100,5,10,2), 25 I -5 A_S + 2 J >= 0",
+  "integer_certificates_branch0": {
+    "points": 22,
+    "clause_literals": 38,
+    "negative_quadratic": -90
+  },
+  "integer_certificates_branch400": {
+    "points": 24,
+    "clause_literals": 42,
+    "negative_quadratic": -92
+  },
+  "cycle_types_with_exact_partial_nogoods": 8,
+  "cycle_types_tested": 8,
+  "relative_node_domain_pruning_sampled_random_greedy_depth16": [
+    {
+      "branch": 0,
+      "cycle_type": [
+        2,
+        2,
+        2,
+        3
+      ],
+      "rejected": 1005,
+      "candidate_pool": 3373
+    },
+    {
+      "branch": 104,
+      "cycle_type": [
+        2,
+        2,
+        5
+      ],
+      "rejected": 73,
+      "candidate_pool": 3177
+    },
+    {
+      "branch": 440,
+      "cycle_type": [
+        2,
+        3,
+        4
+      ],
+      "rejected": 13,
+      "candidate_pool": 3125
+    },
+    {
+      "branch": 833,
+      "cycle_type": [
+        2,
+        7
+      ],
+      "rejected": 304,
+      "candidate_pool": 3117
+    },
+    {
+      "branch": 1271,
+      "cycle_type": [
+        3,
+        3,
+        3
+      ],
+      "rejected": 308,
+      "candidate_pool": 2704
+    },
+    {
+      "branch": 1339,
+      "cycle_type": [
+        3,
+        6
+      ],
+      "rejected": 482,
+      "candidate_pool": 3104
+    },
+    {
+      "branch": 1528,
+      "cycle_type": [
+        4,
+        5
+      ],
+      "rejected": 1810,
+      "candidate_pool": 3787
+    },
+    {
+      "branch": 1588,
+      "cycle_type": [
+        9
+      ],
+      "rejected": 76,
+      "candidate_pool": 2936
+    }
+  ],
+  "truth_gate": "No certificate accepted without strict negative integer quadratic and independent pairwise OA consistency verification",
+  "exact_1_over_1700_objective": "NOT_MET; complete proof of all possible extensions of one E064 branch still required",
+  "next": "Integrate oracle into full OA solver, prove every injected clause, benchmark actual search, attempt full branch0 exhaustive proof; also pursue full 100/100/100 witness",
+  "all_8_integer_certificates_verified": true
+}

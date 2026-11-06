@@ -1,3 +1,9 @@
+# E070 — PRIMARY R4 PROGRESS (not CLOSED)
+
+[Full R4 exact Gram-PSD theorem, integer certificates, 8 cycle types, and bounded pruning benchmark](e070/E070_REPORT.md). **0/1700 complete root classes proved UNSAT; no 100/100/100 SAT witness.** Eight mathematical cuts are **partial-subbranch** obstructions only. **Next milestone: actual complete root UNSAT 1/1700 or a full witness.**
+
+---
+
 # CURRENT HANDOFF — M068 MILESTONE + E068 COMPLETED EXPERIMENT
 
 [**CURRENT_CHECKPOINT_E068.md**](CURRENT_CHECKPOINT_E068.md) · [E068 full source, local proof-sound cuts](e068/E068_REPORT.md) · [GitHub+Drive study locations](MILESTONE_INDEX.md)

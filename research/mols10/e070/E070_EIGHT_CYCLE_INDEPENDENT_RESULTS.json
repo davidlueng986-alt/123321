@@ -1,0 +1,138 @@
+{
+  "global_status": "OPEN",
+  "full_branch_proofs": 0,
+  "eight_independent_exact_cuts": [
+    {
+      "branch": 0,
+      "type": [
+        2,
+        2,
+        2,
+        3
+      ],
+      "point_count": 22,
+      "clause_len": 43,
+      "exact_vT_M_v": -2,
+      "terms": {
+        "25_norm_v_sq": 137300,
+        "2_sum_v_sq": 107648,
+        "negative_adj_term": -244950
+      },
+      "status": "EXACT_NO_EXTENSION_OF_THIS_PARTIAL_POINT_SET"
+    },
+    {
+      "branch": 104,
+      "type": [
+        2,
+        2,
+        5
+      ],
+      "point_count": 26,
+      "clause_len": 54,
+      "exact_vT_M_v": -28,
+      "terms": {
+        "25_norm_v_sq": 563350,
+        "2_sum_v_sq": 129032,
+        "negative_adj_term": -692410
+      },
+      "status": "EXACT_NO_EXTENSION_OF_THIS_PARTIAL_POINT_SET"
+    },
+    {
+      "branch": 440,
+      "type": [
+        2,
+        3,
+        4
+      ],
+      "point_count": 32,
+      "clause_len": 65,
+      "exact_vT_M_v": -18,
+      "terms": {
+        "25_norm_v_sq": 1561500,
+        "2_sum_v_sq": 31752,
+        "negative_adj_term": -1593270
+      },
+      "status": "EXACT_NO_EXTENSION_OF_THIS_PARTIAL_POINT_SET"
+    },
+    {
+      "branch": 833,
+      "type": [
+        2,
+        7
+      ],
+      "point_count": 24,
+      "clause_len": 52,
+      "exact_vT_M_v": -8,
+      "terms": {
+        "25_norm_v_sq": 38850,
+        "2_sum_v_sq": 14112,
+        "negative_adj_term": -52970
+      },
+      "status": "EXACT_NO_EXTENSION_OF_THIS_PARTIAL_POINT_SET"
+    },
+    {
+      "branch": 1271,
+      "type": [
+        3,
+        3,
+        3
+      ],
+      "point_count": 26,
+      "clause_len": 48,
+      "exact_vT_M_v": -27,
+      "terms": {
+        "25_norm_v_sq": 249025,
+        "2_sum_v_sq": 21218,
+        "negative_adj_term": -270270
+      },
+      "status": "EXACT_NO_EXTENSION_OF_THIS_PARTIAL_POINT_SET"
+    },
+    {
+      "branch": 1339,
+      "type": [
+        3,
+        6
+      ],
+      "point_count": 28,
+      "clause_len": 59,
+      "exact_vT_M_v": -18,
+      "terms": {
+        "25_norm_v_sq": 561550,
+        "2_sum_v_sq": 1352,
+        "negative_adj_term": -562920
+      },
+      "status": "EXACT_NO_EXTENSION_OF_THIS_PARTIAL_POINT_SET"
+    },
+    {
+      "branch": 1528,
+      "type": [
+        4,
+        5
+      ],
+      "point_count": 22,
+      "clause_len": 41,
+      "exact_vT_M_v": -53,
+      "terms": {
+        "25_norm_v_sq": 1561825,
+        "2_sum_v_sq": 243602,
+        "negative_adj_term": -1805480
+      },
+      "status": "EXACT_NO_EXTENSION_OF_THIS_PARTIAL_POINT_SET"
+    },
+    {
+      "branch": 1588,
+      "type": [
+        9
+      ],
+      "point_count": 26,
+      "clause_len": 50,
+      "exact_vT_M_v": -45,
+      "terms": {
+        "25_norm_v_sq": 63025,
+        "2_sum_v_sq": 11250,
+        "negative_adj_term": -74320
+      },
+      "status": "EXACT_NO_EXTENSION_OF_THIS_PARTIAL_POINT_SET"
+    }
+  ]
+}

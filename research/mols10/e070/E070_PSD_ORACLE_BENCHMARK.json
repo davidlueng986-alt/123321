@@ -1,0 +1,526 @@
+[
+  {
+    "branch": 0,
+    "type": [
+      2,
+      2,
+      2,
+      3
+    ],
+    "greedy_seed": 0,
+    "actual_depth": 20,
+    "at_depth": [
+      {
+        "depth": 0,
+        "candidate_pool_size": 21249,
+        "cuts": 0,
+        "surviving": 21249,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 19.4444444,
+        "root_plus_interior_points": 19
+      },
+      {
+        "depth": 4,
+        "candidate_pool_size": 14361,
+        "cuts": 0,
+        "surviving": 14361,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 14.0600158,
+        "root_plus_interior_points": 23
+      },
+      {
+        "depth": 8,
+        "candidate_pool_size": 9316,
+        "cuts": 2,
+        "surviving": 9314,
+        "cut_percentage": 0.02147,
+        "min_remaining_schur": -1.7052259,
+        "root_plus_interior_points": 27
+      },
+      {
+        "depth": 12,
+        "candidate_pool_size": 5725,
+        "cuts": 84,
+        "surviving": 5641,
+        "cut_percentage": 1.46725,
+        "min_remaining_schur": -17.8695136,
+        "root_plus_interior_points": 31
+      },
+      {
+        "depth": 16,
+        "candidate_pool_size": 3373,
+        "cuts": 1005,
+        "surviving": 2368,
+        "cut_percentage": 29.79543,
+        "min_remaining_schur": -104.8091505,
+        "root_plus_interior_points": 35
+      },
+      {
+        "depth": 20,
+        "candidate_pool_size": 1786,
+        "cuts": 1647,
+        "surviving": 139,
+        "cut_percentage": 92.21725,
+        "min_remaining_schur": -10010.6250677,
+        "root_plus_interior_points": 39
+      }
+    ]
+  },
+  {
+    "branch": 104,
+    "type": [
+      2,
+      2,
+      5
+    ],
+    "greedy_seed": 0,
+    "actual_depth": 20,
+    "at_depth": [
+      {
+        "depth": 0,
+        "candidate_pool_size": 21249,
+        "cuts": 0,
+        "surviving": 21249,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 19.4444444,
+        "root_plus_interior_points": 19
+      },
+      {
+        "depth": 4,
+        "candidate_pool_size": 13703,
+        "cuts": 0,
+        "surviving": 13703,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 15.1242635,
+        "root_plus_interior_points": 23
+      },
+      {
+        "depth": 8,
+        "candidate_pool_size": 8981,
+        "cuts": 0,
+        "surviving": 8981,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 9.613752,
+        "root_plus_interior_points": 27
+      },
+      {
+        "depth": 12,
+        "candidate_pool_size": 5110,
+        "cuts": 0,
+        "surviving": 5110,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 3.2922779,
+        "root_plus_interior_points": 31
+      },
+      {
+        "depth": 16,
+        "candidate_pool_size": 3177,
+        "cuts": 73,
+        "surviving": 3104,
+        "cut_percentage": 2.29777,
+        "min_remaining_schur": -20.6809577,
+        "root_plus_interior_points": 35
+      },
+      {
+        "depth": 20,
+        "candidate_pool_size": 1880,
+        "cuts": 532,
+        "surviving": 1348,
+        "cut_percentage": 28.29787,
+        "min_remaining_schur": -62.1985528,
+        "root_plus_interior_points": 39
+      }
+    ]
+  },
+  {
+    "branch": 440,
+    "type": [
+      2,
+      3,
+      4
+    ],
+    "greedy_seed": 0,
+    "actual_depth": 20,
+    "at_depth": [
+      {
+        "depth": 0,
+        "candidate_pool_size": 21249,
+        "cuts": 0,
+        "surviving": 21249,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 20.8057587,
+        "root_plus_interior_points": 19
+      },
+      {
+        "depth": 4,
+        "candidate_pool_size": 13424,
+        "cuts": 0,
+        "surviving": 13424,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 18.1155621,
+        "root_plus_interior_points": 23
+      },
+      {
+        "depth": 8,
+        "candidate_pool_size": 8771,
+        "cuts": 0,
+        "surviving": 8771,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 11.4871285,
+        "root_plus_interior_points": 27
+      },
+      {
+        "depth": 12,
+        "candidate_pool_size": 5467,
+        "cuts": 0,
+        "surviving": 5467,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 2.7609012,
+        "root_plus_interior_points": 31
+      },
+      {
+        "depth": 16,
+        "candidate_pool_size": 3125,
+        "cuts": 13,
+        "surviving": 3112,
+        "cut_percentage": 0.416,
+        "min_remaining_schur": -7.9313493,
+        "root_plus_interior_points": 35
+      },
+      {
+        "depth": 20,
+        "candidate_pool_size": 1755,
+        "cuts": 595,
+        "surviving": 1160,
+        "cut_percentage": 33.90313,
+        "min_remaining_schur": -78.1946375,
+        "root_plus_interior_points": 39
+      }
+    ]
+  },
+  {
+    "branch": 833,
+    "type": [
+      2,
+      7
+    ],
+    "greedy_seed": 0,
+    "actual_depth": 20,
+    "at_depth": [
+      {
+        "depth": 0,
+        "candidate_pool_size": 21249,
+        "cuts": 0,
+        "surviving": 21249,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 20.2183527,
+        "root_plus_interior_points": 19
+      },
+      {
+        "depth": 4,
+        "candidate_pool_size": 14045,
+        "cuts": 0,
+        "surviving": 14045,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 13.5690113,
+        "root_plus_interior_points": 23
+      },
+      {
+        "depth": 8,
+        "candidate_pool_size": 8992,
+        "cuts": 0,
+        "surviving": 8992,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 7.9337019,
+        "root_plus_interior_points": 27
+      },
+      {
+        "depth": 12,
+        "candidate_pool_size": 5070,
+        "cuts": 0,
+        "surviving": 5070,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 1.3060808,
+        "root_plus_interior_points": 31
+      },
+      {
+        "depth": 16,
+        "candidate_pool_size": 3117,
+        "cuts": 304,
+        "surviving": 2813,
+        "cut_percentage": 9.75297,
+        "min_remaining_schur": -29.5318237,
+        "root_plus_interior_points": 35
+      },
+      {
+        "depth": 20,
+        "candidate_pool_size": 1780,
+        "cuts": 1043,
+        "surviving": 737,
+        "cut_percentage": 58.59551,
+        "min_remaining_schur": -182.3508372,
+        "root_plus_interior_points": 39
+      }
+    ]
+  },
+  {
+    "branch": 1271,
+    "type": [
+      3,
+      3,
+      3
+    ],
+    "greedy_seed": 0,
+    "actual_depth": 20,
+    "at_depth": [
+      {
+        "depth": 0,
+        "candidate_pool_size": 21249,
+        "cuts": 0,
+        "surviving": 21249,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 20.0,
+        "root_plus_interior_points": 19
+      },
+      {
+        "depth": 4,
+        "candidate_pool_size": 14703,
+        "cuts": 0,
+        "surviving": 14703,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 11.0437331,
+        "root_plus_interior_points": 23
+      },
+      {
+        "depth": 8,
+        "candidate_pool_size": 9462,
+        "cuts": 0,
+        "surviving": 9462,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 0.8073248,
+        "root_plus_interior_points": 27
+      },
+      {
+        "depth": 12,
+        "candidate_pool_size": 5614,
+        "cuts": 32,
+        "surviving": 5582,
+        "cut_percentage": 0.57,
+        "min_remaining_schur": -10.2714358,
+        "root_plus_interior_points": 31
+      },
+      {
+        "depth": 16,
+        "candidate_pool_size": 2704,
+        "cuts": 308,
+        "surviving": 2396,
+        "cut_percentage": 11.39053,
+        "min_remaining_schur": -43.6533574,
+        "root_plus_interior_points": 35
+      },
+      {
+        "depth": 20,
+        "candidate_pool_size": 1507,
+        "cuts": 1203,
+        "surviving": 304,
+        "cut_percentage": 79.82747,
+        "min_remaining_schur": -1206.6240074,
+        "root_plus_interior_points": 39
+      }
+    ]
+  },
+  {
+    "branch": 1339,
+    "type": [
+      3,
+      6
+    ],
+    "greedy_seed": 0,
+    "actual_depth": 20,
+    "at_depth": [
+      {
+        "depth": 0,
+        "candidate_pool_size": 21249,
+        "cuts": 0,
+        "surviving": 21249,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 20.1959206,
+        "root_plus_interior_points": 19
+      },
+      {
+        "depth": 4,
+        "candidate_pool_size": 13503,
+        "cuts": 0,
+        "surviving": 13503,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 17.4022032,
+        "root_plus_interior_points": 23
+      },
+      {
+        "depth": 8,
+        "candidate_pool_size": 8564,
+        "cuts": 0,
+        "surviving": 8564,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 11.394706,
+        "root_plus_interior_points": 27
+      },
+      {
+        "depth": 12,
+        "candidate_pool_size": 5216,
+        "cuts": 0,
+        "surviving": 5216,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 2.9409496,
+        "root_plus_interior_points": 31
+      },
+      {
+        "depth": 16,
+        "candidate_pool_size": 3104,
+        "cuts": 482,
+        "surviving": 2622,
+        "cut_percentage": 15.52835,
+        "min_remaining_schur": -62.3773209,
+        "root_plus_interior_points": 35
+      },
+      {
+        "depth": 20,
+        "candidate_pool_size": 1667,
+        "cuts": 1176,
+        "surviving": 491,
+        "cut_percentage": 70.54589,
+        "min_remaining_schur": -376.4206782,
+        "root_plus_interior_points": 39
+      }
+    ]
+  },
+  {
+    "branch": 1528,
+    "type": [
+      4,
+      5
+    ],
+    "greedy_seed": 0,
+    "actual_depth": 20,
+    "at_depth": [
+      {
+        "depth": 0,
+        "candidate_pool_size": 21249,
+        "cuts": 0,
+        "surviving": 21249,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 20.888848,
+        "root_plus_interior_points": 19
+      },
+      {
+        "depth": 4,
+        "candidate_pool_size": 13967,
+        "cuts": 0,
+        "surviving": 13967,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 17.008026,
+        "root_plus_interior_points": 23
+      },
+      {
+        "depth": 8,
+        "candidate_pool_size": 9294,
+        "cuts": 0,
+        "surviving": 9294,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 11.2548186,
+        "root_plus_interior_points": 27
+      },
+      {
+        "depth": 12,
+        "candidate_pool_size": 5951,
+        "cuts": 7,
+        "surviving": 5944,
+        "cut_percentage": 0.11763,
+        "min_remaining_schur": -4.2372144,
+        "root_plus_interior_points": 31
+      },
+      {
+        "depth": 16,
+        "candidate_pool_size": 3787,
+        "cuts": 1810,
+        "surviving": 1977,
+        "cut_percentage": 47.79509,
+        "min_remaining_schur": -335.1487389,
+        "root_plus_interior_points": 35
+      },
+      {
+        "depth": 20,
+        "candidate_pool_size": 1981,
+        "cuts": 1698,
+        "surviving": 283,
+        "cut_percentage": 85.71429,
+        "min_remaining_schur": -1245.7546414,
+        "root_plus_interior_points": 39
+      }
+    ]
+  },
+  {
+    "branch": 1588,
+    "type": [
+      9
+    ],
+    "greedy_seed": 0,
+    "actual_depth": 20,
+    "at_depth": [
+      {
+        "depth": 0,
+        "candidate_pool_size": 21249,
+        "cuts": 0,
+        "surviving": 21249,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 20.8092926,
+        "root_plus_interior_points": 19
+      },
+      {
+        "depth": 4,
+        "candidate_pool_size": 13829,
+        "cuts": 0,
+        "surviving": 13829,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 18.4549189,
+        "root_plus_interior_points": 23
+      },
+      {
+        "depth": 8,
+        "candidate_pool_size": 8649,
+        "cuts": 0,
+        "surviving": 8649,
+        "cut_percentage": 0.0,
+        "min_remaining_schur": 10.1304467,
+        "root_plus_interior_points": 27
+      },
+      {
+        "depth": 12,
+        "candidate_pool_size": 5109,
+        "cuts": 1,
+        "surviving": 5108,
+        "cut_percentage": 0.01957,
+        "min_remaining_schur": -2.5608115,
+        "root_plus_interior_points": 31
+      },
+      {
+        "depth": 16,
+        "candidate_pool_size": 2936,
+        "cuts": 76,
+        "surviving": 2860,
+        "cut_percentage": 2.58856,
+        "min_remaining_schur": -17.8433808,
+        "root_plus_interior_points": 35
+      },
+      {
+        "depth": 20,
+        "candidate_pool_size": 1622,
+        "cuts": 937,
+        "surviving": 685,
+        "cut_percentage": 57.76819,
+        "min_remaining_schur": -297.1610132,
+        "root_plus_interior_points": 39
+      }
+    ]
+  }
+]
