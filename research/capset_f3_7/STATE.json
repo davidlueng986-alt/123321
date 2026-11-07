@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "Goal exact r3(7) OPEN. CAP055 built CAP052 complete-root t=2 SOS symbolic moment and localizing operator (M2 dim 2256751; all 796797 3APs -> 11475 binary/729768 triple zero moments; H>=79 free, centered extra>=3 pairs, EXACT 226-free cardinality equalities up to degree3). n2 finite exact degree2 SOS proof no5 via E[q^2]=-10/9 under symmetrized k5 hypothesis; rational 4.05 pseudo feasible when enforcing only expected size. True full n7 SDP not solved: 847224947626 candidate degree<=4 moments and no completed block decomposition/dual; no new bound.",
-  "next_experiment": "MANUAL ONLY. Seek genuinely complete residual-group block decomposition of 4th-degree anchored moments and LOCALIZER coupling, or sparse rational -1 SOS dual; do NOT treat local n2/3 exact proofs or symbolic full model as closure. No repeating unchanged weak-level1 SDP, H3 5sym timeouts, or homogeneous moment counts. Require independently checkable global dual or verified >=237 witness with matching max proof.",
-  "last_run_id": "CAP055_TRUE_ANCHORED_LASSERRE2_AND_EXACT_SOS_CONTROL_2026-11-08",
-  "last_run_result": "NOT_DONE_ATTEMPTED; REAL_GLOBAL_L2_SPARSE_OPERATOR_BUILT_NOT_SOLVED; N2_EXACT_SOS_NO5_CONTROL_PASS; N3_PSD_POSITIVE_CONTROL_PASS; NO_237_WITNESS_NO_GLOBAL_UNSAT",
+  "current_hypothesis": "Exact r3(7) remains OPEN. CAP056 executed actual CAP052 globally equivalent root 237 SAT with all 796797 lines, >=89 H and >=7 H antipodal pairs: Z3 returned UNKNOWN after45s. Independent MILP with all3279 6D affine cap <=112 cuts, 2453 binaries,745183 constraints,4538234 nnz returned UNKNOWN after38s. Early fake UNSAT caused by incorrectly encoded z+x<=0 vs valid z-x<=0 was caught, corrected and every aux constraint coefficient sign asserted; no theorem claimed. An exact rational fractional feasible LP primal exists even with ALL 6D cuts (x_H=79/677,x_outside=147/1447,z=79/677), proving those LP cuts alone cannot establish infeasibility. Raw quartic moment orbits under G768 >=1065438749 BEFORE exact cardinality identities and representation reduction (at least7.94GiB scalar storage), so plain orbit enumeration alone infeasible in present4GiB. Extended longer MIP retry underway, result not yet known.",
+  "next_experiment": "Only root-dispositive proof or witness accepted: independently check FULL global UNSAT proof / rational SOS dual of CAP052 or independently verify >=237 witness then match global bound. Do not treat timeouts, fake early HiGHS infeasibility, LP fractional pseudo, or G768 orbit count as solving. If extended solver produces a verdict, independently validate before changing root. No automatic schedule.",
+  "last_run_id": "CAP056_DIRECT_ROOT_Z3_HIGHS_AG6_SDP_ORBITS_2026-11-08",
+  "last_run_result": "NOT_DONE_ATTEMPTED; CORRECTED_FULL_ROOT_Z3_TIMEOUT45_HIGHS_TIMEOUT38; EARLY_HIGHS_FALSE_INFEASIBLE_REJECTED_SIGN_ERROR; NO_237_WITNESS_NO_UNSAT; EXTENDED_MIP_RETRY_RUNNING",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -103,7 +103,8 @@
     "CAP051_MANUAL_FAILED",
     "CAP052_MANUAL_ATTEMPT",
     "CAP054_H1_H3_MANUAL",
-    "CAP055_TRUE_L2_MANUAL"
+    "CAP055_TRUE_L2_MANUAL",
+    "CAP056_DIRECT_FULL_ROOT"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41639554296",
   "baseline_secant_audit": {
@@ -125,7 +126,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-07T18:50:34.955Z",
+  "last_updated_utc": "2026-11-07T19:50:10.256Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -2261,5 +2262,55 @@
     "gpu": false,
     "paid_compute": false,
     "hourly_task_reenabled": false
+  },
+  "cap056_direct_root": {
+    "date_local": "2026-11-08",
+    "root_status": "OPEN",
+    "global_normalization": "CAP052 center/dense H no-loss",
+    "selected_fixed": 11,
+    "excluded_fixed": 52,
+    "free_points": 2124,
+    "Z3": {
+      "status": "UNKNOWN_TIMEOUT",
+      "time_limit_s": 45,
+      "build_s": 0.514,
+      "elapsed_s": 45.562,
+      "full_affine_lines": 796797,
+      "forbidden_binary": 11475,
+      "forbidden_ternary": 729768,
+      "antipodal_extra_pairs": 331
+    },
+    "HiGHS": {
+      "status": "UNKNOWN_TIME_LIMIT",
+      "build_s": 2.31,
+      "elapsed_s": 41.15,
+      "point_vars": 2124,
+      "pair_aux_vars": 329,
+      "rows": 745183,
+      "nonzero": 4538234,
+      "six_flat_cuts": 3279,
+      "initial_false_infeasible_rejected": true,
+      "error": "bad sign in auxiliary pair row z+x<=0; corrected to z-x<=0; all 658 row directions asserted"
+    },
+    "fractional_primal": {
+      "x_H": "79/677",
+      "x_outside_H": "147/1447",
+      "z_pair": "79/677",
+      "LP_feasible_all_sixflat_constraints": true,
+      "not_integer_cap": true
+    },
+    "SDP_orbit_raw_lower": {
+      "surviving_degree4_monomials_at_least": 818256958848,
+      "quartic_G768_orbits_before_cardinality_at_least": 1065438749,
+      "minimum_bytes_one_64bit_scalar_each": 8523509992,
+      "not_a_formal_lower_bound_on_all_condensed_SDP_algorithms": true
+    },
+    "longer_HiGHS_retry": "RUNNING_PENDING",
+    "report": "research/capset_f3_7/CAP056_ROOT_DIRECT_SAT_MILP_AND_SDP_BARRIER_2026-11-08.md",
+    "google_drive_report": "https://drive.google.com/file/d/1XjUmUBAs9KZZ-YFBVGkvhaMNmwlFhteS/view?usp=drivesdk",
+    "google_drive_zip": "https://drive.google.com/file/d/1OrMmDi6Rkzd3KPcxXbcNSpJC7P9HSCcD/view?usp=drivesdk",
+    "zip_sha256": "102c40b85d4de656ef697b6edc8ef159fbcedbe5852a29437a3110b4b97ad366",
+    "external_advisor_brief_uploaded": false,
+    "autonomous_hourly_restarted": false
   }
 }
