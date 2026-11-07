@@ -52,3 +52,6 @@ All actual source, stdout/stderr, proof-bound checks and correction evidence are
 ## Verified durable evidence
 
 Complete C++ native Z3, corrected independent HiGHS 0/1 full-root MILP, rational fractional-primal audit, raw stdout/stderr and JSON manifest: https://drive.google.com/file/d/1OrMmDi6Rkzd3KPcxXbcNSpJC7P9HSCcD/view?usp=drivesdk  (ZIP SHA256 `102c40b85d4de656ef697b6edc8ef159fbcedbe5852a29437a3110b4b97ad366`). Source contains no External Advisor Brief.
+
+## Extended complete-root HiGHS run — 150 seconds, still UNKNOWN
+We also spent the **full 150-second MIP solver budget** on the corrected 2453-binary,745183-constraint globally exhaustive CAP052 + ALL 3279 AG6 cuts model. Actual HiGHS output: **Time limit reached; zero branch-and-bound nodes; 6398 root LP iterations; primal bound inf; dual bound 0; no integer incumbent; no UNSAT certificate.** Solver time 150.06s; wall including build 153.27s. The long timeout therefore did NOT exhaust a proof tree, nor produce any cap. An exact fractional LP feasible point remains known. Updated source, all stdout/stderr: https://drive.google.com/file/d/1AnHRAiVuWmE3_hikxTgqV9ngDQhp-IVJ/view?usp=drivesdk ; concise note: https://drive.google.com/file/d/1uZEAtAy6x4K_ZGGgWeFttKwog3azGYlV/view?usp=drivesdk . SHA256 long ZIP 31b2711ab00b1675b6db5071c49811ddb0aedbd8260f792e199fd5ef6a9a9bb3. Root status unchanged: OPEN.
