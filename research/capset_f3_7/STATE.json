@@ -10,10 +10,10 @@
   "verified_candidate_path": "research/capset_f3_7/candidates/calderbank_fishburn_236.txt",
   "exact_optimum_proven": false,
   "source_recheck_date": "2026-11-02",
-  "current_hypothesis": "Exact r3(7) remains OPEN. Genuine CAP052 full-root SAT Z3 timeout45s and MILP full 3AP+ALL3279 AG6 cuts timeout38s and 150s. The 150s HiGHS run had 6398 LP iterations and zero B&B nodes, no integer feasible candidate or proof: computational root relaxation bottleneck, not proof-tree exhaustion. Initial erroneous MILP infeasible was caught as z+x sign mistake and REMOVED. Exact fractional LP primal exists. Full quartic G768 raw orbit enumeration exceeds memory even after ideal; sparse SOS dual/cross-slice new math needed.",
-  "next_experiment": "Manual only on explicit instruction. For root closure, obtain independent checked full 237 SAT UNSAT/LRAT or rational SOS dual, or find genuine >=237 witness (and matching upper for exact value). Repeated unchanged Z3/HiGHS timeouts and plain G768 quartic orbit storage will not close this problem. Do not claim mathematical result, no automated schedule.",
-  "last_run_id": "CAP056_DIRECT_FULL_ROOT_150S_LONG_RETRY_2026-11-08",
-  "last_run_result": "NOT_DONE_ATTEMPTED; Z3_45S_UNKNOWN; HIGHS_38S_UNKNOWN; HIGHS_150S_ZERO_BRANCH_NODES_NO_INCUMBENT_UNKNOWN; EARLY_BUGGED_HIGHS_FALSE_UNSAT_REJECTED; ROOT_OPEN",
+  "current_hypothesis": "Research root r3(7) exact remains OPEN. v5 canonical registry retains CAPSET-F3-7 assignment, unrelated default A135508 ignored. First principles: 7D cap is three 6D caps A0,A1,A2 with (A0+A1) disjoint -A2. Conditional H112 full 1458-binary/258556-row MIP offers new constructive exploration WITHOUT assuming the second slice Hill; returns UNKNOWN 5s (0 B&B nodes). Fixed H112+B112 subset deletion+free C branch 841-binary/100996 rows UNKNOWN 5s. Known236 source verified, min outside secant-degree10 for24 outsiders, all24576 minimal one-center trade choices leave zero immediately addable. These are diagnostic failures, not global proof or significant mathematical result. Avoid repetition of CAP056 root LP and assumption 236 is optimal.",
+  "next_experiment": "Seek genuinely cap-specific 6D additive-sumset/cross-slice incompatibility for ALL dense slice sizes 89..112, not only Hill112; if a complete 237 exclusion theorem arises independently verify. Alternatively genuine >=237 construction independent of 236 basin. Need proof-producing exact solver rather than repeating cold-start HiGHS. No scheduled CI or hourly automation.",
+  "last_run_id": "CAP057_V5_FIRST_PRINCIPLES_TRIPLE_LAYER_CONSTRUCTIVE_2026-11-13",
+  "last_run_result": "ORIGINAL_OPEN; V5_MIGRATION_READ; 236_CONTROL_PASS; 24576_MINIMAL_1CENTER_TRADES_ZERO_ADDABLE; COMPLETE_CONDITIONAL_112_H_SLICE_MIP_TIMEOUT5; FIXED_2_HILL_SUBSET_TRADE_MIP_TIMEOUT5; NO_237_WITNESS_NO_GLOBAL_UNSAT",
   "google_drive_folder_id": "1xSU7HayjUrc8DLji46yMgx5l1WlphIda",
   "branch": "research/capset-f3-7",
   "stop_policy": "Continue after 237 breakthrough; stop only after exact r3(7) independently proved or user stops.",
@@ -104,7 +104,8 @@
     "CAP052_MANUAL_ATTEMPT",
     "CAP054_H1_H3_MANUAL",
     "CAP055_TRUE_L2_MANUAL",
-    "CAP056_DIRECT_FULL_ROOT"
+    "CAP056_DIRECT_FULL_ROOT",
+    "CAP057_V5_MANUAL"
   ],
   "ci_verified_url": "https://github.com/davidlueng986-alt/123321/actions/runs/41639554296",
   "baseline_secant_audit": {
@@ -126,7 +127,7 @@
   },
   "local_reconstruction_lower_bound_deletions": 16,
   "local_reconstruction_lower_bound_insertions_for_improvement": 17,
-  "last_updated_utc": "2026-11-07T19:53:14.031Z",
+  "last_updated_utc": "2026-11-13T13:48:36.091Z",
   "campaign001_source_report": "https://docs.google.com/document/d/1_TWv6RzjYtBHJCawC6aT-q4ulBBdKuFaR7_nUaWp7lY/edit",
   "campaign001_research_log": "https://docs.google.com/document/d/1DmvhnazPwH5NkXSqEI5DZoSQwDkr7p6sozJBVIV1o-I/edit",
   "cross_agent_audit_path": "research/capset_f3_7/AUDIT_CAMPAIGN_001_2026-11-02.md",
@@ -2324,5 +2325,57 @@
     "zip_sha256": "102c40b85d4de656ef697b6edc8ef159fbcedbe5852a29437a3110b4b97ad366",
     "external_advisor_brief_uploaded": false,
     "autonomous_hourly_restarted": false
+  },
+  "cap057_v5_first_principles": {
+    "date": "2026-11-13",
+    "root_statement": "exact r3(7)",
+    "root_status": "unknown",
+    "v5_migration_read": true,
+    "registry_assigned": "CAPSET-F3-7",
+    "known_lower": 236,
+    "known_lit_upper_preprint": 288,
+    "more_than236_witness": false,
+    "global_no237_proof": false,
+    "triple_layer_equivalence": "A0,A1,A2 each 6D caps AND (A0+A1) INTERSECT (-A2) EMPTY",
+    "CAP007J_dense_layer_min": 89,
+    "one_center_trade": {
+      "source_236_verified": true,
+      "min_outside_secants": 10,
+      "num_external_centers": 24,
+      "all_minimal_orientations": 24576,
+      "additional_addable_points_per_case": 0,
+      "independent_brute_controls": 25,
+      "scope": "specific known236 witness only, not universal"
+    },
+    "unrestricted_outer_H112": {
+      "conditional_on_exist112_slice": true,
+      "outer_variables": 1458,
+      "rows": 258556,
+      "inside_lines_per_layer": 88452,
+      "cross_bipartite_edges": 81648,
+      "requires_outer_selected": 125,
+      "positive_236_control": true,
+      "actual_solver_s": 5.03,
+      "solver_status": "UNKNOWN_TIME_LIMIT",
+      "proof_certificate": false
+    },
+    "fixed_second_hill_deletion": {
+      "conditional_fixed_H_and_B": true,
+      "second_slice_deletion_patterns_implicit": "2^112",
+      "MIP_binaries": 841,
+      "MIP_rows": 100996,
+      "known_feasible_profit": 12,
+      "actual_solver_s": 6.55,
+      "solver_status": "UNKNOWN_TIME_LIMIT",
+      "solver_incumbent_profit": 1,
+      "found237": false
+    },
+    "handoff": "research/capset_f3_7/CAP057_V5_FIRST_PRINCIPLES_HANDOFF_2026-11-13.md",
+    "drive_handoff": "https://drive.google.com/file/d/15IZnuIz0bQZI6JuCIMcNPlSOS7hi1yl4/view?usp=drivesdk",
+    "drive_sources": "https://drive.google.com/file/d/1d9iqQWKnZYnm-6ok3HdXO6GnQRR_lKHG/view?usp=drivesdk",
+    "zip_sha256": "c07aa8171c9166970bae01715c4e4250be32234805d8675809ae539c7c096368",
+    "math_novelty_claimed": false,
+    "no_automatic_CI": true,
+    "no_scheduled_tasks": true
   }
 }
